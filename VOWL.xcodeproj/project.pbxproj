@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		656472D31BF6BD2A00BDEB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656472D21BF6BD2A00BDEB1B /* AppDelegate.swift */; };
-		656472D51BF6BD2A00BDEB1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656472D41BF6BD2A00BDEB1B /* ViewController.swift */; };
 		656472D81BF6BD2A00BDEB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656472D61BF6BD2A00BDEB1B /* Main.storyboard */; };
 		656472DA1BF6BD2A00BDEB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656472D91BF6BD2A00BDEB1B /* Assets.xcassets */; };
 		656472DD1BF6BD2A00BDEB1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656472DB1BF6BD2A00BDEB1B /* LaunchScreen.storyboard */; };
+		65A2BC6C1BF708EA0047DA40 /* VowelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC6B1BF708EA0047DA40 /* VowelViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BC6E1BF708F60047DA40 /* PitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC6D1BF708F60047DA40 /* PitchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +22,12 @@
 		4D2B569B9BD80BCFD8D1EFAE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		656472CF1BF6BD2A00BDEB1B /* VOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656472D21BF6BD2A00BDEB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		656472D41BF6BD2A00BDEB1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		656472D71BF6BD2A00BDEB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		656472D91BF6BD2A00BDEB1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656472DC1BF6BD2A00BDEB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		656472DE1BF6BD2A00BDEB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A2BC6B1BF708EA0047DA40 /* VowelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VowelViewController.swift; sourceTree = "<group>"; };
+		65A2BC6D1BF708F60047DA40 /* PitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				656472D21BF6BD2A00BDEB1B /* AppDelegate.swift */,
-				656472D41BF6BD2A00BDEB1B /* ViewController.swift */,
+				65A2BC6B1BF708EA0047DA40 /* VowelViewController.swift */,
+				65A2BC6D1BF708F60047DA40 /* PitchViewController.swift */,
 				656472D61BF6BD2A00BDEB1B /* Main.storyboard */,
 				656472DB1BF6BD2A00BDEB1B /* LaunchScreen.storyboard */,
 				656472D91BF6BD2A00BDEB1B /* Assets.xcassets */,
@@ -209,8 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656472D51BF6BD2A00BDEB1B /* ViewController.swift in Sources */,
+				65A2BC6C1BF708EA0047DA40 /* VowelViewController.swift in Sources */,
 				656472D31BF6BD2A00BDEB1B /* AppDelegate.swift in Sources */,
+				65A2BC6E1BF708F60047DA40 /* PitchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="359.5" y="399.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Pitch View Controller-->
         <scene sceneID="g7H-pn-2QT">
             <objects>
-                <viewController id="9J8-TP-oCq" sceneMemberID="viewController">
+                <viewController id="9J8-TP-oCq" customClass="PitchViewController" customModule="VOWL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZcY-Qe-Dtm">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="578.75" y="936"/>
         </scene>
-        <!--View Controller-->
+        <!--Vowel View Controller-->
         <scene sceneID="7u9-vE-Kpy">
             <objects>
-                <viewController id="wpy-HA-xtF" sceneMemberID="viewController">
+                <viewController id="wpy-HA-xtF" customClass="VowelViewController" customModule="VOWL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJf-n7-0kv">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
