@@ -73,8 +73,8 @@
 				656472D21BF6BD2A00BDEB1B /* AppDelegate.swift */,
 				656472D41BF6BD2A00BDEB1B /* ViewController.swift */,
 				656472D61BF6BD2A00BDEB1B /* Main.storyboard */,
-				656472D91BF6BD2A00BDEB1B /* Assets.xcassets */,
 				656472DB1BF6BD2A00BDEB1B /* LaunchScreen.storyboard */,
+				656472D91BF6BD2A00BDEB1B /* Assets.xcassets */,
 				656472DE1BF6BD2A00BDEB1B /* Info.plist */,
 			);
 			path = VOWL;
