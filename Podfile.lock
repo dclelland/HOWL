@@ -1,0 +1,10 @@
+PODS:
+  - AudioKit (2.3)
+
+DEPENDENCIES:
+  - AudioKit (~> 2.3)
+
+SPEC CHECKSUMS:
+  AudioKit: 393be71739265448039ef268f3582dee82783b0d
+
+COCOAPODS: 0.39.0
