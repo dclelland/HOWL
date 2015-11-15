@@ -1,5 +1,5 @@
 //
-//  VowelViewController.swift
+//  KeyboardViewController.swift
 //  VOWL
 //
 //  Created by Daniel Clelland on 14/11/15.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class VowelViewController: UIViewController {
+class KeyboardViewController: UIViewController {
+    
+    @IBOutlet weak var keyboardView: UICollectionView?
 
     override func viewDidLoad() {
         super.viewDidLoad()

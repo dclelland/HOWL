@@ -75,10 +75,14 @@
             </objects>
             <point key="canvasLocation" x="359.5" y="399.5"/>
         </scene>
-        <!--Pitch View Controller-->
+        <!--Keyboard View Controller-->
         <scene sceneID="g7H-pn-2QT">
             <objects>
-                <viewController id="9J8-TP-oCq" customClass="PitchViewController" customModule="VOWL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9J8-TP-oCq" customClass="KeyboardViewController" customModule="VOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nth-M2-WW1"/>
+                        <viewControllerLayoutGuide type="bottom" id="LxS-DX-7JQ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZcY-Qe-Dtm">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +182,7 @@
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewLayout key="collectionViewLayout" id="szr-ei-E8F"/>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4NR-Ly-4rB">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pitchViewCell" id="4NR-Ly-4rB" customClass="KeyboardViewCell" customModule="VOWL" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -229,15 +233,22 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="keyboardView" destination="2Xe-UY-uHE" id="VLh-at-J1V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTE-EL-bmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578.75" y="936"/>
         </scene>
-        <!--Vowel View Controller-->
+        <!--Phonemeboard View Controller-->
         <scene sceneID="7u9-vE-Kpy">
             <objects>
-                <viewController id="wpy-HA-xtF" customClass="VowelViewController" customModule="VOWL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wpy-HA-xtF" customClass="PhonemeboardViewController" customModule="VOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V0q-XU-LR2"/>
+                        <viewControllerLayoutGuide type="bottom" id="0v1-Ms-aL4"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jJf-n7-0kv">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,25 +324,25 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="4v1-yD-Hsq"/>
-                                        <exclude reference="zUQ-U8-GFC"/>
-                                        <exclude reference="Ttw-sa-Sq3"/>
-                                        <exclude reference="yko-U6-koA"/>
-                                        <exclude reference="rCJ-1b-UwA"/>
                                         <exclude reference="4ju-O9-gcf"/>
+                                        <exclude reference="4v1-yD-Hsq"/>
+                                        <exclude reference="Ttw-sa-Sq3"/>
+                                        <exclude reference="rCJ-1b-UwA"/>
                                         <exclude reference="xBZ-fz-GUC"/>
-                                        <exclude reference="ByH-Oo-be3"/>
-                                        <exclude reference="psv-2z-HLK"/>
-                                        <exclude reference="pSV-tb-4Xr"/>
-                                        <exclude reference="YOG-ja-H1j"/>
+                                        <exclude reference="yko-U6-koA"/>
+                                        <exclude reference="zUQ-U8-GFC"/>
                                         <exclude reference="2n5-8R-LkB"/>
+                                        <exclude reference="ByH-Oo-be3"/>
+                                        <exclude reference="YOG-ja-H1j"/>
+                                        <exclude reference="pSV-tb-4Xr"/>
+                                        <exclude reference="psv-2z-HLK"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-28-UfI">
                                 <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV" customClass="PhonemeboardView" customModule="VOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="275" height="263"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h64-U2-xGg">
@@ -432,6 +443,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="phonemeboardView" destination="nKs-R2-KFV" id="wrb-WF-L6K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9O-cX-Tla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

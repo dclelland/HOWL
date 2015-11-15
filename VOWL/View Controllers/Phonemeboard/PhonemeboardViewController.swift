@@ -1,5 +1,5 @@
 //
-//  PitchViewController.swift
+//  PhonemeboardViewController.swift
 //  VOWL
 //
 //  Created by Daniel Clelland on 14/11/15.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class PitchViewController: UIViewController {
+class PhonemeboardViewController: UIViewController {
+    
+    @IBOutlet weak var phonemeboardView: PhonemeboardView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
