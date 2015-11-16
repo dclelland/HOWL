@@ -51,6 +51,8 @@ class PhonemeboardView: UIControl {
                 self.delegate?.phonemeboardView(self, touchBegan: touch)
             case .Moved:
                 self.delegate?.phonemeboardView(self, touchMoved: touch)
+            case .Stationary:
+                self.delegate?.phonemeboardView(self, touchMoved: touch)
             case .Cancelled:
                 self.delegate?.phonemeboardView(self, touchEnded: touch)
             case .Ended:

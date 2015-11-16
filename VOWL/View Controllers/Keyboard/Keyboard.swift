@@ -44,7 +44,7 @@ class Keyboard {
 
 extension Keyboard {
     
-    // MARK: - Paths
+    // MARK: - Drawing
     
     func hitPathForKeyAtIndex(index: Int, inBounds bounds: CGRect) -> UIBezierPath {
         let rect = CGRect(x: 100.0, y: 100.0, width: 100.0, height: 100.0)
