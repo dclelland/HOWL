@@ -8,16 +8,30 @@
 
 import UIKit
 
-class PhonemeboardViewController: UIViewController {
+class PhonemeboardViewController: UIViewController, PhonemeboardViewDelegate {
     
     @IBOutlet weak var phonemeboardView: PhonemeboardView?
     
     let phonemeboard = Phonemeboard()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        phonemeboardView?.delegate = self
     }
-
+    
+    // MARK: Phonemeboard view delegate
+    
+    func phonemeboardView(phonemeboardView: PhonemeboardView, touchBegan touch: UITouch) {
+        print("began: " + NSStringFromCGPoint(touch.locationInView(phonemeboardView)))
+    }
+    
+    func phonemeboardView(phonemeboardView: PhonemeboardView, touchMoved touch: UITouch) {
+        print("moved: " + NSStringFromCGPoint(touch.locationInView(phonemeboardView)))
+    }
+    
+    func phonemeboardView(phonemeboardView: PhonemeboardView, touchEnded touch: UITouch) {
+        print("ended: " + NSStringFromCGPoint(touch.locationInView(phonemeboardView)))
+    }
+    
 }

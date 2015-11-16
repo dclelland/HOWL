@@ -10,4 +10,8 @@ import UIKit
 
 class KeyboardViewCell: UICollectionViewCell {
     
+    override func awakeFromNib() {
+//        self.backgroundColor = UIColor.yellowColor()
+    }
+    
 }

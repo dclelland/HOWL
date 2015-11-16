@@ -182,7 +182,7 @@
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewLayout key="collectionViewLayout" id="szr-ei-E8F" customClass="KeyboardViewLayout" customModule="VOWL" customModuleProvider="target"/>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pitchViewCell" id="4NR-Ly-4rB" customClass="KeyboardViewCell" customModule="VOWL" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="keyboardViewCell" id="4NR-Ly-4rB" customClass="KeyboardViewCell" customModule="VOWL" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -199,6 +199,10 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9J8-TP-oCq" id="0Fx-Un-e5N"/>
+                                            <outlet property="delegate" destination="9J8-TP-oCq" id="ppt-kx-lMg"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <animations/>
