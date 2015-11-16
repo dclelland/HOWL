@@ -11,16 +11,17 @@
 		65A2BC7A1BF826320047DA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC711BF826320047DA40 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		65A2BC7B1BF826320047DA40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC721BF826320047DA40 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		65A2BC7C1BF826320047DA40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC731BF826320047DA40 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		65A2BC871BF826CB0047DA40 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC841BF826CB0047DA40 /* KeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC881BF826CB0047DA40 /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC861BF826CB0047DA40 /* PhonemeboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC8A1BF8271F0047DA40 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC891BF8271F0047DA40 /* Audio.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC8C1BF827450047DA40 /* KeyboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC8B1BF827450047DA40 /* KeyboardViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC8E1BF8275F0047DA40 /* PhonemeboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC8D1BF8275F0047DA40 /* PhonemeboardView.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC901BF83DAE0047DA40 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC8F1BF83DAE0047DA40 /* Keyboard.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC921BF83DBF0047DA40 /* Phonemeboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC911BF83DBF0047DA40 /* Phonemeboard.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC971BF874EE0047DA40 /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC961BF874EE0047DA40 /* Synthesizer.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC991BF874FF0047DA40 /* Vocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC981BF874FF0047DA40 /* Vocoder.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BC9B1BF8750D0047DA40 /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC9A1BF8750D0047DA40 /* Master.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCAB1BF87AAC0047DA40 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC9E1BF87AAC0047DA40 /* Audio.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC9F1BF87AAC0047DA40 /* Master.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCAD1BF87AAC0047DA40 /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA01BF87AAC0047DA40 /* Synthesizer.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCAE1BF87AAC0047DA40 /* Vocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA11BF87AAC0047DA40 /* Vocoder.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCAF1BF87AAC0047DA40 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA41BF87AAC0047DA40 /* Keyboard.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCB01BF87AAC0047DA40 /* KeyboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA51BF87AAC0047DA40 /* KeyboardViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCB11BF87AAC0047DA40 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA61BF87AAC0047DA40 /* KeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCB21BF87AAC0047DA40 /* Phonemeboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA81BF87AAC0047DA40 /* Phonemeboard.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCB31BF87AAC0047DA40 /* PhonemeboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA91BF87AAC0047DA40 /* PhonemeboardView.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,17 +35,18 @@
 		65A2BC721BF826320047DA40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65A2BC731BF826320047DA40 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		65A2BC741BF826320047DA40 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		65A2BC841BF826CB0047DA40 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		65A2BC861BF826CB0047DA40 /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
-		65A2BC891BF8271F0047DA40 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
-		65A2BC8B1BF827450047DA40 /* KeyboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewCell.swift; sourceTree = "<group>"; };
-		65A2BC8D1BF8275F0047DA40 /* PhonemeboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardView.swift; sourceTree = "<group>"; };
-		65A2BC8F1BF83DAE0047DA40 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		65A2BC911BF83DBF0047DA40 /* Phonemeboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phonemeboard.swift; sourceTree = "<group>"; };
 		65A2BC931BF873430047DA40 /* VOWL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VOWL-Bridging-Header.h"; path = "VOWL/VOWL-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		65A2BC961BF874EE0047DA40 /* Synthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synthesizer.swift; sourceTree = "<group>"; };
-		65A2BC981BF874FF0047DA40 /* Vocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocoder.swift; sourceTree = "<group>"; };
-		65A2BC9A1BF8750D0047DA40 /* Master.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
+		65A2BC9E1BF87AAC0047DA40 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		65A2BC9F1BF87AAC0047DA40 /* Master.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
+		65A2BCA01BF87AAC0047DA40 /* Synthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synthesizer.swift; sourceTree = "<group>"; };
+		65A2BCA11BF87AAC0047DA40 /* Vocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocoder.swift; sourceTree = "<group>"; };
+		65A2BCA41BF87AAC0047DA40 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		65A2BCA51BF87AAC0047DA40 /* KeyboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewCell.swift; sourceTree = "<group>"; };
+		65A2BCA61BF87AAC0047DA40 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		65A2BCA81BF87AAC0047DA40 /* Phonemeboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phonemeboard.swift; sourceTree = "<group>"; };
+		65A2BCA91BF87AAC0047DA40 /* PhonemeboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardView.swift; sourceTree = "<group>"; };
+		65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
+		65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				65A2BC6F1BF826320047DA40 /* AppDelegate.swift */,
-				65A2BC821BF826CB0047DA40 /* View Controllers */,
-				65A2BC751BF826320047DA40 /* Models */,
+				65A2BCA21BF87AAC0047DA40 /* View Controllers */,
+				65A2BC9C1BF87AAC0047DA40 /* Models */,
 				65A2BC701BF826320047DA40 /* Assets */,
 				65A2BC801BF8265B0047DA40 /* Supporting Files */,
 			);
@@ -108,19 +110,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		65A2BC751BF826320047DA40 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				65A2BC891BF8271F0047DA40 /* Audio.swift */,
-				65A2BC8F1BF83DAE0047DA40 /* Keyboard.swift */,
-				65A2BC911BF83DBF0047DA40 /* Phonemeboard.swift */,
-				65A2BC961BF874EE0047DA40 /* Synthesizer.swift */,
-				65A2BC981BF874FF0047DA40 /* Vocoder.swift */,
-				65A2BC9A1BF8750D0047DA40 /* Master.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		65A2BC801BF8265B0047DA40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,29 +120,51 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		65A2BC821BF826CB0047DA40 /* View Controllers */ = {
+		65A2BC9C1BF87AAC0047DA40 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				65A2BC831BF826CB0047DA40 /* Keyboard */,
-				65A2BC851BF826CB0047DA40 /* Phonemeboard */,
+				65A2BC9D1BF87AAC0047DA40 /* Audio */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65A2BC9D1BF87AAC0047DA40 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				65A2BC9E1BF87AAC0047DA40 /* Audio.swift */,
+				65A2BCA01BF87AAC0047DA40 /* Synthesizer.swift */,
+				65A2BCA11BF87AAC0047DA40 /* Vocoder.swift */,
+				65A2BC9F1BF87AAC0047DA40 /* Master.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		65A2BCA21BF87AAC0047DA40 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65A2BCA31BF87AAC0047DA40 /* Keyboard */,
+				65A2BCA71BF87AAC0047DA40 /* Phonemeboard */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		65A2BC831BF826CB0047DA40 /* Keyboard */ = {
+		65A2BCA31BF87AAC0047DA40 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				65A2BC841BF826CB0047DA40 /* KeyboardViewController.swift */,
-				65A2BC8B1BF827450047DA40 /* KeyboardViewCell.swift */,
+				65A2BCA61BF87AAC0047DA40 /* KeyboardViewController.swift */,
+				65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */,
+				65A2BCA51BF87AAC0047DA40 /* KeyboardViewCell.swift */,
+				65A2BCA41BF87AAC0047DA40 /* Keyboard.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
-		65A2BC851BF826CB0047DA40 /* Phonemeboard */ = {
+		65A2BCA71BF87AAC0047DA40 /* Phonemeboard */ = {
 			isa = PBXGroup;
 			children = (
-				65A2BC861BF826CB0047DA40 /* PhonemeboardViewController.swift */,
-				65A2BC8D1BF8275F0047DA40 /* PhonemeboardView.swift */,
+				65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */,
+				65A2BCA91BF87AAC0047DA40 /* PhonemeboardView.swift */,
+				65A2BCA81BF87AAC0047DA40 /* Phonemeboard.swift */,
 			);
 			path = Phonemeboard;
 			sourceTree = "<group>";
@@ -288,17 +299,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A2BC8C1BF827450047DA40 /* KeyboardViewCell.swift in Sources */,
-				65A2BC921BF83DBF0047DA40 /* Phonemeboard.swift in Sources */,
-				65A2BC991BF874FF0047DA40 /* Vocoder.swift in Sources */,
-				65A2BC9B1BF8750D0047DA40 /* Master.swift in Sources */,
-				65A2BC971BF874EE0047DA40 /* Synthesizer.swift in Sources */,
-				65A2BC8A1BF8271F0047DA40 /* Audio.swift in Sources */,
-				65A2BC901BF83DAE0047DA40 /* Keyboard.swift in Sources */,
+				65A2BCAD1BF87AAC0047DA40 /* Synthesizer.swift in Sources */,
+				65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */,
+				65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */,
+				65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */,
+				65A2BCAE1BF87AAC0047DA40 /* Vocoder.swift in Sources */,
+				65A2BCB01BF87AAC0047DA40 /* KeyboardViewCell.swift in Sources */,
+				65A2BCB31BF87AAC0047DA40 /* PhonemeboardView.swift in Sources */,
+				65A2BCAB1BF87AAC0047DA40 /* Audio.swift in Sources */,
+				65A2BCAF1BF87AAC0047DA40 /* Keyboard.swift in Sources */,
+				65A2BCB21BF87AAC0047DA40 /* Phonemeboard.swift in Sources */,
 				65A2BC791BF826320047DA40 /* AppDelegate.swift in Sources */,
-				65A2BC881BF826CB0047DA40 /* PhonemeboardViewController.swift in Sources */,
-				65A2BC8E1BF8275F0047DA40 /* PhonemeboardView.swift in Sources */,
-				65A2BC871BF826CB0047DA40 /* KeyboardViewController.swift in Sources */,
+				65A2BCB11BF87AAC0047DA40 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

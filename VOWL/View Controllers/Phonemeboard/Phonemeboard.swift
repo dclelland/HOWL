@@ -1,5 +1,5 @@
 //
-//  Keyboard.swift
+//  Phonemeboard.swift
 //  VOWL
 //
 //  Created by Daniel Clelland on 15/11/15.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Keyboard: AKInstrument {
+class Phonemeboard {
 
 }

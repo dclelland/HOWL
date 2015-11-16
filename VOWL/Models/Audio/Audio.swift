@@ -1,5 +1,5 @@
 //
-//  Phonemeboard.swift
+//  Audio.swift
 //  VOWL
 //
 //  Created by Daniel Clelland on 15/11/15.
@@ -8,6 +8,8 @@
 
 import UIKit
 
-class Phonemeboard: AKInstrument {
+class Audio {
+    
+    static let shared = Audio()
 
 }

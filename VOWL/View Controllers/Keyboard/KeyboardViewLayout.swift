@@ -1,5 +1,5 @@
 //
-//  Audio.swift
+//  KeyboardViewLayout.swift
 //  VOWL
 //
 //  Created by Daniel Clelland on 15/11/15.
@@ -8,11 +8,6 @@
 
 import UIKit
 
-class Audio {
-    
-    static let shared = Audio()
-    
-    let keyboard = Keyboard()
-    let phonemeboard = Phonemeboard()
+class KeyboardViewLayout: UICollectionViewLayout {
 
 }

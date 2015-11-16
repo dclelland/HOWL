@@ -11,6 +11,8 @@ import UIKit
 class PhonemeboardViewController: UIViewController {
     
     @IBOutlet weak var phonemeboardView: PhonemeboardView?
+    
+    let phonemeboard: Phonemeboard = Phonemeboard()
 
     override func viewDidLoad() {
         super.viewDidLoad()

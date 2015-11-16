@@ -11,6 +11,8 @@ import UIKit
 class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var keyboardView: UICollectionView?
+    
+    let keyboard: Keyboard = Keyboard()
 
     override func viewDidLoad() {
         super.viewDidLoad()
