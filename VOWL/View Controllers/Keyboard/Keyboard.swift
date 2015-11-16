@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct KeyboardCoordinate {
+struct KeyboardCoordinates {
     var leftAxis: Int
     var rightAxis: Int
     
@@ -25,7 +25,7 @@ class Keyboard {
     var leftAxisInterval = 4
     var rightAxisInterval = 7
     
-    var verticalRadius = 5
+    var verticalRadius = 4
     var horizontalRadius = 3
     
     func numberOfKeys() -> Int {
@@ -37,8 +37,29 @@ class Keyboard {
         return oddRowCount * oddColumnCount + evenRowCount * evenColumnCount
     }
     
-    func pitchForCoordinate(coordinate: KeyboardCoordinate) -> Int {
-        return centerPitch + coordinate.leftAxis * leftAxisInterval + coordinate.rightAxis * rightAxisInterval
+    func keyAtIndex(index: Int) -> KeyboardKey? {
+        let coordinates = self.coordinatesForIndex(index)
+        
+        let pitch = self.pitchForCoordinates(coordinates)
+        let location = self.locationForCoordinates(coordinates)
+        
+        return KeyboardKey.init(withPitch: pitch, location: location, value: 0.0)
+    }
+    
+    // MARK: - Transforms
+    
+    func coordinatesForIndex(index: Int) -> KeyboardCoordinates {
+        return KeyboardCoordinates(withLeftAxis: 0, rightAxis: 0)
+    }
+    
+    // MARK: - Key attributes
+    
+    func pitchForCoordinates(coordinates: KeyboardCoordinates) -> Int {
+        return centerPitch + coordinates.leftAxis * leftAxisInterval + coordinates.rightAxis * rightAxisInterval
+    }
+    
+    func locationForCoordinates(coordinates: KeyboardCoordinates) -> CGPoint {
+        return CGPointMake(0.5, 0.5)
     }
 }
 
@@ -46,15 +67,26 @@ extension Keyboard {
     
     // MARK: - Drawing
     
-    func hitPathForKeyAtIndex(index: Int, inBounds bounds: CGRect) -> UIBezierPath {
-        let rect = CGRect(x: 100.0, y: 100.0, width: 100.0, height: 100.0)
+    func pathForKeyAtIndex(index: Int, inBounds bounds: CGRect) -> UIBezierPath {
+        let coordinates = self.coordinatesForIndex(index)
+        let location = self.locationForCoordinates(coordinates)
         
-        return UIBezierPath(roundedRect: rect, cornerRadius: 6.0)
-    }
-    
-    func drawPathForKeyAtIndex(index: Int, inBounds bounds: CGRect) -> UIBezierPath {
-        let rect = CGRect(x: 100.0, y: 100.0, width: 100.0, height: 100.0)
+        let scale = CGAffineTransformMakeScale(bounds.width, bounds.height)
+        let translation = CGAffineTransformMakeTranslation(bounds.minX, bounds.minY)
+
+        let center = CGPointApplyAffineTransform(location, CGAffineTransformConcat(scale, translation))
         
-        return UIBezierPath(roundedRect: rect, cornerRadius: 6.0)
+        let verticalRadius = bounds.height / CGFloat(self.verticalRadius) / 2.0
+        let horizontalRadius = bounds.width / CGFloat(self.horizontalRadius) / 2.0
+        
+        let path = UIBezierPath()
+        
+        path.moveToPoint(CGPointMake(center.x, center.y - verticalRadius))
+        path.addLineToPoint(CGPointMake(center.x + horizontalRadius, center.y))
+        path.addLineToPoint(CGPointMake(center.x, center.y + verticalRadius))
+        path.addLineToPoint(CGPointMake(center.x - horizontalRadius, center.y))
+        path.closePath()
+        
+        return path
     }
 }

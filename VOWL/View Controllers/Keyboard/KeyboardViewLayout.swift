@@ -13,6 +13,8 @@ protocol KeyboardViewLayoutDelegate: UICollectionViewDelegate {
 }
 
 class KeyboardViewLayout: UICollectionViewLayout {
+    
+    // MARK: - Overrides
 
     override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
         return true
@@ -44,31 +46,13 @@ class KeyboardViewLayout: UICollectionViewLayout {
     }
     
     override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        guard let frame = self.frameForItemAtIndexPath(indexPath) else {
-            return nil
-        }
-        
         let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
-        attributes.frame = frame
-        return attributes
-    }
-    
-    // MARK: Private
-    
-    private func frameForItemAtIndexPath(indexPath: NSIndexPath) -> CGRect? {
-        if let path = self.pathForItemAtIndexPath(indexPath) {
-            return path.bounds
-        }
         
-        return nil
-    }
-    
-    private func pathForItemAtIndexPath(indexPath: NSIndexPath) -> UIBezierPath? {
         if let collectionView = self.collectionView, let delegate = collectionView.delegate as? KeyboardViewLayoutDelegate {
-            return delegate.collectionView(collectionView, layout: self, pathForItemAtIndexPath: indexPath)
+            attributes.frame = delegate.collectionView(collectionView, layout: self, pathForItemAtIndexPath: indexPath).bounds
         }
         
-        return nil
+        return attributes
     }
     
 }

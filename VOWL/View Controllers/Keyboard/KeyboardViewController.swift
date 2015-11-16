@@ -17,7 +17,7 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     // MARK: - Collection view delegate
     
     func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath {
-        return keyboard.hitPathForKeyAtIndex(indexPath.item, inBounds: collectionView.bounds)
+        return keyboard.pathForKeyAtIndex(indexPath.item, inBounds: collectionView.bounds)
     }
     
     // MARK: - Collection view data source
@@ -32,28 +32,18 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("keyboardViewCell", forIndexPath: indexPath) as! KeyboardViewCell
+        let path = keyboard.pathForKeyAtIndex(indexPath.item, inBounds: collectionView.bounds)
+        
+        path.applyTransform(CGAffineTransformMakeTranslation(-path.bounds.minX, -path.bounds.minY))
         
         if let layer = cell.layer as? CAShapeLayer {
-            layer.path = self.collectionView(collectionView, pathForItemAtIndexPath: indexPath).CGPath
-            layer.fillColor = self.collectionView(collectionView, colorForItemAtIndexPath: indexPath).CGColor
+            layer.path = path.CGPath
+            layer.fillColor = UIColor.orangeColor().CGColor
+            layer.strokeColor = UIColor.init(white: 0.2, alpha: 1.0).CGColor
+            layer.lineWidth = CGFloat(M_SQRT2)
         }
         
         return cell
-    }
-    
-    // MARK: - Cell configuration
-    
-    private func collectionView(collectionView: UICollectionView, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath {
-        let hitPath = keyboard.hitPathForKeyAtIndex(indexPath.item, inBounds: collectionView.bounds)
-        let drawPath = keyboard.drawPathForKeyAtIndex(indexPath.item, inBounds: collectionView.bounds)
-        
-        drawPath.applyTransform(CGAffineTransformMakeTranslation(-hitPath.bounds.origin.x, -hitPath.bounds.origin.y))
-        
-        return drawPath
-    }
-    
-    private func collectionView(collectionView: UICollectionView, colorForItemAtIndexPath indexPath: NSIndexPath) -> UIColor {
-        return UIColor.orangeColor()
     }
 
 }
