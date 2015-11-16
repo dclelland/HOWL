@@ -12,7 +12,7 @@ class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var keyboardView: UICollectionView?
     
-    let keyboard: Keyboard = Keyboard()
+    let keyboard = Keyboard()
 
     override func viewDidLoad() {
         super.viewDidLoad()

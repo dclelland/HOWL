@@ -20,13 +20,13 @@ struct KeyboardCoordinate {
 
 class Keyboard {
     
-    var centerPitch: Int = 40
+    var centerPitch = 40
     
-    var leftAxisInterval: Int = 4
-    var rightAxisInterval: Int = 7
+    var leftAxisInterval = 4
+    var rightAxisInterval = 7
     
-    var verticalRadius: Int = 5
-    var horizontalRadius: Int = 3
+    var verticalRadius = 5
+    var horizontalRadius = 3
     
     func numberOfKeys() -> Int {
         let oddRowCount: Int = verticalRadius / 2 * 2 + 1

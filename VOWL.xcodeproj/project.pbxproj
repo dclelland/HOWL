@@ -22,6 +22,7 @@
 		65A2BCB31BF87AAC0047DA40 /* PhonemeboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCA91BF87AAC0047DA40 /* PhonemeboardView.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB81BF9B66B0047DA40 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		65A2BCA91BF87AAC0047DA40 /* PhonemeboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardView.swift; sourceTree = "<group>"; };
 		65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
 		65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
+		65A2BCB81BF9B66B0047DA40 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				65A2BC9D1BF87AAC0047DA40 /* Audio */,
+				65A2BCB71BF9B6570047DA40 /* Settings */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +170,14 @@
 				65A2BCA81BF87AAC0047DA40 /* Phonemeboard.swift */,
 			);
 			path = Phonemeboard;
+			sourceTree = "<group>";
+		};
+		65A2BCB71BF9B6570047DA40 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				65A2BCB81BF9B66B0047DA40 /* Settings.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		7FCEBDA14A75CF18C40FFE38 /* Frameworks */ = {
@@ -301,6 +312,7 @@
 			files = (
 				65A2BCAD1BF87AAC0047DA40 /* Synthesizer.swift in Sources */,
 				65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */,
+				65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */,
 				65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */,
 				65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */,
 				65A2BCAE1BF87AAC0047DA40 /* Vocoder.swift in Sources */,
