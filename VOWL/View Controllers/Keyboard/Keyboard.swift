@@ -18,16 +18,6 @@ struct KeyboardCoordinate {
     }
 }
 
-struct KeyboardKey {
-    var pitch: Int
-    var selected: Bool
-    
-    init(withPitch pitch: Int, selected: Bool) {
-        self.pitch = pitch
-        self.selected = selected
-    }
-}
-
 class Keyboard {
     
     var centerPitch = 40
@@ -47,9 +37,24 @@ class Keyboard {
         return oddRowCount * oddColumnCount + evenRowCount * evenColumnCount
     }
     
-    
-    
     func pitchForCoordinate(coordinate: KeyboardCoordinate) -> Int {
         return centerPitch + coordinate.leftAxis * leftAxisInterval + coordinate.rightAxis * rightAxisInterval
+    }
+}
+
+extension Keyboard {
+    
+    // MARK: - Paths
+    
+    func hitPathForKeyAtIndex(index: Int, inBounds bounds: CGRect) -> UIBezierPath {
+        let rect = CGRect(x: 100.0, y: 100.0, width: 100.0, height: 100.0)
+        
+        return UIBezierPath(roundedRect: rect, cornerRadius: 6.0)
+    }
+    
+    func drawPathForKeyAtIndex(index: Int, inBounds bounds: CGRect) -> UIBezierPath {
+        let rect = CGRect(x: 100.0, y: 100.0, width: 100.0, height: 100.0)
+        
+        return UIBezierPath(roundedRect: rect, cornerRadius: 6.0)
     }
 }

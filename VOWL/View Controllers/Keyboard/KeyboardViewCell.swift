@@ -14,4 +14,7 @@ class KeyboardViewCell: UICollectionViewCell {
 //        self.backgroundColor = UIColor.yellowColor()
     }
     
+    override class func layerClass() -> AnyClass {
+        return CAShapeLayer.self
+    }
 }

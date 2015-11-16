@@ -23,6 +23,7 @@
 		65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB81BF9B66B0047DA40 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCBB1BF9D3EB0047DA40 /* KeyboardKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
 		65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 		65A2BCB81BF9B66B0047DA40 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */,
 				65A2BCA51BF87AAC0047DA40 /* KeyboardViewCell.swift */,
 				65A2BCA41BF87AAC0047DA40 /* Keyboard.swift */,
+				65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				65A2BCB31BF87AAC0047DA40 /* PhonemeboardView.swift in Sources */,
 				65A2BCAB1BF87AAC0047DA40 /* Audio.swift in Sources */,
 				65A2BCAF1BF87AAC0047DA40 /* Keyboard.swift in Sources */,
+				65A2BCBB1BF9D3EB0047DA40 /* KeyboardKey.swift in Sources */,
 				65A2BCB21BF87AAC0047DA40 /* Phonemeboard.swift in Sources */,
 				65A2BC791BF826320047DA40 /* AppDelegate.swift in Sources */,
 				65A2BCB11BF87AAC0047DA40 /* KeyboardViewController.swift in Sources */,
