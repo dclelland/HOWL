@@ -57,8 +57,6 @@ class PhonemeboardView: UIControl {
                 self.delegate?.phonemeboardView(self, touchEnded: touch)
             case .Ended:
                 self.delegate?.phonemeboardView(self, touchEnded: touch)
-            default:
-                break
             }
         }
     }

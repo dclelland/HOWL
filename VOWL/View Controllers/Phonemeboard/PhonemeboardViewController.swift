@@ -20,6 +20,12 @@ class PhonemeboardViewController: UIViewController, PhonemeboardViewDelegate {
         phonemeboardView?.delegate = self
     }
     
+    // MARK: - Interface events
+    
+    @IBAction func holdButtonTapped(button: UIButton) {
+        print("hold button tapped")
+    }
+    
     // MARK: Phonemeboard view delegate
     
     func phonemeboardView(phonemeboardView: PhonemeboardView, touchBegan touch: UITouch) {
