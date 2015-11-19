@@ -463,6 +463,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="holdButton" destination="Cym-3r-t5S" id="IxL-OF-nzU"/>
                         <outlet property="phonemeboardView" destination="nKs-R2-KFV" id="wrb-WF-L6K"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,12 @@ class PhonemeboardViewController: UIViewController, PhonemeboardViewDelegate {
     
     @IBOutlet weak var phonemeboardView: PhonemeboardView?
     
+    @IBOutlet weak var holdButton: HoldButton? {
+        didSet {
+            holdButton?.selected = Settings.shared.keyboardSustain
+        }
+    }
+    
     let phonemeboard = Phonemeboard()
     
     override func viewDidLoad() {
@@ -22,8 +28,9 @@ class PhonemeboardViewController: UIViewController, PhonemeboardViewDelegate {
     
     // MARK: - Interface events
     
-    @IBAction func holdButtonTapped(button: UIButton) {
-        print("hold button tapped")
+    @IBAction func holdButtonTapped(button: HoldButton) {
+        Settings.shared.keyboardSustain = !Settings.shared.keyboardSustain
+        button.selected = Settings.shared.keyboardSustain
     }
     
     // MARK: Phonemeboard view delegate
