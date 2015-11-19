@@ -35,12 +35,9 @@ class Keyboard {
     }
     
     func numberOfKeysInRow(row: Int) -> Int {
-        switch self.parityForRow(row) {
-        case .Even:
-            return horizontalRadius.isEven() ? horizontalRadius : horizontalRadius + 1
-        case .Odd:
-            return horizontalRadius.isOdd() ? horizontalRadius : horizontalRadius + 1
-        }
+        return horizontalRadius.parity() == verticalRadius.parity()
+            ? row.isEven() ? horizontalRadius + 1 : horizontalRadius
+            : row.isOdd() ? horizontalRadius + 1 : horizontalRadius
     }
     
     // MARK: - Keys
@@ -92,8 +89,6 @@ class Keyboard {
         let leftAxis = Float(verticalOffset + horizontalOffset) / 2
         let rightAxis = Float(verticalOffset - horizontalOffset) / 2
         
-        print("row: \(row); index: \(index); x: \(x); y: \(y); left: \(leftAxis); right: \(rightAxis)")
-        
         return Coordinates(withLeftAxis: Int(leftAxis), rightAxis: Int(rightAxis))
     }
     
@@ -111,16 +106,5 @@ class Keyboard {
         let rightAxisDifference = CGVectorMake(horizontalKeyRadius * CGFloat(coordinates.rightAxis), -verticalKeyRadius * CGFloat(coordinates.rightAxis))
         
         return CGPointMake(0.5 + leftAxisDifference.dx + rightAxisDifference.dx, 0.5 + leftAxisDifference.dy + rightAxisDifference.dy)
-    }
-    
-    // MARK: - Row parity
-    
-    enum RowParity {
-        case Even
-        case Odd
-    }
-    
-    private func parityForRow(row: Int) -> RowParity {
-        return row.parity() == verticalRadius.parity() ? .Odd : .Even
     }
 }

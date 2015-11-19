@@ -45,7 +45,7 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
             path.applyTransform(CGAffineTransformMakeTranslation(-path.bounds.minX, -path.bounds.minY))
             
             layer.path = path.CGPath
-            layer.fillColor = UIColor.orangeColor().CGColor
+            layer.fillColor = UIColor(white: 0.2, alpha: 1.0).CGColor
             layer.strokeColor = UIColor.blackColor().CGColor
             layer.lineWidth = CGFloat(M_SQRT2)
         }
