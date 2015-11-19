@@ -13,6 +13,11 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     @IBOutlet weak var keyboardView: UICollectionView?
     
     let keyboard = Keyboard()
+    let touches = [UITouch]()
+    
+    // MARK: - Touch events
+    
+    
     
     // MARK: - Collection view delegate
     
@@ -36,7 +41,7 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         let key = keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section)
         
         if let key = key {
-            cell.textLabel?.text = String(key.pitch)
+            cell.textLabel?.text = key.name()
         }
         
         let path = keyboard.pathForKeyAtIndex(indexPath.item, inRow: indexPath.section, withBounds: collectionView.bounds)

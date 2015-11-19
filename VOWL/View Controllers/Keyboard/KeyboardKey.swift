@@ -11,11 +11,43 @@ import UIKit
 class KeyboardKey {
     var pitch: Int
     var location: CGPoint
-    var value: Float
     
-    init(withPitch pitch: Int, location: CGPoint, value: Float) {
+    init(withPitch pitch: Int, location: CGPoint) {
         self.pitch = pitch
         self.location = location
-        self.value = value
+    }
+    
+    // MARK: Getters
+    
+    func name() -> String {
+        return self.noteName() + self.octaveName()
+    }
+    
+    func frequency() -> Double {
+        return pow(2.0, (Double(pitch) - 69.0) / 12.0) * 440.0
+    }
+    
+    // MARK: Names
+    
+    private func noteName() -> String {
+        switch pitch % 12 {
+        case 0: return "C"
+        case 1: return "C#"
+        case 2: return "D"
+        case 3: return "D#"
+        case 4: return "E"
+        case 5: return "F"
+        case 6: return "F#"
+        case 7: return "G"
+        case 8: return "G#"
+        case 9: return "A"
+        case 10: return "A#"
+        case 11: return "B"
+        default: return ""
+        }
+    }
+    
+    private func octaveName() -> String {
+        return String(pitch / 12 - 1)
     }
 }

@@ -20,7 +20,7 @@ class Keyboard {
         }
     }
     
-    var centerPitch = 40
+    var centerPitch = 60
     
     var leftAxisInterval = 4
     var rightAxisInterval = 7
@@ -45,7 +45,7 @@ class Keyboard {
         let pitch = self.pitchForCoordinates(coordinates)
         let location = self.locationForCoordinates(coordinates)
         
-        return KeyboardKey.init(withPitch: pitch, location: location, value: 0.0)
+        return KeyboardKey.init(withPitch: pitch, location: location)
     }
     
     // MARK: - Paths
