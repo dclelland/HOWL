@@ -12,6 +12,12 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     
     @IBOutlet weak var keyboardView: UICollectionView?
     
+    @IBOutlet weak var holdButton: HoldButton? {
+        didSet {
+            holdButton?.selected = Settings.shared.keyboardSustain
+        }
+    }
+    
     let keyboard = Keyboard()
     
     var touches = [UITouch]()
@@ -55,8 +61,9 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     
     // MARK: - Interface events
     
-    @IBAction func holdButtonTapped(button: UIButton) {
-        print("hold button tapped")
+    @IBAction func holdButtonTapped(button: HoldButton) {
+        Settings.shared.keyboardSustain = !Settings.shared.keyboardSustain
+        button.selected = Settings.shared.keyboardSustain
     }
     
     // MARK: - Touch events
@@ -114,8 +121,8 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
             path.applyTransform(CGAffineTransformMakeTranslation(-path.bounds.minX, -path.bounds.minY))
             
             layer.path = path.CGPath
-            layer.fillColor = UIColor(white: 0.2, alpha: 1.0).CGColor
-            layer.strokeColor = UIColor.blackColor().CGColor
+            layer.fillColor = UIColor.vowl_darkGreyColor().CGColor
+            layer.strokeColor = UIColor.vowl_blackColor().CGColor
             layer.lineWidth = CGFloat(M_SQRT2)
         }
         

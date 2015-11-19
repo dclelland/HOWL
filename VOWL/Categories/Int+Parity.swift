@@ -1,5 +1,5 @@
 //
-//  Int+Parity.swift
+//  Int+VOWL.swift
 //  VOWL
 //
 //  Created by Daniel Clelland on 19/11/15.
@@ -9,6 +9,9 @@
 import Foundation
 
 extension Int {
+    
+    // MARK: - Parity
+    
     enum Parity {
         case Even
         case Odd
