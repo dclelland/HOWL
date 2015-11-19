@@ -9,7 +9,7 @@
 import UIKit
 
 protocol KeyboardViewLayoutDelegate: UICollectionViewDelegate {
-    func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath
+    func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath?
 }
 
 class KeyboardViewLayout: UICollectionViewLayout {
@@ -49,7 +49,9 @@ class KeyboardViewLayout: UICollectionViewLayout {
         let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
         
         if let collectionView = self.collectionView, let delegate = collectionView.delegate as? KeyboardViewLayoutDelegate {
-            attributes.frame = delegate.collectionView(collectionView, layout: self, pathForItemAtIndexPath: indexPath).bounds
+            if let path = delegate.collectionView(collectionView, layout: self, pathForItemAtIndexPath: indexPath) {
+                attributes.frame = path.bounds
+            }
         }
         
         return attributes

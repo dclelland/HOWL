@@ -188,10 +188,28 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-Yo-F7g">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Gkx-Yo-F7g" secondAttribute="trailing" id="2fp-lX-dSV"/>
+                                                    <constraint firstItem="Gkx-Yo-F7g" firstAttribute="top" secondItem="4NR-Ly-4rB" secondAttribute="top" id="IZe-9A-Nyh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Gkx-Yo-F7g" secondAttribute="bottom" id="lot-R7-l2F"/>
+                                                    <constraint firstItem="Gkx-Yo-F7g" firstAttribute="leading" secondItem="4NR-Ly-4rB" secondAttribute="leading" id="oh5-8G-8v7"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="textLabel" destination="Gkx-Yo-F7g" id="Vbo-fc-nDP"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <userDefinedRuntimeAttributes>
