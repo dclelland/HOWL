@@ -35,9 +35,7 @@ class Keyboard {
     }
     
     func numberOfKeysInRow(row: Int) -> Int {
-        return horizontalRadius.parity() == verticalRadius.parity()
-            ? row.isEven() ? horizontalRadius + 1 : horizontalRadius
-            : row.isOdd() ? horizontalRadius + 1 : horizontalRadius
+        return self.rowIsOffset(row) ? horizontalRadius : horizontalRadius + 1
     }
     
     // MARK: - Keys
@@ -75,12 +73,20 @@ class Keyboard {
         return path
     }
     
+    // MARK: - Rows
+    
+    private func rowIsOffset(row: Int) -> Bool {
+        if horizontalRadius.parity() == verticalRadius.parity() {
+            return row.isOdd()
+        } else {
+            return row.isEven()
+        }
+    }
+    
     // MARK: - Coordinates
     
     private func coordinatesForIndex(index: Int, inRow row: Int) -> Coordinates {
-        let x = horizontalRadius.parity() == verticalRadius.parity()
-            ? row.isEven() ? index * 2 : index * 2 + 1
-            : row.isOdd() ? index * 2 : index * 2 + 1
+        let x = self.rowIsOffset(row) ? index * 2 + 1 : index * 2
         let y = row
         
         let verticalOffset = verticalRadius - y
