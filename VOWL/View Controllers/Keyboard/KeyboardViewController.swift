@@ -52,12 +52,6 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("keyboardViewCell", forIndexPath: indexPath) as! KeyboardViewCell
         
-        let key = keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section)
-        
-        if let key = key {
-            cell.textLabel?.text = key.name()
-        }
-        
         let path = keyboard.pathForKeyAtIndex(indexPath.item, inRow: indexPath.section, withBounds: collectionView.bounds)
         
         if let path = path, let layer = cell.layer as? CAShapeLayer {

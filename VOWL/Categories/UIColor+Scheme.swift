@@ -11,8 +11,8 @@ import UIKit
 extension UIColor {
     
     private static let minimumGreyBrightness : CGFloat = 0.2
-    private static let mediumGreyBrightness : CGFloat = 0.3
-    private static let maximumGreyBrightness : CGFloat = 0.4
+    private static let mediumGreyBrightness : CGFloat = 0.25
+    private static let maximumGreyBrightness : CGFloat = 0.3
     
     private static let minimumColorBrightness : CGFloat = 0.5
     private static let mediumColorBrightness : CGFloat = 0.75

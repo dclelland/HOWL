@@ -13,7 +13,7 @@ class HoldButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let hue: CGFloat = 0.125
+        let hue: CGFloat = 0.25
         let cornerRadius: CGFloat = 2.0
         
         self.backgroundColor = UIColor.clearColor()
