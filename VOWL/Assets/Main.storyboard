@@ -361,7 +361,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-28-UfI">
                                 <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV" customClass="PhonemeboardView" customModule="VOWL" customModuleProvider="target">
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV" customClass="PhonemeboardView" customModule="VOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="275" height="263"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-sL-RjK">
@@ -409,6 +409,7 @@
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="h64-U2-xGg" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" id="46d-AV-txR"/>
                                             <constraint firstItem="Dv1-sL-RjK" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="2/3" constant="-6" id="BDv-I4-Wit"/>
@@ -428,6 +429,9 @@
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="m5e-OB-eOs" appends="YES" id="9iy-cf-fgz"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -464,10 +468,16 @@
                     </view>
                     <connections>
                         <outlet property="holdButton" destination="Cym-3r-t5S" id="IxL-OF-nzU"/>
+                        <outlet property="multitouchGestureRecognizer" destination="m5e-OB-eOs" id="c6q-k5-bby"/>
                         <outlet property="phonemeboardView" destination="nKs-R2-KFV" id="wrb-WF-L6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9O-cX-Tla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="m5e-OB-eOs" customClass="MultitouchGestureRecognizer" customModule="VOWL" customModuleProvider="target">
+                    <connections>
+                        <outlet property="delegate" destination="wpy-HA-xtF" id="43N-0r-WQZ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140.5" y="936"/>
         </scene>

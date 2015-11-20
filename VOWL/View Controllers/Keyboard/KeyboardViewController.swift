@@ -20,74 +20,11 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     
     let keyboard = Keyboard()
     
-    var touches = [UITouch]()
-    
-    // MARK: Touches
-    
-    func updateTouches(touches: Set<UITouch>) {
-        touches.forEach { (touch) -> () in
-            switch touch.phase {
-            case .Began:
-                self.startTouch(touch)
-            case .Moved:
-                self.updateTouch(touch)
-            case .Stationary:
-                self.updateTouch(touch)
-            case .Cancelled:
-                self.endTouch(touch)
-            case .Ended:
-                self.endTouch(touch)
-            }
-        }
-        
-        self.keyboardView?.reloadData()
-    }
-    
-    func startTouch(touch: UITouch) {
-        print("start")
-        self.touches.append(touch)
-    }
-    
-    func updateTouch(touch: UITouch) {
-        print("update")
-    }
-    
-    func endTouch(touch: UITouch) {
-        print("end")
-        if let index = self.touches.indexOf(touch) {
-            self.touches.removeAtIndex(index)
-        }
-    }
-    
     // MARK: - Interface events
     
     @IBAction func holdButtonTapped(button: HoldButton) {
         Settings.shared.keyboardSustain = !Settings.shared.keyboardSustain
         button.selected = Settings.shared.keyboardSustain
-    }
-    
-    // MARK: - Touch events
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        self.updateTouches(touches)
-    }
-    
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesMoved(touches, withEvent: event)
-        self.updateTouches(touches)
-    }
-    
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-        super.touchesCancelled(touches, withEvent: event)
-        if let touches = touches {
-            self.updateTouches(touches)
-        }
-    }
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
-        self.updateTouches(touches)
     }
     
     // MARK: - Collection view delegate

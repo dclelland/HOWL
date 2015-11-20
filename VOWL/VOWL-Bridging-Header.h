@@ -7,3 +7,4 @@
 //
 
 #import <AudioKit/AKFoundation.h>
+#import <UIKit/UIGestureRecognizerSubclass.h>

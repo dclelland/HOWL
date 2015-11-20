@@ -8,43 +8,51 @@
 
 import UIKit
 
-class PhonemeboardViewController: UIViewController, PhonemeboardViewDelegate {
+class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerDelegate {
     
     @IBOutlet weak var phonemeboardView: PhonemeboardView?
     
+    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
+    
     @IBOutlet weak var holdButton: HoldButton? {
         didSet {
-            holdButton?.selected = Settings.shared.keyboardSustain
+            holdButton?.selected = Settings.shared.phonemeboardSustain
         }
     }
     
     let phonemeboard = Phonemeboard()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        phonemeboardView?.delegate = self
-    }
-    
     // MARK: - Interface events
     
     @IBAction func holdButtonTapped(button: HoldButton) {
-        Settings.shared.keyboardSustain = !Settings.shared.keyboardSustain
-        button.selected = Settings.shared.keyboardSustain
+        Settings.shared.phonemeboardSustain = !Settings.shared.phonemeboardSustain
+        button.selected = Settings.shared.phonemeboardSustain
+        
+        if !button.selected {
+            self.multitouchGestureRecognizer?.endTouches()
+        }
     }
     
-    // MARK: Phonemeboard view delegate
+    // MARK: - Multitouch gesture recognizer delegate
     
-    func phonemeboardView(phonemeboardView: PhonemeboardView, touchBegan touch: UITouch) {
-        print("began: " + NSStringFromCGPoint(touch.locationInView(phonemeboardView)))
+    func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
+        return Settings.shared.phonemeboardSustain
     }
     
-    func phonemeboardView(phonemeboardView: PhonemeboardView, touchMoved touch: UITouch) {
-        print("moved: " + NSStringFromCGPoint(touch.locationInView(phonemeboardView)))
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
+        print("begin")
     }
     
-    func phonemeboardView(phonemeboardView: PhonemeboardView, touchEnded touch: UITouch) {
-        print("ended: " + NSStringFromCGPoint(touch.locationInView(phonemeboardView)))
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
+        print("move")
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
+        print("cancel")
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
+        print("end")
     }
     
 }

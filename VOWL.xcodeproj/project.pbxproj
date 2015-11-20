@@ -11,6 +11,7 @@
 		650C0E271BFE7D3F003DC6BB /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C0E261BFE7D3F003DC6BB /* UIImage+Color.swift */; settings = {ASSET_TAGS = (); }; };
 		650C0E2A1BFE7D63003DC6BB /* HoldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C0E291BFE7D63003DC6BB /* HoldButton.swift */; settings = {ASSET_TAGS = (); }; };
 		650C0E2C1BFE7E6B003DC6BB /* UIColor+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C0E2B1BFE7E6B003DC6BB /* UIColor+Scheme.swift */; settings = {ASSET_TAGS = (); }; };
+		6555ABC01BFE903800E9B36A /* MultitouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6555ABBF1BFE903800E9B36A /* MultitouchGestureRecognizer.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BC791BF826320047DA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC6F1BF826320047DA40 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BC7A1BF826320047DA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC711BF826320047DA40 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		65A2BC7B1BF826320047DA40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC721BF826320047DA40 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -39,6 +40,7 @@
 		650C0E261BFE7D3F003DC6BB /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		650C0E291BFE7D63003DC6BB /* HoldButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoldButton.swift; sourceTree = "<group>"; };
 		650C0E2B1BFE7E6B003DC6BB /* UIColor+Scheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Scheme.swift"; sourceTree = "<group>"; };
+		6555ABBF1BFE903800E9B36A /* MultitouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		656472CF1BF6BD2A00BDEB1B /* VOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A2BC6F1BF826320047DA40 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A2BC711BF826320047DA40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				650C0E291BFE7D63003DC6BB /* HoldButton.swift */,
+				6555ABBF1BFE903800E9B36A /* MultitouchGestureRecognizer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				650C0E2A1BFE7D63003DC6BB /* HoldButton.swift in Sources */,
 				65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */,
 				650C0E251BFDCF54003DC6BB /* Int+Parity.swift in Sources */,
+				6555ABC01BFE903800E9B36A /* MultitouchGestureRecognizer.swift in Sources */,
 				65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */,
 				65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */,
 				65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */,
