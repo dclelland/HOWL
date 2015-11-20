@@ -223,6 +223,7 @@
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="2Xe-UY-uHE" firstAttribute="leading" secondItem="3Yl-Bj-Pmz" secondAttribute="leading" constant="2" id="Cae-CM-E14"/>
                                     <constraint firstItem="2Xe-UY-uHE" firstAttribute="top" secondItem="3Yl-Bj-Pmz" secondAttribute="top" constant="2" id="Inj-gn-K3c"/>
@@ -234,6 +235,9 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LrJ-MY-OPU" appends="YES" id="CgX-tP-hw3"/>
+                                </connections>
                             </view>
                         </subviews>
                         <animations/>
@@ -256,9 +260,15 @@
                     <connections>
                         <outlet property="holdButton" destination="SSe-rB-Cz2" id="OHS-HX-wwx"/>
                         <outlet property="keyboardView" destination="2Xe-UY-uHE" id="VLh-at-J1V"/>
+                        <outlet property="multitouchGestureRecognizer" destination="LrJ-MY-OPU" id="lzD-AL-m8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTE-EL-bmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="LrJ-MY-OPU" customClass="MultitouchGestureRecognizer" customModule="VOWL" customModuleProvider="target">
+                    <connections>
+                        <outlet property="delegate" destination="9J8-TP-oCq" id="cB4-ke-fqH"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="578.75" y="936"/>
         </scene>

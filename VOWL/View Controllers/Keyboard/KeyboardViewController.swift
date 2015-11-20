@@ -8,9 +8,11 @@
 
 import UIKit
 
-class KeyboardViewController: UIViewController, UICollectionViewDataSource, KeyboardViewLayoutDelegate {
+class KeyboardViewController: UIViewController, UICollectionViewDataSource, KeyboardViewLayoutDelegate, MultitouchGestureRecognizerDelegate {
     
     @IBOutlet weak var keyboardView: UICollectionView?
+    
+    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
     
     @IBOutlet weak var holdButton: HoldButton? {
         didSet {
@@ -25,6 +27,10 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     @IBAction func holdButtonTapped(button: HoldButton) {
         Settings.shared.keyboardSustain = !Settings.shared.keyboardSustain
         button.selected = Settings.shared.keyboardSustain
+        
+        if !button.selected {
+            self.multitouchGestureRecognizer?.endTouches()
+        }
     }
     
     // MARK: - Collection view delegate
@@ -64,6 +70,28 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         }
         
         return cell
+    }
+    
+    // MARK: - Multitouch gesture recognizer delegate
+    
+    func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
+        return Settings.shared.keyboardSustain
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
+        print("begin")
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
+        print("move")
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
+        print("cancel")
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
+        print("end")
     }
 
 }
