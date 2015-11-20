@@ -40,47 +40,13 @@ class Keyboard {
     
     // MARK: - Keys
     
-    func keyAtIndex(index: Int, inRow row: Int) -> KeyboardKey? {
+    func keyAtIndex(index: Int, inRow row: Int) -> KeyboardKey {
         let coordinates = self.coordinatesForIndex(index, inRow: row)
+        
         let pitch = self.pitchForCoordinates(coordinates)
-        let location = self.locationForCoordinates(coordinates)
+        let path = self.pathForCoordinates(coordinates)
         
-        return KeyboardKey.init(withPitch: pitch, location: location)
-    }
-    
-    // MARK: - Paths
-    
-    func pathForKeyAtIndex(index: Int, inRow row: Int, withBounds bounds: CGRect) -> UIBezierPath? {
-        let coordinates = self.coordinatesForIndex(index, inRow: row)
-        let location = self.locationForCoordinates(coordinates)
-        
-        let scale = CGAffineTransformMakeScale(bounds.width, bounds.height)
-        let translation = CGAffineTransformMakeTranslation(bounds.minX, bounds.minY)
-        
-        let center = CGPointApplyAffineTransform(location, CGAffineTransformConcat(scale, translation))
-        
-        let horizontalKeyRadius = bounds.width / CGFloat(horizontalRadius) / 2.0
-        let verticalKeyRadius = bounds.height / CGFloat(verticalRadius) / 2.0
-        
-        let path = UIBezierPath()
-        
-        path.moveToPoint(CGPointMake(center.x, center.y - verticalKeyRadius))
-        path.addLineToPoint(CGPointMake(center.x + horizontalKeyRadius, center.y))
-        path.addLineToPoint(CGPointMake(center.x, center.y + verticalKeyRadius))
-        path.addLineToPoint(CGPointMake(center.x - horizontalKeyRadius, center.y))
-        path.closePath()
-        
-        return path
-    }
-    
-    // MARK: - Rows
-    
-    private func rowIsOffset(row: Int) -> Bool {
-        if horizontalRadius.parity() == verticalRadius.parity() {
-            return row.isOdd()
-        } else {
-            return row.isEven()
-        }
+        return KeyboardKey.init(withPitch: pitch, path: path)
     }
     
     // MARK: - Coordinates
@@ -98,10 +64,35 @@ class Keyboard {
         return Coordinates(withLeftAxis: Int(leftAxis), rightAxis: Int(rightAxis))
     }
     
-    // MARK: - Coordinates transforms
+    private func rowIsOffset(row: Int) -> Bool {
+        if horizontalRadius.parity() == verticalRadius.parity() {
+            return row.isOdd()
+        } else {
+            return row.isEven()
+        }
+    }
+    
+    // MARK: - Transforms
     
     private func pitchForCoordinates(coordinates: Coordinates) -> Int {
         return centerPitch + coordinates.leftAxis * leftAxisInterval + coordinates.rightAxis * rightAxisInterval
+    }
+    
+    private func pathForCoordinates(coordinates: Coordinates) -> UIBezierPath {
+        let location = self.locationForCoordinates(coordinates)
+        
+        let horizontalKeyRadius = 1.0 / (2.0 * CGFloat(horizontalRadius))
+        let verticalKeyRadius = 1.0 / (2.0 * CGFloat(verticalRadius))
+        
+        let path = UIBezierPath()
+        
+        path.moveToPoint(CGPointMake(location.x, location.y - verticalKeyRadius))
+        path.addLineToPoint(CGPointMake(location.x + horizontalKeyRadius, location.y))
+        path.addLineToPoint(CGPointMake(location.x, location.y + verticalKeyRadius))
+        path.addLineToPoint(CGPointMake(location.x - horizontalKeyRadius, location.y))
+        path.closePath()
+        
+        return path
     }
     
     private func locationForCoordinates(coordinates: Coordinates) -> CGPoint {

@@ -10,11 +10,11 @@ import UIKit
 
 class KeyboardKey {
     var pitch: Int
-    var location: CGPoint
+    var path: UIBezierPath
     
-    init(withPitch pitch: Int, location: CGPoint) {
+    init(withPitch pitch: Int, path: UIBezierPath) {
         self.pitch = pitch
-        self.location = location
+        self.path = path
     }
     
     // MARK: Getters

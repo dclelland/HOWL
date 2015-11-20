@@ -36,7 +36,7 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     // MARK: - Collection view delegate
     
     func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath? {
-        return keyboard.pathForKeyAtIndex(indexPath.item, inRow: indexPath.section, withBounds: collectionView.bounds)
+        return self.collectionView(collectionView, pathForItemAtIndexPath: indexPath)
     }
     
     // MARK: - Collection view data source
@@ -51,17 +51,16 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("keyboardViewCell", forIndexPath: indexPath) as! KeyboardViewCell
+        let layer = cell.layer as! CAShapeLayer
         
-        let path = keyboard.pathForKeyAtIndex(indexPath.item, inRow: indexPath.section, withBounds: collectionView.bounds)
+        let path = self.collectionView(collectionView, pathForItemAtIndexPath: indexPath)
         
-        if let path = path, let layer = cell.layer as? CAShapeLayer {
-            path.applyTransform(CGAffineTransformMakeTranslation(-path.bounds.minX, -path.bounds.minY))
-            
-            layer.path = path.CGPath
-            layer.fillColor = UIColor.vowl_darkGreyColor().CGColor
-            layer.strokeColor = UIColor.vowl_blackColor().CGColor
-            layer.lineWidth = CGFloat(M_SQRT2)
-        }
+        path.applyTransform(CGAffineTransformMakeTranslation(-path.bounds.minX, -path.bounds.minY))
+        
+        layer.path = path.CGPath
+        layer.fillColor = UIColor.vowl_darkGreyColor().CGColor
+        layer.strokeColor = UIColor.vowl_blackColor().CGColor
+        layer.lineWidth = CGFloat(M_SQRT2)
         
         return cell
     }
@@ -87,5 +86,18 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         print("end")
     }
-
+    
+    // MARK: Collection view paths
+    
+    func collectionView(collectionView: UICollectionView, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath {
+        let scale = CGAffineTransformMakeScale(collectionView.bounds.width, collectionView.bounds.height)
+        let translation = CGAffineTransformMakeTranslation(collectionView.bounds.minX, collectionView.bounds.minY)
+        
+        let path = self.keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section).path
+        
+        path.applyTransform(CGAffineTransformConcat(scale, translation))
+        
+        return path
+    }
+    
 }
