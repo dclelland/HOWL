@@ -29,6 +29,7 @@
 		65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB81BF9B66B0047DA40 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCBB1BF9D3EB0047DA40 /* KeyboardKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */; settings = {ASSET_TAGS = (); }; };
+		65AFA1861BFF0E9C009E209B /* SynthesizerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1851BFF0E9C009E209B /* SynthesizerNote.swift */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 		65A2BCB81BF9B66B0047DA40 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKey.swift; sourceTree = "<group>"; };
+		65AFA1851BFF0E9C009E209B /* SynthesizerNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesizerNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				65A2BC9E1BF87AAC0047DA40 /* Audio.swift */,
 				65A2BCA01BF87AAC0047DA40 /* Synthesizer.swift */,
+				65AFA1851BFF0E9C009E209B /* SynthesizerNote.swift */,
 				65A2BCA11BF87AAC0047DA40 /* Vocoder.swift */,
 				65A2BC9F1BF87AAC0047DA40 /* Master.swift */,
 			);
@@ -354,6 +357,7 @@
 				65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */,
 				65A2BCAE1BF87AAC0047DA40 /* Vocoder.swift in Sources */,
 				65A2BCB01BF87AAC0047DA40 /* KeyboardViewCell.swift in Sources */,
+				65AFA1861BFF0E9C009E209B /* SynthesizerNote.swift in Sources */,
 				65A2BCB31BF87AAC0047DA40 /* PhonemeboardView.swift in Sources */,
 				650C0E271BFE7D3F003DC6BB /* UIImage+Color.swift in Sources */,
 				65A2BCAB1BF87AAC0047DA40 /* Audio.swift in Sources */,
