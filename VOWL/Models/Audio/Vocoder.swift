@@ -8,15 +8,6 @@
 
 import UIKit
 
-
-////Sets the first formant as a function of the exponential of the X axis.
-//formant1 = 170000 / max(1, (Yval + 125)) * logspeed;
-//
-////Sets the second formant as a function of the angle from a point below the canvas (so
-////that values near the top of the canvas are expanded - vowels 'a', 'o', and 'e' are
-////much more sensitive to variations in the second formant).
-//formant2 = -4000/PI * atan2(Yval - 700, Xval - 250) - 400 * logspeed;
-
 class Vocoder: AKInstrument {
     
     var frequency1 = AKInstrumentProperty(minimum: 0.0, maximum: 22050.0)

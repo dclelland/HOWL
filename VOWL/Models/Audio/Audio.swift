@@ -47,7 +47,7 @@ class Audio {
             instrument.play()
         }
         
-        self.synthesizer.playNote(SynthesizerNote(withFrequency: 440.0))
+        self.synthesizer.playNote(SynthesizerNote(withFrequency: 120.0))
     }
     
     func stop() {
