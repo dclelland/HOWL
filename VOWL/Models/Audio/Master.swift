@@ -15,7 +15,7 @@ class Master: AKInstrument {
         
         let reverb = AKReverb(
             input: input,
-            feedback: AKConstant(value: 0.5),
+            feedback: AKConstant(value: 0.25),
             cutoffFrequency: AKConstant(value: 16000.0)
         )
         

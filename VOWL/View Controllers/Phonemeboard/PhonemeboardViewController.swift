@@ -41,18 +41,38 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
         print("begin")
+        
+        let frequency1 = Float(touch.locationInView(touch.view).x) * 10.0 + 200.0
+        let frequency2 = Float(touch.locationInView(touch.view).y) * 10.0 + 200.0
+        
+        Audio.shared.vocoder.startWithFrequencies((frequency1, frequency2))
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
         print("move")
+        
+        let frequency1 = Float(touch.locationInView(touch.view).x) * 10.0 + 200.0
+        let frequency2 = Float(touch.locationInView(touch.view).y) * 10.0 + 200.0
+        
+        Audio.shared.vocoder.updateWithFrequencies((frequency1, frequency2))
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
         print("cancel")
+        
+        let frequency1 = Float(touch.locationInView(touch.view).x) * 10.0 + 200.0
+        let frequency2 = Float(touch.locationInView(touch.view).y) * 10.0 + 200.0
+        
+        Audio.shared.vocoder.stopWithFrequencies((frequency1, frequency2))
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         print("end")
+        
+        let frequency1 = Float(touch.locationInView(touch.view).x) * 10.0 + 200.0
+        let frequency2 = Float(touch.locationInView(touch.view).y) * 10.0 + 200.0
+        
+        Audio.shared.vocoder.stopWithFrequencies((frequency1, frequency2))
     }
     
 }
