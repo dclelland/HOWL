@@ -20,22 +20,32 @@ class Synthesizer: AKInstrument {
         let note = SynthesizerNote()
         
         let envelope = AKLinearADSREnvelope(
-            attackDuration: AKConstant(value: 0.01),
-            decayDuration: AKConstant(value: 0.01),
-            sustainLevel: AKConstant(value: 1.0),
-            releaseDuration: AKConstant(value: 0.01),
+            attackDuration: 0.01.ak,
+            decayDuration: 0.01.ak,
+            sustainLevel: 1.0.ak,
+            releaseDuration: 0.01.ak,
             delay: AKConstant(value: 0.0)
         )
         
-        let oscillator = AKVCOscillator(
+        let oscillator1 = AKVCOscillator(
             waveformType: AKVCOscillator.waveformTypeForSquare(),
-            bandwidth: AKConstant(value: 0.5),
-            pulseWidth: AKConstant(value: 0.5),
+            bandwidth: 0.5.ak,
+            pulseWidth: 0.5.ak,
             frequency: note.frequency,
-            amplitude: note.amplitude.scaledBy(envelope)
+            amplitude: note.amplitude * envelope
         )
         
-        assignOutput(output, to: oscillator)
+        let oscillator2 = AKVCOscillator(
+            waveformType: AKVCOscillator.waveformTypeForSquare(),
+            bandwidth: 0.5.ak,
+            pulseWidth: 0.5.ak,
+            frequency: note.frequency * 0.5.ak,
+            amplitude: note.amplitude * envelope * 0.5.ak
+        )
+        
+        let mix = oscillator1 + oscillator2
+        
+        assignOutput(output, to: mix)
     }
 
 }

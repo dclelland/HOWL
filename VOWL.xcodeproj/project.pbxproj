@@ -32,6 +32,7 @@
 		65AFA1861BFF0E9C009E209B /* SynthesizerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1851BFF0E9C009E209B /* SynthesizerNote.swift */; settings = {ASSET_TAGS = (); }; };
 		65AFA1881BFFEA0E009E209B /* Phoneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1871BFFEA0E009E209B /* Phoneme.swift */; settings = {ASSET_TAGS = (); }; };
 		65AFA1921C000023009E209B /* CGRect+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1911C000023009E209B /* CGRect+Normalization.swift */; settings = {ASSET_TAGS = (); }; };
+		65D7E3761C007C01009D6994 /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7E3751C007C01009D6994 /* AudioKit.swift */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		65AFA1871BFFEA0E009E209B /* Phoneme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phoneme.swift; sourceTree = "<group>"; };
 		65AFA1911C000023009E209B /* CGRect+Normalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Normalization.swift"; sourceTree = "<group>"; };
 		65D7E3701C0027CF009D6994 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		65D7E3751C007C01009D6994 /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioKit.swift; path = VOWL/AudioKit.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		65A2BC801BF8265B0047DA40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65D7E3751C007C01009D6994 /* AudioKit.swift */,
 				65A2BC741BF826320047DA40 /* Info.plist */,
 				65A2BC931BF873430047DA40 /* VOWL-Bridging-Header.h */,
 			);
@@ -361,6 +364,7 @@
 				65AFA1921C000023009E209B /* CGRect+Normalization.swift in Sources */,
 				650C0E251BFDCF54003DC6BB /* Int+Parity.swift in Sources */,
 				6555ABC01BFE903800E9B36A /* MultitouchGestureRecognizer.swift in Sources */,
+				65D7E3761C007C01009D6994 /* AudioKit.swift in Sources */,
 				65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */,
 				65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */,
 				65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */,
