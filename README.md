@@ -7,6 +7,7 @@ GASP aims to provide a simple formant synthesizer with a minimum of configuratio
 ### Interface
 
 - Build out phonemeboard actions properly
+- Test PhonemeboardView efficiency
 
 ### Audio
 

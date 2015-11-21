@@ -14,7 +14,7 @@ class HoldButton: UIButton {
         super.init(coder: aDecoder)
         
         let hue: CGFloat = 0.25
-        let cornerRadius: CGFloat = 2.0
+        let cornerRadius: CGFloat = 3.0
         
         self.backgroundColor = UIColor.clearColor()
         
