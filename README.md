@@ -11,16 +11,14 @@ GASP aims to provide a simple formant synthesizer with a minimum of configuratio
 - Phonemeboard
     - Should display rosette instead of waveform
     - Should fade colours
+    - Crashing sporadically, also shows tearing...
 
 ### Audio
 
 - Synthesizer
-    - Should sound beefier (more voices, slight detune)
-    - Small amount of white noise?
     - Force touch amplitude
 
 - Vocoder
-    - Need to fix the 'rattle'
     - Need slight detune, variance on all params
     - Force touch bandwidth
 
