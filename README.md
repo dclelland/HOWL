@@ -6,14 +6,19 @@ GASP aims to provide a simple formant synthesizer with a minimum of configuratio
 
 ### Interface
 
+- Design
+    - Icon
+    - Splash
+
 - Phonemeboard
     - Should display rosette instead of waveform
     - Should fade colours
     - Crashing sporadically, also shows tearing...
+    - Draw circle path and align letters correctly (perhaps only illuminate the circle)
 
 ## Wishlist
 
-- Force touch
+- 3D touch
 - Sound input support
 - MIDI input support
 - Custom iPad layout
