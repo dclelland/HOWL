@@ -7,8 +7,10 @@ GASP aims to provide a simple formant synthesizer with a minimum of configuratio
 ### Interface
 
 - Build out phonemeboard actions properly
-- Test PhonemeboardView efficiency
-- Should set up colours properly - selected/not selected etc just like GASP
+
+- Phonemeboard
+    - Should display rosette instead of waveform
+    - Should fade colours
 
 ### Audio
 
