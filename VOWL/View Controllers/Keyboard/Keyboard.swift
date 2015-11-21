@@ -10,7 +10,7 @@ import UIKit
 
 class Keyboard {
     
-    var centerPitch = 60
+    var centerPitch = 48
     
     var leftAxisInterval = 4
     var rightAxisInterval = 7
