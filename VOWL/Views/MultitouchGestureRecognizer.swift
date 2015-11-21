@@ -65,7 +65,9 @@ class MultitouchGestureRecognizer: UIPanGestureRecognizer {
             case .Cancelled:
                 self.cancelTouch(touch)
             case .Ended:
-                if !self.shouldSustainTouches() {
+                if self.shouldSustainTouches() {
+                    self.moveTouch(touch)
+                } else {
                     self.endTouch(touch)
                 }
             }
