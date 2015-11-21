@@ -65,23 +65,6 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     
     // MARK: - Frequencies
     
-//    //Gauges the speed of the mouse using differentials.
-//    logspeed = 1 + 0.1 * log(abs(Xval-pXval) + abs(Yval-pYval) + 1);
-//    
-//    //Sets the fundamental at 280Hz as well as increasing it as a factor of the logarithm
-//    //of the cursor's speed. This introduces some nice vibrato into the frequencies, as
-//    //well as allowing variation in all three frequencies without requiring a third control
-//    //axis.
-//    fundamental = 280 * logspeed;
-//    
-//    //Sets the first formant as a function of the exponential of the X axis.
-//    formant1 = 170000 / max(1, (Yval + 125)) * logspeed;
-//    
-//    //Sets the second formant as a function of the angle from a point below the canvas (so
-//    //that values near the top of the canvas are expanded - vowels 'a', 'o', and 'e' are
-//    //much more sensitive to variations in the second formant).
-//    formant2 = -4000/PI * atan2(Yval - 700, Xval - 250) - 400 * logspeed;
-    
     private func frequenciesForTouches(touches: [UITouch]) -> (Float, Float) {
         guard let location = self.locationForTouches(touches) else {
             return (0.0, 0.0)
@@ -104,10 +87,9 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
         let distance = hypot(offset.dx, offset.dy)
         
         let hue = (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
-        let saturation = min(UIColor.VOWL.maximumColorSaturation, distance * 2.0)
-        let brightness = UIColor.VOWL.maximumColorBrightness
+        let saturation = distance * 2.0
         
-        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
+        return UIColor.VOWL.lightColor(withHue: hue, saturation: saturation)
     }
     
     private func locationForTouches(touches: [UITouch]) -> CGPoint? {

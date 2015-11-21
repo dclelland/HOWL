@@ -47,16 +47,31 @@ extension UIColor {
         
         // MARK: - Color
         
-        static func darkColor(withHue hue: CGFloat) -> UIColor {
-            return UIColor(hue: hue, saturation: minimumColorSaturation, brightness: minimumColorBrightness, alpha: 1.0)
+        static func darkColor(withHue hue: CGFloat, saturation: CGFloat = minimumColorSaturation, brightness: CGFloat = minimumColorBrightness) -> UIColor {
+            return UIColor(
+                hue: hue,
+                saturation: min(saturation, minimumColorSaturation),
+                brightness: min(brightness, minimumColorBrightness),
+                alpha: 1.0
+            )
         }
         
-        static func mediumColor(withHue hue: CGFloat) -> UIColor {
-            return UIColor(hue: hue, saturation: mediumColorSaturation, brightness: mediumColorBrightness, alpha: 1.0)
+        static func mediumColor(withHue hue: CGFloat, saturation: CGFloat = mediumColorSaturation, brightness: CGFloat = mediumColorBrightness) -> UIColor {
+            return UIColor(
+                hue: hue,
+                saturation: min(saturation, mediumColorSaturation),
+                brightness: min(brightness, mediumColorBrightness),
+                alpha: 1.0
+            )
         }
         
-        static func lightColor(withHue hue: CGFloat) -> UIColor {
-            return UIColor(hue: hue, saturation: maximumColorSaturation, brightness: maximumColorBrightness, alpha: 1.0)
+        static func lightColor(withHue hue: CGFloat, saturation: CGFloat = maximumColorSaturation, brightness: CGFloat = maximumColorBrightness) -> UIColor {
+            return UIColor(
+                hue: hue,
+                saturation: min(saturation, maximumColorSaturation),
+                brightness: min(brightness, maximumColorBrightness),
+                alpha: 1.0
+            )
         }
         
     }
