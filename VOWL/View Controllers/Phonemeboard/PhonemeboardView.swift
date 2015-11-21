@@ -10,8 +10,12 @@ import UIKit
 
 class PhonemeboardView: AKPlotView, CsoundBinding {
     
-    var csound: CsoundObj?
-    var samples: NSData? {
+    private var csound: CsoundObj?
+    
+    private var sampleSize = Int(AKSettings.shared().samplesPerControlPeriod)
+    private var sampleChannels = Int(AKSettings.shared().numberOfChannels)
+    
+    private var samples = [Float]() {
         didSet {
             self.performSelectorOnMainThread("updateUI", withObject: nil, waitUntilDone: false)
         }
@@ -39,7 +43,13 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     
     func updateValuesFromCsound() {
         if let csound = self.csound {
-            self.samples = csound.getOutSamples()
+            let data = csound.getOutSamples()
+            let count = data.length / sizeof(Float)
+            var samples = [Float](count: count, repeatedValue: 0)
+            
+            data.getBytes(&samples, length:count * sizeof(Float))
+            
+            self.samples = samples
         }
     }
     
@@ -54,8 +64,49 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     }
     
     private func foregroundPath() -> UIBezierPath {
-        let diceRoll = CGFloat(arc4random_uniform(6) + 1)
-        return UIBezierPath(roundedRect: CGRectMake(20.0 + diceRoll, 20.0, 100.0, 100.0), cornerRadius: 5.0)
+        let path = CGPathCreateMutable()
+        
+        objc_sync_enter(self)
+        
+        var s = CGFloat(0.0)
+        var x = CGFloat(0.0)
+        var y = CGFloat(0.0)
+        
+        for i in 0..<self.sampleSize {
+            s = CGFloat(self.samples[i] + self.samples[i * 2]) / 2.0
+            
+            if isnan(s) {
+                s = 0.0
+            }
+            
+            x = s * self.bounds.height
+            y = CGFloat(i)
+            
+            if (i == 0) {
+                CGPathMoveToPoint(path, nil, x, y)
+            } else {
+                CGPathAddLineToPoint(path, nil, x, y)
+            }
+        }
+        
+//        for (int i = sz - 1; i >= 0; i--) {
+//            s = samples[i * 2 + 1] / GSOutputPlotLimit;
+//            
+//            if (isnan(s)) {
+//                s = 0.0;
+//            }
+//            
+//            x = GSLerp(GSInverseLerp(i, 0.0, sz - 1.0), CGRectGetMinX(self.bounds), CGRectGetMaxX(self.bounds));
+//            y = GSLerp(GSInverseLerp(s, -1.0, 1.0), CGRectGetMaxY(self.bounds), CGRectGetMinY(self.bounds));
+//            
+//            CGPathAddLineToPoint(path, nil, x, y);
+//        }
+        
+        objc_sync_exit(self)
+        
+        CGPathCloseSubpath(path)
+        
+        return UIBezierPath(CGPath: path)
     }
     
     // MARK: - Colors
@@ -66,12 +117,6 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     
     private func foregroundPathColor() -> UIColor {
         return UIColor.VOWL.blackColor()
-    }
-    
-    // MARK: - Samples
-    
-    private func sampleSize() -> Int {
-        return Int(AKSettings.shared().numberOfChannels) * Int(AKSettings.shared().samplesPerControlPeriod)
     }
     
 }
