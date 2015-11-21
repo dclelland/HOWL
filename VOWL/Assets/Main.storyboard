@@ -356,26 +356,20 @@
                                     <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV" customClass="PhonemeboardView" customModule="VOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="275" height="263"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-sL-RjK">
-                                                <rect key="frame" x="12" y="69" width="11.5" height="26"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="def-O9-lgZ">
-                                                <rect key="frame" x="12" y="169" width="6" height="26"/>
+                                                <rect key="frame" x="66" y="225" width="6" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypf-Kj-Yaf">
-                                                <rect key="frame" x="245" y="69" width="18" height="26"/>
+                                                <rect key="frame" x="245" y="92" width="18" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jq-jy-rH4">
-                                                <rect key="frame" x="248" y="169" width="15" height="26"/>
+                                                <rect key="frame" x="199" y="225" width="15" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
@@ -386,8 +380,8 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-7U-Acg">
-                                                <rect key="frame" x="127.5" y="225" width="21.5" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-sL-RjK">
+                                                <rect key="frame" x="12" y="92" width="12" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
@@ -398,15 +392,18 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="h64-U2-xGg" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" id="46d-AV-txR"/>
-                                            <constraint firstItem="Dv1-sL-RjK" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="2/3" constant="-6" id="BDv-I4-Wit"/>
+                                            <constraint firstItem="Dv1-sL-RjK" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="0.8" id="BDv-I4-Wit"/>
+                                            <constraint firstItem="6jq-jy-rH4" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" multiplier="1.5" id="BZr-oU-fV5"/>
                                             <constraint firstItem="def-O9-lgZ" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="4/3" constant="6" id="GgL-8T-LL7"/>
-                                            <constraint firstItem="Ypf-Kj-Yaf" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="2/3" constant="-6" id="HXo-lH-dbY"/>
+                                            <constraint firstItem="Ypf-Kj-Yaf" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="0.8" id="HXo-lH-dbY"/>
                                             <constraint firstItem="Dv1-sL-RjK" firstAttribute="leading" secondItem="nKs-R2-KFV" secondAttribute="leading" constant="12" id="Jtm-rC-lVN"/>
+                                            <constraint firstAttribute="bottom" secondItem="def-O9-lgZ" secondAttribute="bottom" constant="12" id="Ovo-p6-tVX"/>
+                                            <constraint firstItem="def-O9-lgZ" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" multiplier="0.5" id="Ptt-Iw-9NI"/>
                                             <constraint firstAttribute="trailing" secondItem="Ypf-Kj-Yaf" secondAttribute="trailing" constant="12" id="QAW-y6-HUh"/>
                                             <constraint firstItem="6jq-jy-rH4" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="4/3" constant="6" id="RAy-GI-zVI"/>
-                                            <constraint firstAttribute="bottom" secondItem="sI3-7U-Acg" secondAttribute="bottom" constant="12" id="clA-IV-ssR"/>
+                                            <constraint firstItem="def-O9-lgZ" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="0.5" id="Zdc-Ku-YA1"/>
+                                            <constraint firstAttribute="bottom" secondItem="6jq-jy-rH4" secondAttribute="bottom" constant="12" id="Zyn-m8-hCf"/>
                                             <constraint firstAttribute="trailing" secondItem="6jq-jy-rH4" secondAttribute="trailing" constant="12" id="jkx-HJ-YNu"/>
-                                            <constraint firstItem="sI3-7U-Acg" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" id="jzX-2v-2Az"/>
                                             <constraint firstItem="def-O9-lgZ" firstAttribute="leading" secondItem="nKs-R2-KFV" secondAttribute="leading" constant="12" id="ruf-Nr-FcM"/>
                                             <constraint firstItem="h64-U2-xGg" firstAttribute="top" secondItem="nKs-R2-KFV" secondAttribute="top" constant="12" id="sVF-6Z-62q"/>
                                         </constraints>
@@ -415,6 +412,15 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="GgL-8T-LL7"/>
+                                                <exclude reference="Zdc-Ku-YA1"/>
+                                                <exclude reference="ruf-Nr-FcM"/>
+                                                <exclude reference="RAy-GI-zVI"/>
+                                                <exclude reference="jkx-HJ-YNu"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="m5e-OB-eOs" appends="YES" id="9iy-cf-fgz"/>
                                         </connections>
