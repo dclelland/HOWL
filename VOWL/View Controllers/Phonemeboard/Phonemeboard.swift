@@ -32,9 +32,53 @@ class Phonemeboard {
     }
     
     func phonemeAtLocation(location: CGPoint) -> Phoneme? {
-        return Phoneme(location: location, frequencies: (700, 1220, 2600), bandwidths: (130, 70, 160))
+        let phonemeProximities = self.phonemes.map { (phoneme) -> (Phoneme, Float) in
+            let distance = hypot(Float(location.x - phoneme.location.x), Float(location.y - phoneme.location.y))
+            let proximity = pow((distance + 1), -4.0)
+            
+            return (phoneme, proximity)
+        }
+        
+        let sum = phonemeProximities.reduce(0.0) { (sum, phonemeProximity) -> Float in
+            let (_, proximity) = phonemeProximity
+            
+            return sum + proximity
+        }
+        
+        let (frequencies, bandwidths) = phonemeProximities.reduce(((0.0, 0.0, 0.0), (0.0, 0.0, 0.0))) { (parameters, phonemeProximity) -> (Phoneme.Frequencies, Phoneme.Bandwidths) in
+            let (frequencies, bandwidths) = parameters
+            let (phoneme, proximity) = phonemeProximity
+            
+            let weighting = proximity / sum
+            
+            let weightedPhonemeFrequencies = (
+                phoneme.frequencies.0 * weighting,
+                phoneme.frequencies.1 * weighting,
+                phoneme.frequencies.2 * weighting
+            )
+            
+            let weightedPhonemeBandwidths = (
+                phoneme.bandwidths.0 * weighting,
+                phoneme.bandwidths.1 * weighting,
+                phoneme.bandwidths.2 * weighting
+            )
+            
+            let weightedFrequencies = (
+                frequencies.0 + weightedPhonemeFrequencies.0,
+                frequencies.1 + weightedPhonemeFrequencies.1,
+                frequencies.2 + weightedPhonemeFrequencies.2
+            )
+            
+            let weightedBandwidths = (
+                bandwidths.0 + weightedPhonemeBandwidths.0,
+                bandwidths.1 + weightedPhonemeBandwidths.1,
+                bandwidths.2 + weightedPhonemeBandwidths.2
+            )
+            
+            return (weightedFrequencies, weightedBandwidths)
+        }
+        
+        return Phoneme.init(location: location, frequencies: frequencies, bandwidths: bandwidths)
     }
-    
-    // MARK:
     
 }
