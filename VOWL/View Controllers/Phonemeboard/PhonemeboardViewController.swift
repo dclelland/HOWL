@@ -37,6 +37,27 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
         }
     }
     
+    func refreshAudio() {
+        guard let touches = self.multitouchGestureRecognizer?.touches else {
+            return
+        }
+        
+        Audio.shared.vocoder.amplitude.value = touches.count == 0 ? 0.0 : 1.0
+        
+        if let phoneme = self.phonemeForTouches(touches) {
+            let (frequency1, frequency2, frequency3) = phoneme.frequencies
+            let (bandwidth1, bandwidth2, bandwidth3) = phoneme.bandwidths
+            
+            Audio.shared.vocoder.frequency1.value = frequency1
+            Audio.shared.vocoder.frequency2.value = frequency2
+            Audio.shared.vocoder.frequency3.value = frequency3
+            
+            Audio.shared.vocoder.bandwidth1.value = bandwidth1
+            Audio.shared.vocoder.bandwidth2.value = bandwidth2
+            Audio.shared.vocoder.bandwidth3.value = bandwidth3
+        }
+    }
+    
     // MARK: - Interface events
     
     @IBAction func holdButtonTapped(button: HoldButton) {
@@ -55,40 +76,33 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
-        Audio.shared.vocoder.startWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
-        
         self.refreshView()
+        self.refreshAudio()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
-        Audio.shared.vocoder.updateWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
-        
         self.refreshView()
+        self.refreshAudio()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
-        Audio.shared.vocoder.stopWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
-        
         self.refreshView()
+        self.refreshAudio()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
-        Audio.shared.vocoder.stopWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
-        
         self.refreshView()
+        self.refreshAudio()
     }
     
-    // MARK: - Frequencies
+    // MARK: - Private Getters
     
-    private func frequenciesForTouches(touches: [UITouch]) -> (Float, Float)? {
+    private func phonemeForTouches(touches: [UITouch]) -> Phoneme? {
         guard let location = self.locationForTouches(touches) else {
             return nil
         }
         
-        let frequency1 = Float(170000 / max(1, (location.y * 500.0 + 125)))
-        let frequency2 = Float(-4000/M_PI) * Float(atan2(location.y * 500.0 - 700, location.x * 500.0 - 250) - 400)
-        
-        return (frequency1, frequency2)
+        return self.phonemeboard.phonemeAtLocation(location)
     }
     
     private func stateForTouches(touches: [UITouch]) -> PhonemeboardViewState {

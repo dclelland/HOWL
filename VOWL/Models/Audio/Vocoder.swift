@@ -10,8 +10,13 @@ import UIKit
 
 class Vocoder: AKInstrument {
     
-    var frequency1 = AKInstrumentProperty(minimum: 0.0, maximum: 22050.0)
-    var frequency2 = AKInstrumentProperty(minimum: 0.0, maximum: 22050.0)
+    var frequency1 = AKInstrumentProperty()
+    var frequency2 = AKInstrumentProperty()
+    var frequency3 = AKInstrumentProperty()
+    
+    var bandwidth1 = AKInstrumentProperty()
+    var bandwidth2 = AKInstrumentProperty()
+    var bandwidth3 = AKInstrumentProperty()
     
     var amplitude = AKInstrumentProperty(minimum: 0.0, maximum: 1.0)
     
@@ -22,52 +27,40 @@ class Vocoder: AKInstrument {
         
         addProperty(frequency1)
         addProperty(frequency2)
+        addProperty(frequency3)
+        
+        addProperty(bandwidth1)
+        addProperty(bandwidth2)
+        addProperty(bandwidth3)
+        
         addProperty(amplitude)
         
         let filter1 = AKResonantFilter(
             input: input,
             centerFrequency: frequency1,
-            bandwidth: frequency1.scaledBy(AKConstant(value: 0.25))
+            bandwidth: bandwidth1
         )
         
         let filter2 = AKResonantFilter(
             input: filter1,
             centerFrequency: frequency2,
-            bandwidth: frequency2.scaledBy(AKConstant(value: 0.25))
+            bandwidth: bandwidth2
+        )
+        
+        let filter3 = AKResonantFilter(
+            input: filter2,
+            centerFrequency: frequency3,
+            bandwidth: bandwidth3
         )
         
         let balance = AKBalance(
-            input: filter2,
+            input: filter3,
             comparatorAudioSource: input.scaledBy(amplitude)
         )
 
         assignOutput(output, to: balance)
         
         resetParameter(input)
-    }
-    
-    // MARK: - Actions
-    
-    func startWithFrequencies(frequencies: (Float, Float)?) {
-        if let frequencies = frequencies {
-            (self.frequency1.value, self.frequency2.value) = frequencies
-        }
-        
-        self.amplitude.value = 1.0
-    }
-    
-    func updateWithFrequencies(frequencies: (Float, Float)?) {
-        if let frequencies = frequencies {
-            (self.frequency1.value, self.frequency2.value) = frequencies
-        }
-    }
-    
-    func stopWithFrequencies(frequencies: (Float, Float)?) {
-        if let frequencies = frequencies {
-            (self.frequency1.value, self.frequency2.value) = frequencies
-        }
-        
-        self.amplitude.value = 0.0
     }
 
 }

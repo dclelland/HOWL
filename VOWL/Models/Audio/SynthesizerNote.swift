@@ -10,7 +10,7 @@ import UIKit
 
 class SynthesizerNote: AKNote {
     
-    var frequency = AKNoteProperty(minimum: 0.0, maximum: 22050.0)
+    var frequency = AKNoteProperty()
     var amplitude = AKNoteProperty(minimum: 0.0, maximum: 1.0)
     
     override init() {

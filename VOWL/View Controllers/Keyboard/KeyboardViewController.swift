@@ -24,14 +24,8 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     
     var notes = [UITouch: SynthesizerNote]() {
         didSet {
-            self.refreshView()
+            self.keyboardView?.reloadData()
         }
-    }
-    
-    // MARK: - Life cycle
-    
-    func refreshView() {
-        self.keyboardView?.reloadData()
     }
     
     // MARK: - Note actions
