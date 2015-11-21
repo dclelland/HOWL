@@ -189,8 +189,8 @@
 		65A2BCA21BF87AAC0047DA40 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				65A2BCA31BF87AAC0047DA40 /* Keyboard */,
 				65A2BCA71BF87AAC0047DA40 /* Phonemeboard */,
+				65A2BCA31BF87AAC0047DA40 /* Keyboard */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

@@ -31,28 +31,24 @@ class MultitouchGestureRecognizer: UIPanGestureRecognizer {
         }
         
         self.updateTouches(touches)
-        self.state = .Began
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesMoved(touches, withEvent: event)
         
         self.updateTouches(touches)
-        self.state = .Changed
     }
     
     override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesCancelled(touches, withEvent: event)
         
         self.updateTouches(touches)
-        self.state = .Cancelled
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event)
         
         self.updateTouches(touches)
-        self.state = .Ended
     }
     
     // MARK: - Multiple touches

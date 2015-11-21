@@ -6,7 +6,6 @@ GASP aims to provide a simple formant synthesizer with a minimum of configuratio
 
 ### Interface
 
-- Fix keyboard bug where touches get left behind
 - Build out phonemeboard actions properly
 
 ### Audio
