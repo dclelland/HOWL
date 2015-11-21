@@ -22,7 +22,11 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     
     let keyboard = Keyboard()
     
-    var notes = [UITouch: SynthesizerNote]()
+    var notes = [UITouch: SynthesizerNote]() {
+        didSet {
+            self.keyboardView?.reloadData()
+        }
+    }
     
     // MARK: - Note actions
     
@@ -122,8 +126,6 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         if let key = self.keyboard.keyAtLocation(location) {
             self.playNote(withTouch: touch, frequency: key.frequency())
         }
-        
-        self.keyboardView?.reloadData()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
@@ -134,20 +136,14 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         } else {
             self.stopNote(withTouch: touch)
         }
-        
-        self.keyboardView?.reloadData()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
         self.stopNote(withTouch: touch)
-        
-        self.keyboardView?.reloadData()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         self.stopNote(withTouch: touch)
-        
-        self.keyboardView?.reloadData()
     }
     
 }
