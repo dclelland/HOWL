@@ -32,7 +32,6 @@
 		65AFA1861BFF0E9C009E209B /* SynthesizerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1851BFF0E9C009E209B /* SynthesizerNote.swift */; settings = {ASSET_TAGS = (); }; };
 		65AFA1881BFFEA0E009E209B /* Phoneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1871BFFEA0E009E209B /* Phoneme.swift */; settings = {ASSET_TAGS = (); }; };
 		65AFA1921C000023009E209B /* CGRect+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1911C000023009E209B /* CGRect+Normalization.swift */; settings = {ASSET_TAGS = (); }; };
-		65D7E3711C0027CF009D6994 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 65D7E3701C0027CF009D6994 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -364,7 +363,6 @@
 				6555ABC01BFE903800E9B36A /* MultitouchGestureRecognizer.swift in Sources */,
 				65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */,
 				65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */,
-				65D7E3711C0027CF009D6994 /* README.md in Sources */,
 				65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */,
 				65A2BCAE1BF87AAC0047DA40 /* Vocoder.swift in Sources */,
 				65A2BCB01BF87AAC0047DA40 /* KeyboardViewCell.swift in Sources */,

@@ -104,10 +104,10 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         let notes = self.notes.values.filter { $0.frequency.value == key.frequency() }
         
         if notes.count > 0 {
-            let color = UIColor.vowl_lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
+            let color = UIColor.VOWL.lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
             layer.fillColor = color.CGColor
         } else {
-            let color = UIColor.vowl_darkGreyColor()
+            let color = UIColor.VOWL.darkGreyColor()
             layer.fillColor = color.CGColor
         }
         

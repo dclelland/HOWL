@@ -17,7 +17,7 @@ class KeyboardViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         let layer = self.layer as! CAShapeLayer
         
-        layer.strokeColor = UIColor.vowl_blackColor().CGColor
+        layer.strokeColor = UIColor.VOWL.blackColor().CGColor
         layer.lineWidth = CGFloat(M_SQRT2)
     }
     

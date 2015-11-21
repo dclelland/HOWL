@@ -18,12 +18,12 @@ class HoldButton: UIButton {
         
         self.backgroundColor = UIColor.clearColor()
         
-        self.setTitleColor(UIColor.vowl_blackColor(), forState: .Normal)
+        self.setTitleColor(UIColor.VOWL.blackColor(), forState: .Normal)
         
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.vowl_darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.vowl_mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Highlighted)
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.vowl_mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: [.Highlighted, .Selected])
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.vowl_lightColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Selected)
+        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)
+        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Highlighted)
+        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: [.Highlighted, .Selected])
+        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.lightColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Selected)
     }
 
 }
