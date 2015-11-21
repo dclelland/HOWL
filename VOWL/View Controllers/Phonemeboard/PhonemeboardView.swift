@@ -12,9 +12,6 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     
     private var csound: CsoundObj?
     
-    private var sampleSize = Int(AKSettings.shared().samplesPerControlPeriod)
-    private var sampleChannels = Int(AKSettings.shared().numberOfChannels)
-    
     private var samples = [Float]() {
         didSet {
             self.performSelectorOnMainThread("updateUI", withObject: nil, waitUntilDone: false)
@@ -68,39 +65,32 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         
         objc_sync_enter(self)
         
+        let sz = self.samples.count / 2
+        
         var s = CGFloat(0.0)
         var x = CGFloat(0.0)
         var y = CGFloat(0.0)
         
-        for i in 0..<self.sampleSize {
-            s = CGFloat(self.samples[i] + self.samples[i * 2]) / 2.0
+        for i in 0..<sz {
+            s = CGFloat(self.samples[i * 2] + self.samples[i * 2 + 1]) / 2
             
             if isnan(s) {
                 s = 0.0
             }
             
-            x = s * self.bounds.height
-            y = CGFloat(i)
+            x = CGFloat(i) * (self.bounds.width / CGFloat(sz / 2))
+            y = (s + 0.5) * self.bounds.height
             
             if (i == 0) {
-                CGPathMoveToPoint(path, nil, x, y)
-            } else {
-                CGPathAddLineToPoint(path, nil, x, y)
+                CGPathMoveToPoint(path, nil, self.bounds.minX, self.bounds.minY)
+            }
+            
+            CGPathAddLineToPoint(path, nil, x, y)
+            
+            if (i == sz - 1) {
+                CGPathAddLineToPoint(path, nil, self.bounds.maxX, self.bounds.minY)
             }
         }
-        
-//        for (int i = sz - 1; i >= 0; i--) {
-//            s = samples[i * 2 + 1] / GSOutputPlotLimit;
-//            
-//            if (isnan(s)) {
-//                s = 0.0;
-//            }
-//            
-//            x = GSLerp(GSInverseLerp(i, 0.0, sz - 1.0), CGRectGetMinX(self.bounds), CGRectGetMaxX(self.bounds));
-//            y = GSLerp(GSInverseLerp(s, -1.0, 1.0), CGRectGetMaxY(self.bounds), CGRectGetMinY(self.bounds));
-//            
-//            CGPathAddLineToPoint(path, nil, x, y);
-//        }
         
         objc_sync_exit(self)
         
