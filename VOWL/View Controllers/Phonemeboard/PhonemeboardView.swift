@@ -67,29 +67,40 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         
         let sz = self.samples.count / 2
         
+        var i: Int
+        
         var s = CGFloat(0.0)
         var x = CGFloat(0.0)
         var y = CGFloat(0.0)
         
-        for i in 0..<sz {
-            s = CGFloat(self.samples[i * 2] + self.samples[i * 2 + 1]) / 2
+        for i = 0; i < sz; i++ {
+            s = CGFloat(self.samples[i * 2])
             
             if isnan(s) {
                 s = 0.0
             }
             
-            x = CGFloat(i) * (self.bounds.width / CGFloat(sz / 2))
+            x = CGFloat(i) * (self.bounds.width / CGFloat(sz - 1))
             y = (s + 0.5) * self.bounds.height
             
             if (i == 0) {
-                CGPathMoveToPoint(path, nil, self.bounds.minX, self.bounds.minY)
+                CGPathMoveToPoint(path, nil, x, y)
+            } else {
+                CGPathAddLineToPoint(path, nil, x, y)
             }
+        }
+        
+        for i = sz - 1; i >= 0; i-- {
+            s = CGFloat(self.samples[i * 2 + 1])
+            
+            if (isnan(s)) {
+                s = 0.0
+            }
+            
+            x = CGFloat(i) * (self.bounds.width / CGFloat(sz - 1))
+            y = (-s + 0.5) * self.bounds.height
             
             CGPathAddLineToPoint(path, nil, x, y)
-            
-            if (i == sz - 1) {
-                CGPathAddLineToPoint(path, nil, self.bounds.maxX, self.bounds.minY)
-            }
         }
         
         objc_sync_exit(self)
