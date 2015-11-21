@@ -80,9 +80,9 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     
     // MARK: - Frequencies
     
-    private func frequenciesForTouches(touches: [UITouch]) -> (Float, Float) {
+    private func frequenciesForTouches(touches: [UITouch]) -> (Float, Float)? {
         guard let location = self.locationForTouches(touches) else {
-            return (0.0, 0.0)
+            return nil
         }
         
         let frequency1 = Float(170000 / max(1, (location.y * 500.0 + 125)))

@@ -48,18 +48,24 @@ class Vocoder: AKInstrument {
     
     // MARK: - Actions
     
-    func startWithFrequencies(frequencies: (Float, Float)) {
-        (self.frequency1.value, self.frequency2.value) = frequencies
+    func startWithFrequencies(frequencies: (Float, Float)?) {
+        if let frequencies = frequencies {
+            (self.frequency1.value, self.frequency2.value) = frequencies
+        }
         
         self.amplitude.value = 1.0
     }
     
-    func updateWithFrequencies(frequencies: (Float, Float)) {
-        (self.frequency1.value, self.frequency2.value) = frequencies
+    func updateWithFrequencies(frequencies: (Float, Float)?) {
+        if let frequencies = frequencies {
+            (self.frequency1.value, self.frequency2.value) = frequencies
+        }
     }
     
-    func stopWithFrequencies(frequencies: (Float, Float)) {
-        (self.frequency1.value, self.frequency2.value) = frequencies
+    func stopWithFrequencies(frequencies: (Float, Float)?) {
+        if let frequencies = frequencies {
+            (self.frequency1.value, self.frequency2.value) = frequencies
+        }
         
         self.amplitude.value = 0.0
     }
