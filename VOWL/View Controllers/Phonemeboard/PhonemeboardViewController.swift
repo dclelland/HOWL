@@ -42,24 +42,25 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
             return
         }
         
-        Audio.shared.vocoder.amplitude.value = touches.count == 0 ? 0.0 : 1.0
-        
-        if let phoneme = self.phonemeForTouches(touches) {
-            let (frequency1, frequency2, frequency3, frequency4, frequency5) = phoneme.frequencies
-            let (bandwidth1, bandwidth2, bandwidth3, bandwidth4, bandwidth5) = phoneme.bandwidths
-            
-            Audio.shared.vocoder.frequency1.value = frequency1
-            Audio.shared.vocoder.frequency2.value = frequency2
-            Audio.shared.vocoder.frequency3.value = frequency3
-            Audio.shared.vocoder.frequency4.value = frequency4
-            Audio.shared.vocoder.frequency5.value = frequency5
-            
-            Audio.shared.vocoder.bandwidth1.value = bandwidth1
-            Audio.shared.vocoder.bandwidth2.value = bandwidth2
-            Audio.shared.vocoder.bandwidth3.value = bandwidth3
-            Audio.shared.vocoder.bandwidth4.value = bandwidth4
-            Audio.shared.vocoder.bandwidth5.value = bandwidth5
+        if touches.count == 0 {
+            Audio.shared.sopranoVocoder.mute()
+            Audio.shared.altoVocoder.mute()
+            Audio.shared.tenorVocoder.mute()
+            Audio.shared.bassVocoder.mute()
+        } else {
+            Audio.shared.sopranoVocoder.unmute()
+            Audio.shared.altoVocoder.unmute()
+            Audio.shared.tenorVocoder.unmute()
+            Audio.shared.bassVocoder.unmute()
         }
+        
+        if let (soprano, alto, tenor, bass) = self.phonemesForTouches(touches) {
+            Audio.shared.sopranoVocoder.updateWithPhoneme(soprano)
+            Audio.shared.altoVocoder.updateWithPhoneme(alto)
+            Audio.shared.tenorVocoder.updateWithPhoneme(tenor)
+            Audio.shared.bassVocoder.updateWithPhoneme(bass)
+        }
+        
     }
     
     // MARK: - Interface events
@@ -101,12 +102,17 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     
     // MARK: - Private Getters
     
-    private func phonemeForTouches(touches: [UITouch]) -> Phoneme? {
+    private func phonemesForTouches(touches: [UITouch]) -> (Phoneme, Phoneme, Phoneme, Phoneme)? {
         guard let location = self.locationForTouches(touches) else {
             return nil
         }
         
-        return self.phonemeboard.phonemeAtLocation(location)
+        let soprano = self.phonemeboard.sopranoPhonemeAtLocation(location)
+        let alto = self.phonemeboard.altoPhonemeAtLocation(location)
+        let tenor = self.phonemeboard.tenorPhonemeAtLocation(location)
+        let bass = self.phonemeboard.bassPhonemeAtLocation(location)
+        
+        return (soprano, alto, tenor, bass)
     }
     
     private func stateForTouches(touches: [UITouch]) -> PhonemeboardViewState {

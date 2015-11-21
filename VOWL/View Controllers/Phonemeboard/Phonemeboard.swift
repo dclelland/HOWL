@@ -42,78 +42,22 @@ class Phonemeboard {
         Phoneme(withName: "u", location: CGPointMake(0.8, 1.0), frequencies: (350, 600, 2400, 2675, 2950), bandwidths: (40, 80, 100, 120, 120))
     ]
     
-    private func selectedPhonemes() -> [Phoneme] {
-        return self.tenor
-    }
-    
-    // MARK: - Counts
-    
-    func numberOfPhonemes() -> Int {
-        return self.selectedPhonemes().count
-    }
-    
     // MARK: - Phonemes
     
-    func phonemeAtIndex(index: Int) -> Phoneme? {
-        return self.selectedPhonemes()[index]
+    func sopranoPhonemeAtLocation(location: CGPoint) -> Phoneme {
+        return Phoneme(withLocation: location, phonemes: self.soprano)
     }
     
-    func phonemeAtLocation(location: CGPoint) -> Phoneme? {
-        let phonemeProximities = self.selectedPhonemes().map { (phoneme) -> (Phoneme, Float) in
-            let distance = hypot(Float(location.x - phoneme.location.x), Float(location.y - phoneme.location.y))
-            let proximity = pow((distance + 1), -4.0)
-            
-            return (phoneme, proximity)
-        }
-        
-        let sum = phonemeProximities.reduce(0.0) { (sum, phonemeProximity) -> Float in
-            let (_, proximity) = phonemeProximity
-            
-            return sum + proximity
-        }
-        
-        let (frequencies, bandwidths) = phonemeProximities.reduce(((0.0, 0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0, 0.0))) { (parameters, phonemeProximity) -> (Phoneme.Frequencies, Phoneme.Bandwidths) in
-            let (frequencies, bandwidths) = parameters
-            let (phoneme, proximity) = phonemeProximity
-            
-            let weighting = proximity / sum
-            
-            let weightedPhonemeFrequencies = (
-                phoneme.frequencies.0 * weighting,
-                phoneme.frequencies.1 * weighting,
-                phoneme.frequencies.2 * weighting,
-                phoneme.frequencies.3 * weighting,
-                phoneme.frequencies.4 * weighting
-            )
-            
-            let weightedPhonemeBandwidths = (
-                phoneme.bandwidths.0 * weighting,
-                phoneme.bandwidths.1 * weighting,
-                phoneme.bandwidths.2 * weighting,
-                phoneme.bandwidths.3 * weighting,
-                phoneme.bandwidths.4 * weighting
-            )
-            
-            let weightedFrequencies = (
-                frequencies.0 + weightedPhonemeFrequencies.0,
-                frequencies.1 + weightedPhonemeFrequencies.1,
-                frequencies.2 + weightedPhonemeFrequencies.2,
-                frequencies.3 + weightedPhonemeFrequencies.3,
-                frequencies.4 + weightedPhonemeFrequencies.4
-            )
-            
-            let weightedBandwidths = (
-                bandwidths.0 + weightedPhonemeBandwidths.0,
-                bandwidths.1 + weightedPhonemeBandwidths.1,
-                bandwidths.2 + weightedPhonemeBandwidths.2,
-                bandwidths.3 + weightedPhonemeBandwidths.3,
-                bandwidths.4 + weightedPhonemeBandwidths.4
-            )
-            
-            return (weightedFrequencies, weightedBandwidths)
-        }
-        
-        return Phoneme.init(location: location, frequencies: frequencies, bandwidths: bandwidths)
+    func altoPhonemeAtLocation(location: CGPoint) -> Phoneme {
+        return Phoneme(withLocation: location, phonemes: self.alto)
+    }
+    
+    func tenorPhonemeAtLocation(location: CGPoint) -> Phoneme {
+        return Phoneme(withLocation: location, phonemes: self.tenor)
+    }
+    
+    func bassPhonemeAtLocation(location: CGPoint) -> Phoneme {
+        return Phoneme(withLocation: location, phonemes: self.bass)
     }
     
 }

@@ -13,13 +13,31 @@ class Audio {
     static let shared = Audio()
     
     let synthesizer: Synthesizer
-    let vocoder: Vocoder
+    
+    let sopranoVocoder: Vocoder
+    let altoVocoder: Vocoder
+    let tenorVocoder: Vocoder
+    let bassVocoder: Vocoder
+    
     let master: Master
     
     init() {
         self.synthesizer = Synthesizer()
-        self.vocoder = Vocoder.init(withInput: self.synthesizer.output)
-        self.master = Master.init(withInput: self.vocoder.output)
+        
+        self.sopranoVocoder = Vocoder.init(withInput: self.synthesizer.output)
+        self.altoVocoder = Vocoder.init(withInput: self.synthesizer.output)
+        self.tenorVocoder = Vocoder.init(withInput: self.synthesizer.output)
+        self.bassVocoder = Vocoder.init(withInput: self.synthesizer.output)
+        
+        self.master = Master.init(
+            withInput: self.synthesizer.output,
+            voices: (
+                self.sopranoVocoder.output,
+                self.altoVocoder.output,
+                self.tenorVocoder.output,
+                self.bassVocoder.output
+            )
+        )
     }
     
     // MARK: - Getters
@@ -27,7 +45,10 @@ class Audio {
     func instruments() -> [AKInstrument] {
         return [
             self.synthesizer,
-            self.vocoder,
+            self.sopranoVocoder,
+            self.altoVocoder,
+            self.tenorVocoder,
+            self.bassVocoder,
             self.master
         ]
     }

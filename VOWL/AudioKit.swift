@@ -59,6 +59,10 @@ func + (left: AKConstant, right: AKConstant) -> AKConstant {
     return left.plus(right)
 }
 
+func + (left: AKAudio, right: AKAudio) -> AKAudio {
+    return left.plus(right)
+}
+
 func - (left: AKParameter, right: AKParameter) -> AKParameter {
     return left.minus(right)
 }
@@ -68,6 +72,10 @@ func - (left: AKControl, right: AKControl) -> AKControl {
 }
 
 func - (left: AKConstant, right: AKConstant) -> AKConstant {
+    return left.minus(right)
+}
+
+func - (left: AKAudio, right: AKAudio) -> AKAudio {
     return left.minus(right)
 }
 
@@ -83,6 +91,10 @@ func * (left: AKConstant, right: AKConstant) -> AKConstant {
     return left.scaledBy(right)
 }
 
+func * (left: AKAudio, right: AKAudio) -> AKAudio {
+    return left.scaledBy(right)
+}
+
 func / (left: AKParameter, right: AKParameter) -> AKParameter {
     return left.dividedBy(right)
 }
@@ -92,5 +104,9 @@ func / (left: AKControl, right: AKControl) -> AKControl {
 }
 
 func / (left: AKConstant, right: AKConstant) -> AKConstant {
+    return left.dividedBy(right)
+}
+
+func / (left: AKAudio, right: AKAudio) -> AKAudio {
     return left.dividedBy(right)
 }

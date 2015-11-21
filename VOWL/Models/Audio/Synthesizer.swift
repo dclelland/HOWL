@@ -27,7 +27,7 @@ class Synthesizer: AKInstrument {
             delay: AKConstant(value: 0.0)
         )
         
-        let oscillator1 = AKVCOscillator(
+        let oscillator = AKVCOscillator(
             waveformType: AKVCOscillator.waveformTypeForSquare(),
             bandwidth: 0.5.ak,
             pulseWidth: 0.5.ak,
@@ -35,17 +35,7 @@ class Synthesizer: AKInstrument {
             amplitude: note.amplitude * envelope
         )
         
-        let oscillator2 = AKVCOscillator(
-            waveformType: AKVCOscillator.waveformTypeForSquare(),
-            bandwidth: 0.5.ak,
-            pulseWidth: 0.5.ak,
-            frequency: note.frequency * 0.5.ak,
-            amplitude: note.amplitude * envelope * 0.5.ak
-        )
-        
-        let mix = oscillator1 + oscillator2
-        
-        assignOutput(output, to: mix)
+        assignOutput(output, to: oscillator)
     }
-
+    
 }

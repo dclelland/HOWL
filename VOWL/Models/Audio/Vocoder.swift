@@ -79,8 +79,33 @@ class Vocoder: AKInstrument {
         )
 
         assignOutput(output, to: balance)
-        
-        resetParameter(input)
     }
-
+    
+    // MARK: - Actions
+    
+    func mute() {
+        self.amplitude.value = 0.0
+    }
+    
+    func unmute() {
+        self.amplitude.value = 1.0
+    }
+    
+    func updateWithPhoneme(phoneme: Phoneme) {
+        let (frequency1, frequency2, frequency3, frequency4, frequency5) = phoneme.frequencies
+        let (bandwidth1, bandwidth2, bandwidth3, bandwidth4, bandwidth5) = phoneme.bandwidths
+        
+        self.frequency1.value = frequency1
+        self.frequency2.value = frequency2
+        self.frequency3.value = frequency3
+        self.frequency4.value = frequency4
+        self.frequency5.value = frequency5
+        
+        self.bandwidth1.value = bandwidth1
+        self.bandwidth2.value = bandwidth2
+        self.bandwidth3.value = bandwidth3
+        self.bandwidth4.value = bandwidth4
+        self.bandwidth5.value = bandwidth5
+    }
+    
 }
