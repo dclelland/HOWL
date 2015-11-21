@@ -8,6 +8,26 @@
 
 import UIKit
 
-class PhonemeboardView: UIControl {
+class PhonemeboardView: AKPlotView, CsoundBinding {
 
+//    override func drawRect(rect: CGRect) {
+//        
+//    }
+    
+    // MARK: - Plot view
+    
+    override func defaultValues() {
+        
+    }
+    
+    // MARK: - Csound binding
+    
+    func setup(csoundObj: CsoundObj) {
+        
+    }
+    
+    func updateValuesFromCsound() {
+        
+    }
+    
 }
