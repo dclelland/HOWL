@@ -1,6 +1,6 @@
-# GASP
+# VOWL
 
-GASP aims to provide a simple formant synthesizer with a minimum of configuration.
+VOWL aims to provide a simple formant synthesizer with a minimum of configuration.
 
 ## Todo
 
