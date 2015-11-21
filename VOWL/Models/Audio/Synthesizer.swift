@@ -10,6 +10,8 @@ import UIKit
 
 class Synthesizer: AKInstrument {
     
+    var notes = [SynthesizerNote]()
+    
     var output = AKAudio.globalParameter()
     
     override init() {

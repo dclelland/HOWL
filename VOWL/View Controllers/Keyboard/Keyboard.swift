@@ -10,16 +10,6 @@ import UIKit
 
 class Keyboard {
     
-    struct Coordinates {
-        var leftAxis: Int
-        var rightAxis: Int
-        
-        init(withLeftAxis leftAxis: Int, rightAxis: Int) {
-            self.leftAxis = leftAxis
-            self.rightAxis = rightAxis
-        }
-    }
-    
     var centerPitch = 60
     
     var leftAxisInterval = 4
@@ -50,6 +40,16 @@ class Keyboard {
     }
     
     // MARK: - Coordinates
+    
+    private struct Coordinates {
+        var leftAxis: Int
+        var rightAxis: Int
+        
+        init(withLeftAxis leftAxis: Int, rightAxis: Int) {
+            self.leftAxis = leftAxis
+            self.rightAxis = rightAxis
+        }
+    }
     
     private func coordinatesForIndex(index: Int, inRow row: Int) -> Coordinates {
         let x = self.rowIsOffset(row) ? index * 2 + 1 : index * 2

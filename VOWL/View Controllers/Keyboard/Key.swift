@@ -23,8 +23,8 @@ class Key {
         return self.noteName() + self.octaveName()
     }
     
-    func frequency() -> Double {
-        return pow(2.0, (Double(pitch) - 69.0) / 12.0) * 440.0
+    func frequency() -> Float {
+        return pow(2.0, (Float(pitch) - 69.0) / 12.0) * 440.0
     }
     
     // MARK: Names
