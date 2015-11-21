@@ -10,8 +10,8 @@ import UIKit
 
 class Phoneme {
     
-    typealias Frequencies = (Float, Float, Float)
-    typealias Bandwidths = (Float, Float, Float)
+    typealias Frequencies = (Float, Float, Float, Float, Float)
+    typealias Bandwidths = (Float, Float, Float, Float, Float)
     
     let name: String?
     let location: CGPoint
