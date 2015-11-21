@@ -8,7 +8,18 @@
 
 import UIKit
 
+enum PhonemeboardViewState {
+    case Normal
+    case Highlighted
+    case Selected
+}
+
 class PhonemeboardView: AKPlotView, CsoundBinding {
+    
+    var state: PhonemeboardViewState = .Normal
+    
+    var hue: CGFloat = 0.0
+    var saturation: CGFloat = 0.0
     
     private var csound: CsoundObj?
     
@@ -113,11 +124,18 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     // MARK: - Colors
     
     private func backgroundPathColor() -> UIColor {
-        return self.backgroundColor ?? UIColor.clearColor()
+        switch self.state {
+        case .Normal:
+            return UIColor.VOWL.darkGreyColor()
+        case .Highlighted:
+            return UIColor.VOWL.mediumColor(withHue: self.hue, saturation: self.saturation)
+        case .Selected:
+            return UIColor.VOWL.darkColor(withHue: self.hue, saturation: self.saturation)
+        }
     }
     
     private func foregroundPathColor() -> UIColor {
-        return UIColor.VOWL.blackColor()
+        return UIColor.VOWL.lightColor(withHue: self.hue, saturation: self.saturation)
     }
     
 }

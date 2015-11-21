@@ -22,6 +22,21 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     
     let phonemeboard = Phonemeboard()
     
+    // MARK: - Life cycle
+    
+    func refreshView() {
+        guard let touches = self.multitouchGestureRecognizer?.touches else {
+            return
+        }
+        
+        self.phonemeboardView?.state = self.stateForTouches(touches)
+        
+        if let hue = self.hueForTouches(touches), let saturation = self.saturationForTouches(touches) {
+            self.phonemeboardView?.hue = hue
+            self.phonemeboardView?.saturation = saturation
+        }
+    }
+    
     // MARK: - Interface events
     
     @IBAction func holdButtonTapped(button: HoldButton) {
@@ -42,25 +57,25 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
         Audio.shared.vocoder.startWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
         
-        self.phonemeboardView?.backgroundColor = self.colorForTouches(gestureRecognizer.touches)
+        self.refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
         Audio.shared.vocoder.updateWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
         
-        self.phonemeboardView?.backgroundColor = self.colorForTouches(gestureRecognizer.touches)
+        self.refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
         Audio.shared.vocoder.stopWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
         
-        self.phonemeboardView?.backgroundColor = self.colorForTouches(gestureRecognizer.touches)
+        self.refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         Audio.shared.vocoder.stopWithFrequencies(self.frequenciesForTouches(gestureRecognizer.touches))
         
-        self.phonemeboardView?.backgroundColor = self.colorForTouches(gestureRecognizer.touches)
+        self.refreshView()
     }
     
     // MARK: - Frequencies
@@ -76,20 +91,53 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
         return (frequency1, frequency2)
     }
     
-    private func colorForTouches(touches: [UITouch]) -> UIColor {
+    private func stateForTouches(touches: [UITouch]) -> PhonemeboardViewState {
+        if touches.count == 0 {
+            return .Normal
+        }
+        
+        let liveTouches = touches.filter { (touch) -> Bool in
+            switch touch.phase {
+            case .Began:
+                return true
+            case .Moved:
+                return true
+            case .Stationary:
+                return true
+            case .Cancelled:
+                return false
+            case .Ended:
+                return false
+            }
+        }
+        
+        if liveTouches.count > 0 {
+            return .Highlighted
+        } else {
+            return .Selected
+        }
+    }
+    
+    private func hueForTouches(touches: [UITouch]) -> CGFloat? {
         guard let location = self.locationForTouches(touches) else {
-            return UIColor.VOWL.darkGreyColor()
+            return nil
         }
         
         let offset = CGVectorMake(location.x - 0.5, location.y - 0.5)
-        
         let angle = atan2(offset.dx, offset.dy)
+        
+        return (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
+    }
+    
+    private func saturationForTouches(touches: [UITouch]) -> CGFloat? {
+        guard let location = self.locationForTouches(touches) else {
+            return nil
+        }
+
+        let offset = CGVectorMake(location.x - 0.5, location.y - 0.5)
         let distance = hypot(offset.dx, offset.dy)
-        
-        let hue = (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
-        let saturation = distance * 2.0
-        
-        return UIColor.VOWL.lightColor(withHue: hue, saturation: saturation)
+
+        return distance * 2.0
     }
     
     private func locationForTouches(touches: [UITouch]) -> CGPoint? {

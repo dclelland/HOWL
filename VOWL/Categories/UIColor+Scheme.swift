@@ -47,29 +47,29 @@ extension UIColor {
         
         // MARK: - Color
         
-        static func darkColor(withHue hue: CGFloat, saturation: CGFloat = minimumColorSaturation, brightness: CGFloat = minimumColorBrightness) -> UIColor {
+        static func darkColor(withHue hue: CGFloat, saturation: CGFloat = 1.0) -> UIColor {
             return UIColor(
                 hue: hue,
-                saturation: min(saturation, minimumColorSaturation),
-                brightness: min(brightness, minimumColorBrightness),
+                saturation: min(saturation * minimumColorSaturation, minimumColorSaturation),
+                brightness: minimumColorBrightness,
                 alpha: 1.0
             )
         }
         
-        static func mediumColor(withHue hue: CGFloat, saturation: CGFloat = mediumColorSaturation, brightness: CGFloat = mediumColorBrightness) -> UIColor {
+        static func mediumColor(withHue hue: CGFloat, saturation: CGFloat = 1.0) -> UIColor {
             return UIColor(
                 hue: hue,
-                saturation: min(saturation, mediumColorSaturation),
-                brightness: min(brightness, mediumColorBrightness),
+                saturation: min(saturation * mediumColorSaturation, mediumColorSaturation),
+                brightness: mediumColorBrightness,
                 alpha: 1.0
             )
         }
         
-        static func lightColor(withHue hue: CGFloat, saturation: CGFloat = maximumColorSaturation, brightness: CGFloat = maximumColorBrightness) -> UIColor {
+        static func lightColor(withHue hue: CGFloat, saturation: CGFloat = 1.0) -> UIColor {
             return UIColor(
                 hue: hue,
-                saturation: min(saturation, maximumColorSaturation),
-                brightness: min(brightness, maximumColorBrightness),
+                saturation: min(saturation * maximumColorSaturation, maximumColorSaturation),
+                brightness: maximumColorBrightness,
                 alpha: 1.0
             )
         }
