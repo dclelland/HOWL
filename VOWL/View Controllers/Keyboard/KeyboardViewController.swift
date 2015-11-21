@@ -33,8 +33,12 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     }
     
     func updateNote(withTouch touch: UITouch, frequency: Float) {
-        if let note = self.notes[touch] where note.frequency.value != frequency {
-            self.stopNote(withTouch: touch)
+        if let note = self.notes[touch] {
+            if note.frequency.value != frequency {
+                self.stopNote(withTouch: touch)
+                self.playNote(withTouch: touch, frequency: frequency)
+            }
+        } else {
             self.playNote(withTouch: touch, frequency: frequency)
         }
     }
@@ -60,7 +64,13 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     // MARK: - Collection view delegate
     
     func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath? {
-        return self.collectionView(collectionView, pathForItemAtIndexPath: indexPath)
+        guard let key = self.keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section) else {
+            return nil
+        }
+        
+        let path = key.path
+        path.applyTransform(collectionView.bounds.denormalizationTransform())
+        return path
     }
     
     // MARK: - Collection view data source
@@ -77,14 +87,25 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("keyboardViewCell", forIndexPath: indexPath) as! KeyboardViewCell
         let layer = cell.layer as! CAShapeLayer
         
-        let path = self.collectionView(collectionView, pathForItemAtIndexPath: indexPath)
+        guard let key = self.keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section) else {
+            return cell
+        }
         
+        let path = key.path
+        
+        path.applyTransform(collectionView.bounds.denormalizationTransform())
         path.applyTransform(CGAffineTransformMakeTranslation(-path.bounds.minX, -path.bounds.minY))
-        
         layer.path = path.CGPath
-        layer.fillColor = UIColor.vowl_darkGreyColor().CGColor
-        layer.strokeColor = UIColor.vowl_blackColor().CGColor
-        layer.lineWidth = CGFloat(M_SQRT2)
+        
+        let notes = self.notes.values.filter { $0.frequency.value == key.frequency() }
+        
+        if notes.count > 0 {
+            let color = UIColor.vowl_lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
+            layer.fillColor = color.CGColor
+        } else {
+            let color = UIColor.vowl_darkGreyColor()
+            layer.fillColor = color.CGColor
+        }
         
         return cell
     }
@@ -98,46 +119,35 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
         let location = CGPointApplyAffineTransform(touch.locationInView(self.keyboardView), self.keyboardView!.bounds.normalizationTransform())
         
-        self.playNote(withTouch: touch, frequency: self.frequencyForItemAtLocation(location))
+        if let key = self.keyboard.keyAtLocation(location) {
+            self.playNote(withTouch: touch, frequency: key.frequency())
+        }
+        
+        self.keyboardView?.reloadData()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
         let location = CGPointApplyAffineTransform(touch.locationInView(self.keyboardView), self.keyboardView!.bounds.normalizationTransform())
         
-        self.updateNote(withTouch: touch, frequency: self.frequencyForItemAtLocation(location))
+        if let key = self.keyboard.keyAtLocation(location) {
+            self.updateNote(withTouch: touch, frequency: key.frequency())
+        } else {
+            self.stopNote(withTouch: touch)
+        }
+        
+        self.keyboardView?.reloadData()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
         self.stopNote(withTouch: touch)
+        
+        self.keyboardView?.reloadData()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         self.stopNote(withTouch: touch)
-    }
-    
-    // MARK: Collection view paths
-    
-    func collectionView(collectionView: UICollectionView, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath {
-        let path = self.keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section).path
         
-        path.applyTransform(collectionView.bounds.denormalizationTransform())
-        
-        return path
-    }
-    
-    // MARK: Frequencies
-    
-    func frequencyForItemAtLocation(location: CGPoint) -> Float {
-        for row in 0..<self.keyboard.numberOfRows() {
-            for index in 0..<self.keyboard.numberOfKeysInRow(row) {
-                let key = self.keyboard.keyAtIndex(index, inRow: row)
-                if key.path.containsPoint(location) {
-                    return key.frequency()
-                }
-            }
-        }
-        
-        return 0.0
+        self.keyboardView?.reloadData()
     }
     
 }

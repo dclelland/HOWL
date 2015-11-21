@@ -30,13 +30,27 @@ class Keyboard {
     
     // MARK: - Keys
     
-    func keyAtIndex(index: Int, inRow row: Int) -> Key {
-        let coordinates = self.coordinatesForIndex(index, inRow: row)
+    func keyAtIndex(index: Int, inRow row: Int) -> Key? {
+        if let coordinates = self.coordinatesForIndex(index, inRow: row) {
+            let pitch = self.pitchForCoordinates(coordinates)
+            let path = self.pathForCoordinates(coordinates)
+            
+            return Key.init(withPitch: pitch, path: path)
+        }
         
-        let pitch = self.pitchForCoordinates(coordinates)
-        let path = self.pathForCoordinates(coordinates)
+        return nil
+    }
+    
+    func keyAtLocation(location: CGPoint) -> Key? {
+        for row in 0..<self.numberOfRows() {
+            for index in 0..<self.numberOfKeysInRow(row) {
+                if let key = self.keyAtIndex(index, inRow: row) where key.path.containsPoint(location) {
+                    return key
+                }
+            }
+        }
         
-        return Key.init(withPitch: pitch, path: path)
+        return nil
     }
     
     // MARK: - Coordinates
@@ -51,7 +65,11 @@ class Keyboard {
         }
     }
     
-    private func coordinatesForIndex(index: Int, inRow row: Int) -> Coordinates {
+    private func coordinatesForIndex(index: Int, inRow row: Int) -> Coordinates? {
+        if row >= self.numberOfRows() || index >= self.numberOfKeysInRow(row) {
+            return nil
+        }
+        
         let x = self.rowIsOffset(row) ? index * 2 + 1 : index * 2
         let y = row
         
