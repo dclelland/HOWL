@@ -40,13 +40,13 @@ class Keyboard {
     
     // MARK: - Keys
     
-    func keyAtIndex(index: Int, inRow row: Int) -> KeyboardKey {
+    func keyAtIndex(index: Int, inRow row: Int) -> Key {
         let coordinates = self.coordinatesForIndex(index, inRow: row)
         
         let pitch = self.pitchForCoordinates(coordinates)
         let path = self.pathForCoordinates(coordinates)
         
-        return KeyboardKey.init(withPitch: pitch, path: path)
+        return Key.init(withPitch: pitch, path: path)
     }
     
     // MARK: - Coordinates

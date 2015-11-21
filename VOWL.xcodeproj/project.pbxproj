@@ -28,8 +28,9 @@
 		65A2BCB41BF87AAC0047DA40 /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCB61BF87D070047DA40 /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCB91BF9B66B0047DA40 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCB81BF9B66B0047DA40 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
-		65A2BCBB1BF9D3EB0047DA40 /* KeyboardKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */; settings = {ASSET_TAGS = (); }; };
+		65A2BCBB1BF9D3EB0047DA40 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BCBA1BF9D3EB0047DA40 /* Key.swift */; settings = {ASSET_TAGS = (); }; };
 		65AFA1861BFF0E9C009E209B /* SynthesizerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1851BFF0E9C009E209B /* SynthesizerNote.swift */; settings = {ASSET_TAGS = (); }; };
+		65AFA1881BFFEA0E009E209B /* Phoneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA1871BFFEA0E009E209B /* Phoneme.swift */; settings = {ASSET_TAGS = (); }; };
 		714ADBA1676F283C99B56777 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3752E94C8A6EBD3E88D7FE75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +62,9 @@
 		65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
 		65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 		65A2BCB81BF9B66B0047DA40 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKey.swift; sourceTree = "<group>"; };
+		65A2BCBA1BF9D3EB0047DA40 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		65AFA1851BFF0E9C009E209B /* SynthesizerNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesizerNote.swift; sourceTree = "<group>"; };
+		65AFA1871BFFEA0E009E209B /* Phoneme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phoneme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +196,7 @@
 				65A2BCB51BF87D070047DA40 /* KeyboardViewLayout.swift */,
 				65A2BCA51BF87AAC0047DA40 /* KeyboardViewCell.swift */,
 				65A2BCA41BF87AAC0047DA40 /* Keyboard.swift */,
-				65A2BCBA1BF9D3EB0047DA40 /* KeyboardKey.swift */,
+				65A2BCBA1BF9D3EB0047DA40 /* Key.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -205,6 +207,7 @@
 				65A2BCAA1BF87AAC0047DA40 /* PhonemeboardViewController.swift */,
 				65A2BCA91BF87AAC0047DA40 /* PhonemeboardView.swift */,
 				65A2BCA81BF87AAC0047DA40 /* Phonemeboard.swift */,
+				65AFA1871BFFEA0E009E209B /* Phoneme.swift */,
 			);
 			path = Phonemeboard;
 			sourceTree = "<group>";
@@ -359,11 +362,12 @@
 				65A2BCB01BF87AAC0047DA40 /* KeyboardViewCell.swift in Sources */,
 				65AFA1861BFF0E9C009E209B /* SynthesizerNote.swift in Sources */,
 				65A2BCB31BF87AAC0047DA40 /* PhonemeboardView.swift in Sources */,
+				65AFA1881BFFEA0E009E209B /* Phoneme.swift in Sources */,
 				650C0E271BFE7D3F003DC6BB /* UIImage+Color.swift in Sources */,
 				65A2BCAB1BF87AAC0047DA40 /* Audio.swift in Sources */,
 				65A2BCAF1BF87AAC0047DA40 /* Keyboard.swift in Sources */,
 				650C0E2C1BFE7E6B003DC6BB /* UIColor+Scheme.swift in Sources */,
-				65A2BCBB1BF9D3EB0047DA40 /* KeyboardKey.swift in Sources */,
+				65A2BCBB1BF9D3EB0047DA40 /* Key.swift in Sources */,
 				65A2BCB21BF87AAC0047DA40 /* Phonemeboard.swift in Sources */,
 				65A2BC791BF826320047DA40 /* AppDelegate.swift in Sources */,
 				65A2BCB11BF87AAC0047DA40 /* KeyboardViewController.swift in Sources */,

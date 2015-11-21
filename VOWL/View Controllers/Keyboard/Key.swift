@@ -1,5 +1,5 @@
 //
-//  KeyboardKey.swift
+//  Key.swift
 //  VOWL
 //
 //  Created by Daniel Clelland on 16/11/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KeyboardKey {
+class Key {
     var pitch: Int
     var path: UIBezierPath
     
