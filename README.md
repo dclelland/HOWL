@@ -1,6 +1,6 @@
 # VOWL
 
-VOWL aims to provide a simple formant synthesizer with a minimum of configuration.
+VOWL aims to provide a simple formant synthesizer with a minimum of configuration (no configuration whatsoever).
 
 ## Todo
 

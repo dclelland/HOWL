@@ -223,7 +223,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.23404698073863983" green="0.23403999209403992" blue="0.23404392600059509" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.29960380474041248" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="3Yl-Bj-Pmz" secondAttribute="bottom" constant="2" id="0vp-uC-JkP"/>
                             <constraint firstItem="3Yl-Bj-Pmz" firstAttribute="leading" secondItem="ZcY-Qe-Dtm" secondAttribute="leading" constant="2" id="K4M-3X-ZJz"/>
@@ -388,7 +388,7 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="h64-U2-xGg" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" id="46d-AV-txR"/>
@@ -442,7 +442,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.23404698073863983" green="0.23403999209403992" blue="0.23404392600059509" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.3009049043573182" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5Y9-28-UfI" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="bottom" constant="2" id="AF4-Gb-Ki5"/>
                             <constraint firstItem="5Y9-28-UfI" firstAttribute="leading" secondItem="jJf-n7-0kv" secondAttribute="leading" constant="2" id="AXj-go-M8u"/>
