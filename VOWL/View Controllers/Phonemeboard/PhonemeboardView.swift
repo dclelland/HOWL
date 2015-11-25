@@ -25,7 +25,7 @@ class PhonemeboardView: AKPlotView {
     
     private var samples = [Float]() {
         didSet {
-            performSelectorOnMainThread("updateUI", withObject: nil, waitUntilDone: false)
+            self.updateUI()
         }
     }
 
@@ -55,11 +55,6 @@ class PhonemeboardView: AKPlotView {
     
     private var foregroundPath: UIBezierPath {
         let path = CGPathCreateMutable()
-        
-        objc_sync_enter(self)
-        defer {
-            objc_sync_exit(self)
-        }
         
         let sz = samples.count / 2
         
@@ -137,7 +132,9 @@ extension PhonemeboardView: CsoundBinding {
             
             data.getBytes(&samples, length:count * sizeof(Float))
             
-            self.samples = samples
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.samples = samples
+            })
         }
     }
     
