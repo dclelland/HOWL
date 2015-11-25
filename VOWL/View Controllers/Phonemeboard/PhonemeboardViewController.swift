@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerDelegate {
+class PhonemeboardViewController: UIViewController {
     
     @IBOutlet weak var phonemeboardView: PhonemeboardView?
     
@@ -72,32 +72,6 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
         if !button.selected {
             multitouchGestureRecognizer?.endTouches()
         }
-    }
-    
-    // MARK: - Multitouch gesture recognizer delegate
-    
-    func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
-        return Settings.shared.phonemeboardSustain
-    }
-    
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
-        refreshView()
-        refreshAudio()
-    }
-    
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
-        refreshView()
-        refreshAudio()
-    }
-    
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
-        refreshView()
-        refreshAudio()
-    }
-    
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
-        refreshView()
-        refreshAudio()
     }
     
     // MARK: - Private Getters
@@ -179,6 +153,36 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
         }
         
         return CGPointApplyAffineTransform(location, phonemeboardView.bounds.normalizationTransform())
+    }
+    
+}
+
+// MARK: - Multitouch gesture recognizer delegate
+
+extension PhonemeboardViewController: MultitouchGestureRecognizerDelegate {
+    
+    func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
+        return Settings.shared.phonemeboardSustain
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
+        refreshView()
+        refreshAudio()
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
+        refreshView()
+        refreshAudio()
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
+        refreshView()
+        refreshAudio()
+    }
+    
+    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
+        refreshView()
+        refreshAudio()
     }
     
 }

@@ -14,7 +14,7 @@ enum PhonemeboardViewState {
     case Selected
 }
 
-class PhonemeboardView: AKPlotView, CsoundBinding {
+class PhonemeboardView: AKPlotView {
     
     var state: PhonemeboardViewState = .Normal
     
@@ -41,24 +41,6 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         CGContextSetFillColorWithColor(context, foregroundPathColor.CGColor)
         CGContextAddPath(context, foregroundPath.CGPath)
         CGContextFillPath(context)
-    }
-    
-    // MARK: - Csound binding
-    
-    func setup(csoundObj: CsoundObj) {
-        csound = csoundObj
-    }
-    
-    func updateValuesFromCsound() {
-        if let csound = csound {
-            let data = csound.getOutSamples()
-            let count = data.length / sizeof(Float)
-            var samples = [Float](count: count, repeatedValue: 0)
-            
-            data.getBytes(&samples, length:count * sizeof(Float))
-            
-            self.samples = samples
-        }
     }
     
     // MARK: - Plot view
@@ -134,6 +116,28 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     
     private var foregroundPathColor: UIColor {
         return UIColor.VOWL.lightColor(withHue: self.hue, saturation: self.saturation)
+    }
+    
+}
+
+// MARK: - Csound binding
+
+extension PhonemeboardView: CsoundBinding {
+    
+    func setup(csoundObj: CsoundObj) {
+        csound = csoundObj
+    }
+    
+    func updateValuesFromCsound() {
+        if let csound = csound {
+            let data = csound.getOutSamples()
+            let count = data.length / sizeof(Float)
+            var samples = [Float](count: count, repeatedValue: 0)
+            
+            data.getBytes(&samples, length:count * sizeof(Float))
+            
+            self.samples = samples
+        }
     }
     
 }

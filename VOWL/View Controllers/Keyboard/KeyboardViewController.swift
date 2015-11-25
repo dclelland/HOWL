@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KeyboardViewController: UIViewController, UICollectionViewDataSource, KeyboardViewLayoutDelegate, MultitouchGestureRecognizerDelegate {
+class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var keyboardView: UICollectionView?
     
@@ -65,19 +65,11 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         }
     }
     
-    // MARK: - Collection view delegate
-    
-    func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath? {
-        guard let key = keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section) else {
-            return nil
-        }
-        
-        let path = key.path
-        path.applyTransform(collectionView.bounds.denormalizationTransform())
-        return path
-    }
-    
-    // MARK: - Collection view data source
+}
+
+// MARK: - Collection view data source
+
+extension KeyboardViewController: UICollectionViewDataSource {
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return keyboard.numberOfRows()
@@ -114,7 +106,27 @@ class KeyboardViewController: UIViewController, UICollectionViewDataSource, Keyb
         return cell
     }
     
-    // MARK: - Multitouch gesture recognizer delegate
+}
+
+// MARK: - Keyboard view layout delegate
+
+extension KeyboardViewController: KeyboardViewLayoutDelegate {
+    
+    func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath? {
+        guard let key = keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section) else {
+            return nil
+        }
+        
+        let path = key.path
+        path.applyTransform(collectionView.bounds.denormalizationTransform())
+        return path
+    }
+    
+}
+
+// MARK: - Multitouch gesture recognizer delegate
+
+extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
     
     func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
         return Settings.shared.keyboardSustain
