@@ -25,20 +25,20 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     // MARK: - Life cycle
     
     func refreshView() {
-        guard let touches = self.multitouchGestureRecognizer?.touches else {
+        guard let touches = multitouchGestureRecognizer?.touches else {
             return
         }
         
-        self.phonemeboardView?.state = self.stateForTouches(touches)
+        phonemeboardView?.state = stateForTouches(touches)
         
-        if let hue = self.hueForTouches(touches), let saturation = self.saturationForTouches(touches) {
-            self.phonemeboardView?.hue = hue
-            self.phonemeboardView?.saturation = saturation
+        if let hue = hueForTouches(touches), let saturation = saturationForTouches(touches) {
+            phonemeboardView?.hue = hue
+            phonemeboardView?.saturation = saturation
         }
     }
     
     func refreshAudio() {
-        guard let touches = self.multitouchGestureRecognizer?.touches else {
+        guard let touches = multitouchGestureRecognizer?.touches else {
             return
         }
         
@@ -54,7 +54,7 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
             Audio.shared.bassVocoder.unmute()
         }
         
-        if let (soprano, alto, tenor, bass) = self.phonemesForTouches(touches) {
+        if let (soprano, alto, tenor, bass) = phonemesForTouches(touches) {
             Audio.shared.sopranoVocoder.updateWithPhoneme(soprano)
             Audio.shared.altoVocoder.updateWithPhoneme(alto)
             Audio.shared.tenorVocoder.updateWithPhoneme(tenor)
@@ -70,7 +70,7 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
         button.selected = Settings.shared.phonemeboardSustain
         
         if !button.selected {
-            self.multitouchGestureRecognizer?.endTouches()
+            multitouchGestureRecognizer?.endTouches()
         }
     }
     
@@ -81,36 +81,36 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
-        self.refreshView()
-        self.refreshAudio()
+        refreshView()
+        refreshAudio()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
-        self.refreshView()
-        self.refreshAudio()
+        refreshView()
+        refreshAudio()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
-        self.refreshView()
-        self.refreshAudio()
+        refreshView()
+        refreshAudio()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
-        self.refreshView()
-        self.refreshAudio()
+        refreshView()
+        refreshAudio()
     }
     
     // MARK: - Private Getters
     
     private func phonemesForTouches(touches: [UITouch]) -> (Phoneme, Phoneme, Phoneme, Phoneme)? {
-        guard let location = self.locationForTouches(touches) else {
+        guard let location = locationForTouches(touches) else {
             return nil
         }
         
-        let soprano = self.phonemeboard.sopranoPhonemeAtLocation(location)
-        let alto = self.phonemeboard.altoPhonemeAtLocation(location)
-        let tenor = self.phonemeboard.tenorPhonemeAtLocation(location)
-        let bass = self.phonemeboard.bassPhonemeAtLocation(location)
+        let soprano = phonemeboard.sopranoPhonemeAtLocation(location)
+        let alto = phonemeboard.altoPhonemeAtLocation(location)
+        let tenor = phonemeboard.tenorPhonemeAtLocation(location)
+        let bass = phonemeboard.bassPhonemeAtLocation(location)
         
         return (soprano, alto, tenor, bass)
     }
@@ -143,7 +143,7 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     }
     
     private func hueForTouches(touches: [UITouch]) -> CGFloat? {
-        guard let location = self.locationForTouches(touches) else {
+        guard let location = locationForTouches(touches) else {
             return nil
         }
         
@@ -154,7 +154,7 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     }
     
     private func saturationForTouches(touches: [UITouch]) -> CGFloat? {
-        guard let location = self.locationForTouches(touches) else {
+        guard let location = locationForTouches(touches) else {
             return nil
         }
 
@@ -165,7 +165,7 @@ class PhonemeboardViewController: UIViewController, MultitouchGestureRecognizerD
     }
     
     private func locationForTouches(touches: [UITouch]) -> CGPoint? {
-        guard let phonemeboardView = self.phonemeboardView where touches.count > 0 else {
+        guard let phonemeboardView = phonemeboardView where touches.count > 0 else {
             return nil
         }
         

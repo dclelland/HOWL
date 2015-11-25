@@ -8,12 +8,12 @@
 
 import UIKit
 
+// MARK: - Colored images
+
 extension UIImage {
     
-    // MARK: - Color
-    
     static func image(withColor color: UIColor) -> UIImage {
-        return self.image(withColor: color, andCornerRadius: 0.0)
+        return image(withColor: color, andCornerRadius: 0.0)
     }
     
     static func image(withColor color: UIColor, andCornerRadius cornerRadius: CGFloat) -> UIImage {

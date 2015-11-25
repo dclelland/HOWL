@@ -17,19 +17,17 @@ class Key {
         self.path = path
     }
     
-    // MARK: Getters
-    
-    func name() -> String {
-        return self.noteName() + self.octaveName()
+    var name: String {
+        return noteName + octaveName
     }
     
-    func frequency() -> Float {
+    var frequency: Float {
         return pow(2.0, (Float(pitch) - 69.0) / 12.0) * 440.0
     }
     
-    // MARK: Names
+    // MARK: Private getters
     
-    private func noteName() -> String {
+    private var noteName: String {
         switch pitch % 12 {
         case 0: return "C"
         case 1: return "C#"
@@ -47,7 +45,7 @@ class Key {
         }
     }
     
-    private func octaveName() -> String {
+    private var octaveName: String {
         return String(pitch / 12 - 1)
     }
 }

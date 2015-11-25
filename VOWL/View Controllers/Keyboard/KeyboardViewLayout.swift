@@ -21,11 +21,11 @@ class KeyboardViewLayout: UICollectionViewLayout {
     }
     
     override func collectionViewContentSize() -> CGSize {
-        return self.collectionView?.bounds.size ?? CGSizeZero
+        return collectionView?.bounds.size ?? CGSizeZero
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        guard let collectionView = self.collectionView else {
+        guard let collectionView = collectionView else {
             return nil
         }
         
@@ -34,7 +34,7 @@ class KeyboardViewLayout: UICollectionViewLayout {
         for section in 0..<collectionView.numberOfSections() {
             for item in 0..<collectionView.numberOfItemsInSection(section) {
                 let indexPath = NSIndexPath.init(forItem: item, inSection: section)
-                if let attributes = self.layoutAttributesForItemAtIndexPath(indexPath) {
+                if let attributes = layoutAttributesForItemAtIndexPath(indexPath) {
                     if CGRectIntersectsRect(rect, attributes.frame) {
                         layoutAttributes.append(attributes)
                     }
@@ -48,7 +48,7 @@ class KeyboardViewLayout: UICollectionViewLayout {
     override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
         
-        if let collectionView = self.collectionView, let delegate = collectionView.delegate as? KeyboardViewLayoutDelegate {
+        if let collectionView = collectionView, let delegate = collectionView.delegate as? KeyboardViewLayoutDelegate {
             if let path = delegate.collectionView(collectionView, layout: self, pathForItemAtIndexPath: indexPath) {
                 attributes.frame = path.bounds
             }

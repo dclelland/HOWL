@@ -8,17 +8,17 @@
 
 import Foundation
 
+// MARK: - Normalization
+
 extension CGRect {
     
-    // MARK: - Normalization
-    
     func normalizationTransform() -> CGAffineTransform {
-        return CGAffineTransformInvert(self.denormalizationTransform())
+        return CGAffineTransformInvert(denormalizationTransform())
     }
     
     func denormalizationTransform() -> CGAffineTransform {
-        let scale = CGAffineTransformMakeScale(self.width, self.height)
-        let translation = CGAffineTransformMakeTranslation(self.minX, self.minY)
+        let scale = CGAffineTransformMakeScale(width, height)
+        let translation = CGAffineTransformMakeTranslation(minX, minY)
         
         return CGAffineTransformConcat(scale, translation)
     }

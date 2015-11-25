@@ -94,20 +94,17 @@ class Vocoder: AKInstrument {
     }
     
     func updateWithPhoneme(phoneme: Phoneme) {
-        let (frequency1, frequency2, frequency3, frequency4, frequency5) = phoneme.frequencies
-        let (bandwidth1, bandwidth2, bandwidth3, bandwidth4, bandwidth5) = phoneme.bandwidths
+        frequency1.value = phoneme.frequencies.0
+        frequency2.value = phoneme.frequencies.1
+        frequency3.value = phoneme.frequencies.2
+        frequency4.value = phoneme.frequencies.3
+        frequency5.value = phoneme.frequencies.4
         
-        self.frequency1.value = frequency1
-        self.frequency2.value = frequency2
-        self.frequency3.value = frequency3
-        self.frequency4.value = frequency4
-        self.frequency5.value = frequency5
-        
-        self.bandwidth1.value = bandwidth1
-        self.bandwidth2.value = bandwidth2
-        self.bandwidth3.value = bandwidth3
-        self.bandwidth4.value = bandwidth4
-        self.bandwidth5.value = bandwidth5
+        bandwidth1.value = phoneme.bandwidths.0
+        bandwidth2.value = phoneme.bandwidths.1
+        bandwidth3.value = phoneme.bandwidths.2
+        bandwidth4.value = phoneme.bandwidths.3
+        bandwidth5.value = phoneme.bandwidths.4
     }
     
 }

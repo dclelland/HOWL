@@ -16,14 +16,14 @@ class HoldButton: UIButton {
         let hue: CGFloat = 0.25
         let cornerRadius: CGFloat = 3.0
         
-        self.backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clearColor()
         
-        self.setTitleColor(UIColor.VOWL.blackColor(), forState: .Normal)
+        setTitleColor(UIColor.VOWL.blackColor(), forState: .Normal)
         
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Highlighted)
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: [.Highlighted, .Selected])
-        self.setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.lightColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Selected)
+        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)
+        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Highlighted)
+        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: [.Highlighted, .Selected])
+        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.lightColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Selected)
     }
 
 }

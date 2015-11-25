@@ -8,24 +8,24 @@
 
 import Foundation
 
+// MARK: - Parity
+
 extension Int {
-    
-    // MARK: - Parity
     
     enum Parity {
         case Even
         case Odd
     }
     
-    func parity() -> Parity {
+    var parity: Parity {
         return self % 2 == 0 ? .Even : .Odd
     }
     
-    func isEven() -> Bool {
-        return self.parity() == .Even
+    var isEven: Bool {
+        return parity == .Even
     }
     
-    func isOdd() -> Bool {
-        return self.parity() == .Odd
+    var isOdd: Bool {
+        return parity == .Odd
     }
 }

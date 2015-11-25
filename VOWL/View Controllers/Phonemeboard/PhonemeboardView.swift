@@ -25,7 +25,7 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     
     private var samples = [Float]() {
         didSet {
-            self.performSelectorOnMainThread("updateUI", withObject: nil, waitUntilDone: false)
+            performSelectorOnMainThread("updateUI", withObject: nil, waitUntilDone: false)
         }
     }
 
@@ -34,23 +34,23 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         
         CGContextClearRect(context, rect)
         
-        CGContextSetFillColorWithColor(context, self.backgroundPathColor().CGColor)
-        CGContextAddPath(context, self.backgroundPath().CGPath)
+        CGContextSetFillColorWithColor(context, backgroundPathColor.CGColor)
+        CGContextAddPath(context, backgroundPath.CGPath)
         CGContextFillPath(context)
         
-        CGContextSetFillColorWithColor(context, self.foregroundPathColor().CGColor)
-        CGContextAddPath(context, self.foregroundPath().CGPath)
+        CGContextSetFillColorWithColor(context, foregroundPathColor.CGColor)
+        CGContextAddPath(context, foregroundPath.CGPath)
         CGContextFillPath(context)
     }
     
     // MARK: - Csound binding
     
     func setup(csoundObj: CsoundObj) {
-        self.csound = csoundObj
+        csound = csoundObj
     }
     
     func updateValuesFromCsound() {
-        if let csound = self.csound {
+        if let csound = csound {
             let data = csound.getOutSamples()
             let count = data.length / sizeof(Float)
             var samples = [Float](count: count, repeatedValue: 0)
@@ -65,18 +65,18 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
     
     override func defaultValues() { }
     
-    // MARK: - Paths
+    // MARK: - Private getters
     
-    private func backgroundPath() -> UIBezierPath {
-        return UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius)
+    private var backgroundPath: UIBezierPath {
+        return UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius)
     }
     
-    private func foregroundPath() -> UIBezierPath {
+    private var foregroundPath: UIBezierPath {
         let path = CGPathCreateMutable()
         
         objc_sync_enter(self)
         
-        let sz = self.samples.count / 2
+        let sz = samples.count / 2
         
         var i: Int
         
@@ -85,14 +85,14 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         var y = CGFloat(0.0)
         
         for i = 0; i < sz; i++ {
-            s = CGFloat(self.samples[i * 2])
+            s = CGFloat(samples[i * 2])
             
             if isnan(s) {
                 s = 0.0
             }
             
-            x = CGFloat(i) * (self.bounds.width / CGFloat(sz - 1))
-            y = (s + 0.5) * self.bounds.height
+            x = CGFloat(i) * (bounds.width / CGFloat(sz - 1))
+            y = (s + 0.5) * bounds.height
             
             if (i == 0) {
                 CGPathMoveToPoint(path, nil, x, y)
@@ -102,14 +102,14 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         }
         
         for i = sz - 1; i >= 0; i-- {
-            s = CGFloat(self.samples[i * 2 + 1])
+            s = CGFloat(samples[i * 2 + 1])
             
             if (isnan(s)) {
                 s = 0.0
             }
             
-            x = CGFloat(i) * (self.bounds.width / CGFloat(sz - 1))
-            y = (-s + 0.5) * self.bounds.height
+            x = CGFloat(i) * (bounds.width / CGFloat(sz - 1))
+            y = (-s + 0.5) * bounds.height
             
             CGPathAddLineToPoint(path, nil, x, y)
         }
@@ -121,10 +121,8 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         return UIBezierPath(CGPath: path)
     }
     
-    // MARK: - Colors
-    
-    private func backgroundPathColor() -> UIColor {
-        switch self.state {
+    private var backgroundPathColor: UIColor {
+        switch state {
         case .Normal:
             return UIColor.VOWL.darkGreyColor()
         case .Highlighted:
@@ -134,7 +132,7 @@ class PhonemeboardView: AKPlotView, CsoundBinding {
         }
     }
     
-    private func foregroundPathColor() -> UIColor {
+    private var foregroundPathColor: UIColor {
         return UIColor.VOWL.lightColor(withHue: self.hue, saturation: self.saturation)
     }
     

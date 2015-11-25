@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - Color scheme
+
 extension UIColor {
     
     struct VOWL {

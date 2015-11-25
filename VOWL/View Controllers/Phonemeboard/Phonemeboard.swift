@@ -45,19 +45,19 @@ class Phonemeboard {
     // MARK: - Phonemes
     
     func sopranoPhonemeAtLocation(location: CGPoint) -> Phoneme {
-        return Phoneme(withLocation: location, phonemes: self.soprano)
+        return Phoneme(withLocation: location, phonemes: soprano)
     }
     
     func altoPhonemeAtLocation(location: CGPoint) -> Phoneme {
-        return Phoneme(withLocation: location, phonemes: self.alto)
+        return Phoneme(withLocation: location, phonemes: alto)
     }
     
     func tenorPhonemeAtLocation(location: CGPoint) -> Phoneme {
-        return Phoneme(withLocation: location, phonemes: self.tenor)
+        return Phoneme(withLocation: location, phonemes: tenor)
     }
     
     func bassPhonemeAtLocation(location: CGPoint) -> Phoneme {
-        return Phoneme(withLocation: location, phonemes: self.bass)
+        return Phoneme(withLocation: location, phonemes: bass)
     }
     
 }

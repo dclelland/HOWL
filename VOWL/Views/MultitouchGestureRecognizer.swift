@@ -26,29 +26,29 @@ class MultitouchGestureRecognizer: UIPanGestureRecognizer {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
         
-        if (self.shouldSustainTouches()) {
-            self.endTouches()
+        if (shouldSustainTouches()) {
+            endTouches()
         }
         
-        self.updateTouches(touches)
+        updateTouches(touches)
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesMoved(touches, withEvent: event)
         
-        self.updateTouches(touches)
+        updateTouches(touches)
     }
     
     override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesCancelled(touches, withEvent: event)
         
-        self.updateTouches(touches)
+        updateTouches(touches)
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event)
         
-        self.updateTouches(touches)
+        updateTouches(touches)
     }
     
     // MARK: - Multiple touches
@@ -57,27 +57,27 @@ class MultitouchGestureRecognizer: UIPanGestureRecognizer {
         for touch in touches {
             switch touch.phase {
             case .Began:
-                self.startTouch(touch)
+                startTouch(touch)
             case .Moved:
-                self.moveTouch(touch)
+                moveTouch(touch)
             case .Stationary:
-                self.moveTouch(touch)
+                moveTouch(touch)
             case .Cancelled:
-                self.cancelTouch(touch)
+                cancelTouch(touch)
             case .Ended:
-                if self.shouldSustainTouches() {
-                    self.moveTouch(touch)
+                if shouldSustainTouches() {
+                    moveTouch(touch)
                 } else {
-                    self.endTouch(touch)
+                    endTouch(touch)
                 }
             }
         }
     }
     
     func endTouches() {
-        for touch in self.touches {
+        for touch in touches {
             if touch.phase == .Ended {
-                self.endTouch(touch)
+                endTouch(touch)
             }
         }
     }
@@ -85,32 +85,32 @@ class MultitouchGestureRecognizer: UIPanGestureRecognizer {
     // MARK: - Single touches
     
     private func startTouch(touch: UITouch) {
-        self.touches.append(touch)
-        self.multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidBegin: touch)
+        touches.append(touch)
+        multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidBegin: touch)
     }
     
     private func moveTouch(touch: UITouch) {
-        self.multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidMove: touch)
+        multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidMove: touch)
     }
     
     private func cancelTouch(touch: UITouch) {
-        if let index = self.touches.indexOf(touch) {
-            self.touches.removeAtIndex(index)
-            self.multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidCancel: touch)
+        if let index = touches.indexOf(touch) {
+            touches.removeAtIndex(index)
+            multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidCancel: touch)
         }
     }
     
     private func endTouch(touch: UITouch) {
-        if let index = self.touches.indexOf(touch) {
-            self.touches.removeAtIndex(index)
-            self.multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidEnd: touch)
+        if let index = touches.indexOf(touch) {
+            touches.removeAtIndex(index)
+            multitouchDelegate()?.multitouchGestureRecognizer(self, touchDidEnd: touch)
         }
     }
     
     // MARK: - Delegate
     
     private func multitouchDelegate() -> MultitouchGestureRecognizerDelegate? {
-        if let multitouchDelegate = self.delegate as? MultitouchGestureRecognizerDelegate {
+        if let multitouchDelegate = delegate as? MultitouchGestureRecognizerDelegate {
             return multitouchDelegate
         }
         
@@ -118,7 +118,7 @@ class MultitouchGestureRecognizer: UIPanGestureRecognizer {
     }
     
     private func shouldSustainTouches() -> Bool {
-        return self.multitouchDelegate()?.multitouchGestureRecognizerShouldSustainTouches(self) == true
+        return multitouchDelegate()?.multitouchGestureRecognizerShouldSustainTouches(self) == true
     }
     
 }

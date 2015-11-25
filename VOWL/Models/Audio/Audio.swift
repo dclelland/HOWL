@@ -21,6 +21,17 @@ class Audio {
     
     let master: Master
     
+    var instruments: [AKInstrument] {
+        return [
+            synthesizer,
+            sopranoVocoder,
+            altoVocoder,
+            tenorVocoder,
+            bassVocoder,
+            master
+        ]
+    }
+    
     init() {
         self.synthesizer = Synthesizer()
         
@@ -40,23 +51,10 @@ class Audio {
         )
     }
     
-    // MARK: - Getters
-    
-    func instruments() -> [AKInstrument] {
-        return [
-            self.synthesizer,
-            self.sopranoVocoder,
-            self.altoVocoder,
-            self.tenorVocoder,
-            self.bassVocoder,
-            self.master
-        ]
-    }
-    
     // MARK: - Life cycle
     
     func start() {
-        for instrument in self.instruments() {
+        for instrument in instruments {
             AKOrchestra.addInstrument(instrument)
         }
         
@@ -64,13 +62,13 @@ class Audio {
     }
     
     func play() {
-        for instrument in self.instruments() {
+        for instrument in instruments {
             instrument.play()
         }
     }
     
     func stop() {
-        for instrument in self.instruments() {
+        for instrument in instruments {
             instrument.stop()
         }
     }

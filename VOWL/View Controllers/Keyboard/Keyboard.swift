@@ -25,26 +25,26 @@ class Keyboard {
     }
     
     func numberOfKeysInRow(row: Int) -> Int {
-        return self.rowIsOffset(row) ? horizontalRadius : horizontalRadius + 1
+        return rowIsOffset(row) ? horizontalRadius : horizontalRadius + 1
     }
     
     // MARK: - Keys
     
     func keyAtIndex(index: Int, inRow row: Int) -> Key? {
-        if let coordinates = self.coordinatesForIndex(index, inRow: row) {
-            let pitch = self.pitchForCoordinates(coordinates)
-            let path = self.pathForCoordinates(coordinates)
+        if let coordinates = coordinatesForIndex(index, inRow: row) {
+            let pitch = pitchForCoordinates(coordinates)
+            let path = pathForCoordinates(coordinates)
             
-            return Key.init(withPitch: pitch, path: path)
+            return Key(withPitch: pitch, path: path)
         }
         
         return nil
     }
     
     func keyAtLocation(location: CGPoint) -> Key? {
-        for row in 0..<self.numberOfRows() {
-            for index in 0..<self.numberOfKeysInRow(row) {
-                if let key = self.keyAtIndex(index, inRow: row) where key.path.containsPoint(location) {
+        for row in 0..<numberOfRows() {
+            for index in 0..<numberOfKeysInRow(row) {
+                if let key = keyAtIndex(index, inRow: row) where key.path.containsPoint(location) {
                     return key
                 }
             }
@@ -66,11 +66,11 @@ class Keyboard {
     }
     
     private func coordinatesForIndex(index: Int, inRow row: Int) -> Coordinates? {
-        if row >= self.numberOfRows() || index >= self.numberOfKeysInRow(row) {
+        if row >= numberOfRows() || index >= numberOfKeysInRow(row) {
             return nil
         }
         
-        let x = self.rowIsOffset(row) ? index * 2 + 1 : index * 2
+        let x = rowIsOffset(row) ? index * 2 + 1 : index * 2
         let y = row
         
         let verticalOffset = verticalRadius - y
@@ -83,10 +83,10 @@ class Keyboard {
     }
     
     private func rowIsOffset(row: Int) -> Bool {
-        if horizontalRadius.parity() == verticalRadius.parity() {
-            return row.isOdd()
+        if horizontalRadius.parity == verticalRadius.parity {
+            return row.isOdd
         } else {
-            return row.isEven()
+            return row.isEven
         }
     }
     
@@ -97,7 +97,7 @@ class Keyboard {
     }
     
     private func pathForCoordinates(coordinates: Coordinates) -> UIBezierPath {
-        let location = self.locationForCoordinates(coordinates)
+        let location = locationForCoordinates(coordinates)
         
         let horizontalKeyRadius = 1.0 / (2.0 * CGFloat(horizontalRadius))
         let verticalKeyRadius = 1.0 / (2.0 * CGFloat(verticalRadius))
