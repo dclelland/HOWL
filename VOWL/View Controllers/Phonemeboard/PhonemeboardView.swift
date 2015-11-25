@@ -57,6 +57,9 @@ class PhonemeboardView: AKPlotView {
         let path = CGPathCreateMutable()
         
         objc_sync_enter(self)
+        defer {
+            objc_sync_exit(self)
+        }
         
         let sz = samples.count / 2
         
@@ -95,8 +98,6 @@ class PhonemeboardView: AKPlotView {
             
             CGPathAddLineToPoint(path, nil, x, y)
         }
-        
-        objc_sync_exit(self)
         
         CGPathCloseSubpath(path)
         
