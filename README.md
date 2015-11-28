@@ -1,14 +1,10 @@
-# VOWL
+# HOWL
 
-VOWL aims to provide a simple formant synthesizer with a minimum of configuration (no configuration whatsoever).
+HOWL aims to provide a simple formant synthesizer with a minimum of configuration (no configuration whatsoever).
 
 ## Todo
 
 ### Interface
-
-- Design
-    - Icon
-    - Splash
 
 - Phonemeboard
     - Should display rosette instead of waveform
