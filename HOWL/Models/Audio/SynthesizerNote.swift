@@ -1,6 +1,6 @@
 //
 //  SynthesizerNote.swift
-//  VOWL
+//  HOWL
 //
 //  Created by Daniel Clelland on 20/11/15.
 //  Copyright © 2015 Daniel Clelland. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  UIColor+Scheme.swift
-//  VOWL
+//  HOWL
 //
 //  Created by Daniel Clelland on 20/11/15.
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
@@ -12,7 +12,7 @@ import UIKit
 
 extension UIColor {
     
-    struct VOWL {
+    struct HOWL {
         static let minimumGreyBrightness : CGFloat = 0.2
         static let mediumGreyBrightness : CGFloat = 0.25
         static let maximumGreyBrightness : CGFloat = 0.3

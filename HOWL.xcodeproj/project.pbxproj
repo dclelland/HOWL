@@ -251,7 +251,7 @@
 			dependencies = (
 			);
 			name = HOWL;
-			productName = VOWL;
+			productName = HOWL;
 			productReference = 656472CF1BF6BD2A00BDEB1B /* HOWL.app */;
 			productType = "com.apple.product-type.application";
 		};

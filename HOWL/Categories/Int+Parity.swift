@@ -1,6 +1,6 @@
 //
-//  Int+VOWL.swift
-//  VOWL
+//  Int+HOWL.swift
+//  HOWL
 //
 //  Created by Daniel Clelland on 19/11/15.
 //  Copyright © 2015 Daniel Clelland. All rights reserved.

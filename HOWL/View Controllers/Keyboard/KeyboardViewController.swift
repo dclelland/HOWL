@@ -1,6 +1,6 @@
 //
 //  KeyboardViewController.swift
-//  VOWL
+//  HOWL
 //
 //  Created by Daniel Clelland on 14/11/15.
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
@@ -96,10 +96,10 @@ extension KeyboardViewController: UICollectionViewDataSource {
         let keyNotes = notes.values.filter { $0.frequency.value == key.frequency }
         
         if keyNotes.count > 0 {
-            let color = UIColor.VOWL.lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
+            let color = UIColor.HOWL.lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
             layer.fillColor = color.CGColor
         } else {
-            let color = UIColor.VOWL.darkGreyColor()
+            let color = UIColor.HOWL.darkGreyColor()
             layer.fillColor = color.CGColor
         }
         

@@ -1,6 +1,6 @@
 //
 //  HoldButton.swift
-//  VOWL
+//  HOWL
 //
 //  Created by Daniel Clelland on 20/11/15.
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
@@ -18,12 +18,12 @@ class HoldButton: UIButton {
         
         backgroundColor = UIColor.clearColor()
         
-        setTitleColor(UIColor.VOWL.blackColor(), forState: .Normal)
+        setTitleColor(UIColor.HOWL.blackColor(), forState: .Normal)
         
-        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)
-        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Highlighted)
-        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: [.Highlighted, .Selected])
-        setBackgroundImage(UIImage.image(withColor: UIColor.VOWL.lightColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Selected)
+        setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)
+        setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Highlighted)
+        setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: [.Highlighted, .Selected])
+        setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.lightColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Selected)
     }
 
 }

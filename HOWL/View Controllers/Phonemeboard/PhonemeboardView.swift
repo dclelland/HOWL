@@ -1,6 +1,6 @@
 //
 //  PhonemeboardView.swift
-//  VOWL
+//  HOWL
 //
 //  Created by Daniel Clelland on 15/11/15.
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
@@ -102,16 +102,16 @@ class PhonemeboardView: AKPlotView {
     private var backgroundPathColor: UIColor {
         switch state {
         case .Normal:
-            return UIColor.VOWL.darkGreyColor()
+            return UIColor.HOWL.darkGreyColor()
         case .Highlighted:
-            return UIColor.VOWL.mediumColor(withHue: self.hue, saturation: self.saturation)
+            return UIColor.HOWL.mediumColor(withHue: self.hue, saturation: self.saturation)
         case .Selected:
-            return UIColor.VOWL.darkColor(withHue: self.hue, saturation: self.saturation)
+            return UIColor.HOWL.darkColor(withHue: self.hue, saturation: self.saturation)
         }
     }
     
     private var foregroundPathColor: UIColor {
-        return UIColor.VOWL.lightColor(withHue: self.hue, saturation: self.saturation)
+        return UIColor.HOWL.lightColor(withHue: self.hue, saturation: self.saturation)
     }
     
 }
