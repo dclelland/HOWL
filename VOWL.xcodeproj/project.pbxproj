@@ -14,7 +14,6 @@
 		6555ABC01BFE903800E9B36A /* MultitouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6555ABBF1BFE903800E9B36A /* MultitouchGestureRecognizer.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BC791BF826320047DA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC6F1BF826320047DA40 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BC7A1BF826320047DA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC711BF826320047DA40 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		65A2BC7B1BF826320047DA40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC721BF826320047DA40 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		65A2BC7C1BF826320047DA40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A2BC731BF826320047DA40 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		65A2BCAB1BF87AAC0047DA40 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC9E1BF87AAC0047DA40 /* Audio.swift */; settings = {ASSET_TAGS = (); }; };
 		65A2BCAC1BF87AAC0047DA40 /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2BC9F1BF87AAC0047DA40 /* Master.swift */; settings = {ASSET_TAGS = (); }; };
@@ -48,7 +47,6 @@
 		656472CF1BF6BD2A00BDEB1B /* VOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A2BC6F1BF826320047DA40 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A2BC711BF826320047DA40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		65A2BC721BF826320047DA40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65A2BC731BF826320047DA40 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		65A2BC741BF826320047DA40 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		65A2BC931BF873430047DA40 /* VOWL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VOWL-Bridging-Header.h"; path = "VOWL/VOWL-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				65A2BC731BF826320047DA40 /* Main.storyboard */,
-				65A2BC721BF826320047DA40 /* LaunchScreen.storyboard */,
 				65A2BC711BF826320047DA40 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -299,7 +296,6 @@
 			files = (
 				65A2BC7C1BF826320047DA40 /* Main.storyboard in Resources */,
 				65A2BC7A1BF826320047DA40 /* Assets.xcassets in Resources */,
-				65A2BC7B1BF826320047DA40 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +471,7 @@
 			baseConfigurationReference = 4D2B569B9BD80BCFD8D1EFAE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VOWL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,6 +488,7 @@
 			baseConfigurationReference = 2645469B5082872EBB904DC0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VOWL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
