@@ -1,5 +1,5 @@
 //
-//  HoldButton.swift
+//  ToolbarButton.swift
 //  HOWL
 //
 //  Created by Daniel Clelland on 20/11/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HoldButton: UIButton {
+class ToolbarButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

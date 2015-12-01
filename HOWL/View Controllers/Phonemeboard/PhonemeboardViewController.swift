@@ -14,7 +14,7 @@ class PhonemeboardViewController: UIViewController {
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
     
-    @IBOutlet weak var holdButton: HoldButton? {
+    @IBOutlet weak var holdButton: ToolbarButton? {
         didSet {
             holdButton?.selected = Settings.shared.phonemeboardSustain
         }
@@ -65,13 +65,17 @@ class PhonemeboardViewController: UIViewController {
     
     // MARK: - Interface events
     
-    @IBAction func holdButtonTapped(button: HoldButton) {
+    @IBAction func holdButtonTapped(button: ToolbarButton) {
         Settings.shared.phonemeboardSustain = !Settings.shared.phonemeboardSustain
         button.selected = Settings.shared.phonemeboardSustain
         
         if !button.selected {
             multitouchGestureRecognizer?.endTouches()
         }
+    }
+    
+    @IBAction func flipButtonTapped(button: ToolbarButton) {
+        
     }
     
     // MARK: - Private Getters

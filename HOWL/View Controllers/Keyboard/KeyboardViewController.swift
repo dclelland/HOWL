@@ -14,7 +14,7 @@ class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
     
-    @IBOutlet weak var holdButton: HoldButton? {
+    @IBOutlet weak var holdButton: ToolbarButton? {
         didSet {
             holdButton?.selected = Settings.shared.keyboardSustain
         }
@@ -56,13 +56,17 @@ class KeyboardViewController: UIViewController {
     
     // MARK: - Interface events
     
-    @IBAction func holdButtonTapped(button: HoldButton) {
+    @IBAction func holdButtonTapped(button: ToolbarButton) {
         Settings.shared.keyboardSustain = !Settings.shared.keyboardSustain
         button.selected = Settings.shared.keyboardSustain
         
         if !button.selected {
             multitouchGestureRecognizer?.endTouches()
         }
+    }
+    
+    @IBAction func flipButtonTapped(button: ToolbarButton) {
+        
     }
     
 }

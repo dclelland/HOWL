@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -90,7 +90,7 @@
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-c1-TQk">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-rB-Cz2" customClass="HoldButton" customModule="HOWL" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-rB-Cz2" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.54535818099975586" green="0.99429339170455933" blue="0.17328467965126038" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,7 +112,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-t5-lhc">
-                                        <rect key="frame" x="2" y="2" width="230" height="43"/>
+                                        <rect key="frame" x="2" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -124,6 +124,27 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ML-9Q-mzI" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="189" y="2" width="43" height="43"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.545358181" green="0.99429339169999997" blue="0.1732846797" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="Ifc-M4-9Na"/>
+                                            <constraint firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="vVg-be-VI2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="FLIP">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ifc-M4-9Na"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="flipButtonTapped:" destination="9J8-TP-oCq" eventType="touchUpInside" id="iTP-2Y-4j6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,9 +154,12 @@
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="leading" secondItem="h1W-c1-TQk" secondAttribute="leading" constant="2" id="4lM-yw-62L"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="6Fr-uT-Owa"/>
                                     <constraint firstAttribute="bottom" secondItem="LEJ-t5-lhc" secondAttribute="bottom" constant="2" id="7Qu-rg-SNc"/>
+                                    <constraint firstAttribute="bottom" secondItem="2ML-9Q-mzI" secondAttribute="bottom" constant="2" id="AAF-GC-Oi7"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="B3P-YN-64E"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="h1W-c1-TQk" secondAttribute="leading" constant="2" id="Fqa-x3-NXw"/>
+                                    <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="2ML-9Q-mzI" secondAttribute="trailing" constant="2" id="GMK-YZ-RBu"/>
                                     <constraint firstAttribute="trailing" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="Iwo-a0-C17"/>
+                                    <constraint firstItem="2ML-9Q-mzI" firstAttribute="leading" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="JxG-e5-tMT"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="LEJ-t5-lhc" secondAttribute="bottom" constant="2" id="NQx-1H-2A8"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="NZU-nB-piP"/>
                                     <constraint firstAttribute="height" constant="47" id="TyX-hT-jRt"/>
@@ -144,6 +168,8 @@
                                     <constraint firstAttribute="bottom" secondItem="SSe-rB-Cz2" secondAttribute="bottom" constant="2" id="blU-oE-dLL"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="leading" secondItem="h1W-c1-TQk" secondAttribute="leadingMargin" constant="2" id="ctg-cC-IDf"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="topMargin" constant="2" id="e05-xM-y44"/>
+                                    <constraint firstItem="2ML-9Q-mzI" firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="e7P-CK-tjc"/>
+                                    <constraint firstItem="2ML-9Q-mzI" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="eCw-UZ-YK6"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="meR-U9-wYT"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="oSF-2U-tH5"/>
                                     <constraint firstAttribute="bottom" secondItem="LEJ-t5-lhc" secondAttribute="bottom" constant="2" id="uIu-YK-joV"/>
@@ -168,6 +194,7 @@
                                         <exclude reference="Fqa-x3-NXw"/>
                                         <exclude reference="NZU-nB-piP"/>
                                         <exclude reference="blU-oE-dLL"/>
+                                        <exclude reference="meR-U9-wYT"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -252,7 +279,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="578.75" y="936"/>
+            <point key="canvasLocation" x="578.5" y="936"/>
         </scene>
         <!--Phonemeboard View Controller-->
         <scene sceneID="7u9-vE-Kpy">
@@ -269,7 +296,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-wf-fn7">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cym-3r-t5S" customClass="HoldButton" customModule="HOWL" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cym-3r-t5S" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.54810822010040283" green="0.99946391582489014" blue="0.17405399680137634" alpha="1" colorSpace="calibratedRGB"/>
@@ -291,7 +318,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOWELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83F-Vg-V8k">
-                                        <rect key="frame" x="2" y="2" width="230" height="43"/>
+                                        <rect key="frame" x="2" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793103448277" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -303,10 +330,32 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-oS-ACy" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="189" y="2" width="43" height="43"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gIf-oS-ACy" secondAttribute="height" multiplier="1:1" id="ddo-gE-JJP"/>
+                                            <constraint firstAttribute="width" secondItem="gIf-oS-ACy" secondAttribute="height" multiplier="1:1" id="dmE-ch-Wjn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="FLIP">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ddo-gE-JJP"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="flipButtonTapped:" destination="wpy-HA-xtF" eventType="touchUpInside" id="n8K-Qv-5i0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="gIf-oS-ACy" firstAttribute="width" secondItem="gIf-oS-ACy" secondAttribute="height" multiplier="1:1" id="0Jr-q1-Hlk"/>
                                     <constraint firstAttribute="bottom" secondItem="Cym-3r-t5S" secondAttribute="bottom" constant="2" id="2n5-8R-LkB"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="topMargin" constant="2" id="4ju-O9-gcf"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="4v1-yD-Hsq"/>
@@ -318,11 +367,15 @@
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="OQi-hC-uI2"/>
                                     <constraint firstAttribute="bottom" secondItem="Cym-3r-t5S" secondAttribute="bottom" constant="2" id="RpD-ZE-3cD"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="83F-Vg-V8k" secondAttribute="bottom" constant="2" id="Ttw-sa-Sq3"/>
+                                    <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="gIf-oS-ACy" secondAttribute="trailing" constant="2" id="Vxc-uz-Fyp"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="YOG-ja-H1j"/>
+                                    <constraint firstItem="gIf-oS-ACy" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="beG-1i-9QB"/>
                                     <constraint firstAttribute="bottom" secondItem="83F-Vg-V8k" secondAttribute="bottom" constant="2" id="d9T-ex-WFc"/>
+                                    <constraint firstItem="gIf-oS-ACy" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="lgw-qC-IdP"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="Z1b-wf-fn7" secondAttribute="leading" constant="2" id="pSV-tb-4Xr"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="psv-2z-HLK"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="leading" secondItem="Z1b-wf-fn7" secondAttribute="leadingMargin" constant="2" id="rCJ-1b-UwA"/>
+                                    <constraint firstAttribute="bottom" secondItem="gIf-oS-ACy" secondAttribute="bottom" constant="2" id="tkc-Nq-in0"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="uOH-mW-SjK"/>
                                     <constraint firstAttribute="bottom" secondItem="83F-Vg-V8k" secondAttribute="bottom" constant="2" id="xBZ-fz-GUC"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="leading" secondItem="Cym-3r-t5S" secondAttribute="trailing" constant="2" id="yko-U6-koA"/>
@@ -347,6 +400,7 @@
                                         <exclude reference="YOG-ja-H1j"/>
                                         <exclude reference="pSV-tb-4Xr"/>
                                         <exclude reference="psv-2z-HLK"/>
+                                        <exclude reference="uOH-mW-SjK"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -381,7 +435,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-sL-RjK">
-                                                <rect key="frame" x="12" y="92" width="12" height="26"/>
+                                                <rect key="frame" x="12" y="92" width="11.5" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
