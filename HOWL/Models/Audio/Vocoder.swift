@@ -18,7 +18,7 @@ class Vocoder: AKInstrument {
     var frequency4 = AKInstrumentProperty(value: 2000.0)
     var frequency5 = AKInstrumentProperty(value: 2500.0)
     
-    var bandwidth = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 2.0)
+    var bandwidth = AKInstrumentProperty(value: 0.2, minimum: 0.0, maximum: 2.0)
     
     var bandwidth1 = AKInstrumentProperty(value: 100.0)
     var bandwidth2 = AKInstrumentProperty(value: 100.0)

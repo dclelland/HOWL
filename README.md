@@ -6,6 +6,18 @@ HOWL aims to provide a simple formant synthesizer with a minimum of configuratio
 
 ### Interface
 
+- Formants
+    - Register (alto, soprano etc)
+    - 
+    - Frequency
+    - Bandwidth
+
+- Synth
+    - Waveform
+    - Harmony
+    - Reverb
+    - Bitcrush
+
 - Phonemeboard
     - Should display rosette instead of waveform
     - Should fade colours

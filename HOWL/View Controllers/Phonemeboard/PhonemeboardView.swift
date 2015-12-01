@@ -94,7 +94,9 @@ class PhonemeboardView: AKPlotView {
             CGPathAddLineToPoint(path, nil, x, y)
         }
         
-        CGPathCloseSubpath(path)
+        if sz > 0 {
+            CGPathCloseSubpath(path)
+        }
         
         return UIBezierPath(CGPath: path)
     }

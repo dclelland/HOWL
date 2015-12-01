@@ -10,25 +10,52 @@ import UIKit
 
 class Master: AKInstrument {
     
+    var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var reverbMix = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 1.0)
+    
     init(withInput input: AKAudio, voices: (AKAudio, AKAudio, AKAudio, AKAudio)) {
         super.init()
         
+        addProperty(bitcrushMix)
+        addProperty(reverbMix)
+        
         let (soprano, alto, tenor, bass) = voices
         
-        let quartet = soprano + alto + tenor + bass
+        let quartet = (soprano + alto + tenor + bass) * 0.05.ak
         
-        let reverb = AKReverb(
+        let bitcrush = AKDecimator(
             input: quartet,
-            feedback: 0.125.ak,
-            cutoffFrequency: 16000.0.ak
+            bitDepth: 20.ak,
+            sampleRate: 1200.ak
         )
         
-        let leftOutput = reverb.leftOutput * 0.125.ak + quartet * 0.25.ak
-        let rightOutput = reverb.rightOutput * 0.125.ak + quartet * 0.25.ak
+        let bitcrushOutput = AKMix(
+            input1: quartet,
+            input2: bitcrush,
+            balance: bitcrushMix
+        )
         
-        let output = AKStereoAudio(leftAudio: leftOutput, rightAudio: rightOutput)
+        let reverb = AKReverb(
+            input: bitcrushOutput,
+            feedback: 0.5.ak,
+            cutoffFrequency: 16000.ak
+        )
         
-        setStereoAudioOutput(output.scaledBy(0.125.ak))
+        let reverbLeftOutput = AKMix(
+            input1: bitcrushOutput,
+            input2: reverb.leftOutput,
+            balance: reverbMix
+        )
+        
+        let reverbRightOutput = AKMix(
+            input1: bitcrushOutput,
+            input2: reverb.rightOutput,
+            balance: reverbMix
+        )
+        
+        let output = AKStereoAudio(leftAudio: reverbLeftOutput, rightAudio: reverbRightOutput)
+        
+        setStereoAudioOutput(output)
         
         resetParameter(input)
         
