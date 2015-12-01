@@ -11,7 +11,7 @@ import UIKit
 class Master: AKInstrument {
     
     var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var reverbMix = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 1.0)
+    var reverbMix = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
     
     init(withInput input: AKAudio, voices: (AKAudio, AKAudio, AKAudio, AKAudio)) {
         super.init()
