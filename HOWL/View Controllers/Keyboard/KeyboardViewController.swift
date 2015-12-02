@@ -66,7 +66,9 @@ class KeyboardViewController: UIViewController {
     }
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {
-        
+        if let flipViewController = self.flipViewController {
+            flipViewController.flip()
+        }
     }
     
 }

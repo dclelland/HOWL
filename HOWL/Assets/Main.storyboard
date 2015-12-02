@@ -19,18 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
-                                <animations/>
-                                <connections>
-                                    <segue destination="wpy-HA-xtF" kind="embed" id="Vm0-7T-P9o"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-ao-YKj">
                                 <rect key="frame" x="285" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="9J8-TP-oCq" kind="embed" id="lgb-Jd-DF3"/>
+                                    <segue destination="myQ-Pk-G9S" kind="embed" id="1VL-gJ-j8w"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="d4d-kx-v1a" kind="embed" id="cQk-4m-Tok"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -73,7 +73,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359.5" y="399.5"/>
+            <point key="canvasLocation" x="419" y="399"/>
+        </scene>
+        <!--Flip View Controller-->
+        <scene sceneID="wmJ-gX-j4K">
+            <objects>
+                <viewController id="d4d-kx-v1a" customClass="FlipViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4bb-xA-iNR"/>
+                        <viewControllerLayoutGuide type="bottom" id="4jY-V6-E8U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w0j-da-hrA">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-7c-ibJ">
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="5Oq-Ld-xFp" kind="embed" id="X1u-Qb-C8P"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Kk-9ow">
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="wpy-HA-xtF" kind="embed" id="hM8-1V-EWp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="liF-Kk-9ow" firstAttribute="leading" secondItem="w0j-da-hrA" secondAttribute="leading" id="0fU-6A-Xws"/>
+                            <constraint firstItem="HZ2-7c-ibJ" firstAttribute="leading" secondItem="w0j-da-hrA" secondAttribute="leading" id="NQk-lm-hqb"/>
+                            <constraint firstItem="4jY-V6-E8U" firstAttribute="top" secondItem="liF-Kk-9ow" secondAttribute="bottom" id="Pkg-Jh-l8j"/>
+                            <constraint firstAttribute="trailing" secondItem="HZ2-7c-ibJ" secondAttribute="trailing" id="WXx-V6-Axn"/>
+                            <constraint firstItem="4jY-V6-E8U" firstAttribute="top" secondItem="HZ2-7c-ibJ" secondAttribute="bottom" id="WrC-pe-NWp"/>
+                            <constraint firstItem="liF-Kk-9ow" firstAttribute="top" secondItem="4bb-xA-iNR" secondAttribute="bottom" id="ak4-m5-i4O"/>
+                            <constraint firstAttribute="trailing" secondItem="liF-Kk-9ow" secondAttribute="trailing" id="jEj-27-ggY"/>
+                            <constraint firstItem="HZ2-7c-ibJ" firstAttribute="top" secondItem="4bb-xA-iNR" secondAttribute="bottom" id="vpZ-tj-sRI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="HZ2-7c-ibJ" id="cX2-iH-Oeh"/>
+                        <outlet property="frontView" destination="liF-Kk-9ow" id="Hhf-09-sKA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iO-8Y-NdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.5" y="937"/>
         </scene>
         <!--Keyboard View Controller-->
         <scene sceneID="g7H-pn-2QT">
@@ -279,7 +328,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="578.5" y="936"/>
+            <point key="canvasLocation" x="619.5" y="1482"/>
         </scene>
         <!--Phonemeboard View Controller-->
         <scene sceneID="7u9-vE-Kpy">
@@ -525,7 +574,138 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="140.5" y="936"/>
+            <point key="canvasLocation" x="-138.5" y="1482"/>
+        </scene>
+        <!--Vocoder View Controller-->
+        <scene sceneID="DMg-X1-Ba8">
+            <objects>
+                <viewController id="5Oq-Ld-xFp" customClass="VocoderViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YQr-OB-l6s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xf9-Yn-6MU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VXD-5X-DfV">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkU-wB-eUs">
+                                <rect key="frame" x="126" y="143" width="30" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <state key="normal" title="FLIP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipButtonTapped:" destination="5Oq-Ld-xFp" eventType="touchUpInside" id="jtX-gZ-Wg4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.30090490440000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KkU-wB-eUs" firstAttribute="centerX" secondItem="VXD-5X-DfV" secondAttribute="centerX" id="0ag-mM-edT"/>
+                            <constraint firstItem="KkU-wB-eUs" firstAttribute="centerY" secondItem="VXD-5X-DfV" secondAttribute="centerY" id="iZc-fo-yyo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="1482"/>
+        </scene>
+        <!--Synthesizer View Controller-->
+        <scene sceneID="45u-mc-4Nb">
+            <objects>
+                <viewController id="uAc-3B-Yd9" customClass="SynthesizerViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DGR-cJ-I6i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zkg-j1-zW0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VRs-9r-UH6">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-0c-3bH">
+                                <rect key="frame" x="126" y="143.5" width="30" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <state key="normal" title="FLIP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipButtonTapped:" destination="uAc-3B-Yd9" eventType="touchUpInside" id="vuk-i0-KvQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.30090490440000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ol9-0c-3bH" firstAttribute="centerX" secondItem="VRs-9r-UH6" secondAttribute="centerX" id="HR1-aa-heg"/>
+                            <constraint firstItem="Ol9-0c-3bH" firstAttribute="centerY" secondItem="VRs-9r-UH6" secondAttribute="centerY" id="m7v-VO-Qmt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAT-61-qeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.5" y="1482"/>
+        </scene>
+        <!--Flip View Controller-->
+        <scene sceneID="bnJ-xd-vn6">
+            <objects>
+                <viewController id="myQ-Pk-G9S" customClass="FlipViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iJL-kd-FjB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ADu-uJ-6mZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LCo-cT-fPi">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bg-BI-Z7d">
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="uAc-3B-Yd9" kind="embed" id="lIt-vM-qsm"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-tP-97e">
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="9J8-TP-oCq" kind="embed" id="GMD-aj-Uh2"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6bg-BI-Z7d" firstAttribute="leading" secondItem="LCo-cT-fPi" secondAttribute="leading" id="12v-KR-1vg"/>
+                            <constraint firstItem="ADu-uJ-6mZ" firstAttribute="top" secondItem="lLi-tP-97e" secondAttribute="bottom" id="40Y-dc-D04"/>
+                            <constraint firstAttribute="trailing" secondItem="6bg-BI-Z7d" secondAttribute="trailing" id="9NB-nJ-DeH"/>
+                            <constraint firstItem="6bg-BI-Z7d" firstAttribute="top" secondItem="iJL-kd-FjB" secondAttribute="bottom" id="Zk0-Ev-GLM"/>
+                            <constraint firstItem="lLi-tP-97e" firstAttribute="top" secondItem="iJL-kd-FjB" secondAttribute="bottom" id="afK-S0-U6M"/>
+                            <constraint firstItem="ADu-uJ-6mZ" firstAttribute="top" secondItem="6bg-BI-Z7d" secondAttribute="bottom" id="az3-Yj-Qzj"/>
+                            <constraint firstAttribute="trailing" secondItem="lLi-tP-97e" secondAttribute="trailing" id="fRK-d7-ckR"/>
+                            <constraint firstItem="lLi-tP-97e" firstAttribute="leading" secondItem="LCo-cT-fPi" secondAttribute="leading" id="so4-4B-03Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="6bg-BI-Z7d" id="Bo5-hH-dmA"/>
+                        <outlet property="frontView" destination="lLi-tP-97e" id="H7V-46-JHE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kK-sn-ae9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801.5" y="937"/>
         </scene>
     </scenes>
 </document>

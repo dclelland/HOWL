@@ -75,7 +75,9 @@ class PhonemeboardViewController: UIViewController {
     }
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {
-        
+        if let flipViewController = self.flipViewController {
+            flipViewController.flip()
+        }
     }
     
     // MARK: - Private Getters

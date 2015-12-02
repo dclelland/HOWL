@@ -6,5 +6,4 @@
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
 //
 
-#import <AudioKit/AKFoundation.h>
 #import <UIKit/UIGestureRecognizerSubclass.h>

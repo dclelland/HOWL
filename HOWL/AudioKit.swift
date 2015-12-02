@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Aurelius Prochazka. All rights reserved.
 //
 
-import Foundation
+import AudioKit
 
 func akp(num: Float) -> AKConstant {
     return AKConstant(float: num)
