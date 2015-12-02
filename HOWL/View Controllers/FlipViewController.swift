@@ -26,20 +26,20 @@ class FlipViewController: UIViewController {
         
         switch state {
         case .PresentingFrontView:
-            self.flip(fromView: frontView, toView: backView, options: [.TransitionFlipFromLeft])
+            self.flip(fromView: frontView, toView: backView)
         case .PresentingBackView:
-            self.flip(fromView: backView, toView: frontView, options: [.TransitionFlipFromRight])
+            self.flip(fromView: backView, toView: frontView)
         }
     }
     
-    private func flip(fromView fromView: UIView, toView: UIView, options: UIViewAnimationOptions) {
+    private func flip(fromView fromView: UIView, toView: UIView) {
         view.addSubview(toView)
         
         toView.snp_makeConstraints { make in
             make.edges.equalTo(view)
         }
         
-        UIView.transitionFromView(fromView, toView: toView, duration: 0.5, options: options, completion: nil)
+        UIView.transitionFromView(fromView, toView: toView, duration: 0.5, options: [.TransitionFlipFromLeft], completion: nil)
     }
     
     // MARK: - State

@@ -18,4 +18,8 @@ class VocoderViewController: UIViewController {
         }
     }
     
+    @IBAction func resetButtonTapped(button: ToolbarButton) {
+        
+    }
+    
 }

@@ -18,4 +18,8 @@ class SynthesizerViewController: UIViewController {
         }
     }
     
+    @IBAction func resetButtonTapped(button: ToolbarButton) {
+        
+    }
+    
 }
