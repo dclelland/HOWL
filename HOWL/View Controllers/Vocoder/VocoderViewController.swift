@@ -10,6 +10,12 @@ import UIKit
 
 class VocoderViewController: UIViewController {
     
+    @IBOutlet weak var formantsBandwidthDialControl: DialControl?
+    @IBOutlet weak var formantsFrequencyDialControl: DialControl?
+    
+    @IBOutlet weak var effectsBitcrushDialControl: DialControl?
+    @IBOutlet weak var effectsReverbDialControl: DialControl?
+    
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {

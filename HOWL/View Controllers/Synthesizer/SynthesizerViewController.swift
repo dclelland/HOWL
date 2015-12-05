@@ -10,6 +10,12 @@ import UIKit
 
 class SynthesizerViewController: UIViewController {
     
+    @IBOutlet weak var vibratoDepthDialControl: DialControl?
+    @IBOutlet weak var vibratoFrequencyDialControl: DialControl?
+    
+    @IBOutlet weak var keyboardLeftIntervalDialControl: DialControl?
+    @IBOutlet weak var keyboardRightIntervalDialControl: DialControl?
+    
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {

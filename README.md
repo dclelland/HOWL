@@ -6,17 +6,16 @@ HOWL aims to provide a simple formant synthesizer with a minimum of configuratio
 
 ### Interface
 
-- Formants
-    - Register (alto, soprano etc)
-    - 
-    - Frequency
-    - Bandwidth
+- Packaging
+    - Fix splash screen (extra buttons)
+
+- Controls
+    - Steppers (for register, waveform)
+    - KVO
+    - Persistence
 
 - Synth
-    - Waveform
-    - Harmony
-    - Reverb
-    - Bitcrush
+    - Vibrato
 
 - Phonemeboard
     - Should display rosette instead of waveform

@@ -10,6 +10,7 @@
 		657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */; };
 		657F0D0E1C0D94F3004B17EF /* VocoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0C1C0D94F3004B17EF /* VocoderViewController.swift */; };
 		657F0D141C0EFA72004B17EF /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D131C0EFA72004B17EF /* FlipViewController.swift */; };
+		657F0D161C1266AC004B17EF /* DialControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D151C1266AC004B17EF /* DialControl.swift */; };
 		65800FAE1C09D1BF000410CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F8A1C09D1BF000410CB /* AppDelegate.swift */; };
 		65800FAF1C09D1BF000410CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65800F8C1C09D1BF000410CB /* Assets.xcassets */; };
 		65800FB01C09D1BF000410CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65800F8D1C09D1BF000410CB /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesizerViewController.swift; sourceTree = "<group>"; };
 		657F0D0C1C0D94F3004B17EF /* VocoderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocoderViewController.swift; sourceTree = "<group>"; };
 		657F0D131C0EFA72004B17EF /* FlipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
+		657F0D151C1266AC004B17EF /* DialControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialControl.swift; sourceTree = "<group>"; };
 		65800F8A1C09D1BF000410CB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65800F8C1C09D1BF000410CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65800F8D1C09D1BF000410CB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		65800FAB1C09D1BF000410CB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				657F0D151C1266AC004B17EF /* DialControl.swift */,
 				65800FAC1C09D1BF000410CB /* ToolbarButton.swift */,
 				65800FAD1C09D1BF000410CB /* MultitouchGestureRecognizer.swift */,
 			);
@@ -393,6 +396,7 @@
 				65800FC01C09D1BF000410CB /* KeyboardViewController.swift in Sources */,
 				65800FB91C09D1BF000410CB /* Synthesizer.swift in Sources */,
 				65800FB31C09D1BF000410CB /* Int+Parity.swift in Sources */,
+				657F0D161C1266AC004B17EF /* DialControl.swift in Sources */,
 				65800FBC1C09D1BF000410CB /* Settings.swift in Sources */,
 				65800FC21C09D1BF000410CB /* Phoneme.swift in Sources */,
 				65800FB81C09D1BF000410CB /* Master.swift in Sources */,

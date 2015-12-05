@@ -639,7 +639,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-Tg-ZCd">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs">
                                         <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -779,13 +779,27 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD">
-                                <rect key="frame" x="2" y="51" width="279" height="267"/>
+                                <rect key="frame" x="2" y="51" width="279" height="132.5"/>
                                 <subviews>
-                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukk-is-hZE">
-                                        <rect key="frame" x="2" y="2" width="275" height="263"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
+                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
                                         <animations/>
-                                        <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110"/>
+                                        <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
@@ -796,14 +810,18 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Ukk-is-hZE" secondAttribute="trailing" constant="2" id="8aV-Qx-UES"/>
-                                    <constraint firstItem="Ukk-is-hZE" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leading" constant="2" id="BVf-eO-nQE"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ukk-is-hZE" secondAttribute="bottom" constant="2" id="Gf6-SU-6Ty"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ukk-is-hZE" secondAttribute="trailing" constant="2" id="I8K-Hd-ayx"/>
-                                    <constraint firstItem="Ukk-is-hZE" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="top" constant="2" id="Wo2-zn-tkn"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ukk-is-hZE" secondAttribute="bottom" constant="2" id="flX-A2-kYU"/>
-                                    <constraint firstItem="Ukk-is-hZE" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="top" constant="2" id="q6g-gg-Djq"/>
-                                    <constraint firstItem="Ukk-is-hZE" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leading" constant="2" id="srt-Zf-RCd"/>
+                                    <constraint firstItem="2Ar-kQ-1ch" firstAttribute="top" secondItem="D4I-ss-N7k" secondAttribute="bottom" constant="2" id="3oe-aM-1dg"/>
+                                    <constraint firstAttribute="trailing" secondItem="6md-Za-K4d" secondAttribute="trailing" constant="2" id="50o-aM-PnC"/>
+                                    <constraint firstItem="6md-Za-K4d" firstAttribute="leading" secondItem="D4I-ss-N7k" secondAttribute="trailing" constant="2" id="5fE-D8-wlW"/>
+                                    <constraint firstItem="2Ar-kQ-1ch" firstAttribute="top" secondItem="6md-Za-K4d" secondAttribute="bottom" constant="2" id="CEv-za-Rhy"/>
+                                    <constraint firstItem="D4I-ss-N7k" firstAttribute="width" secondItem="6md-Za-K4d" secondAttribute="width" id="EoA-o8-8ld"/>
+                                    <constraint firstItem="6md-Za-K4d" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="top" constant="2" id="RMw-fA-Ihw"/>
+                                    <constraint firstItem="D4I-ss-N7k" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="top" constant="2" id="RfX-95-L14"/>
+                                    <constraint firstItem="2Ar-kQ-1ch" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leading" constant="2" id="czS-cO-1ee"/>
+                                    <constraint firstItem="D4I-ss-N7k" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leading" constant="2" id="ddR-ev-XFY"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Ar-kQ-1ch" secondAttribute="trailing" constant="2" id="jse-sw-ot7"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Ar-kQ-1ch" secondAttribute="bottom" constant="2" id="rr9-g8-Gmg"/>
+                                    <constraint firstItem="6md-Za-K4d" firstAttribute="leading" secondItem="D4I-ss-N7k" secondAttribute="trailing" constant="2" id="uiP-Ab-RjN"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -812,10 +830,63 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="I8K-Hd-ayx"/>
-                                        <exclude reference="flX-A2-kYU"/>
-                                        <exclude reference="q6g-gg-Djq"/>
-                                        <exclude reference="srt-Zf-RCd"/>
+                                        <exclude reference="5fE-D8-wlW"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea">
+                                <rect key="frame" x="2" y="185" width="279" height="132.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
+                                        <rect key="frame" x="2" y="114.5" width="275" height="16"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5wm-hF-13a" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="top" constant="2" id="5Mo-RD-DbQ"/>
+                                    <constraint firstItem="woz-pj-zhQ" firstAttribute="leading" secondItem="5wm-hF-13a" secondAttribute="trailing" constant="2" id="85T-1B-zkY"/>
+                                    <constraint firstItem="c8V-oF-p7F" firstAttribute="top" secondItem="5wm-hF-13a" secondAttribute="bottom" constant="2" id="A9l-Rh-wbf"/>
+                                    <constraint firstAttribute="bottom" secondItem="c8V-oF-p7F" secondAttribute="bottom" constant="2" id="EOu-EG-pMu"/>
+                                    <constraint firstItem="c8V-oF-p7F" firstAttribute="top" secondItem="woz-pj-zhQ" secondAttribute="bottom" constant="2" id="GIi-UD-qtf"/>
+                                    <constraint firstAttribute="trailing" secondItem="woz-pj-zhQ" secondAttribute="trailing" constant="2" id="NL8-jz-8in"/>
+                                    <constraint firstItem="woz-pj-zhQ" firstAttribute="leading" secondItem="5wm-hF-13a" secondAttribute="trailing" constant="2" id="Nz4-Jc-Ixj"/>
+                                    <constraint firstItem="5wm-hF-13a" firstAttribute="leading" secondItem="H9Y-vc-Pea" secondAttribute="leading" constant="2" id="Ps5-fw-Eeg"/>
+                                    <constraint firstItem="5wm-hF-13a" firstAttribute="width" secondItem="woz-pj-zhQ" secondAttribute="width" id="bqU-ub-TIV"/>
+                                    <constraint firstItem="c8V-oF-p7F" firstAttribute="leading" secondItem="H9Y-vc-Pea" secondAttribute="leading" constant="2" id="ehg-0d-rbe"/>
+                                    <constraint firstAttribute="trailing" secondItem="c8V-oF-p7F" secondAttribute="trailing" constant="2" id="epZ-Y1-RAE"/>
+                                    <constraint firstItem="woz-pj-zhQ" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="top" constant="2" id="ngS-OE-IE2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nz4-Jc-Ixj"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -823,20 +894,36 @@
                         <animations/>
                         <color key="backgroundColor" white="0.30090490440000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="H9Y-vc-Pea" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="AHl-c0-K5Q"/>
+                            <constraint firstItem="Xf9-Yn-6MU" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="bottom" constant="2" id="LNe-xn-3OE"/>
                             <constraint firstAttribute="trailing" secondItem="Yb4-Tg-ZCd" secondAttribute="trailing" constant="2" id="MWp-bg-B26"/>
+                            <constraint firstAttribute="trailing" secondItem="H9Y-vc-Pea" secondAttribute="trailing" constant="2" id="PcC-z1-uax"/>
                             <constraint firstAttribute="bottom" secondItem="8c9-JQ-3WD" secondAttribute="bottom" constant="2" id="TRc-SX-3gI"/>
                             <constraint firstItem="8c9-JQ-3WD" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="Tnr-Ld-jKz"/>
                             <constraint firstItem="Yb4-Tg-ZCd" firstAttribute="top" secondItem="YQr-OB-l6s" secondAttribute="bottom" constant="2" id="Xsj-Nq-O7G"/>
                             <constraint firstAttribute="trailing" secondItem="8c9-JQ-3WD" secondAttribute="trailing" constant="2" id="c7i-6L-CHK"/>
+                            <constraint firstItem="H9Y-vc-Pea" firstAttribute="height" secondItem="8c9-JQ-3WD" secondAttribute="height" id="kyx-LR-WXz"/>
                             <constraint firstItem="Yb4-Tg-ZCd" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="map-Yk-rxe"/>
                             <constraint firstItem="8c9-JQ-3WD" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="bottom" constant="2" id="wBw-FE-4s1"/>
+                            <constraint firstItem="H9Y-vc-Pea" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="bottom" constant="2" id="z6k-9j-4Bg"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TRc-SX-3gI"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="effectsBitcrushDialControl" destination="5wm-hF-13a" id="bRw-zy-fIO"/>
+                        <outlet property="effectsReverbDialControl" destination="woz-pj-zhQ" id="Thq-fK-UBB"/>
+                        <outlet property="formantsBandwidthDialControl" destination="6md-Za-K4d" id="bLi-cV-n5J"/>
+                        <outlet property="formantsFrequencyDialControl" destination="D4I-ss-N7k" id="Tea-H3-nF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -857,7 +944,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdm-qf-yOt">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO">
                                         <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -997,13 +1084,27 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-Jy-AMK">
-                                <rect key="frame" x="2" y="51" width="279" height="267"/>
+                                <rect key="frame" x="2" y="51" width="279" height="132.5"/>
                                 <subviews>
-                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uk-5T-1UR">
-                                        <rect key="frame" x="2" y="2" width="275" height="263"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Lj-sMa">
+                                        <rect key="frame" x="2" y="114.5" width="275" height="16"/>
                                         <animations/>
-                                        <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
+                                        <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
@@ -1014,43 +1115,93 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="0uk-5T-1UR" secondAttribute="bottom" constant="2" id="I1J-iX-nbB"/>
-                                    <constraint firstAttribute="bottom" secondItem="0uk-5T-1UR" secondAttribute="bottom" constant="2" id="Pbd-71-yAJ"/>
-                                    <constraint firstItem="0uk-5T-1UR" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leading" constant="2" id="Qri-4E-Rtb"/>
-                                    <constraint firstAttribute="trailing" secondItem="0uk-5T-1UR" secondAttribute="trailing" constant="2" id="UHe-ao-uLb"/>
-                                    <constraint firstItem="0uk-5T-1UR" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="top" constant="2" id="b4m-AT-180"/>
-                                    <constraint firstItem="0uk-5T-1UR" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="top" constant="2" id="cQr-lt-hc8"/>
-                                    <constraint firstItem="0uk-5T-1UR" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leading" constant="2" id="kps-0x-roL"/>
-                                    <constraint firstAttribute="trailing" secondItem="0uk-5T-1UR" secondAttribute="trailing" constant="2" id="l2s-eG-sci"/>
+                                    <constraint firstItem="agR-iM-jxl" firstAttribute="leading" secondItem="76k-PL-aZO" secondAttribute="trailing" constant="2" id="FLn-a9-9Gx"/>
+                                    <constraint firstItem="76k-PL-aZO" firstAttribute="width" secondItem="agR-iM-jxl" secondAttribute="width" id="JC8-sO-aYn"/>
+                                    <constraint firstItem="76k-PL-aZO" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="top" constant="2" id="My5-Gi-QQJ"/>
+                                    <constraint firstItem="Hcx-Lj-sMa" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leading" constant="2" id="P4U-fo-8Fa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hcx-Lj-sMa" secondAttribute="trailing" constant="2" id="Ug8-Tw-95c"/>
+                                    <constraint firstAttribute="trailing" secondItem="agR-iM-jxl" secondAttribute="trailing" constant="2" id="Z56-fk-ERF"/>
+                                    <constraint firstItem="Hcx-Lj-sMa" firstAttribute="top" secondItem="agR-iM-jxl" secondAttribute="bottom" constant="2" id="aoG-q4-duQ"/>
+                                    <constraint firstItem="agR-iM-jxl" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="top" constant="2" id="gzd-tH-48a"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hcx-Lj-sMa" secondAttribute="bottom" constant="2" id="iaQ-f8-eoe"/>
+                                    <constraint firstItem="76k-PL-aZO" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leading" constant="2" id="qua-Ep-hkZ"/>
+                                    <constraint firstItem="Hcx-Lj-sMa" firstAttribute="top" secondItem="76k-PL-aZO" secondAttribute="bottom" constant="2" id="sr4-GG-Lzg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="l2s-eG-sci"/>
-                                        <exclude reference="I1J-iX-nbB"/>
-                                        <exclude reference="b4m-AT-180"/>
-                                        <exclude reference="kps-0x-roL"/>
-                                    </mask>
-                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Nj-01a">
+                                <rect key="frame" x="2" y="185.5" width="279" height="132.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-L5-US1">
+                                        <rect key="frame" x="2" y="114.5" width="275" height="16"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-dp-Xy2" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="137" height="110.5"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110.5"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IlS-iC-Twg" firstAttribute="top" secondItem="0eI-Nj-01a" secondAttribute="top" constant="2" id="2id-WI-f7u"/>
+                                    <constraint firstAttribute="trailing" secondItem="nhK-L5-US1" secondAttribute="trailing" constant="2" id="8XS-U2-Tzf"/>
+                                    <constraint firstItem="nhK-L5-US1" firstAttribute="top" secondItem="IlS-iC-Twg" secondAttribute="bottom" constant="2" id="CPD-2N-mmK"/>
+                                    <constraint firstItem="d8O-dp-Xy2" firstAttribute="leading" secondItem="0eI-Nj-01a" secondAttribute="leading" constant="2" id="Dhw-Xw-hdo"/>
+                                    <constraint firstItem="d8O-dp-Xy2" firstAttribute="top" secondItem="0eI-Nj-01a" secondAttribute="top" constant="2" id="P2x-5a-R2m"/>
+                                    <constraint firstItem="nhK-L5-US1" firstAttribute="leading" secondItem="0eI-Nj-01a" secondAttribute="leading" constant="2" id="PfY-Cp-pyh"/>
+                                    <constraint firstItem="nhK-L5-US1" firstAttribute="top" secondItem="d8O-dp-Xy2" secondAttribute="bottom" constant="2" id="UfG-oG-BaB"/>
+                                    <constraint firstAttribute="bottom" secondItem="nhK-L5-US1" secondAttribute="bottom" constant="2" id="Yaj-sI-9Qm"/>
+                                    <constraint firstItem="d8O-dp-Xy2" firstAttribute="width" secondItem="IlS-iC-Twg" secondAttribute="width" id="a3G-kC-Sat"/>
+                                    <constraint firstItem="IlS-iC-Twg" firstAttribute="leading" secondItem="d8O-dp-Xy2" secondAttribute="trailing" constant="2" id="fZt-j6-NfN"/>
+                                    <constraint firstAttribute="trailing" secondItem="IlS-iC-Twg" secondAttribute="trailing" constant="2" id="mNh-ce-3sn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.30090490440000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="b8H-Jy-AMK" secondAttribute="trailing" constant="2" id="9lm-Gc-162"/>
+                            <constraint firstAttribute="trailing" secondItem="0eI-Nj-01a" secondAttribute="trailing" constant="2" id="GrX-OT-Flg"/>
                             <constraint firstItem="Zkg-j1-zW0" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="bottom" constant="2" id="MPh-Sb-56c"/>
                             <constraint firstItem="Zkg-j1-zW0" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="bottom" constant="2" id="U5J-aX-zOF"/>
                             <constraint firstItem="jdm-qf-yOt" firstAttribute="leading" secondItem="VRs-9r-UH6" secondAttribute="leading" constant="2" id="ZPh-23-0Ad"/>
                             <constraint firstItem="b8H-Jy-AMK" firstAttribute="leading" secondItem="VRs-9r-UH6" secondAttribute="leading" constant="2" id="ZRL-Nn-oC3"/>
                             <constraint firstItem="jdm-qf-yOt" firstAttribute="top" secondItem="DGR-cJ-I6i" secondAttribute="bottom" constant="2" id="aU8-vW-680"/>
                             <constraint firstAttribute="trailing" secondItem="b8H-Jy-AMK" secondAttribute="trailing" constant="2" id="arz-Qb-NOM"/>
+                            <constraint firstItem="0eI-Nj-01a" firstAttribute="height" secondItem="b8H-Jy-AMK" secondAttribute="height" id="cLL-IU-Yw3"/>
                             <constraint firstItem="b8H-Jy-AMK" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="bottom" constant="2" id="cWK-vA-bj6"/>
+                            <constraint firstItem="0eI-Nj-01a" firstAttribute="leading" secondItem="VRs-9r-UH6" secondAttribute="leading" constant="2" id="nj8-Sx-zC7"/>
                             <constraint firstItem="b8H-Jy-AMK" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="bottom" constant="2" id="noU-AE-XgC"/>
+                            <constraint firstItem="0eI-Nj-01a" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="bottom" constant="2" id="o2U-zT-dEw"/>
                             <constraint firstItem="b8H-Jy-AMK" firstAttribute="leading" secondItem="VRs-9r-UH6" secondAttribute="leadingMargin" constant="2" id="oVs-KZ-dle"/>
+                            <constraint firstItem="Zkg-j1-zW0" firstAttribute="top" secondItem="0eI-Nj-01a" secondAttribute="bottom" constant="2" id="qXS-Am-QXi"/>
                             <constraint firstAttribute="trailing" secondItem="jdm-qf-yOt" secondAttribute="trailing" constant="2" id="z0Z-vR-f5L"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -1063,10 +1214,17 @@
                                 <exclude reference="9lm-Gc-162"/>
                                 <exclude reference="cWK-vA-bj6"/>
                                 <exclude reference="oVs-KZ-dle"/>
+                                <exclude reference="MPh-Sb-56c"/>
                                 <exclude reference="U5J-aX-zOF"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="keyboardLeftIntervalDialControl" destination="d8O-dp-Xy2" id="5Eu-rL-rvr"/>
+                        <outlet property="keyboardRightIntervalDialControl" destination="IlS-iC-Twg" id="hpG-ox-HOc"/>
+                        <outlet property="vibratoDepthDialControl" destination="76k-PL-aZO" id="yfn-Ov-5ir"/>
+                        <outlet property="vibratoFrequencyDialControl" destination="agR-iM-jxl" id="PPw-3E-qdm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAT-61-qeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
