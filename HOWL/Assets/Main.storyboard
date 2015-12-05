@@ -796,6 +796,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="kqL-6Z-8rA"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="2" width="136.5" height="110"/>
@@ -805,6 +808,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="Ppw-nC-uhi"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -852,6 +858,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="eIV-fK-SYU"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
@@ -861,6 +870,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="jdG-EI-sJH"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -921,8 +933,8 @@
                     <connections>
                         <outlet property="effectsBitcrushDialControl" destination="5wm-hF-13a" id="bRw-zy-fIO"/>
                         <outlet property="effectsReverbDialControl" destination="woz-pj-zhQ" id="Thq-fK-UBB"/>
-                        <outlet property="formantsBandwidthDialControl" destination="6md-Za-K4d" id="bLi-cV-n5J"/>
-                        <outlet property="formantsFrequencyDialControl" destination="D4I-ss-N7k" id="Tea-H3-nF5"/>
+                        <outlet property="formantsBandwidthDialControl" destination="D4I-ss-N7k" id="FgH-Af-OS6"/>
+                        <outlet property="formantsFrequencyDialControl" destination="6md-Za-K4d" id="ZaX-0r-zWa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1101,6 +1113,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="8nr-aV-2c0"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
@@ -1110,6 +1125,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="iYq-yx-he0"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -1151,6 +1169,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="p2f-hw-pJJ"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="2" width="136.5" height="110.5"/>
@@ -1160,6 +1181,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="QLr-8V-GCC"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>

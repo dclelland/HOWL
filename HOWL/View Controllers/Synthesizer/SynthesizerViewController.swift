@@ -28,4 +28,10 @@ class SynthesizerViewController: UIViewController {
         
     }
     
+    // MARK: - Dial control events
+    
+    @IBAction func dialControlValueChanged(dialControl: DialControl) {
+        
+    }
+    
 }

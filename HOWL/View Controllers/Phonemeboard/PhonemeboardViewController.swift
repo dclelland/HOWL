@@ -63,7 +63,7 @@ class PhonemeboardViewController: UIViewController {
         
     }
     
-    // MARK: - Interface events
+    // MARK: - Button events
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {
         if let flipViewController = self.flipViewController {
