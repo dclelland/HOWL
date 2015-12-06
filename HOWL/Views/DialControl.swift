@@ -121,9 +121,9 @@ import Lerp
         }
         
         valueLabel.snp_updateConstraints { make in
-            make.top.equalTo(self).offset(6.0)
+            make.top.equalTo(self).offset(8.0)
             make.left.right.equalTo(self)
-            make.bottom.equalTo(titleLabel.snp_top).offset(6.0)
+            make.bottom.equalTo(titleLabel.snp_top).offset(8.0)
         }
         
     }

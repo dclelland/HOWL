@@ -16,18 +16,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-ao-YKj">
-                                <rect key="frame" x="334" y="0.0" width="332.5" height="375"/>
+                                <rect key="frame" x="285" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="myQ-Pk-G9S" kind="embed" id="1VL-gJ-j8w"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
-                                <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="d4d-kx-v1a" kind="embed" id="cQk-4m-Tok"/>
@@ -69,7 +69,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,18 +84,18 @@
                         <viewControllerLayoutGuide type="bottom" id="4jY-V6-E8U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w0j-da-hrA">
-                        <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-7c-ibJ">
-                                <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="5Oq-Ld-xFp" kind="embed" id="X1u-Qb-C8P"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Kk-9ow">
-                                <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="wpy-HA-xtF" kind="embed" id="hM8-1V-EWp"/>
@@ -133,14 +133,14 @@
                         <viewControllerLayoutGuide type="bottom" id="LxS-DX-7JQ"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ZcY-Qe-Dtm">
-                        <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-c1-TQk">
-                                <rect key="frame" x="2" y="2" width="328.5" height="47"/>
+                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-rB-Cz2" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="283" y="2" width="43" height="43"/>
+                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.54535818099975586" green="0.99429339170455933" blue="0.17328467965126038" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -161,7 +161,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-t5-lhc">
-                                        <rect key="frame" x="47" y="2" width="234.5" height="43"/>
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -265,10 +265,10 @@
                                 </variation>
                             </view>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yl-Bj-Pmz">
-                                <rect key="frame" x="2" y="51" width="328.5" height="322"/>
+                                <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-UY-uHE">
-                                        <rect key="frame" x="2" y="2" width="324.5" height="318"/>
+                                        <rect key="frame" x="2" y="2" width="275" height="263"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewLayout key="collectionViewLayout" id="szr-ei-E8F" customClass="KeyboardViewLayout" customModule="HOWL" customModuleProvider="target"/>
@@ -356,14 +356,14 @@
                         <viewControllerLayoutGuide type="bottom" id="0v1-Ms-aL4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jJf-n7-0kv">
-                        <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-wf-fn7">
-                                <rect key="frame" x="2" y="2" width="328.5" height="47"/>
+                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cym-3r-t5S" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="283" y="2" width="43" height="43"/>
+                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.54810822010040283" green="0.99946391582489014" blue="0.17405399680137634" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -409,7 +409,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOWELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83F-Vg-V8k">
-                                        <rect key="frame" x="47" y="2" width="234.5" height="43"/>
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793103448277" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -502,37 +502,37 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-28-UfI">
-                                <rect key="frame" x="2" y="51" width="328.5" height="322"/>
+                                <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
                                     <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV" customClass="PhonemeboardView" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="324.5" height="318"/>
+                                        <rect key="frame" x="2" y="2" width="275" height="263"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="def-O9-lgZ">
-                                                <rect key="frame" x="78" y="280" width="6" height="26"/>
+                                                <rect key="frame" x="65" y="225" width="6" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypf-Kj-Yaf">
-                                                <rect key="frame" x="294" y="114" width="18" height="26"/>
+                                                <rect key="frame" x="245" y="92" width="18" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jq-jy-rH4">
-                                                <rect key="frame" x="236" y="280" width="15" height="26"/>
+                                                <rect key="frame" x="199" y="225" width="15" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h64-U2-xGg">
-                                                <rect key="frame" x="155" y="12" width="15" height="26"/>
+                                                <rect key="frame" x="130" y="12" width="15" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-sL-RjK">
-                                                <rect key="frame" x="12" y="114" width="11.5" height="26"/>
+                                                <rect key="frame" x="12" y="92" width="11.5" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
@@ -633,14 +633,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Xf9-Yn-6MU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VXD-5X-DfV">
-                        <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-Tg-ZCd">
-                                <rect key="frame" x="2" y="2" width="328.5" height="47"/>
+                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs">
-                                        <rect key="frame" x="47" y="2" width="234.5" height="43"/>
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -676,7 +676,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-og-Bf3" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="283" y="2" width="43" height="43"/>
+                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -779,17 +779,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD">
-                                <rect key="frame" x="2" y="51" width="328.5" height="160"/>
+                                <rect key="frame" x="2" y="51" width="279" height="132.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
-                                        <rect key="frame" x="2" y="142" width="324.5" height="16"/>
+                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="165" y="2" width="161" height="138.5"/>
+                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -813,7 +813,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="161.5" height="138.5"/>
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -865,17 +865,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea">
-                                <rect key="frame" x="2" y="213" width="328.5" height="160"/>
+                                <rect key="frame" x="2" y="185" width="279" height="132.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
-                                        <rect key="frame" x="2" y="142" width="324.5" height="16"/>
+                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="161.5" height="138"/>
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -899,7 +899,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="165" y="2" width="161" height="138"/>
+                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -998,14 +998,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Zkg-j1-zW0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VRs-9r-UH6">
-                        <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdm-qf-yOt">
-                                <rect key="frame" x="2" y="2" width="328.5" height="47"/>
+                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO">
-                                        <rect key="frame" x="47" y="2" width="234.5" height="43"/>
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -1041,7 +1041,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-6t-ZK6" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="283" y="2" width="43" height="43"/>
+                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1144,17 +1144,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-Jy-AMK">
-                                <rect key="frame" x="2" y="51" width="328.5" height="160"/>
+                                <rect key="frame" x="2" y="51" width="279" height="132.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Lj-sMa">
-                                        <rect key="frame" x="2" y="142" width="324.5" height="16"/>
+                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="165" y="2" width="161" height="138"/>
+                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1178,7 +1178,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="161.5" height="138"/>
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1224,17 +1224,17 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Nj-01a">
-                                <rect key="frame" x="2" y="213" width="328.5" height="160"/>
+                                <rect key="frame" x="2" y="185" width="279" height="132.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-L5-US1">
-                                        <rect key="frame" x="2" y="142" width="324.5" height="16"/>
+                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-dp-Xy2" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="161" height="138"/>
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1258,7 +1258,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="165" y="2" width="161" height="138"/>
+                                        <rect key="frame" x="140.5" y="2" width="136" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1359,18 +1359,18 @@
                         <viewControllerLayoutGuide type="bottom" id="ADu-uJ-6mZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LCo-cT-fPi">
-                        <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bg-BI-Z7d">
-                                <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="uAc-3B-Yd9" kind="embed" id="lIt-vM-qsm"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-tP-97e">
-                                <rect key="frame" x="0.0" y="0.0" width="332.5" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="9J8-TP-oCq" kind="embed" id="GMD-aj-Uh2"/>
