@@ -66,15 +66,29 @@ import Lerp
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = self.tintColor
+        label.font = UIFont(name: "Futura-Medium", size: 12.0)
+        label.textAlignment = .Center
+        label.textColor = UIColor.blackColor()
         return label
     }()
     
     lazy var valueLabel: UILabel = {
         let label = UILabel()
-        label.textColor = self.tintColor
+        label.font = UIFont(name: "Futura-Medium", size: 12.0)
+        label.textAlignment = .Center
+        label.textColor = UIColor.blackColor()
         return label
     }()
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupSubviews()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupSubviews()
+    }
 
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
@@ -88,6 +102,21 @@ import Lerp
         CGContextSetFillColorWithColor(context, foregroundPathColor.CGColor)
         CGContextAddPath(context, foregroundPath.CGPath)
         CGContextFillPath(context)
+    }
+    
+    // MARK: - Layout
+    
+    private func setupSubviews() {
+        addSubview(titleLabel)
+        addSubview(valueLabel)
+        
+        titleLabel.snp_updateConstraints { make in
+            make.edges.equalTo(self)
+        }
+        
+        valueLabel.snp_updateConstraints { make in
+            make.edges.equalTo(self)
+        }
     }
     
     // MARK: - Private getters (values)
@@ -125,8 +154,16 @@ import Lerp
     }
     
     private var foregroundPath: UIBezierPath {
+        let radius = min(frame.height, frame.width) * 0.25
+        let angle = lerp(percentage, min: M_PI / 4, max: 7 * M_PI / 4)
+        
+        let pointerA = CGPoint(x: 0, y: 0)
+        let pointerB = CGPoint(x: 0, y: 0)
+        let pointerC = CGPoint(x: 0, y: 0)
+        
         return UIBezierPath.makePath { make in
-            make.oval(at: center, radius: min(frame.height, frame.width) * 0.25)
+            make.oval(at: center, radius: radius)
+            make.move(pointerA).move(pointerB).move(pointerC).close()
         }
         
         
@@ -140,13 +177,6 @@ import Lerp
 //        CGPoint pointerA = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 0.75), center, pointerAngle - 45.0);
 //        CGPoint pointerB = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 1.25), center, pointerAngle);
 //        CGPoint pointerC = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 0.75), center, pointerAngle + 45.0);
-//        
-//        return [UIBezierPath makePath:^(DSLBezierPathMaker *make) {
-//            make.ovalAt(center, radius);
-//            make.path([UIBezierPath makePath:^(DSLBezierPathMaker *make) {
-//            make.moveTo(pointerA).lineTo(pointerB).lineTo(pointerC).close();
-//            }]);
-//            }];
     }
     
 }
