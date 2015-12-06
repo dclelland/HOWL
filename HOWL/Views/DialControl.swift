@@ -89,6 +89,10 @@ import Lerp
         super.init(frame: frame)
         setupSubviews()
     }
+    
+    override func prepareForInterfaceBuilder() {
+        setupSubviews()
+    }
 
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
@@ -117,16 +121,17 @@ import Lerp
         valueLabel.snp_updateConstraints { make in
             make.edges.equalTo(self)
         }
+        
     }
     
     // MARK: - Private getters (values)
     
     private var percentage: Double {
         set {
-            value = newValue
+            value = lerp(newValue, min: minimumValue, max: maximumValue)
         }
         get {
-            return value
+            return ilerp(value, min: minimumValue, max: maximumValue)
         }
     }
     
@@ -154,6 +159,7 @@ import Lerp
     }
     
     private var foregroundPath: UIBezierPath {
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let radius = min(frame.height, frame.width) * 0.25
         let angle = lerp(percentage, min: M_PI / 4, max: 7 * M_PI / 4)
         
