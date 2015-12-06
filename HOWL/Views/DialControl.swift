@@ -21,9 +21,9 @@ import Lerp
         }
     }
     
-    @IBInspectable var value: Double = 0
-    @IBInspectable var minimumValue: Double = 0
-    @IBInspectable var maximumValue: Double = 1
+    @IBInspectable var value: Double = 0.0
+    @IBInspectable var minimumValue: Double = 0.0
+    @IBInspectable var maximumValue: Double = 1.0
     
     enum Scale: String {
         case Linear = "Linear"
@@ -77,6 +77,7 @@ import Lerp
         label.font = UIFont(name: "Futura-Medium", size: 12.0)
         label.textAlignment = .Center
         label.textColor = UIColor.blackColor()
+        label.text = "0.0"
         return label
     }()
     
@@ -115,11 +116,14 @@ import Lerp
         addSubview(valueLabel)
         
         titleLabel.snp_updateConstraints { make in
-            make.edges.equalTo(self)
+            make.left.right.bottom.equalTo(self)
+            make.height.equalTo(self).multipliedBy(0.25)
         }
         
         valueLabel.snp_updateConstraints { make in
-            make.edges.equalTo(self)
+            make.top.equalTo(self).offset(6.0)
+            make.left.right.equalTo(self)
+            make.bottom.equalTo(titleLabel.snp_top).offset(6.0)
         }
         
     }
@@ -138,7 +142,7 @@ import Lerp
     // MARK: - Private getters (drawing)
     
     private var hue: CGFloat {
-        return CGFloat(lerp(percentage, min: 215, max: 0) / 360)
+        return CGFloat(lerp(percentage, min: 215.0, max: 0.0) / 360.0)
         
     }
     
@@ -159,13 +163,13 @@ import Lerp
     }
     
     private var foregroundPath: UIBezierPath {
-        let center = CGPoint(x: bounds.midX, y: bounds.midY)
-        let radius = min(frame.height, frame.width) * 0.25
-        let angle = lerp(percentage, min: M_PI / 4, max: 7 * M_PI / 4)
+        let center = valueLabel.center
+        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * 0.375
+        let angle = lerp(percentage, min: M_PI / 4.0, max: 7.0 * M_PI / 4.0)
         
-        let pointerA = CGPoint(x: 0, y: 0)
-        let pointerB = CGPoint(x: 0, y: 0)
-        let pointerC = CGPoint(x: 0, y: 0)
+        let pointerA = CGPoint(x: 0.0, y: 0.0)
+        let pointerB = CGPoint(x: 0.0, y: 0.0)
+        let pointerC = CGPoint(x: 0.0, y: 0.0)
         
         return UIBezierPath.makePath { make in
             make.oval(at: center, radius: radius)
