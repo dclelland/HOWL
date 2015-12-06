@@ -81,6 +81,8 @@ import Lerp
         return label
     }()
     
+    // MARK: - Overrides
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupSubviews()
@@ -93,6 +95,18 @@ import Lerp
     
     override func prepareForInterfaceBuilder() {
         setupSubviews()
+    }
+    
+    override var selected: Bool {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    override var highlighted: Bool {
+        didSet {
+            setNeedsDisplay()
+        }
     }
 
     override func drawRect(rect: CGRect) {
@@ -125,7 +139,6 @@ import Lerp
             make.left.right.equalTo(self)
             make.bottom.equalTo(titleLabel.snp_top).offset(8.0)
         }
-        
     }
     
     // MARK: - Private getters (values)
