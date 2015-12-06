@@ -1,15 +1,18 @@
 PODS:
   - AudioKit (2.3)
+  - Bezzy (0.1.0)
   - Lerp (0.1.1)
   - SnapKit (0.18.0)
 
 DEPENDENCIES:
   - AudioKit (~> 2.3)
+  - Bezzy (~> 0.1)
   - Lerp (~> 0.1)
   - SnapKit (~> 0.17)
 
 SPEC CHECKSUMS:
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
+  Bezzy: e3fc0a79f83d6d46e382ac578d81b234f2f97f90
   Lerp: 3476759083a1f8748a9ebe63e3437bc8ba308eca
   SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
 

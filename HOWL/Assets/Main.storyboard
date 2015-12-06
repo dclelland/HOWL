@@ -788,30 +788,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="136.5" height="110"/>
-                                        <animations/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Percentage"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Linear"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="kqL-6Z-8rA"/>
-                                        </connections>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="2" width="136.5" height="110"/>
                                         <animations/>
@@ -834,6 +810,30 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="Ppw-nC-uhi"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Linear"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="kqL-6Z-8rA"/>
                                         </connections>
                                     </view>
                                 </subviews>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bezzy
 import Lerp
 
 @IBDesignable class DialControl: UIControl {
@@ -105,7 +106,6 @@ import Lerp
     private var hue: CGFloat {
         return CGFloat(lerp(percentage, min: 215, max: 0) / 360)
         
-        215
     }
     
     private var backgroundPathColor: UIColor {
@@ -125,7 +125,28 @@ import Lerp
     }
     
     private var foregroundPath: UIBezierPath {
-        return UIBezierPath() // TODO: This
+        return UIBezierPath.makePath { make in
+            make.oval(at: center, radius: min(frame.height, frame.width) * 0.25)
+        }
+        
+        
+//        CGFloat percentage = [self.instrumentProperty percentageForValue:value];
+//        
+//        CGPoint center = self.valueLabel.center;
+//        CGFloat radius = fmin(CGRectGetWidth(self.valueLabel.bounds), CGRectGetHeight(self.valueLabel.bounds)) * GSDialControlRadius;
+//        
+//        CGFloat pointerAngle = GSLerp(percentage, GSDialControlMinDegrees, GSDialControlMaxDegrees);
+//        
+//        CGPoint pointerA = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 0.75), center, pointerAngle - 45.0);
+//        CGPoint pointerB = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 1.25), center, pointerAngle);
+//        CGPoint pointerC = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 0.75), center, pointerAngle + 45.0);
+//        
+//        return [UIBezierPath makePath:^(DSLBezierPathMaker *make) {
+//            make.ovalAt(center, radius);
+//            make.path([UIBezierPath makePath:^(DSLBezierPathMaker *make) {
+//            make.moveTo(pointerA).lineTo(pointerB).lineTo(pointerC).close();
+//            }]);
+//            }];
     }
     
 }
