@@ -22,7 +22,7 @@ class Key {
     }
     
     var frequency: Float {
-        return pow(2.0, (Float(pitch) - 69.0) / 12.0) * 440.0
+        return pow(2, (Float(pitch) - 69) / 12) * 440
     }
     
     // MARK: Private getters

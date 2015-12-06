@@ -1,13 +1,16 @@
 PODS:
   - AudioKit (2.3)
+  - Lerp (0.1.1)
   - SnapKit (0.18.0)
 
 DEPENDENCIES:
   - AudioKit (~> 2.3)
+  - Lerp (~> 0.1)
   - SnapKit (~> 0.17)
 
 SPEC CHECKSUMS:
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
+  Lerp: 3476759083a1f8748a9ebe63e3437bc8ba308eca
   SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
 
 COCOAPODS: 0.39.0

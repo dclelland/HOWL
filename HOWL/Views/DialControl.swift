@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lerp
 
 @IBDesignable class DialControl: UIControl {
     
@@ -19,11 +20,60 @@ import UIKit
         }
     }
     
-    @IBInspectable var value: Float = 0
-    @IBInspectable var minimumValue: Float = 0
-    @IBInspectable var maximumValue: Float = 1
+    @IBInspectable var value: Double = 0
+    @IBInspectable var minimumValue: Double = 0
+    @IBInspectable var maximumValue: Double = 1
     
-    let titleLabel = UILabel()
+    enum Scale: String {
+        case Linear = "Linear"
+        case Logarithmic = "Logarithmic"
+        case Staircase = "Staircase"
+    }
+    
+    var scale: Scale = .Linear
+    
+    @IBInspectable var scaleName: String {
+        set {
+            if let newScale = Scale(rawValue: newValue) {
+                scale = newScale
+            }
+        }
+        get {
+            return scale.rawValue
+        }
+    }
+    
+    enum Unit: String {
+        case Number = "Number"
+        case Integer = "Integer"
+        case Percentage = "Percentage"
+        case Frequency = "Frequency"
+    }
+    
+    var unit: Unit = .Number
+    
+    @IBInspectable var unitName: String {
+        set {
+            if let newUnit = Unit(rawValue: newValue) {
+                unit = newUnit
+            }
+        }
+        get {
+            return unit.rawValue
+        }
+    }
+    
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = self.tintColor
+        return label
+    }()
+    
+    lazy var valueLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = self.tintColor
+        return label
+    }()
 
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
@@ -41,10 +91,21 @@ import UIKit
     
     // MARK: - Private getters (values)
     
+    private var percentage: Double {
+        set {
+            value = newValue
+        }
+        get {
+            return value
+        }
+    }
+    
     // MARK: - Private getters (drawing)
     
     private var hue: CGFloat {
-        return 0.0 // TODO: This
+        return CGFloat(lerp(percentage, min: 215, max: 0) / 360)
+        
+        215
     }
     
     private var backgroundPathColor: UIColor {

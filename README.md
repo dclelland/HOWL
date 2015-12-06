@@ -10,7 +10,7 @@ HOWL aims to provide a simple formant synthesizer with a minimum of configuratio
     - Fix splash screen (extra buttons)
 
 - Controls
-    - Steppers (for register, waveform)
+    - Configurability (decimal points, logarithmic, staircase, unit string etc should handle all situs)
     - KVO
     - Persistence
 

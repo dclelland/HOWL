@@ -667,8 +667,8 @@
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="yYx-af-guI"/>
                                                 <exclude reference="Kjy-nP-fqA"/>
+                                                <exclude reference="yYx-af-guI"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -748,33 +748,33 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="J2B-ho-XHT"/>
+                                        <exclude reference="UZH-zI-dOG"/>
+                                        <exclude reference="g1f-He-Yza"/>
                                         <exclude reference="q1e-vn-fhX"/>
                                         <exclude reference="vAO-mC-EeC"/>
-                                        <exclude reference="UZH-zI-dOG"/>
-                                        <exclude reference="J2B-ho-XHT"/>
-                                        <exclude reference="g1f-He-Yza"/>
-                                        <exclude reference="oq4-uo-yTf"/>
-                                        <exclude reference="aUh-mH-8Nz"/>
-                                        <exclude reference="oOY-8Y-0uz"/>
+                                        <exclude reference="49L-q1-gT0"/>
+                                        <exclude reference="Bie-OI-nka"/>
+                                        <exclude reference="CLj-jT-RD7"/>
                                         <exclude reference="Odb-Wq-XbV"/>
                                         <exclude reference="Qd5-J2-c2F"/>
-                                        <exclude reference="CLj-jT-RD7"/>
-                                        <exclude reference="Bie-OI-nka"/>
-                                        <exclude reference="smb-fy-bzb"/>
-                                        <exclude reference="49L-q1-gT0"/>
-                                        <exclude reference="uIm-dv-qRG"/>
+                                        <exclude reference="aUh-mH-8Nz"/>
                                         <exclude reference="jB6-ld-NzE"/>
-                                        <exclude reference="G4Z-5D-y3u"/>
-                                        <exclude reference="Ry1-64-Ysp"/>
-                                        <exclude reference="RqQ-tt-q9E"/>
-                                        <exclude reference="DRp-Jh-TQR"/>
-                                        <exclude reference="iaL-9o-CAj"/>
-                                        <exclude reference="fyL-Yw-2GW"/>
-                                        <exclude reference="wvQ-3i-6f5"/>
+                                        <exclude reference="oOY-8Y-0uz"/>
+                                        <exclude reference="oq4-uo-yTf"/>
+                                        <exclude reference="smb-fy-bzb"/>
+                                        <exclude reference="uIm-dv-qRG"/>
                                         <exclude reference="3do-WM-ggO"/>
+                                        <exclude reference="DRp-Jh-TQR"/>
+                                        <exclude reference="G4Z-5D-y3u"/>
                                         <exclude reference="GK3-Kv-0DK"/>
-                                        <exclude reference="ob0-mu-Df1"/>
                                         <exclude reference="PDs-xl-kNt"/>
+                                        <exclude reference="RqQ-tt-q9E"/>
+                                        <exclude reference="Ry1-64-Ysp"/>
+                                        <exclude reference="fyL-Yw-2GW"/>
+                                        <exclude reference="iaL-9o-CAj"/>
+                                        <exclude reference="ob0-mu-Df1"/>
+                                        <exclude reference="wvQ-3i-6f5"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -805,6 +805,8 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Linear"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="kqL-6Z-8rA"/>
@@ -827,6 +829,8 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Percentage"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="Ppw-nC-uhi"/>
@@ -887,6 +891,8 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Percentage"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="eIV-fK-SYU"/>
@@ -899,6 +905,18 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="jdG-EI-sJH"/>
@@ -1014,8 +1032,8 @@
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="utL-wR-knB"/>
                                                 <exclude reference="UpX-Db-FzL"/>
+                                                <exclude reference="utL-wR-knB"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1037,8 +1055,8 @@
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="jiJ-28-T5i"/>
                                                 <exclude reference="LAc-3w-7tI"/>
+                                                <exclude reference="jiJ-28-T5i"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1095,33 +1113,33 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Egz-3F-dam"/>
-                                        <exclude reference="Cfu-Z8-eVg"/>
-                                        <exclude reference="H2d-Gh-NP9"/>
                                         <exclude reference="AGy-su-FMs"/>
+                                        <exclude reference="Cfu-Z8-eVg"/>
+                                        <exclude reference="Egz-3F-dam"/>
+                                        <exclude reference="H2d-Gh-NP9"/>
                                         <exclude reference="ysJ-hk-0hi"/>
-                                        <exclude reference="rR5-dl-vBg"/>
-                                        <exclude reference="eO4-DL-xfB"/>
-                                        <exclude reference="Nl9-3d-36L"/>
-                                        <exclude reference="GDn-6b-btw"/>
                                         <exclude reference="1NQ-Kg-bQa"/>
                                         <exclude reference="BT3-y4-hJw"/>
+                                        <exclude reference="GDn-6b-btw"/>
                                         <exclude reference="IkE-G4-PMf"/>
-                                        <exclude reference="lYY-TF-iGn"/>
-                                        <exclude reference="siR-5K-ccF"/>
+                                        <exclude reference="Nl9-3d-36L"/>
                                         <exclude reference="e8F-Mu-bw0"/>
+                                        <exclude reference="eO4-DL-xfB"/>
                                         <exclude reference="jWV-bg-rAZ"/>
-                                        <exclude reference="Vzm-Ws-UDM"/>
-                                        <exclude reference="KUI-22-j0g"/>
-                                        <exclude reference="8Nt-PS-4SV"/>
-                                        <exclude reference="Cac-yE-MgS"/>
-                                        <exclude reference="B6F-iL-bcT"/>
-                                        <exclude reference="g6v-Bz-8rw"/>
-                                        <exclude reference="a9z-0A-UwN"/>
-                                        <exclude reference="5Vk-fG-k6M"/>
+                                        <exclude reference="lYY-TF-iGn"/>
+                                        <exclude reference="rR5-dl-vBg"/>
+                                        <exclude reference="siR-5K-ccF"/>
                                         <exclude reference="55B-Va-aoX"/>
+                                        <exclude reference="5Vk-fG-k6M"/>
+                                        <exclude reference="8Nt-PS-4SV"/>
+                                        <exclude reference="B6F-iL-bcT"/>
                                         <exclude reference="CR0-De-wgT"/>
+                                        <exclude reference="Cac-yE-MgS"/>
+                                        <exclude reference="KUI-22-j0g"/>
                                         <exclude reference="P7Y-X5-Qdm"/>
+                                        <exclude reference="Vzm-Ws-UDM"/>
+                                        <exclude reference="a9z-0A-UwN"/>
+                                        <exclude reference="g6v-Bz-8rw"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1135,18 +1153,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
-                                        <animations/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="8nr-aV-2c0"/>
-                                        </connections>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
                                         <animations/>
@@ -1154,9 +1160,45 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Frequency"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="iYq-yx-he0"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Percentage"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="8nr-aV-2c0"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -1198,17 +1240,41 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Staircase"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Integer"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left Interval"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="p2f-hw-pJJ"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleName" value="Staircase"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitName" value="Integer"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Right Interval"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
