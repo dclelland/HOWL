@@ -8,61 +8,41 @@
 
 import UIKit
 import Bezzy
+import Degrad
 import Lerp
 
 @IBDesignable class DialControl: UIControl {
     
-    @IBInspectable var title: String? {
-        set {
-            titleLabel.text = newValue
-        }
-        get {
-            return titleLabel.text
-        }
-    }
+    // MARK: - Constants
     
-    @IBInspectable var value: Double = 0.0
-    @IBInspectable var minimumValue: Double = 0.0
-    @IBInspectable var maximumValue: Double = 1.0
+    private let dialRadius = 0.375
     
-    enum Scale: String {
-        case Linear = "Linear"
-        case Logarithmic = "Logarithmic"
-        case Staircase = "Staircase"
-    }
+    private let minimumAngle = 45°
+    private let maximumAngle = 315°
     
-    var scale: Scale = .Linear
+    private let minimumDeadZone = 2°
+    private let maximumDeadZone = 358°
     
-    @IBInspectable var scaleName: String {
-        set {
-            if let newScale = Scale(rawValue: newValue) {
-                scale = newScale
-            }
-        }
-        get {
-            return scale.rawValue
+    // MARK: - Properties
+    
+    @IBInspectable var title: String? { didSet { titleLabel.text = titleText } }
+    @IBInspectable var suffix: String? { didSet { valueLabel.text = valueText } }
+    
+    @IBInspectable var value: Double = 0.0 {
+        didSet {
+            valueLabel.text = valueText
+            setNeedsDisplay()
+            sendActionsForControlEvents([.ValueChanged])
         }
     }
     
-    enum Unit: String {
-        case Number = "Number"
-        case Integer = "Integer"
-        case Percentage = "Percentage"
-        case Frequency = "Frequency"
-    }
+    @IBInspectable var minimumValue: Double = 0.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable var maximumValue: Double = 1.0 { didSet { setNeedsDisplay() } }
     
-    var unit: Unit = .Number
+    @IBInspectable var decimalPoints: Int = 1 { didSet { valueLabel.text = valueText } }
     
-    @IBInspectable var unitName: String {
-        set {
-            if let newUnit = Unit(rawValue: newValue) {
-                unit = newUnit
-            }
-        }
-        get {
-            return unit.rawValue
-        }
-    }
+    @IBInspectable var logarithmic: Bool = false { didSet { setNeedsDisplay() } }
+    @IBInspectable var staircase: Bool = false { didSet { setNeedsDisplay() } }
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -77,7 +57,6 @@ import Lerp
         label.font = UIFont(name: "Futura-Medium", size: 12.0)
         label.textAlignment = .Center
         label.textColor = UIColor.blackColor()
-        label.text = "0.0"
         return label
     }()
     
@@ -123,6 +102,10 @@ import Lerp
         CGContextFillPath(context)
     }
     
+    override func updateConstraints() {
+        super.updateConstraints()
+    }
+    
     // MARK: - Layout
     
     private func setupSubviews() {
@@ -141,7 +124,44 @@ import Lerp
         }
     }
     
+    // MARK: - Touches
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        
+        touch = touches.first
+        selected = true
+        
+        if let location = touch?.locationInView(self) {
+            percentage = percentageForLocation(location)
+        }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesMoved(touches, withEvent: event)
+        
+        if let location = touch?.locationInView(self) {
+            percentage = percentageForLocation(location)
+        }
+    }
+    
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        super.touchesCancelled(touches, withEvent: event)
+        
+        touch = nil
+        selected = false
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesEnded(touches, withEvent: event)
+        
+        touch = nil
+        selected = false
+    }
+    
     // MARK: - Private getters (values)
+    
+    private var touch: UITouch?
     
     private var percentage: Double {
         set {
@@ -150,6 +170,47 @@ import Lerp
         get {
             return ilerp(value, min: minimumValue, max: maximumValue)
         }
+    }
+    
+    private func percentageForLocation(location: CGPoint) -> Double {
+        let center = valueLabel.center
+        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * CGFloat(dialRadius)
+        
+        let distance = hypot(location.x - center.x, location.y - center.y)
+        
+        if distance < radius {
+            return percentage
+        }
+        
+        let angle = atan2(location.x - center.x, location.y - center.y)
+        
+//
+//        if (CGPointDistance(center, point) < radius) {
+//            return self.instrumentProperty.value;
+//        }
+//        
+//        CGFloat angle = fmod(radiansToDegrees(atan2f(point.y - center.y, point.x - center.x)) + 270.0, 360.0);
+//        CGFloat percentage = GSInverseLerp(angle, GSDialControlMinDegrees, GSDialControlMaxDegrees);
+//        
+//        if (angle < GSDialControlMinDeadZoneDegrees || angle > GSDialControlMaxDeadZoneDegrees) {
+//            return self.instrumentProperty.value;
+//        }
+//        
+//        return [self.instrumentProperty valueForPercentage:clamp(percentage, 0.0, 1.0)];
+        
+        return 0.0
+    }
+    
+    // MARK: - Private getters (text)
+    
+    private var titleText: String? {
+        return title
+    }
+    
+    private var valueText: String? {
+        let valueText = NSString(format: "%.\(decimalPoints)f", value) as String
+        
+        return suffix != nil ? valueText + suffix! : valueText
     }
     
     // MARK: - Private getters (drawing)
@@ -177,8 +238,8 @@ import Lerp
     
     private var foregroundPath: UIBezierPath {
         let center = valueLabel.center
-        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * 0.375
-        let angle = lerp(percentage, min: M_PI / 4.0, max: 7.0 * M_PI / 4.0)
+        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * CGFloat(dialRadius)
+        let angle = lerp(percentage, min: minimumAngle, max: maximumAngle)
         
         let pointerA = CGPoint(x: 0.0, y: 0.0)
         let pointerB = CGPoint(x: 0.0, y: 0.0)

@@ -88,3 +88,63 @@ extension CGFloat: Lerpable {
     }
     
 }
+
+// MARK: Clampable protocol
+
+public protocol Clampable {
+    func clamp(min: Self, max: Self) -> Self
+}
+
+// MARK: Clampable global functions
+
+/**
+Clamps the value between an lower and upper bound.
+
+- parameter value: The input value.
+- parameter min: The lower bound. Expected to be less than *max*.
+- parameter max: The upper bound. Expected to be greater than *min*.
+
+- returns: Returns *min* if *value* is less than min, or *max* if *value* is greater than *max*. Else, returns *value*. If *min* is greater than *max*, it just returns *value*.
+*/
+
+public func clamp<T: Clampable>(value: T, min: T, max: T) -> T {
+    return value.clamp(min, max: max)
+}
+
+// MARK: Clampable implementations
+
+extension Double: Clampable {
+    
+    /// Clamp
+    public func clamp(min: Double, max: Double) -> Double {
+        if min < max {
+            return Swift.min(Swift.max(self, min), max)
+        }
+        return self
+    }
+    
+}
+
+extension Float: Clampable {
+    
+    /// Clamp
+    public func clamp(min: Float, max: Float) -> Float {
+        if min < max {
+            return Swift.min(Swift.max(self, min), max)
+        }
+        return self
+    }
+    
+}
+
+extension CGFloat: Clampable {
+    
+    /// Clamp
+    public func clamp(min: CGFloat, max: CGFloat) -> CGFloat {
+        if min < max {
+            return Swift.min(Swift.max(self, min), max)
+        }
+        return self
+    }
+    
+}
