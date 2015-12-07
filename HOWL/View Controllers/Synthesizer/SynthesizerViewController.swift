@@ -25,7 +25,10 @@ class SynthesizerViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: ToolbarButton) {
-        
+        vibratoDepthDialControl?.value = 0.0
+        vibratoFrequencyDialControl?.value = 0.0
+        keyboardLeftIntervalDialControl?.value = 4.0
+        keyboardRightIntervalDialControl?.value = 7.0
     }
     
     // MARK: - Dial control events

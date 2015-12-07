@@ -25,7 +25,10 @@ class VocoderViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: ToolbarButton) {
-        
+        formantsBandwidthDialControl?.value = 100.0
+        formantsFrequencyDialControl?.value = 100.0
+        effectsBitcrushDialControl?.value = 0.0
+        effectsReverbDialControl?.value = 0.0
     }
     
     // MARK: - Dial control events
