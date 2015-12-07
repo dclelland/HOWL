@@ -17,11 +17,11 @@ import Lerp
     
     private let dialRadius = 0.375
     
-    private let minimumAngle = 45°
-    private let maximumAngle = 315°
+    private let minimumAngle = 45.degrees
+    private let maximumAngle = 315.degrees
     
-    private let minimumDeadZone = 2°
-    private let maximumDeadZone = 358°
+    private let minimumDeadZone = 2.degrees
+    private let maximumDeadZone = 358.degrees
     
     // MARK: - Properties
     
@@ -165,10 +165,10 @@ import Lerp
     
     private var percentage: Double {
         set {
-            value = lerp(newValue, min: minimumValue, max: maximumValue)
+            value = newValue.lerp(min: minimumValue, max: maximumValue)
         }
         get {
-            return ilerp(value, min: minimumValue, max: maximumValue)
+            return value.ilerp(min: minimumValue, max: maximumValue)
         }
     }
     
@@ -176,29 +176,20 @@ import Lerp
         let center = valueLabel.center
         let radius = min(valueLabel.frame.height, valueLabel.frame.width) * CGFloat(dialRadius)
         
-        let distance = hypot(location.x - center.x, location.y - center.y)
+        let distance = hypot(location.y - center.y, location.x - center.x)
+        let angle = atan2(location.y - center.y, location.x - center.x)
         
         if distance < radius {
-            return percentage
+            return self.percentage
         }
         
-        let angle = atan2(location.x - center.x, location.y - center.y)
+        let scaledAngle = fmod(Double(angle) + 270.degrees, 360.degrees)
         
-//
-//        if (CGPointDistance(center, point) < radius) {
-//            return self.instrumentProperty.value;
-//        }
-//        
-//        CGFloat angle = fmod(radiansToDegrees(atan2f(point.y - center.y, point.x - center.x)) + 270.0, 360.0);
-//        CGFloat percentage = GSInverseLerp(angle, GSDialControlMinDegrees, GSDialControlMaxDegrees);
-//        
-//        if (angle < GSDialControlMinDeadZoneDegrees || angle > GSDialControlMaxDeadZoneDegrees) {
-//            return self.instrumentProperty.value;
-//        }
-//        
-//        return [self.instrumentProperty valueForPercentage:clamp(percentage, 0.0, 1.0)];
+        if scaledAngle < minimumDeadZone || scaledAngle > maximumDeadZone {
+            return self.percentage
+        }
         
-        return 0.0
+        return scaledAngle.ilerp(min: minimumAngle, max: maximumAngle).clamp(min: 0.0, max: 1.0)
     }
     
     // MARK: - Private getters (text)
@@ -239,7 +230,7 @@ import Lerp
     private var foregroundPath: UIBezierPath {
         let center = valueLabel.center
         let radius = min(valueLabel.frame.height, valueLabel.frame.width) * CGFloat(dialRadius)
-        let angle = lerp(percentage, min: minimumAngle, max: maximumAngle)
+        let angle = percentage.lerp(min: minimumAngle, max: maximumAngle)
         
         let pointerA = CGPoint(x: 0.0, y: 0.0)
         let pointerB = CGPoint(x: 0.0, y: 0.0)
