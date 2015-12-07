@@ -42,7 +42,7 @@ import Lerp
     @IBInspectable var decimalPoints: Int = 1 { didSet { valueLabel.text = valueText } }
     
     @IBInspectable var logarithmic: Bool = false { didSet { setNeedsDisplay() } }
-    @IBInspectable var staircase: Bool = false { didSet { setNeedsDisplay() } }
+    @IBInspectable var step: Bool = false { didSet { setNeedsDisplay() } }
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -165,10 +165,28 @@ import Lerp
     
     private var percentage: Double {
         set {
-            value = newValue.lerp(min: minimumValue, max: maximumValue)
+            switch scale {
+            case .Linear:
+                value = newValue.lerp(min: minimumValue, max: maximumValue)
+            case .LinearStep:
+                value = round(newValue.lerp(min: minimumValue, max: maximumValue))
+            case .Logarithmic:
+                value = pow(newValue, M_E).lerp(min: minimumValue, max: maximumValue)
+            case .LogarithmicStep:
+                value = round(pow(newValue, M_E).lerp(min: minimumValue, max: maximumValue))
+            }
         }
         get {
-            return value.ilerp(min: minimumValue, max: maximumValue)
+            switch scale {
+            case .Linear:
+                return value.ilerp(min: minimumValue, max: maximumValue)
+            case .LinearStep:
+                return round(value).ilerp(min: minimumValue, max: maximumValue)
+            case .Logarithmic:
+                return pow(value.ilerp(min: minimumValue, max: maximumValue), M_E)
+            case .LogarithmicStep:
+                return pow(round(value).ilerp(min: minimumValue, max: maximumValue), M_E)
+            }
         }
     }
     
@@ -190,6 +208,29 @@ import Lerp
         }
         
         return scaledAngle.ilerp(min: minimumAngle, max: maximumAngle).clamp(min: 0.0, max: 1.0)
+    }
+    
+    private enum Scale {
+        case Linear
+        case LinearStep
+        case Logarithmic
+        case LogarithmicStep
+    }
+    
+    private var scale: Scale {
+        if logarithmic == false {
+            if step == false {
+                return .Linear
+            } else {
+                return .LinearStep
+            }
+        } else {
+            if step == false {
+                return .Logarithmic
+            } else {
+                return .LogarithmicStep
+            }
+        }
     }
     
     // MARK: - Private getters (text)
