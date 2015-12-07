@@ -159,6 +159,18 @@ import Lerp
         selected = false
     }
     
+    // MARK: - Private getters (text)
+    
+    private var titleText: String? {
+        return title
+    }
+    
+    private var valueText: String? {
+        let valueText = NSString(format: "%.\(decimalPoints)f", value) as String
+        
+        return suffix != nil ? valueText + suffix! : valueText
+    }
+    
     // MARK: - Private getters (values)
     
     private var touch: UITouch?
@@ -231,18 +243,6 @@ import Lerp
                 return .LogarithmicStep
             }
         }
-    }
-    
-    // MARK: - Private getters (text)
-    
-    private var titleText: String? {
-        return title
-    }
-    
-    private var valueText: String? {
-        let valueText = NSString(format: "%.\(decimalPoints)f", value) as String
-        
-        return suffix != nil ? valueText + suffix! : valueText
     }
     
     // MARK: - Private getters (drawing)
