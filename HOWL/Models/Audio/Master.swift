@@ -11,7 +11,7 @@ import AudioKit
 class Master: AKInstrument {
     
     var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var reverbMix = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
+    var reverbMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     
     init(withInput input: AKAudio, voices: (AKAudio, AKAudio, AKAudio, AKAudio)) {
         super.init()
@@ -37,7 +37,7 @@ class Master: AKInstrument {
         
         let reverb = AKReverb(
             input: bitcrushOutput,
-            feedback: 0.5.ak,
+            feedback: 0.75.ak,
             cutoffFrequency: 16000.ak
         )
         
