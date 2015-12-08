@@ -15,20 +15,20 @@ import Lerp
     
     // MARK: - Constants
     
-    private let dialRadius = 0.375
+    private let dialRadius: CGFloat = 0.375
     
-    private let minimumAngle = 45.degrees
-    private let maximumAngle = 315.degrees
+    private let minimumAngle: CGFloat = 45°
+    private let maximumAngle: CGFloat = 315°
     
-    private let minimumDeadZone = 2.degrees
-    private let maximumDeadZone = 358.degrees
+    private let minimumDeadZone: CGFloat = 2°
+    private let maximumDeadZone: CGFloat = 358°
     
     // MARK: - Properties
     
     @IBInspectable var title: String? { didSet { titleLabel.text = titleText } }
     @IBInspectable var suffix: String? { didSet { valueLabel.text = valueText } }
     
-    @IBInspectable var value: Double = 0.0 {
+    @IBInspectable var value: CGFloat = 0.0 {
         didSet {
             valueLabel.text = valueText
             setNeedsDisplay()
@@ -36,8 +36,8 @@ import Lerp
         }
     }
     
-    @IBInspectable var minimumValue: Double = 0.0 { didSet { setNeedsDisplay() } }
-    @IBInspectable var maximumValue: Double = 1.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable var minimumValue: CGFloat = 0.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable var maximumValue: CGFloat = 1.0 { didSet { setNeedsDisplay() } }
     
     @IBInspectable var decimalPoints: Int = 1 { didSet { valueLabel.text = valueText } }
     
@@ -175,7 +175,7 @@ import Lerp
     
     private var touch: UITouch?
     
-    private var percentage: Double {
+    private var percentage: CGFloat {
         set {
             switch scale {
             case .Linear:
@@ -183,9 +183,9 @@ import Lerp
             case .LinearStep:
                 value = round(newValue.lerp(min: minimumValue, max: maximumValue))
             case .Logarithmic:
-                value = pow(newValue, M_E).lerp(min: minimumValue, max: maximumValue)
+                value = pow(newValue, CGFloat(M_E)).lerp(min: minimumValue, max: maximumValue)
             case .LogarithmicStep:
-                value = round(pow(newValue, M_E).lerp(min: minimumValue, max: maximumValue))
+                value = round(pow(newValue, CGFloat(M_E)).lerp(min: minimumValue, max: maximumValue))
             }
         }
         get {
@@ -195,16 +195,16 @@ import Lerp
             case .LinearStep:
                 return round(value).ilerp(min: minimumValue, max: maximumValue)
             case .Logarithmic:
-                return pow(value.ilerp(min: minimumValue, max: maximumValue), M_E)
+                return pow(value.ilerp(min: minimumValue, max: maximumValue), 1.0 / CGFloat(M_E))
             case .LogarithmicStep:
-                return pow(round(value).ilerp(min: minimumValue, max: maximumValue), M_E)
+                return pow(round(value).ilerp(min: minimumValue, max: maximumValue), 1.0 / CGFloat(M_E))
             }
         }
     }
     
-    private func percentageForLocation(location: CGPoint) -> Double {
+    private func percentageForLocation(location: CGPoint) -> CGFloat {
         let center = valueLabel.center
-        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * CGFloat(dialRadius)
+        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * dialRadius
         
         let distance = hypot(location.y - center.y, location.x - center.x)
         let angle = atan2(location.y - center.y, location.x - center.x)
@@ -213,7 +213,7 @@ import Lerp
             return self.percentage
         }
         
-        let scaledAngle = fmod(Double(angle) + 270.degrees, 360.degrees)
+        let scaledAngle = CGFloat(fmod(Double(angle) + 270°, 360°))
         
         if scaledAngle < minimumDeadZone || scaledAngle > maximumDeadZone {
             return self.percentage
@@ -249,7 +249,6 @@ import Lerp
     
     private var hue: CGFloat {
         return CGFloat(lerp(percentage, min: 215.0, max: 0.0) / 360.0)
-        
     }
     
     private var backgroundPathColor: UIColor {
@@ -270,29 +269,21 @@ import Lerp
     
     private var foregroundPath: UIBezierPath {
         let center = valueLabel.center
-        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * CGFloat(dialRadius)
-        let angle = percentage.lerp(min: minimumAngle, max: maximumAngle)
         
-        let pointerA = CGPoint(x: 0.0, y: 0.0)
-        let pointerB = CGPoint(x: 0.0, y: 0.0)
-        let pointerC = CGPoint(x: 0.0, y: 0.0)
+        let radius = dialRadius * min(valueLabel.frame.height, valueLabel.frame.width)
+        let angle = percentage.lerp(min: minimumAngle, max: maximumAngle) + 90°
+        
+        let pointerA = pol2rec(r: radius * 0.75, θ: angle - 45°)
+        let pointerB = pol2rec(r: radius * 1.25, θ: angle)
+        let pointerC = pol2rec(r: radius * 0.75, θ: angle + 45°)
         
         return UIBezierPath.makePath { make in
             make.oval(at: center, radius: radius)
-            make.move(pointerA).move(pointerB).move(pointerC).close()
+            make.move(x: center.x + pointerA.x, y: center.y + pointerA.y)
+            make.line(x: center.x + pointerB.x, y: center.y + pointerB.y)
+            make.line(x: center.x + pointerC.x, y: center.y + pointerC.y)
+            make.close()
         }
-        
-        
-//        CGFloat percentage = [self.instrumentProperty percentageForValue:value];
-//        
-//        CGPoint center = self.valueLabel.center;
-//        CGFloat radius = fmin(CGRectGetWidth(self.valueLabel.bounds), CGRectGetHeight(self.valueLabel.bounds)) * GSDialControlRadius;
-//        
-//        CGFloat pointerAngle = GSLerp(percentage, GSDialControlMinDegrees, GSDialControlMaxDegrees);
-//        
-//        CGPoint pointerA = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 0.75), center, pointerAngle - 45.0);
-//        CGPoint pointerB = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 1.25), center, pointerAngle);
-//        CGPoint pointerC = CGPointRotatedAroundPoint(CGPointMake(center.x, center.y + radius * 0.75), center, pointerAngle + 45.0);
     }
     
 }
