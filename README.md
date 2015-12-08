@@ -17,6 +17,9 @@ HOWL aims to provide a simple formant synthesizer with a minimum of configuratio
 - Synth
     - Vibrato
 
+- Vocoder
+    - Unstable filters (see when you lower bandwidth to zero)
+
 - Phonemeboard
     - Should display rosette instead of waveform
     - Should fade colours
