@@ -15,20 +15,20 @@ import Lerp
     
     // MARK: - Constants
     
-    private let dialRadius: CGFloat = 0.375
+    private let dialRadius: Float = 0.375
     
-    private let minimumAngle: CGFloat = 45°
-    private let maximumAngle: CGFloat = 315°
+    private let minimumAngle: Float = 45°
+    private let maximumAngle: Float = 315°
     
-    private let minimumDeadZone: CGFloat = 2°
-    private let maximumDeadZone: CGFloat = 358°
+    private let minimumDeadZone: Float = 2°
+    private let maximumDeadZone: Float = 358°
     
     // MARK: - Properties
     
     @IBInspectable var title: String? { didSet { titleLabel.text = titleText } }
     @IBInspectable var suffix: String? { didSet { valueLabel.text = valueText } }
     
-    @IBInspectable var value: CGFloat = 0.0 {
+    @IBInspectable var value: Float = 0.0 {
         didSet {
             valueLabel.text = valueText
             setNeedsDisplay()
@@ -36,8 +36,8 @@ import Lerp
         }
     }
     
-    @IBInspectable var minimumValue: CGFloat = 0.0 { didSet { setNeedsDisplay() } }
-    @IBInspectable var maximumValue: CGFloat = 1.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable var minimumValue: Float = 0.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable var maximumValue: Float = 1.0 { didSet { setNeedsDisplay() } }
     
     @IBInspectable var decimalPoints: Int = 1 { didSet { valueLabel.text = valueText } }
     
@@ -175,7 +175,7 @@ import Lerp
     
     private var touch: UITouch?
     
-    private var percentage: CGFloat {
+    private var percentage: Float {
         set {
             switch scale {
             case .Linear:
@@ -183,9 +183,9 @@ import Lerp
             case .LinearStep:
                 value = round(newValue.lerp(min: minimumValue, max: maximumValue))
             case .Logarithmic:
-                value = pow(newValue, CGFloat(M_E)).lerp(min: minimumValue, max: maximumValue)
+                value = pow(newValue, Float(M_E)).lerp(min: minimumValue, max: maximumValue)
             case .LogarithmicStep:
-                value = round(pow(newValue, CGFloat(M_E)).lerp(min: minimumValue, max: maximumValue))
+                value = round(pow(newValue, Float(M_E)).lerp(min: minimumValue, max: maximumValue))
             }
         }
         get {
@@ -195,25 +195,25 @@ import Lerp
             case .LinearStep:
                 return round(value).ilerp(min: minimumValue, max: maximumValue)
             case .Logarithmic:
-                return pow(value.ilerp(min: minimumValue, max: maximumValue), 1.0 / CGFloat(M_E))
+                return pow(value.ilerp(min: minimumValue, max: maximumValue), 1.0 / Float(M_E))
             case .LogarithmicStep:
-                return pow(round(value).ilerp(min: minimumValue, max: maximumValue), 1.0 / CGFloat(M_E))
+                return pow(round(value).ilerp(min: minimumValue, max: maximumValue), 1.0 / Float(M_E))
             }
         }
     }
     
-    private func percentageForLocation(location: CGPoint) -> CGFloat {
+    private func percentageForLocation(location: CGPoint) -> Float {
         let center = valueLabel.center
-        let radius = min(valueLabel.frame.height, valueLabel.frame.width) * dialRadius
+        let radius = dialRadius * Float(min(valueLabel.frame.height, valueLabel.frame.width))
         
-        let distance = hypot(location.y - center.y, location.x - center.x)
-        let angle = atan2(location.y - center.y, location.x - center.x)
+        let distance = Float(hypot(location.y - center.y, location.x - center.x))
+        let angle = Float(atan2(location.y - center.y, location.x - center.x))
         
         if distance < radius {
             return self.percentage
         }
         
-        let scaledAngle = CGFloat(fmod(Double(angle) + 270°, 360°))
+        let scaledAngle = fmod(angle + 270°, 360°)
         
         if scaledAngle < minimumDeadZone || scaledAngle > maximumDeadZone {
             return self.percentage
@@ -270,8 +270,8 @@ import Lerp
     private var foregroundPath: UIBezierPath {
         let center = valueLabel.center
         
-        let radius = dialRadius * min(valueLabel.frame.height, valueLabel.frame.width)
-        let angle = percentage.lerp(min: minimumAngle, max: maximumAngle) + 90°
+        let radius = CGFloat(dialRadius) * min(valueLabel.frame.height, valueLabel.frame.width)
+        let angle = CGFloat(percentage.lerp(min: minimumAngle, max: maximumAngle) + 90°)
         
         let pointerA = pol2rec(r: radius * 0.75, θ: angle - 45°)
         let pointerB = pol2rec(r: radius * 1.25, θ: angle)

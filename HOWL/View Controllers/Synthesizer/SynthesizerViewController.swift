@@ -19,9 +19,7 @@ class SynthesizerViewController: UIViewController {
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {
-        if let flipViewController = self.flipViewController {
-            flipViewController.flip()
-        }
+        flipViewController?.flip()
     }
     
     @IBAction func resetButtonTapped(button: ToolbarButton) {
@@ -33,7 +31,19 @@ class SynthesizerViewController: UIViewController {
     
     // MARK: - Dial control events
     
-    @IBAction func dialControlValueChanged(dialControl: DialControl) {
+    @IBAction func vibratoDepthDialControlValueChanged(dialControl: DialControl) {
+        
+    }
+    
+    @IBAction func vibratoFrequencyDialControlValueChanged(dialControl: DialControl) {
+        
+    }
+    
+    @IBAction func keyboardLeftIntervalDialControlValueChanged(dialControl: DialControl) {
+        
+    }
+    
+    @IBAction func keyboardRightIntervalDialControlValueChanged(dialControl: DialControl) {
         
     }
     

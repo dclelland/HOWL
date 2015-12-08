@@ -57,9 +57,7 @@ class KeyboardViewController: UIViewController {
     // MARK: - Button events
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {
-        if let flipViewController = self.flipViewController {
-            flipViewController.flip()
-        }
+        flipViewController?.flip()
     }
     
     @IBAction func holdButtonTapped(button: ToolbarButton) {

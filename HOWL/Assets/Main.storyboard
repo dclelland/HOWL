@@ -813,7 +813,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="Ppw-nC-uhi"/>
+                                            <action selector="formantsFrequencyDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="4eQ-YW-99R"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
@@ -841,7 +841,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="kqL-6Z-8rA"/>
+                                            <action selector="formantsBandwidthDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="J4z-Pu-8gG"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -907,7 +907,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="eIV-fK-SYU"/>
+                                            <action selector="effectsBitcrushDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="y5m-nP-dpl"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
@@ -935,7 +935,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="jdG-EI-sJH"/>
+                                            <action selector="effectsReverbDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="dPp-Ph-rkW"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -1194,7 +1194,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="iYq-yx-he0"/>
+                                            <action selector="vibratoFrequencyDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="ceI-zg-t15"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
@@ -1222,7 +1222,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="8nr-aV-2c0"/>
+                                            <action selector="vibratoDepthDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="dUa-Ra-hez"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -1281,7 +1281,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="p2f-hw-pJJ"/>
+                                            <action selector="keyboardLeftIntervalDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="0ae-52-VpU"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
@@ -1308,7 +1308,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="QLr-8V-GCC"/>
+                                            <action selector="keyboardRightIntervalDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="eco-25-27W"/>
                                         </connections>
                                     </view>
                                 </subviews>

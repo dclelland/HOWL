@@ -19,9 +19,7 @@ class VocoderViewController: UIViewController {
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {
-        if let flipViewController = self.flipViewController {
-            flipViewController.flip()
-        }
+        flipViewController?.flip()
     }
     
     @IBAction func resetButtonTapped(button: ToolbarButton) {
@@ -33,8 +31,26 @@ class VocoderViewController: UIViewController {
     
     // MARK: - Dial control events
     
-    @IBAction func dialControlValueChanged(dialControl: DialControl) {
-        
+    @IBAction func formantsBandwidthDialControlValueChanged(dialControl: DialControl) {
+        Audio.shared.sopranoVocoder.bandwidth.value = dialControl.value / 100.0
+        Audio.shared.altoVocoder.bandwidth.value = dialControl.value / 100.0
+        Audio.shared.tenorVocoder.bandwidth.value = dialControl.value / 100.0
+        Audio.shared.bassVocoder.bandwidth.value = dialControl.value / 100.0
+    }
+    
+    @IBAction func formantsFrequencyDialControlValueChanged(dialControl: DialControl) {
+        Audio.shared.sopranoVocoder.frequency.value = dialControl.value / 100.0
+        Audio.shared.altoVocoder.frequency.value = dialControl.value / 100.0
+        Audio.shared.tenorVocoder.frequency.value = dialControl.value / 100.0
+        Audio.shared.bassVocoder.frequency.value = dialControl.value / 100.0
+    }
+    
+    @IBAction func effectsBitcrushDialControlValueChanged(dialControl: DialControl) {
+        Audio.shared.master.bitcrushMix.value = dialControl.value / 100.0
+    }
+    
+    @IBAction func effectsReverbDialControlValueChanged(dialControl: DialControl) {
+        Audio.shared.master.reverbMix.value = dialControl.value / 100.0
     }
     
 }
