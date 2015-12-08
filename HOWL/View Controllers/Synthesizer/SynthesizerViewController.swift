@@ -32,11 +32,11 @@ class SynthesizerViewController: UIViewController {
     // MARK: - Dial control events
     
     @IBAction func vibratoDepthDialControlValueChanged(dialControl: DialControl) {
-        
+        Audio.shared.synthesizer.vibratoDepth.value = dialControl.value / 100
     }
     
     @IBAction func vibratoFrequencyDialControlValueChanged(dialControl: DialControl) {
-        
+        Audio.shared.synthesizer.vibratoFrequency.value = dialControl.value
     }
     
     @IBAction func keyboardLeftIntervalDialControlValueChanged(dialControl: DialControl) {
