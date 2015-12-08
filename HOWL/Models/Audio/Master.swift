@@ -25,8 +25,8 @@ class Master: AKInstrument {
         
         let bitcrush = AKDecimator(
             input: quartet,
-            bitDepth: 20.ak,
-            sampleRate: 1200.ak
+            bitDepth: 24.ak,
+            sampleRate: 4000.ak
         )
         
         let bitcrushOutput = AKMix(
