@@ -92,24 +92,29 @@ extension KeyboardViewController: UICollectionViewDataSource {
             return cell
         }
         
-        let path = key.path.makePath { make in
+        layer.path = self.collectionView(collectionView, pathForCellAtIndexPath: indexPath, withKey: key).CGPath
+        layer.fillColor = self.collectionView(collectionView, colorForCellAtIndexPath: indexPath, withKey: key).CGColor
+        
+        return cell
+    }
+    
+    // MARK: - Private getters
+    
+    private func collectionView(collectionView: UICollectionView, pathForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIBezierPath {
+        return key.path.makePath { make in
             make.translation(tx: -key.path.bounds.minX, ty: -key.path.bounds.minY)
             make.transform(collectionView.bounds.denormalizationTransform())
         }
-        
-        layer.path = path.CGPath
-        
+    }
+    
+    private func collectionView(collectionView: UICollectionView, colorForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIColor {
         let keyNotes = notes.values.filter { $0.frequency.value == key.frequency }
         
         if keyNotes.count > 0 {
-            let color = UIColor.HOWL.lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
-            layer.fillColor = color.CGColor
+            return UIColor.HOWL.lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
         } else {
-            let color = UIColor.HOWL.darkGreyColor()
-            layer.fillColor = color.CGColor
+            return UIColor.HOWL.darkGreyColor()
         }
-        
-        return cell
     }
     
 }
