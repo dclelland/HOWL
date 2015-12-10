@@ -23,6 +23,7 @@ class PhonemeboardView: AKPlotView {
     
     private var csound: CsoundObj?
     
+    private var data = NSData()
     private var samples = [Float]() {
         didSet {
             self.updateUI()
@@ -128,11 +129,11 @@ extension PhonemeboardView: CsoundBinding {
     
     func updateValuesFromCsound() {
         if let csound = csound {
-            let data = csound.getOutSamples()
-            let count = data.length / sizeof(Float)
-            var samples = [Float](count: count, repeatedValue: 0)
+            data = csound.getOutSamples()
             
-            data.getBytes(&samples, length:count * sizeof(Float))
+            var samples = [Float](count: data.length / sizeof(Float), repeatedValue: 0)
+            
+            data.getBytes(&samples, length:data.length)
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.samples = samples

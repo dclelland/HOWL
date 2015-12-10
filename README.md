@@ -6,9 +6,6 @@ HOWL aims to provide a simple formant synthesizer with a minimum of configuratio
 
 ### Interface
 
-- PhonemeboardView
-    - Don't `let` a new data every time you run `getOutSamples()`
-
 - Keyboard
     - Fix the duplicate note thing
 
@@ -16,7 +13,6 @@ HOWL aims to provide a simple formant synthesizer with a minimum of configuratio
     - Find elegant note reload thing
 
 - Controls
-    - KVO
     - Persistence
 
 - Vocoder

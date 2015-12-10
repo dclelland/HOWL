@@ -41,7 +41,6 @@ class SynthesizerViewController: UIViewController {
     
     @IBAction func keyboardLeftIntervalDialControlValueChanged(dialControl: DialControl) {
         if let keyboardViewController = flipViewController?.frontViewController as? KeyboardViewController {
-            print(keyboardViewController.keyboard)
             keyboardViewController.keyboard.leftInterval = Int(dialControl.value)
             keyboardViewController.keyboardView?.reloadData()
         }
