@@ -6,16 +6,15 @@ HOWL aims to provide a simple formant synthesizer with a minimum of configuratio
 
 ### Interface
 
-- Packaging
-    - Fix splash screen (extra buttons)
+- Keyboard
+    - Fix the duplicate note thing
+
+- Synthesizer
+    - Find elegant note reload thing
 
 - Controls
-    - Configurability (decimal points, logarithmic, staircase, unit string etc should handle all situs)
     - KVO
     - Persistence
-
-- Synth
-    - Vibrato
 
 - Vocoder
     - Unstable filters (see when you lower bandwidth to zero)

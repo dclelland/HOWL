@@ -60,6 +60,24 @@ class FlipViewController: UIViewController {
         
         return nil
     }
+    
+    // MARK: - View controllers
+    
+    var frontViewController: UIViewController? {
+        if let frontViewControllerView = frontView?.subviews.first {
+            return childViewControllers.filter { $0.view == frontViewControllerView }.first
+        }
+        
+        return nil
+    }
+    
+    var backViewController: UIViewController? {
+        if let backViewControllerView = backView?.subviews.first {
+            return childViewControllers.filter { $0.view == backViewControllerView }.first
+        }
+        
+        return nil
+    }
 
 }
 
@@ -68,6 +86,7 @@ extension UIViewController {
         if let flipViewController = self.parentViewController as? FlipViewController {
             return flipViewController
         }
+        
         return nil
     }
 }

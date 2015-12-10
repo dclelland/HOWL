@@ -12,8 +12,8 @@ class Keyboard {
     
     var centerPitch = 48
     
-    var leftAxisInterval = 4
-    var rightAxisInterval = 7
+    var leftInterval = 4
+    var rightInterval = 7
     
     var horizontalRadius = 4
     var verticalRadius = 5
@@ -56,13 +56,8 @@ class Keyboard {
     // MARK: - Coordinates
     
     private struct Coordinates {
-        var leftAxis: Int
-        var rightAxis: Int
-        
-        init(withLeftAxis leftAxis: Int, rightAxis: Int) {
-            self.leftAxis = leftAxis
-            self.rightAxis = rightAxis
-        }
+        var left: Int
+        var right: Int
     }
     
     private func coordinatesForIndex(index: Int, inRow row: Int) -> Coordinates? {
@@ -76,10 +71,10 @@ class Keyboard {
         let verticalOffset = verticalRadius - y
         let horizontalOffset = horizontalRadius - x
         
-        let leftAxis = Float(verticalOffset + horizontalOffset) / 2
-        let rightAxis = Float(verticalOffset - horizontalOffset) / 2
+        let left = Float(verticalOffset + horizontalOffset) / 2
+        let right = Float(verticalOffset - horizontalOffset) / 2
         
-        return Coordinates(withLeftAxis: Int(leftAxis), rightAxis: Int(rightAxis))
+        return Coordinates(left: Int(left), right: Int(right))
     }
     
     private func rowIsOffset(row: Int) -> Bool {
@@ -93,7 +88,7 @@ class Keyboard {
     // MARK: - Transforms
     
     private func pitchForCoordinates(coordinates: Coordinates) -> Int {
-        return centerPitch + coordinates.leftAxis * leftAxisInterval + coordinates.rightAxis * rightAxisInterval
+        return centerPitch + coordinates.left * leftInterval + coordinates.right * rightInterval
     }
     
     private func pathForCoordinates(coordinates: Coordinates) -> UIBezierPath {
@@ -117,9 +112,9 @@ class Keyboard {
         let horizontalKeyRadius = 1.0 / CGFloat(horizontalRadius) / 2.0
         let verticalKeyRadius = 1.0 / CGFloat(verticalRadius) / 2.0
         
-        let leftAxisDifference = CGVectorMake(-horizontalKeyRadius * CGFloat(coordinates.leftAxis), -verticalKeyRadius * CGFloat(coordinates.leftAxis))
-        let rightAxisDifference = CGVectorMake(horizontalKeyRadius * CGFloat(coordinates.rightAxis), -verticalKeyRadius * CGFloat(coordinates.rightAxis))
+        let leftDifference = CGVectorMake(-horizontalKeyRadius * CGFloat(coordinates.left), -verticalKeyRadius * CGFloat(coordinates.left))
+        let rightDifference = CGVectorMake(horizontalKeyRadius * CGFloat(coordinates.right), -verticalKeyRadius * CGFloat(coordinates.right))
         
-        return CGPointMake(0.5 + leftAxisDifference.dx + rightAxisDifference.dx, 0.5 + leftAxisDifference.dy + rightAxisDifference.dy)
+        return CGPointMake(0.5 + leftDifference.dx + rightDifference.dx, 0.5 + leftDifference.dy + rightDifference.dy)
     }
 }
