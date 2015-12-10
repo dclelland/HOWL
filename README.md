@@ -1,28 +1,13 @@
 # HOWL
 
-HOWL aims to provide a simple formant synthesizer with a minimum of configuration (no configuration whatsoever).
+HOWL aims to provide a simple formant synthesizer.
 
 ## Todo
 
-### Interface
-
-- Keyboard
-    - Fix the duplicate note thing
-
-- Synthesizer
-    - Find elegant note reload thing
-
-- Controls
-    - Persistence
-
-- Vocoder
-    - Unstable filters (see when you lower bandwidth to zero)
-
-- Phonemeboard
-    - Should display rosette instead of waveform
-    - Should fade colours
-    - Crashing sporadically, also shows tearing...
-    - Draw circle path and align letters correctly (perhaps only illuminate the circle)
+- Set up persistent parameters (just use a really dumb solution like NSUserDefaults or something)
+- Fix the keyboard duplicate note thing/get the keyboard to reload the view in a nicer way
+- Fix the unstable bandpass filters (they saturate if you set BW to zero)
+- Perhaps add proper intervals to the keyboard axis controls (or rename 'Left Interval' -> 'Left Semitones' or something)
 
 ## Wishlist
 
