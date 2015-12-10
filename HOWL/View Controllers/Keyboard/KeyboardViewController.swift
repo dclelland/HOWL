@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bezzy
 
 class KeyboardViewController: UIViewController {
     
@@ -91,10 +92,11 @@ extension KeyboardViewController: UICollectionViewDataSource {
             return cell
         }
         
-        let path = key.path
+        let path = key.path.makePath { make in
+            make.translation(tx: -key.path.bounds.minX, ty: -key.path.bounds.minY)
+            make.transform(collectionView.bounds.denormalizationTransform())
+        }
         
-        path.applyTransform(collectionView.bounds.denormalizationTransform())
-        path.applyTransform(CGAffineTransformMakeTranslation(-path.bounds.minX, -path.bounds.minY))
         layer.path = path.CGPath
         
         let keyNotes = notes.values.filter { $0.frequency.value == key.frequency }
@@ -121,9 +123,9 @@ extension KeyboardViewController: KeyboardViewLayoutDelegate {
             return nil
         }
         
-        let path = key.path
-        path.applyTransform(collectionView.bounds.denormalizationTransform())
-        return path
+        return key.path.makePath { make in
+            make.transform(collectionView.bounds.denormalizationTransform())
+        }
     }
     
 }

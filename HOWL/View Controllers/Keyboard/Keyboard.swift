@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bezzy
 
 class Keyboard {
     
@@ -97,15 +98,13 @@ class Keyboard {
         let horizontalKeyRadius = 1.0 / (2.0 * CGFloat(horizontalRadius))
         let verticalKeyRadius = 1.0 / (2.0 * CGFloat(verticalRadius))
         
-        let path = UIBezierPath()
-        
-        path.moveToPoint(CGPointMake(location.x, location.y - verticalKeyRadius))
-        path.addLineToPoint(CGPointMake(location.x + horizontalKeyRadius, location.y))
-        path.addLineToPoint(CGPointMake(location.x, location.y + verticalKeyRadius))
-        path.addLineToPoint(CGPointMake(location.x - horizontalKeyRadius, location.y))
-        path.closePath()
-        
-        return path
+        return UIBezierPath.makePath { make in
+            make.move(x: location.x, y: location.y - verticalKeyRadius)
+            make.line(x: location.x + horizontalKeyRadius, y: location.y)
+            make.line(x: location.x, y: location.y + verticalKeyRadius)
+            make.line(x: location.x - horizontalKeyRadius, y: location.y)
+            make.closed()
+        }
     }
     
     private func locationForCoordinates(coordinates: Coordinates) -> CGPoint {
