@@ -2,15 +2,10 @@
 
 HOWL aims to provide a simple formant synthesizer.
 
-## Todo
-
-- Perhaps add proper intervals to the keyboard axis controls (or rename 'Left Interval' -> 'Left Semitones' or something)
-
-- Reversible flip gestures
-
 ## Wishlist
 
-- 3D touch
-- Sound input support
+- Inter-app audio
 - MIDI input support
+- 3D touch
+- Reversible flip gestures
 - Custom iPad layout
