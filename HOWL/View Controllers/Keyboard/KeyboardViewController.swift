@@ -21,8 +21,22 @@ class KeyboardViewController: UIViewController {
     
     let keyboard = Keyboard(leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
     
-    var notes = [UITouch: (key: Key, note: SynthesizerNote)]() {
-        didSet { keyboardView?.reloadData() }
+    var notes = [UITouch: (key: Key, note: SynthesizerNote)]()
+    
+    // MARK: - Life cycle
+    
+    func refreshNotes() {
+        notes.keys.forEach { touch in
+            if let key = keyForTouch(touch) {
+                updateNoteForTouch(touch, withKey: key)
+            } else {
+                stopNoteForTouch(touch)
+            }
+        }
+    }
+    
+    func refreshView() {
+        keyboardView?.reloadData()
     }
     
     // MARK: - Note actions
@@ -49,20 +63,6 @@ class KeyboardViewController: UIViewController {
             Audio.synthesizer.stopNote(note)
             notes[touch] = nil
         }
-    }
-    
-    // MARK: - Note refresh
-    
-    func refreshNotes() {
-        notes.keys.forEach { touch in
-            if let key = keyForTouch(touch) {
-                updateNoteForTouch(touch, withKey: key)
-            } else {
-                stopNoteForTouch(touch)
-            }
-        }
-        
-        keyboardView?.reloadData()
     }
     
     // MARK: - Button events
@@ -122,7 +122,18 @@ extension KeyboardViewController: UICollectionViewDataSource {
         
         if keyNotes.count > 0 {
             return UIColor.HOWL.lightColor(withHue: CGFloat(key.note) / 12.0)
-        } else {
+        }
+        
+        guard let touchState = multitouchGestureRecognizer?.touchState else {
+            return UIColor.blackColor()
+        }
+        
+        switch touchState {
+        case .Ready:
+            return UIColor.HOWL.darkGreyColor()
+        case .Live:
+            return UIColor.HOWL.mediumColor(withHue: CGFloat(key.note) / 12.0)
+        case .Sustained:
             return UIColor.HOWL.darkColor(withHue: CGFloat(key.note) / 12.0)
         }
     }
@@ -157,6 +168,7 @@ extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
         if let key = keyForTouch(touch) {
             playNoteForTouch(touch, withKey: key)
         }
+        refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
@@ -165,14 +177,17 @@ extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
         } else {
             stopNoteForTouch(touch)
         }
+        refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
         stopNoteForTouch(touch)
+        refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         stopNoteForTouch(touch)
+        refreshView()
     }
     
     // MARK: Private getters

@@ -19,9 +19,25 @@ protocol MultitouchGestureRecognizerDelegate: UIGestureRecognizerDelegate {
     
 }
 
+enum MultitouchGestureRecognizerTouchState {
+    case Ready
+    case Live
+    case Sustained
+}
+
 class MultitouchGestureRecognizer: UIPanGestureRecognizer {
     
     lazy var touches = [UITouch]()
+    
+    var touchState: MultitouchGestureRecognizerTouchState {
+        if touches.count == 0 {
+            return .Ready
+        } else if numberOfTouches() > 0 {
+            return .Live
+        } else {
+            return .Sustained
+        }
+    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)

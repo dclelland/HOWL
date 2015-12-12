@@ -22,19 +22,6 @@ class PhonemeboardViewController: UIViewController {
     
     // MARK: - Life cycle
     
-    func refreshView() {
-        guard let touches = multitouchGestureRecognizer?.touches else {
-            return
-        }
-        
-        phonemeboardView?.state = stateForTouches(touches)
-        
-        if let hue = hueForTouches(touches), let saturation = saturationForTouches(touches) {
-            phonemeboardView?.hue = hue
-            phonemeboardView?.saturation = saturation
-        }
-    }
-    
     func refreshAudio() {
         guard let touches = multitouchGestureRecognizer?.touches else {
             return
@@ -52,7 +39,26 @@ class PhonemeboardViewController: UIViewController {
             Audio.tenorVocoder.updateWithPhoneme(tenor)
             Audio.bassVocoder.updateWithPhoneme(bass)
         }
+    }
+    
+    func refreshView() {
+        guard let touchState = multitouchGestureRecognizer?.touchState, let touches = multitouchGestureRecognizer?.touches else {
+            return
+        }
         
+        switch touchState {
+        case .Ready:
+            phonemeboardView?.state = .Normal
+        case .Live:
+            phonemeboardView?.state = .Highlighted
+        case .Sustained:
+            phonemeboardView?.state = .Selected
+        }
+        
+        if let hue = hueForTouches(touches), let saturation = saturationForTouches(touches) {
+            phonemeboardView?.hue = hue
+            phonemeboardView?.saturation = saturation
+        }
     }
     
     // MARK: - Button events
@@ -83,33 +89,6 @@ class PhonemeboardViewController: UIViewController {
         let bass = phonemeboard.bassPhonemeAtLocation(location)
         
         return (soprano, alto, tenor, bass)
-    }
-    
-    private func stateForTouches(touches: [UITouch]) -> PhonemeboardViewState {
-        if touches.count == 0 {
-            return .Normal
-        }
-        
-        let liveTouches = touches.filter { (touch) -> Bool in
-            switch touch.phase {
-            case .Began:
-                return true
-            case .Moved:
-                return true
-            case .Stationary:
-                return true
-            case .Cancelled:
-                return false
-            case .Ended:
-                return false
-            }
-        }
-        
-        if liveTouches.count > 0 {
-            return .Highlighted
-        } else {
-            return .Selected
-        }
     }
     
     private func hueForTouches(touches: [UITouch]) -> CGFloat? {
@@ -162,23 +141,23 @@ extension PhonemeboardViewController: MultitouchGestureRecognizerDelegate {
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
-        refreshView()
         refreshAudio()
+        refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
-        refreshView()
         refreshAudio()
+        refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
-        refreshView()
         refreshAudio()
+        refreshView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
-        refreshView()
         refreshAudio()
+        refreshView()
     }
     
 }
