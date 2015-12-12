@@ -166,9 +166,17 @@ import Lerp
     }
     
     private var valueText: String? {
-        let valueText = NSString(format: "%.\(decimalPoints)f", value) as String
+        let numberFormatter = NSNumberFormatter()
         
-        return suffix != nil ? valueText + suffix! : valueText
+        numberFormatter.numberStyle = .DecimalStyle
+        numberFormatter.positiveSuffix = suffix ?? ""
+        numberFormatter.negativeSuffix = suffix ?? ""
+        numberFormatter.minimumFractionDigits = decimalPoints
+        numberFormatter.maximumFractionDigits = decimalPoints
+        
+        /* Needs check for negative zero values */
+        
+        return numberFormatter.stringFromNumber(value == -0 ? 0 : value)
     }
     
     // MARK: - Private getters (values)

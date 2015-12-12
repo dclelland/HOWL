@@ -4,7 +4,7 @@ HOWL aims to provide a simple formant synthesizer.
 
 ## Todo
 
-- Fix the minus sign on the interval dials
+- Proper cell selection with no duplicates
 - Perhaps add proper intervals to the keyboard axis controls (or rename 'Left Interval' -> 'Left Semitones' or something)
 
 - Reversible flip gestures
