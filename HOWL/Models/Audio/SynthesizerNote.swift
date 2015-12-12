@@ -19,11 +19,11 @@ class SynthesizerNote: AKNote {
         addProperty(self.amplitude)
     }
     
-    convenience init(withFrequency frequency: Float) {
-        self.init(withFrequency: frequency, andAmplitude: 1.0)
+    convenience init(frequency: Float) {
+        self.init(frequency: frequency, amplitude: 1.0)
     }
     
-    convenience init(withFrequency frequency: Float, andAmplitude amplitude: Float) {
+    convenience init(frequency: Float, amplitude: Float) {
         self.init()
         self.frequency.value = frequency
         self.amplitude.value = amplitude

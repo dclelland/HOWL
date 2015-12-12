@@ -8,13 +8,26 @@
 
 import UIKit
 
+struct KeyCoordinates {
+    var left: Int
+    var right: Int
+}
+
+extension KeyCoordinates: Equatable {}
+
+func ==(lhs: KeyCoordinates, rhs: KeyCoordinates) -> Bool {
+    return lhs.left == rhs.left && lhs.right == rhs.right
+}
+
 class Key {
     var pitch: Int
     var path: UIBezierPath
+    var coordinates: KeyCoordinates
     
-    init(withPitch pitch: Int, path: UIBezierPath) {
+    init(withPitch pitch: Int, path: UIBezierPath, coordinates: KeyCoordinates) {
         self.pitch = pitch
         self.path = path
+        self.coordinates = coordinates
     }
     
     var name: String {
@@ -25,10 +38,18 @@ class Key {
         return pow(2, (Float(pitch) - 69) / 12) * 440
     }
     
+    var note: Int {
+        return pitch % 12
+    }
+    
+    var octave: Int {
+        return pitch / 12 - 1
+    }
+    
     // MARK: Private getters
     
     private var noteName: String {
-        switch pitch % 12 {
+        switch note {
         case 0: return "C"
         case 1: return "C#"
         case 2: return "D"
@@ -46,6 +67,6 @@ class Key {
     }
     
     private var octaveName: String {
-        return String(pitch / 12 - 1)
+        return String(octave)
     }
 }

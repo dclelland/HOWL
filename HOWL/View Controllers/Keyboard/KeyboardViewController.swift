@@ -19,33 +19,33 @@ class KeyboardViewController: UIViewController {
         didSet { holdButton?.selected = Settings.keyboardSustain.value }
     }
     
-    let keyboard = Keyboard()
+    let keyboard = Keyboard(leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
     
-    var notes = [UITouch: SynthesizerNote]() {
+    var notes = [UITouch: (key: Key, note: SynthesizerNote)]() {
         didSet { keyboardView?.reloadData() }
     }
     
     // MARK: - Note actions
     
-    func playNote(withTouch touch: UITouch, frequency: Float) {
-        let note = SynthesizerNote(withFrequency: frequency)
+    func playNoteForTouch(touch: UITouch, withKey key: Key) {
+        let note = SynthesizerNote(frequency: key.frequency)
         Audio.synthesizer.playNote(note)
-        notes[touch] = note
+        notes[touch] = (key: key, note: note)
     }
     
-    func updateNote(withTouch touch: UITouch, frequency: Float) {
-        if let note = notes[touch] {
-            if note.frequency.value != frequency {
-                stopNote(withTouch: touch)
-                playNote(withTouch: touch, frequency: frequency)
+    func updateNoteForTouch(touch: UITouch, withKey key: Key) {
+        if let note = notes[touch]?.note {
+            if note.frequency.value != key.frequency {
+                stopNoteForTouch(touch)
+                playNoteForTouch(touch, withKey: key)
             }
         } else {
-            playNote(withTouch: touch, frequency: frequency)
+            playNoteForTouch(touch, withKey: key)
         }
     }
     
-    func stopNote(withTouch touch: UITouch) {
-        if let note = notes[touch] {
+    func stopNoteForTouch(touch: UITouch) {
+        if let note = notes[touch]?.note {
             Audio.synthesizer.stopNote(note)
             notes[touch] = nil
         }
@@ -104,12 +104,16 @@ extension KeyboardViewController: UICollectionViewDataSource {
     }
     
     private func collectionView(collectionView: UICollectionView, colorForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIColor {
-        let keyNotes = notes.values.filter { $0.frequency.value == key.frequency }
+        let keyNotes = notes.values.filter { $0.key.coordinates == key.coordinates }
+        
+        let hue = CGFloat(key.note) / 12.0
+        let saturation = 1.0 - CGFloat(key.pitch - keyboard.centerPitch) / CGFloat(keyboard.centerPitch)
+        let brightness = 1.0 - CGFloat(keyboard.centerPitch - key.pitch) / CGFloat(keyboard.centerPitch)
         
         if keyNotes.count > 0 {
-            return UIColor.HOWL.lightColor(withHue: CGFloat(key.pitch) % 12.0 / 12.0)
+            return UIColor.HOWL.lightColor(withHue: hue, saturation: saturation, brightness: brightness)
         } else {
-            return UIColor.HOWL.darkGreyColor()
+            return UIColor.HOWL.darkColor(withHue: hue, saturation: saturation, brightness: brightness)
         }
     }
     
@@ -140,29 +144,33 @@ extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
-        let location = CGPointApplyAffineTransform(touch.locationInView(keyboardView), keyboardView!.bounds.normalizationTransform())
-        
-        if let key = keyboard.keyAtLocation(location) {
-            playNote(withTouch: touch, frequency: key.frequency)
+        if let key = keyForTouch(touch) {
+            playNoteForTouch(touch, withKey: key)
         }
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
-        let location = CGPointApplyAffineTransform(touch.locationInView(keyboardView), keyboardView!.bounds.normalizationTransform())
-        
-        if let key = keyboard.keyAtLocation(location) {
-            updateNote(withTouch: touch, frequency: key.frequency)
+        if let key = keyForTouch(touch) {
+            updateNoteForTouch(touch, withKey: key)
         } else {
-            stopNote(withTouch: touch)
+            stopNoteForTouch(touch)
         }
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
-        stopNote(withTouch: touch)
+        stopNoteForTouch(touch)
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
-        stopNote(withTouch: touch)
+        stopNoteForTouch(touch)
+    }
+    
+    // MARK: Private getters
+    
+    private func keyForTouch(touch: UITouch) -> Key? {
+        let location = CGPointApplyAffineTransform(touch.locationInView(keyboardView), keyboardView!.bounds.normalizationTransform())
+        
+        return keyboard.keyAtLocation(location)
     }
     
 }

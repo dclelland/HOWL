@@ -71,7 +71,7 @@ class SynthesizerViewController: UIViewController {
     
     /* This is atrocious but whatever */
     
-    var keyboardViewController: KeyboardViewController? {
+    private var keyboardViewController: KeyboardViewController? {
         return flipViewController?.howlViewController?.rightViewController?.frontViewController as? KeyboardViewController
     }
     

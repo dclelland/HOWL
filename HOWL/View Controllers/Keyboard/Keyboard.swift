@@ -11,13 +11,18 @@ import Bezzy
 
 class Keyboard {
     
-    var centerPitch = 48
+    var leftInterval: Int
+    var rightInterval: Int
     
-    var leftInterval = 4
-    var rightInterval = 7
+    var horizontalRadius: Int = 4
+    var verticalRadius: Int = 5
     
-    var horizontalRadius = 4
-    var verticalRadius = 5
+    var centerPitch: Int = 48
+    
+    init(leftInterval: Int, rightInterval: Int) {
+        self.leftInterval = leftInterval
+        self.rightInterval = rightInterval
+    }
     
     // MARK: - Counts
     
@@ -36,7 +41,7 @@ class Keyboard {
             let pitch = pitchForCoordinates(coordinates)
             let path = pathForCoordinates(coordinates)
             
-            return Key(withPitch: pitch, path: path)
+            return Key(withPitch: pitch, path: path, coordinates: coordinates)
         }
         
         return nil
@@ -54,14 +59,9 @@ class Keyboard {
         return nil
     }
     
-    // MARK: - Coordinates
+    // MARK: - Keyboard coordinates
     
-    private struct Coordinates {
-        var left: Int
-        var right: Int
-    }
-    
-    private func coordinatesForIndex(index: Int, inRow row: Int) -> Coordinates? {
+    private func coordinatesForIndex(index: Int, inRow row: Int) -> KeyCoordinates? {
         if row >= numberOfRows() || index >= numberOfKeysInRow(row) {
             return nil
         }
@@ -75,7 +75,7 @@ class Keyboard {
         let left = Float(verticalOffset + horizontalOffset) / 2
         let right = Float(verticalOffset - horizontalOffset) / 2
         
-        return Coordinates(left: Int(left), right: Int(right))
+        return KeyCoordinates(left: Int(left), right: Int(right))
     }
     
     private func rowIsOffset(row: Int) -> Bool {
@@ -88,11 +88,11 @@ class Keyboard {
     
     // MARK: - Transforms
     
-    private func pitchForCoordinates(coordinates: Coordinates) -> Int {
+    private func pitchForCoordinates(coordinates: KeyCoordinates) -> Int {
         return centerPitch + coordinates.left * leftInterval + coordinates.right * rightInterval
     }
     
-    private func pathForCoordinates(coordinates: Coordinates) -> UIBezierPath {
+    private func pathForCoordinates(coordinates: KeyCoordinates) -> UIBezierPath {
         let location = locationForCoordinates(coordinates)
         
         let horizontalKeyRadius = 1.0 / (2.0 * CGFloat(horizontalRadius))
@@ -107,7 +107,7 @@ class Keyboard {
         }
     }
     
-    private func locationForCoordinates(coordinates: Coordinates) -> CGPoint {
+    private func locationForCoordinates(coordinates: KeyCoordinates) -> CGPoint {
         let horizontalKeyRadius = 1.0 / CGFloat(horizontalRadius) / 2.0
         let verticalKeyRadius = 1.0 / CGFloat(verticalRadius) / 2.0
         
