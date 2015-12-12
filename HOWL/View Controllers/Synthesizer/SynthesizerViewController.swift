@@ -44,13 +44,13 @@ class SynthesizerViewController: UIViewController {
     @IBAction func vibratoDepthDialControlValueChanged(dialControl: DialControl) {
         Settings.vibratoDepth.value = dialControl.value
         
-        Audio.shared.synthesizer.vibratoDepth.value = dialControl.value / 100
+        Audio.synthesizer.vibratoDepth.value = dialControl.value / 100
     }
     
     @IBAction func vibratoFrequencyDialControlValueChanged(dialControl: DialControl) {
         Settings.vibratoFrequency.value = dialControl.value
         
-        Audio.shared.synthesizer.vibratoFrequency.value = dialControl.value
+        Audio.synthesizer.vibratoFrequency.value = dialControl.value
     }
     
     @IBAction func keyboardLeftIntervalDialControlValueChanged(dialControl: DialControl) {

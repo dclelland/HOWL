@@ -8,20 +8,26 @@
 
 import AudioKit
 
-class Audio {
+struct Audio {
     
-    static let shared = Audio()
+    static let synthesizer = Synthesizer()
     
-    let synthesizer: Synthesizer
+    static let sopranoVocoder = Vocoder(withInput: synthesizer.output)
+    static let altoVocoder = Vocoder(withInput: synthesizer.output)
+    static let tenorVocoder = Vocoder(withInput: synthesizer.output)
+    static let bassVocoder = Vocoder(withInput: synthesizer.output)
     
-    let sopranoVocoder: Vocoder
-    let altoVocoder: Vocoder
-    let tenorVocoder: Vocoder
-    let bassVocoder: Vocoder
+    static let master = Master(
+        withInput: synthesizer.output,
+        voices: [
+            sopranoVocoder.output,
+            altoVocoder.output,
+            tenorVocoder.output,
+            bassVocoder.output
+        ]
+    )
     
-    let master: Master
-    
-    var instruments: [AKInstrument] {
+    static var instruments: [AKInstrument] {
         return [
             synthesizer,
             sopranoVocoder,
@@ -32,28 +38,9 @@ class Audio {
         ]
     }
     
-    init() {
-        self.synthesizer = Synthesizer()
-        
-        self.sopranoVocoder = Vocoder.init(withInput: self.synthesizer.output)
-        self.altoVocoder = Vocoder.init(withInput: self.synthesizer.output)
-        self.tenorVocoder = Vocoder.init(withInput: self.synthesizer.output)
-        self.bassVocoder = Vocoder.init(withInput: self.synthesizer.output)
-        
-        self.master = Master.init(
-            withInput: self.synthesizer.output,
-            voices: (
-                self.sopranoVocoder.output,
-                self.altoVocoder.output,
-                self.tenorVocoder.output,
-                self.bassVocoder.output
-            )
-        )
-    }
-    
     // MARK: - Life cycle
     
-    func start() {
+    static func start() {
         for instrument in instruments {
             AKOrchestra.addInstrument(instrument)
         }
@@ -61,13 +48,13 @@ class Audio {
         AKOrchestra.start()
     }
     
-    func play() {
+    static func play() {
         for instrument in instruments {
             instrument.play()
         }
     }
     
-    func stop() {
+    static func stop() {
         for instrument in instruments {
             instrument.stop()
         }

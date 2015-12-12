@@ -25,12 +25,12 @@ class Synthesizer: AKInstrument {
         
         let note = SynthesizerNote()
         
-        let envelope = AKLinearADSREnvelope(
+        let envelope = AKADSREnvelope(
             attackDuration: 0.01.ak,
             decayDuration: 0.01.ak,
             sustainLevel: 1.0.ak,
             releaseDuration: 0.01.ak,
-            delay: AKConstant(value: 0.0)
+            delay: 0.0.ak
         )
         
         let vibrato = AKLowFrequencyOscillator(

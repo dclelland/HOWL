@@ -41,22 +41,16 @@ class PhonemeboardViewController: UIViewController {
         }
         
         if touches.count == 0 {
-            Audio.shared.sopranoVocoder.mute()
-            Audio.shared.altoVocoder.mute()
-            Audio.shared.tenorVocoder.mute()
-            Audio.shared.bassVocoder.mute()
+            Audio.master.mute()
         } else {
-            Audio.shared.sopranoVocoder.unmute()
-            Audio.shared.altoVocoder.unmute()
-            Audio.shared.tenorVocoder.unmute()
-            Audio.shared.bassVocoder.unmute()
+            Audio.master.unmute()
         }
         
         if let (soprano, alto, tenor, bass) = phonemesForTouches(touches) {
-            Audio.shared.sopranoVocoder.updateWithPhoneme(soprano)
-            Audio.shared.altoVocoder.updateWithPhoneme(alto)
-            Audio.shared.tenorVocoder.updateWithPhoneme(tenor)
-            Audio.shared.bassVocoder.updateWithPhoneme(bass)
+            Audio.sopranoVocoder.updateWithPhoneme(soprano)
+            Audio.altoVocoder.updateWithPhoneme(alto)
+            Audio.tenorVocoder.updateWithPhoneme(tenor)
+            Audio.bassVocoder.updateWithPhoneme(bass)
         }
         
     }

@@ -10,27 +10,36 @@ import AudioKit
 
 class Master: AKInstrument {
     
+    var amplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    
     var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var reverbMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     
-    init(withInput input: AKAudio, voices: (AKAudio, AKAudio, AKAudio, AKAudio)) {
+    init(withInput input: AKAudio, voices: [AKAudio]) {
         super.init()
+        
+        addProperty(amplitude)
         
         addProperty(bitcrushMix)
         addProperty(reverbMix)
         
-        let (soprano, alto, tenor, bass) = voices
+        let sum = AKSum()
         
-        let quartet = (soprano + alto + tenor + bass) * 0.05.ak
+        sum.inputs = voices
+        
+        let balance = AKBalance(
+            input: sum,
+            comparatorAudioSource: input * amplitude * 0.125.ak
+        )
         
         let bitcrush = AKDecimator(
-            input: quartet,
+            input: balance,
             bitDepth: 24.ak,
             sampleRate: 4000.ak
         )
         
         let bitcrushOutput = AKMix(
-            input1: quartet,
+            input1: balance,
             input2: bitcrush,
             balance: bitcrushMix
         )
@@ -55,14 +64,23 @@ class Master: AKInstrument {
         
         let output = AKStereoAudio(leftAudio: reverbLeftOutput, rightAudio: reverbRightOutput)
         
+        connect(sum)
+        
         setStereoAudioOutput(output)
         
         resetParameter(input)
         
-        resetParameter(soprano)
-        resetParameter(alto)
-        resetParameter(tenor)
-        resetParameter(bass)
+        voices.forEach { self.resetParameter($0) }
+    }
+    
+    // MARK: - Actions
+    
+    func mute() {
+        amplitude.value = 0.0
+    }
+    
+    func unmute() {
+        amplitude.value = 1.0
     }
     
 }

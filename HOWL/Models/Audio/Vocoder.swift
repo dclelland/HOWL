@@ -26,7 +26,6 @@ class Vocoder: AKInstrument {
     var bandwidth4 = AKInstrumentProperty(value: 100.0)
     var bandwidth5 = AKInstrumentProperty(value: 100.0)
     
-    var amplitude = AKInstrumentProperty(minimum: 0.0, maximum: 1.0)
     var portamento = AKInstrumentProperty(value: 0.02, minimum: 0.0, maximum: 0.02)
     
     var output = AKAudio.globalParameter()
@@ -50,7 +49,6 @@ class Vocoder: AKInstrument {
         addProperty(bandwidth4)
         addProperty(bandwidth5)
         
-        addProperty(amplitude)
         addProperty(portamento)
         
         let filter1 = AKResonantFilter(
@@ -85,21 +83,13 @@ class Vocoder: AKInstrument {
         
         let balance = AKBalance(
             input: filter5,
-            comparatorAudioSource: input.scaledBy(amplitude)
+            comparatorAudioSource: input
         )
 
         assignOutput(output, to: balance)
     }
     
     // MARK: - Actions
-    
-    func mute() {
-        self.amplitude.value = 0.0
-    }
-    
-    func unmute() {
-        self.amplitude.value = 1.0
-    }
     
     func updateWithPhoneme(phoneme: Phoneme) {
         frequency1.value = phoneme.frequencies.0

@@ -29,7 +29,7 @@ class KeyboardViewController: UIViewController {
     
     func playNote(withTouch touch: UITouch, frequency: Float) {
         let note = SynthesizerNote(withFrequency: frequency)
-        Audio.shared.synthesizer.playNote(note)
+        Audio.synthesizer.playNote(note)
         notes[touch] = note
     }
     
@@ -46,7 +46,7 @@ class KeyboardViewController: UIViewController {
     
     func stopNote(withTouch touch: UITouch) {
         if let note = notes[touch] {
-            Audio.shared.synthesizer.stopNote(note)
+            Audio.synthesizer.stopNote(note)
             notes[touch] = nil
         }
     }
