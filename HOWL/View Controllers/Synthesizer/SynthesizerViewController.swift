@@ -57,14 +57,14 @@ class SynthesizerViewController: UIViewController {
         Settings.keyboardLeftInterval.value = Int(dialControl.value)
         
         keyboardViewController?.keyboard.leftInterval = Int(dialControl.value)
-        keyboardViewController?.keyboardView?.reloadData()
+        keyboardViewController?.refreshNotes()
     }
     
     @IBAction func keyboardRightIntervalDialControlValueChanged(dialControl: DialControl) {
         Settings.keyboardRightInterval.value = Int(dialControl.value)
         
         keyboardViewController?.keyboard.rightInterval = Int(dialControl.value)
-        keyboardViewController?.keyboardView?.reloadData()
+        keyboardViewController?.refreshNotes()
     }
     
     // MARK: - Private getters

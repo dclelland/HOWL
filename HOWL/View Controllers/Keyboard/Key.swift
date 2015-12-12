@@ -30,20 +30,20 @@ class Key {
         self.coordinates = coordinates
     }
     
-    var name: String {
-        return noteName + octaveName
+    var note: Int {
+        return pitch - 12 * (pitch / 12)
+    }
+    
+    var octave: Int {
+        return pitch / 12 - 1
     }
     
     var frequency: Float {
         return pow(2, (Float(pitch) - 69) / 12) * 440
     }
     
-    var note: Int {
-        return pitch % 12
-    }
-    
-    var octave: Int {
-        return pitch / 12 - 1
+    var name: String {
+        return noteName + octaveName
     }
     
     // MARK: Private getters

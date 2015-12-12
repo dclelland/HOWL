@@ -51,6 +51,20 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    // MARK: - Note refresh
+    
+    func refreshNotes() {
+        notes.keys.forEach { touch in
+            if let key = keyForTouch(touch) {
+                updateNoteForTouch(touch, withKey: key)
+            } else {
+                stopNoteForTouch(touch)
+            }
+        }
+        
+        keyboardView?.reloadData()
+    }
+    
     // MARK: - Button events
     
     @IBAction func flipButtonTapped(button: ToolbarButton) {
