@@ -70,7 +70,7 @@ class SynthesizerViewController: UIViewController {
     // MARK: - Private getters
     
     var keyboardViewController: KeyboardViewController? {
-        return flipViewController?.frontViewController as? KeyboardViewController
+        return flipViewController?.howlViewController?.rightViewController?.frontViewController as? KeyboardViewController
     }
     
 }

@@ -7,10 +7,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Howl View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HowlViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -70,6 +70,10 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="leftView" destination="kQc-ji-xuA" id="p0a-Ia-zqj"/>
+                        <outlet property="rightView" destination="zJH-ao-YKj" id="v0P-Ju-FOI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,7 +95,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="5Oq-Ld-xFp" kind="embed" id="X1u-Qb-C8P"/>
+                                    <segue destination="uAc-3B-Yd9" kind="embed" id="xj2-iI-9LT"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Kk-9ow">
@@ -789,7 +793,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="2" width="136.5" height="110"/>
+                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -911,7 +915,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1003,7 +1007,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240.25" y="1521.5"/>
+            <point key="canvasLocation" x="988.5" y="1521"/>
         </scene>
         <!--Synthesizer View Controller-->
         <scene sceneID="45u-mc-4Nb">
@@ -1170,7 +1174,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1258,7 +1262,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-dp-Xy2" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="2" y="2" width="137" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1266,7 +1270,7 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left Interval"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="-12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                                 <real key="value" value="12"/>
@@ -1285,14 +1289,14 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="141" y="2" width="136" height="110.5"/>
+                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="-12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                                 <real key="value" value="12"/>
@@ -1378,7 +1382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAT-61-qeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982.25" y="1521.5"/>
+            <point key="canvasLocation" x="238.5" y="1521"/>
         </scene>
         <!--Flip View Controller-->
         <scene sceneID="bnJ-xd-vn6">
@@ -1396,7 +1400,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="uAc-3B-Yd9" kind="embed" id="lIt-vM-qsm"/>
+                                    <segue destination="5Oq-Ld-xFp" kind="embed" id="G59-vD-cX4"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-tP-97e">

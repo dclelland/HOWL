@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		6500FD6B1C1BD43C00C2254B /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD6A1C1BD43C00C2254B /* Setting.swift */; };
+		6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD6C1C1C022900C2254B /* HowlViewController.swift */; };
+		6500FD6F1C1C029200C2254B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500FD6E1C1C029200C2254B /* Main.storyboard */; };
+		6500FD761C1C02E500C2254B /* AudioKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */; };
+		6500FD771C1C02E500C2254B /* CGRect+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD721C1C02E500C2254B /* CGRect+Normalization.swift */; };
+		6500FD781C1C02E500C2254B /* Int+Parity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD731C1C02E500C2254B /* Int+Parity.swift */; };
+		6500FD791C1C02E500C2254B /* UIColor+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD741C1C02E500C2254B /* UIColor+Scheme.swift */; };
+		6500FD7A1C1C02E500C2254B /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD751C1C02E500C2254B /* UIImage+Color.swift */; };
+		6500FD7C1C1C02FA00C2254B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6500FD7B1C1C02FA00C2254B /* Assets.xcassets */; };
 		657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */; };
 		657F0D0E1C0D94F3004B17EF /* VocoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0C1C0D94F3004B17EF /* VocoderViewController.swift */; };
 		657F0D141C0EFA72004B17EF /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D131C0EFA72004B17EF /* FlipViewController.swift */; };
 		657F0D161C1266AC004B17EF /* DialControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D151C1266AC004B17EF /* DialControl.swift */; };
 		65800FAE1C09D1BF000410CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F8A1C09D1BF000410CB /* AppDelegate.swift */; };
-		65800FAF1C09D1BF000410CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65800F8C1C09D1BF000410CB /* Assets.xcassets */; };
-		65800FB01C09D1BF000410CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65800F8D1C09D1BF000410CB /* Main.storyboard */; };
-		65800FB11C09D1BF000410CB /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F8E1C09D1BF000410CB /* AudioKit.swift */; };
-		65800FB21C09D1BF000410CB /* CGRect+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F901C09D1BF000410CB /* CGRect+Normalization.swift */; };
-		65800FB31C09D1BF000410CB /* Int+Parity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F911C09D1BF000410CB /* Int+Parity.swift */; };
-		65800FB41C09D1BF000410CB /* UIColor+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F921C09D1BF000410CB /* UIColor+Scheme.swift */; };
-		65800FB51C09D1BF000410CB /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F931C09D1BF000410CB /* UIImage+Color.swift */; };
 		65800FB71C09D1BF000410CB /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F981C09D1BF000410CB /* Audio.swift */; };
 		65800FB81C09D1BF000410CB /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F991C09D1BF000410CB /* Master.swift */; };
 		65800FB91C09D1BF000410CB /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F9A1C09D1BF000410CB /* Synthesizer.swift */; };
@@ -45,19 +46,20 @@
 		2645469B5082872EBB904DC0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4D2B569B9BD80BCFD8D1EFAE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6500FD6A1C1BD43C00C2254B /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		6500FD6C1C1C022900C2254B /* HowlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowlViewController.swift; sourceTree = "<group>"; };
+		6500FD6E1C1C029200C2254B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioKit+Helpers.swift"; sourceTree = "<group>"; };
+		6500FD721C1C02E500C2254B /* CGRect+Normalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Normalization.swift"; sourceTree = "<group>"; };
+		6500FD731C1C02E500C2254B /* Int+Parity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Parity.swift"; sourceTree = "<group>"; };
+		6500FD741C1C02E500C2254B /* UIColor+Scheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Scheme.swift"; sourceTree = "<group>"; };
+		6500FD751C1C02E500C2254B /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		6500FD7B1C1C02FA00C2254B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656472CF1BF6BD2A00BDEB1B /* HOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesizerViewController.swift; sourceTree = "<group>"; };
 		657F0D0C1C0D94F3004B17EF /* VocoderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocoderViewController.swift; sourceTree = "<group>"; };
 		657F0D131C0EFA72004B17EF /* FlipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
 		657F0D151C1266AC004B17EF /* DialControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialControl.swift; sourceTree = "<group>"; };
 		65800F8A1C09D1BF000410CB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65800F8C1C09D1BF000410CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		65800F8D1C09D1BF000410CB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		65800F8E1C09D1BF000410CB /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioKit.swift; sourceTree = "<group>"; };
-		65800F901C09D1BF000410CB /* CGRect+Normalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Normalization.swift"; sourceTree = "<group>"; };
-		65800F911C09D1BF000410CB /* Int+Parity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Parity.swift"; sourceTree = "<group>"; };
-		65800F921C09D1BF000410CB /* UIColor+Scheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Scheme.swift"; sourceTree = "<group>"; };
-		65800F931C09D1BF000410CB /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		65800F941C09D1BF000410CB /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
 		65800F951C09D1BF000410CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65800F981C09D1BF000410CB /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
@@ -101,6 +103,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6500FD701C1C02E500C2254B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */,
+				6500FD721C1C02E500C2254B /* CGRect+Normalization.swift */,
+				6500FD731C1C02E500C2254B /* Int+Parity.swift */,
+				6500FD741C1C02E500C2254B /* UIColor+Scheme.swift */,
+				6500FD751C1C02E500C2254B /* UIImage+Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		656472C61BF6BD2A00BDEB1B = {
 			isa = PBXGroup;
 			children = (
@@ -140,35 +154,14 @@
 			isa = PBXGroup;
 			children = (
 				65800F8A1C09D1BF000410CB /* AppDelegate.swift */,
-				65800F8E1C09D1BF000410CB /* AudioKit.swift */,
+				6500FD6E1C1C029200C2254B /* Main.storyboard */,
 				65800F9F1C09D1BF000410CB /* View Controllers */,
 				65800FAB1C09D1BF000410CB /* Views */,
 				65800F961C09D1BF000410CB /* Models */,
-				65800F8F1C09D1BF000410CB /* Categories */,
-				65800F8B1C09D1BF000410CB /* Assets */,
+				6500FD701C1C02E500C2254B /* Extensions */,
 				65800FC81C09D1CF000410CB /* Supporting Files */,
 			);
 			path = HOWL;
-			sourceTree = "<group>";
-		};
-		65800F8B1C09D1BF000410CB /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				65800F8C1C09D1BF000410CB /* Assets.xcassets */,
-				65800F8D1C09D1BF000410CB /* Main.storyboard */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		65800F8F1C09D1BF000410CB /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				65800F901C09D1BF000410CB /* CGRect+Normalization.swift */,
-				65800F911C09D1BF000410CB /* Int+Parity.swift */,
-				65800F921C09D1BF000410CB /* UIColor+Scheme.swift */,
-				65800F931C09D1BF000410CB /* UIImage+Color.swift */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		65800F961C09D1BF000410CB /* Models */ = {
@@ -204,11 +197,12 @@
 		65800F9F1C09D1BF000410CB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6500FD6C1C1C022900C2254B /* HowlViewController.swift */,
 				657F0D131C0EFA72004B17EF /* FlipViewController.swift */,
 				65800FA61C09D1BF000410CB /* Phonemeboard */,
-				657F0D0B1C0D94F3004B17EF /* Vocoder */,
-				65800FA01C09D1BF000410CB /* Keyboard */,
 				657F0D091C0D94F3004B17EF /* Synthesizer */,
+				65800FA01C09D1BF000410CB /* Keyboard */,
+				657F0D0B1C0D94F3004B17EF /* Vocoder */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -249,6 +243,7 @@
 		65800FC81C09D1CF000410CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6500FD7B1C1C02FA00C2254B /* Assets.xcassets */,
 				65800F941C09D1BF000410CB /* HOWL-Bridging-Header.h */,
 				65800F951C09D1BF000410CB /* Info.plist */,
 			);
@@ -324,8 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65800FAF1C09D1BF000410CB /* Assets.xcassets in Resources */,
-				65800FB01C09D1BF000410CB /* Main.storyboard in Resources */,
+				6500FD7C1C1C02FA00C2254B /* Assets.xcassets in Resources */,
+				6500FD6F1C1C029200C2254B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,29 +381,30 @@
 			files = (
 				65800FC61C09D1BF000410CB /* ToolbarButton.swift in Sources */,
 				657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */,
+				6500FD781C1C02E500C2254B /* Int+Parity.swift in Sources */,
 				65800FBA1C09D1BF000410CB /* SynthesizerNote.swift in Sources */,
 				657F0D141C0EFA72004B17EF /* FlipViewController.swift in Sources */,
-				65800FB21C09D1BF000410CB /* CGRect+Normalization.swift in Sources */,
 				65800FC11C09D1BF000410CB /* KeyboardViewLayout.swift in Sources */,
 				65800FBE1C09D1BF000410CB /* Keyboard.swift in Sources */,
 				65800FC41C09D1BF000410CB /* PhonemeboardView.swift in Sources */,
 				65800FBB1C09D1BF000410CB /* Vocoder.swift in Sources */,
 				65800FBD1C09D1BF000410CB /* Key.swift in Sources */,
 				65800FBF1C09D1BF000410CB /* KeyboardViewCell.swift in Sources */,
+				6500FD791C1C02E500C2254B /* UIColor+Scheme.swift in Sources */,
 				65800FAE1C09D1BF000410CB /* AppDelegate.swift in Sources */,
 				65800FC01C09D1BF000410CB /* KeyboardViewController.swift in Sources */,
 				65800FB91C09D1BF000410CB /* Synthesizer.swift in Sources */,
-				65800FB31C09D1BF000410CB /* Int+Parity.swift in Sources */,
+				6500FD771C1C02E500C2254B /* CGRect+Normalization.swift in Sources */,
 				657F0D161C1266AC004B17EF /* DialControl.swift in Sources */,
 				65800FBC1C09D1BF000410CB /* Settings.swift in Sources */,
+				6500FD761C1C02E500C2254B /* AudioKit+Helpers.swift in Sources */,
 				65800FC21C09D1BF000410CB /* Phoneme.swift in Sources */,
 				6500FD6B1C1BD43C00C2254B /* Setting.swift in Sources */,
 				65800FB81C09D1BF000410CB /* Master.swift in Sources */,
+				6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */,
 				65800FC31C09D1BF000410CB /* Phonemeboard.swift in Sources */,
-				65800FB11C09D1BF000410CB /* AudioKit.swift in Sources */,
 				657F0D0E1C0D94F3004B17EF /* VocoderViewController.swift in Sources */,
-				65800FB41C09D1BF000410CB /* UIColor+Scheme.swift in Sources */,
-				65800FB51C09D1BF000410CB /* UIImage+Color.swift in Sources */,
+				6500FD7A1C1C02E500C2254B /* UIImage+Color.swift in Sources */,
 				65800FB71C09D1BF000410CB /* Audio.swift in Sources */,
 				65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */,
 				65800FC71C09D1BF000410CB /* MultitouchGestureRecognizer.swift in Sources */,

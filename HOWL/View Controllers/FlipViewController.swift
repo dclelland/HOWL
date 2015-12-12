@@ -82,11 +82,9 @@ class FlipViewController: UIViewController {
 }
 
 extension UIViewController {
+    
     var flipViewController: FlipViewController? {
-        if let flipViewController = self.parentViewController as? FlipViewController {
-            return flipViewController
-        }
-        
-        return nil
+        return self.parentViewController as? FlipViewController
     }
+    
 }

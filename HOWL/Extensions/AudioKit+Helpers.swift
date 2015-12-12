@@ -1,5 +1,5 @@
 //
-//  AudioKit.swift
+//  AudioKit+Helpers.swift
 //  AudioKit
 //
 //  Created by Aurelius Prochazka on 11/3/14.
