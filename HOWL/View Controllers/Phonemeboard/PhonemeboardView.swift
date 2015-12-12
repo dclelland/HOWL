@@ -25,9 +25,7 @@ class PhonemeboardView: AKPlotView {
     
     private var data = NSData()
     private var samples = [Float]() {
-        didSet {
-            self.updateUI()
-        }
+        didSet { self.updateUI() }
     }
 
     override func drawRect(rect: CGRect) {

@@ -10,11 +10,21 @@ import UIKit
 
 class SynthesizerViewController: UIViewController {
     
-    @IBOutlet weak var vibratoDepthDialControl: DialControl?
-    @IBOutlet weak var vibratoFrequencyDialControl: DialControl?
+    @IBOutlet weak var vibratoDepthDialControl: DialControl? {
+        didSet { vibratoDepthDialControl?.value = Settings.vibratoDepth.value }
+    }
     
-    @IBOutlet weak var keyboardLeftIntervalDialControl: DialControl?
-    @IBOutlet weak var keyboardRightIntervalDialControl: DialControl?
+    @IBOutlet weak var vibratoFrequencyDialControl: DialControl? {
+        didSet { vibratoFrequencyDialControl?.value = Settings.vibratoFrequency.value }
+    }
+    
+    @IBOutlet weak var keyboardLeftIntervalDialControl: DialControl? {
+        didSet { keyboardLeftIntervalDialControl?.value = Float(Settings.keyboardLeftInterval.value) }
+    }
+    
+    @IBOutlet weak var keyboardRightIntervalDialControl: DialControl? {
+        didSet { keyboardRightIntervalDialControl?.value = Float(Settings.keyboardRightInterval.value) }
+    }
     
     // MARK: - Interface events
     
@@ -23,34 +33,44 @@ class SynthesizerViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: ToolbarButton) {
-        vibratoDepthDialControl?.value = 0.0
-        vibratoFrequencyDialControl?.value = 0.0
-        keyboardLeftIntervalDialControl?.value = 4.0
-        keyboardRightIntervalDialControl?.value = 7.0
+        vibratoDepthDialControl?.value = Settings.vibratoDepth.defaultValue
+        vibratoFrequencyDialControl?.value = Settings.vibratoFrequency.defaultValue
+        keyboardLeftIntervalDialControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
+        keyboardRightIntervalDialControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
     }
     
     // MARK: - Dial control events
     
     @IBAction func vibratoDepthDialControlValueChanged(dialControl: DialControl) {
+        Settings.vibratoDepth.value = dialControl.value
+        
         Audio.shared.synthesizer.vibratoDepth.value = dialControl.value / 100
     }
     
     @IBAction func vibratoFrequencyDialControlValueChanged(dialControl: DialControl) {
+        Settings.vibratoFrequency.value = dialControl.value
+        
         Audio.shared.synthesizer.vibratoFrequency.value = dialControl.value
     }
     
     @IBAction func keyboardLeftIntervalDialControlValueChanged(dialControl: DialControl) {
-        if let keyboardViewController = flipViewController?.frontViewController as? KeyboardViewController {
-            keyboardViewController.keyboard.leftInterval = Int(dialControl.value)
-            keyboardViewController.keyboardView?.reloadData()
-        }
+        Settings.keyboardLeftInterval.value = Int(dialControl.value)
+        
+        keyboardViewController?.keyboard.leftInterval = Int(dialControl.value)
+        keyboardViewController?.keyboardView?.reloadData()
     }
     
     @IBAction func keyboardRightIntervalDialControlValueChanged(dialControl: DialControl) {
-        if let keyboardViewController = flipViewController?.frontViewController as? KeyboardViewController {
-            keyboardViewController.keyboard.rightInterval = Int(dialControl.value)
-            keyboardViewController.keyboardView?.reloadData()
-        }
+        Settings.keyboardRightInterval.value = Int(dialControl.value)
+        
+        keyboardViewController?.keyboard.rightInterval = Int(dialControl.value)
+        keyboardViewController?.keyboardView?.reloadData()
+    }
+    
+    // MARK: - Private getters
+    
+    var keyboardViewController: KeyboardViewController? {
+        return flipViewController?.frontViewController as? KeyboardViewController
     }
     
 }

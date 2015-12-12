@@ -8,36 +8,21 @@
 
 import UIKit
 
-class Settings {
+struct Settings {
     
-    static let shared = Settings()
+    static let keyboardSustain = Setting<Bool>(key: "keyboardSustain", defaultValue: false)
+    static let phonemeboardSustain = Setting<Bool>(key: "phonemeboardSustain", defaultValue: false)
     
-    static let keyboardSustainKey = "keyboardSustainKey"
-    static let phonemeboardSustainKey = "phonemeboardSustain"
+    static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 100.0)
+    static let formantsFrequency = Setting<Float>(key: "formantsFrequency", defaultValue: 100.0)
     
-    var keyboardSustain: Bool {
-        set {
-            NSUserDefaults.standardUserDefaults().setBool(newValue, forKey: Settings.keyboardSustainKey)
-        }
-        get {
-            return NSUserDefaults.standardUserDefaults().boolForKey(Settings.keyboardSustainKey)
-        }
-    }
+    static let effectsBitcrush = Setting<Float>(key: "effectsBitcrush", defaultValue: 0.0)
+    static let effectsReverb = Setting<Float>(key: "effectsReverb", defaultValue: 0.0)
     
-    var phonemeboardSustain: Bool {
-        set {
-            NSUserDefaults.standardUserDefaults().setBool(newValue, forKey: Settings.phonemeboardSustainKey)
-        }
-        get {
-            return NSUserDefaults.standardUserDefaults().boolForKey(Settings.phonemeboardSustainKey)
-        }
-    }
+    static let vibratoDepth = Setting<Float>(key: "vibratoDepth", defaultValue: 0.0)
+    static let vibratoFrequency = Setting<Float>(key: "vibratoFrequency", defaultValue: 0.0)
     
-    init() {
-        NSUserDefaults.standardUserDefaults().registerDefaults([
-            Settings.keyboardSustainKey: false,
-            Settings.phonemeboardSustainKey: false
-            ])
-    }
+    static let keyboardLeftInterval = Setting<Int>(key: "keyboardLeftInterval", defaultValue: 4)
+    static let keyboardRightInterval = Setting<Int>(key: "keyboardRightInterval", defaultValue: 7)
 
 }

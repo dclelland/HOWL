@@ -15,9 +15,7 @@ class PhonemeboardViewController: UIViewController {
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
     
     @IBOutlet weak var holdButton: ToolbarButton? {
-        didSet {
-            holdButton?.selected = Settings.shared.phonemeboardSustain
-        }
+        didSet { holdButton?.selected = Settings.phonemeboardSustain.value }
     }
     
     let phonemeboard = Phonemeboard()
@@ -70,8 +68,8 @@ class PhonemeboardViewController: UIViewController {
     }
     
     @IBAction func holdButtonTapped(button: ToolbarButton) {
-        Settings.shared.phonemeboardSustain = !Settings.shared.phonemeboardSustain
-        button.selected = Settings.shared.phonemeboardSustain
+        Settings.phonemeboardSustain.value = !Settings.phonemeboardSustain.value
+        button.selected = Settings.phonemeboardSustain.value
         
         if !button.selected {
             multitouchGestureRecognizer?.endTouches()
@@ -166,7 +164,7 @@ class PhonemeboardViewController: UIViewController {
 extension PhonemeboardViewController: MultitouchGestureRecognizerDelegate {
     
     func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
-        return Settings.shared.phonemeboardSustain
+        return Settings.phonemeboardSustain.value
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {

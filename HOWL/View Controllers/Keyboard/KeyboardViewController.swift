@@ -16,17 +16,13 @@ class KeyboardViewController: UIViewController {
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
     
     @IBOutlet weak var holdButton: ToolbarButton? {
-        didSet {
-            holdButton?.selected = Settings.shared.keyboardSustain
-        }
+        didSet { holdButton?.selected = Settings.keyboardSustain.value }
     }
     
     let keyboard = Keyboard()
     
     var notes = [UITouch: SynthesizerNote]() {
-        didSet {
-            keyboardView?.reloadData()
-        }
+        didSet { keyboardView?.reloadData() }
     }
     
     // MARK: - Note actions
@@ -62,8 +58,8 @@ class KeyboardViewController: UIViewController {
     }
     
     @IBAction func holdButtonTapped(button: ToolbarButton) {
-        Settings.shared.keyboardSustain = !Settings.shared.keyboardSustain
-        button.selected = Settings.shared.keyboardSustain
+        Settings.keyboardSustain.value = !Settings.keyboardSustain.value
+        button.selected = Settings.keyboardSustain.value
         
         if !button.selected {
             multitouchGestureRecognizer?.endTouches()
@@ -140,7 +136,7 @@ extension KeyboardViewController: KeyboardViewLayoutDelegate {
 extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
     
     func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
-        return Settings.shared.keyboardSustain
+        return Settings.keyboardSustain.value
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
