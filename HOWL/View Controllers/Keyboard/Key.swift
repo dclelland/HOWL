@@ -31,7 +31,11 @@ class Key {
     }
     
     var note: Int {
-        return pitch - 12 * (pitch / 12)
+        if pitch > 0 {
+            return pitch % 12
+        } else {
+            return 12 + pitch % 12
+        }
     }
     
     var octave: Int {
