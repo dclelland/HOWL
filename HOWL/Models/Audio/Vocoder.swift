@@ -51,34 +51,39 @@ class Vocoder: AKInstrument {
         
         addProperty(portamento)
         
+        /* Stop either parameter from hitting zero and causing the filters to saturate */
+        
+        let guardFrequency = AKMaximum(firstInput: frequency, secondInput: 0.01.ak)
+        let guardBandwidth = AKMaximum(firstInput: bandwidth, secondInput: 0.01.ak)
+        
         let filter1 = AKResonantFilter(
             input: input,
-            centerFrequency: AKPortamento(input: frequency1 * frequency, halfTime: portamento),
-            bandwidth: AKPortamento(input: bandwidth1 * bandwidth, halfTime: portamento)
+            centerFrequency: AKPortamento(input: frequency1 * guardFrequency, halfTime: portamento),
+            bandwidth: AKPortamento(input: bandwidth1 * guardBandwidth, halfTime: portamento)
         )
         
         let filter2 = AKResonantFilter(
             input: filter1,
-            centerFrequency: AKPortamento(input: frequency2 * frequency, halfTime: portamento),
-            bandwidth: AKPortamento(input: bandwidth2 * bandwidth, halfTime: portamento)
+            centerFrequency: AKPortamento(input: frequency2 * guardFrequency, halfTime: portamento),
+            bandwidth: AKPortamento(input: bandwidth2 * guardBandwidth, halfTime: portamento)
         )
         
         let filter3 = AKResonantFilter(
             input: filter2,
-            centerFrequency: AKPortamento(input: frequency3 * frequency, halfTime: portamento),
-            bandwidth: AKPortamento(input: bandwidth3 * bandwidth, halfTime: portamento)
+            centerFrequency: AKPortamento(input: frequency3 * guardFrequency, halfTime: portamento),
+            bandwidth: AKPortamento(input: bandwidth3 * guardBandwidth, halfTime: portamento)
         )
         
         let filter4 = AKResonantFilter(
             input: filter3,
-            centerFrequency: AKPortamento(input: frequency4 * frequency, halfTime: portamento),
-            bandwidth: AKPortamento(input: bandwidth4 * bandwidth, halfTime: portamento)
+            centerFrequency: AKPortamento(input: frequency4 * guardFrequency, halfTime: portamento),
+            bandwidth: AKPortamento(input: bandwidth4 * guardBandwidth, halfTime: portamento)
         )
         
         let filter5 = AKResonantFilter(
             input: filter4,
-            centerFrequency: AKPortamento(input: frequency5 * frequency, halfTime: portamento),
-            bandwidth: AKPortamento(input: bandwidth5 * bandwidth, halfTime: portamento)
+            centerFrequency: AKPortamento(input: frequency5 * guardFrequency, halfTime: portamento),
+            bandwidth: AKPortamento(input: bandwidth5 * guardBandwidth, halfTime: portamento)
         )
         
         let balance = AKBalance(
