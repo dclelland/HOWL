@@ -536,7 +536,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-sL-RjK">
-                                                <rect key="frame" x="12" y="92" width="11.5" height="26"/>
+                                                <rect key="frame" x="12" y="92" width="12" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
@@ -783,17 +783,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD">
-                                <rect key="frame" x="2" y="51" width="279" height="132.5"/>
+                                <rect key="frame" x="2" y="51" width="279" height="133"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
-                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
+                                        <rect key="frame" x="2" y="115" width="275" height="16"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110"/>
+                                        <rect key="frame" x="141" y="2" width="136" height="111"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -821,7 +821,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="136.5" height="110"/>
+                                        <rect key="frame" x="2" y="2" width="137" height="111"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -877,7 +877,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea">
-                                <rect key="frame" x="2" y="185" width="279" height="132.5"/>
+                                <rect key="frame" x="2" y="186" width="279" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
                                         <rect key="frame" x="2" y="114" width="275" height="16"/>
@@ -887,7 +887,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="2" y="2" width="137" height="110"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -915,7 +915,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="141" y="2" width="136" height="110"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1164,17 +1164,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-Jy-AMK">
-                                <rect key="frame" x="2" y="51" width="279" height="132.5"/>
+                                <rect key="frame" x="2" y="51" width="279" height="133"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Lj-sMa">
-                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
+                                        <rect key="frame" x="2" y="115" width="275" height="16"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140.5" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="141" y="2" width="136" height="111"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1202,7 +1202,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="2" y="2" width="137" height="111"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1252,7 +1252,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Nj-01a">
-                                <rect key="frame" x="2" y="185" width="279" height="132.5"/>
+                                <rect key="frame" x="2" y="186" width="279" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-L5-US1">
                                         <rect key="frame" x="2" y="114" width="275" height="16"/>
@@ -1262,7 +1262,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-dp-Xy2" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="137" height="110.5"/>
+                                        <rect key="frame" x="2" y="2" width="137" height="110"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1285,11 +1285,14 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="keyboardLeftIntervalDialControlTouchDown:" destination="uAc-3B-Yd9" eventType="touchDown" id="FMb-tR-WbA"/>
+                                            <action selector="keyboardLeftIntervalDialControlTouchUp:" destination="uAc-3B-Yd9" eventType="touchUpOutside" id="JxI-Zk-tdd"/>
+                                            <action selector="keyboardLeftIntervalDialControlTouchUp:" destination="uAc-3B-Yd9" eventType="touchUpInside" id="nSJ-af-eIb"/>
                                             <action selector="keyboardLeftIntervalDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="0ae-52-VpU"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="2" width="136.5" height="110.5"/>
+                                        <rect key="frame" x="141" y="2" width="136" height="110"/>
                                         <animations/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1312,6 +1315,9 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="keyboardRightIntervalDialControlTouchDown:" destination="uAc-3B-Yd9" eventType="touchDown" id="MvE-6y-59g"/>
+                                            <action selector="keyboardRightIntervalDialControlTouchUp:" destination="uAc-3B-Yd9" eventType="touchUpInside" id="bUN-cD-z9j"/>
+                                            <action selector="keyboardRightIntervalDialControlTouchUp:" destination="uAc-3B-Yd9" eventType="touchUpOutside" id="yQ6-Yp-Qif"/>
                                             <action selector="keyboardRightIntervalDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="eco-25-27W"/>
                                         </connections>
                                     </view>

@@ -127,36 +127,36 @@ import Lerp
     // MARK: - Touches
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        
         touch = touches.first
         selected = true
         
         if let location = touch?.locationInView(self) {
             percentage = percentageForLocation(location)
         }
+        
+        super.touchesBegan(touches, withEvent: event)
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesMoved(touches, withEvent: event)
-        
         if let location = touch?.locationInView(self) {
             percentage = percentageForLocation(location)
         }
+        
+        super.touchesMoved(touches, withEvent: event)
     }
     
     override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-        super.touchesCancelled(touches, withEvent: event)
-        
         touch = nil
         selected = false
+        
+        super.touchesCancelled(touches, withEvent: event)
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
-        
         touch = nil
         selected = false
+        
+        super.touchesEnded(touches, withEvent: event)
     }
     
     // MARK: - Private getters (text)

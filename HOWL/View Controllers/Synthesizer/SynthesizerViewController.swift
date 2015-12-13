@@ -53,12 +53,28 @@ class SynthesizerViewController: UIViewController {
         Audio.synthesizer.vibratoFrequency.value = dialControl.value
     }
     
+    @IBAction func keyboardLeftIntervalDialControlTouchDown(dialControl: DialControl) {
+        keyboardViewController?.mode = keyboardViewControllerMode
+    }
+    
+    @IBAction func keyboardLeftIntervalDialControlTouchUp(dialControl: DialControl) {
+        keyboardViewController?.mode = keyboardViewControllerMode
+    }
+    
     @IBAction func keyboardLeftIntervalDialControlValueChanged(dialControl: DialControl) {
         Settings.keyboardLeftInterval.value = Int(dialControl.value)
         
         keyboardViewController?.keyboard.leftInterval = Int(dialControl.value)
         keyboardViewController?.refreshNotes()
         keyboardViewController?.refreshView()
+    }
+    
+    @IBAction func keyboardRightIntervalDialControlTouchDown(dialControl: DialControl) {
+        keyboardViewController?.mode = keyboardViewControllerMode
+    }
+    
+    @IBAction func keyboardRightIntervalDialControlTouchUp(dialControl: DialControl) {
+        keyboardViewController?.mode = keyboardViewControllerMode
     }
     
     @IBAction func keyboardRightIntervalDialControlValueChanged(dialControl: DialControl) {
@@ -75,6 +91,14 @@ class SynthesizerViewController: UIViewController {
     
     private var keyboardViewController: KeyboardViewController? {
         return flipViewController?.howlViewController?.rightViewController?.frontViewController as? KeyboardViewController
+    }
+    
+    private var keyboardViewControllerMode: KeyboardViewController.Mode {
+        if keyboardLeftIntervalDialControl?.selected == true || keyboardRightIntervalDialControl?.selected == true {
+            return .ShowBackground
+        }
+        
+        return .Normal
     }
     
 }

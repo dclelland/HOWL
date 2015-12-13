@@ -23,6 +23,15 @@ class KeyboardViewController: UIViewController {
     
     var notes = [UITouch: (key: Key, note: SynthesizerNote)]()
     
+    var mode: Mode = .Normal {
+        didSet { refreshView() }
+    }
+    
+    enum Mode {
+        case Normal
+        case ShowBackground
+    }
+    
     // MARK: - Life cycle
     
     func refreshNotes() {
@@ -125,17 +134,10 @@ extension KeyboardViewController: UICollectionViewDataSource {
             return UIColor.HOWL.lightColor(withHue: hue)
         }
         
-        guard let touchState = multitouchGestureRecognizer?.touchState else {
-            return UIColor.blackColor()
-        }
-        
-        switch touchState {
-        case .Ready:
-            return UIColor.HOWL.darkGreyColor()
-        case .Live:
-            return UIColor.HOWL.mediumColor(withHue: hue)
-        case .Sustained:
+        if mode == .ShowBackground {
             return UIColor.HOWL.darkColor(withHue: hue)
+        } else {
+            return UIColor.HOWL.darkGreyColor()
         }
     }
     
