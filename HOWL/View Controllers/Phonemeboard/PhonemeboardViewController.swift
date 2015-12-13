@@ -96,7 +96,7 @@ class PhonemeboardViewController: UIViewController {
             return nil
         }
         
-        let offset = CGVectorMake(location.x - 0.5, location.y - 0.5)
+        let offset = CGVector(dx: location.x - 0.5, dy: location.y - 0.5)
         let angle = atan2(offset.dx, offset.dy)
         
         return (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
@@ -107,7 +107,7 @@ class PhonemeboardViewController: UIViewController {
             return nil
         }
 
-        let offset = CGVectorMake(location.x - 0.5, location.y - 0.5)
+        let offset = CGVector(dx: location.x - 0.5, dy: location.y - 0.5)
         let distance = hypot(offset.dx, offset.dy)
 
         return distance * 2.0
@@ -124,7 +124,7 @@ class PhonemeboardViewController: UIViewController {
             let x = location.x + touchLocation.x / CGFloat(touches.count)
             let y = location.y + touchLocation.y / CGFloat(touches.count)
             
-            return CGPointMake(x, y)
+            return CGPoint(x: x, y: y)
         }
         
         return CGPointApplyAffineTransform(location, phonemeboardView.bounds.normalizationTransform())

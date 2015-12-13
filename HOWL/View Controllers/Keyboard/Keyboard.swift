@@ -111,9 +111,9 @@ class Keyboard {
         let horizontalKeyRadius = 1.0 / CGFloat(horizontalRadius) / 2.0
         let verticalKeyRadius = 1.0 / CGFloat(verticalRadius) / 2.0
         
-        let leftDifference = CGVectorMake(-horizontalKeyRadius * CGFloat(coordinates.left), -verticalKeyRadius * CGFloat(coordinates.left))
-        let rightDifference = CGVectorMake(horizontalKeyRadius * CGFloat(coordinates.right), -verticalKeyRadius * CGFloat(coordinates.right))
+        let leftDifference = CGVector(dx: -horizontalKeyRadius * CGFloat(coordinates.left), dy: -verticalKeyRadius * CGFloat(coordinates.left))
+        let rightDifference = CGVector(dx: horizontalKeyRadius * CGFloat(coordinates.right), dy: -verticalKeyRadius * CGFloat(coordinates.right))
         
-        return CGPointMake(0.5 + leftDifference.dx + rightDifference.dx, 0.5 + leftDifference.dy + rightDifference.dy)
+        return CGPoint(x: 0.5 + leftDifference.dx + rightDifference.dx, y: 0.5 + leftDifference.dy + rightDifference.dy)
     }
 }

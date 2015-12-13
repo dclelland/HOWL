@@ -17,7 +17,7 @@ extension UIImage {
     }
     
     static func image(withColor color: UIColor, andCornerRadius cornerRadius: CGFloat) -> UIImage {
-        let rect = CGRectMake(0.0, 0.0, cornerRadius * 2.0 + 1.0, cornerRadius * 2.0 + 1.0)
+        let rect = CGRect(x: 0.0, y: 0.0, width: cornerRadius * 2.0 + 1.0, height: cornerRadius * 2.0 + 1.0)
         let path = CGPathCreateWithRoundedRect(rect, cornerRadius, cornerRadius, nil)
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.mainScreen().scale)
@@ -32,7 +32,7 @@ extension UIImage {
         
         UIGraphicsEndImageContext()
         
-        return image.resizableImageWithCapInsets(UIEdgeInsetsMake(cornerRadius, cornerRadius, cornerRadius, cornerRadius), resizingMode: .Stretch)
+        return image.resizableImageWithCapInsets(UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: .Stretch)
     }
     
 }
