@@ -74,3 +74,9 @@ class Key {
         return String(octave)
     }
 }
+
+extension Key: Equatable {}
+
+func ==(lhs: Key, rhs: Key) -> Bool {
+    return lhs.pitch == rhs.pitch && lhs.coordinates == rhs.coordinates
+}

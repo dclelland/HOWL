@@ -48,8 +48,8 @@ class KeyboardViewController: UIViewController {
     }
     
     func updateNoteForTouch(touch: UITouch, withKey key: Key) {
-        if let note = notes[touch]?.note {
-            if note.frequency.value != key.frequency {
+        if let oldKey = notes[touch]?.key {
+            if oldKey != key {
                 stopNoteForTouch(touch)
                 playNoteForTouch(touch, withKey: key)
             }
@@ -118,10 +118,11 @@ extension KeyboardViewController: UICollectionViewDataSource {
     }
     
     private func collectionView(collectionView: UICollectionView, colorForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIColor {
-        let keyNotes = notes.values.filter { $0.key.coordinates == key.coordinates }
+        let keyNotes = notes.values.filter { $0.key == key }
+        let hue = CGFloat(key.note) / 12.0
         
         if keyNotes.count > 0 {
-            return UIColor.HOWL.lightColor(withHue: CGFloat(key.note) / 12.0)
+            return UIColor.HOWL.lightColor(withHue: hue)
         }
         
         guard let touchState = multitouchGestureRecognizer?.touchState else {
@@ -132,9 +133,9 @@ extension KeyboardViewController: UICollectionViewDataSource {
         case .Ready:
             return UIColor.HOWL.darkGreyColor()
         case .Live:
-            return UIColor.HOWL.mediumColor(withHue: CGFloat(key.note) / 12.0)
+            return UIColor.HOWL.mediumColor(withHue: hue)
         case .Sustained:
-            return UIColor.HOWL.darkColor(withHue: CGFloat(key.note) / 12.0)
+            return UIColor.HOWL.darkColor(withHue: hue)
         }
     }
     
