@@ -4,10 +4,6 @@ HOWL is a simple formant synthesizer for iOS, built using the [AudioKit](https:/
 
 It's extremely basic - just a square wave VCO run through four parallel banks of five bandpass filters.
 
-## Todo
-
-- Reversible flip gestures
-
 ## Wishlist
 
 - Inter-app audio
