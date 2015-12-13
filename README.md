@@ -6,7 +6,6 @@ It's extremely basic - just a square wave VCO run through four parallel banks of
 
 ## Todo
 
-- Keyboard colours should communicate octave through lightness
 - Reversible flip gestures
 
 ## Wishlist

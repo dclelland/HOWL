@@ -128,14 +128,17 @@ extension KeyboardViewController: UICollectionViewDataSource {
     
     private func collectionView(collectionView: UICollectionView, colorForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIColor {
         let keyNotes = notes.values.filter { $0.key == key }
+        
         let hue = CGFloat(key.note) / 12.0
+        let saturation = 1.0 - CGFloat(key.pitch - keyboard.centerPitch) / CGFloat(keyboard.centerPitch)
+        let brightness = 1.0 - CGFloat(keyboard.centerPitch - key.pitch) / CGFloat(keyboard.centerPitch)
         
         if keyNotes.count > 0 {
-            return UIColor.HOWL.lightColor(withHue: hue)
+            return UIColor.HOWL.lightColor(withHue: hue, saturation: saturation, brightness: brightness)
         }
         
         if mode == .ShowBackground {
-            return UIColor.HOWL.darkColor(withHue: hue)
+            return UIColor.HOWL.darkColor(withHue: hue, saturation: saturation, brightness: brightness)
         } else {
             return UIColor.HOWL.darkGreyColor()
         }
