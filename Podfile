@@ -8,3 +8,8 @@ pod 'Bezzy', '~> 0.1'
 pod 'Degrad', '~> 0.2'
 pod 'Lerp', '~> 0.2'
 pod 'SnapKit', '~> 0.17'
+
+post_install do | installer |
+    require 'fileutils'
+    FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'HOWL/Resources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end

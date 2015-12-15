@@ -15,7 +15,6 @@
 		6500FD781C1C02E500C2254B /* Int+Parity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD731C1C02E500C2254B /* Int+Parity.swift */; };
 		6500FD791C1C02E500C2254B /* UIColor+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD741C1C02E500C2254B /* UIColor+Scheme.swift */; };
 		6500FD7A1C1C02E500C2254B /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD751C1C02E500C2254B /* UIImage+Color.swift */; };
-		6500FD7C1C1C02FA00C2254B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6500FD7B1C1C02FA00C2254B /* Assets.xcassets */; };
 		657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */; };
 		657F0D0E1C0D94F3004B17EF /* VocoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0C1C0D94F3004B17EF /* VocoderViewController.swift */; };
 		657F0D141C0EFA72004B17EF /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D131C0EFA72004B17EF /* FlipViewController.swift */; };
@@ -38,6 +37,8 @@
 		65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */; };
 		65800FC61C09D1BF000410CB /* ToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAC1C09D1BF000410CB /* ToolbarButton.swift */; };
 		65800FC71C09D1BF000410CB /* MultitouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAD1C09D1BF000410CB /* MultitouchGestureRecognizer.swift */; };
+		65F2B76B1C1FCF8E00E2DA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */; };
+		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
 		E46BC6F5FE2EB148E22F9688 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0399AACDF06DEB159782399F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,15 +54,12 @@
 		6500FD731C1C02E500C2254B /* Int+Parity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Parity.swift"; sourceTree = "<group>"; };
 		6500FD741C1C02E500C2254B /* UIColor+Scheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Scheme.swift"; sourceTree = "<group>"; };
 		6500FD751C1C02E500C2254B /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
-		6500FD7B1C1C02FA00C2254B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656472CF1BF6BD2A00BDEB1B /* HOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesizerViewController.swift; sourceTree = "<group>"; };
 		657F0D0C1C0D94F3004B17EF /* VocoderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocoderViewController.swift; sourceTree = "<group>"; };
 		657F0D131C0EFA72004B17EF /* FlipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
 		657F0D151C1266AC004B17EF /* DialControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialControl.swift; sourceTree = "<group>"; };
 		65800F8A1C09D1BF000410CB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65800F941C09D1BF000410CB /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
-		65800F951C09D1BF000410CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65800F981C09D1BF000410CB /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		65800F991C09D1BF000410CB /* Master.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
 		65800F9A1C09D1BF000410CB /* Synthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synthesizer.swift; sourceTree = "<group>"; };
@@ -80,6 +78,10 @@
 		65800FAC1C09D1BF000410CB /* ToolbarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarButton.swift; sourceTree = "<group>"; };
 		65800FAD1C09D1BF000410CB /* MultitouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		65D7E3701C0027CF009D6994 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
+		65F2B7661C1FCF8000E2DA15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +161,8 @@
 				65800FAB1C09D1BF000410CB /* Views */,
 				65800F961C09D1BF000410CB /* Models */,
 				6500FD701C1C02E500C2254B /* Extensions */,
-				65800FC81C09D1CF000410CB /* Supporting Files */,
+				65F2B7681C1FCF8E00E2DA15 /* Resources */,
+				65F2B7641C1FCF8000E2DA15 /* Supporting Files */,
 			);
 			path = HOWL;
 			sourceTree = "<group>";
@@ -240,14 +243,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		65800FC81C09D1CF000410CB /* Supporting Files */ = {
+		65F2B7641C1FCF8000E2DA15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6500FD7B1C1C02FA00C2254B /* Assets.xcassets */,
-				65800F941C09D1BF000410CB /* HOWL-Bridging-Header.h */,
-				65800F951C09D1BF000410CB /* Info.plist */,
+				65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */,
+				65F2B7661C1FCF8000E2DA15 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65F2B7681C1FCF8E00E2DA15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */,
+				65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7FCEBDA14A75CF18C40FFE38 /* Frameworks */ = {
@@ -319,7 +330,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6500FD7C1C1C02FA00C2254B /* Assets.xcassets in Resources */,
+				65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */,
+				65F2B76B1C1FCF8E00E2DA15 /* Assets.xcassets in Resources */,
 				6500FD6F1C1C029200C2254B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,11 +516,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = HOWL/Info.plist;
+				INFOPLIST_FILE = "HOWL/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
-				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/HOWL-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -521,11 +533,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = HOWL/Info.plist;
+				INFOPLIST_FILE = "HOWL/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
-				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/HOWL-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
