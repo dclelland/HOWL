@@ -40,7 +40,7 @@ class Synthesizer: AKInstrument {
         )
         
         let oscillator = AKVCOscillator(
-            waveformType: AKVCOscillator.waveformTypeForSquare(),
+            waveformType: AKVCOscillator.waveformTypeForSawtooth(),
             bandwidth: 0.5.ak,
             pulseWidth: 0.5.ak,
             frequency: note.frequency * (vibrato + 1.0.ak),
