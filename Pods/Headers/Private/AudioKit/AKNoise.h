@@ -1,0 +1,1 @@
+../../../AudioKit/AudioKit/Operations/Signal Generators/Random Generators/AKNoise.h

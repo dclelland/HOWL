@@ -1,0 +1,1 @@
+../../../AudioKit/AudioKit/Core Classes/MIDI/AKMidiEvent.h

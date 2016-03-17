@@ -6,7 +6,7 @@ It's extremely basic - just a sawtooth wave VCO run through four parallel banks 
 
 ## Building
 
-You'll need to install CocoaPods and run `pod install` before you can build HOWL using Xcode.
+Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 7.2).
 
 ## Wishlist
 

@@ -1,0 +1,1 @@
+../../../AudioKit/AudioKit/Utilities/Instruments/Analyzers/AKAudioAnalyzer.h

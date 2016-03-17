@@ -1,0 +1,1 @@
+../../../AudioKit/AudioKit/Notes/AKNoteProperty.h

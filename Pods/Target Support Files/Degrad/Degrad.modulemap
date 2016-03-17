@@ -1,0 +1,6 @@
+framework module Degrad {
+  umbrella header "Degrad-umbrella.h"
+
+  export *
+  module * { export * }
+}

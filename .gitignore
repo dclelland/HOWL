@@ -2,6 +2,3 @@
 xcuserdata
 .xcodeproj/ !*.xcodeproj/project.pbxproj
 .DS_Store
-Pods
-Submodules
-*.xcworkspace

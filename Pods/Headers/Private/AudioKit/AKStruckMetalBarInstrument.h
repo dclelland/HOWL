@@ -1,0 +1,1 @@
+../../../AudioKit/AudioKit/Utilities/Instruments/Emulations/AKStruckMetalBarInstrument.h

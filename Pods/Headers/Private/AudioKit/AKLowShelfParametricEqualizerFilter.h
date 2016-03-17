@@ -1,0 +1,1 @@
+../../../AudioKit/AudioKit/Operations/Signal Modifiers/Filters/Parametric Equalizers/AKLowShelfParametricEqualizerFilter.h

@@ -1,0 +1,6 @@
+framework module Bezzy {
+  umbrella header "Bezzy-umbrella.h"
+
+  export *
+  module * { export * }
+}

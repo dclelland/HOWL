@@ -1,0 +1,6 @@
+framework module Lerp {
+  umbrella header "Lerp-umbrella.h"
+
+  export *
+  module * { export * }
+}
