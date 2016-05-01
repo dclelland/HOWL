@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6500FD6B1C1BD43C00C2254B /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD6A1C1BD43C00C2254B /* Setting.swift */; };
 		6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD6C1C1C022900C2254B /* HowlViewController.swift */; };
-		6500FD6F1C1C029200C2254B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500FD6E1C1C029200C2254B /* Main.storyboard */; };
 		6500FD761C1C02E500C2254B /* AudioKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */; };
 		6500FD771C1C02E500C2254B /* CGRect+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD721C1C02E500C2254B /* CGRect+Normalization.swift */; };
 		6500FD781C1C02E500C2254B /* Int+Parity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD731C1C02E500C2254B /* Int+Parity.swift */; };
@@ -39,6 +38,8 @@
 		65800FC71C09D1BF000410CB /* MultitouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAD1C09D1BF000410CB /* MultitouchGestureRecognizer.swift */; };
 		65F2B76B1C1FCF8E00E2DA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */; };
 		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
+		65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B871CD60D10001AB56A /* Main (iPad).storyboard */; };
+		65F33B8A1CD60D10001AB56A /* Main (iPhone).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B881CD60D10001AB56A /* Main (iPhone).storyboard */; };
 		E46BC6F5FE2EB148E22F9688 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0399AACDF06DEB159782399F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +49,6 @@
 		4D2B569B9BD80BCFD8D1EFAE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6500FD6A1C1BD43C00C2254B /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		6500FD6C1C1C022900C2254B /* HowlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowlViewController.swift; sourceTree = "<group>"; };
-		6500FD6E1C1C029200C2254B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioKit+Helpers.swift"; sourceTree = "<group>"; };
 		6500FD721C1C02E500C2254B /* CGRect+Normalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Normalization.swift"; sourceTree = "<group>"; };
 		6500FD731C1C02E500C2254B /* Int+Parity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Parity.swift"; sourceTree = "<group>"; };
@@ -82,6 +82,8 @@
 		65F2B7661C1FCF8000E2DA15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		65F33B871CD60D10001AB56A /* Main (iPad).storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main (iPad).storyboard"; sourceTree = "<group>"; };
+		65F33B881CD60D10001AB56A /* Main (iPhone).storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main (iPhone).storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				65800F8A1C09D1BF000410CB /* AppDelegate.swift */,
-				6500FD6E1C1C029200C2254B /* Main.storyboard */,
+				65F33B871CD60D10001AB56A /* Main (iPad).storyboard */,
+				65F33B881CD60D10001AB56A /* Main (iPhone).storyboard */,
 				65800F9F1C09D1BF000410CB /* View Controllers */,
 				65800FAB1C09D1BF000410CB /* Views */,
 				65800F961C09D1BF000410CB /* Models */,
@@ -330,9 +333,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F33B8A1CD60D10001AB56A /* Main (iPhone).storyboard in Resources */,
 				65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */,
 				65F2B76B1C1FCF8E00E2DA15 /* Assets.xcassets in Resources */,
-				6500FD6F1C1C029200C2254B /* Main.storyboard in Resources */,
+				65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +527,7 @@
 				PRODUCT_NAME = HOWL;
 				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -540,7 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
 				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

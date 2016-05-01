@@ -13,6 +13,10 @@ class HowlViewController: UIViewController {
     @IBOutlet var leftView: UIView?
     @IBOutlet var rightView: UIView?
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     // MARK: - View controllers
     
     var leftViewController: FlipViewController? {
