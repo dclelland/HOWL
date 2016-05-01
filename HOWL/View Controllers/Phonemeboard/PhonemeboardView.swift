@@ -59,28 +59,26 @@ class PhonemeboardView: AKPlotView {
         
         for i in 0..<length {
             let sample = CGFloat(samples[i * 2])
+            let safeSample = sample.isNaN ? 0.0 : sample
             
-            if !sample.isNaN {
-                let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
-                let y = (sample + 0.5) * bounds.height
-                
-                if (i == 0) {
-                    CGPathMoveToPoint(path, nil, x, y)
-                } else {
-                    CGPathAddLineToPoint(path, nil, x, y)
-                }
+            let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
+            let y = (safeSample + 0.5) * bounds.height
+            
+            if (i == 0) {
+                CGPathMoveToPoint(path, nil, x, y)
+            } else {
+                CGPathAddLineToPoint(path, nil, x, y)
             }
         }
         
         for i in (0..<length).reverse() {
             let sample = CGFloat(samples[i * 2 + 1])
+            let safeSample = sample.isNaN ? 0.0 : sample
             
-            if !sample.isNaN {
-                let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
-                let y = (-sample + 0.5) * bounds.height
-                
-                CGPathAddLineToPoint(path, nil, x, y)
-            }
+            let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
+            let y = (-safeSample + 0.5) * bounds.height
+            
+            CGPathAddLineToPoint(path, nil, x, y)
         }
         
         if length > 0 {
