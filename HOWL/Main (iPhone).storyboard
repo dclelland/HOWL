@@ -138,45 +138,6 @@
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-c1-TQk" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-rB-Cz2" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="CjY-15-t5e"/>
-                                            <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="zBJ-gX-czQ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                                        <state key="normal" title="HOLD">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="zBJ-gX-czQ"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="holdButtonTapped:" destination="9J8-TP-oCq" eventType="touchUpInside" id="w2q-s3-Jl4"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-t5-lhc" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
-                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ML-9Q-mzI" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="43" height="43"/>
                                         <constraints>
@@ -206,10 +167,51 @@
                                             <action selector="flipButtonTapped:" destination="9J8-TP-oCq" eventType="touchUpInside" id="iTP-2Y-4j6"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-t5-lhc" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-rB-Cz2" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="CjY-15-t5e"/>
+                                            <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="zBJ-gX-czQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="HOLD">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="zBJ-gX-czQ"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="holdButtonTapped:" destination="9J8-TP-oCq" eventType="touchUpInside" id="w2q-s3-Jl4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="0Kt-dV-JQY"/>
+                                    <constraint firstItem="2ML-9Q-mzI" firstAttribute="bottom" secondItem="h1W-c1-TQk" secondAttribute="bottomMargin" id="1CY-Yz-9yt"/>
+                                    <constraint firstItem="2ML-9Q-mzI" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="topMargin" id="4Na-X3-Emu"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="4dl-j3-2Ng"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="leading" secondItem="h1W-c1-TQk" secondAttribute="leading" constant="2" id="4lM-yw-62L"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="6Fr-uT-Owa"/>
@@ -222,26 +224,33 @@
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="2ML-9Q-mzI" secondAttribute="trailing" constant="2" id="GMK-YZ-RBu"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="HVN-nc-DHI"/>
                                     <constraint firstAttribute="trailing" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="Iwo-a0-C17"/>
+                                    <constraint firstItem="SSe-rB-Cz2" firstAttribute="bottom" secondItem="h1W-c1-TQk" secondAttribute="bottomMargin" id="Jb0-aM-Vcj"/>
                                     <constraint firstItem="2ML-9Q-mzI" firstAttribute="leading" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="JxG-e5-tMT"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="LEJ-t5-lhc" secondAttribute="bottom" constant="2" id="NQx-1H-2A8"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="NZU-nB-piP"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="RIq-pK-AhV"/>
                                     <constraint firstAttribute="height" constant="47" id="TyX-hT-jRt"/>
+                                    <constraint firstItem="2ML-9Q-mzI" firstAttribute="leading" secondItem="h1W-c1-TQk" secondAttribute="leadingMargin" id="Wpl-Zn-5XU"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="leading" secondItem="SSe-rB-Cz2" secondAttribute="trailing" constant="2" id="bQ9-nc-VlD"/>
                                     <constraint firstAttribute="bottom" secondItem="SSe-rB-Cz2" secondAttribute="bottom" constant="2" id="biK-Ug-Nhq"/>
                                     <constraint firstAttribute="bottom" secondItem="SSe-rB-Cz2" secondAttribute="bottom" constant="2" id="blU-oE-dLL"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="leading" secondItem="h1W-c1-TQk" secondAttribute="leadingMargin" constant="2" id="ctg-cC-IDf"/>
+                                    <constraint firstItem="SSe-rB-Cz2" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="topMargin" id="dNC-mk-Sy4"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="topMargin" constant="2" id="e05-xM-y44"/>
                                     <constraint firstItem="2ML-9Q-mzI" firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="e7P-CK-tjc"/>
                                     <constraint firstItem="2ML-9Q-mzI" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="eCw-UZ-YK6"/>
+                                    <constraint firstItem="LEJ-t5-lhc" firstAttribute="bottom" secondItem="h1W-c1-TQk" secondAttribute="bottomMargin" id="k5z-Lf-8mh"/>
                                     <constraint firstItem="SSe-rB-Cz2" firstAttribute="leading" secondItem="LEJ-t5-lhc" secondAttribute="trailing" constant="2" id="meR-U9-wYT"/>
                                     <constraint firstAttribute="bottom" secondItem="2ML-9Q-mzI" secondAttribute="bottom" constant="2" id="o4X-0d-csC"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="oSF-2U-tH5"/>
+                                    <constraint firstItem="LEJ-t5-lhc" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="topMargin" id="t6w-aU-FFT"/>
                                     <constraint firstAttribute="bottom" secondItem="LEJ-t5-lhc" secondAttribute="bottom" constant="2" id="uIu-YK-joV"/>
                                     <constraint firstItem="2ML-9Q-mzI" firstAttribute="top" secondItem="h1W-c1-TQk" secondAttribute="top" constant="2" id="uYB-aJ-xN6"/>
+                                    <constraint firstItem="SSe-rB-Cz2" firstAttribute="trailing" secondItem="h1W-c1-TQk" secondAttribute="trailingMargin" id="x4G-rA-jDG"/>
                                     <constraint firstAttribute="trailing" secondItem="SSe-rB-Cz2" secondAttribute="trailing" constant="2" id="yDw-Oo-JtP"/>
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="leading" secondItem="2ML-9Q-mzI" secondAttribute="trailing" constant="2" id="z5R-U0-AWI"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
@@ -249,13 +258,18 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="6QH-Qv-s1M"/>
                                         <exclude reference="AAF-GC-Oi7"/>
                                         <exclude reference="JxG-e5-tMT"/>
                                         <exclude reference="e7P-CK-tjc"/>
                                         <exclude reference="eCw-UZ-YK6"/>
+                                        <exclude reference="o4X-0d-csC"/>
+                                        <exclude reference="uYB-aJ-xN6"/>
                                         <exclude reference="4lM-yw-62L"/>
                                         <exclude reference="6Fr-uT-Owa"/>
                                         <exclude reference="7Qu-rg-SNc"/>
+                                        <exclude reference="E74-vd-Kdq"/>
+                                        <exclude reference="HVN-nc-DHI"/>
                                         <exclude reference="Iwo-a0-C17"/>
                                         <exclude reference="NQx-1H-2A8"/>
                                         <exclude reference="bQ9-nc-VlD"/>
@@ -265,11 +279,14 @@
                                         <exclude reference="uIu-YK-joV"/>
                                         <exclude reference="0Kt-dV-JQY"/>
                                         <exclude reference="4dl-j3-2Ng"/>
+                                        <exclude reference="B3P-YN-64E"/>
                                         <exclude reference="Fqa-x3-NXw"/>
                                         <exclude reference="GMK-YZ-RBu"/>
                                         <exclude reference="NZU-nB-piP"/>
+                                        <exclude reference="biK-Ug-Nhq"/>
                                         <exclude reference="blU-oE-dLL"/>
                                         <exclude reference="meR-U9-wYT"/>
+                                        <exclude reference="yDw-Oo-JtP"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -306,15 +323,28 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="2Xe-UY-uHE" firstAttribute="leading" secondItem="3Yl-Bj-Pmz" secondAttribute="leading" constant="2" id="Cae-CM-E14"/>
+                                    <constraint firstItem="2Xe-UY-uHE" firstAttribute="leading" secondItem="3Yl-Bj-Pmz" secondAttribute="leadingMargin" id="DWq-4k-Opg"/>
+                                    <constraint firstItem="2Xe-UY-uHE" firstAttribute="bottom" secondItem="3Yl-Bj-Pmz" secondAttribute="bottomMargin" id="ICM-ZD-k2T"/>
                                     <constraint firstItem="2Xe-UY-uHE" firstAttribute="top" secondItem="3Yl-Bj-Pmz" secondAttribute="top" constant="2" id="Inj-gn-K3c"/>
+                                    <constraint firstItem="2Xe-UY-uHE" firstAttribute="top" secondItem="3Yl-Bj-Pmz" secondAttribute="topMargin" id="aho-8t-RO3"/>
                                     <constraint firstAttribute="trailing" secondItem="2Xe-UY-uHE" secondAttribute="trailing" constant="2" id="ksR-Mm-tTj"/>
+                                    <constraint firstItem="2Xe-UY-uHE" firstAttribute="trailing" secondItem="3Yl-Bj-Pmz" secondAttribute="trailingMargin" id="rZi-gi-xUy"/>
                                     <constraint firstAttribute="bottom" secondItem="2Xe-UY-uHE" secondAttribute="bottom" constant="2" id="sqZ-H6-dCb"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cae-CM-E14"/>
+                                        <exclude reference="Inj-gn-K3c"/>
+                                        <exclude reference="ksR-Mm-tTj"/>
+                                        <exclude reference="sqZ-H6-dCb"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="LrJ-MY-OPU" appends="YES" id="CgX-tP-hw3"/>
                                 </connections>
@@ -366,35 +396,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-wf-fn7" customClass="RoundedControl" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cym-3r-t5S" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="QEs-IQ-gq5"/>
-                                            <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="WSs-Ae-DN0"/>
-                                            <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="mst-3h-08F"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                                        <state key="normal" title="HOLD">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="WSs-Ae-DN0"/>
-                                                <exclude reference="mst-3h-08F"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="holdButtonTapped:" destination="wpy-HA-xtF" eventType="touchUpInside" id="sgJ-Yg-mAe"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-oS-ACy" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="43" height="43"/>
                                         <constraints>
@@ -436,6 +437,35 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cym-3r-t5S" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="QEs-IQ-gq5"/>
+                                            <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="WSs-Ae-DN0"/>
+                                            <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="mst-3h-08F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="HOLD">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="WSs-Ae-DN0"/>
+                                                <exclude reference="mst-3h-08F"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="holdButtonTapped:" destination="wpy-HA-xtF" eventType="touchUpInside" id="sgJ-Yg-mAe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -446,6 +476,7 @@
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="4v1-yD-Hsq"/>
                                     <constraint firstAttribute="trailing" secondItem="Cym-3r-t5S" secondAttribute="trailing" constant="2" id="6eG-Jg-4uH"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="ByH-Oo-be3"/>
+                                    <constraint firstItem="83F-Vg-V8k" firstAttribute="bottom" secondItem="Z1b-wf-fn7" secondAttribute="bottomMargin" id="Bzh-My-1U6"/>
                                     <constraint firstAttribute="height" constant="47" id="Dtd-Vq-oHR"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="FAQ-Ue-d4o"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="HxX-tE-zHS"/>
@@ -456,20 +487,27 @@
                                     <constraint firstAttribute="bottom" secondItem="Cym-3r-t5S" secondAttribute="bottom" constant="2" id="RpD-ZE-3cD"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="leading" secondItem="gIf-oS-ACy" secondAttribute="trailing" constant="2" id="SDC-CF-pyi"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="Smp-07-Ft1"/>
+                                    <constraint firstItem="gIf-oS-ACy" firstAttribute="bottom" secondItem="Z1b-wf-fn7" secondAttribute="bottomMargin" id="SzK-I8-jcc"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="83F-Vg-V8k" secondAttribute="bottom" constant="2" id="Ttw-sa-Sq3"/>
                                     <constraint firstAttribute="bottom" secondItem="83F-Vg-V8k" secondAttribute="bottom" constant="2" id="VVs-ul-iNx"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="gIf-oS-ACy" secondAttribute="trailing" constant="2" id="Vxc-uz-Fyp"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="YOG-ja-H1j"/>
                                     <constraint firstItem="gIf-oS-ACy" firstAttribute="leading" secondItem="Z1b-wf-fn7" secondAttribute="leading" constant="2" id="Zfd-WX-kii"/>
+                                    <constraint firstItem="gIf-oS-ACy" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="topMargin" id="aWG-BR-iJX"/>
                                     <constraint firstItem="gIf-oS-ACy" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="beG-1i-9QB"/>
+                                    <constraint firstItem="Cym-3r-t5S" firstAttribute="bottom" secondItem="Z1b-wf-fn7" secondAttribute="bottomMargin" id="bpt-FT-uvZ"/>
                                     <constraint firstAttribute="bottom" secondItem="83F-Vg-V8k" secondAttribute="bottom" constant="2" id="d9T-ex-WFc"/>
+                                    <constraint firstItem="Cym-3r-t5S" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="topMargin" id="fdP-bj-pu3"/>
                                     <constraint firstItem="gIf-oS-ACy" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="flk-ns-p1j"/>
                                     <constraint firstItem="gIf-oS-ACy" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="lgw-qC-IdP"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="top" constant="2" id="okz-yR-BUc"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="Z1b-wf-fn7" secondAttribute="leading" constant="2" id="pSV-tb-4Xr"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="psv-2z-HLK"/>
+                                    <constraint firstItem="gIf-oS-ACy" firstAttribute="leading" secondItem="Z1b-wf-fn7" secondAttribute="leadingMargin" id="qHd-UO-qhS"/>
                                     <constraint firstAttribute="bottom" secondItem="gIf-oS-ACy" secondAttribute="bottom" constant="2" id="qyX-0g-Wsu"/>
                                     <constraint firstItem="83F-Vg-V8k" firstAttribute="leading" secondItem="Z1b-wf-fn7" secondAttribute="leadingMargin" constant="2" id="rCJ-1b-UwA"/>
+                                    <constraint firstItem="Cym-3r-t5S" firstAttribute="trailing" secondItem="Z1b-wf-fn7" secondAttribute="trailingMargin" id="rHB-UV-Pq5"/>
+                                    <constraint firstItem="83F-Vg-V8k" firstAttribute="top" secondItem="Z1b-wf-fn7" secondAttribute="topMargin" id="sJ4-Im-tBF"/>
                                     <constraint firstAttribute="bottom" secondItem="gIf-oS-ACy" secondAttribute="bottom" constant="2" id="tkc-Nq-in0"/>
                                     <constraint firstItem="Cym-3r-t5S" firstAttribute="leading" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="uOH-mW-SjK"/>
                                     <constraint firstAttribute="bottom" secondItem="83F-Vg-V8k" secondAttribute="bottom" constant="2" id="xBZ-fz-GUC"/>
@@ -478,6 +516,7 @@
                                     <constraint firstAttribute="trailing" secondItem="83F-Vg-V8k" secondAttribute="trailing" constant="2" id="zUQ-U8-GFC"/>
                                     <constraint firstAttribute="trailing" secondItem="Cym-3r-t5S" secondAttribute="trailing" constant="2" id="zUr-Wr-qNR"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
@@ -486,9 +525,12 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="0Jr-q1-Hlk"/>
+                                        <exclude reference="MhM-Pi-pDX"/>
                                         <exclude reference="Zfd-WX-kii"/>
                                         <exclude reference="beG-1i-9QB"/>
+                                        <exclude reference="flk-ns-p1j"/>
                                         <exclude reference="lgw-qC-IdP"/>
+                                        <exclude reference="qyX-0g-Wsu"/>
                                         <exclude reference="tkc-Nq-in0"/>
                                         <exclude reference="4ju-O9-gcf"/>
                                         <exclude reference="4v1-yD-Hsq"/>
@@ -496,14 +538,18 @@
                                         <exclude reference="NK1-25-1CJ"/>
                                         <exclude reference="SDC-CF-pyi"/>
                                         <exclude reference="Ttw-sa-Sq3"/>
+                                        <exclude reference="VVs-ul-iNx"/>
                                         <exclude reference="d9T-ex-WFc"/>
+                                        <exclude reference="okz-yR-BUc"/>
                                         <exclude reference="rCJ-1b-UwA"/>
                                         <exclude reference="xBZ-fz-GUC"/>
                                         <exclude reference="yko-U6-koA"/>
                                         <exclude reference="zUQ-U8-GFC"/>
                                         <exclude reference="2n5-8R-LkB"/>
+                                        <exclude reference="3ek-q4-urk"/>
                                         <exclude reference="6eG-Jg-4uH"/>
                                         <exclude reference="ByH-Oo-be3"/>
+                                        <exclude reference="FAQ-Ue-d4o"/>
                                         <exclude reference="OQi-hC-uI2"/>
                                         <exclude reference="RpD-ZE-3cD"/>
                                         <exclude reference="Smp-07-Ft1"/>
@@ -512,6 +558,7 @@
                                         <exclude reference="pSV-tb-4Xr"/>
                                         <exclude reference="psv-2z-HLK"/>
                                         <exclude reference="uOH-mW-SjK"/>
+                                        <exclude reference="zUr-Wr-qNR"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -550,22 +597,27 @@
                                         <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <constraints>
+                                            <constraint firstItem="Dv1-sL-RjK" firstAttribute="leading" secondItem="nKs-R2-KFV" secondAttribute="leadingMargin" id="0hg-rB-bIX"/>
                                             <constraint firstItem="h64-U2-xGg" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" id="46d-AV-txR"/>
                                             <constraint firstItem="Dv1-sL-RjK" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="0.8" id="BDv-I4-Wit"/>
                                             <constraint firstItem="6jq-jy-rH4" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" multiplier="1.5" id="BZr-oU-fV5"/>
                                             <constraint firstItem="def-O9-lgZ" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="4/3" constant="6" id="GgL-8T-LL7"/>
                                             <constraint firstItem="Ypf-Kj-Yaf" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="0.8" id="HXo-lH-dbY"/>
                                             <constraint firstItem="Dv1-sL-RjK" firstAttribute="leading" secondItem="nKs-R2-KFV" secondAttribute="leading" constant="12" id="Jtm-rC-lVN"/>
+                                            <constraint firstItem="Ypf-Kj-Yaf" firstAttribute="trailing" secondItem="nKs-R2-KFV" secondAttribute="trailingMargin" id="Nzw-Eg-a7V"/>
                                             <constraint firstAttribute="bottom" secondItem="def-O9-lgZ" secondAttribute="bottom" constant="12" id="Ovo-p6-tVX"/>
                                             <constraint firstItem="def-O9-lgZ" firstAttribute="centerX" secondItem="nKs-R2-KFV" secondAttribute="centerX" multiplier="0.5" id="Ptt-Iw-9NI"/>
                                             <constraint firstAttribute="trailing" secondItem="Ypf-Kj-Yaf" secondAttribute="trailing" constant="12" id="QAW-y6-HUh"/>
                                             <constraint firstItem="6jq-jy-rH4" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="4/3" constant="6" id="RAy-GI-zVI"/>
+                                            <constraint firstItem="6jq-jy-rH4" firstAttribute="bottom" secondItem="nKs-R2-KFV" secondAttribute="bottomMargin" id="RzQ-1p-vRa"/>
                                             <constraint firstItem="def-O9-lgZ" firstAttribute="centerY" secondItem="nKs-R2-KFV" secondAttribute="centerY" multiplier="0.5" id="Zdc-Ku-YA1"/>
                                             <constraint firstAttribute="bottom" secondItem="6jq-jy-rH4" secondAttribute="bottom" constant="12" id="Zyn-m8-hCf"/>
                                             <constraint firstAttribute="trailing" secondItem="6jq-jy-rH4" secondAttribute="trailing" constant="12" id="jkx-HJ-YNu"/>
+                                            <constraint firstItem="def-O9-lgZ" firstAttribute="bottom" secondItem="nKs-R2-KFV" secondAttribute="bottomMargin" id="p5f-6a-Ix2"/>
                                             <constraint firstItem="def-O9-lgZ" firstAttribute="leading" secondItem="nKs-R2-KFV" secondAttribute="leading" constant="12" id="ruf-Nr-FcM"/>
                                             <constraint firstItem="h64-U2-xGg" firstAttribute="top" secondItem="nKs-R2-KFV" secondAttribute="top" constant="12" id="sVF-6Z-62q"/>
                                         </constraints>
+                                        <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
@@ -573,10 +625,14 @@
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="Jtm-rC-lVN"/>
                                                 <exclude reference="GgL-8T-LL7"/>
+                                                <exclude reference="Ovo-p6-tVX"/>
                                                 <exclude reference="Zdc-Ku-YA1"/>
                                                 <exclude reference="ruf-Nr-FcM"/>
+                                                <exclude reference="QAW-y6-HUh"/>
                                                 <exclude reference="RAy-GI-zVI"/>
+                                                <exclude reference="Zyn-m8-hCf"/>
                                                 <exclude reference="jkx-HJ-YNu"/>
                                             </mask>
                                         </variation>
@@ -588,15 +644,28 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nKs-R2-KFV" firstAttribute="leading" secondItem="5Y9-28-UfI" secondAttribute="leading" constant="2" id="8iI-U3-pkz"/>
+                                    <constraint firstItem="nKs-R2-KFV" firstAttribute="leading" secondItem="5Y9-28-UfI" secondAttribute="leadingMargin" id="9BG-js-dSy"/>
                                     <constraint firstItem="nKs-R2-KFV" firstAttribute="top" secondItem="5Y9-28-UfI" secondAttribute="top" constant="2" id="Evu-Au-htA"/>
+                                    <constraint firstItem="nKs-R2-KFV" firstAttribute="trailing" secondItem="5Y9-28-UfI" secondAttribute="trailingMargin" id="IWX-PD-PgA"/>
+                                    <constraint firstItem="nKs-R2-KFV" firstAttribute="top" secondItem="5Y9-28-UfI" secondAttribute="topMargin" id="Iu4-An-pJs"/>
                                     <constraint firstAttribute="trailing" secondItem="nKs-R2-KFV" secondAttribute="trailing" constant="2" id="V15-CC-GkO"/>
                                     <constraint firstAttribute="bottom" secondItem="nKs-R2-KFV" secondAttribute="bottom" constant="2" id="qTy-FO-ofg"/>
+                                    <constraint firstItem="nKs-R2-KFV" firstAttribute="bottom" secondItem="5Y9-28-UfI" secondAttribute="bottomMargin" id="qkp-uD-KP4"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8iI-U3-pkz"/>
+                                        <exclude reference="Evu-Au-htA"/>
+                                        <exclude reference="V15-CC-GkO"/>
+                                        <exclude reference="qTy-FO-ofg"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.3009049043573182" alpha="1" colorSpace="calibratedWhite"/>
@@ -645,18 +714,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-Tg-ZCd" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
-                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8G-z2-kPq" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="43" height="43"/>
                                         <constraints>
@@ -686,6 +743,18 @@
                                             <action selector="flipButtonTapped:" destination="5Oq-Ld-xFp" eventType="touchUpInside" id="wEr-jZ-Ch8"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-og-Bf3" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <constraints>
@@ -723,11 +792,14 @@
                                     <constraint firstAttribute="bottom" secondItem="1vE-og-Bf3" secondAttribute="bottom" constant="2" id="3V1-kn-iRj"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="top" constant="2" id="3do-WM-ggO"/>
                                     <constraint firstAttribute="bottom" secondItem="4At-Bv-iWs" secondAttribute="bottom" constant="2" id="49L-q1-gT0"/>
+                                    <constraint firstItem="b8G-z2-kPq" firstAttribute="bottom" secondItem="Yb4-Tg-ZCd" secondAttribute="bottomMargin" id="9w8-Kd-BeY"/>
                                     <constraint firstAttribute="height" constant="47" id="AJx-9L-LFC"/>
+                                    <constraint firstItem="1vE-og-Bf3" firstAttribute="bottom" secondItem="Yb4-Tg-ZCd" secondAttribute="bottomMargin" id="B3g-ue-Q3c"/>
                                     <constraint firstAttribute="bottom" secondItem="4At-Bv-iWs" secondAttribute="bottom" constant="2" id="Bie-OI-nka"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="4At-Bv-iWs" secondAttribute="bottom" constant="2" id="CLj-jT-RD7"/>
                                     <constraint firstItem="4At-Bv-iWs" firstAttribute="leading" secondItem="b8G-z2-kPq" secondAttribute="trailing" constant="2" id="DC2-4v-A9B"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="top" constant="2" id="DRp-Jh-TQR"/>
+                                    <constraint firstItem="b8G-z2-kPq" firstAttribute="leading" secondItem="Yb4-Tg-ZCd" secondAttribute="leadingMargin" id="DrD-LZ-Rig"/>
                                     <constraint firstAttribute="bottom" secondItem="1vE-og-Bf3" secondAttribute="bottom" constant="2" id="G4Z-5D-y3u"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="leading" secondItem="Yb4-Tg-ZCd" secondAttribute="leading" constant="2" id="GK3-Kv-0DK"/>
                                     <constraint firstItem="b8G-z2-kPq" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="top" constant="2" id="Gsf-Vf-pM9"/>
@@ -739,13 +811,17 @@
                                     <constraint firstItem="4At-Bv-iWs" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="top" constant="2" id="Qx7-4V-jnB"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="leading" secondItem="4At-Bv-iWs" secondAttribute="trailing" constant="2" id="RqQ-tt-q9E"/>
                                     <constraint firstAttribute="trailing" secondItem="1vE-og-Bf3" secondAttribute="trailing" constant="2" id="Ry1-64-Ysp"/>
+                                    <constraint firstItem="4At-Bv-iWs" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="topMargin" id="TrY-K7-Jh2"/>
                                     <constraint firstItem="b8G-z2-kPq" firstAttribute="leading" secondItem="4At-Bv-iWs" secondAttribute="trailing" constant="2" id="UZH-zI-dOG"/>
                                     <constraint firstItem="4At-Bv-iWs" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="top" constant="2" id="aUh-mH-8Nz"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="top" constant="2" id="ap3-D8-cc7"/>
+                                    <constraint firstItem="1vE-og-Bf3" firstAttribute="trailing" secondItem="Yb4-Tg-ZCd" secondAttribute="trailingMargin" id="bep-V1-mnI"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="leading" secondItem="4At-Bv-iWs" secondAttribute="trailing" constant="2" id="fyL-Yw-2GW"/>
                                     <constraint firstAttribute="bottom" secondItem="b8G-z2-kPq" secondAttribute="bottom" constant="2" id="g1f-He-Yza"/>
                                     <constraint firstAttribute="bottom" secondItem="1vE-og-Bf3" secondAttribute="bottom" constant="2" id="iaL-9o-CAj"/>
+                                    <constraint firstItem="1vE-og-Bf3" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="topMargin" id="j7s-E0-m6K"/>
                                     <constraint firstAttribute="trailing" secondItem="4At-Bv-iWs" secondAttribute="trailing" constant="2" id="jB6-ld-NzE"/>
+                                    <constraint firstItem="b8G-z2-kPq" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="topMargin" id="nCt-w1-GYN"/>
                                     <constraint firstItem="b8G-z2-kPq" firstAttribute="leading" secondItem="Yb4-Tg-ZCd" secondAttribute="leading" constant="2" id="nu5-af-aYo"/>
                                     <constraint firstItem="4At-Bv-iWs" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="top" constant="2" id="oOY-8Y-0uz"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="leading" secondItem="4At-Bv-iWs" secondAttribute="trailing" constant="2" id="ob0-mu-Df1"/>
@@ -756,7 +832,9 @@
                                     <constraint firstItem="b8G-z2-kPq" firstAttribute="leading" secondItem="Yb4-Tg-ZCd" secondAttribute="leading" constant="2" id="vAO-mC-EeC"/>
                                     <constraint firstAttribute="bottom" secondItem="4At-Bv-iWs" secondAttribute="bottom" constant="2" id="wDf-9f-sbg"/>
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="leading" secondItem="b8G-z2-kPq" secondAttribute="trailing" constant="2" id="wvQ-3i-6f5"/>
+                                    <constraint firstItem="4At-Bv-iWs" firstAttribute="bottom" secondItem="Yb4-Tg-ZCd" secondAttribute="bottomMargin" id="yBh-OB-RWr"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
@@ -764,9 +842,12 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="Gsf-Vf-pM9"/>
                                         <exclude reference="J2B-ho-XHT"/>
+                                        <exclude reference="KgA-rT-AhD"/>
                                         <exclude reference="UZH-zI-dOG"/>
                                         <exclude reference="g1f-He-Yza"/>
+                                        <exclude reference="nu5-af-aYo"/>
                                         <exclude reference="q1e-vn-fhX"/>
                                         <exclude reference="vAO-mC-EeC"/>
                                         <exclude reference="49L-q1-gT0"/>
@@ -774,12 +855,16 @@
                                         <exclude reference="CLj-jT-RD7"/>
                                         <exclude reference="Odb-Wq-XbV"/>
                                         <exclude reference="Qd5-J2-c2F"/>
+                                        <exclude reference="Qx7-4V-jnB"/>
                                         <exclude reference="aUh-mH-8Nz"/>
                                         <exclude reference="jB6-ld-NzE"/>
                                         <exclude reference="oOY-8Y-0uz"/>
                                         <exclude reference="oq4-uo-yTf"/>
                                         <exclude reference="smb-fy-bzb"/>
                                         <exclude reference="uIm-dv-qRG"/>
+                                        <exclude reference="wDf-9f-sbg"/>
+                                        <exclude reference="1ed-dY-R9U"/>
+                                        <exclude reference="3V1-kn-iRj"/>
                                         <exclude reference="3do-WM-ggO"/>
                                         <exclude reference="DRp-Jh-TQR"/>
                                         <exclude reference="G4Z-5D-y3u"/>
@@ -787,6 +872,7 @@
                                         <exclude reference="PDs-xl-kNt"/>
                                         <exclude reference="RqQ-tt-q9E"/>
                                         <exclude reference="Ry1-64-Ysp"/>
+                                        <exclude reference="ap3-D8-cc7"/>
                                         <exclude reference="fyL-Yw-2GW"/>
                                         <exclude reference="iaL-9o-CAj"/>
                                         <exclude reference="ob0-mu-Df1"/>
@@ -797,39 +883,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="51" width="279" height="133"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
-                                        <rect key="frame" x="2" y="115" width="275" height="16"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="141" y="2" width="136" height="111"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                <real key="value" value="200"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="logarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="formantsFrequencyDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="4eQ-YW-99R"/>
-                                        </connections>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="111"/>
                                         <userDefinedRuntimeAttributes>
@@ -857,22 +910,63 @@
                                             <action selector="formantsBandwidthDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="J4z-Pu-8gG"/>
                                         </connections>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="141" y="2" width="136" height="111"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="200"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="logarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="formantsFrequencyDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="4eQ-YW-99R"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
+                                        <rect key="frame" x="2" y="115" width="275" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="2Ar-kQ-1ch" firstAttribute="top" secondItem="D4I-ss-N7k" secondAttribute="bottom" constant="2" id="3oe-aM-1dg"/>
                                     <constraint firstAttribute="trailing" secondItem="6md-Za-K4d" secondAttribute="trailing" constant="2" id="50o-aM-PnC"/>
+                                    <constraint firstItem="2Ar-kQ-1ch" firstAttribute="bottom" secondItem="8c9-JQ-3WD" secondAttribute="bottomMargin" id="50v-kv-WfN"/>
                                     <constraint firstItem="6md-Za-K4d" firstAttribute="leading" secondItem="D4I-ss-N7k" secondAttribute="trailing" constant="2" id="5fE-D8-wlW"/>
                                     <constraint firstItem="2Ar-kQ-1ch" firstAttribute="top" secondItem="6md-Za-K4d" secondAttribute="bottom" constant="2" id="CEv-za-Rhy"/>
+                                    <constraint firstItem="6md-Za-K4d" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="topMargin" id="Dlx-VW-W4l"/>
                                     <constraint firstItem="D4I-ss-N7k" firstAttribute="width" secondItem="6md-Za-K4d" secondAttribute="width" id="EoA-o8-8ld"/>
                                     <constraint firstItem="6md-Za-K4d" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="top" constant="2" id="RMw-fA-Ihw"/>
                                     <constraint firstItem="D4I-ss-N7k" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="top" constant="2" id="RfX-95-L14"/>
+                                    <constraint firstItem="2Ar-kQ-1ch" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leadingMargin" id="SQd-ac-o3B"/>
+                                    <constraint firstItem="2Ar-kQ-1ch" firstAttribute="trailing" secondItem="8c9-JQ-3WD" secondAttribute="trailingMargin" id="c1l-Ln-NVY"/>
                                     <constraint firstItem="2Ar-kQ-1ch" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leading" constant="2" id="czS-cO-1ee"/>
                                     <constraint firstItem="D4I-ss-N7k" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leading" constant="2" id="ddR-ev-XFY"/>
                                     <constraint firstAttribute="trailing" secondItem="2Ar-kQ-1ch" secondAttribute="trailing" constant="2" id="jse-sw-ot7"/>
+                                    <constraint firstItem="D4I-ss-N7k" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="leadingMargin" id="q1N-M5-nK2"/>
+                                    <constraint firstItem="6md-Za-K4d" firstAttribute="trailing" secondItem="8c9-JQ-3WD" secondAttribute="trailingMargin" id="qqW-iB-Tym"/>
                                     <constraint firstAttribute="bottom" secondItem="2Ar-kQ-1ch" secondAttribute="bottom" constant="2" id="rr9-g8-Gmg"/>
+                                    <constraint firstItem="D4I-ss-N7k" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="topMargin" id="tpM-oK-HoT"/>
                                     <constraint firstItem="6md-Za-K4d" firstAttribute="leading" secondItem="D4I-ss-N7k" secondAttribute="trailing" constant="2" id="uiP-Ab-RjN"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
@@ -880,19 +974,20 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="RfX-95-L14"/>
+                                        <exclude reference="ddR-ev-XFY"/>
+                                        <exclude reference="czS-cO-1ee"/>
+                                        <exclude reference="jse-sw-ot7"/>
+                                        <exclude reference="rr9-g8-Gmg"/>
+                                        <exclude reference="50o-aM-PnC"/>
                                         <exclude reference="5fE-D8-wlW"/>
+                                        <exclude reference="RMw-fA-Ihw"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="186" width="279" height="132"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
-                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="110"/>
                                         <userDefinedRuntimeAttributes>
@@ -947,22 +1042,36 @@
                                             <action selector="effectsReverbDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="dPp-Ph-rkW"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
+                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="5wm-hF-13a" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="top" constant="2" id="5Mo-RD-DbQ"/>
                                     <constraint firstItem="woz-pj-zhQ" firstAttribute="leading" secondItem="5wm-hF-13a" secondAttribute="trailing" constant="2" id="85T-1B-zkY"/>
                                     <constraint firstItem="c8V-oF-p7F" firstAttribute="top" secondItem="5wm-hF-13a" secondAttribute="bottom" constant="2" id="A9l-Rh-wbf"/>
+                                    <constraint firstItem="woz-pj-zhQ" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="topMargin" id="DeZ-bW-NeY"/>
                                     <constraint firstAttribute="bottom" secondItem="c8V-oF-p7F" secondAttribute="bottom" constant="2" id="EOu-EG-pMu"/>
                                     <constraint firstItem="c8V-oF-p7F" firstAttribute="top" secondItem="woz-pj-zhQ" secondAttribute="bottom" constant="2" id="GIi-UD-qtf"/>
+                                    <constraint firstItem="woz-pj-zhQ" firstAttribute="trailing" secondItem="H9Y-vc-Pea" secondAttribute="trailingMargin" id="H3a-jC-eYN"/>
                                     <constraint firstAttribute="trailing" secondItem="woz-pj-zhQ" secondAttribute="trailing" constant="2" id="NL8-jz-8in"/>
                                     <constraint firstItem="woz-pj-zhQ" firstAttribute="leading" secondItem="5wm-hF-13a" secondAttribute="trailing" constant="2" id="Nz4-Jc-Ixj"/>
                                     <constraint firstItem="5wm-hF-13a" firstAttribute="leading" secondItem="H9Y-vc-Pea" secondAttribute="leading" constant="2" id="Ps5-fw-Eeg"/>
+                                    <constraint firstItem="c8V-oF-p7F" firstAttribute="bottom" secondItem="H9Y-vc-Pea" secondAttribute="bottomMargin" id="Rk8-wQ-1wY"/>
                                     <constraint firstItem="5wm-hF-13a" firstAttribute="width" secondItem="woz-pj-zhQ" secondAttribute="width" id="bqU-ub-TIV"/>
                                     <constraint firstItem="c8V-oF-p7F" firstAttribute="leading" secondItem="H9Y-vc-Pea" secondAttribute="leading" constant="2" id="ehg-0d-rbe"/>
                                     <constraint firstAttribute="trailing" secondItem="c8V-oF-p7F" secondAttribute="trailing" constant="2" id="epZ-Y1-RAE"/>
+                                    <constraint firstItem="c8V-oF-p7F" firstAttribute="trailing" secondItem="H9Y-vc-Pea" secondAttribute="trailingMargin" id="hVn-4K-i0R"/>
+                                    <constraint firstItem="c8V-oF-p7F" firstAttribute="leading" secondItem="H9Y-vc-Pea" secondAttribute="leadingMargin" id="jBz-uF-Dos"/>
+                                    <constraint firstItem="5wm-hF-13a" firstAttribute="leading" secondItem="H9Y-vc-Pea" secondAttribute="leadingMargin" id="jjq-vX-bef"/>
                                     <constraint firstItem="woz-pj-zhQ" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="top" constant="2" id="ngS-OE-IE2"/>
+                                    <constraint firstItem="5wm-hF-13a" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="topMargin" id="s3e-uI-gUr"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
@@ -970,7 +1079,14 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="5Mo-RD-DbQ"/>
+                                        <exclude reference="Ps5-fw-Eeg"/>
+                                        <exclude reference="EOu-EG-pMu"/>
+                                        <exclude reference="ehg-0d-rbe"/>
+                                        <exclude reference="epZ-Y1-RAE"/>
+                                        <exclude reference="NL8-jz-8in"/>
                                         <exclude reference="Nz4-Jc-Ixj"/>
+                                        <exclude reference="ngS-OE-IE2"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1056,6 +1172,18 @@
                                             <action selector="flipButtonTapped:" destination="uAc-3B-Yd9" eventType="touchUpInside" id="qT5-Ks-Gn6"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-6t-ZK6" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <constraints>
@@ -1085,37 +1213,29 @@
                                             <action selector="resetButtonTapped:" destination="uAc-3B-Yd9" eventType="touchUpInside" id="KWq-NI-jWV"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
-                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="leading" secondItem="yhD-Tv-WFf" secondAttribute="trailing" constant="2" id="1NQ-Kg-bQa"/>
+                                    <constraint firstItem="yhD-Tv-WFf" firstAttribute="leading" secondItem="jdm-qf-yOt" secondAttribute="leadingMargin" id="2fc-d8-UrH"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="leading" secondItem="jdm-qf-yOt" secondAttribute="leading" constant="2" id="55B-Va-aoX"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="top" constant="2" id="5Mx-7l-S2W"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="top" constant="2" id="5Vk-fG-k6M"/>
+                                    <constraint firstItem="nHo-1l-aHO" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="topMargin" id="5hi-cU-Tce"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="leading" secondItem="nHo-1l-aHO" secondAttribute="trailing" constant="2" id="7wg-Qt-DHM"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="leading" secondItem="nHo-1l-aHO" secondAttribute="trailing" constant="2" id="8Nt-PS-4SV"/>
                                     <constraint firstItem="yhD-Tv-WFf" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="top" constant="2" id="AGy-su-FMs"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="top" constant="2" id="AWf-Vt-uSQ"/>
                                     <constraint firstAttribute="bottom" secondItem="xdU-6t-ZK6" secondAttribute="bottom" constant="2" id="B6F-iL-bcT"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="nHo-1l-aHO" secondAttribute="bottom" constant="2" id="BT3-y4-hJw"/>
+                                    <constraint firstItem="xdU-6t-ZK6" firstAttribute="trailing" secondItem="jdm-qf-yOt" secondAttribute="trailingMargin" id="Bha-cG-Hhk"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="leading" secondItem="nHo-1l-aHO" secondAttribute="trailing" constant="2" id="CR0-De-wgT"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="top" constant="2" id="Cac-yE-MgS"/>
                                     <constraint firstItem="yhD-Tv-WFf" firstAttribute="leading" secondItem="jdm-qf-yOt" secondAttribute="leading" constant="2" id="Cfu-Z8-eVg"/>
                                     <constraint firstItem="yhD-Tv-WFf" firstAttribute="width" secondItem="yhD-Tv-WFf" secondAttribute="height" multiplier="1:1" id="Egz-3F-dam"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="leading" secondItem="jdm-qf-yOt" secondAttribute="leading" constant="2" id="GDn-6b-btw"/>
                                     <constraint firstItem="yhD-Tv-WFf" firstAttribute="leading" secondItem="nHo-1l-aHO" secondAttribute="trailing" constant="2" id="H2d-Gh-NP9"/>
+                                    <constraint firstItem="xdU-6t-ZK6" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="topMargin" id="IW9-X4-hkM"/>
                                     <constraint firstAttribute="bottom" secondItem="nHo-1l-aHO" secondAttribute="bottom" constant="2" id="IkE-G4-PMf"/>
                                     <constraint firstAttribute="trailing" secondItem="xdU-6t-ZK6" secondAttribute="trailing" constant="2" id="KUI-22-j0g"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="top" constant="2" id="Nl9-3d-36L"/>
@@ -1127,18 +1247,24 @@
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="leading" secondItem="yhD-Tv-WFf" secondAttribute="trailing" constant="2" id="a9z-0A-UwN"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="leading" secondItem="yhD-Tv-WFf" secondAttribute="trailing" constant="2" id="dI3-gy-eKN"/>
                                     <constraint firstAttribute="trailing" secondItem="xdU-6t-ZK6" secondAttribute="trailing" constant="2" id="dWL-xc-uO5"/>
+                                    <constraint firstItem="xdU-6t-ZK6" firstAttribute="bottom" secondItem="jdm-qf-yOt" secondAttribute="bottomMargin" id="day-XG-T2v"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="leading" secondItem="xdU-6t-ZK6" secondAttribute="trailing" constant="2" id="e8F-Mu-bw0"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="top" constant="2" id="eO4-DL-xfB"/>
                                     <constraint firstAttribute="height" constant="47" id="ejf-5p-pO2"/>
                                     <constraint firstItem="xdU-6t-ZK6" firstAttribute="leading" secondItem="nHo-1l-aHO" secondAttribute="trailing" constant="2" id="g6v-Bz-8rw"/>
+                                    <constraint firstItem="yhD-Tv-WFf" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="topMargin" id="hY8-j5-PfA"/>
+                                    <constraint firstItem="nHo-1l-aHO" firstAttribute="bottom" secondItem="jdm-qf-yOt" secondAttribute="bottomMargin" id="hiR-7e-bSr"/>
                                     <constraint firstAttribute="bottom" secondItem="nHo-1l-aHO" secondAttribute="bottom" constant="2" id="iMh-UP-qIJ"/>
                                     <constraint firstAttribute="trailing" secondItem="nHo-1l-aHO" secondAttribute="trailing" constant="2" id="jWV-bg-rAZ"/>
+                                    <constraint firstItem="yhD-Tv-WFf" firstAttribute="bottom" secondItem="jdm-qf-yOt" secondAttribute="bottomMargin" id="jui-Fx-Zle"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="leading" secondItem="jdm-qf-yOt" secondAttribute="leadingMargin" constant="2" id="lYY-TF-iGn"/>
+                                    <constraint firstItem="nHo-1l-aHO" firstAttribute="leading" secondItem="yhD-Tv-WFf" secondAttribute="trailing" constant="2" id="lYq-a8-3q5"/>
                                     <constraint firstItem="nHo-1l-aHO" firstAttribute="top" secondItem="jdm-qf-yOt" secondAttribute="topMargin" constant="2" id="rR5-dl-vBg"/>
                                     <constraint firstAttribute="bottom" secondItem="nHo-1l-aHO" secondAttribute="bottom" constant="2" id="siR-5K-ccF"/>
                                     <constraint firstAttribute="bottom" secondItem="yhD-Tv-WFf" secondAttribute="bottom" constant="2" id="wVb-Jg-4vf"/>
                                     <constraint firstAttribute="bottom" secondItem="yhD-Tv-WFf" secondAttribute="bottom" constant="2" id="ysJ-hk-0hi"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
@@ -1150,14 +1276,20 @@
                                         <exclude reference="Cfu-Z8-eVg"/>
                                         <exclude reference="Egz-3F-dam"/>
                                         <exclude reference="H2d-Gh-NP9"/>
+                                        <exclude reference="PAH-dX-Kwm"/>
+                                        <exclude reference="VT8-in-Pbf"/>
+                                        <exclude reference="wVb-Jg-4vf"/>
                                         <exclude reference="ysJ-hk-0hi"/>
                                         <exclude reference="1NQ-Kg-bQa"/>
+                                        <exclude reference="5Mx-7l-S2W"/>
                                         <exclude reference="BT3-y4-hJw"/>
                                         <exclude reference="GDn-6b-btw"/>
                                         <exclude reference="IkE-G4-PMf"/>
                                         <exclude reference="Nl9-3d-36L"/>
+                                        <exclude reference="dI3-gy-eKN"/>
                                         <exclude reference="e8F-Mu-bw0"/>
                                         <exclude reference="eO4-DL-xfB"/>
+                                        <exclude reference="iMh-UP-qIJ"/>
                                         <exclude reference="jWV-bg-rAZ"/>
                                         <exclude reference="lYY-TF-iGn"/>
                                         <exclude reference="rR5-dl-vBg"/>
@@ -1165,13 +1297,16 @@
                                         <exclude reference="55B-Va-aoX"/>
                                         <exclude reference="5Vk-fG-k6M"/>
                                         <exclude reference="8Nt-PS-4SV"/>
+                                        <exclude reference="AWf-Vt-uSQ"/>
                                         <exclude reference="B6F-iL-bcT"/>
                                         <exclude reference="CR0-De-wgT"/>
                                         <exclude reference="Cac-yE-MgS"/>
                                         <exclude reference="KUI-22-j0g"/>
                                         <exclude reference="P7Y-X5-Qdm"/>
+                                        <exclude reference="QWv-YJ-DXq"/>
                                         <exclude reference="Vzm-Ws-UDM"/>
                                         <exclude reference="a9z-0A-UwN"/>
+                                        <exclude reference="dWL-xc-uO5"/>
                                         <exclude reference="g6v-Bz-8rw"/>
                                     </mask>
                                 </variation>
@@ -1179,39 +1314,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-Jy-AMK" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="51" width="279" height="133"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Lj-sMa">
-                                        <rect key="frame" x="2" y="115" width="275" height="16"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="141" y="2" width="136" height="111"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="Hz"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="logarithmic" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="vibratoFrequencyDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="ceI-zg-t15"/>
-                                        </connections>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="111"/>
                                         <userDefinedRuntimeAttributes>
@@ -1239,36 +1341,84 @@
                                             <action selector="vibratoDepthDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="dUa-Ra-hez"/>
                                         </connections>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="141" y="2" width="136" height="111"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="Hz"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="logarithmic" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="vibratoFrequencyDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="ceI-zg-t15"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Lj-sMa">
+                                        <rect key="frame" x="2" y="115" width="275" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="agR-iM-jxl" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="topMargin" id="5Wb-3H-g11"/>
+                                    <constraint firstItem="Hcx-Lj-sMa" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leadingMargin" id="6Bb-xU-BBa"/>
+                                    <constraint firstItem="Hcx-Lj-sMa" firstAttribute="bottom" secondItem="b8H-Jy-AMK" secondAttribute="bottomMargin" id="8A6-xI-3k5"/>
+                                    <constraint firstItem="Hcx-Lj-sMa" firstAttribute="trailing" secondItem="b8H-Jy-AMK" secondAttribute="trailingMargin" id="DMb-dm-SWL"/>
                                     <constraint firstItem="agR-iM-jxl" firstAttribute="leading" secondItem="76k-PL-aZO" secondAttribute="trailing" constant="2" id="FLn-a9-9Gx"/>
+                                    <constraint firstItem="Hcx-Lj-sMa" firstAttribute="top" secondItem="agR-iM-jxl" secondAttribute="bottom" constant="2" id="HjM-bt-CMu"/>
                                     <constraint firstItem="76k-PL-aZO" firstAttribute="width" secondItem="agR-iM-jxl" secondAttribute="width" id="JC8-sO-aYn"/>
                                     <constraint firstItem="76k-PL-aZO" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="top" constant="2" id="My5-Gi-QQJ"/>
                                     <constraint firstItem="Hcx-Lj-sMa" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leading" constant="2" id="P4U-fo-8Fa"/>
                                     <constraint firstAttribute="trailing" secondItem="Hcx-Lj-sMa" secondAttribute="trailing" constant="2" id="Ug8-Tw-95c"/>
+                                    <constraint firstItem="76k-PL-aZO" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="topMargin" id="X1Y-yf-rz6"/>
                                     <constraint firstAttribute="trailing" secondItem="agR-iM-jxl" secondAttribute="trailing" constant="2" id="Z56-fk-ERF"/>
                                     <constraint firstItem="Hcx-Lj-sMa" firstAttribute="top" secondItem="agR-iM-jxl" secondAttribute="bottom" constant="2" id="aoG-q4-duQ"/>
                                     <constraint firstItem="agR-iM-jxl" firstAttribute="top" secondItem="b8H-Jy-AMK" secondAttribute="top" constant="2" id="gzd-tH-48a"/>
                                     <constraint firstAttribute="bottom" secondItem="Hcx-Lj-sMa" secondAttribute="bottom" constant="2" id="iaQ-f8-eoe"/>
                                     <constraint firstItem="76k-PL-aZO" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leading" constant="2" id="qua-Ep-hkZ"/>
+                                    <constraint firstItem="76k-PL-aZO" firstAttribute="leading" secondItem="b8H-Jy-AMK" secondAttribute="leadingMargin" id="sml-3R-hph"/>
                                     <constraint firstItem="Hcx-Lj-sMa" firstAttribute="top" secondItem="76k-PL-aZO" secondAttribute="bottom" constant="2" id="sr4-GG-Lzg"/>
+                                    <constraint firstItem="agR-iM-jxl" firstAttribute="trailing" secondItem="b8H-Jy-AMK" secondAttribute="trailingMargin" id="zLU-DI-DtN"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="My5-Gi-QQJ"/>
+                                        <exclude reference="qua-Ep-hkZ"/>
+                                        <exclude reference="P4U-fo-8Fa"/>
+                                        <exclude reference="Ug8-Tw-95c"/>
+                                        <exclude reference="aoG-q4-duQ"/>
+                                        <exclude reference="iaQ-f8-eoe"/>
+                                        <exclude reference="Z56-fk-ERF"/>
+                                        <exclude reference="gzd-tH-48a"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Nj-01a" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="186" width="279" height="132"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-L5-US1">
-                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-dp-Xy2" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="110"/>
                                         <userDefinedRuntimeAttributes>
@@ -1327,26 +1477,51 @@
                                             <action selector="keyboardRightIntervalDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="eco-25-27W"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-L5-US1">
+                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="IlS-iC-Twg" firstAttribute="top" secondItem="0eI-Nj-01a" secondAttribute="top" constant="2" id="2id-WI-f7u"/>
+                                    <constraint firstItem="IlS-iC-Twg" firstAttribute="top" secondItem="0eI-Nj-01a" secondAttribute="topMargin" id="30x-RC-7tP"/>
+                                    <constraint firstItem="nhK-L5-US1" firstAttribute="trailing" secondItem="0eI-Nj-01a" secondAttribute="trailingMargin" id="7jt-X9-4Vc"/>
                                     <constraint firstAttribute="trailing" secondItem="nhK-L5-US1" secondAttribute="trailing" constant="2" id="8XS-U2-Tzf"/>
+                                    <constraint firstItem="d8O-dp-Xy2" firstAttribute="leading" secondItem="0eI-Nj-01a" secondAttribute="leadingMargin" id="Bax-o7-mLe"/>
                                     <constraint firstItem="nhK-L5-US1" firstAttribute="top" secondItem="IlS-iC-Twg" secondAttribute="bottom" constant="2" id="CPD-2N-mmK"/>
+                                    <constraint firstItem="d8O-dp-Xy2" firstAttribute="top" secondItem="0eI-Nj-01a" secondAttribute="topMargin" id="Df1-hr-vQ6"/>
                                     <constraint firstItem="d8O-dp-Xy2" firstAttribute="leading" secondItem="0eI-Nj-01a" secondAttribute="leading" constant="2" id="Dhw-Xw-hdo"/>
+                                    <constraint firstItem="nhK-L5-US1" firstAttribute="bottom" secondItem="0eI-Nj-01a" secondAttribute="bottomMargin" id="KV0-H5-1PM"/>
                                     <constraint firstItem="d8O-dp-Xy2" firstAttribute="top" secondItem="0eI-Nj-01a" secondAttribute="top" constant="2" id="P2x-5a-R2m"/>
                                     <constraint firstItem="nhK-L5-US1" firstAttribute="leading" secondItem="0eI-Nj-01a" secondAttribute="leading" constant="2" id="PfY-Cp-pyh"/>
                                     <constraint firstItem="nhK-L5-US1" firstAttribute="top" secondItem="d8O-dp-Xy2" secondAttribute="bottom" constant="2" id="UfG-oG-BaB"/>
                                     <constraint firstAttribute="bottom" secondItem="nhK-L5-US1" secondAttribute="bottom" constant="2" id="Yaj-sI-9Qm"/>
                                     <constraint firstItem="d8O-dp-Xy2" firstAttribute="width" secondItem="IlS-iC-Twg" secondAttribute="width" id="a3G-kC-Sat"/>
+                                    <constraint firstItem="nhK-L5-US1" firstAttribute="leading" secondItem="0eI-Nj-01a" secondAttribute="leadingMargin" id="atI-wP-8q3"/>
                                     <constraint firstItem="IlS-iC-Twg" firstAttribute="leading" secondItem="d8O-dp-Xy2" secondAttribute="trailing" constant="2" id="fZt-j6-NfN"/>
+                                    <constraint firstItem="IlS-iC-Twg" firstAttribute="trailing" secondItem="0eI-Nj-01a" secondAttribute="trailingMargin" id="mCV-w1-NlF"/>
                                     <constraint firstAttribute="trailing" secondItem="IlS-iC-Twg" secondAttribute="trailing" constant="2" id="mNh-ce-3sn"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Dhw-Xw-hdo"/>
+                                        <exclude reference="P2x-5a-R2m"/>
+                                        <exclude reference="8XS-U2-Tzf"/>
+                                        <exclude reference="PfY-Cp-pyh"/>
+                                        <exclude reference="Yaj-sI-9Qm"/>
+                                        <exclude reference="2id-WI-f7u"/>
+                                        <exclude reference="mNh-ce-3sn"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.30090490440000001" alpha="1" colorSpace="calibratedWhite"/>
