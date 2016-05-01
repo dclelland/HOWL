@@ -8,14 +8,26 @@
 
 import UIKit
 
-class ToolbarButton: UIButton {
+@IBDesignable class ToolbarButton: UIButton {
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        let hue: CGFloat = 0.25
-        let cornerRadius: CGFloat = 3.0
-        
+    @IBInspectable var hue: CGFloat = 0.0 { didSet { configure() } }
+    @IBInspectable var cornerRadius: CGFloat = 0.0 { didSet { configure() } }
+    
+    // MARK: - Overrides
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configure()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        configure()
+    }
+    
+    // MARK: - Configuration
+    
+    private func configure() {
         backgroundColor = UIColor.clearColor()
         
         setTitleColor(UIColor.HOWL.blackColor(), forState: .Normal)

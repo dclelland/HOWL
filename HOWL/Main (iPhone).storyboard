@@ -131,16 +131,15 @@
                         <viewControllerLayoutGuide type="top" id="Nth-M2-WW1"/>
                         <viewControllerLayoutGuide type="bottom" id="LxS-DX-7JQ"/>
                     </layoutGuides>
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ZcY-Qe-Dtm">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ZcY-Qe-Dtm" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-c1-TQk">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-c1-TQk" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-rB-Cz2" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.54535818099975586" green="0.99429339170455933" blue="0.17328467965126038" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="CjY-15-t5e"/>
                                             <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="zBJ-gX-czQ"/>
@@ -149,6 +148,14 @@
                                         <state key="normal" title="HOLD">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="zBJ-gX-czQ"/>
@@ -158,21 +165,20 @@
                                             <action selector="holdButtonTapped:" destination="9J8-TP-oCq" eventType="touchUpInside" id="w2q-s3-Jl4"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-t5-lhc">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-t5-lhc" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ML-9Q-mzI" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.545358181" green="0.99429339169999997" blue="0.1732846797" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="G07-s6-a71"/>
                                             <constraint firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="Ifc-M4-9Na"/>
@@ -182,6 +188,14 @@
                                         <state key="normal" title="FLIP">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Ifc-M4-9Na"/>
@@ -229,7 +243,7 @@
                                     <constraint firstItem="LEJ-t5-lhc" firstAttribute="leading" secondItem="2ML-9Q-mzI" secondAttribute="trailing" constant="2" id="z5R-U0-AWI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -259,7 +273,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yl-Bj-Pmz">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yl-Bj-Pmz" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-UY-uHE">
@@ -297,7 +311,7 @@
                                     <constraint firstAttribute="bottom" secondItem="2Xe-UY-uHE" secondAttribute="bottom" constant="2" id="sqZ-H6-dCb"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -317,8 +331,8 @@
                             <constraint firstAttribute="trailing" secondItem="h1W-c1-TQk" secondAttribute="trailing" constant="2" id="s76-nZ-dAA"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="6"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -345,16 +359,15 @@
                         <viewControllerLayoutGuide type="top" id="V0q-XU-LR2"/>
                         <viewControllerLayoutGuide type="bottom" id="0v1-Ms-aL4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jJf-n7-0kv">
+                    <view key="view" contentMode="scaleToFill" id="jJf-n7-0kv" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-wf-fn7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-wf-fn7" customClass="RoundedControl" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cym-3r-t5S" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.54810822010040283" green="0.99946391582489014" blue="0.17405399680137634" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="QEs-IQ-gq5"/>
                                             <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="WSs-Ae-DN0"/>
@@ -364,6 +377,14 @@
                                         <state key="normal" title="HOLD">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="WSs-Ae-DN0"/>
@@ -376,7 +397,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-oS-ACy" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gIf-oS-ACy" secondAttribute="height" multiplier="1:1" id="X35-ze-7vT"/>
                                             <constraint firstAttribute="width" secondItem="gIf-oS-ACy" secondAttribute="height" multiplier="1:1" id="ddo-gE-JJP"/>
@@ -386,6 +406,14 @@
                                         <state key="normal" title="FLIP">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="ddo-gE-JJP"/>
@@ -396,15 +424,15 @@
                                             <action selector="flipButtonTapped:" destination="wpy-HA-xtF" eventType="touchUpInside" id="n8K-Qv-5i0"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOWELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83F-Vg-V8k">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOWELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83F-Vg-V8k" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <color key="backgroundColor" white="0.19913793103448277" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
@@ -451,7 +479,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Cym-3r-t5S" secondAttribute="trailing" constant="2" id="zUr-Wr-qNR"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -487,7 +515,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-28-UfI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-28-UfI" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
                                     <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV" customClass="PhonemeboardView" customModule="HOWL" customModuleProvider="target">
@@ -565,7 +593,7 @@
                                     <constraint firstAttribute="bottom" secondItem="nKs-R2-KFV" secondAttribute="bottom" constant="2" id="qTy-FO-ofg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -582,8 +610,8 @@
                             <constraint firstItem="Z1b-wf-fn7" firstAttribute="top" secondItem="jJf-n7-0kv" secondAttribute="top" constant="2" id="ySQ-an-YWa"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="6"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -610,28 +638,27 @@
                         <viewControllerLayoutGuide type="top" id="YQr-OB-l6s"/>
                         <viewControllerLayoutGuide type="bottom" id="Xf9-Yn-6MU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VXD-5X-DfV">
+                    <view key="view" contentMode="scaleToFill" id="VXD-5X-DfV" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-Tg-ZCd">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-Tg-ZCd" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8G-z2-kPq" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="b8G-z2-kPq" secondAttribute="height" multiplier="1:1" id="6pk-gX-6Uj"/>
                                             <constraint firstAttribute="width" secondItem="b8G-z2-kPq" secondAttribute="height" multiplier="1:1" id="Kjy-nP-fqA"/>
@@ -641,6 +668,14 @@
                                         <state key="normal" title="FLIP">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Kjy-nP-fqA"/>
@@ -653,7 +688,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-og-Bf3" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1vE-og-Bf3" secondAttribute="height" multiplier="1:1" id="OFh-CG-Uvv"/>
                                             <constraint firstAttribute="width" secondItem="1vE-og-Bf3" secondAttribute="height" multiplier="1:1" id="VEt-hP-Yze"/>
@@ -663,6 +697,14 @@
                                         <state key="normal" title="RESET">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="OFh-CG-Uvv"/>
@@ -716,7 +758,7 @@
                                     <constraint firstItem="1vE-og-Bf3" firstAttribute="leading" secondItem="b8G-z2-kPq" secondAttribute="trailing" constant="2" id="wvQ-3i-6f5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -752,7 +794,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="51" width="279" height="133"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
@@ -764,9 +806,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="141" y="2" width="136" height="111"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="100"/>
@@ -783,6 +822,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="formantsFrequencyDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="4eQ-YW-99R"/>
@@ -791,9 +833,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="111"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="100"/>
@@ -809,6 +848,9 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
                                                 <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -832,7 +874,7 @@
                                     <constraint firstItem="6md-Za-K4d" firstAttribute="leading" secondItem="D4I-ss-N7k" secondAttribute="trailing" constant="2" id="uiP-Ab-RjN"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -842,7 +884,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="186" width="279" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
@@ -854,9 +896,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="110"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bitcrush"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
@@ -873,6 +912,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="effectsBitcrushDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="y5m-nP-dpl"/>
@@ -881,9 +923,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="141" y="2" width="136" height="110"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -900,6 +939,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="effectsReverbDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="dPp-Ph-rkW"/>
@@ -922,7 +964,7 @@
                                     <constraint firstItem="woz-pj-zhQ" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="top" constant="2" id="ngS-OE-IE2"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -949,8 +991,8 @@
                             <constraint firstItem="H9Y-vc-Pea" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="bottom" constant="2" id="z6k-9j-4Bg"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="6"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
@@ -978,28 +1020,15 @@
                         <viewControllerLayoutGuide type="top" id="DGR-cJ-I6i"/>
                         <viewControllerLayoutGuide type="bottom" id="Zkg-j1-zW0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VRs-9r-UH6">
+                    <view key="view" contentMode="scaleToFill" id="VRs-9r-UH6" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdm-qf-yOt">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdm-qf-yOt" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
-                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhD-Tv-WFf" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yhD-Tv-WFf" secondAttribute="height" multiplier="1:1" id="UpX-Db-FzL"/>
                                             <constraint firstAttribute="width" secondItem="yhD-Tv-WFf" secondAttribute="height" multiplier="1:1" id="i4B-7v-H3Z"/>
@@ -1009,6 +1038,14 @@
                                         <state key="normal" title="FLIP">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="UpX-Db-FzL"/>
@@ -1021,7 +1058,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-6t-ZK6" customClass="ToolbarButton" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="234" y="2" width="43" height="43"/>
-                                        <color key="backgroundColor" red="0.54810822010000004" green="0.99946391580000005" blue="0.1740539968" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xdU-6t-ZK6" secondAttribute="height" multiplier="1:1" id="L4s-Ql-y8S"/>
                                             <constraint firstAttribute="width" secondItem="xdU-6t-ZK6" secondAttribute="height" multiplier="1:1" id="LAc-3w-7tI"/>
@@ -1031,6 +1067,14 @@
                                         <state key="normal" title="RESET">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hue">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="LAc-3w-7tI"/>
@@ -1041,6 +1085,18 @@
                                             <action selector="resetButtonTapped:" destination="uAc-3B-Yd9" eventType="touchUpInside" id="KWq-NI-jWV"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO" customClass="RoundedLabel" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1084,7 +1140,7 @@
                                     <constraint firstAttribute="bottom" secondItem="yhD-Tv-WFf" secondAttribute="bottom" constant="2" id="ysJ-hk-0hi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -1120,7 +1176,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-Jy-AMK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-Jy-AMK" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="51" width="279" height="133"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Lj-sMa">
@@ -1132,9 +1188,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="141" y="2" width="136" height="111"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
@@ -1151,6 +1204,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="vibratoFrequencyDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="ceI-zg-t15"/>
@@ -1159,9 +1215,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-PL-aZO" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="111"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
@@ -1178,6 +1231,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="logarithmic" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="vibratoDepthDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="dUa-Ra-hez"/>
@@ -1199,12 +1255,12 @@
                                     <constraint firstItem="Hcx-Lj-sMa" firstAttribute="top" secondItem="76k-PL-aZO" secondAttribute="bottom" constant="2" id="sr4-GG-Lzg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Nj-01a">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Nj-01a" customClass="RoundedView" customModule="HOWL" customModuleProvider="target">
                                 <rect key="frame" x="2" y="186" width="279" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-L5-US1">
@@ -1216,9 +1272,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-dp-Xy2" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="137" height="110"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left Interval"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
                                                 <real key="value" value="-12"/>
@@ -1234,6 +1287,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="logarithmic" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="keyboardLeftIntervalDialControlTouchDown:" destination="uAc-3B-Yd9" eventType="touchDown" id="FMb-tR-WbA"/>
@@ -1245,9 +1301,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="HOWL" customModuleProvider="target">
                                         <rect key="frame" x="141" y="2" width="136" height="110"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
                                                 <real key="value" value="-12"/>
                                             </userDefinedRuntimeAttribute>
@@ -1263,6 +1316,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="logarithmic" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="step" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="keyboardRightIntervalDialControlTouchDown:" destination="uAc-3B-Yd9" eventType="touchDown" id="MvE-6y-59g"/>
@@ -1287,7 +1343,7 @@
                                     <constraint firstAttribute="trailing" secondItem="IlS-iC-Twg" secondAttribute="trailing" constant="2" id="mNh-ce-3sn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -1313,8 +1369,8 @@
                             <constraint firstAttribute="trailing" secondItem="jdm-qf-yOt" secondAttribute="trailing" constant="2" id="z0Z-vR-f5L"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="6"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">

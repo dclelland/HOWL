@@ -11,7 +11,7 @@ import Bezzy
 import Degrad
 import Lerp
 
-@IBDesignable class DialControl: UIControl {
+@IBDesignable class DialControl: RoundedControl {
     
     // MARK: - Constants
     
@@ -62,18 +62,14 @@ import Lerp
     
     // MARK: - Overrides
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupSubviews()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupSubviews()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configure()
     }
     
     override func prepareForInterfaceBuilder() {
-        setupSubviews()
+        super.prepareForInterfaceBuilder()
+        configure()
     }
     
     override var selected: Bool {
@@ -106,9 +102,9 @@ import Lerp
         super.updateConstraints()
     }
     
-    // MARK: - Layout
+    // MARK: - Configuration
     
-    private func setupSubviews() {
+    private func configure() {
         addSubview(titleLabel)
         addSubview(valueLabel)
         
