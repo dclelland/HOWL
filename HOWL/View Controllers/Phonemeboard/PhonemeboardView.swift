@@ -57,13 +57,11 @@ class PhonemeboardView: AKPlotView {
         
         let sz = samples.count / 2
         
-        var i: Int
-        
         var s = CGFloat(0.0)
         var x = CGFloat(0.0)
         var y = CGFloat(0.0)
         
-        for i = 0; i < sz; i++ {
+        for i in 0..<sz {
             s = CGFloat(samples[i * 2])
             
             if isnan(s) {
@@ -80,7 +78,7 @@ class PhonemeboardView: AKPlotView {
             }
         }
         
-        for i = sz - 1; i >= 0; i-- {
+        for i in (0..<sz).reverse() {
             s = CGFloat(samples[i * 2 + 1])
             
             if (isnan(s)) {
