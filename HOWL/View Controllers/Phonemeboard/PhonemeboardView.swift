@@ -55,43 +55,35 @@ class PhonemeboardView: AKPlotView {
     private var foregroundPath: UIBezierPath {
         let path = CGPathCreateMutable()
         
-        let sz = samples.count / 2
+        let length = samples.count / 2
         
-        var s = CGFloat(0.0)
-        var x = CGFloat(0.0)
-        var y = CGFloat(0.0)
-        
-        for i in 0..<sz {
-            s = CGFloat(samples[i * 2])
+        for i in 0..<length {
+            let sample = CGFloat(samples[i * 2])
             
-            if isnan(s) {
-                s = 0.0
+            if !sample.isNaN {
+                let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
+                let y = (sample + 0.5) * bounds.height
+                
+                if (i == 0) {
+                    CGPathMoveToPoint(path, nil, x, y)
+                } else {
+                    CGPathAddLineToPoint(path, nil, x, y)
+                }
             }
+        }
+        
+        for i in (0..<length).reverse() {
+            let sample = CGFloat(samples[i * 2 + 1])
             
-            x = CGFloat(i) * (bounds.width / CGFloat(sz - 1))
-            y = (s + 0.5) * bounds.height
-            
-            if (i == 0) {
-                CGPathMoveToPoint(path, nil, x, y)
-            } else {
+            if !sample.isNaN {
+                let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
+                let y = (-sample + 0.5) * bounds.height
+                
                 CGPathAddLineToPoint(path, nil, x, y)
             }
         }
         
-        for i in (0..<sz).reverse() {
-            s = CGFloat(samples[i * 2 + 1])
-            
-            if (isnan(s)) {
-                s = 0.0
-            }
-            
-            x = CGFloat(i) * (bounds.width / CGFloat(sz - 1))
-            y = (-s + 0.5) * bounds.height
-            
-            CGPathAddLineToPoint(path, nil, x, y)
-        }
-        
-        if sz > 0 {
+        if length > 0 {
             CGPathCloseSubpath(path)
         }
         
