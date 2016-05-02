@@ -98,10 +98,6 @@ import Lerp
         CGContextFillPath(context)
     }
     
-    override func updateConstraints() {
-        super.updateConstraints()
-    }
-    
     // MARK: - Configuration
     
     private func configure() {
