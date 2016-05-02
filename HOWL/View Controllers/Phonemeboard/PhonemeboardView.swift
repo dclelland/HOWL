@@ -25,7 +25,7 @@ class PhonemeboardView: AKPlotView {
     
     private var data = NSData()
     private var samples = [Float]() {
-        didSet { self.updateUI() }
+        didSet { updateUI() }
     }
 
     override func drawRect(rect: CGRect) {
@@ -93,14 +93,14 @@ class PhonemeboardView: AKPlotView {
         case .Normal:
             return UIColor.HOWL.darkGreyColor()
         case .Highlighted:
-            return UIColor.HOWL.mediumColor(withHue: self.hue, saturation: self.saturation)
+            return UIColor.HOWL.mediumColor(withHue: hue, saturation: saturation)
         case .Selected:
-            return UIColor.HOWL.darkColor(withHue: self.hue, saturation: self.saturation)
+            return UIColor.HOWL.darkColor(withHue: hue, saturation: saturation)
         }
     }
     
     private var foregroundPathColor: UIColor {
-        return UIColor.HOWL.lightColor(withHue: self.hue, saturation: self.saturation)
+        return UIColor.HOWL.lightColor(withHue: hue, saturation: saturation)
     }
     
 }

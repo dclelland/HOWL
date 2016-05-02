@@ -40,7 +40,7 @@ class HowlViewController: UIViewController {
 extension UIViewController {
     
     var howlViewController: HowlViewController? {
-        return self.parentViewController as? HowlViewController
+        return parentViewController as? HowlViewController
     }
     
 }

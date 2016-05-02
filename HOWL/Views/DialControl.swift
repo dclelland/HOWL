@@ -214,13 +214,13 @@ import Lerp
         let angle = Float(atan2(location.y - center.y, location.x - center.x))
         
         if distance < radius {
-            return self.percentage
+            return percentage
         }
         
         let scaledAngle = fmod(angle + 270°, 360°)
         
         if scaledAngle < minimumDeadZone || scaledAngle > maximumDeadZone {
-            return self.percentage
+            return percentage
         }
         
         return scaledAngle.ilerp(min: minimumAngle, max: maximumAngle).clamp(min: 0.0, max: 1.0)
@@ -256,7 +256,7 @@ import Lerp
     }
     
     private var backgroundPathColor: UIColor {
-        if (self.highlighted || self.selected) {
+        if (highlighted || selected) {
             return UIColor.HOWL.mediumColor(withHue: hue)
         } else {
             return UIColor.HOWL.darkColor(withHue: hue)

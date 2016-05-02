@@ -26,9 +26,9 @@ class FlipViewController: UIViewController {
         
         switch state {
         case .PresentingFrontView:
-            self.flip(fromView: frontView, toView: backView)
+            flip(fromView: frontView, toView: backView)
         case .PresentingBackView:
-            self.flip(fromView: backView, toView: frontView)
+            flip(fromView: backView, toView: frontView)
         }
     }
     
@@ -84,7 +84,7 @@ class FlipViewController: UIViewController {
 extension UIViewController {
     
     var flipViewController: FlipViewController? {
-        return self.parentViewController as? FlipViewController
+        return parentViewController as? FlipViewController
     }
     
 }
