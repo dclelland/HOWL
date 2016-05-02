@@ -896,10 +896,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
                                                 <real key="value" value="200"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -909,6 +909,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="formantsBandwidthDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="J4z-Pu-8gG"/>
@@ -927,10 +930,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
                                                 <real key="value" value="200"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -940,6 +943,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="formantsFrequencyDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="4eQ-YW-99R"/>
@@ -1009,10 +1015,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
                                                 <real key="value" value="100"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1022,6 +1028,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="effectsBitcrushDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="y5m-nP-dpl"/>
@@ -1041,10 +1050,10 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -1053,6 +1062,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="effectsReverbDialControlValueChanged:" destination="5Oq-Ld-xFp" eventType="valueChanged" id="dPp-Ph-rkW"/>
@@ -1344,8 +1356,8 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
                                                 <real key="value" value="100"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="%"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
@@ -1357,6 +1369,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="vibratoDepthDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="dUa-Ra-hez"/>
@@ -1375,10 +1390,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="suffix" value="Hz"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="Hz"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1388,6 +1403,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="vibratoFrequencyDialControlValueChanged:" destination="uAc-3B-Yd9" eventType="valueChanged" id="ceI-zg-t15"/>
@@ -1457,7 +1475,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="decimalPoints">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
@@ -1469,6 +1487,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="keyboardLeftIntervalDialControlTouchDown:" destination="uAc-3B-Yd9" eventType="touchDown" id="FMb-tR-WbA"/>
@@ -1502,6 +1523,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="keyboardRightIntervalDialControlTouchDown:" destination="uAc-3B-Yd9" eventType="touchDown" id="MvE-6y-59g"/>

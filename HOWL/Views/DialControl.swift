@@ -26,7 +26,7 @@ import Lerp
     // MARK: - Properties
     
     @IBInspectable var title: String? { didSet { titleLabel.text = titleText } }
-    @IBInspectable var suffix: String? { didSet { valueLabel.text = valueText } }
+    
     
     @IBInspectable var value: Float = 0.0 {
         didSet {
@@ -39,12 +39,15 @@ import Lerp
     @IBInspectable var valueMinimum: Float = 0.0 { didSet { setNeedsDisplay() } }
     @IBInspectable var valueMaximum: Float = 1.0 { didSet { setNeedsDisplay() } }
     
-    @IBInspectable var decimalPoints: Int = 1 { didSet { valueLabel.text = valueText } }
+    @IBInspectable var valueSuffix: String? { didSet { valueLabel.text = valueText } }
+    @IBInspectable var valuePrecision: Int = 0 { didSet { valueLabel.text = valueText } }
     
     @IBInspectable var scaleLogarithmic: Bool = false { didSet { setNeedsDisplay() } }
     @IBInspectable var scaleStep: Bool = false { didSet { setNeedsDisplay() } }
     
     @IBInspectable var textColor: UIColor = UIColor.blackColor() { didSet { configureLabels() } }
+    @IBInspectable var textHeight: CGFloat = 16.0 { didSet { setNeedsUpdateConstraints() } }
+
     @IBInspectable var fontName: String? { didSet { configureLabels() } }
     @IBInspectable var fontSize: CGFloat = 12.0 { didSet { configureLabels() } }
     
@@ -66,25 +69,19 @@ import Lerp
     
     override var highlighted: Bool { didSet { setNeedsDisplay() } }
     
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        setNeedsUpdateConstraints()
-    }
-    
     override func updateConstraints() {
         super.updateConstraints()
         
         addSubview(titleLabel)
         addSubview(valueLabel)
         
-        titleLabel.setContentHuggingPriority(UILayoutPriorityDefaultHigh, forAxis: .Vertical)
         titleLabel.snp_updateConstraints { make in
+            make.height.equalTo(self.textHeight)
             make.left.equalTo(self.snp_leftMargin)
             make.right.equalTo(self.snp_rightMargin)
             make.bottom.equalTo(self.snp_bottomMargin)
         }
         
-        valueLabel.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: .Vertical)
         valueLabel.snp_updateConstraints { make in
             make.top.equalTo(self.snp_topMargin)
             make.left.equalTo(self.snp_leftMargin)
@@ -169,10 +166,10 @@ import Lerp
         let numberFormatter = NSNumberFormatter()
         
         numberFormatter.numberStyle = .DecimalStyle
-        numberFormatter.positiveSuffix = suffix ?? ""
-        numberFormatter.negativeSuffix = suffix ?? ""
-        numberFormatter.minimumFractionDigits = decimalPoints
-        numberFormatter.maximumFractionDigits = decimalPoints
+        numberFormatter.positiveSuffix = valueSuffix ?? ""
+        numberFormatter.negativeSuffix = valueSuffix ?? ""
+        numberFormatter.minimumFractionDigits = valuePrecision
+        numberFormatter.maximumFractionDigits = valuePrecision
         
         /* Needs check for negative zero values */
         
@@ -238,18 +235,15 @@ import Lerp
     }
     
     private var scale: Scale {
-        if scaleLogarithmic == false {
-            if scaleStep == false {
-                return .Linear
-            } else {
-                return .LinearStep
-            }
-        } else {
-            if scaleStep == false {
-                return .Logarithmic
-            } else {
-                return .LogarithmicStep
-            }
+        switch (scaleLogarithmic, scaleStep) {
+        case (false, false):
+            return .Linear
+        case (false, true):
+            return .LinearStep
+        case (true, false):
+            return .Logarithmic
+        case (true, true):
+            return .LogarithmicStep
         }
     }
     
