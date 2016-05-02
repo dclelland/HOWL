@@ -30,8 +30,6 @@ import UIKit
     private func configure() {
         backgroundColor = UIColor.clearColor()
         
-        setTitleColor(UIColor.HOWL.blackColor(), forState: .Normal)
-        
         setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)
         setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Highlighted)
         setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.mediumColor(withHue: hue), andCornerRadius: cornerRadius), forState: [.Highlighted, .Selected])

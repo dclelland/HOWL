@@ -36,27 +36,27 @@ import Lerp
         }
     }
     
-    @IBInspectable var minimumValue: Float = 0.0 { didSet { setNeedsDisplay() } }
-    @IBInspectable var maximumValue: Float = 1.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable var valueMinimum: Float = 0.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable var valueMaximum: Float = 1.0 { didSet { setNeedsDisplay() } }
     
     @IBInspectable var decimalPoints: Int = 1 { didSet { valueLabel.text = valueText } }
     
-    @IBInspectable var logarithmic: Bool = false { didSet { setNeedsDisplay() } }
-    @IBInspectable var step: Bool = false { didSet { setNeedsDisplay() } }
+    @IBInspectable var scaleLogarithmic: Bool = false { didSet { setNeedsDisplay() } }
+    @IBInspectable var scaleStep: Bool = false { didSet { setNeedsDisplay() } }
+    
+    @IBInspectable var textColor: UIColor = UIColor.blackColor() { didSet { configureLabels() } }
+    @IBInspectable var fontName: String? { didSet { configureLabels() } }
+    @IBInspectable var fontSize: CGFloat = 12.0 { didSet { configureLabels() } }
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Futura-Medium", size: 12.0)
         label.textAlignment = .Center
-        label.textColor = UIColor.blackColor()
         return label
     }()
     
     lazy var valueLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Futura-Medium", size: 12.0)
         label.textAlignment = .Center
-        label.textColor = UIColor.blackColor()
         return label
     }()
     
@@ -117,6 +117,21 @@ import Lerp
             make.top.equalTo(self).offset(8.0)
             make.left.right.equalTo(self)
             make.bottom.equalTo(titleLabel.snp_top).offset(8.0)
+        }
+    }
+    
+    private func configureLabels() {
+        titleLabel.textColor = textColor
+        valueLabel.textColor = textColor
+        
+        if let fontName = fontName {
+            let font = UIFont(name: fontName, size: fontSize)
+            titleLabel.font = font
+            valueLabel.font = font
+        } else {
+            let font = UIFont.systemFontOfSize(fontSize)
+            titleLabel.font = font
+            valueLabel.font = font
         }
     }
     
@@ -183,25 +198,25 @@ import Lerp
         set {
             switch scale {
             case .Linear:
-                value = newValue.lerp(min: minimumValue, max: maximumValue)
+                value = newValue.lerp(min: valueMinimum, max: valueMaximum)
             case .LinearStep:
-                value = round(newValue.lerp(min: minimumValue, max: maximumValue))
+                value = round(newValue.lerp(min: valueMinimum, max: valueMaximum))
             case .Logarithmic:
-                value = pow(newValue, Float(M_E)).lerp(min: minimumValue, max: maximumValue)
+                value = pow(newValue, Float(M_E)).lerp(min: valueMinimum, max: valueMaximum)
             case .LogarithmicStep:
-                value = round(pow(newValue, Float(M_E)).lerp(min: minimumValue, max: maximumValue))
+                value = round(pow(newValue, Float(M_E)).lerp(min: valueMinimum, max: valueMaximum))
             }
         }
         get {
             switch scale {
             case .Linear:
-                return value.ilerp(min: minimumValue, max: maximumValue)
+                return value.ilerp(min: valueMinimum, max: valueMaximum)
             case .LinearStep:
-                return round(value).ilerp(min: minimumValue, max: maximumValue)
+                return round(value).ilerp(min: valueMinimum, max: valueMaximum)
             case .Logarithmic:
-                return pow(value.ilerp(min: minimumValue, max: maximumValue), 1.0 / Float(M_E))
+                return pow(value.ilerp(min: valueMinimum, max: valueMaximum), 1.0 / Float(M_E))
             case .LogarithmicStep:
-                return pow(round(value).ilerp(min: minimumValue, max: maximumValue), 1.0 / Float(M_E))
+                return pow(round(value).ilerp(min: valueMinimum, max: valueMaximum), 1.0 / Float(M_E))
             }
         }
     }
@@ -234,14 +249,14 @@ import Lerp
     }
     
     private var scale: Scale {
-        if logarithmic == false {
-            if step == false {
+        if scaleLogarithmic == false {
+            if scaleStep == false {
                 return .Linear
             } else {
                 return .LinearStep
             }
         } else {
-            if step == false {
+            if scaleStep == false {
                 return .Logarithmic
             } else {
                 return .LogarithmicStep
