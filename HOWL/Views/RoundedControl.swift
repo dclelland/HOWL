@@ -12,25 +12,11 @@ import UIKit
     
     // MARK: - Properties
     
-    @IBInspectable var cornerRadius: CGFloat = 0.0 { didSet { configure() } }
-    
-    // MARK: - Overrides
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configure()
-    }
-    
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        configure()
-    }
-    
-    // MARK: - Configuration
-    
-    private func configure() {
-        layer.cornerRadius = cornerRadius
-        layer.masksToBounds = true
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0.0
+        }
     }
     
 }

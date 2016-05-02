@@ -10,24 +10,12 @@ import UIKit
 
 @IBDesignable class ToolbarButton: UIButton {
     
-    @IBInspectable var hue: CGFloat = 0.0 { didSet { configure() } }
-    @IBInspectable var cornerRadius: CGFloat = 0.0 { didSet { configure() } }
-    
-    // MARK: - Overrides
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configure()
-    }
-    
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        configure()
-    }
+    @IBInspectable var hue: CGFloat = 0.0 { didSet { configureImages() } }
+    @IBInspectable var cornerRadius: CGFloat = 0.0 { didSet { configureImages() } }
     
     // MARK: - Configuration
     
-    private func configure() {
+    private func configureImages() {
         backgroundColor = UIColor.clearColor()
         
         setBackgroundImage(UIImage.image(withColor: UIColor.HOWL.darkColor(withHue: hue), andCornerRadius: cornerRadius), forState: .Normal)

@@ -62,25 +62,34 @@ import Lerp
     
     // MARK: - Overrides
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configure()
-    }
+    override var selected: Bool { didSet { setNeedsDisplay() } }
+    
+    override var highlighted: Bool { didSet { setNeedsDisplay() } }
     
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        configure()
+        setNeedsUpdateConstraints()
     }
     
-    override var selected: Bool {
-        didSet {
-            setNeedsDisplay()
+    override func updateConstraints() {
+        super.updateConstraints()
+        
+        addSubview(titleLabel)
+        addSubview(valueLabel)
+        
+        titleLabel.setContentHuggingPriority(UILayoutPriorityDefaultHigh, forAxis: .Vertical)
+        titleLabel.snp_updateConstraints { make in
+            make.left.equalTo(self.snp_leftMargin)
+            make.right.equalTo(self.snp_rightMargin)
+            make.bottom.equalTo(self.snp_bottomMargin)
         }
-    }
-    
-    override var highlighted: Bool {
-        didSet {
-            setNeedsDisplay()
+        
+        valueLabel.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: .Vertical)
+        valueLabel.snp_updateConstraints { make in
+            make.top.equalTo(self.snp_topMargin)
+            make.left.equalTo(self.snp_leftMargin)
+            make.right.equalTo(self.snp_rightMargin)
+            make.bottom.equalTo(titleLabel.snp_top)
         }
     }
 
@@ -99,22 +108,6 @@ import Lerp
     }
     
     // MARK: - Configuration
-    
-    private func configure() {
-        addSubview(titleLabel)
-        addSubview(valueLabel)
-        
-        titleLabel.snp_updateConstraints { make in
-            make.left.right.bottom.equalTo(self)
-            make.height.equalTo(self).multipliedBy(0.25)
-        }
-        
-        valueLabel.snp_updateConstraints { make in
-            make.top.equalTo(self).offset(8.0)
-            make.left.right.equalTo(self)
-            make.bottom.equalTo(titleLabel.snp_top).offset(8.0)
-        }
-    }
     
     private func configureLabels() {
         titleLabel.textColor = textColor
