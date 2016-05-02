@@ -228,13 +228,13 @@ import Lerp
         let distance = Float(hypot(location.y - center.y, location.x - center.x))
         let angle = Float(atan2(location.y - center.y, location.x - center.x))
         
-        if distance < radius {
+        guard radius < distance else {
             return percentage
         }
         
         let scaledAngle = fmod(angle + 270°, 360°)
         
-        if scaledAngle < minimumDeadZone || scaledAngle > maximumDeadZone {
+        guard (minimumDeadZone...maximumDeadZone).contains(scaledAngle) else {
             return percentage
         }
         
