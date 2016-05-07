@@ -12,11 +12,7 @@ import UIKit
 
 extension UIImage {
     
-    static func image(withColor color: UIColor) -> UIImage {
-        return image(withColor: color, andCornerRadius: 0.0)
-    }
-    
-    static func image(withColor color: UIColor, andCornerRadius cornerRadius: CGFloat) -> UIImage {
+    static func roundedImage(withColor color: UIColor, andCornerRadius cornerRadius: CGFloat) -> UIImage {
         let rect = CGRect(x: 0.0, y: 0.0, width: cornerRadius * 2.0 + 1.0, height: cornerRadius * 2.0 + 1.0)
         let path = CGPathCreateWithRoundedRect(rect, cornerRadius, cornerRadius, nil)
         

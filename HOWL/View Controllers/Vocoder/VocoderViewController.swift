@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProtonomeAudioKitControls
 
 class VocoderViewController: UIViewController {
     
@@ -28,11 +29,11 @@ class VocoderViewController: UIViewController {
     
     // MARK: - Interface events
     
-    @IBAction func flipButtonTapped(button: ToolbarButton) {
+    @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func resetButtonTapped(button: ToolbarButton) {
+    @IBAction func resetButtonTapped(button: UIButton) {
         formantsBandwidthDialControl?.value = Settings.formantsBandwidth.defaultValue
         formantsFrequencyDialControl?.value = Settings.formantsFrequency.defaultValue
         effectsBitcrushDialControl?.value = Settings.effectsBitcrush.defaultValue

@@ -193,15 +193,18 @@ internal class ConcreteConstraint: Constraint {
         }
     }
     
+    private let label: String?
+    
     private var installInfo: ConcreteConstraintInstallInfo? = nil
     
-    internal init(fromItem: ConstraintItem, toItem: ConstraintItem, relation: ConstraintRelation, constant: Any, multiplier: Float, priority: Float) {
+    internal init(fromItem: ConstraintItem, toItem: ConstraintItem, relation: ConstraintRelation, constant: Any, multiplier: Float, priority: Float, label: String? = nil) {
         self.fromItem = fromItem
         self.toItem = toItem
         self.relation = relation
         self.constant = constant
         self.multiplier = multiplier
         self.priority = priority
+        self.label = label
     }
     
     internal func installOnView(updateExisting updateExisting: Bool = false, file: String? = nil, line: UInt? = nil) -> [LayoutConstraint] {
@@ -269,6 +272,7 @@ internal class ConcreteConstraint: Constraint {
                 attribute: layoutToAttribute,
                 multiplier: CGFloat(self.multiplier),
                 constant: layoutConstant)
+            layoutConstraint.identifier = self.label
             
             // set priority
             layoutConstraint.priority = self.priority
@@ -443,7 +447,9 @@ private extension NSLayoutAttribute {
                 case .Bottom, .BottomMargin: return insets.bottom
                 case .Leading, .LeadingMargin: return  (Config.interfaceLayoutDirection == .LeftToRight) ? insets.left : -insets.right
                 case .Trailing, .TrailingMargin: return  (Config.interfaceLayoutDirection == .LeftToRight) ? insets.right : -insets.left
-                case .Width, .Height, .NotAnAttribute: return CGFloat(0)
+                case .Width: return -insets.left + insets.right
+                case .Height: return -insets.top + insets.bottom
+                case .NotAnAttribute: return CGFloat(0)
                 }
             #else
                 switch self {
@@ -453,7 +459,9 @@ private extension NSLayoutAttribute {
                 case .Bottom: return insets.bottom
                 case .Leading: return  (Config.interfaceLayoutDirection == .LeftToRight) ? insets.left : -insets.right
                 case .Trailing: return  (Config.interfaceLayoutDirection == .LeftToRight) ? insets.right : -insets.left
-                case .Width, .Height, .NotAnAttribute: return CGFloat(0)
+                case .Width: return -insets.left + insets.right
+                case .Height: return -insets.top + insets.bottom
+                case .NotAnAttribute: return CGFloat(0)
                 case .FirstBaseline: return insets.bottom
                 }
             #endif

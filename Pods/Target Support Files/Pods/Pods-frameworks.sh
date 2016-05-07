@@ -88,6 +88,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Bezzy.framework"
   install_framework "Pods/Degrad.framework"
   install_framework "Pods/Lerp.framework"
+  install_framework "Pods/MultitouchGestureRecognizer.framework"
+  install_framework "Pods/ProtonomeAudioKitControls.framework"
+  install_framework "Pods/ProtonomeRoundedViews.framework"
   install_framework "Pods/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -95,5 +98,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Bezzy.framework"
   install_framework "Pods/Degrad.framework"
   install_framework "Pods/Lerp.framework"
+  install_framework "Pods/MultitouchGestureRecognizer.framework"
+  install_framework "Pods/ProtonomeAudioKitControls.framework"
+  install_framework "Pods/ProtonomeRoundedViews.framework"
   install_framework "Pods/SnapKit.framework"
 fi

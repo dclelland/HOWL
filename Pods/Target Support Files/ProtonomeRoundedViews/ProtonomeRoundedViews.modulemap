@@ -1,0 +1,6 @@
+framework module ProtonomeRoundedViews {
+  umbrella header "ProtonomeRoundedViews-umbrella.h"
+
+  export *
+  module * { export * }
+}

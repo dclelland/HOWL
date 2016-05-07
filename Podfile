@@ -5,8 +5,9 @@ use_frameworks!
 
 pod 'AudioKit', '~> 2.3'
 pod 'Bezzy', '~> 0.1'
-pod 'Degrad', '~> 0.2'
-pod 'Lerp', '~> 0.2'
+pod 'MultitouchGestureRecognizer', path: '../MultitouchGestureRecognizer'
+pod 'ProtonomeRoundedViews', path: '../ProtonomeRoundedViews'
+pod 'ProtonomeAudioKitControls', path: '../ProtonomeAudioKitControls'
 pod 'SnapKit', '~> 0.17'
 
 post_install do | installer |

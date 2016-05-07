@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MultitouchGestureRecognizer
 
 class PhonemeboardViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class PhonemeboardViewController: UIViewController {
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
     
-    @IBOutlet weak var holdButton: ToolbarButton? {
+    @IBOutlet weak var holdButton: UIButton? {
         didSet { holdButton?.selected = Settings.phonemeboardSustain.value }
     }
     
@@ -63,16 +64,16 @@ class PhonemeboardViewController: UIViewController {
     
     // MARK: - Button events
     
-    @IBAction func flipButtonTapped(button: ToolbarButton) {
+    @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func holdButtonTapped(button: ToolbarButton) {
+    @IBAction func holdButtonTapped(button: UIButton) {
         Settings.phonemeboardSustain.value = !Settings.phonemeboardSustain.value
         button.selected = Settings.phonemeboardSustain.value
         
         if !button.selected {
-            multitouchGestureRecognizer?.endTouches()
+            multitouchGestureRecognizer?.reset()
         }
     }
     

@@ -1,0 +1,6 @@
+framework module ProtonomeAudioKitControls {
+  umbrella header "ProtonomeAudioKitControls-umbrella.h"
+
+  export *
+  module * { export * }
+}

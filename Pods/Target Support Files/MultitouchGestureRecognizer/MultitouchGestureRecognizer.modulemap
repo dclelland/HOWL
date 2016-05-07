@@ -1,0 +1,6 @@
+framework module MultitouchGestureRecognizer {
+  umbrella header "MultitouchGestureRecognizer-umbrella.h"
+
+  export *
+  module * { export * }
+}

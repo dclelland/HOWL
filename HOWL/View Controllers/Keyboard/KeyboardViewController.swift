@@ -8,6 +8,7 @@
 
 import UIKit
 import Bezzy
+import MultitouchGestureRecognizer
 
 class KeyboardViewController: UIViewController {
     
@@ -15,7 +16,7 @@ class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
     
-    @IBOutlet weak var holdButton: ToolbarButton? {
+    @IBOutlet weak var holdButton: UIButton? {
         didSet { holdButton?.selected = Settings.keyboardSustain.value }
     }
     
@@ -76,16 +77,16 @@ class KeyboardViewController: UIViewController {
     
     // MARK: - Button events
     
-    @IBAction func flipButtonTapped(button: ToolbarButton) {
+    @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func holdButtonTapped(button: ToolbarButton) {
+    @IBAction func holdButtonTapped(button: UIButton) {
         Settings.keyboardSustain.value = !Settings.keyboardSustain.value
         button.selected = Settings.keyboardSustain.value
         
         if !button.selected {
-            multitouchGestureRecognizer?.endTouches()
+            multitouchGestureRecognizer?.reset()
         }
     }
     

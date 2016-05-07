@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProtonomeAudioKitControls
 
 class SynthesizerViewController: UIViewController {
     
@@ -28,11 +29,11 @@ class SynthesizerViewController: UIViewController {
     
     // MARK: - Interface events
     
-    @IBAction func flipButtonTapped(button: ToolbarButton) {
+    @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func resetButtonTapped(button: ToolbarButton) {
+    @IBAction func resetButtonTapped(button: UIButton) {
         vibratoDepthDialControl?.value = Settings.vibratoDepth.defaultValue
         vibratoFrequencyDialControl?.value = Settings.vibratoFrequency.defaultValue
         keyboardLeftIntervalDialControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
