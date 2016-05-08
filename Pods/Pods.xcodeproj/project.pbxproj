@@ -372,17 +372,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>03D9EAA5CFD2C84B9A85C98C17BE094B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ProtonomeRoundedViews.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>03FA7D2557AE9F4A33527EB47C501816</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1008,6 +997,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>0B2A2BEC97E317EE4D4613F5EEA1F829</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FBFA5DD178F8EC8A7037AFEDCD2372A7</string>
+				<string>626C26B0E22BBEEFEB9C9949EC5A333F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ProtonomeRoundedViews</string>
+			<key>path</key>
+			<string>../../ProtonomeRoundedViews</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>0BE0135918ED68AD531C3338B93CE18A</key>
 		<dict>
 			<key>fileRef</key>
@@ -1462,19 +1467,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>12B65D6444AC7E55370BC4A18E7E1FDE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIImage+Rounded.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>12FC5A8DE4CC80B9844B2E9E17A3D935</key>
 		<dict>
 			<key>fileRef</key>
@@ -1640,19 +1632,6 @@
 			<string>AKAudioAnalyzer.h</string>
 			<key>path</key>
 			<string>AudioKit/Utilities/Instruments/Analyzers/AKAudioAnalyzer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>150FCF0F6EF325DF49462BA9C9C08AE9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RoundedView.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2496,19 +2475,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>27F816603CC5E6D1A626584A7D66A004</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CALayer+Rounded.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>285228271403D06F29316456E926D4AF</key>
 		<dict>
 			<key>fileRef</key>
@@ -2801,13 +2767,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>2D59EB989B97400E0DBC8CBD3A4707DE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>12B65D6444AC7E55370BC4A18E7E1FDE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -2821,13 +2780,6 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
-		</dict>
-		<key>2DB9620C521B90D80E80A5A780DF6B39</key>
-		<dict>
-			<key>fileRef</key>
-			<string>392F802073C532ACA502638C052CDD4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>2DD9AF32B26E7AAA1D03E21AAA3F3E0D</key>
 		<dict>
@@ -3374,19 +3326,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>392F802073C532ACA502638C052CDD4F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ProtonomeRoundedViews-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>393FE72730E589CB507AA45115402EB3</key>
 		<dict>
 			<key>fileRef</key>
@@ -3907,23 +3846,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>4334DC3EDFB6B99A6FEBF22A87B5F090</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4557118DC613D79DFB541F86A140B61F</string>
-				<string>C7FA430F2F49FE5EE1D5476BF450DF15</string>
-				<string>150FCF0F6EF325DF49462BA9C9C08AE9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Views</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>438BB77F9152B8793AD8E263740D4B30</key>
 		<dict>
 			<key>fileRef</key>
@@ -3973,22 +3895,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>43FE58A9FA3CB7617935326F5B3CAC94</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D255612596E11B88B9C5636381B66DCE</string>
-				<string>4334DC3EDFB6B99A6FEBF22A87B5F090</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4423F688DC7B6EA8447C28D87B61BB2A</key>
 		<dict>
@@ -4107,19 +4013,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4557118DC613D79DFB541F86A140B61F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RoundedButton.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>4562106BF9811111963BADA39C80A954</key>
 		<dict>
 			<key>fileRef</key>
@@ -4221,24 +4114,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>471FC3610197C9118F659CF7FD4FD4DE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B2E04F5CF0BAEBB2D871B2DC37E04B93</string>
-				<string>2DB9620C521B90D80E80A5A780DF6B39</string>
-				<string>F1B5A1EC7324D0ABE41B972AD5E5038C</string>
-				<string>5B0FFAB133351D45C7173AB13B7FC759</string>
-				<string>8FAFE60F808C5CFC85B13992DA1A221D</string>
-				<string>2D59EB989B97400E0DBC8CBD3A4707DE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>47F636884310424BF7E4468233DEEC4E</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4266,6 +4141,19 @@
 			<string>AKScaledFFT.m</string>
 			<key>path</key>
 			<string>AudioKit/Operations/FFT/AKScaledFFT.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>481353822639D7291E701CA5EC2F4E9A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4309,6 +4197,13 @@
 			<string>AudioKit/Sequencing/AKPhrase.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4A5E4D8AFAA606092B65F12DF91DB5A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9A0CA639836B27EBA63CF74F7F49FD6E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>4A65D94095EAB293E1D14BE2EFC127EC</key>
 		<dict>
@@ -5382,13 +5277,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>5B0FFAB133351D45C7173AB13B7FC759</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7FA430F2F49FE5EE1D5476BF450DF15</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>5B1DA58C18B8A6EDAD598E22585AE027</key>
 		<dict>
 			<key>fileRef</key>
@@ -5829,6 +5717,26 @@
 			<string>CABD8C5848605317C9ED6FCAC3CB8124</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>626C26B0E22BBEEFEB9C9949EC5A333F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>481353822639D7291E701CA5EC2F4E9A</string>
+				<string>6D3D7E084CDA5D8C8F4E776C0259023A</string>
+				<string>72B6A2C83454A6059FD17A88AAAEC603</string>
+				<string>C484D56E861BEEBC0F2068E6CD1397F1</string>
+				<string>87D3106562A96DBA8C7F95168B1A41BF</string>
+				<string>FCDF620A863741FCD8DFF9BD8E594ABB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../HOWL/Pods/Target Support Files/ProtonomeRoundedViews</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>626F4D715A9DBAC2AC0BB775255FB3EE</key>
 		<dict>
@@ -6368,26 +6276,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6A6FA2004E0E034219E4CA7DE3AE7A1F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F533F03D658E9A0A528AA34B239EBDBB</string>
-				<string>03D9EAA5CFD2C84B9A85C98C17BE094B</string>
-				<string>EE27F37D6929932C9D8198BB53DC72D7</string>
-				<string>392F802073C532ACA502638C052CDD4F</string>
-				<string>75D552106E801B216BE9B028E08DF032</string>
-				<string>96B2B53D18B4695B9AAB62F744041364</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../HOWL/Pods/Target Support Files/ProtonomeRoundedViews</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>6A7EAF2279BBF569859F06E615A2D6BB</key>
 		<dict>
 			<key>fileRef</key>
@@ -6549,6 +6437,30 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>6D2883149F7C2C8081CB2102DF54694C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RoundedView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D7E084CDA5D8C8F4E776C0259023A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ProtonomeRoundedViews.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6D61A3FC07108A47A59C400F4DF242A7</key>
 		<dict>
@@ -6907,6 +6819,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>72B6A2C83454A6059FD17A88AAAEC603</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>ProtonomeRoundedViews.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>72C4CF257C67E883088CB5D1450AEC7C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -7095,6 +7020,22 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>74DA49EC07A1BEC81BADC5C67B8901E4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D72FD811D57531265E0D5A5F975DD17A</string>
+				<string>BFA274BA8E1C69410235B838EFCFB266</string>
+				<string>4A5E4D8AFAA606092B65F12DF91DB5A3</string>
+				<string>960C5757CA091A34E81EE036570B0868</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>74FCC8F7D4EE86808F0ECCAD83B6E891</key>
 		<dict>
 			<key>fileRef</key>
@@ -7143,19 +7084,6 @@
 			<string>AKFSignal.h</string>
 			<key>path</key>
 			<string>AudioKit/Parameters/AKFSignal.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>75D552106E801B216BE9B028E08DF032</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ProtonomeRoundedViews-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -8697,6 +8625,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>87D3106562A96DBA8C7F95168B1A41BF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ProtonomeRoundedViews-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8808988F971A550AA884F752E93884DC</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9195,13 +9136,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8FAFE60F808C5CFC85B13992DA1A221D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>150FCF0F6EF325DF49462BA9C9C08AE9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>90F8039664C1C9A68D6717A2D72D380D</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9597,6 +9531,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>960C5757CA091A34E81EE036570B0868</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D2883149F7C2C8081CB2102DF54694C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>960DD96F7C3114E981AD7CA31CC031BA</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9667,19 +9608,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>96B2B53D18B4695B9AAB62F744041364</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ProtonomeRoundedViews-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>970CDC5C94EE1D1C95E182F674E62097</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9698,7 +9626,7 @@
 		<key>971D6454DA0ADA2DD77AC5C5AC287E32</key>
 		<dict>
 			<key>fileRef</key>
-			<string>96B2B53D18B4695B9AAB62F744041364</string>
+			<string>FCDF620A863741FCD8DFF9BD8E594ABB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -9829,6 +9757,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>9A0CA639836B27EBA63CF74F7F49FD6E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RoundedLabel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9A158DD91B4F95FE2DFAFD9E7E8F4C96</key>
 		<dict>
@@ -10107,22 +10048,6 @@
 			<string>AKFFTProcessor.h</string>
 			<key>path</key>
 			<string>AudioKit/Operations/FFT/AKFFTProcessor.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9D475D6B0B43EB533A2F4C2844296185</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>43FE58A9FA3CB7617935326F5B3CAC94</string>
-				<string>6A6FA2004E0E034219E4CA7DE3AE7A1F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ProtonomeRoundedViews</string>
-			<key>path</key>
-			<string>../../ProtonomeRoundedViews</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -11332,7 +11257,7 @@
 			<key>children</key>
 			<array>
 				<string>2B26FACC686E8975A44E9872A4AA8077</string>
-				<string>9D475D6B0B43EB533A2F4C2844296185</string>
+				<string>0B2A2BEC97E317EE4D4613F5EEA1F829</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -11685,20 +11610,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B2E04F5CF0BAEBB2D871B2DC37E04B93</key>
-		<dict>
-			<key>fileRef</key>
-			<string>27F816603CC5E6D1A626584A7D66A004</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>B3A0220FAF7DAE136F9866C1B6E7515E</key>
 		<dict>
 			<key>buildConfigurationList</key>
 			<string>5AEE6858EA5CF0E3D5BF45BB5698E088</string>
 			<key>buildPhases</key>
 			<array>
-				<string>471FC3610197C9118F659CF7FD4FD4DE</string>
+				<string>74DA49EC07A1BEC81BADC5C67B8901E4</string>
 				<string>77800D74C19524D24C856C4C67BE6D57</string>
 				<string>A5A57B19949F18EEDC2CD15FC4513C61</string>
 			</array>
@@ -12436,6 +12354,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>BFA274BA8E1C69410235B838EFCFB266</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DF595B0D32A47EEA84FDA4F9D5ECBB8E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>BFB8A39B8EE5D188642FD04A2B4503C1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -12806,6 +12731,19 @@
 			<string>4423F688DC7B6EA8447C28D87B61BB2A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>C484D56E861BEEBC0F2068E6CD1397F1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ProtonomeRoundedViews-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C48A8487D38D11D32D56168DF8988526</key>
 		<dict>
@@ -13270,19 +13208,6 @@
 			<string>62F96ACF0D8CB194690D616EE67CD4F8</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>C7FA430F2F49FE5EE1D5476BF450DF15</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RoundedLabel.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C8ECF7A4C8AF9BE53E779015B9BB41DE</key>
 		<dict>
@@ -13942,22 +13867,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D255612596E11B88B9C5636381B66DCE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>27F816603CC5E6D1A626584A7D66A004</string>
-				<string>12B65D6444AC7E55370BC4A18E7E1FDE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Categories</string>
-			<key>path</key>
-			<string>Categories</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>D2BED1139C4E9D398097DD735A016904</key>
 		<dict>
 			<key>fileRef</key>
@@ -14210,6 +14119,13 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>D72FD811D57531265E0D5A5F975DD17A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C484D56E861BEEBC0F2068E6CD1397F1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>D73A23CC3E8568934C31E3A9D59A11EE</key>
 		<dict>
@@ -14650,7 +14566,7 @@
 		<key>DF0A0A5B9E01BD93DD490B3952EAA471</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>EE27F37D6929932C9D8198BB53DC72D7</string>
+			<string>72B6A2C83454A6059FD17A88AAAEC603</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -14729,6 +14645,19 @@
 			<string>SnapKit</string>
 			<key>path</key>
 			<string>SnapKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DF595B0D32A47EEA84FDA4F9D5ECBB8E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RoundedButton.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -15593,19 +15522,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EE27F37D6929932C9D8198BB53DC72D7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>ProtonomeRoundedViews.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>EE33142DCB94C3FCC9E4342294308391</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -15882,13 +15798,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F1B5A1EC7324D0ABE41B972AD5E5038C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4557118DC613D79DFB541F86A140B61F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>F23307B3221D874BD0A90BC10EAC8E0C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -16096,19 +16005,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>F533F03D658E9A0A528AA34B239EBDBB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>F573673C1FAADC84B3BB682DD40102DC</key>
 		<dict>
 			<key>fileRef</key>
@@ -16283,7 +16179,7 @@
 		<key>F8B3F4D48F4671C83D132B71436C5C5E</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>EE27F37D6929932C9D8198BB53DC72D7</string>
+			<string>72B6A2C83454A6059FD17A88AAAEC603</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -16611,6 +16507,23 @@
 				</array>
 			</dict>
 		</dict>
+		<key>FBFA5DD178F8EC8A7037AFEDCD2372A7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DF595B0D32A47EEA84FDA4F9D5ECBB8E</string>
+				<string>9A0CA639836B27EBA63CF74F7F49FD6E</string>
+				<string>6D2883149F7C2C8081CB2102DF54694C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>FC67A3554915CB91F6B56813AB8FC458</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -16659,6 +16572,19 @@
 			<string>AKClipper.m</string>
 			<key>path</key>
 			<string>AudioKit/Operations/Signal Modifiers/Filters/AKClipper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FCDF620A863741FCD8DFF9BD8E594ABB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ProtonomeRoundedViews-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E2F77929850AF645C7F1EDDE'
+               BlueprintIdentifier = '45F87EA16023BA96E370F9D9'
                BlueprintName = 'ProtonomeAudioKitControls'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ProtonomeAudioKitControls.framework'>
