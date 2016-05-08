@@ -17,14 +17,12 @@ DEPENDENCIES:
   - Bezzy (~> 0.1)
   - MultitouchGestureRecognizer (~> 0.1)
   - ProtonomeAudioKitControls (from `../ProtonomeAudioKitControls`)
-  - ProtonomeRoundedViews (from `../ProtonomeRoundedViews`)
+  - ProtonomeRoundedViews (~> 0.1)
   - SnapKit (~> 0.17)
 
 EXTERNAL SOURCES:
   ProtonomeAudioKitControls:
     :path: ../ProtonomeAudioKitControls
-  ProtonomeRoundedViews:
-    :path: ../ProtonomeRoundedViews
 
 SPEC CHECKSUMS:
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
