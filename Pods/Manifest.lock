@@ -9,7 +9,7 @@ PODS:
     - Degrad
     - Lerp
     - SnapKit
-  - ProtonomeRoundedViews (0.1.0)
+  - ProtonomeRoundedViews (0.1.1)
   - SnapKit (0.20.0)
 
 DEPENDENCIES:
@@ -31,7 +31,7 @@ SPEC CHECKSUMS:
   Lerp: 71b55a57e6c89f24fd41c82fc30137961e5daeb2
   MultitouchGestureRecognizer: f20a1798f111cb8d87d392c55fd852663acd0f75
   ProtonomeAudioKitControls: 2d9d1a72d785b5dad8f7c25f5d6ca3fea521c749
-  ProtonomeRoundedViews: 7493ff9e396a025ace5a84b239770823611f14b3
+  ProtonomeRoundedViews: cceec203fb0ebc909e295429209b15144ab2996d
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
 
 COCOAPODS: 0.39.0
