@@ -14,7 +14,9 @@ class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var keyboardView: UICollectionView?
     
-    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
+    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
+        didSet { multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value }
+    }
     
     @IBOutlet weak var holdButton: UIButton? {
         didSet { holdButton?.selected = Settings.keyboardSustain.value }
@@ -83,11 +85,8 @@ class KeyboardViewController: UIViewController {
     
     @IBAction func holdButtonTapped(button: UIButton) {
         Settings.keyboardSustain.value = !Settings.keyboardSustain.value
+        multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value
         button.selected = Settings.keyboardSustain.value
-        
-        if !button.selected {
-            multitouchGestureRecognizer?.reset()
-        }
     }
     
 }
@@ -166,10 +165,6 @@ extension KeyboardViewController: KeyboardViewLayoutDelegate {
 // MARK: - Multitouch gesture recognizer delegate
 
 extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
-    
-    func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
-        return Settings.keyboardSustain.value
-    }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
         if let key = keyForTouch(touch) {

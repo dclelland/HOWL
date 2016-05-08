@@ -13,7 +13,9 @@ class PhonemeboardViewController: UIViewController {
     
     @IBOutlet weak var phonemeboardView: PhonemeboardView?
     
-    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer?
+    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
+        didSet { multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value }
+    }
     
     @IBOutlet weak var holdButton: UIButton? {
         didSet { holdButton?.selected = Settings.phonemeboardSustain.value }
@@ -70,11 +72,8 @@ class PhonemeboardViewController: UIViewController {
     
     @IBAction func holdButtonTapped(button: UIButton) {
         Settings.phonemeboardSustain.value = !Settings.phonemeboardSustain.value
+        multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value
         button.selected = Settings.phonemeboardSustain.value
-        
-        if !button.selected {
-            multitouchGestureRecognizer?.reset()
-        }
     }
     
     // MARK: - Private Getters
@@ -136,10 +135,6 @@ class PhonemeboardViewController: UIViewController {
 // MARK: - Multitouch gesture recognizer delegate
 
 extension PhonemeboardViewController: MultitouchGestureRecognizerDelegate {
-    
-    func multitouchGestureRecognizerShouldSustainTouches(gestureRecognizer: MultitouchGestureRecognizer) -> Bool {
-        return Settings.phonemeboardSustain.value
-    }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
         refreshAudio()

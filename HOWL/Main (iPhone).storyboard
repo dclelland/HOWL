@@ -386,6 +386,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTE-EL-bmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="LrJ-MY-OPU" customClass="MultitouchGestureRecognizer" customModule="MultitouchGestureRecognizer">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="sustain" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="delegate" destination="9J8-TP-oCq" id="cB4-ke-fqH"/>
                     </connections>
@@ -716,6 +719,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9O-cX-Tla" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="m5e-OB-eOs" customClass="MultitouchGestureRecognizer" customModule="MultitouchGestureRecognizer">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="sustain" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="delegate" destination="wpy-HA-xtF" id="43N-0r-WQZ"/>
                     </connections>
