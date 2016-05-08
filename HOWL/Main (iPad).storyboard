@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Howl View Controller-->
@@ -14,145 +17,1474 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-ao-YKj">
-                                <rect key="frame" x="285" y="0.0" width="283" height="320"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
+                                <rect key="frame" x="0.0" y="0.0" width="511" height="383"/>
                                 <connections>
-                                    <segue destination="myQ-Pk-G9S" kind="embed" id="1VL-gJ-j8w"/>
+                                    <segue destination="eQs-SH-hmG" kind="embed" id="A9P-yY-6A8"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-Me-B2D">
+                                <rect key="frame" x="513" y="385" width="511" height="383"/>
                                 <connections>
-                                    <segue destination="d4d-kx-v1a" kind="embed" id="cQk-4m-Tok"/>
+                                    <segue destination="Uux-Dl-5Lg" kind="embed" id="wj6-3h-EAJ"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SG5-bT-Rms">
+                                <rect key="frame" x="0.0" y="385" width="511" height="383"/>
+                                <connections>
+                                    <segue destination="a6B-wT-AWU" kind="embed" id="9dF-Wa-hl6"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-ao-YKj">
+                                <rect key="frame" x="513" y="0.0" width="511" height="383"/>
+                                <connections>
+                                    <segue destination="vYm-n5-kCb" kind="embed" id="i2Y-6B-zmO"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zJH-ao-YKj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3ky-F4-wPh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0ec-Me-B2D" secondAttribute="bottom" id="7oy-gv-kEf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zJH-ao-YKj" secondAttribute="bottom" id="8wC-fd-Wz1"/>
+                            <constraint firstItem="zJH-ao-YKj" firstAttribute="leading" secondItem="kQc-ji-xuA" secondAttribute="trailing" constant="2" id="AJZ-8l-ozc"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="leading" secondItem="zJH-ao-YKj" secondAttribute="trailing" id="BO8-nR-G0j"/>
+                            <constraint firstItem="0ec-Me-B2D" firstAttribute="top" secondItem="zJH-ao-YKj" secondAttribute="bottom" constant="2" id="CxC-nm-8dd"/>
                             <constraint firstItem="zJH-ao-YKj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="DrL-yf-5NH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kQc-ji-xuA" secondAttribute="bottom" id="F4F-uH-Amh"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GEa-KL-Ulj"/>
+                            <constraint firstItem="zJH-ao-YKj" firstAttribute="leading" secondItem="kQc-ji-xuA" secondAttribute="trailing" constant="2" id="IW8-88-eSo"/>
+                            <constraint firstAttribute="trailing" secondItem="0ec-Me-B2D" secondAttribute="trailing" id="JeB-RH-DtD"/>
+                            <constraint firstItem="SG5-bT-Rms" firstAttribute="height" secondItem="kQc-ji-xuA" secondAttribute="height" id="Mux-pV-NE0"/>
                             <constraint firstAttribute="trailing" secondItem="kQc-ji-xuA" secondAttribute="trailing" id="NIM-N3-iqq"/>
+                            <constraint firstItem="zJH-ao-YKj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="P47-0N-EMr"/>
+                            <constraint firstItem="kQc-ji-xuA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rob-Ay-Ao1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zJH-ao-YKj" secondAttribute="bottom" id="VEv-4Z-OT2"/>
+                            <constraint firstAttribute="trailing" secondItem="zJH-ao-YKj" secondAttribute="trailing" id="YjJ-bh-cNv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SG5-bT-Rms" secondAttribute="bottom" id="blC-TN-BHe"/>
                             <constraint firstItem="zJH-ao-YKj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dpl-HX-UxE"/>
                             <constraint firstItem="zJH-ao-YKj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eaU-Tk-JVS"/>
+                            <constraint firstItem="SG5-bT-Rms" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ffm-at-iQp"/>
+                            <constraint firstItem="0ec-Me-B2D" firstAttribute="top" secondItem="zJH-ao-YKj" secondAttribute="bottom" constant="2" id="fvD-9g-0jP"/>
+                            <constraint firstItem="SG5-bT-Rms" firstAttribute="width" secondItem="0ec-Me-B2D" secondAttribute="width" id="gbh-Pj-yYX"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="width" secondItem="zJH-ao-YKj" secondAttribute="width" id="kR2-wq-SVL"/>
+                            <constraint firstItem="SG5-bT-Rms" firstAttribute="top" secondItem="kQc-ji-xuA" secondAttribute="bottom" constant="2" id="kv2-vx-Xq5"/>
+                            <constraint firstItem="kQc-ji-xuA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lZL-b5-n81"/>
                             <constraint firstAttribute="trailing" secondItem="zJH-ao-YKj" secondAttribute="trailing" id="mLw-rA-btc"/>
+                            <constraint firstItem="0ec-Me-B2D" firstAttribute="height" secondItem="zJH-ao-YKj" secondAttribute="height" id="nS1-3h-KnW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zJH-ao-YKj" secondAttribute="trailing" id="p5V-xP-noT"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pcC-HF-I6c"/>
                             <constraint firstItem="zJH-ao-YKj" firstAttribute="leading" secondItem="kQc-ji-xuA" secondAttribute="trailing" constant="2" id="qW8-Lh-gdP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kQc-ji-xuA" secondAttribute="bottom" id="qhz-tP-ydj"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t07-u2-9fZ"/>
+                            <constraint firstItem="kQc-ji-xuA" firstAttribute="width" secondItem="zJH-ao-YKj" secondAttribute="width" id="vUR-jp-cQ9"/>
+                            <constraint firstItem="0ec-Me-B2D" firstAttribute="leading" secondItem="SG5-bT-Rms" secondAttribute="trailing" constant="2" id="xid-X8-hdp"/>
                             <constraint firstItem="zJH-ao-YKj" firstAttribute="width" secondItem="kQc-ji-xuA" secondAttribute="width" id="yGm-Sf-bAX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="BO8-nR-G0j"/>
+                                <exclude reference="GEa-KL-Ulj"/>
                                 <exclude reference="NIM-N3-iqq"/>
+                                <exclude reference="kR2-wq-SVL"/>
                                 <exclude reference="pcC-HF-I6c"/>
+                                <exclude reference="t07-u2-9fZ"/>
+                                <exclude reference="3ky-F4-wPh"/>
+                                <exclude reference="AJZ-8l-ozc"/>
+                                <exclude reference="DrL-yf-5NH"/>
                                 <exclude reference="dpl-HX-UxE"/>
                                 <exclude reference="eaU-Tk-JVS"/>
+                                <exclude reference="mLw-rA-btc"/>
+                                <exclude reference="p5V-xP-noT"/>
+                                <exclude reference="qW8-Lh-gdP"/>
                                 <exclude reference="yGm-Sf-bAX"/>
+                                <exclude reference="8wC-fd-Wz1"/>
                                 <exclude reference="F4F-uH-Amh"/>
                                 <exclude reference="VEv-4Z-OT2"/>
+                                <exclude reference="qhz-tP-ydj"/>
+                                <exclude reference="CxC-nm-8dd"/>
                             </mask>
                         </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="leftView" destination="kQc-ji-xuA" id="p0a-Ia-zqj"/>
-                        <outlet property="rightView" destination="zJH-ao-YKj" id="v0P-Ju-FOI"/>
-                    </connections>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419.5" y="343.5"/>
+            <point key="canvasLocation" x="572" y="252"/>
         </scene>
-        <!--Flip View Controller-->
-        <scene sceneID="wmJ-gX-j4K">
+        <!--Keyboard View Controller-->
+        <scene sceneID="UTI-H2-H9B">
             <objects>
-                <viewController id="d4d-kx-v1a" customClass="FlipViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uux-Dl-5Lg" customClass="KeyboardViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4bb-xA-iNR"/>
-                        <viewControllerLayoutGuide type="bottom" id="4jY-V6-E8U"/>
+                        <viewControllerLayoutGuide type="top" id="PGT-Hd-kIs"/>
+                        <viewControllerLayoutGuide type="bottom" id="38t-wF-mgd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w0j-da-hrA">
-                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4Fc-Ww-zNa" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                        <rect key="frame" x="0.0" y="0.0" width="511" height="383"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-7c-ibJ">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Kk-9ow">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
-                            </containerView>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wI-Ag-1JO" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89c-56-Kb1" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-P5-yec" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wXh-P5-yec" secondAttribute="height" multiplier="1:1" id="e8z-by-2UY"/>
+                                            <constraint firstAttribute="width" secondItem="wXh-P5-yec" secondAttribute="height" multiplier="1:1" id="wam-bL-Eyk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="HOLD">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="wam-bL-Eyk"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="holdButtonTapped:" destination="Uux-Dl-5Lg" eventType="touchUpInside" id="bZA-w6-dWN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="leading" secondItem="0wI-Ag-1JO" secondAttribute="leadingMargin" constant="2" id="1lG-hY-qdv"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="leading" secondItem="0wI-Ag-1JO" secondAttribute="leadingMargin" id="7o9-Jt-ohm"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="leading" secondItem="0wI-Ag-1JO" secondAttribute="leading" constant="2" id="9p0-24-O4z"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="top" constant="2" id="9w7-ph-Z7x"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="top" constant="2" id="A4M-al-b9g"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="bottom" secondItem="0wI-Ag-1JO" secondAttribute="bottomMargin" id="Aic-Jz-9nk"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="bottom" secondItem="0wI-Ag-1JO" secondAttribute="bottomMargin" id="Bgf-Xr-ICY"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="leading" secondItem="89c-56-Kb1" secondAttribute="trailing" constant="2" id="Frm-9P-NwI"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="topMargin" constant="2" id="Jfw-DC-3Rn"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="leading" secondItem="89c-56-Kb1" secondAttribute="trailing" constant="2" id="Kue-I7-w8L"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="topMargin" id="M3q-86-GJw"/>
+                                    <constraint firstAttribute="bottom" secondItem="wXh-P5-yec" secondAttribute="bottom" constant="2" id="OKh-ry-rxF"/>
+                                    <constraint firstAttribute="height" constant="47" id="OoR-pn-Kmz"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="leading" secondItem="0wI-Ag-1JO" secondAttribute="leading" constant="2" id="U9E-kW-96H"/>
+                                    <constraint firstAttribute="bottom" secondItem="89c-56-Kb1" secondAttribute="bottom" constant="2" id="UA3-kw-NYg"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="leading" secondItem="89c-56-Kb1" secondAttribute="trailing" constant="2" id="V2T-Wv-6BV"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="top" constant="2" id="YOh-LP-AMB"/>
+                                    <constraint firstAttribute="trailing" secondItem="wXh-P5-yec" secondAttribute="trailing" constant="2" id="e0Q-x3-aFP"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="89c-56-Kb1" secondAttribute="bottom" constant="2" id="eQg-ZL-6Pz"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="leading" secondItem="wXh-P5-yec" secondAttribute="trailing" constant="2" id="f1T-A9-Z9r"/>
+                                    <constraint firstAttribute="bottom" secondItem="wXh-P5-yec" secondAttribute="bottom" constant="2" id="gsw-5E-3BL"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="trailing" secondItem="0wI-Ag-1JO" secondAttribute="trailingMargin" id="iix-nu-rVL"/>
+                                    <constraint firstAttribute="trailing" secondItem="89c-56-Kb1" secondAttribute="trailing" constant="2" id="kFe-py-sWn"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="leading" secondItem="89c-56-Kb1" secondAttribute="trailing" constant="2" id="mbB-Gr-3Ye"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="top" constant="2" id="ojp-wd-cnU"/>
+                                    <constraint firstItem="wXh-P5-yec" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="top" constant="2" id="pd0-kN-XtP"/>
+                                    <constraint firstItem="89c-56-Kb1" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="topMargin" id="q2e-rm-sQe"/>
+                                    <constraint firstAttribute="bottom" secondItem="89c-56-Kb1" secondAttribute="bottom" constant="2" id="vz8-SS-dhy"/>
+                                    <constraint firstAttribute="bottom" secondItem="89c-56-Kb1" secondAttribute="bottom" constant="2" id="xuY-uO-DWp"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1lG-hY-qdv"/>
+                                        <exclude reference="A4M-al-b9g"/>
+                                        <exclude reference="Jfw-DC-3Rn"/>
+                                        <exclude reference="U9E-kW-96H"/>
+                                        <exclude reference="UA3-kw-NYg"/>
+                                        <exclude reference="YOh-LP-AMB"/>
+                                        <exclude reference="eQg-ZL-6Pz"/>
+                                        <exclude reference="f1T-A9-Z9r"/>
+                                        <exclude reference="kFe-py-sWn"/>
+                                        <exclude reference="ojp-wd-cnU"/>
+                                        <exclude reference="vz8-SS-dhy"/>
+                                        <exclude reference="xuY-uO-DWp"/>
+                                        <exclude reference="9p0-24-O4z"/>
+                                        <exclude reference="9w7-ph-Z7x"/>
+                                        <exclude reference="Frm-9P-NwI"/>
+                                        <exclude reference="Kue-I7-w8L"/>
+                                        <exclude reference="OKh-ry-rxF"/>
+                                        <exclude reference="e0Q-x3-aFP"/>
+                                        <exclude reference="gsw-5E-3BL"/>
+                                        <exclude reference="mbB-Gr-3Ye"/>
+                                        <exclude reference="pd0-kN-XtP"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exU-Gg-q51" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="507" height="330"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xPq-sR-KgS">
+                                        <rect key="frame" x="2" y="2" width="503" height="326"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewLayout key="collectionViewLayout" id="WPE-ov-YW6" customClass="KeyboardViewLayout" customModule="HOWL" customModuleProvider="target"/>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="keyboardViewCell" id="Ouu-I7-W5Z" customClass="KeyboardViewCell" customModule="HOWL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Uux-Dl-5Lg" id="vNJ-dg-9To"/>
+                                            <outlet property="delegate" destination="Uux-Dl-5Lg" id="6qp-jV-37V"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="xPq-sR-KgS" firstAttribute="leading" secondItem="exU-Gg-q51" secondAttribute="leadingMargin" id="22F-sO-Jfl"/>
+                                    <constraint firstItem="xPq-sR-KgS" firstAttribute="trailing" secondItem="exU-Gg-q51" secondAttribute="trailingMargin" id="9mp-QW-qzA"/>
+                                    <constraint firstItem="xPq-sR-KgS" firstAttribute="top" secondItem="exU-Gg-q51" secondAttribute="top" constant="2" id="GEy-29-uVj"/>
+                                    <constraint firstAttribute="bottom" secondItem="xPq-sR-KgS" secondAttribute="bottom" constant="2" id="QT5-88-NrC"/>
+                                    <constraint firstItem="xPq-sR-KgS" firstAttribute="leading" secondItem="exU-Gg-q51" secondAttribute="leading" constant="2" id="Qna-mn-K4a"/>
+                                    <constraint firstItem="xPq-sR-KgS" firstAttribute="bottom" secondItem="exU-Gg-q51" secondAttribute="bottomMargin" id="Wlv-hA-B4A"/>
+                                    <constraint firstAttribute="trailing" secondItem="xPq-sR-KgS" secondAttribute="trailing" constant="2" id="aLR-ZC-Ele"/>
+                                    <constraint firstItem="xPq-sR-KgS" firstAttribute="top" secondItem="exU-Gg-q51" secondAttribute="topMargin" id="sIc-qE-jLE"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qna-mn-K4a"/>
+                                        <exclude reference="GEy-29-uVj"/>
+                                        <exclude reference="aLR-ZC-Ele"/>
+                                        <exclude reference="QT5-88-NrC"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3os-lj-HDw" appends="YES" id="Sme-RZ-ey1"/>
+                                </connections>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="liF-Kk-9ow" firstAttribute="leading" secondItem="w0j-da-hrA" secondAttribute="leading" id="0fU-6A-Xws"/>
-                            <constraint firstItem="HZ2-7c-ibJ" firstAttribute="leading" secondItem="w0j-da-hrA" secondAttribute="leading" id="NQk-lm-hqb"/>
-                            <constraint firstItem="4jY-V6-E8U" firstAttribute="top" secondItem="liF-Kk-9ow" secondAttribute="bottom" id="Pkg-Jh-l8j"/>
-                            <constraint firstAttribute="trailing" secondItem="HZ2-7c-ibJ" secondAttribute="trailing" id="WXx-V6-Axn"/>
-                            <constraint firstItem="4jY-V6-E8U" firstAttribute="top" secondItem="HZ2-7c-ibJ" secondAttribute="bottom" id="WrC-pe-NWp"/>
-                            <constraint firstItem="liF-Kk-9ow" firstAttribute="top" secondItem="4bb-xA-iNR" secondAttribute="bottom" id="ak4-m5-i4O"/>
-                            <constraint firstAttribute="trailing" secondItem="liF-Kk-9ow" secondAttribute="trailing" id="jEj-27-ggY"/>
-                            <constraint firstItem="HZ2-7c-ibJ" firstAttribute="top" secondItem="4bb-xA-iNR" secondAttribute="bottom" id="vpZ-tj-sRI"/>
+                            <constraint firstAttribute="trailing" secondItem="exU-Gg-q51" secondAttribute="trailing" constant="2" id="EHO-7e-hha"/>
+                            <constraint firstItem="0wI-Ag-1JO" firstAttribute="top" secondItem="4Fc-Ww-zNa" secondAttribute="top" constant="2" id="Mt3-aQ-c4o"/>
+                            <constraint firstItem="exU-Gg-q51" firstAttribute="top" secondItem="0wI-Ag-1JO" secondAttribute="bottom" constant="2" id="Riz-KB-dbi"/>
+                            <constraint firstAttribute="bottom" secondItem="exU-Gg-q51" secondAttribute="bottom" constant="2" id="Yb3-xA-TQC"/>
+                            <constraint firstAttribute="trailing" secondItem="0wI-Ag-1JO" secondAttribute="trailing" constant="2" id="eh0-WJ-YcU"/>
+                            <constraint firstItem="0wI-Ag-1JO" firstAttribute="leading" secondItem="4Fc-Ww-zNa" secondAttribute="leading" constant="2" id="qzx-Fu-U66"/>
+                            <constraint firstItem="exU-Gg-q51" firstAttribute="leading" secondItem="4Fc-Ww-zNa" secondAttribute="leading" constant="2" id="z0c-J7-ILK"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="backView" destination="HZ2-7c-ibJ" id="cX2-iH-Oeh"/>
-                        <outlet property="frontView" destination="liF-Kk-9ow" id="Hhf-09-sKA"/>
+                        <outlet property="holdButton" destination="wXh-P5-yec" id="A1P-9r-6HB"/>
+                        <outlet property="keyboardView" destination="xPq-sR-KgS" id="2i8-zZ-tC2"/>
+                        <outlet property="multitouchGestureRecognizer" destination="3os-lj-HDw" id="wke-Bg-AdO"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2iO-8Y-NdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4Y-dD-pJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3os-lj-HDw" customClass="MultitouchGestureRecognizer" customModule="MultitouchGestureRecognizer">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="sustain" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="Uux-Dl-5Lg" id="QGJ-8K-VLN"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="47.5" y="937"/>
+            <point key="canvasLocation" x="871.5" y="1512.5"/>
         </scene>
-        <!--Flip View Controller-->
-        <scene sceneID="bnJ-xd-vn6">
+        <!--Phonemeboard View Controller-->
+        <scene sceneID="HIB-EV-2bC">
             <objects>
-                <viewController id="myQ-Pk-G9S" customClass="FlipViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a6B-wT-AWU" customClass="PhonemeboardViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iJL-kd-FjB"/>
-                        <viewControllerLayoutGuide type="bottom" id="ADu-uJ-6mZ"/>
+                        <viewControllerLayoutGuide type="top" id="fgt-H0-zjc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sft-HN-gzR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LCo-cT-fPi">
-                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                    <view key="view" contentMode="scaleToFill" id="0nk-Pg-snT" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                        <rect key="frame" x="0.0" y="0.0" width="511" height="383"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bg-BI-Z7d">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-tP-97e">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
-                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zo-UQ-umx" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOWELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpn-fl-F9s" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-jG-buE" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="NRe-jG-buE" secondAttribute="height" multiplier="1:1" id="LfN-dK-Pqn"/>
+                                            <constraint firstAttribute="width" secondItem="NRe-jG-buE" secondAttribute="height" multiplier="1:1" id="fk9-7k-Qyp"/>
+                                            <constraint firstAttribute="width" secondItem="NRe-jG-buE" secondAttribute="height" multiplier="1:1" id="vT6-jv-kGr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="HOLD">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="LfN-dK-Pqn"/>
+                                                <exclude reference="vT6-jv-kGr"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="holdButtonTapped:" destination="a6B-wT-AWU" eventType="touchUpInside" id="cPX-Tc-ETG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="trailing" secondItem="8zo-UQ-umx" secondAttribute="trailingMargin" id="76r-Mu-RIl"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="leading" secondItem="qpn-fl-F9s" secondAttribute="trailing" constant="2" id="8Su-IB-vha"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="topMargin" constant="2" id="9Ed-mp-P2T"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="top" constant="2" id="9Yy-iT-SG0"/>
+                                    <constraint firstAttribute="bottom" secondItem="qpn-fl-F9s" secondAttribute="bottom" constant="2" id="E6q-vP-cG2"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="leading" secondItem="qpn-fl-F9s" secondAttribute="trailing" constant="2" id="ERL-0p-jby"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="leading" secondItem="8zo-UQ-umx" secondAttribute="leading" constant="2" id="Glr-Ch-QQo"/>
+                                    <constraint firstAttribute="bottom" secondItem="qpn-fl-F9s" secondAttribute="bottom" constant="2" id="J55-9a-FGB"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="leading" secondItem="NRe-jG-buE" secondAttribute="trailing" constant="2" id="Jeh-ND-UmC"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="bottom" secondItem="8zo-UQ-umx" secondAttribute="bottomMargin" id="K97-WC-bdp"/>
+                                    <constraint firstAttribute="bottom" secondItem="NRe-jG-buE" secondAttribute="bottom" constant="2" id="Kmf-Ng-xdy"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="leading" secondItem="8zo-UQ-umx" secondAttribute="leadingMargin" constant="2" id="OxI-Hh-nfG"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="top" constant="2" id="PVz-L8-Oe8"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="top" constant="2" id="Pqz-VU-au5"/>
+                                    <constraint firstAttribute="bottom" secondItem="qpn-fl-F9s" secondAttribute="bottom" constant="2" id="VDI-3c-cgo"/>
+                                    <constraint firstAttribute="bottom" secondItem="NRe-jG-buE" secondAttribute="bottom" constant="2" id="WKG-IT-qdg"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="bottom" secondItem="8zo-UQ-umx" secondAttribute="bottomMargin" id="WVd-f3-uIw"/>
+                                    <constraint firstAttribute="trailing" secondItem="qpn-fl-F9s" secondAttribute="trailing" constant="2" id="Yz8-cT-HNt"/>
+                                    <constraint firstAttribute="height" constant="47" id="ZNb-oh-gyf"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="leading" secondItem="8zo-UQ-umx" secondAttribute="leading" constant="2" id="a9C-jB-TLv"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="leading" secondItem="qpn-fl-F9s" secondAttribute="trailing" constant="2" id="aVS-O2-Efg"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="topMargin" id="bNv-Dg-sW1"/>
+                                    <constraint firstAttribute="bottom" secondItem="NRe-jG-buE" secondAttribute="bottom" constant="2" id="f5o-bF-FVc"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="top" constant="2" id="i15-wd-pSW"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="top" constant="2" id="kHE-Kt-Ehg"/>
+                                    <constraint firstAttribute="trailing" secondItem="NRe-jG-buE" secondAttribute="trailing" constant="2" id="kxg-Ew-5F4"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="leading" secondItem="8zo-UQ-umx" secondAttribute="leadingMargin" id="mxu-Pq-epc"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="leading" secondItem="qpn-fl-F9s" secondAttribute="trailing" constant="2" id="qYh-ob-Gy6"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="topMargin" id="rlC-yl-wjE"/>
+                                    <constraint firstItem="qpn-fl-F9s" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="top" constant="2" id="rnI-sA-DpV"/>
+                                    <constraint firstAttribute="trailing" secondItem="NRe-jG-buE" secondAttribute="trailing" constant="2" id="sW9-qA-y3z"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="qpn-fl-F9s" secondAttribute="bottom" constant="2" id="w0I-nK-mls"/>
+                                    <constraint firstItem="NRe-jG-buE" firstAttribute="leading" secondItem="qpn-fl-F9s" secondAttribute="trailing" constant="2" id="wR6-y4-7nj"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Ed-mp-P2T"/>
+                                        <exclude reference="9Yy-iT-SG0"/>
+                                        <exclude reference="E6q-vP-cG2"/>
+                                        <exclude reference="Glr-Ch-QQo"/>
+                                        <exclude reference="J55-9a-FGB"/>
+                                        <exclude reference="Jeh-ND-UmC"/>
+                                        <exclude reference="OxI-Hh-nfG"/>
+                                        <exclude reference="VDI-3c-cgo"/>
+                                        <exclude reference="Yz8-cT-HNt"/>
+                                        <exclude reference="kHE-Kt-Ehg"/>
+                                        <exclude reference="rnI-sA-DpV"/>
+                                        <exclude reference="w0I-nK-mls"/>
+                                        <exclude reference="8Su-IB-vha"/>
+                                        <exclude reference="ERL-0p-jby"/>
+                                        <exclude reference="Kmf-Ng-xdy"/>
+                                        <exclude reference="PVz-L8-Oe8"/>
+                                        <exclude reference="Pqz-VU-au5"/>
+                                        <exclude reference="WKG-IT-qdg"/>
+                                        <exclude reference="a9C-jB-TLv"/>
+                                        <exclude reference="aVS-O2-Efg"/>
+                                        <exclude reference="f5o-bF-FVc"/>
+                                        <exclude reference="i15-wd-pSW"/>
+                                        <exclude reference="kxg-Ew-5F4"/>
+                                        <exclude reference="qYh-ob-Gy6"/>
+                                        <exclude reference="sW9-qA-y3z"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6a-Z9-DiM" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="507" height="330"/>
+                                <subviews>
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdG-gs-Gc9" customClass="PhonemeboardView" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="503" height="326"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-cF-7ht">
+                                                <rect key="frame" x="123" y="288" width="6" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-9d-lvH">
+                                                <rect key="frame" x="473" y="118" width="18" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtH-Fj-igd">
+                                                <rect key="frame" x="370" y="288" width="15" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arp-wA-Oe5">
+                                                <rect key="frame" x="244" y="12" width="15" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxd-6T-ESR">
+                                                <rect key="frame" x="12" y="118" width="12" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YtH-Fj-igd" secondAttribute="trailing" constant="12" id="72L-Jl-2Jf"/>
+                                            <constraint firstItem="cP2-9d-lvH" firstAttribute="trailing" secondItem="fdG-gs-Gc9" secondAttribute="trailingMargin" id="9yC-0E-w1N"/>
+                                            <constraint firstAttribute="bottom" secondItem="IVO-cF-7ht" secondAttribute="bottom" constant="12" id="CoS-ik-aa5"/>
+                                            <constraint firstItem="IVO-cF-7ht" firstAttribute="centerY" secondItem="fdG-gs-Gc9" secondAttribute="centerY" multiplier="4/3" constant="6" id="D0g-Tj-Euw"/>
+                                            <constraint firstItem="arp-wA-Oe5" firstAttribute="centerX" secondItem="fdG-gs-Gc9" secondAttribute="centerX" id="Ghc-bx-fGY"/>
+                                            <constraint firstItem="Zxd-6T-ESR" firstAttribute="leading" secondItem="fdG-gs-Gc9" secondAttribute="leading" constant="12" id="IYm-FR-eBe"/>
+                                            <constraint firstItem="IVO-cF-7ht" firstAttribute="centerY" secondItem="fdG-gs-Gc9" secondAttribute="centerY" multiplier="0.5" id="Lt4-py-GfO"/>
+                                            <constraint firstItem="YtH-Fj-igd" firstAttribute="centerX" secondItem="fdG-gs-Gc9" secondAttribute="centerX" multiplier="1.5" id="N0W-8P-KPL"/>
+                                            <constraint firstItem="Zxd-6T-ESR" firstAttribute="leading" secondItem="fdG-gs-Gc9" secondAttribute="leadingMargin" id="Ngj-8M-ta4"/>
+                                            <constraint firstItem="cP2-9d-lvH" firstAttribute="centerY" secondItem="fdG-gs-Gc9" secondAttribute="centerY" multiplier="0.8" id="R4B-47-rda"/>
+                                            <constraint firstItem="Zxd-6T-ESR" firstAttribute="centerY" secondItem="fdG-gs-Gc9" secondAttribute="centerY" multiplier="0.8" id="SsH-77-SxV"/>
+                                            <constraint firstItem="IVO-cF-7ht" firstAttribute="leading" secondItem="fdG-gs-Gc9" secondAttribute="leading" constant="12" id="ZtI-T0-UcZ"/>
+                                            <constraint firstItem="IVO-cF-7ht" firstAttribute="centerX" secondItem="fdG-gs-Gc9" secondAttribute="centerX" multiplier="0.5" id="dxE-Xu-4iv"/>
+                                            <constraint firstItem="YtH-Fj-igd" firstAttribute="centerY" secondItem="fdG-gs-Gc9" secondAttribute="centerY" multiplier="4/3" constant="6" id="eV5-BB-gTI"/>
+                                            <constraint firstItem="YtH-Fj-igd" firstAttribute="bottom" secondItem="fdG-gs-Gc9" secondAttribute="bottomMargin" id="i0J-7L-sp9"/>
+                                            <constraint firstAttribute="bottom" secondItem="YtH-Fj-igd" secondAttribute="bottom" constant="12" id="i2e-OO-GcK"/>
+                                            <constraint firstItem="arp-wA-Oe5" firstAttribute="top" secondItem="fdG-gs-Gc9" secondAttribute="top" constant="12" id="pKy-QN-Z8M"/>
+                                            <constraint firstAttribute="trailing" secondItem="cP2-9d-lvH" secondAttribute="trailing" constant="12" id="rlV-PO-xOX"/>
+                                            <constraint firstItem="IVO-cF-7ht" firstAttribute="bottom" secondItem="fdG-gs-Gc9" secondAttribute="bottomMargin" id="uPt-gn-DMP"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="IYm-FR-eBe"/>
+                                                <exclude reference="D0g-Tj-Euw"/>
+                                                <exclude reference="CoS-ik-aa5"/>
+                                                <exclude reference="Lt4-py-GfO"/>
+                                                <exclude reference="ZtI-T0-UcZ"/>
+                                                <exclude reference="rlV-PO-xOX"/>
+                                                <exclude reference="eV5-BB-gTI"/>
+                                                <exclude reference="i2e-OO-GcK"/>
+                                                <exclude reference="72L-Jl-2Jf"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hpE-qS-8pV" appends="YES" id="VWh-KR-van"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fdG-gs-Gc9" firstAttribute="bottom" secondItem="F6a-Z9-DiM" secondAttribute="bottomMargin" id="0p6-IB-Ulg"/>
+                                    <constraint firstItem="fdG-gs-Gc9" firstAttribute="top" secondItem="F6a-Z9-DiM" secondAttribute="topMargin" id="Pc7-se-lgv"/>
+                                    <constraint firstAttribute="bottom" secondItem="fdG-gs-Gc9" secondAttribute="bottom" constant="2" id="fF1-t1-Egq"/>
+                                    <constraint firstItem="fdG-gs-Gc9" firstAttribute="top" secondItem="F6a-Z9-DiM" secondAttribute="top" constant="2" id="i5Q-jo-wzw"/>
+                                    <constraint firstItem="fdG-gs-Gc9" firstAttribute="trailing" secondItem="F6a-Z9-DiM" secondAttribute="trailingMargin" id="kYY-Qh-0g4"/>
+                                    <constraint firstAttribute="trailing" secondItem="fdG-gs-Gc9" secondAttribute="trailing" constant="2" id="swr-KG-Z9I"/>
+                                    <constraint firstItem="fdG-gs-Gc9" firstAttribute="leading" secondItem="F6a-Z9-DiM" secondAttribute="leading" constant="2" id="t8g-TI-C6z"/>
+                                    <constraint firstItem="fdG-gs-Gc9" firstAttribute="leading" secondItem="F6a-Z9-DiM" secondAttribute="leadingMargin" id="z6j-F0-C7O"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="t8g-TI-C6z"/>
+                                        <exclude reference="i5Q-jo-wzw"/>
+                                        <exclude reference="swr-KG-Z9I"/>
+                                        <exclude reference="fF1-t1-Egq"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6bg-BI-Z7d" firstAttribute="leading" secondItem="LCo-cT-fPi" secondAttribute="leading" id="12v-KR-1vg"/>
-                            <constraint firstItem="ADu-uJ-6mZ" firstAttribute="top" secondItem="lLi-tP-97e" secondAttribute="bottom" id="40Y-dc-D04"/>
-                            <constraint firstAttribute="trailing" secondItem="6bg-BI-Z7d" secondAttribute="trailing" id="9NB-nJ-DeH"/>
-                            <constraint firstItem="6bg-BI-Z7d" firstAttribute="top" secondItem="iJL-kd-FjB" secondAttribute="bottom" id="Zk0-Ev-GLM"/>
-                            <constraint firstItem="lLi-tP-97e" firstAttribute="top" secondItem="iJL-kd-FjB" secondAttribute="bottom" id="afK-S0-U6M"/>
-                            <constraint firstItem="ADu-uJ-6mZ" firstAttribute="top" secondItem="6bg-BI-Z7d" secondAttribute="bottom" id="az3-Yj-Qzj"/>
-                            <constraint firstAttribute="trailing" secondItem="lLi-tP-97e" secondAttribute="trailing" id="fRK-d7-ckR"/>
-                            <constraint firstItem="lLi-tP-97e" firstAttribute="leading" secondItem="LCo-cT-fPi" secondAttribute="leading" id="so4-4B-03Z"/>
+                            <constraint firstAttribute="trailing" secondItem="F6a-Z9-DiM" secondAttribute="trailing" constant="2" id="37X-xN-kRQ"/>
+                            <constraint firstItem="8zo-UQ-umx" firstAttribute="top" secondItem="0nk-Pg-snT" secondAttribute="top" constant="2" id="GeY-ih-0hT"/>
+                            <constraint firstItem="8zo-UQ-umx" firstAttribute="leading" secondItem="0nk-Pg-snT" secondAttribute="leading" constant="2" id="JWe-2X-EN5"/>
+                            <constraint firstAttribute="bottom" secondItem="F6a-Z9-DiM" secondAttribute="bottom" constant="2" id="Oex-JO-3lI"/>
+                            <constraint firstAttribute="trailing" secondItem="8zo-UQ-umx" secondAttribute="trailing" constant="2" id="bJc-qL-dZ8"/>
+                            <constraint firstItem="F6a-Z9-DiM" firstAttribute="leading" secondItem="0nk-Pg-snT" secondAttribute="leading" constant="2" id="ha9-zb-PST"/>
+                            <constraint firstItem="F6a-Z9-DiM" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="bottom" constant="2" id="hpW-Mc-LU3"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="backView" destination="6bg-BI-Z7d" id="Bo5-hH-dmA"/>
-                        <outlet property="frontView" destination="lLi-tP-97e" id="H7V-46-JHE"/>
+                        <outlet property="holdButton" destination="NRe-jG-buE" id="zQh-mE-9Sw"/>
+                        <outlet property="multitouchGestureRecognizer" destination="hpE-qS-8pV" id="hA6-ZW-Yad"/>
+                        <outlet property="phonemeboardView" destination="fdG-gs-Gc9" id="YfC-sg-agC"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4kK-sn-ae9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXM-Ja-vVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="hpE-qS-8pV" customClass="MultitouchGestureRecognizer" customModule="MultitouchGestureRecognizer">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="sustain" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="a6B-wT-AWU" id="VfD-VQ-ozf"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="801.5" y="937"/>
+            <point key="canvasLocation" x="273.5" y="1512.5"/>
+        </scene>
+        <!--Vocoder View Controller-->
+        <scene sceneID="ei3-Qx-PJu">
+            <objects>
+                <viewController id="eQs-SH-hmG" customClass="VocoderViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4WY-Bh-VrA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ED5-ZV-jWh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S0U-gQ-Nge" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                        <rect key="frame" x="0.0" y="0.0" width="511" height="383"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-LY-XJB" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-jT-EnP" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-Lx-S66" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ihs-Lx-S66" secondAttribute="height" multiplier="1:1" id="LdX-fx-cO0"/>
+                                            <constraint firstAttribute="width" secondItem="ihs-Lx-S66" secondAttribute="height" multiplier="1:1" id="Zcs-6u-wDW"/>
+                                            <constraint firstAttribute="width" secondItem="ihs-Lx-S66" secondAttribute="height" multiplier="1:1" id="ao2-kr-d7P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="RESET">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="LdX-fx-cO0"/>
+                                                <exclude reference="Zcs-6u-wDW"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="eQs-SH-hmG" eventType="touchUpInside" id="rLg-UB-uN9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HHR-jT-EnP" secondAttribute="bottom" constant="2" id="4qM-gn-fpz"/>
+                                    <constraint firstAttribute="trailing" secondItem="ihs-Lx-S66" secondAttribute="trailing" constant="2" id="4qd-EV-Vlj"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="leading" secondItem="HHR-jT-EnP" secondAttribute="trailing" constant="2" id="549-27-43Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="ihs-Lx-S66" secondAttribute="trailing" constant="2" id="7Er-2f-ovy"/>
+                                    <constraint firstAttribute="trailing" secondItem="HHR-jT-EnP" secondAttribute="trailing" constant="2" id="7PA-ra-GQQ"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="topMargin" id="9Db-Fl-CNO"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="top" constant="2" id="9Jy-Fq-4ik"/>
+                                    <constraint firstAttribute="bottom" secondItem="ihs-Lx-S66" secondAttribute="bottom" constant="2" id="G5b-U1-UNy"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="leading" secondItem="HHR-jT-EnP" secondAttribute="trailing" constant="2" id="KyY-M3-Wj9"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="trailing" secondItem="mJA-LY-XJB" secondAttribute="trailingMargin" id="MOy-Xe-Nii"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="leading" secondItem="mJA-LY-XJB" secondAttribute="leadingMargin" id="Pdv-2k-Btj"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="leading" secondItem="mJA-LY-XJB" secondAttribute="leading" constant="2" id="Qij-Hj-LvN"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="HHR-jT-EnP" secondAttribute="bottom" constant="2" id="Uor-YB-pV1"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="top" constant="2" id="Y2H-Kd-j2b"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="top" constant="2" id="Z0S-YI-eOB"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="leading" secondItem="HHR-jT-EnP" secondAttribute="trailing" constant="2" id="Zbh-Iz-nDR"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="leading" secondItem="mJA-LY-XJB" secondAttribute="leading" constant="2" id="Zd2-9k-PXN"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="topMargin" constant="2" id="aH6-vR-GJy"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="bottom" secondItem="mJA-LY-XJB" secondAttribute="bottomMargin" id="aVG-0I-KgI"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="leading" secondItem="ihs-Lx-S66" secondAttribute="trailing" constant="2" id="aaK-Iu-O1r"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="leading" secondItem="mJA-LY-XJB" secondAttribute="leadingMargin" constant="2" id="d5y-OE-inq"/>
+                                    <constraint firstAttribute="height" constant="47" id="db6-LI-uFe"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="bottom" secondItem="mJA-LY-XJB" secondAttribute="bottomMargin" id="flV-cn-G0f"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="leading" secondItem="HHR-jT-EnP" secondAttribute="trailing" constant="2" id="gVz-WQ-ySx"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="leading" secondItem="mJA-LY-XJB" secondAttribute="leadingMargin" id="l0D-Ox-Epj"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="top" constant="2" id="lU5-hn-VHA"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="leading" secondItem="HHR-jT-EnP" secondAttribute="trailing" constant="2" id="lyg-yL-qeb"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="top" constant="2" id="otj-oE-G3L"/>
+                                    <constraint firstAttribute="bottom" secondItem="ihs-Lx-S66" secondAttribute="bottom" constant="2" id="owR-Bq-DHq"/>
+                                    <constraint firstItem="HHR-jT-EnP" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="top" constant="2" id="qS0-bJ-Jhy"/>
+                                    <constraint firstItem="ihs-Lx-S66" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="topMargin" id="sli-Wq-HfT"/>
+                                    <constraint firstAttribute="bottom" secondItem="HHR-jT-EnP" secondAttribute="bottom" constant="2" id="tCv-Z2-yFY"/>
+                                    <constraint firstAttribute="bottom" secondItem="ihs-Lx-S66" secondAttribute="bottom" constant="2" id="uFF-FZ-Z12"/>
+                                    <constraint firstAttribute="bottom" secondItem="HHR-jT-EnP" secondAttribute="bottom" constant="2" id="wU8-br-dIW"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4qM-gn-fpz"/>
+                                        <exclude reference="7PA-ra-GQQ"/>
+                                        <exclude reference="Pdv-2k-Btj"/>
+                                        <exclude reference="Qij-Hj-LvN"/>
+                                        <exclude reference="Uor-YB-pV1"/>
+                                        <exclude reference="Z0S-YI-eOB"/>
+                                        <exclude reference="aH6-vR-GJy"/>
+                                        <exclude reference="aaK-Iu-O1r"/>
+                                        <exclude reference="d5y-OE-inq"/>
+                                        <exclude reference="otj-oE-G3L"/>
+                                        <exclude reference="qS0-bJ-Jhy"/>
+                                        <exclude reference="tCv-Z2-yFY"/>
+                                        <exclude reference="wU8-br-dIW"/>
+                                        <exclude reference="4qd-EV-Vlj"/>
+                                        <exclude reference="549-27-43Q"/>
+                                        <exclude reference="7Er-2f-ovy"/>
+                                        <exclude reference="9Jy-Fq-4ik"/>
+                                        <exclude reference="G5b-U1-UNy"/>
+                                        <exclude reference="KyY-M3-Wj9"/>
+                                        <exclude reference="Y2H-Kd-j2b"/>
+                                        <exclude reference="Zd2-9k-PXN"/>
+                                        <exclude reference="gVz-WQ-ySx"/>
+                                        <exclude reference="lU5-hn-VHA"/>
+                                        <exclude reference="lyg-yL-qeb"/>
+                                        <exclude reference="owR-Bq-DHq"/>
+                                        <exclude reference="uFF-FZ-Z12"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYn-k8-bIf" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="507" height="164"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpM-fX-G4z" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="251" height="142"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="200"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="formantsBandwidthDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="7hC-dX-A7r"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-UR-sD9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="255" y="2" width="250" height="142"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="200"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="formantsFrequencyDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="Tqm-G7-yOA"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g21-wL-QPF">
+                                        <rect key="frame" x="2" y="146" width="503" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lrZ-UR-sD9" secondAttribute="trailing" constant="2" id="4eD-o2-rsl"/>
+                                    <constraint firstItem="lrZ-UR-sD9" firstAttribute="leading" secondItem="mpM-fX-G4z" secondAttribute="trailing" constant="2" id="4s4-8g-GMn"/>
+                                    <constraint firstItem="mpM-fX-G4z" firstAttribute="leading" secondItem="qYn-k8-bIf" secondAttribute="leading" constant="2" id="7fj-CE-8XL"/>
+                                    <constraint firstItem="g21-wL-QPF" firstAttribute="leading" secondItem="qYn-k8-bIf" secondAttribute="leadingMargin" id="A9g-Hz-iFN"/>
+                                    <constraint firstItem="g21-wL-QPF" firstAttribute="trailing" secondItem="qYn-k8-bIf" secondAttribute="trailingMargin" id="F4I-Ne-hxN"/>
+                                    <constraint firstAttribute="bottom" secondItem="g21-wL-QPF" secondAttribute="bottom" constant="2" id="GNm-Iz-AEB"/>
+                                    <constraint firstItem="g21-wL-QPF" firstAttribute="top" secondItem="mpM-fX-G4z" secondAttribute="bottom" constant="2" id="JPs-XJ-7dY"/>
+                                    <constraint firstItem="lrZ-UR-sD9" firstAttribute="trailing" secondItem="qYn-k8-bIf" secondAttribute="trailingMargin" id="NGx-rT-898"/>
+                                    <constraint firstItem="g21-wL-QPF" firstAttribute="bottom" secondItem="qYn-k8-bIf" secondAttribute="bottomMargin" id="PIp-Yx-GzL"/>
+                                    <constraint firstItem="g21-wL-QPF" firstAttribute="leading" secondItem="qYn-k8-bIf" secondAttribute="leading" constant="2" id="PVk-Nc-aca"/>
+                                    <constraint firstAttribute="trailing" secondItem="g21-wL-QPF" secondAttribute="trailing" constant="2" id="PvW-zE-wWz"/>
+                                    <constraint firstItem="lrZ-UR-sD9" firstAttribute="leading" secondItem="mpM-fX-G4z" secondAttribute="trailing" constant="2" id="bYO-e2-iHm"/>
+                                    <constraint firstItem="g21-wL-QPF" firstAttribute="top" secondItem="lrZ-UR-sD9" secondAttribute="bottom" constant="2" id="cBJ-1I-Vlo"/>
+                                    <constraint firstItem="mpM-fX-G4z" firstAttribute="width" secondItem="lrZ-UR-sD9" secondAttribute="width" id="k31-Ih-BTR"/>
+                                    <constraint firstItem="mpM-fX-G4z" firstAttribute="leading" secondItem="qYn-k8-bIf" secondAttribute="leadingMargin" id="kkw-it-MEa"/>
+                                    <constraint firstItem="lrZ-UR-sD9" firstAttribute="top" secondItem="qYn-k8-bIf" secondAttribute="top" constant="2" id="q5H-ok-o4d"/>
+                                    <constraint firstItem="mpM-fX-G4z" firstAttribute="top" secondItem="qYn-k8-bIf" secondAttribute="top" constant="2" id="qKZ-R1-oWG"/>
+                                    <constraint firstItem="lrZ-UR-sD9" firstAttribute="top" secondItem="qYn-k8-bIf" secondAttribute="topMargin" id="wCt-gZ-PST"/>
+                                    <constraint firstItem="mpM-fX-G4z" firstAttribute="top" secondItem="qYn-k8-bIf" secondAttribute="topMargin" id="yhE-IJ-2Y4"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qKZ-R1-oWG"/>
+                                        <exclude reference="7fj-CE-8XL"/>
+                                        <exclude reference="PVk-Nc-aca"/>
+                                        <exclude reference="PvW-zE-wWz"/>
+                                        <exclude reference="GNm-Iz-AEB"/>
+                                        <exclude reference="4eD-o2-rsl"/>
+                                        <exclude reference="bYO-e2-iHm"/>
+                                        <exclude reference="q5H-ok-o4d"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-ZX-Ygj" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="217" width="507" height="164"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2G-c1-jZy" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="251" height="142"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bitcrush"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="effectsBitcrushDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="Zhg-Mh-mWF"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-zn-1d9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="255" y="2" width="250" height="142"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="effectsReverbDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="eMg-Mg-tWt"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uky-R0-QNS">
+                                        <rect key="frame" x="2" y="146" width="503" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uky-R0-QNS" firstAttribute="leading" secondItem="A9a-ZX-Ygj" secondAttribute="leadingMargin" id="3Q3-f2-Mdd"/>
+                                    <constraint firstItem="LtI-zn-1d9" firstAttribute="top" secondItem="A9a-ZX-Ygj" secondAttribute="top" constant="2" id="5KU-LS-7p5"/>
+                                    <constraint firstAttribute="bottom" secondItem="uky-R0-QNS" secondAttribute="bottom" constant="2" id="6co-y3-tO7"/>
+                                    <constraint firstItem="uky-R0-QNS" firstAttribute="trailing" secondItem="A9a-ZX-Ygj" secondAttribute="trailingMargin" id="6so-3L-Qrt"/>
+                                    <constraint firstItem="LtI-zn-1d9" firstAttribute="top" secondItem="A9a-ZX-Ygj" secondAttribute="topMargin" id="99Y-Yq-Qlx"/>
+                                    <constraint firstItem="T2G-c1-jZy" firstAttribute="width" secondItem="LtI-zn-1d9" secondAttribute="width" id="Bhj-n3-sGb"/>
+                                    <constraint firstItem="T2G-c1-jZy" firstAttribute="top" secondItem="A9a-ZX-Ygj" secondAttribute="top" constant="2" id="Qzb-zK-duq"/>
+                                    <constraint firstItem="uky-R0-QNS" firstAttribute="top" secondItem="T2G-c1-jZy" secondAttribute="bottom" constant="2" id="RS8-do-knm"/>
+                                    <constraint firstItem="uky-R0-QNS" firstAttribute="top" secondItem="LtI-zn-1d9" secondAttribute="bottom" constant="2" id="Xn6-Ry-Kea"/>
+                                    <constraint firstAttribute="trailing" secondItem="LtI-zn-1d9" secondAttribute="trailing" constant="2" id="Y3E-mJ-G7M"/>
+                                    <constraint firstItem="T2G-c1-jZy" firstAttribute="leading" secondItem="A9a-ZX-Ygj" secondAttribute="leading" constant="2" id="hh0-Rq-sRP"/>
+                                    <constraint firstItem="uky-R0-QNS" firstAttribute="bottom" secondItem="A9a-ZX-Ygj" secondAttribute="bottomMargin" id="kwd-D5-BmI"/>
+                                    <constraint firstItem="T2G-c1-jZy" firstAttribute="leading" secondItem="A9a-ZX-Ygj" secondAttribute="leadingMargin" id="lau-6H-dGx"/>
+                                    <constraint firstItem="LtI-zn-1d9" firstAttribute="trailing" secondItem="A9a-ZX-Ygj" secondAttribute="trailingMargin" id="lq3-tR-erL"/>
+                                    <constraint firstItem="uky-R0-QNS" firstAttribute="leading" secondItem="A9a-ZX-Ygj" secondAttribute="leading" constant="2" id="m3K-5H-z1E"/>
+                                    <constraint firstItem="LtI-zn-1d9" firstAttribute="leading" secondItem="T2G-c1-jZy" secondAttribute="trailing" constant="2" id="oaR-FP-V68"/>
+                                    <constraint firstItem="T2G-c1-jZy" firstAttribute="top" secondItem="A9a-ZX-Ygj" secondAttribute="topMargin" id="qds-26-HwY"/>
+                                    <constraint firstItem="LtI-zn-1d9" firstAttribute="leading" secondItem="T2G-c1-jZy" secondAttribute="trailing" constant="2" id="xuP-on-pQh"/>
+                                    <constraint firstAttribute="trailing" secondItem="uky-R0-QNS" secondAttribute="trailing" constant="2" id="zl5-0D-M0C"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qzb-zK-duq"/>
+                                        <exclude reference="hh0-Rq-sRP"/>
+                                        <exclude reference="6co-y3-tO7"/>
+                                        <exclude reference="m3K-5H-z1E"/>
+                                        <exclude reference="zl5-0D-M0C"/>
+                                        <exclude reference="Y3E-mJ-G7M"/>
+                                        <exclude reference="xuP-on-pQh"/>
+                                        <exclude reference="5KU-LS-7p5"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qYn-k8-bIf" secondAttribute="bottom" constant="2" id="AV5-L1-yha"/>
+                            <constraint firstItem="A9a-ZX-Ygj" firstAttribute="top" secondItem="qYn-k8-bIf" secondAttribute="bottom" constant="2" id="D5T-OR-SCG"/>
+                            <constraint firstItem="A9a-ZX-Ygj" firstAttribute="leading" secondItem="S0U-gQ-Nge" secondAttribute="leading" constant="2" id="KhB-RF-Odd"/>
+                            <constraint firstItem="ED5-ZV-jWh" firstAttribute="top" secondItem="A9a-ZX-Ygj" secondAttribute="bottom" constant="2" id="Lrl-1E-fJC"/>
+                            <constraint firstItem="qYn-k8-bIf" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="bottom" constant="2" id="Rjb-PI-Bff"/>
+                            <constraint firstAttribute="trailing" secondItem="A9a-ZX-Ygj" secondAttribute="trailing" constant="2" id="erl-fF-AL1"/>
+                            <constraint firstItem="mJA-LY-XJB" firstAttribute="top" secondItem="4WY-Bh-VrA" secondAttribute="bottom" constant="2" id="i6y-Au-n3f"/>
+                            <constraint firstAttribute="trailing" secondItem="mJA-LY-XJB" secondAttribute="trailing" constant="2" id="iuq-QP-Qhm"/>
+                            <constraint firstItem="mJA-LY-XJB" firstAttribute="leading" secondItem="S0U-gQ-Nge" secondAttribute="leading" constant="2" id="qF3-m6-YgJ"/>
+                            <constraint firstItem="A9a-ZX-Ygj" firstAttribute="height" secondItem="qYn-k8-bIf" secondAttribute="height" id="sSE-pS-dcK"/>
+                            <constraint firstAttribute="trailing" secondItem="qYn-k8-bIf" secondAttribute="trailing" constant="2" id="tS2-7Y-Y1g"/>
+                            <constraint firstItem="qYn-k8-bIf" firstAttribute="leading" secondItem="S0U-gQ-Nge" secondAttribute="leading" constant="2" id="zBv-cP-JFE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AV5-L1-yha"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="effectsBitcrushDialControl" destination="T2G-c1-jZy" id="qPK-qV-aqW"/>
+                        <outlet property="effectsReverbDialControl" destination="LtI-zn-1d9" id="rmg-1H-1Nl"/>
+                        <outlet property="formantsBandwidthDialControl" destination="mpM-fX-G4z" id="ZdE-E4-JVd"/>
+                        <outlet property="formantsFrequencyDialControl" destination="lrZ-UR-sD9" id="4SS-ng-VeG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l9k-Pt-L00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871.5" y="1036.5"/>
+        </scene>
+        <!--Synthesizer View Controller-->
+        <scene sceneID="riB-qA-nbp">
+            <objects>
+                <viewController id="vYm-n5-kCb" customClass="SynthesizerViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gU9-Tm-AUg"/>
+                        <viewControllerLayoutGuide type="bottom" id="8lE-4k-ptm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I0b-Uf-tRC" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                        <rect key="frame" x="0.0" y="0.0" width="511" height="383"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-m1-qla" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNQ-GJ-Io2" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XNQ-GJ-Io2" secondAttribute="height" multiplier="1:1" id="7SD-Ak-EL1"/>
+                                            <constraint firstAttribute="width" secondItem="XNQ-GJ-Io2" secondAttribute="height" multiplier="1:1" id="9eh-Rv-H8O"/>
+                                            <constraint firstAttribute="width" secondItem="XNQ-GJ-Io2" secondAttribute="height" multiplier="1:1" id="lEr-6J-zdm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="RESET">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7SD-Ak-EL1"/>
+                                                <exclude reference="9eh-Rv-H8O"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="vYm-n5-kCb" eventType="touchUpInside" id="SuW-zd-twE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmq-mg-gvC" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
+                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XNQ-GJ-Io2" secondAttribute="trailing" constant="2" id="1Ba-u0-n1b"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="leading" secondItem="Zmq-mg-gvC" secondAttribute="trailing" constant="2" id="1e5-NM-hYL"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="top" constant="2" id="5Js-U4-aoh"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="bottom" secondItem="KdT-m1-qla" secondAttribute="bottomMargin" id="63i-Aj-mRg"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="top" constant="2" id="7LG-5c-BdM"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="topMargin" id="C1v-tW-mf2"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="leading" secondItem="Zmq-mg-gvC" secondAttribute="trailing" constant="2" id="CHl-Q1-a5e"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNQ-GJ-Io2" secondAttribute="bottom" constant="2" id="CmE-3B-Bqc"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Zmq-mg-gvC" secondAttribute="bottom" constant="2" id="EwS-Dw-aEZ"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="trailing" secondItem="KdT-m1-qla" secondAttribute="trailingMargin" id="FbE-FZ-XxL"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNQ-GJ-Io2" secondAttribute="trailing" constant="2" id="Fil-G8-7Y7"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zmq-mg-gvC" secondAttribute="bottom" constant="2" id="KSN-q1-WmY"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="bottom" secondItem="KdT-m1-qla" secondAttribute="bottomMargin" id="Kt9-cz-j31"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="leading" secondItem="XNQ-GJ-Io2" secondAttribute="trailing" constant="2" id="LR2-rI-cJN"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="leading" secondItem="KdT-m1-qla" secondAttribute="leadingMargin" constant="2" id="Pzy-YH-Xx6"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNQ-GJ-Io2" secondAttribute="bottom" constant="2" id="TuS-6v-VVJ"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="top" constant="2" id="UNV-i9-FZr"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="leading" secondItem="Zmq-mg-gvC" secondAttribute="trailing" constant="2" id="Uec-ll-VdS"/>
+                                    <constraint firstAttribute="height" constant="47" id="ZV1-hq-jEE"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="top" constant="2" id="Zcg-AO-cfg"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="leading" secondItem="KdT-m1-qla" secondAttribute="leading" constant="2" id="aRh-6a-WRR"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="top" constant="2" id="e6V-VP-ooT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zmq-mg-gvC" secondAttribute="bottom" constant="2" id="fEb-7c-Xm4"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="leading" secondItem="KdT-m1-qla" secondAttribute="leadingMargin" id="g3s-No-u9J"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="top" constant="2" id="gRE-gX-8HF"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="leading" secondItem="Zmq-mg-gvC" secondAttribute="trailing" constant="2" id="gsY-yE-B81"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="leading" secondItem="KdT-m1-qla" secondAttribute="leading" constant="2" id="jZd-Fl-s8f"/>
+                                    <constraint firstItem="Zmq-mg-gvC" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="topMargin" constant="2" id="pFH-vG-xmw"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="leading" secondItem="Zmq-mg-gvC" secondAttribute="trailing" constant="2" id="pFv-uN-EQz"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNQ-GJ-Io2" secondAttribute="bottom" constant="2" id="pc8-HG-BlQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zmq-mg-gvC" secondAttribute="bottom" constant="2" id="r6E-kV-t6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zmq-mg-gvC" secondAttribute="trailing" constant="2" id="rOM-de-d0x"/>
+                                    <constraint firstItem="XNQ-GJ-Io2" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="topMargin" id="ubK-Mb-9Md"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EwS-Dw-aEZ"/>
+                                        <exclude reference="KSN-q1-WmY"/>
+                                        <exclude reference="LR2-rI-cJN"/>
+                                        <exclude reference="Pzy-YH-Xx6"/>
+                                        <exclude reference="Zcg-AO-cfg"/>
+                                        <exclude reference="aRh-6a-WRR"/>
+                                        <exclude reference="e6V-VP-ooT"/>
+                                        <exclude reference="fEb-7c-Xm4"/>
+                                        <exclude reference="gRE-gX-8HF"/>
+                                        <exclude reference="pFH-vG-xmw"/>
+                                        <exclude reference="r6E-kV-t6c"/>
+                                        <exclude reference="rOM-de-d0x"/>
+                                        <exclude reference="1Ba-u0-n1b"/>
+                                        <exclude reference="5Js-U4-aoh"/>
+                                        <exclude reference="7LG-5c-BdM"/>
+                                        <exclude reference="CHl-Q1-a5e"/>
+                                        <exclude reference="CmE-3B-Bqc"/>
+                                        <exclude reference="Fil-G8-7Y7"/>
+                                        <exclude reference="TuS-6v-VVJ"/>
+                                        <exclude reference="UNV-i9-FZr"/>
+                                        <exclude reference="Uec-ll-VdS"/>
+                                        <exclude reference="gsY-yE-B81"/>
+                                        <exclude reference="jZd-Fl-s8f"/>
+                                        <exclude reference="pFv-uN-EQz"/>
+                                        <exclude reference="pc8-HG-BlQ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hw-H4-zVS" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="507" height="164"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-vX-nTp" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="251" height="142"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="vibratoDepthDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="8vS-0w-8mO"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-mM-wVh" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="255" y="2" width="250" height="142"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="Hz"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="vibratoFrequencyDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="qBm-Tx-Vws"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-b8-vzk">
+                                        <rect key="frame" x="2" y="146" width="503" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fCE-mM-wVh" firstAttribute="top" secondItem="2hw-H4-zVS" secondAttribute="top" constant="2" id="H8w-9O-v3n"/>
+                                    <constraint firstItem="Xwl-vX-nTp" firstAttribute="top" secondItem="2hw-H4-zVS" secondAttribute="topMargin" id="HFL-4Y-GaW"/>
+                                    <constraint firstItem="MsI-b8-vzk" firstAttribute="leading" secondItem="2hw-H4-zVS" secondAttribute="leadingMargin" id="MgH-BX-e1l"/>
+                                    <constraint firstItem="Xwl-vX-nTp" firstAttribute="width" secondItem="fCE-mM-wVh" secondAttribute="width" id="Myp-AL-ktD"/>
+                                    <constraint firstItem="MsI-b8-vzk" firstAttribute="trailing" secondItem="2hw-H4-zVS" secondAttribute="trailingMargin" id="PXS-17-4EE"/>
+                                    <constraint firstAttribute="bottom" secondItem="MsI-b8-vzk" secondAttribute="bottom" constant="2" id="Pid-4w-Nho"/>
+                                    <constraint firstItem="MsI-b8-vzk" firstAttribute="top" secondItem="Xwl-vX-nTp" secondAttribute="bottom" constant="2" id="Rse-YI-nN7"/>
+                                    <constraint firstItem="MsI-b8-vzk" firstAttribute="leading" secondItem="2hw-H4-zVS" secondAttribute="leading" constant="2" id="TUz-oA-0aO"/>
+                                    <constraint firstItem="MsI-b8-vzk" firstAttribute="bottom" secondItem="2hw-H4-zVS" secondAttribute="bottomMargin" id="TiJ-6t-Vrk"/>
+                                    <constraint firstAttribute="trailing" secondItem="MsI-b8-vzk" secondAttribute="trailing" constant="2" id="YJi-ys-zht"/>
+                                    <constraint firstItem="fCE-mM-wVh" firstAttribute="top" secondItem="2hw-H4-zVS" secondAttribute="topMargin" id="ZOI-Qg-Ubg"/>
+                                    <constraint firstItem="Xwl-vX-nTp" firstAttribute="leading" secondItem="2hw-H4-zVS" secondAttribute="leadingMargin" id="ZSW-xh-GDH"/>
+                                    <constraint firstAttribute="trailing" secondItem="fCE-mM-wVh" secondAttribute="trailing" constant="2" id="bbj-me-ECS"/>
+                                    <constraint firstItem="MsI-b8-vzk" firstAttribute="top" secondItem="fCE-mM-wVh" secondAttribute="bottom" constant="2" id="clQ-M0-xhm"/>
+                                    <constraint firstItem="MsI-b8-vzk" firstAttribute="top" secondItem="fCE-mM-wVh" secondAttribute="bottom" constant="2" id="dbM-Ss-X7B"/>
+                                    <constraint firstItem="fCE-mM-wVh" firstAttribute="leading" secondItem="Xwl-vX-nTp" secondAttribute="trailing" constant="2" id="enV-8k-tim"/>
+                                    <constraint firstItem="Xwl-vX-nTp" firstAttribute="leading" secondItem="2hw-H4-zVS" secondAttribute="leading" constant="2" id="lAn-kS-x1V"/>
+                                    <constraint firstItem="fCE-mM-wVh" firstAttribute="trailing" secondItem="2hw-H4-zVS" secondAttribute="trailingMargin" id="rDd-SE-mmp"/>
+                                    <constraint firstItem="Xwl-vX-nTp" firstAttribute="top" secondItem="2hw-H4-zVS" secondAttribute="top" constant="2" id="wp5-8D-U8a"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wp5-8D-U8a"/>
+                                        <exclude reference="lAn-kS-x1V"/>
+                                        <exclude reference="TUz-oA-0aO"/>
+                                        <exclude reference="YJi-ys-zht"/>
+                                        <exclude reference="clQ-M0-xhm"/>
+                                        <exclude reference="Pid-4w-Nho"/>
+                                        <exclude reference="bbj-me-ECS"/>
+                                        <exclude reference="H8w-9O-v3n"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjM-M0-Y10" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="217" width="507" height="164"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cB-QC-O8r" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="251" height="142"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left Interval"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="-12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="keyboardLeftIntervalDialControlTouchDown:" destination="vYm-n5-kCb" eventType="touchDown" id="M2w-tC-34W"/>
+                                            <action selector="keyboardLeftIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpOutside" id="Flk-5P-fag"/>
+                                            <action selector="keyboardLeftIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpInside" id="mNt-Og-DrI"/>
+                                            <action selector="keyboardLeftIntervalDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="Eeb-1j-XHk"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="255" y="2" width="250" height="142"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                                <real key="value" value="-12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Right Interval"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="keyboardRightIntervalDialControlTouchDown:" destination="vYm-n5-kCb" eventType="touchDown" id="Qa9-L8-Jph"/>
+                                            <action selector="keyboardRightIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpInside" id="O3l-2N-Eq8"/>
+                                            <action selector="keyboardRightIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpOutside" id="k11-Ua-aa1"/>
+                                            <action selector="keyboardRightIntervalDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="cxF-C0-ne8"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyP-Ts-70K">
+                                        <rect key="frame" x="2" y="146" width="503" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8cB-QC-O8r" firstAttribute="leading" secondItem="VjM-M0-Y10" secondAttribute="leading" constant="2" id="1Qw-Fy-AXg"/>
+                                    <constraint firstItem="VrU-cW-RTC" firstAttribute="top" secondItem="VjM-M0-Y10" secondAttribute="top" constant="2" id="4Hq-ga-1ov"/>
+                                    <constraint firstItem="8cB-QC-O8r" firstAttribute="top" secondItem="VjM-M0-Y10" secondAttribute="topMargin" id="60f-Tv-iz0"/>
+                                    <constraint firstAttribute="bottom" secondItem="TyP-Ts-70K" secondAttribute="bottom" constant="2" id="77D-Jw-VoI"/>
+                                    <constraint firstItem="VrU-cW-RTC" firstAttribute="top" secondItem="VjM-M0-Y10" secondAttribute="topMargin" id="Hrp-SR-um6"/>
+                                    <constraint firstItem="TyP-Ts-70K" firstAttribute="bottom" secondItem="VjM-M0-Y10" secondAttribute="bottomMargin" id="Nxx-U9-36S"/>
+                                    <constraint firstItem="TyP-Ts-70K" firstAttribute="leading" secondItem="VjM-M0-Y10" secondAttribute="leadingMargin" id="TWQ-gl-YS2"/>
+                                    <constraint firstAttribute="trailing" secondItem="TyP-Ts-70K" secondAttribute="trailing" constant="2" id="W3Q-Qk-CjE"/>
+                                    <constraint firstItem="8cB-QC-O8r" firstAttribute="leading" secondItem="VjM-M0-Y10" secondAttribute="leadingMargin" id="WuK-4N-er8"/>
+                                    <constraint firstItem="VrU-cW-RTC" firstAttribute="leading" secondItem="8cB-QC-O8r" secondAttribute="trailing" constant="2" id="eM3-Mj-qiy"/>
+                                    <constraint firstItem="TyP-Ts-70K" firstAttribute="top" secondItem="8cB-QC-O8r" secondAttribute="bottom" constant="2" id="iqg-Be-1mh"/>
+                                    <constraint firstItem="VrU-cW-RTC" firstAttribute="trailing" secondItem="VjM-M0-Y10" secondAttribute="trailingMargin" id="jB0-9S-ear"/>
+                                    <constraint firstItem="8cB-QC-O8r" firstAttribute="width" secondItem="VrU-cW-RTC" secondAttribute="width" id="ktt-Sp-mOk"/>
+                                    <constraint firstAttribute="trailing" secondItem="VrU-cW-RTC" secondAttribute="trailing" constant="2" id="nZt-ER-WuR"/>
+                                    <constraint firstItem="8cB-QC-O8r" firstAttribute="top" secondItem="VjM-M0-Y10" secondAttribute="top" constant="2" id="oAg-rG-dkm"/>
+                                    <constraint firstItem="TyP-Ts-70K" firstAttribute="top" secondItem="VrU-cW-RTC" secondAttribute="bottom" constant="2" id="vBx-Wu-VTv"/>
+                                    <constraint firstItem="TyP-Ts-70K" firstAttribute="leading" secondItem="VjM-M0-Y10" secondAttribute="leading" constant="2" id="vH2-e1-Lx8"/>
+                                    <constraint firstItem="TyP-Ts-70K" firstAttribute="trailing" secondItem="VjM-M0-Y10" secondAttribute="trailingMargin" id="wO6-MO-guh"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Qw-Fy-AXg"/>
+                                        <exclude reference="oAg-rG-dkm"/>
+                                        <exclude reference="W3Q-Qk-CjE"/>
+                                        <exclude reference="vH2-e1-Lx8"/>
+                                        <exclude reference="77D-Jw-VoI"/>
+                                        <exclude reference="4Hq-ga-1ov"/>
+                                        <exclude reference="nZt-ER-WuR"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8lE-4k-ptm" firstAttribute="top" secondItem="2hw-H4-zVS" secondAttribute="bottom" constant="2" id="4eh-6K-7dj"/>
+                            <constraint firstItem="8lE-4k-ptm" firstAttribute="top" secondItem="2hw-H4-zVS" secondAttribute="bottom" constant="2" id="9Mn-xn-ZsI"/>
+                            <constraint firstItem="KdT-m1-qla" firstAttribute="leading" secondItem="I0b-Uf-tRC" secondAttribute="leading" constant="2" id="G8Q-Od-EXi"/>
+                            <constraint firstItem="2hw-H4-zVS" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="bottom" constant="2" id="Gl8-mh-ths"/>
+                            <constraint firstItem="2hw-H4-zVS" firstAttribute="leading" secondItem="I0b-Uf-tRC" secondAttribute="leading" constant="2" id="HkP-hV-2C7"/>
+                            <constraint firstItem="2hw-H4-zVS" firstAttribute="leading" secondItem="I0b-Uf-tRC" secondAttribute="leadingMargin" constant="2" id="KMq-Q2-vTI"/>
+                            <constraint firstAttribute="trailing" secondItem="VjM-M0-Y10" secondAttribute="trailing" constant="2" id="U8M-im-QEc"/>
+                            <constraint firstAttribute="trailing" secondItem="KdT-m1-qla" secondAttribute="trailing" constant="2" id="VPa-MB-0h4"/>
+                            <constraint firstAttribute="trailing" secondItem="2hw-H4-zVS" secondAttribute="trailing" constant="2" id="YeR-xW-3AS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2hw-H4-zVS" secondAttribute="trailing" constant="2" id="do1-HY-90C"/>
+                            <constraint firstItem="2hw-H4-zVS" firstAttribute="top" secondItem="KdT-m1-qla" secondAttribute="bottom" constant="2" id="hX1-O1-ZRR"/>
+                            <constraint firstItem="8lE-4k-ptm" firstAttribute="top" secondItem="VjM-M0-Y10" secondAttribute="bottom" constant="2" id="pfu-cH-QDm"/>
+                            <constraint firstItem="VjM-M0-Y10" firstAttribute="leading" secondItem="I0b-Uf-tRC" secondAttribute="leading" constant="2" id="s4D-Gc-XSO"/>
+                            <constraint firstItem="VjM-M0-Y10" firstAttribute="top" secondItem="2hw-H4-zVS" secondAttribute="bottom" constant="2" id="vzK-cc-O1w"/>
+                            <constraint firstItem="VjM-M0-Y10" firstAttribute="height" secondItem="2hw-H4-zVS" secondAttribute="height" id="y6t-KR-qby"/>
+                            <constraint firstItem="KdT-m1-qla" firstAttribute="top" secondItem="gU9-Tm-AUg" secondAttribute="bottom" constant="2" id="zB9-Ah-Q4p"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="do1-HY-90C"/>
+                                <exclude reference="hX1-O1-ZRR"/>
+                                <exclude reference="KMq-Q2-vTI"/>
+                                <exclude reference="4eh-6K-7dj"/>
+                                <exclude reference="9Mn-xn-ZsI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="keyboardLeftIntervalDialControl" destination="8cB-QC-O8r" id="J7K-f6-HzC"/>
+                        <outlet property="keyboardRightIntervalDialControl" destination="VrU-cW-RTC" id="1n4-AT-4GN"/>
+                        <outlet property="vibratoDepthDialControl" destination="Xwl-vX-nTp" id="dWH-RP-6at"/>
+                        <outlet property="vibratoFrequencyDialControl" destination="fCE-mM-wVh" id="Mci-c4-UnS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3A-18-NFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273.5" y="1036.5"/>
         </scene>
     </scenes>
 </document>
