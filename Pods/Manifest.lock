@@ -15,14 +15,12 @@ PODS:
 DEPENDENCIES:
   - AudioKit (~> 2.3)
   - Bezzy (~> 0.1)
-  - MultitouchGestureRecognizer (from `../MultitouchGestureRecognizer`)
+  - MultitouchGestureRecognizer (~> 0.1)
   - ProtonomeAudioKitControls (from `../ProtonomeAudioKitControls`)
   - ProtonomeRoundedViews (from `../ProtonomeRoundedViews`)
   - SnapKit (~> 0.17)
 
 EXTERNAL SOURCES:
-  MultitouchGestureRecognizer:
-    :path: ../MultitouchGestureRecognizer
   ProtonomeAudioKitControls:
     :path: ../ProtonomeAudioKitControls
   ProtonomeRoundedViews:
@@ -33,9 +31,9 @@ SPEC CHECKSUMS:
   Bezzy: e3fc0a79f83d6d46e382ac578d81b234f2f97f90
   Degrad: 590415ee0f71c0516c661c806f7a2489376bfd7e
   Lerp: 71b55a57e6c89f24fd41c82fc30137961e5daeb2
-  MultitouchGestureRecognizer: f916e6a5b83ec47b0a73053e3a9ce480cd1e6fd2
-  ProtonomeAudioKitControls: a60473d33473c2e680052b8707dffee46a245b1a
-  ProtonomeRoundedViews: b716ef0c10f02fe71711c9143e4353c045b56956
+  MultitouchGestureRecognizer: f20a1798f111cb8d87d392c55fd852663acd0f75
+  ProtonomeAudioKitControls: 2d9d1a72d785b5dad8f7c25f5d6ca3fea521c749
+  ProtonomeRoundedViews: 7493ff9e396a025ace5a84b239770823611f14b3
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
 
 COCOAPODS: 0.39.0

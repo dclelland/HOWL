@@ -45,11 +45,11 @@ class PhonemeboardViewController: UIViewController {
     }
     
     func refreshView() {
-        guard let touchState = multitouchGestureRecognizer?.touchState, let touches = multitouchGestureRecognizer?.touches else {
+        guard let multitouchState = multitouchGestureRecognizer?.multitouchState, let touches = multitouchGestureRecognizer?.touches else {
             return
         }
         
-        switch touchState {
+        switch multitouchState {
         case .Ready:
             phonemeboardView?.state = .Normal
         case .Live:

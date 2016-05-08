@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '47A36340CFD0B2F5A3CCE271'
+               BlueprintIdentifier = '9F32379225FA19FB024882EB'
                BlueprintName = 'ProtonomeRoundedViews'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ProtonomeRoundedViews.framework'>

@@ -17,7 +17,7 @@
     "ios": "8.0"
   },
   "ios": {
-    "source_files": "**/*.swift"
+    "source_files": "Classes/**/*.swift"
   },
   "requires_arc": true
 }
