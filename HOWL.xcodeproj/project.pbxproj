@@ -146,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				65800F8A1C09D1BF000410CB /* AppDelegate.swift */,
-				65F33B871CD60D10001AB56A /* Main (iPad).storyboard */,
 				65F33B881CD60D10001AB56A /* Main (iPhone).storyboard */,
+				65F33B871CD60D10001AB56A /* Main (iPad).storyboard */,
 				65800F9F1C09D1BF000410CB /* View Controllers */,
 				65800F961C09D1BF000410CB /* Models */,
 				6500FD701C1C02E500C2254B /* Extensions */,
