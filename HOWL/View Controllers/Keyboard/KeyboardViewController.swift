@@ -26,7 +26,7 @@ class KeyboardViewController: UIViewController {
         if case .Phone = UIDevice.currentDevice().userInterfaceIdiom {
             return Keyboard(width: 4, height: 5, leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
         } else {
-            return Keyboard(width: 6, height: 5, leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
+            return Keyboard(width: 5, height: 5, leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
         }
     }()
     
