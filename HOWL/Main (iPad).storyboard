@@ -20,12 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
-                                <rect key="frame" x="0.0" y="0.0" width="511" height="306"/>
-                                <connections>
-                                    <segue destination="eQs-SH-hmG" kind="embed" id="A9P-yY-6A8"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-Me-B2D">
                                 <rect key="frame" x="513" y="308" width="511" height="460"/>
                                 <connections>
@@ -41,7 +35,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-ao-YKj">
                                 <rect key="frame" x="513" y="0.0" width="511" height="306"/>
                                 <connections>
-                                    <segue destination="vYm-n5-kCb" kind="embed" id="i2Y-6B-zmO"/>
+                                    <segue destination="vYm-n5-kCb" kind="embed" id="DiW-mG-EFx"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
+                                <rect key="frame" x="0.0" y="0.0" width="511" height="306"/>
+                                <connections>
+                                    <segue destination="eQs-SH-hmG" kind="embed" id="3EQ-gm-tdb"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -101,11 +101,11 @@
                                 <exclude reference="p5V-xP-noT"/>
                                 <exclude reference="qW8-Lh-gdP"/>
                                 <exclude reference="yGm-Sf-bAX"/>
+                                <exclude reference="CxC-nm-8dd"/>
                                 <exclude reference="8wC-fd-Wz1"/>
                                 <exclude reference="F4F-uH-Amh"/>
                                 <exclude reference="VEv-4Z-OT2"/>
                                 <exclude reference="qhz-tP-ydj"/>
-                                <exclude reference="CxC-nm-8dd"/>
                             </mask>
                         </variation>
                     </view>
@@ -298,10 +298,10 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Qna-mn-K4a"/>
                                         <exclude reference="GEy-29-uVj"/>
-                                        <exclude reference="aLR-ZC-Ele"/>
                                         <exclude reference="QT5-88-NrC"/>
+                                        <exclude reference="Qna-mn-K4a"/>
+                                        <exclude reference="aLR-ZC-Ele"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -343,7 +343,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="871.5" y="1512.5"/>
+            <point key="canvasLocation" x="856.5" y="1477"/>
         </scene>
         <!--Phonemeboard View Controller-->
         <scene sceneID="HIB-EV-2bC">
@@ -549,14 +549,14 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="IYm-FR-eBe"/>
-                                                <exclude reference="D0g-Tj-Euw"/>
                                                 <exclude reference="CoS-ik-aa5"/>
+                                                <exclude reference="D0g-Tj-Euw"/>
                                                 <exclude reference="Lt4-py-GfO"/>
                                                 <exclude reference="ZtI-T0-UcZ"/>
                                                 <exclude reference="rlV-PO-xOX"/>
+                                                <exclude reference="72L-Jl-2Jf"/>
                                                 <exclude reference="eV5-BB-gTI"/>
                                                 <exclude reference="i2e-OO-GcK"/>
-                                                <exclude reference="72L-Jl-2Jf"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -585,10 +585,10 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="t8g-TI-C6z"/>
+                                        <exclude reference="fF1-t1-Egq"/>
                                         <exclude reference="i5Q-jo-wzw"/>
                                         <exclude reference="swr-KG-Z9I"/>
-                                        <exclude reference="fF1-t1-Egq"/>
+                                        <exclude reference="t8g-TI-C6z"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -627,7 +627,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="273.5" y="1512.5"/>
+            <point key="canvasLocation" x="287.5" y="1477"/>
         </scene>
         <!--Vocoder View Controller-->
         <scene sceneID="ei3-Qx-PJu">
@@ -881,11 +881,11 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="qKZ-R1-oWG"/>
                                         <exclude reference="7fj-CE-8XL"/>
+                                        <exclude reference="qKZ-R1-oWG"/>
+                                        <exclude reference="GNm-Iz-AEB"/>
                                         <exclude reference="PVk-Nc-aca"/>
                                         <exclude reference="PvW-zE-wWz"/>
-                                        <exclude reference="GNm-Iz-AEB"/>
                                         <exclude reference="4eD-o2-rsl"/>
                                         <exclude reference="bYO-e2-iHm"/>
                                         <exclude reference="q5H-ok-o4d"/>
@@ -1007,9 +1007,9 @@
                                         <exclude reference="6co-y3-tO7"/>
                                         <exclude reference="m3K-5H-z1E"/>
                                         <exclude reference="zl5-0D-M0C"/>
+                                        <exclude reference="5KU-LS-7p5"/>
                                         <exclude reference="Y3E-mJ-G7M"/>
                                         <exclude reference="xuP-on-pQh"/>
-                                        <exclude reference="5KU-LS-7p5"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1051,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9k-Pt-L00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871.5" y="1036.5"/>
+            <point key="canvasLocation" x="287.5" y="1007"/>
         </scene>
         <!--Synthesizer View Controller-->
         <scene sceneID="riB-qA-nbp">
@@ -1304,14 +1304,14 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="wp5-8D-U8a"/>
                                         <exclude reference="lAn-kS-x1V"/>
+                                        <exclude reference="wp5-8D-U8a"/>
+                                        <exclude reference="Pid-4w-Nho"/>
                                         <exclude reference="TUz-oA-0aO"/>
                                         <exclude reference="YJi-ys-zht"/>
                                         <exclude reference="clQ-M0-xhm"/>
-                                        <exclude reference="Pid-4w-Nho"/>
-                                        <exclude reference="bbj-me-ECS"/>
                                         <exclude reference="H8w-9O-v3n"/>
+                                        <exclude reference="bbj-me-ECS"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1430,9 +1430,9 @@
                                     <mask key="constraints">
                                         <exclude reference="1Qw-Fy-AXg"/>
                                         <exclude reference="oAg-rG-dkm"/>
+                                        <exclude reference="77D-Jw-VoI"/>
                                         <exclude reference="W3Q-Qk-CjE"/>
                                         <exclude reference="vH2-e1-Lx8"/>
-                                        <exclude reference="77D-Jw-VoI"/>
                                         <exclude reference="4Hq-ga-1ov"/>
                                         <exclude reference="nZt-ER-WuR"/>
                                     </mask>
@@ -1467,9 +1467,9 @@
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="KMq-Q2-vTI"/>
                                 <exclude reference="do1-HY-90C"/>
                                 <exclude reference="hX1-O1-ZRR"/>
-                                <exclude reference="KMq-Q2-vTI"/>
                                 <exclude reference="4eh-6K-7dj"/>
                                 <exclude reference="9Mn-xn-ZsI"/>
                             </mask>
@@ -1484,7 +1484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3A-18-NFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.5" y="1036.5"/>
+            <point key="canvasLocation" x="856.5" y="1007"/>
         </scene>
     </scenes>
 </document>
