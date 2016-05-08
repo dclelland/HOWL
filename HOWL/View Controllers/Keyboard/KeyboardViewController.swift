@@ -22,7 +22,13 @@ class KeyboardViewController: UIViewController {
         didSet { holdButton?.selected = Settings.keyboardSustain.value }
     }
     
-    let keyboard = Keyboard(leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
+    let keyboard: Keyboard = {
+        if case .Phone = UIDevice.currentDevice().userInterfaceIdiom {
+            return Keyboard(width: 4, height: 5, leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
+        } else {
+            return Keyboard(width: 6, height: 5, leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
+        }
+    }()
     
     var notes = [UITouch: (key: Key, note: SynthesizerNote)]()
     

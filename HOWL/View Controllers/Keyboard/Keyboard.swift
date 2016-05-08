@@ -11,15 +11,17 @@ import Bezzy
 
 class Keyboard {
     
+    var width: Int
+    var height: Int
+    
     var leftInterval: Int
     var rightInterval: Int
     
-    var horizontalRadius: Int = 4
-    var verticalRadius: Int = 5
-    
     var centerPitch: Int = 48
     
-    init(leftInterval: Int, rightInterval: Int) {
+    init(width: Int, height: Int, leftInterval: Int, rightInterval: Int) {
+        self.width = width
+        self.height = height
         self.leftInterval = leftInterval
         self.rightInterval = rightInterval
     }
@@ -27,11 +29,11 @@ class Keyboard {
     // MARK: - Counts
     
     func numberOfRows() -> Int {
-        return verticalRadius * 2 + 1
+        return height * 2 + 1
     }
     
     func numberOfKeysInRow(row: Int) -> Int {
-        return rowIsOffset(row) ? horizontalRadius : horizontalRadius + 1
+        return rowIsOffset(row) ? width : height + 1
     }
     
     // MARK: - Keys
@@ -69,8 +71,8 @@ class Keyboard {
         let x = rowIsOffset(row) ? index * 2 + 1 : index * 2
         let y = row
         
-        let verticalOffset = verticalRadius - y
-        let horizontalOffset = horizontalRadius - x
+        let verticalOffset = height - y
+        let horizontalOffset = width - x
         
         let left = Float(verticalOffset + horizontalOffset) / 2
         let right = Float(verticalOffset - horizontalOffset) / 2
@@ -79,7 +81,7 @@ class Keyboard {
     }
     
     private func rowIsOffset(row: Int) -> Bool {
-        if horizontalRadius.parity == verticalRadius.parity {
+        if width.parity == height.parity {
             return row.isOdd
         } else {
             return row.isEven
@@ -95,8 +97,8 @@ class Keyboard {
     private func pathForCoordinates(coordinates: KeyCoordinates) -> UIBezierPath {
         let location = locationForCoordinates(coordinates)
         
-        let horizontalKeyRadius = 1.0 / (2.0 * CGFloat(horizontalRadius))
-        let verticalKeyRadius = 1.0 / (2.0 * CGFloat(verticalRadius))
+        let horizontalKeyRadius = 1.0 / (2.0 * CGFloat(width))
+        let verticalKeyRadius = 1.0 / (2.0 * CGFloat(height))
         
         return UIBezierPath.makePath { make in
             make.move(x: location.x, y: location.y - verticalKeyRadius)
@@ -108,8 +110,8 @@ class Keyboard {
     }
     
     private func locationForCoordinates(coordinates: KeyCoordinates) -> CGPoint {
-        let horizontalKeyRadius = 1.0 / CGFloat(horizontalRadius) / 2.0
-        let verticalKeyRadius = 1.0 / CGFloat(verticalRadius) / 2.0
+        let horizontalKeyRadius = 1.0 / CGFloat(width) / 2.0
+        let verticalKeyRadius = 1.0 / CGFloat(height) / 2.0
         
         let leftDifference = CGVector(dx: -horizontalKeyRadius * CGFloat(coordinates.left), dy: -verticalKeyRadius * CGFloat(coordinates.left))
         let rightDifference = CGVector(dx: horizontalKeyRadius * CGFloat(coordinates.right), dy: -verticalKeyRadius * CGFloat(coordinates.right))
