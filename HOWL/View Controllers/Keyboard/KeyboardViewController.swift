@@ -134,13 +134,13 @@ extension KeyboardViewController: UICollectionViewDataSource {
         let brightness = 1.0 - CGFloat(keyboard.centerPitch - key.pitch) / CGFloat(keyboard.centerPitch)
         
         if keyNotes.count > 0 {
-            return UIColor.HOWL.lightColor(withHue: hue, saturation: saturation, brightness: brightness)
+            return UIColor.protonome_lightColor(withHue: hue, saturation: saturation, brightness: brightness)
         }
         
         if mode == .ShowBackground {
-            return UIColor.HOWL.darkColor(withHue: hue, saturation: saturation, brightness: brightness)
+            return UIColor.protonome_darkColor(withHue: hue, saturation: saturation, brightness: brightness)
         } else {
-            return UIColor.HOWL.darkGreyColor()
+            return UIColor.protonome_darkGreyColor()
         }
     }
     

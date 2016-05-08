@@ -91,16 +91,16 @@ class PhonemeboardView: AKPlotView {
     private var backgroundPathColor: UIColor {
         switch state {
         case .Normal:
-            return UIColor.HOWL.darkGreyColor()
+            return UIColor.protonome_darkGreyColor()
         case .Highlighted:
-            return UIColor.HOWL.mediumColor(withHue: hue, saturation: saturation)
+            return UIColor.protonome_mediumColor(withHue: hue, saturation: saturation)
         case .Selected:
-            return UIColor.HOWL.darkColor(withHue: hue, saturation: saturation)
+            return UIColor.protonome_darkColor(withHue: hue, saturation: saturation)
         }
     }
     
     private var foregroundPathColor: UIColor {
-        return UIColor.HOWL.lightColor(withHue: hue, saturation: saturation)
+        return UIColor.protonome_lightColor(withHue: hue, saturation: saturation)
     }
     
 }
