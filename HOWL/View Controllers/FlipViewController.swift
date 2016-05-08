@@ -64,22 +64,16 @@ class FlipViewController: UIViewController {
     // MARK: - View controllers
     
     var frontViewController: UIViewController? {
-        if let frontViewControllerView = frontView?.subviews.first {
-            return childViewControllers.filter { $0.view == frontViewControllerView }.first
-        }
-        
-        return nil
+        return childViewControllers.filter { $0.view == frontView?.subviews.first }.first
     }
     
     var backViewController: UIViewController? {
-        if let backViewControllerView = backView?.subviews.first {
-            return childViewControllers.filter { $0.view == backViewControllerView }.first
-        }
-        
-        return nil
+        return childViewControllers.filter { $0.view == backView?.subviews.first }.first
     }
 
 }
+
+// MARK: - Reverse access
 
 extension UIViewController {
     

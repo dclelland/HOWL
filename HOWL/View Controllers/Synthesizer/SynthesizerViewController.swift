@@ -88,10 +88,8 @@ class SynthesizerViewController: UIViewController {
     
     // MARK: - Private getters
     
-    /* This is atrocious but whatever */
-    
     private var keyboardViewController: KeyboardViewController? {
-        return flipViewController?.howlViewController?.rightViewController?.frontViewController as? KeyboardViewController
+        return howlViewController?.keyboardViewController
     }
     
     private var keyboardViewControllerMode: KeyboardViewController.Mode {

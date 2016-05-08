@@ -112,6 +112,12 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="bottomLeftView" destination="SG5-bT-Rms" id="N2Q-nZ-83r"/>
+                        <outlet property="bottomRightView" destination="0ec-Me-B2D" id="zG9-lO-Ndi"/>
+                        <outlet property="topLeftView" destination="kQc-ji-xuA" id="Odh-Yr-naA"/>
+                        <outlet property="topRightView" destination="zJH-ao-YKj" id="xUE-EC-IQP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
