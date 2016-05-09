@@ -21,6 +21,9 @@
   },
   "requires_arc": true,
   "dependencies": {
+    "AudioKit": [
+      "~> 2.0"
+    ],
     "Bezzy": [
 
     ],

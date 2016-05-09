@@ -13,7 +13,7 @@
 		<key>000BB706E97D771D3DF4C854DAC2DF47</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -247,19 +247,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>02A49439AF931AC7C75807F123A5B793</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ProtonomeAudioKitControls-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>02CCA6B6241F9AA8374D3604F1A7C663</key>
 		<dict>
 			<key>fileRef</key>
@@ -370,7 +357,7 @@
 		<key>0443A70B9C0696C59121D80844DDC42C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BB190386F4760F3561E3B2D29BC74A41</string>
+			<string>BEB5F0C21219590AC74F2C5C5F8124B9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -558,7 +545,7 @@
 		<key>0684FF30F94EAF9E54359BBE457214BF</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>9A29848DCAE0112CA217A011648F100C</string>
+			<string>6C7A9C33AF085103A8608D7927545B95</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -782,7 +769,14 @@
 		<key>08171B747F7A5E744732A355C0DAE569</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0824991A4DE59679E2F16CD60A13554B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F3C1FBC228DE2437D5A4129FB53BBF7C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -935,6 +929,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>0A531A5D99B13DE9D2FEC42B5882C6EA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B9D262AF5C5E0690C93C23D7E37E30AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>0A84886F6B137EF3B1584E727AC3EA53</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -991,6 +992,13 @@
 				</array>
 			</dict>
 		</dict>
+		<key>0B0175408729FF567AFC0AE22CA815B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>14076E0D360EF89F8404275621C4A1D4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>0B10443B39B17DDD761F99C5A8F1E5FA</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1018,19 +1026,6 @@
 			<string>AKStereoSoundFileLooper.h</string>
 			<key>path</key>
 			<string>AudioKit/Operations/Signal Generators/Loopers/AKStereoSoundFileLooper.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B4C2DD8CCFB18175C092A4A18E6DCA2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ProtonomeAudioKitControls-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1461,19 +1456,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>122652C1F3C5574BA4A41E1A27F4B937</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Bezzy.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
 		<key>1227B61A9130992CCA5F46CEC811BE89</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -1608,6 +1590,39 @@
 				</array>
 			</dict>
 		</dict>
+		<key>14047345D7BF07FFB8BAEAF09CFF37D0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C2CA9C003254F48978D522F43C2D67CD</string>
+				<string>D54B05F16F71DBB6E853C963051B09DC</string>
+				<string>6C7A9C33AF085103A8608D7927545B95</string>
+				<string>F3C1FBC228DE2437D5A4129FB53BBF7C</string>
+				<string>C92A9B9EF24E63541AE4D5FF0BD21169</string>
+				<string>BEB5F0C21219590AC74F2C5C5F8124B9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../HOWL/Pods/Target Support Files/ProtonomeAudioKitControls</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>14076E0D360EF89F8404275621C4A1D4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DialControl.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>142A3EE0034DC1B269F6FA597432FA69</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1620,6 +1635,19 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>14B9DDD9C06111D09A6E334A607C9202</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Lerp.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>14BC737D5CB8C69C9F10B30F011652D7</key>
 		<dict>
@@ -1788,6 +1816,19 @@
 			<key>targetProxy</key>
 			<string>A969C99C391B517B214C08E01A67624B</string>
 		</dict>
+		<key>19A97BC3A537CCA11964ED9B4900E2D3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
 		<key>1A557DBD358CCB48D8347ECEF2461A05</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1824,10 +1865,30 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1AC6EAAC39648B6E3F9D7D24ECC4227E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1AFA1F04CD619E88D700E7EF191E4743</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1B0400C700B51E2D840A10E964B19B1D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2064,19 +2125,6 @@
 			<string>AKFMOscillatorInstrument.h</string>
 			<key>path</key>
 			<string>AudioKit/Utilities/Instruments/Synthesizers/AKFMOscillatorInstrument.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>22A7D6113C0A0CA88D557FE7284AB7F3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3619DAD392A6723269EE8F8F219050D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2378,13 +2426,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>285228271403D06F29316456E926D4AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A91CEA06DC9911C768A8836F3C426B31</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>287D087EBD18AD81DDA57C9EB53AA8A7</key>
 		<dict>
 			<key>children</key>
@@ -2603,6 +2644,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>2C79421D256357FA1C1BCCF14C6A9D4B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Degrad.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>2CA510F4CBBED508DB769A51E736AE14</key>
 		<dict>
 			<key>fileRef</key>
@@ -2772,22 +2826,6 @@
 			<string>AKSegmentArrayLoop.h</string>
 			<key>path</key>
 			<string>AudioKit/Operations/Signal Generators/Segment Arrays/AKSegmentArrayLoop.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F13FE534903743BDED3C2ACDDA4CA9D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4BF17C5086D7787BAB5BF73BDECA58EF</string>
-				<string>9FA8A88BE72CFB4D54319E6DF3BE7662</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3233,19 +3271,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3619DAD392A6723269EE8F8F219050D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
 		<key>362B6528CE017489371D924CBCFFC1B9</key>
 		<dict>
 			<key>fileRef</key>
@@ -3491,6 +3516,13 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>3B76F686CE491A09D283D9391D1C5012</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B3E7EF4A14693463B2C25F93A037CE89</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>3BC2F40133FB6C98E285BAC2686D8811</key>
 		<dict>
 			<key>fileRef</key>
@@ -3676,7 +3708,7 @@
 		<key>3E2202D16AEA957356527C40BB752832</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -3833,26 +3865,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>4130A491F1CA632945B85494D6CD789A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FA72ADF69C5D63B16B74C583979DC8FA</string>
-				<string>90236270786CA784C3564E3BD229C985</string>
-				<string>9A29848DCAE0112CA217A011648F100C</string>
-				<string>02A49439AF931AC7C75807F123A5B793</string>
-				<string>0B4C2DD8CCFB18175C092A4A18E6DCA2</string>
-				<string>BB190386F4760F3561E3B2D29BC74A41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../HOWL/Pods/Target Support Files/ProtonomeAudioKitControls</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>413E5CFF4D8C7D296E57EA8F1D1B7E67</key>
 		<dict>
 			<key>fileRef</key>
@@ -3866,19 +3878,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>4185930EF1A9004F8791D1EC171B61A9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SnapKit.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>42281D538534D6C1BAC38781C0858AE9</key>
 		<dict>
@@ -4255,6 +4254,21 @@
 			<string>Support Files</string>
 			<key>path</key>
 			<string>../Target Support Files/Degrad</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4954AA3737E7DED4F08820B0EC5F64A7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>691FA740A1DAEB42E56D70B73C347078</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Plots</string>
+			<key>path</key>
+			<string>Plots</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4849,21 +4863,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4BF17C5086D7787BAB5BF73BDECA58EF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A43A0C694868B997B73E2FCA8EE62391</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Categories</string>
-			<key>path</key>
-			<string>Categories</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>4C084623F1C5570A094929D9376E0B2D</key>
 		<dict>
 			<key>children</key>
@@ -4984,6 +4983,13 @@
 			<string>AudioKit/Platforms/Common/csound/sysdep.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DC71D73D4E41ECFF0190E5284E30351</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE9E78E714ECF1D430C0D3441AA2D613</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>4DE482480795F8963C60D9296B9D96A8</key>
 		<dict>
@@ -5197,6 +5203,24 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>5028C651A40239C67AD871B44AA96B6B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>63E5D2FE2BB56178A7B02ED800567722</string>
+				<string>9D30B2FB0064DF8EA629751833D9C3F9</string>
+				<string>BBD8AFE7B011F5B364353ECB0C2C91E8</string>
+				<string>1AC6EAAC39648B6E3F9D7D24ECC4227E</string>
+				<string>97EF91BA746DC02EE3BEE7EE50122430</string>
+				<string>4DC71D73D4E41ECFF0190E5284E30351</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>506EED99F7A0DD4267A1450A738DA4DD</key>
 		<dict>
 			<key>fileRef</key>
@@ -5375,13 +5399,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>53842FEF82B89D3F489D5E8A11A6D5CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>53CA9A277ED4EE1FC257E8E8BABFDD81</key>
 		<dict>
 			<key>fileRef</key>
@@ -5519,6 +5536,19 @@
 			<key>remoteInfo</key>
 			<string>MultitouchGestureRecognizer</string>
 		</dict>
+		<key>55CC4F3CF334DD2AB40CB66D01330D18</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AudioKitControl.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>55FBE2DCA61D5EFC39FA359294DC30D7</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -5531,13 +5561,6 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-		</dict>
-		<key>5605085108173479F5D3977240763636</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A43A0C694868B997B73E2FCA8EE62391</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>567F154FEFAA18FB04934B62E87801BA</key>
 		<dict>
@@ -5577,7 +5600,7 @@
 		<key>56F65F9831CCDBB26CA3A3C8F785451B</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>9A29848DCAE0112CA217A011648F100C</string>
+			<string>6C7A9C33AF085103A8608D7927545B95</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -5662,7 +5685,7 @@
 		<key>57E3D026F4F10A213303E1F511D42747</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -6142,13 +6165,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5FBF331C69B964174FF95A25619AFEB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D2C967838D1A42784A67C1109E832D44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>604DB3B4B39102362F336D364EDCD3EC</key>
 		<dict>
 			<key>fileRef</key>
@@ -6303,6 +6319,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>63E5D2FE2BB56178A7B02ED800567722</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9368BDF83B1AB8743DB16875523C4F0C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>63E8D1965507F875C2CD23D06C8F115B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -6373,13 +6396,6 @@
 			<string>AudioKit/Operations/Signal Generators/Physical Models/Waveguide/AKSimpleWaveGuideModel.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6577D1993816BF100CDB704761A99276</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EB4B72D70CD2FBF853A99AA6C3F4C677</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>6586FE85B730F380EBAB51C34C787D6B</key>
 		<dict>
@@ -6551,22 +6567,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>68894B08FB7247F0DC1B7EB940F7CB68</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2F13FE534903743BDED3C2ACDDA4CA9D</string>
-				<string>4130A491F1CA632945B85494D6CD789A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ProtonomeAudioKitControls</string>
-			<key>path</key>
-			<string>../../ProtonomeAudioKitControls</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>68A3FF44E8E66DD985358C7DDFCB6F51</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -6606,6 +6606,19 @@
 			<string>TPCircularBuffer.c</string>
 			<key>path</key>
 			<string>AudioKit/Utilities/Plots/EZAudio/TPCircularBuffer.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>691FA740A1DAEB42E56D70B73C347078</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AudioKitPlot.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -6824,6 +6837,19 @@
 			<string>RoundedButton.swift</string>
 			<key>path</key>
 			<string>Classes/RoundedButton.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6C7A9C33AF085103A8608D7927545B95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>ProtonomeAudioKitControls.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -7437,23 +7463,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>77A851C3D789BECF1A61888973D76752</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>122652C1F3C5574BA4A41E1A27F4B937</string>
-				<string>A91CEA06DC9911C768A8836F3C426B31</string>
-				<string>EB4B72D70CD2FBF853A99AA6C3F4C677</string>
-				<string>4185930EF1A9004F8791D1EC171B61A9</string>
-				<string>22A7D6113C0A0CA88D557FE7284AB7F3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>7841A851746B48718D1B0E40DEFB11E0</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -7767,21 +7776,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7C04E51EBED975D0FD182D53881FC09E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5FBF331C69B964174FF95A25619AFEB0</string>
-				<string>8F68CAAB7C4CF9AD46F90AEC9135D6DA</string>
-				<string>5605085108173479F5D3977240763636</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>7C4D7B286E16822F955D717B6AD84D3D</key>
 		<dict>
 			<key>fileRef</key>
@@ -7858,7 +7852,7 @@
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
 				<string>D8C1F66B5BA179151B65A2D7F6C9BDE0</string>
-				<string>77A851C3D789BECF1A61888973D76752</string>
+				<string>CBF696AD735CB445AA37B068D62E58CC</string>
 				<string>3018F2F05C23C57A23F30D4E8F150EFF</string>
 				<string>DB8A9D59F71122D862392C49F45124A5</string>
 				<string>B7B80995527643776607AFFA75B91E24</string>
@@ -7971,6 +7965,17 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>8120B2C903ED0B3BE082C29309199C3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AudioKit</string>
+			<key>target</key>
+			<string>0C4798DD7FEBB19BDBADFFBB2F4F8748</string>
+			<key>targetProxy</key>
+			<string>8EF89FAD77419488362CCF850509CCEB</string>
+		</dict>
 		<key>81A464E70CCA1BE0E40E12856C27B8B2</key>
 		<dict>
 			<key>fileRef</key>
@@ -7989,13 +7994,6 @@
 		<dict>
 			<key>fileRef</key>
 			<string>BF861EE62C84BE74A8ABEFDAF90A062B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>81E6D34814C660B524C1694BC40D50DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4185930EF1A9004F8791D1EC171B61A9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -8334,6 +8332,23 @@
 			<string>EZAudioUtilities.m</string>
 			<key>path</key>
 			<string>AudioKit/Utilities/Plots/EZAudio/EZAudioUtilities.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>887F6126A0AA62E58BC334CAA4D2A812</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A69BF7EF300AD538FA1D1526376804EF</string>
+				<string>BB9EEF00A2690B693FEC4E739AA5B346</string>
+				<string>4954AA3737E7DED4F08820B0EC5F64A7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -8681,6 +8696,25 @@
 				</array>
 			</dict>
 		</dict>
+		<key>8D3D6C800B913FA650755BC4052AEF81</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C3430F7574E47C5196462840B45C4BA5</string>
+				<string>B2CF6BBAB19301DC57BD921D88159013</string>
+				<string>0B0175408729FF567AFC0AE22CA815B4</string>
+				<string>3B76F686CE491A09D283D9391D1C5012</string>
+				<string>0824991A4DE59679E2F16CD60A13554B</string>
+				<string>0A531A5D99B13DE9D2FEC42B5882C6EA</string>
+				<string>C84712EDD07C7DB1A70E1DA2A9F921D0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>8D7A96005605E8D6E60785BDFA2E2407</key>
 		<dict>
 			<key>fileRef</key>
@@ -8716,6 +8750,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>8EF89FAD77419488362CCF850509CCEB</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0C4798DD7FEBB19BDBADFFBB2F4F8748</string>
+			<key>remoteInfo</key>
+			<string>AudioKit</string>
+		</dict>
 		<key>8F1E0F27472AAE73570E8DE260249DEF</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -8749,13 +8796,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8F68CAAB7C4CF9AD46F90AEC9135D6DA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>02A49439AF931AC7C75807F123A5B793</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>8F788AB93CAA05F95A37E0995D94A402</key>
 		<dict>
 			<key>fileRef</key>
@@ -8788,17 +8828,6 @@
 			<string>text.xcconfig</string>
 			<key>path</key>
 			<string>ProtonomeRoundedViews.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90236270786CA784C3564E3BD229C985</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ProtonomeAudioKitControls.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -8991,6 +9020,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>9368BDF83B1AB8743DB16875523C4F0C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>AudioKit.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>9398CC1BA8FE656415DA67C70AAD426C</key>
 		<dict>
@@ -9234,6 +9276,19 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>97000929C1C36D06628D9B1375BF51F2</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Bezzy.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>971D6454DA0ADA2DD77AC5C5AC287E32</key>
 		<dict>
 			<key>fileRef</key>
@@ -9265,6 +9320,13 @@
 		<dict>
 			<key>fileRef</key>
 			<string>58165046DE4735497B273E4F064BD4D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>97EF91BA746DC02EE3BEE7EE50122430</key>
+		<dict>
+			<key>fileRef</key>
+			<string>14B9DDD9C06111D09A6E334A607C9202</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -9374,19 +9436,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>9A29848DCAE0112CA217A011648F100C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>ProtonomeAudioKitControls.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9A67965D613F16CFC910F53B7E61003F</key>
 		<dict>
@@ -9589,6 +9638,13 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>9D30B2FB0064DF8EA629751833D9C3F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>97000929C1C36D06628D9B1375BF51F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>9DB05C7FCF32CDDEFD8FE3DB23797BA7</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9738,21 +9794,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>9FA8A88BE72CFB4D54319E6DF3BE7662</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D2C967838D1A42784A67C1109E832D44</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Views</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9FD92BAB943F80FB82B7FA0D790B7A38</key>
 		<dict>
@@ -9994,6 +10035,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>A376A24A45FA400349A3982D2CBF4D52</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>887F6126A0AA62E58BC334CAA4D2A812</string>
+				<string>14047345D7BF07FFB8BAEAF09CFF37D0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ProtonomeAudioKitControls</string>
+			<key>path</key>
+			<string>../../ProtonomeAudioKitControls</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>A4267B2EEC5182B94EB61D8088C620FC</key>
 		<dict>
 			<key>fileRef</key>
@@ -10007,19 +10064,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>A43A0C694868B997B73E2FCA8EE62391</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIColor+Protonome.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A46A7EB360D64B7C33D84F1125351187</key>
 		<dict>
@@ -10366,6 +10410,21 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>A69BF7EF300AD538FA1D1526376804EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EE46591457AEC45C982083F456BDEA6E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Categories</string>
+			<key>path</key>
+			<string>Categories</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>A6A944472A0FFDDC9A62BF0E57684095</key>
 		<dict>
 			<key>fileRef</key>
@@ -10633,19 +10692,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>A91CEA06DC9911C768A8836F3C426B31</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Degrad.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>A969C99C391B517B214C08E01A67624B</key>
 		<dict>
@@ -10954,7 +11000,7 @@
 		<key>AF3C61CDE56CE26A06DA3FFDC0757F93</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -11282,6 +11328,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>B2CF6BBAB19301DC57BD921D88159013</key>
+		<dict>
+			<key>fileRef</key>
+			<string>691FA740A1DAEB42E56D70B73C347078</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>B3116240A0D899A244EF14A6F0A6E163</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -11349,6 +11402,19 @@
 			<string>AKMonoFileInput.h</string>
 			<key>path</key>
 			<string>AudioKit/Operations/Signal Input and Output/AKMonoFileInput.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B3E7EF4A14693463B2C25F93A037CE89</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PickerControl.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -11501,7 +11567,7 @@
 		<key>B7ADCAA52D7C16CDEC9DF71D5CA7208E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -11701,6 +11767,19 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>B9D262AF5C5E0690C93C23D7E37E30AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SliderControl.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B9F7CD19B8186B6025EE487AC9D60655</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -11793,19 +11872,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BB190386F4760F3561E3B2D29BC74A41</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ProtonomeAudioKitControls-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>BB39A2F58D36B4B682AA89C0C6CDA5F4</key>
 		<dict>
 			<key>fileRef</key>
@@ -11865,10 +11931,35 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
+		<key>BB9EEF00A2690B693FEC4E739AA5B346</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>55CC4F3CF334DD2AB40CB66D01330D18</string>
+				<string>14076E0D360EF89F8404275621C4A1D4</string>
+				<string>B3E7EF4A14693463B2C25F93A037CE89</string>
+				<string>B9D262AF5C5E0690C93C23D7E37E30AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Controls</string>
+			<key>path</key>
+			<string>Controls</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>BBA2F89DFEE76F6CD53A1FBCE05E414F</key>
 		<dict>
 			<key>fileRef</key>
 			<string>9EA29FCA957B7DEBA40AECE479084300</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BBD8AFE7B011F5B364353ECB0C2C91E8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2C79421D256357FA1C1BCCF14C6A9D4B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -11990,6 +12081,32 @@
 			<string>soundio.h</string>
 			<key>path</key>
 			<string>AudioKit/Platforms/Common/csound/soundio.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE9E78E714ECF1D430C0D3441AA2D613</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SnapKit.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BEB5F0C21219590AC74F2C5C5F8124B9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ProtonomeAudioKitControls-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -12231,6 +12348,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>C2CA9C003254F48978D522F43C2D67CD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>C3335E506DFF1D9ED2289D0B1216381D</key>
 		<dict>
 			<key>fileRef</key>
@@ -12244,6 +12374,13 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>C3430F7574E47C5196462840B45C4BA5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>55CC4F3CF334DD2AB40CB66D01330D18</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>C3448FA57575C8973A041FDB20CAE404</key>
 		<dict>
@@ -12902,6 +13039,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>C84712EDD07C7DB1A70E1DA2A9F921D0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EE46591457AEC45C982083F456BDEA6E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>C89E0AEDE280E1949E669A7C798FC17D</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -12952,6 +13096,19 @@
 			<string>DC154EAC769015C4B8330AC0064961F9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>C92A9B9EF24E63541AE4D5FF0BD21169</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ProtonomeAudioKitControls-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C92EC375E030C336374C84C852A8C609</key>
 		<dict>
@@ -13161,6 +13318,24 @@
 			<string>28C613758B3EF968377FA456EF88DCE9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>CBF696AD735CB445AA37B068D62E58CC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9368BDF83B1AB8743DB16875523C4F0C</string>
+				<string>97000929C1C36D06628D9B1375BF51F2</string>
+				<string>2C79421D256357FA1C1BCCF14C6A9D4B</string>
+				<string>14B9DDD9C06111D09A6E334A607C9202</string>
+				<string>BE9E78E714ECF1D430C0D3441AA2D613</string>
+				<string>1AFA1F04CD619E88D700E7EF191E4743</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>CC28B02753864417D5F507304C934824</key>
 		<dict>
@@ -13577,19 +13752,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>D2C967838D1A42784A67C1109E832D44</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DialControl.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>D30190B49690D27F2CB322E3AEE85577</key>
 		<dict>
 			<key>fileRef</key>
@@ -13731,6 +13893,17 @@
 				</array>
 			</dict>
 		</dict>
+		<key>D54B05F16F71DBB6E853C963051B09DC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ProtonomeAudioKitControls.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>D563E82C3190C1CB9F657844331D0C7A</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -13795,23 +13968,6 @@
 			<string>AudioKit/Utilities/User Interface Elements/AKPropertyLabel.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D67C16BF791337BC28CBD9D870923BAC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E5C2A8576F573D30ADA786B14FBDA0C4</string>
-				<string>285228271403D06F29316456E926D4AF</string>
-				<string>53842FEF82B89D3F489D5E8A11A6D5CE</string>
-				<string>6577D1993816BF100CDB704761A99276</string>
-				<string>81E6D34814C660B524C1694BC40D50DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>D695B0EE78125C1FAA7A3B89A5B2E20C</key>
 		<dict>
@@ -13897,7 +14053,7 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>68894B08FB7247F0DC1B7EB940F7CB68</string>
+				<string>A376A24A45FA400349A3982D2CBF4D52</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -14111,7 +14267,7 @@
 		<key>DCF3D000A084F9BF7679A18944C5A457</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3619DAD392A6723269EE8F8F219050D3</string>
+			<string>19A97BC3A537CCA11964ED9B4900E2D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -14172,14 +14328,15 @@
 			<string>F7EE9BF4A61A4285A57E67E969C1F7B8</string>
 			<key>buildPhases</key>
 			<array>
-				<string>7C04E51EBED975D0FD182D53881FC09E</string>
-				<string>D67C16BF791337BC28CBD9D870923BAC</string>
+				<string>8D3D6C800B913FA650755BC4052AEF81</string>
+				<string>5028C651A40239C67AD871B44AA96B6B</string>
 				<string>A09579327F31875380C8BFFB6B5A86CD</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
 			<key>dependencies</key>
 			<array>
+				<string>8120B2C903ED0B3BE082C29309199C3A</string>
 				<string>4961C9B69D45583C5D9A2A695838DC8B</string>
 				<string>1FEC1897161FA79C090CE551D81C4FD8</string>
 				<string>13064BC9CA37E4A4D91043733E5A71F2</string>
@@ -14837,13 +14994,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>E5C2A8576F573D30ADA786B14FBDA0C4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>122652C1F3C5574BA4A41E1A27F4B937</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>E64874FE813FBFBBAEAFDB10ADB3E694</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -15274,19 +15424,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EB4B72D70CD2FBF853A99AA6C3F4C677</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Lerp.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
 		<key>EB4D942F6665CB84C85630C4DA92980C</key>
 		<dict>
 			<key>fileRef</key>
@@ -15478,6 +15615,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>EE46591457AEC45C982083F456BDEA6E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>UIColor+Protonome.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>EE7E9ACFAA62C8C33DA677D577257C9F</key>
 		<dict>
@@ -15902,6 +16052,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>F3C1FBC228DE2437D5A4129FB53BBF7C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ProtonomeAudioKitControls-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>F3D8F94644E3E65133EB8C994E5906B6</key>
 		<dict>
 			<key>fileRef</key>
@@ -16281,19 +16444,6 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>FA40828E398186F24FCAB1E1A8F763CB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FA72ADF69C5D63B16B74C583979DC8FA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
