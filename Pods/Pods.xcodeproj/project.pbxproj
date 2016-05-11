@@ -382,7 +382,7 @@
 		C1F960157F124B43860234B9BDE0176A /* AKInstrumentPropertyPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = A8736462FD00B69E5021B1E5BC2A25C5 /* AKInstrumentPropertyPlot.m */; };
 		C2276F5D1BEC06830816CC5BE1B8F499 /* AKEqualizerFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 283FB4C8A3B01060498BACC8456F1E05 /* AKEqualizerFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3335E506DFF1D9ED2289D0B1216381D /* AKPanner.h in Headers */ = {isa = PBXBuildFile; fileRef = A5CE84CD351C40F794E76C92BA2F1C58 /* AKPanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3430F7574E47C5196462840B45C4BA5 /* AudioKitControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4F3CF334DD2AB40CB66D01330D18 /* AudioKitControl.swift */; };
+		C3430F7574E47C5196462840B45C4BA5 /* ParameterControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4F3CF334DD2AB40CB66D01330D18 /* ParameterControl.swift */; };
 		C377C9E4C2B2736D0FC00F52A080D654 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = CA5D84C1B4AE302F86D6FD2B200A945B /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3DD7FC4818F0077244B0CFAC854474E /* AKSoundFontInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFC46745A579F5087E194E224FB089 /* AKSoundFontInstrument.m */; };
 		C3FEABDF3EB3BB9FB84EF9D265D218AE /* AKCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB269F2A79467733CB69634CB7C43CC /* AKCompressor.m */; };
@@ -785,7 +785,7 @@
 		54C918672A7719DD8C7FBD73A6F114FA /* AKSoundFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSoundFont.h; path = "AudioKit/Sound Fonts/AKSoundFont.h"; sourceTree = "<group>"; };
 		552A160F9D4C3797D2890F54CD6710FC /* AKFFTTableReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKFFTTableReader.m; path = AudioKit/Operations/FFT/AKFFTTableReader.m; sourceTree = "<group>"; };
 		552F0E1EA9BC79C5913778FA3E622FDE /* AKAudioRollingWaveformPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAudioRollingWaveformPlot.h; path = AudioKit/Utilities/Plots/AKAudioRollingWaveformPlot.h; sourceTree = "<group>"; };
-		55CC4F3CF334DD2AB40CB66D01330D18 /* AudioKitControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioKitControl.swift; sourceTree = "<group>"; };
+		55CC4F3CF334DD2AB40CB66D01330D18 /* ParameterControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ParameterControl.swift; sourceTree = "<group>"; };
 		570E45C3DB53C1FC6AC37D88B17E7A9F /* AKPitchShifter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKPitchShifter.m; path = "AudioKit/Operations/Signal Modifiers/Effects/AKPitchShifter.m"; sourceTree = "<group>"; };
 		58165046DE4735497B273E4F064BD4D9 /* AKPluckedString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKPluckedString.m; path = "AudioKit/Operations/Signal Generators/Physical Models/AKPluckedString.m"; sourceTree = "<group>"; };
 		582453EE3ABCCFDFDA20D76F86B0B2BD /* csound_standard_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = csound_standard_types.h; path = AudioKit/Platforms/Common/csound/csound_standard_types.h; sourceTree = "<group>"; };
@@ -1970,7 +1970,7 @@
 		BB9EEF00A2690B693FEC4E739AA5B346 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				55CC4F3CF334DD2AB40CB66D01330D18 /* AudioKitControl.swift */,
+				55CC4F3CF334DD2AB40CB66D01330D18 /* ParameterControl.swift */,
 				14076E0D360EF89F8404275621C4A1D4 /* DialControl.swift */,
 				B9D262AF5C5E0690C93C23D7E37E30AF /* SliderControl.swift */,
 				B3E7EF4A14693463B2C25F93A037CE89 /* PickerControl.swift */,
@@ -2581,7 +2581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3430F7574E47C5196462840B45C4BA5 /* AudioKitControl.swift in Sources */,
+				C3430F7574E47C5196462840B45C4BA5 /* ParameterControl.swift in Sources */,
 				B2CF6BBAB19301DC57BD921D88159013 /* AudioKitPlot.swift in Sources */,
 				0B0175408729FF567AFC0AE22CA815B4 /* DialControl.swift in Sources */,
 				3B76F686CE491A09D283D9391D1C5012 /* PickerControl.swift in Sources */,

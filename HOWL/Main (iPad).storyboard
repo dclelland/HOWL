@@ -818,10 +818,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="100"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="200"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
@@ -852,10 +852,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="100"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="200"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
@@ -939,10 +939,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="100"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
@@ -972,10 +972,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="100"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
@@ -1059,7 +1059,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGF-zN-2tt" customClass="AudioKitControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGF-zN-2tt" customClass="ParameterControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="123" height="103"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -1076,7 +1076,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ir1-xO-Shd" customClass="AudioKitControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ir1-xO-Shd" customClass="ParameterControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="124" height="103"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -1323,10 +1323,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="100"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
@@ -1357,10 +1357,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="Hz"/>
@@ -1466,10 +1466,10 @@
                                         <rect key="frame" x="2" y="2" width="123" height="103"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left Interval"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="-12"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1501,10 +1501,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="124" height="103"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMinimum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
                                                 <real key="value" value="-12"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMaximum">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Right Interval"/>
