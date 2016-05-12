@@ -13,8 +13,8 @@ struct Settings {
     static let keyboardSustain = Setting<Bool>(key: "keyboardSustain", defaultValue: false)
     static let phonemeboardSustain = Setting<Bool>(key: "phonemeboardSustain", defaultValue: false)
     
-    static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 100.0)
-    static let formantsFrequency = Setting<Float>(key: "formantsFrequency", defaultValue: 100.0)
+    static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 1.0)
+    static let formantsFrequency = Setting<Float>(key: "formantsFrequency", defaultValue: 1.0)
     
     static let effectsBitcrush = Setting<Float>(key: "effectsBitcrush", defaultValue: 0.0)
     static let effectsReverb = Setting<Float>(key: "effectsReverb", defaultValue: 0.0)

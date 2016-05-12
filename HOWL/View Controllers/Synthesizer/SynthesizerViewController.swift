@@ -45,7 +45,7 @@ class SynthesizerViewController: UIViewController {
     @IBAction func vibratoDepthDialControlValueChanged(dialControl: DialControl) {
         Settings.vibratoDepth.value = dialControl.value
         
-        Audio.synthesizer.vibratoDepth.value = dialControl.value / 100
+        Audio.synthesizer.vibratoDepth.value = dialControl.value
     }
     
     @IBAction func vibratoFrequencyDialControlValueChanged(dialControl: DialControl) {

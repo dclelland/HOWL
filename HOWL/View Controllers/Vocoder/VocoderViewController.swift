@@ -45,31 +45,31 @@ class VocoderViewController: UIViewController {
     @IBAction func formantsBandwidthDialControlValueChanged(dialControl: DialControl) {
         Settings.formantsBandwidth.value = dialControl.value
         
-        Audio.sopranoVocoder.bandwidth.value = dialControl.value / 100.0
-        Audio.altoVocoder.bandwidth.value = dialControl.value / 100.0
-        Audio.tenorVocoder.bandwidth.value = dialControl.value / 100.0
-        Audio.bassVocoder.bandwidth.value = dialControl.value / 100.0
+        Audio.sopranoVocoder.bandwidth.value = dialControl.value
+        Audio.altoVocoder.bandwidth.value = dialControl.value
+        Audio.tenorVocoder.bandwidth.value = dialControl.value
+        Audio.bassVocoder.bandwidth.value = dialControl.value
     }
     
     @IBAction func formantsFrequencyDialControlValueChanged(dialControl: DialControl) {
         Settings.formantsFrequency.value = dialControl.value
         
-        Audio.sopranoVocoder.frequency.value = dialControl.value / 100.0
-        Audio.altoVocoder.frequency.value = dialControl.value / 100.0
-        Audio.tenorVocoder.frequency.value = dialControl.value / 100.0
-        Audio.bassVocoder.frequency.value = dialControl.value / 100.0
+        Audio.sopranoVocoder.frequency.value = dialControl.value
+        Audio.altoVocoder.frequency.value = dialControl.value
+        Audio.tenorVocoder.frequency.value = dialControl.value
+        Audio.bassVocoder.frequency.value = dialControl.value
     }
     
     @IBAction func effectsBitcrushDialControlValueChanged(dialControl: DialControl) {
         Settings.effectsBitcrush.value = dialControl.value
         
-        Audio.master.bitcrushMix.value = dialControl.value / 100.0
+        Audio.master.bitcrushMix.value = dialControl.value
     }
     
     @IBAction func effectsReverbDialControlValueChanged(dialControl: DialControl) {
         Settings.effectsReverb.value = dialControl.value
         
-        Audio.master.reverbMix.value = dialControl.value / 100.0
+        Audio.master.reverbMix.value = dialControl.value
     }
     
 }

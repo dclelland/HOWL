@@ -816,19 +816,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="200"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="0"/>
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -837,8 +825,13 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -850,19 +843,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="200"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="0"/>
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -871,9 +852,14 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="formantsFrequencyDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="Tqm-G7-yOA"/>
@@ -939,18 +925,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
@@ -958,8 +932,13 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -972,18 +951,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -992,8 +959,13 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -1070,9 +1042,6 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                 <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -1323,18 +1292,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="%"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
@@ -1342,8 +1299,13 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -1357,18 +1319,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="valueSuffix" value="Hz"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
@@ -1376,9 +1326,14 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="vibratoFrequencyDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="qBm-Tx-Vws"/>
@@ -1466,20 +1421,6 @@
                                         <rect key="frame" x="2" y="2" width="123" height="103"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left Interval"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="-12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
@@ -1487,8 +1428,16 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="integer"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="integer"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="-12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -1501,21 +1450,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="124" height="103"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMin">
-                                                <real key="value" value="-12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valueMax">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Right Interval"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="valuePrecision">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleLogarithmic" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleStep" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
@@ -1523,9 +1461,14 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textHeight">
-                                                <real key="value" value="16"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="integer"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="-12"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="integer"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="keyboardRightIntervalDialControlTouchDown:" destination="vYm-n5-kCb" eventType="touchDown" id="Qa9-L8-Jph"/>

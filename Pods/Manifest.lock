@@ -11,7 +11,7 @@ PODS:
     - Lerp
     - SnapKit
   - ProtonomeRoundedViews (0.1.1)
-  - SnapKit (0.20.0)
+  - SnapKit (0.21.0)
 
 DEPENDENCIES:
   - AudioKit (~> 2.3)
@@ -33,6 +33,6 @@ SPEC CHECKSUMS:
   MultitouchGestureRecognizer: f20a1798f111cb8d87d392c55fd852663acd0f75
   ProtonomeAudioKitControls: f8e7d69389f24e588f40bc79eee15c46e408536c
   ProtonomeRoundedViews: cceec203fb0ebc909e295429209b15144ab2996d
-  SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
+  SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
 
 COCOAPODS: 0.39.0
