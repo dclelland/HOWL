@@ -8,10 +8,11 @@
 
 import UIKit
 import MultitouchGestureRecognizer
+import ProtonomeAudioKitControls
 
 class PhonemeboardViewController: UIViewController {
     
-    @IBOutlet weak var phonemeboardView: PhonemeboardView?
+    @IBOutlet weak var phonemeboardView: AudioPlot?
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
         didSet { multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value }
@@ -51,11 +52,11 @@ class PhonemeboardViewController: UIViewController {
         
         switch multitouchState {
         case .Ready:
-            phonemeboardView?.state = .Normal
+            phonemeboardView?.mode = .Normal
         case .Live:
-            phonemeboardView?.state = .Highlighted
+            phonemeboardView?.mode = .Highlighted
         case .Sustained:
-            phonemeboardView?.state = .Selected
+            phonemeboardView?.mode = .Selected
         }
         
         if let hue = hueForTouches(touches), let saturation = saturationForTouches(touches) {

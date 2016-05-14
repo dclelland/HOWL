@@ -342,7 +342,7 @@
 		ACFEEF26E657BEF97BB23FE7DA22A5B8 /* AKStereoConvolution.h in Headers */ = {isa = PBXBuildFile; fileRef = 280BFF47B415FE7512C4DD871FDCD821 /* AKStereoConvolution.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD21E20462C9A28EDAB15E0D1798BEFF /* AKMaskedFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7ED09323778D6F78F6BAB15983AB /* AKMaskedFFT.m */; };
 		AE0C0F819F441C11383C21BEB65FB04B /* AKCrossSynthesizedFFT.h in Headers */ = {isa = PBXBuildFile; fileRef = E1A074315A16834DDAE8EBB49ECA605B /* AKCrossSynthesizedFFT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE64D9A41F39F8BD2C8883A4ADABB487 /* AudioKitPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA9331D84B9178AF19C71004BB9CA8 /* AudioKitPlot.swift */; };
+		AE64D9A41F39F8BD2C8883A4ADABB487 /* AudioPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA9331D84B9178AF19C71004BB9CA8 /* AudioPlot.swift */; };
 		AE8D71F0CA791A3D16BBA8663BE789EA /* AKTrackedFrequency.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B4D28CD8846565EBED679A7C20A89E2 /* AKTrackedFrequency.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF28489F9B15C1C36186AC3947B12696 /* AKSoundFontInstrument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A11929E0FD2D369D0A855D419C249EA /* AKSoundFontInstrument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF3C61CDE56CE26A06DA3FFDC0757F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A97BC3A537CCA11964ED9B4900E2D3 /* Foundation.framework */; };
@@ -822,7 +822,7 @@
 		68E8368498C55178805D89CB95FE39EA /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = AudioKit/Utilities/Plots/EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
 		69384EE4EF46F4D122012BDC1C30A91B /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		697A36679E98F3389A73D5E7328F32CC /* AKMidiEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMidiEvent.h; path = "AudioKit/Core Classes/MIDI/AKMidiEvent.h"; sourceTree = "<group>"; };
-		69BA9331D84B9178AF19C71004BB9CA8 /* AudioKitPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioKitPlot.swift; sourceTree = "<group>"; };
+		69BA9331D84B9178AF19C71004BB9CA8 /* AudioPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioPlot.swift; sourceTree = "<group>"; };
 		6A4E617D31B44DC8D9A6149738C27031 /* AKParameterChangeLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKParameterChangeLog.m; path = "AudioKit/Operations/Signal Input and Output/AKParameterChangeLog.m"; sourceTree = "<group>"; };
 		6AEB8CE0EB5FBDE00247F7B7532879AC /* AKPhrase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKPhrase.h; path = AudioKit/Sequencing/AKPhrase.h; sourceTree = "<group>"; };
 		6B02631C518D10569A1ECC8E3A3A4173 /* AKNote.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKNote.m; path = AudioKit/Notes/AKNote.m; sourceTree = "<group>"; };
@@ -1958,7 +1958,7 @@
 		B3EACC63CCB34E8FD83505B7314C9375 /* Plots */ = {
 			isa = PBXGroup;
 			children = (
-				69BA9331D84B9178AF19C71004BB9CA8 /* AudioKitPlot.swift */,
+				69BA9331D84B9178AF19C71004BB9CA8 /* AudioPlot.swift */,
 			);
 			path = Plots;
 			sourceTree = "<group>";
@@ -2557,7 +2557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE64D9A41F39F8BD2C8883A4ADABB487 /* AudioKitPlot.swift in Sources */,
+				AE64D9A41F39F8BD2C8883A4ADABB487 /* AudioPlot.swift in Sources */,
 				4BB06CC65B8C7153BD7ACABAB8B1D394 /* DialControl.swift in Sources */,
 				67EA9AFD6BFEB1C68D93A9D92203B3AA /* ParameterControl.swift in Sources */,
 				D955DC64A7F7FDDF5AC7FB4BDEB0346A /* ParameterFormatter.swift in Sources */,

@@ -498,7 +498,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6a-Z9-DiM" customClass="RoundedView" customModule="ProtonomeRoundedViews">
                                 <rect key="frame" x="2" y="51" width="507" height="407"/>
                                 <subviews>
-                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdG-gs-Gc9" customClass="PhonemeboardView" customModule="HOWL" customModuleProvider="target">
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdG-gs-Gc9" customClass="AudioPlot" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="503" height="403"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-cF-7ht">
@@ -624,7 +624,7 @@
                     <connections>
                         <outlet property="holdButton" destination="NRe-jG-buE" id="zQh-mE-9Sw"/>
                         <outlet property="multitouchGestureRecognizer" destination="hpE-qS-8pV" id="hA6-ZW-Yad"/>
-                        <outlet property="phonemeboardView" destination="fdG-gs-Gc9" id="YfC-sg-agC"/>
+                        <outlet property="phonemeboardView" destination="fdG-gs-Gc9" id="xHo-0w-pcf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXM-Ja-vVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
