@@ -1166,11 +1166,14 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="SIN,TRI,SAW,SQR"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0,1,4,2"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="columns">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="rows">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gridRows">
                                                 <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gutter">
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
