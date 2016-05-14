@@ -792,11 +792,127 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mM-6z-CDX" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="65" y="2" width="60" height="104"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Test"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="duration"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Sn-QR-im0" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127" y="2" width="61" height="104"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Test"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="duration"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhF-oR-VP4" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="190" y="2" width="61" height="104"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Test"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="duration"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyN-7x-ffE" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="61" height="104"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Test"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="duration"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="VhF-oR-VP4" firstAttribute="leading" secondItem="4Sn-QR-im0" secondAttribute="trailing" constant="2" id="FYj-Pt-T3I"/>
+                                    <constraint firstItem="voo-DR-4sU" firstAttribute="top" secondItem="5mM-6z-CDX" secondAttribute="bottom" constant="2" id="GlK-Tv-0aJ"/>
                                     <constraint firstItem="voo-DR-4sU" firstAttribute="bottom" secondItem="aij-c2-eLj" secondAttribute="bottomMargin" id="LYq-VX-KIq"/>
+                                    <constraint firstItem="voo-DR-4sU" firstAttribute="top" secondItem="4Sn-QR-im0" secondAttribute="bottom" constant="2" id="Lse-FX-deh"/>
+                                    <constraint firstItem="5mM-6z-CDX" firstAttribute="width" secondItem="4Sn-QR-im0" secondAttribute="width" id="Mff-W2-nkZ"/>
+                                    <constraint firstItem="4Sn-QR-im0" firstAttribute="leading" secondItem="5mM-6z-CDX" secondAttribute="trailing" constant="2" id="P7h-d5-0tG"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="voo-DR-4sU" secondAttribute="trailing" id="RE4-VD-ggF"/>
+                                    <constraint firstItem="4Sn-QR-im0" firstAttribute="top" secondItem="aij-c2-eLj" secondAttribute="topMargin" id="YxD-KY-UUh"/>
+                                    <constraint firstItem="voo-DR-4sU" firstAttribute="top" secondItem="iyN-7x-ffE" secondAttribute="bottom" constant="2" id="Z22-Bu-lbM"/>
+                                    <constraint firstItem="5mM-6z-CDX" firstAttribute="top" secondItem="aij-c2-eLj" secondAttribute="topMargin" id="a9f-Iv-kCp"/>
                                     <constraint firstItem="voo-DR-4sU" firstAttribute="leading" secondItem="aij-c2-eLj" secondAttribute="leadingMargin" id="l9Q-Dm-eHs"/>
+                                    <constraint firstItem="iyN-7x-ffE" firstAttribute="top" secondItem="aij-c2-eLj" secondAttribute="topMargin" id="nug-dp-bRS"/>
+                                    <constraint firstItem="VhF-oR-VP4" firstAttribute="top" secondItem="aij-c2-eLj" secondAttribute="topMargin" id="qMW-7I-4kb"/>
+                                    <constraint firstItem="iyN-7x-ffE" firstAttribute="width" secondItem="5mM-6z-CDX" secondAttribute="width" id="qk0-NB-lIf"/>
+                                    <constraint firstItem="voo-DR-4sU" firstAttribute="top" secondItem="VhF-oR-VP4" secondAttribute="bottom" constant="2" id="qtJ-8n-MJK"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="VhF-oR-VP4" secondAttribute="trailing" id="rHU-7z-CDf"/>
+                                    <constraint firstItem="5mM-6z-CDX" firstAttribute="leading" secondItem="iyN-7x-ffE" secondAttribute="trailing" constant="2" id="rkJ-63-lep"/>
+                                    <constraint firstItem="4Sn-QR-im0" firstAttribute="width" secondItem="VhF-oR-VP4" secondAttribute="width" id="tCG-xg-bHu"/>
+                                    <constraint firstItem="iyN-7x-ffE" firstAttribute="leading" secondItem="aij-c2-eLj" secondAttribute="leadingMargin" id="zkk-fE-Fm1"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                 <userDefinedRuntimeAttributes>
@@ -1025,7 +1141,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMW-Rc-U2R" customClass="RoundedView" customModule="ProtonomeRoundedViews">
                                 <rect key="frame" x="2" y="179" width="253" height="125"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ST-oY-08g">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ST-oY-08g">
                                         <rect key="frame" x="2" y="107" width="249" height="16"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
