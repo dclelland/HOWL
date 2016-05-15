@@ -45,13 +45,13 @@ public class MultitouchGestureRecognizer: UIGestureRecognizer {
     /// The current gesture recognizer state, as it pertains to the `sustain` setting.
     public enum State {
         
-        /// The gesture recognizer is not tracking any touches.
+        /// All touches are ended, and none are being sustained.
         case Ready
         
-        /// The gesture recognizer is currently tracking one or more touches.
+        /// One more more touches are currently in progress.
         case Live
         
-        /// The gesture recognizer is not currently tracking any touches, but thanks to the `sustain` setting, it is retaining the last few touches in the `touches` collection.
+        /// All touches have ended, but one or more is being retained in the `touches` collection thanks to the `sustain` setting.
         case Sustained
     }
     
@@ -59,7 +59,7 @@ public class MultitouchGestureRecognizer: UIGestureRecognizer {
     public var multitouchState: State {
         if touches.count == 0 {
             return .Ready
-        } else if numberOfTouches() > 0 {
+        } else if touches.filter({ $0.phase != .Ended }).count > 0 {
             return .Live
         } else {
             return .Sustained

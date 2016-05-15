@@ -50,18 +50,12 @@ class PhonemeboardViewController: UIViewController {
             return
         }
         
-        switch multitouchState {
-        case .Ready:
-            phonemeboardView?.mode = .Normal
-        case .Live:
-            phonemeboardView?.mode = .Highlighted
-        case .Sustained:
-            phonemeboardView?.mode = .Selected
-        }
+        phonemeboardView?.highlighted = multitouchState == .Live
+        phonemeboardView?.selected = !touches.isEmpty
         
         if let hue = hueForTouches(touches), let saturation = saturationForTouches(touches) {
-            phonemeboardView?.hue = hue
-            phonemeboardView?.saturation = saturation
+            phonemeboardView?.colorHue = hue
+            phonemeboardView?.colorSaturation = saturation
         }
     }
     
