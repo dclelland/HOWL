@@ -809,9 +809,6 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="formantsBandwidthDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="7hC-dX-A7r"/>
-                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-UR-sD9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="124" height="104"/>
@@ -836,9 +833,6 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="formantsFrequencyDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="Tqm-G7-yOA"/>
-                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g21-wL-QPF">
                                         <rect key="frame" x="2" y="108" width="249" height="16"/>
@@ -1027,9 +1021,6 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="effectsBitcrushDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="9aW-dk-yHu"/>
-                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-wJ-05G" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="61" height="103"/>
@@ -1141,9 +1132,6 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="effectsReverbDialControlValueChanged:" destination="eQs-SH-hmG" eventType="valueChanged" id="eMg-Mg-tWt"/>
-                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-8s-SBM" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="60" height="103"/>
@@ -1307,6 +1295,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="effectsBitcrushDialControl" destination="bwf-a9-TCN" id="muG-mj-DSg"/>
                         <outlet property="effectsReverbDialControl" destination="LtI-zn-1d9" id="rmg-1H-1Nl"/>
                         <outlet property="formantsBandwidthDialControl" destination="mpM-fX-G4z" id="ZdE-E4-JVd"/>
                         <outlet property="formantsFrequencyDialControl" destination="lrZ-UR-sD9" id="4SS-ng-VeG"/>
@@ -1486,12 +1475,6 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="keyboardLeftIntervalDialControlTouchDown:" destination="vYm-n5-kCb" eventType="touchDown" id="M2w-tC-34W"/>
-                                            <action selector="keyboardLeftIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpOutside" id="Flk-5P-fag"/>
-                                            <action selector="keyboardLeftIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpInside" id="mNt-Og-DrI"/>
-                                            <action selector="keyboardLeftIntervalDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="Eeb-1j-XHk"/>
-                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="124" height="104"/>
@@ -1516,12 +1499,6 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="integer"/>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="keyboardRightIntervalDialControlTouchDown:" destination="vYm-n5-kCb" eventType="touchDown" id="Qa9-L8-Jph"/>
-                                            <action selector="keyboardRightIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpInside" id="O3l-2N-Eq8"/>
-                                            <action selector="keyboardRightIntervalDialControlTouchUp:" destination="vYm-n5-kCb" eventType="touchUpOutside" id="k11-Ua-aa1"/>
-                                            <action selector="keyboardRightIntervalDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="cxF-C0-ne8"/>
-                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyP-Ts-70K">
                                         <rect key="frame" x="2" y="108" width="249" height="16"/>
@@ -1739,9 +1716,6 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="vibratoDepthDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="8vS-0w-8mO"/>
-                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-mM-wVh" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="190" y="2" width="61" height="103"/>
@@ -1766,9 +1740,6 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="vibratoFrequencyDialControlValueChanged:" destination="vYm-n5-kCb" eventType="valueChanged" id="qBm-Tx-Vws"/>
-                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-b8-vzk">
                                         <rect key="frame" x="2" y="107" width="249" height="16"/>

@@ -12,19 +12,49 @@ import ProtonomeAudioKitControls
 class VocoderViewController: UIViewController {
     
     @IBOutlet weak var formantsBandwidthDialControl: DialControl? {
-        didSet { formantsBandwidthDialControl?.value = Settings.formantsBandwidth.value }
+        didSet {
+            formantsBandwidthDialControl?.value = Settings.formantsBandwidth.value
+            formantsBandwidthDialControl?.onChangeValue = { value in
+                Audio.sopranoVocoder.bandwidth.value = value
+                Audio.altoVocoder.bandwidth.value = value
+                Audio.tenorVocoder.bandwidth.value = value
+                Audio.bassVocoder.bandwidth.value = value
+                Settings.formantsBandwidth.value = value
+            }
+        }
     }
     
     @IBOutlet weak var formantsFrequencyDialControl: DialControl? {
-        didSet { formantsFrequencyDialControl?.value = Settings.formantsFrequency.value }
+        didSet {
+            formantsFrequencyDialControl?.value = Settings.formantsFrequency.value
+            formantsFrequencyDialControl?.onChangeValue = { value in
+                Audio.sopranoVocoder.frequency.value = value
+                Audio.altoVocoder.frequency.value = value
+                Audio.tenorVocoder.frequency.value = value
+                Audio.bassVocoder.frequency.value = value
+                Settings.formantsFrequency.value = value
+            }
+        }
     }
     
     @IBOutlet weak var effectsBitcrushDialControl: DialControl? {
-        didSet { effectsBitcrushDialControl?.value = Settings.effectsBitcrush.value }
+        didSet {
+            effectsBitcrushDialControl?.value = Settings.effectsBitcrush.value
+            effectsBitcrushDialControl?.onChangeValue = { value in
+                Audio.master.bitcrushMix.value = value
+                Settings.effectsBitcrush.value = value
+            }
+        }
     }
     
     @IBOutlet weak var effectsReverbDialControl: DialControl? {
-        didSet { effectsReverbDialControl?.value = Settings.effectsReverb.value }
+        didSet {
+            effectsReverbDialControl?.value = Settings.effectsReverb.value
+            effectsReverbDialControl?.onChangeValue = { value in
+                Audio.master.reverbMix.value = value
+                Settings.effectsReverb.value = value
+            }
+        }
     }
     
     // MARK: - Interface events
@@ -38,38 +68,6 @@ class VocoderViewController: UIViewController {
         formantsFrequencyDialControl?.value = Settings.formantsFrequency.defaultValue
         effectsBitcrushDialControl?.value = Settings.effectsBitcrush.defaultValue
         effectsReverbDialControl?.value = Settings.effectsReverb.defaultValue
-    }
-    
-    // MARK: - Dial control events
-    
-    @IBAction func formantsBandwidthDialControlValueChanged(dialControl: DialControl) {
-        Settings.formantsBandwidth.value = dialControl.value
-        
-        Audio.sopranoVocoder.bandwidth.value = dialControl.value
-        Audio.altoVocoder.bandwidth.value = dialControl.value
-        Audio.tenorVocoder.bandwidth.value = dialControl.value
-        Audio.bassVocoder.bandwidth.value = dialControl.value
-    }
-    
-    @IBAction func formantsFrequencyDialControlValueChanged(dialControl: DialControl) {
-        Settings.formantsFrequency.value = dialControl.value
-        
-        Audio.sopranoVocoder.frequency.value = dialControl.value
-        Audio.altoVocoder.frequency.value = dialControl.value
-        Audio.tenorVocoder.frequency.value = dialControl.value
-        Audio.bassVocoder.frequency.value = dialControl.value
-    }
-    
-    @IBAction func effectsBitcrushDialControlValueChanged(dialControl: DialControl) {
-        Settings.effectsBitcrush.value = dialControl.value
-        
-        Audio.master.bitcrushMix.value = dialControl.value
-    }
-    
-    @IBAction func effectsReverbDialControlValueChanged(dialControl: DialControl) {
-        Settings.effectsReverb.value = dialControl.value
-        
-        Audio.master.reverbMix.value = dialControl.value
     }
     
 }
