@@ -11,57 +11,57 @@ import ProtonomeAudioKitControls
 
 class SynthesizerViewController: UIViewController {
     
-    @IBOutlet weak var vibratoDepthDialControl: DialControl? {
+    @IBOutlet weak var vibratoDepthControl: AudioControl? {
         didSet {
-            vibratoDepthDialControl?.value = Settings.vibratoDepth.value
-            vibratoDepthDialControl?.onChangeValue = { value in
+            vibratoDepthControl?.value = Settings.vibratoDepth.value
+            vibratoDepthControl?.onChangeValue = { value in
                 Audio.synthesizer.vibratoDepth.value = value
                 Settings.vibratoDepth.value = value
             }
         }
     }
     
-    @IBOutlet weak var vibratoFrequencyDialControl: DialControl? {
+    @IBOutlet weak var vibratoFrequencyControl: AudioControl? {
         didSet {
-            vibratoFrequencyDialControl?.value = Settings.vibratoFrequency.value
-            vibratoFrequencyDialControl?.onChangeValue = { value in
+            vibratoFrequencyControl?.value = Settings.vibratoFrequency.value
+            vibratoFrequencyControl?.onChangeValue = { value in
                 Audio.synthesizer.vibratoFrequency.value = value
                 Settings.vibratoFrequency.value = value
             }
         }
     }
     
-    @IBOutlet weak var keyboardLeftIntervalDialControl: DialControl? {
+    @IBOutlet weak var keyboardLeftIntervalControl: AudioControl? {
         didSet {
-            keyboardLeftIntervalDialControl?.value = Float(Settings.keyboardLeftInterval.value)
-            keyboardLeftIntervalDialControl?.onChangeValue = { value in
+            keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.value)
+            keyboardLeftIntervalControl?.onChangeValue = { value in
                 self.keyboardViewController?.keyboard.leftInterval = Int(value)
                 self.keyboardViewController?.refreshNotes()
                 self.keyboardViewController?.refreshView()
                 Settings.keyboardLeftInterval.value = Int(value)
             }
-            keyboardLeftIntervalDialControl?.onTouchDown = {
+            keyboardLeftIntervalControl?.onTouchDown = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
-            keyboardLeftIntervalDialControl?.onTouchUp = {
+            keyboardLeftIntervalControl?.onTouchUp = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
         }
     }
     
-    @IBOutlet weak var keyboardRightIntervalDialControl: DialControl? {
+    @IBOutlet weak var keyboardRightIntervalControl: AudioControl? {
         didSet {
-            keyboardRightIntervalDialControl?.value = Float(Settings.keyboardRightInterval.value)
-            keyboardLeftIntervalDialControl?.onChangeValue = { value in
+            keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.value)
+            keyboardLeftIntervalControl?.onChangeValue = { value in
                 self.keyboardViewController?.keyboard.rightInterval = Int(value)
                 self.keyboardViewController?.refreshNotes()
                 self.keyboardViewController?.refreshView()
                 Settings.keyboardRightInterval.value = Int(value)
             }
-            keyboardLeftIntervalDialControl?.onTouchDown = {
+            keyboardLeftIntervalControl?.onTouchDown = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
-            keyboardLeftIntervalDialControl?.onTouchUp = {
+            keyboardLeftIntervalControl?.onTouchUp = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
         }
@@ -74,10 +74,10 @@ class SynthesizerViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: UIButton) {
-        vibratoDepthDialControl?.value = Settings.vibratoDepth.defaultValue
-        vibratoFrequencyDialControl?.value = Settings.vibratoFrequency.defaultValue
-        keyboardLeftIntervalDialControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
-        keyboardRightIntervalDialControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
+        vibratoDepthControl?.value = Settings.vibratoDepth.defaultValue
+        vibratoFrequencyControl?.value = Settings.vibratoFrequency.defaultValue
+        keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
+        keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
     }
     
     // MARK: - Private getters
@@ -91,7 +91,7 @@ class SynthesizerViewController: UIViewController {
     }
     
     private var keyboardViewControllerMode: KeyboardViewController.Mode {
-        if keyboardLeftIntervalDialControl?.selected == true || keyboardRightIntervalDialControl?.selected == true {
+        if keyboardLeftIntervalControl?.selected == true || keyboardRightIntervalControl?.selected == true {
             return .ShowBackground
         }
         

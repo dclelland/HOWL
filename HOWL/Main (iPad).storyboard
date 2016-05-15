@@ -1295,10 +1295,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="effectsBitcrushDialControl" destination="bwf-a9-TCN" id="muG-mj-DSg"/>
-                        <outlet property="effectsReverbDialControl" destination="LtI-zn-1d9" id="rmg-1H-1Nl"/>
-                        <outlet property="formantsBandwidthDialControl" destination="mpM-fX-G4z" id="ZdE-E4-JVd"/>
-                        <outlet property="formantsFrequencyDialControl" destination="lrZ-UR-sD9" id="4SS-ng-VeG"/>
+                        <outlet property="effectsBitcrushControl" destination="bwf-a9-TCN" id="lJz-lK-RLS"/>
+                        <outlet property="effectsReverbControl" destination="LtI-zn-1d9" id="tGY-8e-6Xz"/>
+                        <outlet property="formantsBandwidthControl" destination="mpM-fX-G4z" id="E7H-p7-KiN"/>
+                        <outlet property="formantsFrequencyControl" destination="lrZ-UR-sD9" id="Bjf-9h-EDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9k-Pt-L00" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2085,10 +2085,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="keyboardLeftIntervalDialControl" destination="8cB-QC-O8r" id="J7K-f6-HzC"/>
-                        <outlet property="keyboardRightIntervalDialControl" destination="VrU-cW-RTC" id="1n4-AT-4GN"/>
-                        <outlet property="vibratoDepthDialControl" destination="Xwl-vX-nTp" id="dWH-RP-6at"/>
-                        <outlet property="vibratoFrequencyDialControl" destination="fCE-mM-wVh" id="Mci-c4-UnS"/>
+                        <outlet property="keyboardLeftIntervalControl" destination="8cB-QC-O8r" id="IvJ-VE-FTO"/>
+                        <outlet property="keyboardRightIntervalControl" destination="VrU-cW-RTC" id="6RR-NL-fOt"/>
+                        <outlet property="vibratoDepthControl" destination="Xwl-vX-nTp" id="Bej-Md-2Cd"/>
+                        <outlet property="vibratoFrequencyControl" destination="fCE-mM-wVh" id="1Wi-Zy-0mm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3A-18-NFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
