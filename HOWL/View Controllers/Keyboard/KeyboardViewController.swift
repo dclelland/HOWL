@@ -146,7 +146,7 @@ extension KeyboardViewController: UICollectionViewDataSource {
         if mode == .ShowBackground {
             return UIColor.protonome_darkColor(withHue: hue, saturation: saturation, brightness: brightness)
         } else {
-            return UIColor.protonome_darkGreyColor()
+            return UIColor.protonome_darkGrayColor()
         }
     }
     
