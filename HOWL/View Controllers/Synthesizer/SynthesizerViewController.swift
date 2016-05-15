@@ -51,16 +51,16 @@ class SynthesizerViewController: UIViewController {
     
     @IBOutlet weak var keyboardRightIntervalControl: AudioControl? {
         didSet {
-            keyboardLeftIntervalControl?.onChangeValue = { value in
+            keyboardRightIntervalControl?.onChangeValue = { value in
                 self.keyboardViewController?.keyboard.rightInterval = Int(value)
                 self.keyboardViewController?.refreshNotes()
                 self.keyboardViewController?.refreshView()
                 Settings.keyboardRightInterval.value = Int(value)
             }
-            keyboardLeftIntervalControl?.onTouchDown = {
+            keyboardRightIntervalControl?.onTouchDown = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
-            keyboardLeftIntervalControl?.onTouchUp = {
+            keyboardRightIntervalControl?.onTouchUp = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
             keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.value)
