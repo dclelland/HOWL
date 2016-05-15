@@ -13,7 +13,6 @@ class VocoderViewController: UIViewController {
     
     @IBOutlet weak var formantsBandwidthControl: AudioControl? {
         didSet {
-            formantsBandwidthControl?.value = Settings.formantsBandwidth.value
             formantsBandwidthControl?.onChangeValue = { value in
                 Audio.sopranoVocoder.bandwidth.value = value
                 Audio.altoVocoder.bandwidth.value = value
@@ -21,12 +20,12 @@ class VocoderViewController: UIViewController {
                 Audio.bassVocoder.bandwidth.value = value
                 Settings.formantsBandwidth.value = value
             }
+            formantsBandwidthControl?.value = Settings.formantsBandwidth.value
         }
     }
     
     @IBOutlet weak var formantsFrequencyControl: AudioControl? {
         didSet {
-            formantsFrequencyControl?.value = Settings.formantsFrequency.value
             formantsFrequencyControl?.onChangeValue = { value in
                 Audio.sopranoVocoder.frequency.value = value
                 Audio.altoVocoder.frequency.value = value
@@ -34,26 +33,27 @@ class VocoderViewController: UIViewController {
                 Audio.bassVocoder.frequency.value = value
                 Settings.formantsFrequency.value = value
             }
+            formantsFrequencyControl?.value = Settings.formantsFrequency.value
         }
     }
     
     @IBOutlet weak var effectsBitcrushControl: AudioControl? {
         didSet {
-            effectsBitcrushControl?.value = Settings.effectsBitcrush.value
             effectsBitcrushControl?.onChangeValue = { value in
                 Audio.master.bitcrushMix.value = value
                 Settings.effectsBitcrush.value = value
             }
+            effectsBitcrushControl?.value = Settings.effectsBitcrush.value
         }
     }
     
     @IBOutlet weak var effectsReverbControl: AudioControl? {
         didSet {
-            effectsReverbControl?.value = Settings.effectsReverb.value
             effectsReverbControl?.onChangeValue = { value in
                 Audio.master.reverbMix.value = value
                 Settings.effectsReverb.value = value
             }
+            effectsReverbControl?.value = Settings.effectsReverb.value
         }
     }
     
