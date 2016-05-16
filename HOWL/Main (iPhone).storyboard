@@ -1183,10 +1183,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="effectsBitcrushControl" destination="5wm-hF-13a" id="53n-zS-PAg"/>
-                        <outlet property="effectsReverbControl" destination="woz-pj-zhQ" id="ozk-qJ-8o0"/>
+                        <outlet property="bitcrushMixControl" destination="5wm-hF-13a" id="k7X-np-ReP"/>
                         <outlet property="formantsBandwidthControl" destination="D4I-ss-N7k" id="x80-hN-lUC"/>
                         <outlet property="formantsFrequencyControl" destination="6md-Za-K4d" id="xsK-Ta-gtf"/>
+                        <outlet property="reverbMixControl" destination="woz-pj-zhQ" id="L6M-j5-4RI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
