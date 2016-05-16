@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioKit
 
 struct Settings {
     
@@ -19,8 +20,13 @@ struct Settings {
     static let effectsBitcrush = Setting<Float>(key: "effectsBitcrush", defaultValue: 0.0)
     static let effectsReverb = Setting<Float>(key: "effectsReverb", defaultValue: 0.0)
     
+    static let vibratoWaveform = Setting<Float>(key: "vibratoWaveform", defaultValue: AKLowFrequencyOscillator.waveformTypeForSine().value)
     static let vibratoDepth = Setting<Float>(key: "vibratoDepth", defaultValue: 0.0)
     static let vibratoFrequency = Setting<Float>(key: "vibratoFrequency", defaultValue: 0.0)
+    
+    static let tremoloWaveform = Setting<Float>(key: "tremoloWaveform", defaultValue: AKLowFrequencyOscillator.waveformTypeForSine().value)
+    static let tremoloDepth = Setting<Float>(key: "tremoloDepth", defaultValue: 0.0)
+    static let tremoloFrequency = Setting<Float>(key: "tremoloFrequency", defaultValue: 0.0)
     
     static let envelopeAttack = Setting<Float>(key: "envelopeAttack", defaultValue: 0.002)
     static let envelopeDecay = Setting<Float>(key: "envelopeDecay", defaultValue: 0.002)

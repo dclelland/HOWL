@@ -87,6 +87,16 @@ class SynthesizerViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var vibratoWaveformControl: AudioControl? {
+        didSet {
+            vibratoWaveformControl?.onChangeValue = { value in
+                Audio.synthesizer.vibratoWaveform.value = value
+                Settings.vibratoWaveform.value = value
+            }
+            vibratoWaveformControl?.value = Settings.vibratoWaveform.value
+        }
+    }
+    
     @IBOutlet weak var vibratoDepthControl: AudioControl? {
         didSet {
             vibratoDepthControl?.onChangeValue = { value in
@@ -107,6 +117,36 @@ class SynthesizerViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var tremoloWaveformControl: AudioControl? {
+        didSet {
+            tremoloWaveformControl?.onChangeValue = { value in
+                Audio.synthesizer.tremoloWaveform.value = value
+                Settings.tremoloWaveform.value = value
+            }
+            tremoloWaveformControl?.value = Settings.tremoloWaveform.value
+        }
+    }
+    
+    @IBOutlet weak var tremoloDepthControl: AudioControl? {
+        didSet {
+            tremoloDepthControl?.onChangeValue = { value in
+                Audio.synthesizer.tremoloDepth.value = value
+                Settings.tremoloDepth.value = value
+            }
+            tremoloDepthControl?.value = Settings.tremoloDepth.value
+        }
+    }
+    
+    @IBOutlet weak var tremoloFrequencyControl: AudioControl? {
+        didSet {
+            tremoloFrequencyControl?.onChangeValue = { value in
+                Audio.synthesizer.tremoloFrequency.value = value
+                Settings.tremoloFrequency.value = value
+            }
+            tremoloFrequencyControl?.value = Settings.tremoloFrequency.value
+        }
+    }
+    
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: UIButton) {
@@ -116,12 +156,19 @@ class SynthesizerViewController: UIViewController {
     @IBAction func resetButtonTapped(button: UIButton) {
         keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
         keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
+        
         envelopeAttackControl?.value = Settings.envelopeAttack.defaultValue
         envelopeDecayControl?.value = Settings.envelopeDecay.defaultValue
         envelopeSustainControl?.value = Settings.envelopeSustain.defaultValue
         envelopeReleaseControl?.value = Settings.envelopeRelease.defaultValue
+        
+        vibratoWaveformControl?.value = Settings.vibratoWaveform.defaultValue
         vibratoDepthControl?.value = Settings.vibratoDepth.defaultValue
         vibratoFrequencyControl?.value = Settings.vibratoFrequency.defaultValue
+        
+        tremoloWaveformControl?.value = Settings.tremoloWaveform.defaultValue
+        tremoloDepthControl?.value = Settings.tremoloDepth.defaultValue
+        tremoloFrequencyControl?.value = Settings.tremoloFrequency.defaultValue
     }
     
     // MARK: - Private getters

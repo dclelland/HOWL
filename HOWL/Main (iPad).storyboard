@@ -1922,7 +1922,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0,1,4,2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0,1,5,2"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="SIN,TRI,SAW,SQR"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
                                                 <integer key="value" value="2"/>
@@ -2099,8 +2099,12 @@
                         <outlet property="envelopeSustainControl" destination="yze-Sh-bGC" id="bj6-Ok-JSn"/>
                         <outlet property="keyboardLeftIntervalControl" destination="8cB-QC-O8r" id="IvJ-VE-FTO"/>
                         <outlet property="keyboardRightIntervalControl" destination="VrU-cW-RTC" id="6RR-NL-fOt"/>
+                        <outlet property="tremoloDepthControl" destination="1Mn-mM-A0Z" id="Cj3-vm-cDP"/>
+                        <outlet property="tremoloFrequencyControl" destination="Hcz-wY-Bce" id="DpJ-cw-haY"/>
+                        <outlet property="tremoloWaveformControl" destination="R6s-Tc-XJX" id="cI1-J4-Bq2"/>
                         <outlet property="vibratoDepthControl" destination="Xwl-vX-nTp" id="Bej-Md-2Cd"/>
                         <outlet property="vibratoFrequencyControl" destination="fCE-mM-wVh" id="1Wi-Zy-0mm"/>
+                        <outlet property="vibratoWaveformControl" destination="Wrh-rL-tu2" id="c60-hj-lKj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3A-18-NFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
