@@ -22,6 +22,11 @@ struct Settings {
     static let vibratoDepth = Setting<Float>(key: "vibratoDepth", defaultValue: 0.0)
     static let vibratoFrequency = Setting<Float>(key: "vibratoFrequency", defaultValue: 0.0)
     
+    static let envelopeAttack = Setting<Float>(key: "envelopeAttack", defaultValue: 0.002)
+    static let envelopeDecay = Setting<Float>(key: "envelopeDecay", defaultValue: 0.002)
+    static let envelopeSustain = Setting<Float>(key: "envelopeSustain", defaultValue: 1.0)
+    static let envelopeRelease = Setting<Float>(key: "envelopeRelease", defaultValue: 0.002)
+    
     static let keyboardLeftInterval = Setting<Int>(key: "keyboardLeftInterval", defaultValue: 4)
     static let keyboardRightInterval = Setting<Int>(key: "keyboardRightInterval", defaultValue: 7)
 

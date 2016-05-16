@@ -233,6 +233,18 @@ import SnapKit
         return label
     }()
     
+    // MARK: - Initialization
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupActions()
+    }
+    
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        setupActions()
+    }
+    
     // MARK: - Overrides
     
     override public var selected: Bool {
@@ -251,15 +263,6 @@ import SnapKit
         super.prepareForInterfaceBuilder()
         
         setNeedsUpdateConstraints()
-    }
-    
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-        
-        addTarget(self, action: #selector(didChangeValue), forControlEvents: .ValueChanged)
-        addTarget(self, action: #selector(didTouchDown), forControlEvents: .TouchDown)
-        addTarget(self, action: #selector(didTouchUp), forControlEvents: .TouchUpInside)
-        addTarget(self, action: #selector(didTouchUp), forControlEvents: .TouchUpOutside)
     }
     
     override public func layoutSubviews() {
@@ -295,6 +298,13 @@ import SnapKit
     }
     
     // MARK: - Actions
+    
+    private func setupActions() {
+        addTarget(self, action: #selector(didChangeValue), forControlEvents: .ValueChanged)
+        addTarget(self, action: #selector(didTouchDown), forControlEvents: .TouchDown)
+        addTarget(self, action: #selector(didTouchUp), forControlEvents: .TouchUpInside)
+        addTarget(self, action: #selector(didTouchUp), forControlEvents: .TouchUpOutside)
+    }
     
     /// A callback block, called when a `.ValueChanged` control event fires, i.e. when `value` is set.
     public var onChangeValue: ((value: Float) -> Void)?

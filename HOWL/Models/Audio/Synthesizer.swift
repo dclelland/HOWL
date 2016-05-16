@@ -15,6 +15,11 @@ class Synthesizer: AKInstrument {
     var vibratoDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var vibratoFrequency = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
     
+    var envelopeAttack = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    var envelopeDecay = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    var envelopeSustain = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 1.0)
+    var envelopeRelease = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    
     var output = AKAudio.globalParameter()
     
     override init() {
@@ -23,13 +28,18 @@ class Synthesizer: AKInstrument {
         addProperty(vibratoDepth)
         addProperty(vibratoFrequency)
         
+        addProperty(envelopeAttack)
+        addProperty(envelopeDecay)
+        addProperty(envelopeSustain)
+        addProperty(envelopeRelease)
+        
         let note = SynthesizerNote()
         
-        let envelope = AKADSREnvelope(
-            attackDuration: 0.01.ak,
-            decayDuration: 0.01.ak,
-            sustainLevel: 1.0.ak,
-            releaseDuration: 0.01.ak,
+        let envelope = AKLinearADSREnvelope(
+            attackDuration: note.envelopeAttack,
+            decayDuration: note.envelopeDecay,
+            sustainLevel: note.envelopeSustain,
+            releaseDuration: note.envelopeRelease,
             delay: 0.0.ak
         )
         
@@ -48,6 +58,18 @@ class Synthesizer: AKInstrument {
         )
         
         assignOutput(output, to: oscillator)
+    }
+    
+    // MARK: - Note creation
+    
+    func note(withFrequency frequency: Float) -> SynthesizerNote {
+        return SynthesizerNote(
+            frequency: frequency,
+            envelopeAttack: envelopeAttack.value,
+            envelopeDecay: envelopeDecay.value,
+            envelopeSustain: envelopeSustain.value,
+            envelopeRelease: envelopeRelease.value
+        )
     }
     
 }

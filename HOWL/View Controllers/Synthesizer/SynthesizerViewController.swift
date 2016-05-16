@@ -11,26 +11,6 @@ import ProtonomeAudioKitControls
 
 class SynthesizerViewController: UIViewController {
     
-    @IBOutlet weak var vibratoDepthControl: AudioControl? {
-        didSet {
-            vibratoDepthControl?.onChangeValue = { value in
-                Audio.synthesizer.vibratoDepth.value = value
-                Settings.vibratoDepth.value = value
-            }
-            vibratoDepthControl?.value = Settings.vibratoDepth.value
-        }
-    }
-    
-    @IBOutlet weak var vibratoFrequencyControl: AudioControl? {
-        didSet {
-            vibratoFrequencyControl?.onChangeValue = { value in
-                Audio.synthesizer.vibratoFrequency.value = value
-                Settings.vibratoFrequency.value = value
-            }
-            vibratoFrequencyControl?.value = Settings.vibratoFrequency.value
-        }
-    }
-    
     @IBOutlet weak var keyboardLeftIntervalControl: AudioControl? {
         didSet {
             keyboardLeftIntervalControl?.onChangeValue = { value in
@@ -67,6 +47,66 @@ class SynthesizerViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var envelopeAttackControl: AudioControl? {
+        didSet {
+            envelopeAttackControl?.onChangeValue = { value in
+                Audio.synthesizer.envelopeAttack.value = value
+                Settings.envelopeAttack.value = value
+            }
+            envelopeAttackControl?.value = Settings.envelopeAttack.value
+        }
+    }
+    
+    @IBOutlet weak var envelopeDecayControl: AudioControl? {
+        didSet {
+            envelopeDecayControl?.onChangeValue = { value in
+                Audio.synthesizer.envelopeDecay.value = value
+                Settings.envelopeDecay.value = value
+            }
+            envelopeDecayControl?.value = Settings.envelopeDecay.value
+        }
+    }
+    
+    @IBOutlet weak var envelopeSustainControl: AudioControl? {
+        didSet {
+            envelopeSustainControl?.onChangeValue = { value in
+                Audio.synthesizer.envelopeSustain.value = value
+                Settings.envelopeSustain.value = value
+            }
+            envelopeSustainControl?.value = Settings.envelopeSustain.value
+        }
+    }
+    
+    @IBOutlet weak var envelopeReleaseControl: AudioControl? {
+        didSet {
+            envelopeReleaseControl?.onChangeValue = { value in
+                Audio.synthesizer.envelopeRelease.value = value
+                Settings.envelopeRelease.value = value
+            }
+            envelopeReleaseControl?.value = Settings.envelopeRelease.value
+        }
+    }
+    
+    @IBOutlet weak var vibratoDepthControl: AudioControl? {
+        didSet {
+            vibratoDepthControl?.onChangeValue = { value in
+                Audio.synthesizer.vibratoDepth.value = value
+                Settings.vibratoDepth.value = value
+            }
+            vibratoDepthControl?.value = Settings.vibratoDepth.value
+        }
+    }
+    
+    @IBOutlet weak var vibratoFrequencyControl: AudioControl? {
+        didSet {
+            vibratoFrequencyControl?.onChangeValue = { value in
+                Audio.synthesizer.vibratoFrequency.value = value
+                Settings.vibratoFrequency.value = value
+            }
+            vibratoFrequencyControl?.value = Settings.vibratoFrequency.value
+        }
+    }
+    
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: UIButton) {
@@ -74,10 +114,14 @@ class SynthesizerViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: UIButton) {
-        vibratoDepthControl?.value = Settings.vibratoDepth.defaultValue
-        vibratoFrequencyControl?.value = Settings.vibratoFrequency.defaultValue
         keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
         keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
+        envelopeAttackControl?.value = Settings.envelopeAttack.defaultValue
+        envelopeDecayControl?.value = Settings.envelopeDecay.defaultValue
+        envelopeSustainControl?.value = Settings.envelopeSustain.defaultValue
+        envelopeReleaseControl?.value = Settings.envelopeRelease.defaultValue
+        vibratoDepthControl?.value = Settings.vibratoDepth.defaultValue
+        vibratoFrequencyControl?.value = Settings.vibratoFrequency.defaultValue
     }
     
     // MARK: - Private getters

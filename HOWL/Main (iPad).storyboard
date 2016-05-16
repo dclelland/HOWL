@@ -2093,6 +2093,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="envelopeAttackControl" destination="CMg-Jb-Sua" id="hjO-eV-Rwh"/>
+                        <outlet property="envelopeDecayControl" destination="LZC-4K-1LE" id="E91-da-r0f"/>
+                        <outlet property="envelopeReleaseControl" destination="a5e-Cw-P8X" id="KGk-yj-Z2f"/>
+                        <outlet property="envelopeSustainControl" destination="yze-Sh-bGC" id="bj6-Ok-JSn"/>
                         <outlet property="keyboardLeftIntervalControl" destination="8cB-QC-O8r" id="IvJ-VE-FTO"/>
                         <outlet property="keyboardRightIntervalControl" destination="VrU-cW-RTC" id="6RR-NL-fOt"/>
                         <outlet property="vibratoDepthControl" destination="Xwl-vX-nTp" id="Bej-Md-2Cd"/>

@@ -13,20 +13,36 @@ class SynthesizerNote: AKNote {
     var frequency = AKNoteProperty()
     var amplitude = AKNoteProperty(minimum: 0.0, maximum: 1.0)
     
+    var envelopeAttack = AKNoteProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    var envelopeDecay = AKNoteProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    var envelopeSustain = AKNoteProperty(value: 1.0, minimum: 0.0, maximum: 1.0)
+    var envelopeRelease = AKNoteProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    
     override init() {
         super.init()
         addProperty(self.frequency)
         addProperty(self.amplitude)
+        
+        addProperty(self.envelopeAttack)
+        addProperty(self.envelopeDecay)
+        addProperty(self.envelopeSustain)
+        addProperty(self.envelopeRelease)
     }
     
-    convenience init(frequency: Float) {
-        self.init(frequency: frequency, amplitude: 1.0)
-    }
-    
-    convenience init(frequency: Float, amplitude: Float) {
+    convenience init(frequency: Float,
+                     amplitude: Float = 1.0,
+                     envelopeAttack: Float = 0.002,
+                     envelopeDecay: Float = 0.002,
+                     envelopeSustain: Float = 1.0,
+                     envelopeRelease: Float = 0.002) {
         self.init()
         self.frequency.value = frequency
         self.amplitude.value = amplitude
+
+        self.envelopeAttack.value = envelopeAttack
+        self.envelopeDecay.value = envelopeDecay
+        self.envelopeSustain.value = envelopeSustain
+        self.envelopeRelease.value = envelopeRelease
     }
     
 }
