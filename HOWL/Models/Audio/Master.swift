@@ -13,8 +13,8 @@ class Master: AKInstrument {
     var amplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     
     var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var bitcrushDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 24.0)
-    var bitcrushRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 16000.0)
+    var bitcrushDepth = AKInstrumentProperty(value: 2.0, minimum: 2.0, maximum: 24.0)
+    var bitcrushRate = AKInstrumentProperty(value: 1000.0, minimum: 1000.0, maximum: 16000.0)
     
     var reverbMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var reverbFeedback = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
@@ -44,15 +44,9 @@ class Master: AKInstrument {
         
         let bitcrush = AKDecimator(
             input: balance,
-            bitDepth: 24.ak,
-            sampleRate: 4000.ak
+            bitDepth: bitcrushDepth,
+            sampleRate: bitcrushRate
         )
-        
-//        let bitcrush = AKDecimator(
-//            input: balance,
-//            bitDepth: bitcrushDepth,
-//            sampleRate: bitcrushRate
-//        )
         
         let bitcrushOutput = AKMix(
             input1: balance,

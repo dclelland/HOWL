@@ -1042,17 +1042,12 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="integer"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
-                                                <real key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="integer"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="2,4,8,12,16,20,24"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-V9-p8W" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
@@ -1072,7 +1067,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="1000"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="1000,2000,4000,8000,16000"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="1000,2000,4000,8000,16000,24000"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
