@@ -17,8 +17,13 @@ struct Settings {
     static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 1.0)
     static let formantsFrequency = Setting<Float>(key: "formantsFrequency", defaultValue: 1.0)
     
-    static let effectsBitcrush = Setting<Float>(key: "effectsBitcrush", defaultValue: 0.0)
-    static let effectsReverb = Setting<Float>(key: "effectsReverb", defaultValue: 0.0)
+    static let bitcrushMix = Setting<Float>(key: "bitcrushMix", defaultValue: 0.0)
+    static let bitcrushDepth = Setting<Float>(key: "bitcrushDepth", defaultValue: 24.0)
+    static let bitcrushRate = Setting<Float>(key: "bitcrushRate", defaultValue: 4000.0)
+    
+    static let reverbMix = Setting<Float>(key: "reverbMix", defaultValue: 0.0)
+    static let reverbFeedback = Setting<Float>(key: "reverbFeedback", defaultValue: 0.0)
+    static let reverbCutoff = Setting<Float>(key: "reverbCutoff", defaultValue: 0.0)
     
     static let vibratoWaveform = Setting<Float>(key: "vibratoWaveform", defaultValue: AKLowFrequencyOscillator.waveformTypeForSine().value)
     static let vibratoDepth = Setting<Float>(key: "vibratoDepth", defaultValue: 0.0)

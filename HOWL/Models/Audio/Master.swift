@@ -13,7 +13,12 @@ class Master: AKInstrument {
     var amplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     
     var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var bitcrushDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 24.0)
+    var bitcrushRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 16000.0)
+    
     var reverbMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var reverbFeedback = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var reverbCutoff = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 16000.0)
     
     init(withInput input: AKAudio, voices: [AKAudio]) {
         super.init()
@@ -21,6 +26,11 @@ class Master: AKInstrument {
         addProperty(amplitude)
         
         addProperty(bitcrushMix)
+        addProperty(bitcrushDepth)
+        addProperty(bitcrushRate)
+        
+        addProperty(reverbMix)
+        addProperty(reverbMix)
         addProperty(reverbMix)
         
         let sum = AKSum()
@@ -38,6 +48,12 @@ class Master: AKInstrument {
             sampleRate: 4000.ak
         )
         
+//        let bitcrush = AKDecimator(
+//            input: balance,
+//            bitDepth: bitcrushDepth,
+//            sampleRate: bitcrushRate
+//        )
+        
         let bitcrushOutput = AKMix(
             input1: balance,
             input2: bitcrush,
@@ -46,8 +62,8 @@ class Master: AKInstrument {
         
         let reverb = AKReverb(
             input: bitcrushOutput,
-            feedback: 0.75.ak,
-            cutoffFrequency: 16000.ak
+            feedback: reverbFeedback,
+            cutoffFrequency: reverbCutoff
         )
         
         let reverbLeftOutput = AKMix(

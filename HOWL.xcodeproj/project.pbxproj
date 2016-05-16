@@ -190,10 +190,10 @@
 			children = (
 				6500FD6C1C1C022900C2254B /* HowlViewController.swift */,
 				657F0D131C0EFA72004B17EF /* FlipViewController.swift */,
+				657F0D0B1C0D94F3004B17EF /* Vocoder */,
 				65800FA61C09D1BF000410CB /* Phonemeboard */,
 				657F0D091C0D94F3004B17EF /* Synthesizer */,
 				65800FA01C09D1BF000410CB /* Keyboard */,
-				657F0D0B1C0D94F3004B17EF /* Vocoder */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
