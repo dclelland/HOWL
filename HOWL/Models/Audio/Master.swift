@@ -14,7 +14,7 @@ class Master: AKInstrument {
     
     var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var bitcrushDepth = AKInstrumentProperty(value: 8.0, minimum: 8.0, maximum: 24.0)
-    var bitcrushRate = AKInstrumentProperty(value: 8000.0, minimum: 8000.0, maximum: 24000.0)
+    var bitcrushRate = AKInstrumentProperty(value: 4000.0, minimum: 4000.0, maximum: 32000.0)
     
     var reverbMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var reverbFeedback = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
@@ -39,7 +39,7 @@ class Master: AKInstrument {
         
         let preBitcrush = AKBalance(
             input: sum,
-            comparatorAudioSource: input * amplitude * 0.125.ak
+            comparatorAudioSource: input
         )
         
         let bitcrush = AKDecimator(
@@ -77,7 +77,10 @@ class Master: AKInstrument {
             balance: reverbMix
         )
         
-        let output = AKStereoAudio(leftAudio: reverbLeftOutput, rightAudio: reverbRightOutput)
+        let output = AKStereoAudio(
+            leftAudio: reverbLeftOutput * amplitude,
+            rightAudio: reverbRightOutput * amplitude
+        )
         
         connect(sum)
         
@@ -95,7 +98,7 @@ class Master: AKInstrument {
     }
     
     func unmute() {
-        amplitude.value = 1.0
+        amplitude.value = 0.125
     }
     
 }

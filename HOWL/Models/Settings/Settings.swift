@@ -19,7 +19,7 @@ struct Settings {
     
     static let bitcrushMix = Setting<Float>(key: "bitcrushMix", defaultValue: 0.0)
     static let bitcrushDepth = Setting<Float>(key: "bitcrushDepth", defaultValue: 8.0)
-    static let bitcrushRate = Setting<Float>(key: "bitcrushRate", defaultValue: 8000.0)
+    static let bitcrushRate = Setting<Float>(key: "bitcrushRate", defaultValue: 4000.0)
     
     static let reverbMix = Setting<Float>(key: "reverbMix", defaultValue: 0.0)
     static let reverbFeedback = Setting<Float>(key: "reverbFeedback", defaultValue: 0.0)

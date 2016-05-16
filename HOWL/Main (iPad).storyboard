@@ -1067,7 +1067,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="4000"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="8000,12000,16000,20000,24000"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="4000,8000,12000,16000,20000,24000,28000,32000"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
