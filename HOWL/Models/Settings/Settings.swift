@@ -14,8 +14,12 @@ struct Settings {
     static let keyboardSustain = Setting<Bool>(key: "keyboardSustain", defaultValue: false)
     static let phonemeboardSustain = Setting<Bool>(key: "phonemeboardSustain", defaultValue: false)
     
-    static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 1.0)
     static let formantsFrequency = Setting<Float>(key: "formantsFrequency", defaultValue: 1.0)
+    static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 1.0)
+    
+    static let lfoFrequency = Setting<Float>(key: "lfoFrequency", defaultValue: 0.0)
+    static let lfoVerticalAmplitude = Setting<Float>(key: "lfoVerticalAmplitude", defaultValue: 0.0)
+    static let lfoHorizontalAmplitude = Setting<Float>(key: "lfoHorizontalAmplitude", defaultValue: 0.0)
     
     static let bitcrushMix = Setting<Float>(key: "bitcrushMix", defaultValue: 0.0)
     static let bitcrushDepth = Setting<Float>(key: "bitcrushDepth", defaultValue: 8.0)

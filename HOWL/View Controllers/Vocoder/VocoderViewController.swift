@@ -11,6 +11,19 @@ import ProtonomeAudioKitControls
 
 class VocoderViewController: UIViewController {
     
+    @IBOutlet weak var formantsFrequencyControl: AudioControl? {
+        didSet {
+            formantsFrequencyControl?.onChangeValue = { value in
+                Audio.sopranoVocoder.frequency.value = value
+                Audio.altoVocoder.frequency.value = value
+                Audio.tenorVocoder.frequency.value = value
+                Audio.bassVocoder.frequency.value = value
+                Settings.formantsFrequency.value = value
+            }
+            formantsFrequencyControl?.value = Settings.formantsFrequency.value
+        }
+    }
+    
     @IBOutlet weak var formantsBandwidthControl: AudioControl? {
         didSet {
             formantsBandwidthControl?.onChangeValue = { value in
@@ -24,16 +37,30 @@ class VocoderViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var formantsFrequencyControl: AudioControl? {
+    @IBOutlet weak var lfoFrequencyControl: AudioControl? {
         didSet {
-            formantsFrequencyControl?.onChangeValue = { value in
-                Audio.sopranoVocoder.frequency.value = value
-                Audio.altoVocoder.frequency.value = value
-                Audio.tenorVocoder.frequency.value = value
-                Audio.bassVocoder.frequency.value = value
-                Settings.formantsFrequency.value = value
+            lfoFrequencyControl?.onChangeValue = { value in
+                Settings.lfoFrequency.value = value
             }
-            formantsFrequencyControl?.value = Settings.formantsFrequency.value
+            lfoFrequencyControl?.value = Settings.lfoFrequency.value
+        }
+    }
+    
+    @IBOutlet weak var lfoVerticalAmplitudeControl: AudioControl? {
+        didSet {
+            lfoVerticalAmplitudeControl?.onChangeValue = { value in
+                Settings.lfoVerticalAmplitude.value = value
+            }
+            lfoVerticalAmplitudeControl?.value = Settings.lfoVerticalAmplitude.value
+        }
+    }
+    
+    @IBOutlet weak var lfoHorizontalAmplitudeControl: AudioControl? {
+        didSet {
+            lfoHorizontalAmplitudeControl?.onChangeValue = { value in
+                Settings.lfoHorizontalAmplitude.value = value
+            }
+            lfoHorizontalAmplitudeControl?.value = Settings.lfoHorizontalAmplitude.value
         }
     }
     
@@ -104,8 +131,12 @@ class VocoderViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: UIButton) {
-        formantsBandwidthControl?.value = Settings.formantsBandwidth.defaultValue
         formantsFrequencyControl?.value = Settings.formantsFrequency.defaultValue
+        formantsBandwidthControl?.value = Settings.formantsBandwidth.defaultValue
+        
+        lfoFrequencyControl?.value = Settings.lfoFrequency.defaultValue
+        lfoVerticalAmplitudeControl?.value = Settings.lfoVerticalAmplitude.defaultValue
+        lfoHorizontalAmplitudeControl?.value = Settings.lfoHorizontalAmplitude.defaultValue
         
         bitcrushMixControl?.value = Settings.bitcrushMix.defaultValue
         bitcrushDepthControl?.value = Settings.bitcrushDepth.defaultValue
