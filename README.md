@@ -27,6 +27,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Audiobus
     - Passthrough
 - Logarithmic scale should support negative numbers
+- Fix vocoder click
 
 ### Wishlist
 
