@@ -26,6 +26,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Cram everything into the iPhone version somehow
 - Audiobus
     - Passthrough
+- Logarithmic scale should support negative numbers
 
 ### Wishlist
 
