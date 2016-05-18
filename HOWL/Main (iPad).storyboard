@@ -930,7 +930,7 @@
                                         <rect key="frame" x="189" y="2" width="60.5" height="104"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="L/R"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Y"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -1316,8 +1316,8 @@
                         <outlet property="formantsBandwidthControl" destination="lrZ-UR-sD9" id="7Kt-Dl-ByP"/>
                         <outlet property="formantsFrequencyControl" destination="mpM-fX-G4z" id="czi-ET-3wJ"/>
                         <outlet property="lfoFrequencyControl" destination="JQg-an-eLH" id="QC1-Cf-4NB"/>
-                        <outlet property="lfoHorizontalAmplitudeControl" destination="Txz-rM-YWf" id="Tpl-d9-H28"/>
-                        <outlet property="lfoVerticalAmplitudeControl" destination="D2t-4v-UjE" id="O4D-3x-aKM"/>
+                        <outlet property="lfoXAmplitudeControl" destination="D2t-4v-UjE" id="2de-CV-zwf"/>
+                        <outlet property="lfoYAmplitudeControl" destination="Txz-rM-YWf" id="LeI-HE-Ylh"/>
                         <outlet property="reverbCutoffControl" destination="S9v-d7-FiP" id="dvx-5G-5N9"/>
                         <outlet property="reverbFeedbackControl" destination="fQx-8s-SBM" id="WgL-XX-vzw"/>
                         <outlet property="reverbMixControl" destination="LtI-zn-1d9" id="SgI-1h-kDO"/>
