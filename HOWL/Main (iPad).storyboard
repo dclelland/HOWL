@@ -955,7 +955,7 @@
                                         <rect key="frame" x="127" y="2" width="60.5" height="104"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="U/D"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="X"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>

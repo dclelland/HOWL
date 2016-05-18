@@ -18,8 +18,8 @@ struct Settings {
     static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 1.0)
     
     static let lfoFrequency = Setting<Float>(key: "lfoFrequency", defaultValue: 0.0)
-    static let lfoVerticalAmplitude = Setting<Float>(key: "lfoVerticalAmplitude", defaultValue: 0.0)
-    static let lfoHorizontalAmplitude = Setting<Float>(key: "lfoHorizontalAmplitude", defaultValue: 0.0)
+    static let lfoXAmplitude = Setting<Float>(key: "lfoXAmplitude", defaultValue: 0.0)
+    static let lfoYAmplitude = Setting<Float>(key: "lfoYAmplitude", defaultValue: 0.0)
     
     static let bitcrushMix = Setting<Float>(key: "bitcrushMix", defaultValue: 0.0)
     static let bitcrushDepth = Setting<Float>(key: "bitcrushDepth", defaultValue: 8.0)

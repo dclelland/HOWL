@@ -46,21 +46,21 @@ class VocoderViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var lfoVerticalAmplitudeControl: AudioControl? {
+    @IBOutlet weak var lfoXAmplitudeControl: AudioControl? {
         didSet {
-            lfoVerticalAmplitudeControl?.onChangeValue = { value in
-                Settings.lfoVerticalAmplitude.value = value
+            lfoXAmplitudeControl?.onChangeValue = { value in
+                Settings.lfoXAmplitude.value = value
             }
-            lfoVerticalAmplitudeControl?.value = Settings.lfoVerticalAmplitude.value
+            lfoXAmplitudeControl?.value = Settings.lfoXAmplitude.value
         }
     }
     
-    @IBOutlet weak var lfoHorizontalAmplitudeControl: AudioControl? {
+    @IBOutlet weak var lfoYAmplitudeControl: AudioControl? {
         didSet {
-            lfoHorizontalAmplitudeControl?.onChangeValue = { value in
-                Settings.lfoHorizontalAmplitude.value = value
+            lfoYAmplitudeControl?.onChangeValue = { value in
+                Settings.lfoYAmplitude.value = value
             }
-            lfoHorizontalAmplitudeControl?.value = Settings.lfoHorizontalAmplitude.value
+            lfoYAmplitudeControl?.value = Settings.lfoYAmplitude.value
         }
     }
     
@@ -135,8 +135,8 @@ class VocoderViewController: UIViewController {
         formantsBandwidthControl?.value = Settings.formantsBandwidth.defaultValue
         
         lfoFrequencyControl?.value = Settings.lfoFrequency.defaultValue
-        lfoVerticalAmplitudeControl?.value = Settings.lfoVerticalAmplitude.defaultValue
-        lfoHorizontalAmplitudeControl?.value = Settings.lfoHorizontalAmplitude.defaultValue
+        lfoXAmplitudeControl?.value = Settings.lfoXAmplitude.defaultValue
+        lfoYAmplitudeControl?.value = Settings.lfoYAmplitude.defaultValue
         
         bitcrushMixControl?.value = Settings.bitcrushMix.defaultValue
         bitcrushDepthControl?.value = Settings.bitcrushDepth.defaultValue
