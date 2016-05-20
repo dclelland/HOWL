@@ -20,7 +20,7 @@ class Master: AKInstrument {
     var reverbFeedback = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var reverbCutoff = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 16000.0)
     
-    init(withInput input: AKAudio, voices: [AKAudio]) {
+    init(withInput input: AKAudio) {
         super.init()
         
         addProperty(amplitude)
@@ -33,28 +33,19 @@ class Master: AKInstrument {
         addProperty(reverbMix)
         addProperty(reverbMix)
         
-        let sum = AKSum()
-        
-        sum.inputs = voices
-        
-        let preBitcrush = AKBalance(
-            input: sum,
-            comparatorAudioSource: input
-        )
-        
         let bitcrush = AKDecimator(
-            input: preBitcrush,
+            input: input,
             bitDepth: bitcrushDepth,
             sampleRate: bitcrushRate
         )
         
         let postBitcrush = AKBalance(
             input: bitcrush,
-            comparatorAudioSource:preBitcrush
+            comparatorAudioSource:input
         )
         
         let bitcrushOutput = AKMix(
-            input1: preBitcrush,
+            input1: input,
             input2: postBitcrush,
             balance: bitcrushMix
         )
@@ -82,13 +73,9 @@ class Master: AKInstrument {
             rightAudio: reverbRightOutput * amplitude
         )
         
-        connect(sum)
-        
         setStereoAudioOutput(output)
         
         resetParameter(input)
-        
-        voices.forEach { self.resetParameter($0) }
     }
     
     // MARK: - Actions

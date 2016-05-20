@@ -88,47 +88,39 @@ class Vocoder: AKInstrument {
         )
         
         assignOutput(output, to: balance)
+        
+        self.resetParameter(input)
     }
     
     // MARK: Constructors
     
-    enum Register: Float {
-        case Bass = 0.87
-        case Tenor = 0.94
-        case Alto = 1.08
-        case Soprano = 1.11
-    }
-    
-    static func male(register: Register? = nil, withInput input: AKAudio) -> Vocoder {
-        let register = register?.rawValue ?? 1.0
+    static func male(withInput input: AKAudio) -> Vocoder {
         return Vocoder(
             withInput: input,
-            topLeftFrequencies: [768, 1333, 2522, 3687] * register,
-            topRightFrequencies: [588, 1952, 2601, 3624] * register,
-            bottomLeftFrequencies: [378, 997, 2343, 3357] * register,
-            bottomRightFrequencies: [342, 2322, 3000, 3657] * register
+            topLeftFrequencies: [768, 1333, 2522, 3687],
+            topRightFrequencies: [588, 1952, 2601, 3624],
+            bottomLeftFrequencies: [378, 997, 2343, 3357],
+            bottomRightFrequencies: [342, 2322, 3000, 3657]
         )
     }
     
-    static func female(register: Register? = nil, withInput input: AKAudio) -> Vocoder {
-        let register = register?.rawValue ?? 1.0
+    static func female(withInput input: AKAudio) -> Vocoder {
         return Vocoder(
             withInput: input,
-            topLeftFrequencies: [936, 1551, 2815, 4299] * register,
-            topRightFrequencies: [669, 2349, 2972, 4290] * register,
-            bottomLeftFrequencies: [459, 1105, 2735, 4115] * register,
-            bottomRightFrequencies: [437, 2761, 3372, 4352] * register
+            topLeftFrequencies: [936, 1551, 2815, 4299],
+            topRightFrequencies: [669, 2349, 2972, 4290],
+            bottomLeftFrequencies: [459, 1105, 2735, 4115],
+            bottomRightFrequencies: [437, 2761, 3372, 4352]
         )
     }
     
-    static func child(register: Register? = nil, withInput input: AKAudio) -> Vocoder {
-        let register = register?.rawValue ?? 1.0
+    static func child(withInput input: AKAudio) -> Vocoder {
         return Vocoder(
             withInput: input,
-            topLeftFrequencies: [1002, 1688, 2950, 4307] * register,
-            topRightFrequencies: [717, 2501, 3289, 4409] * register,
-            bottomLeftFrequencies: [494, 1345, 2988, 4276] * register,
-            bottomRightFrequencies: [452, 3081, 3702, 4572] * register
+            topLeftFrequencies: [1002, 1688, 2950, 4307],
+            topRightFrequencies: [717, 2501, 3289, 4409],
+            bottomLeftFrequencies: [494, 1345, 2988, 4276],
+            bottomRightFrequencies: [452, 3081, 3702, 4572]
         )
     }
     

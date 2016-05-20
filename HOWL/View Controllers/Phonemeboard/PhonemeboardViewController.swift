@@ -36,10 +36,8 @@ class PhonemeboardViewController: UIViewController {
         
         Audio.master.unmute()
         
-        for vocoder in Audio.vocoders {
-            vocoder.x.value = Float(location.x)
-            vocoder.y.value = Float(location.y)
-        }
+        Audio.vocoder.x.value = Float(location.x)
+        Audio.vocoder.y.value = Float(location.y)
     }
     
     func refreshView() {

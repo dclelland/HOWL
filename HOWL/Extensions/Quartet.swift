@@ -59,37 +59,3 @@ extension Quartet: CollectionType {
     }
     
 }
-
-// Could probably use zip for some of these...
-
-func + (left: Quartet<Float>, right: Quartet<Float>) -> Quartet<Float> {
-    return Quartet(left.enumerate().map { $1 + right[$0] })
-}
-
-func + (left: Quartet<Float>, right: Float) -> Quartet<Float> {
-    return Quartet(left.map { $0 + right })
-}
-
-func - (left: Quartet<Float>, right: Quartet<Float>) -> Quartet<Float> {
-    return Quartet(left.enumerate().map { $1 - right[$0] })
-}
-
-func - (left: Quartet<Float>, right: Float) -> Quartet<Float> {
-    return Quartet(left.map { $0 - right })
-}
-
-func * (left: Quartet<Float>, right: Quartet<Float>) -> Quartet<Float> {
-    return Quartet(left.enumerate().map { $1 * right[$0] })
-}
-
-func * (left: Quartet<Float>, right: Float) -> Quartet<Float> {
-    return Quartet(left.map { $0 * right })
-}
-
-func / (left: Quartet<Float>, right: Quartet<Float>) -> Quartet<Float> {
-    return Quartet(left.enumerate().map { $1 / right[$0] })
-}
-
-func / (left: Quartet<Float>, right: Float) -> Quartet<Float> {
-    return Quartet(left.map { $0 / right })
-}
