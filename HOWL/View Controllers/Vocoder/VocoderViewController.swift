@@ -15,7 +15,7 @@ class VocoderViewController: UIViewController {
         didSet {
             formantsFrequencyControl?.onChangeValue = { value in
                 for vocoder in Audio.vocoders {
-                    vocoder.frequency.value = value
+                    vocoder.formantsFrequency.value = value
                 }
                 Settings.formantsFrequency.value = value
             }
@@ -27,7 +27,7 @@ class VocoderViewController: UIViewController {
         didSet {
             formantsBandwidthControl?.onChangeValue = { value in
                 for vocoder in Audio.vocoders {
-                    vocoder.bandwidth.value = value
+                    vocoder.formantsBandwidth.value = value
                 }
                 Settings.formantsBandwidth.value = value
             }

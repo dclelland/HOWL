@@ -60,6 +60,8 @@ extension Quartet: CollectionType {
     
 }
 
+// Could probably use zip for some of these...
+
 func + (left: Quartet<Float>, right: Quartet<Float>) -> Quartet<Float> {
     return Quartet(left.enumerate().map { $1 + right[$0] })
 }
