@@ -21,6 +21,10 @@ class Vocoder: AKInstrument {
     var formantsFrequency = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 2.0)
     var formantsBandwidth = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 2.0)
     
+    var lfoFrequency = AKInstrumentProperty(value: 0.0, minimum: -20.0, maximum: 20.0)
+    var lfoXAmplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var lfoYAmplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    
     var output = AKAudio.globalParameter()
     
     init(withInput input: AKAudio) {
@@ -32,18 +36,34 @@ class Vocoder: AKInstrument {
         addProperty(formantsFrequency)
         addProperty(formantsBandwidth)
         
+        addProperty(lfoFrequency)
+        addProperty(lfoXAmplitude)
+        addProperty(lfoYAmplitude)
+        
+        let lfoX = AKLowFrequencyOscillator(
+            waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
+            frequency: lfoFrequency,
+            amplitude: lfoXAmplitude * 0.5.ak
+        )
+        
+        let lfoY = AKLowFrequencyOscillator(
+            waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
+            frequency: lfoFrequency,
+            amplitude: lfoYAmplitude * 0.5.ak
+        )
+        
         let topFrequencies = zip(topLeftFrequencies, topRightFrequencies).map { topLeftFrequency, topRightFrequency in
-            return x * (topRightFrequency - topLeftFrequency).ak + topLeftFrequency.ak
+            return (x + lfoX) * (topRightFrequency - topLeftFrequency).ak + topLeftFrequency.ak
         }
         
         let bottomFrequencies = zip(bottomLeftFrequencies, bottomRightFrequencies).map { bottomLeftFrequency, bottomRightFrequency in
-            return x * (bottomRightFrequency - bottomLeftFrequency).ak + bottomLeftFrequency.ak
+            return (x + lfoX) * (bottomRightFrequency - bottomLeftFrequency).ak + bottomLeftFrequency.ak
         }
         
         let frequencyScale = AKMaximum(firstInput: formantsFrequency, secondInput: 0.01.ak)
         
         let frequencies = zip(topFrequencies, bottomFrequencies).map { topFrequency, bottomFrequency in
-            return (y * (bottomFrequency - topFrequency) + topFrequency) * frequencyScale
+            return ((y + lfoY) * (bottomFrequency - topFrequency) + topFrequency) * frequencyScale
         }
         
         let bandwidthScale = AKMaximum(firstInput: formantsBandwidth, secondInput: 0.01.ak)

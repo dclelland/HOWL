@@ -34,6 +34,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoFrequencyControl: AudioControl? {
         didSet {
             lfoFrequencyControl?.onChangeValue = { value in
+                Audio.vocoder.lfoFrequency.value = value
                 Settings.lfoFrequency.value = value
             }
             lfoFrequencyControl?.value = Settings.lfoFrequency.value
@@ -43,6 +44,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoXAmplitudeControl: AudioControl? {
         didSet {
             lfoXAmplitudeControl?.onChangeValue = { value in
+                Audio.vocoder.lfoXAmplitude.value = value
                 Settings.lfoXAmplitude.value = value
             }
             lfoXAmplitudeControl?.value = Settings.lfoXAmplitude.value
@@ -52,6 +54,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoYAmplitudeControl: AudioControl? {
         didSet {
             lfoYAmplitudeControl?.onChangeValue = { value in
+                Audio.vocoder.lfoYAmplitude.value = value
                 Settings.lfoYAmplitude.value = value
             }
             lfoYAmplitudeControl?.value = Settings.lfoYAmplitude.value
