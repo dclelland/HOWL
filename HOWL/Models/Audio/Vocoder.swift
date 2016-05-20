@@ -10,10 +10,10 @@ import AudioKit
 
 class Vocoder: AKInstrument {
     
-    let topLeftFrequencies: [Float] = [768, 1333, 2522, 3687]
-    let topRightFrequencies: [Float] = [588, 1952, 2601, 3624]
-    let bottomLeftFrequencies: [Float] = [378, 997, 2343, 3357]
-    let bottomRightFrequencies: [Float] = [342, 2322, 3000, 3657]
+    let topLeftFrequencies: [Float] = [588, 1952, 2601, 3624] // /α/
+    let topRightFrequencies: [Float] = [768, 1333, 2522, 3687] // /æ/
+    let bottomLeftFrequencies: [Float] = [342, 2322, 3000, 3657] // /i/
+    let bottomRightFrequencies: [Float] = [378, 997, 2343, 3357] // /u/
     
     var x = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
     var y = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
