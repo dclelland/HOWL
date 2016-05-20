@@ -52,8 +52,8 @@ class Vocoder: AKInstrument {
             return (frequency * 0.02.ak + 50.0.ak) * bandwidthScale
         }
         
-        let filter = zip(frequencies, bandwidths).reduce(input) { input, tuple in
-            let (frequency, bandwidth) = tuple
+        let filter = zip(frequencies, bandwidths).reduce(input) { input, parameters in
+            let (frequency, bandwidth) = parameters
             return AKResonantFilter(
                 input: input,
                 centerFrequency: AKPortamento(input: frequency, halfTime: 0.02.ak),
