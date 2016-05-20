@@ -91,6 +91,7 @@ class SynthesizerViewController: UIViewController {
         didSet {
             vibratoWaveformControl?.onChangeValue = { value in
                 Audio.synthesizer.vibratoWaveform.value = value
+                self.keyboardViewController?.restartNotes()
                 Settings.vibratoWaveform.value = value
             }
             vibratoWaveformControl?.value = Settings.vibratoWaveform.value
@@ -121,6 +122,7 @@ class SynthesizerViewController: UIViewController {
         didSet {
             tremoloWaveformControl?.onChangeValue = { value in
                 Audio.synthesizer.tremoloWaveform.value = value
+                self.keyboardViewController?.restartNotes()
                 Settings.tremoloWaveform.value = value
             }
             tremoloWaveformControl?.value = Settings.tremoloWaveform.value

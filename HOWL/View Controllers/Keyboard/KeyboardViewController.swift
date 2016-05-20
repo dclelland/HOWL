@@ -57,6 +57,17 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    func restartNotes() {
+        notes.keys.forEach { touch in
+            if let key = keyForTouch(touch) {
+                stopNoteForTouch(touch)
+                playNoteForTouch(touch, withKey: key)
+            } else {
+                stopNoteForTouch(touch)
+            }
+        }
+    }
+    
     func refreshView() {
         keyboardView?.reloadData()
     }
