@@ -15,11 +15,15 @@ class KeyboardViewController: UIViewController {
     @IBOutlet weak var keyboardView: UICollectionView?
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
-        didSet { multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value }
+        didSet {
+            multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value
+        }
     }
     
     @IBOutlet weak var holdButton: UIButton? {
-        didSet { holdButton?.selected = Settings.keyboardSustain.value }
+        didSet {
+            holdButton?.selected = Settings.keyboardSustain.value
+        }
     }
     
     let keyboard: Keyboard = {

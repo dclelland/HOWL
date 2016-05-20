@@ -15,11 +15,15 @@ class PhonemeboardViewController: UIViewController {
     @IBOutlet weak var phonemeboardView: AudioPlot?
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
-        didSet { multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value }
+        didSet {
+            multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value
+        }
     }
     
     @IBOutlet weak var holdButton: UIButton? {
-        didSet { holdButton?.selected = Settings.phonemeboardSustain.value }
+        didSet {
+            holdButton?.selected = Settings.phonemeboardSustain.value
+        }
     }
     
     // MARK: - Life cycle
