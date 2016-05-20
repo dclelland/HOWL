@@ -12,28 +12,25 @@ struct Audio {
     
     static let synthesizer = Synthesizer()
     
-    static let sopranoVocoder = Vocoder(withInput: synthesizer.output)
-    static let altoVocoder = Vocoder(withInput: synthesizer.output)
-    static let tenorVocoder = Vocoder(withInput: synthesizer.output)
-    static let bassVocoder = Vocoder(withInput: synthesizer.output)
+    static let vocoders = [
+        Vocoder.male(.Bass, withInput: synthesizer.output),
+        Vocoder.male(.Tenor, withInput: synthesizer.output),
+        Vocoder.male(.Alto, withInput: synthesizer.output),
+        Vocoder.male(.Soprano, withInput: synthesizer.output)
+    ]
     
     static let master = Master(
         withInput: synthesizer.output,
-        voices: [
-            sopranoVocoder.output,
-            altoVocoder.output,
-            tenorVocoder.output,
-            bassVocoder.output
-        ]
+        voices: vocoders.map { $0.output }
     )
     
     static var instruments: [AKInstrument] {
         return [
             synthesizer,
-            sopranoVocoder,
-            altoVocoder,
-            tenorVocoder,
-            bassVocoder,
+            vocoders[0],
+            vocoders[1],
+            vocoders[2],
+            vocoders[3],
             master
         ]
     }

@@ -14,10 +14,9 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var formantsFrequencyControl: AudioControl? {
         didSet {
             formantsFrequencyControl?.onChangeValue = { value in
-                Audio.sopranoVocoder.frequency.value = value
-                Audio.altoVocoder.frequency.value = value
-                Audio.tenorVocoder.frequency.value = value
-                Audio.bassVocoder.frequency.value = value
+                for vocoder in Audio.vocoders {
+                    vocoder.frequency.value = value
+                }
                 Settings.formantsFrequency.value = value
             }
             formantsFrequencyControl?.value = Settings.formantsFrequency.value
@@ -27,10 +26,9 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var formantsBandwidthControl: AudioControl? {
         didSet {
             formantsBandwidthControl?.onChangeValue = { value in
-                Audio.sopranoVocoder.bandwidth.value = value
-                Audio.altoVocoder.bandwidth.value = value
-                Audio.tenorVocoder.bandwidth.value = value
-                Audio.bassVocoder.bandwidth.value = value
+                for vocoder in Audio.vocoders {
+                    vocoder.bandwidth.value = value
+                }
                 Settings.formantsBandwidth.value = value
             }
             formantsBandwidthControl?.value = Settings.formantsBandwidth.value

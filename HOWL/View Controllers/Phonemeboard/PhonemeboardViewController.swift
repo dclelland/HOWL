@@ -22,26 +22,19 @@ class PhonemeboardViewController: UIViewController {
         didSet { holdButton?.selected = Settings.phonemeboardSustain.value }
     }
     
-    let phonemeboard = Phonemeboard()
-    
     // MARK: - Life cycle
     
     func refreshAudio() {
-        guard let touches = multitouchGestureRecognizer?.touches else {
+        guard let touches = multitouchGestureRecognizer?.touches, location = locationForTouches(touches) else {
+            Audio.master.mute()
             return
         }
         
-        if touches.count == 0 {
-            Audio.master.mute()
-        } else {
-            Audio.master.unmute()
-        }
+        Audio.master.unmute()
         
-        if let (soprano, alto, tenor, bass) = phonemesForTouches(touches) {
-            Audio.sopranoVocoder.updateWithPhoneme(soprano)
-            Audio.altoVocoder.updateWithPhoneme(alto)
-            Audio.tenorVocoder.updateWithPhoneme(tenor)
-            Audio.bassVocoder.updateWithPhoneme(bass)
+        for vocoder in Audio.vocoders {
+            vocoder.x.value = Float(location.x)
+            vocoder.y.value = Float(location.y)
         }
     }
     
@@ -72,19 +65,6 @@ class PhonemeboardViewController: UIViewController {
     }
     
     // MARK: - Private Getters
-    
-    private func phonemesForTouches(touches: [UITouch]) -> (Phoneme, Phoneme, Phoneme, Phoneme)? {
-        guard let location = locationForTouches(touches) else {
-            return nil
-        }
-        
-        let soprano = phonemeboard.sopranoPhonemeAtLocation(location)
-        let alto = phonemeboard.altoPhonemeAtLocation(location)
-        let tenor = phonemeboard.tenorPhonemeAtLocation(location)
-        let bass = phonemeboard.bassPhonemeAtLocation(location)
-        
-        return (soprano, alto, tenor, bass)
-    }
     
     private func hueForTouches(touches: [UITouch]) -> CGFloat? {
         guard let location = locationForTouches(touches) else {
