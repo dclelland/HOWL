@@ -40,44 +40,29 @@ class Vocoder: AKInstrument {
             return x * (bottomRightFrequency - bottomLeftFrequency).ak + bottomLeftFrequency.ak
         }
         
+        let frequencyScale = AKMaximum(firstInput: formantsFrequency, secondInput: 0.01.ak)
+        
         let frequencies = zip(topFrequencies, bottomFrequencies).map { topFrequency, bottomFrequency in
-            return y * (bottomFrequency - topFrequency) + topFrequency
+            return (y * (bottomFrequency - topFrequency) + topFrequency) * frequencyScale
         }
+        
+        let bandwidthScale = AKMaximum(firstInput: formantsBandwidth, secondInput: 0.01.ak)
         
         let bandwidths = frequencies.map { frequency in
-            return frequency * 0.02.ak + 50.0.ak
+            return (frequency * 0.02.ak + 50.0.ak) * bandwidthScale
         }
         
-        let frequencyMultiplier = AKMaximum(firstInput: formantsFrequency, secondInput: 0.01.ak)
-        
-        let bandwidthMultiplier = AKMaximum(firstInput: formantsBandwidth, secondInput: 0.01.ak)
-        
-        let filter1 = AKResonantFilter(
-            input: input,
-            centerFrequency: AKPortamento(input: frequencies[0] * frequencyMultiplier, halfTime: 0.02.ak),
-            bandwidth: AKPortamento(input: bandwidths[0] * bandwidthMultiplier, halfTime: 0.02.ak)
-        )
-        
-        let filter2 = AKResonantFilter(
-            input: filter1,
-            centerFrequency: AKPortamento(input: frequencies[1] * frequencyMultiplier, halfTime: 0.02.ak),
-            bandwidth: AKPortamento(input: bandwidths[1] * bandwidthMultiplier, halfTime: 0.02.ak)
-        )
-        
-        let filter3 = AKResonantFilter(
-            input: filter2,
-            centerFrequency: AKPortamento(input: frequencies[2] * frequencyMultiplier, halfTime: 0.02.ak),
-            bandwidth: AKPortamento(input: bandwidths[2] * bandwidthMultiplier, halfTime: 0.02.ak)
-        )
-        
-        let filter4 = AKResonantFilter(
-            input: filter3,
-            centerFrequency: AKPortamento(input: frequencies[3] * frequencyMultiplier, halfTime: 0.02.ak),
-            bandwidth: AKPortamento(input: bandwidths[3] * bandwidthMultiplier, halfTime: 0.02.ak)
-        )
+        let filter = zip(frequencies, bandwidths).reduce(input) { input, tuple in
+            let (frequency, bandwidth) = tuple
+            return AKResonantFilter(
+                input: input,
+                centerFrequency: AKPortamento(input: frequency, halfTime: 0.02.ak),
+                bandwidth: AKPortamento(input: bandwidth, halfTime: 0.02.ak)
+            )
+        }
         
         let balance = AKBalance(
-            input: filter4,
+            input: filter,
             comparatorAudioSource: input
         )
         
