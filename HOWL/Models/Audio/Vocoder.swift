@@ -76,8 +76,8 @@ class Vocoder: AKInstrument {
             let (frequency, bandwidth) = parameters
             return AKResonantFilter(
                 input: input,
-                centerFrequency: AKPortamento(input: frequency, halfTime: 0.02.ak),
-                bandwidth: AKPortamento(input: bandwidth, halfTime: 0.02.ak)
+                centerFrequency: AKPortamento(input: frequency, halfTime: 0.001.ak),
+                bandwidth: AKPortamento(input: bandwidth, halfTime: 0.001.ak)
             )
         }
         
