@@ -12,7 +12,7 @@ struct Audio {
     
     static let synthesizer = Synthesizer()
     
-    static let vocoder = Vocoder.male(withInput: synthesizer.output)
+    static let vocoder = Vocoder(withInput: synthesizer.output)
     
     static let master = Master(withInput: vocoder.output)
     

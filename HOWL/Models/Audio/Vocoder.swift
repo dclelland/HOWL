@@ -10,10 +10,10 @@ import AudioKit
 
 class Vocoder: AKInstrument {
     
-    var topLeftFrequencies: Quartet<Float>
-    var topRightFrequencies: Quartet<Float>
-    var bottomLeftFrequencies: Quartet<Float>
-    var bottomRightFrequencies: Quartet<Float>
+    let topLeftFrequencies: [Float] = [768, 1333, 2522, 3687]
+    let topRightFrequencies: [Float] = [588, 1952, 2601, 3624]
+    let bottomLeftFrequencies: [Float] = [378, 997, 2343, 3357]
+    let bottomRightFrequencies: [Float] = [342, 2322, 3000, 3657]
     
     var x = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
     var y = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
@@ -23,13 +23,7 @@ class Vocoder: AKInstrument {
     
     var output = AKAudio.globalParameter()
     
-    init(withInput input: AKAudio, topLeftFrequencies: Quartet<Float>, topRightFrequencies: Quartet<Float>, bottomLeftFrequencies: Quartet<Float>, bottomRightFrequencies: Quartet<Float>) {
-        
-        self.topLeftFrequencies = topLeftFrequencies
-        self.topRightFrequencies = topRightFrequencies
-        self.bottomLeftFrequencies = bottomLeftFrequencies
-        self.bottomRightFrequencies = bottomRightFrequencies
-        
+    init(withInput input: AKAudio) {
         super.init()
         
         addProperty(x)
@@ -90,38 +84,6 @@ class Vocoder: AKInstrument {
         assignOutput(output, to: balance)
         
         self.resetParameter(input)
-    }
-    
-    // MARK: Constructors
-    
-    static func male(withInput input: AKAudio) -> Vocoder {
-        return Vocoder(
-            withInput: input,
-            topLeftFrequencies: [768, 1333, 2522, 3687],
-            topRightFrequencies: [588, 1952, 2601, 3624],
-            bottomLeftFrequencies: [378, 997, 2343, 3357],
-            bottomRightFrequencies: [342, 2322, 3000, 3657]
-        )
-    }
-    
-    static func female(withInput input: AKAudio) -> Vocoder {
-        return Vocoder(
-            withInput: input,
-            topLeftFrequencies: [936, 1551, 2815, 4299],
-            topRightFrequencies: [669, 2349, 2972, 4290],
-            bottomLeftFrequencies: [459, 1105, 2735, 4115],
-            bottomRightFrequencies: [437, 2761, 3372, 4352]
-        )
-    }
-    
-    static func child(withInput input: AKAudio) -> Vocoder {
-        return Vocoder(
-            withInput: input,
-            topLeftFrequencies: [1002, 1688, 2950, 4307],
-            topRightFrequencies: [717, 2501, 3289, 4409],
-            bottomLeftFrequencies: [494, 1345, 2988, 4276],
-            bottomRightFrequencies: [452, 3081, 3702, 4572]
-        )
     }
     
 }
