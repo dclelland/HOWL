@@ -27,9 +27,13 @@ class PhonemeboardView: AudioPlot {
         super.updateValuesFromCsound()
         
         let locations = Array(([trailLocation] + trailLocations).prefix(trailLength))
+        let hue = trailHue
+        let saturation = trailSaturation
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.trailLocations = locations
+            self.colorHue = hue
+            self.colorSaturation = saturation
         })
     }
     
@@ -67,6 +71,24 @@ class PhonemeboardView: AudioPlot {
         let y = CGFloat(Audio.vocoder.yOut.value).lerp(min: bounds.minY, max: bounds.maxY)
         
         return CGPoint(x: x, y: y)
+    }
+    
+    private var trailHue: CGFloat {
+        let x = CGFloat(Audio.vocoder.xOut.value) - 0.5
+        let y = CGFloat(Audio.vocoder.yOut.value) - 0.5
+        
+        let angle = atan2(x, y)
+        
+        return (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
+    }
+    
+    private var trailSaturation: CGFloat {
+        let x = CGFloat(Audio.vocoder.xOut.value) - 0.5
+        let y = CGFloat(Audio.vocoder.yOut.value) - 0.5
+        
+        let distance = hypot(x, y)
+        
+        return distance * 2.0
     }
     
 }

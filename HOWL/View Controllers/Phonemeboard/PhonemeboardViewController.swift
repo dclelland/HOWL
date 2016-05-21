@@ -47,11 +47,6 @@ class PhonemeboardViewController: UIViewController {
         
         phonemeboardView?.highlighted = multitouchState == .Live
         phonemeboardView?.selected = !touches.isEmpty
-        
-        if let hue = hueForTouches(touches), let saturation = saturationForTouches(touches) {
-            phonemeboardView?.colorHue = hue
-            phonemeboardView?.colorSaturation = saturation
-        }
     }
     
     // MARK: - Button events
@@ -67,28 +62,6 @@ class PhonemeboardViewController: UIViewController {
     }
     
     // MARK: - Private Getters
-    
-    private func hueForTouches(touches: [UITouch]) -> CGFloat? {
-        guard let location = locationForTouches(touches) else {
-            return nil
-        }
-        
-        let offset = CGVector(dx: location.x - 0.5, dy: location.y - 0.5)
-        let angle = atan2(offset.dx, offset.dy)
-        
-        return (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
-    }
-    
-    private func saturationForTouches(touches: [UITouch]) -> CGFloat? {
-        guard let location = locationForTouches(touches) else {
-            return nil
-        }
-
-        let offset = CGVector(dx: location.x - 0.5, dy: location.y - 0.5)
-        let distance = hypot(offset.dx, offset.dy)
-
-        return distance * 2.0
-    }
     
     private func locationForTouches(touches: [UITouch]) -> CGPoint? {
         guard let phonemeboardView = phonemeboardView where touches.count > 0 else {
