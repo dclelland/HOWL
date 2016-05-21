@@ -15,15 +15,14 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.0 Todo
 
+- Revise iPhone screen layout
 - Formant LFO system
     - Suss out curve shape
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
 - iPad Pro splash screen
-- Cram everything into the iPhone version somehow
 - Audiobus
-- Passthrough
-- Fix vocoder click (should be before reverb, too)
+    - Passthrough
 
 ### Wishlist
 
