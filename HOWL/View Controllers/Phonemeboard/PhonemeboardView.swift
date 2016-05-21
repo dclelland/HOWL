@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bezzy
 import Lerp
 import ProtonomeAudioKitControls
 
@@ -18,31 +19,28 @@ class PhonemeboardView: AudioPlot {
         let context = UIGraphicsGetCurrentContext()
         
         if (self.selected) {
-            CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
-            touchIndicatorPath.stroke()
+            CGContextSetFillColorWithColor(context, UIColor.protonome_blackColor().CGColor)
+            trailPath.fill()
         }
     }
     
-    // MARK: - Private getters
+    private let trailLength = 24
     
-    private let touchIndicatorRadius: CGFloat = 24.0
-    
-    private var touchIndicatorPath: UIBezierPath {
-        let location = touchIndicatorLocation
+    private var trailPath: UIBezierPath {
+        trailLocations = Array(([trailLocation] + trailLocations).prefix(trailLength))
         
-        let x = location.x - touchIndicatorRadius
-        let y = location.y - touchIndicatorRadius
-        let width = touchIndicatorRadius * 2.0
-        let height = touchIndicatorRadius * 2.0
-        
-        let path = UIBezierPath(ovalInRect: CGRect(x: x, y: y, width: width, height: height))
-        
-        path.lineWidth = 2.0
+        let path = UIBezierPath.makePath { make in
+            trailLocations.enumerate().forEach { index, location in
+                make.oval(at: location, radius: CGFloat(trailLength - index))
+            }
+        }
         
         return path
     }
     
-    private var touchIndicatorLocation: CGPoint {
+    private lazy var trailLocations = [CGPoint]()
+    
+    private var trailLocation: CGPoint {
         let x = CGFloat(Audio.vocoder.xOut.value).lerp(min: bounds.minX, max: bounds.maxX)
         let y = CGFloat(Audio.vocoder.yOut.value).lerp(min: bounds.minY, max: bounds.maxY)
         
