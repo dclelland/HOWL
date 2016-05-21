@@ -25,7 +25,7 @@ class Master: AKInstrument {
         
         let balance = AKBalance(
             input: input,
-            comparatorAudioSource: input * amplitude * 0.5.ak
+            comparatorAudioSource: input * amplitude * 0.25.ak
         )
         
         let bitcrush = AKDecimator(
@@ -60,15 +60,15 @@ class Master: AKInstrument {
         
         let leftClipper = AKClipper(
             input: reverbLeftOutput,
-            limit: 1.0.ak, method:
-            AKClipper.clippingMethodBramDeJong(),
+            limit: 1.0.ak,
+            method: AKClipper.clippingMethodBramDeJong(),
             clippingStartPoint: 0.875.ak
         )
         
         let rightClipper = AKClipper(
             input: reverbRightOutput,
-            limit: 1.0.ak, method:
-            AKClipper.clippingMethodBramDeJong(),
+            limit: 1.0.ak,
+            method: AKClipper.clippingMethodBramDeJong(),
             clippingStartPoint: 0.875.ak
         )
         
