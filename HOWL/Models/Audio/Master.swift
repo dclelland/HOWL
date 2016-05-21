@@ -58,9 +58,23 @@ class Master: AKInstrument {
             balance: effectsReverb
         )
         
+        let leftClipper = AKClipper(
+            input: reverbLeftOutput,
+            limit: 1.0.ak, method:
+            AKClipper.clippingMethodBramDeJong(),
+            clippingStartPoint: 0.875.ak
+        )
+        
+        let rightClipper = AKClipper(
+            input: reverbRightOutput,
+            limit: 1.0.ak, method:
+            AKClipper.clippingMethodBramDeJong(),
+            clippingStartPoint: 0.875.ak
+        )
+        
         let output = AKStereoAudio(
-            leftAudio: reverbLeftOutput,
-            rightAudio: reverbRightOutput
+            leftAudio: leftClipper,
+            rightAudio: rightClipper
         )
         
         setStereoAudioOutput(output)
