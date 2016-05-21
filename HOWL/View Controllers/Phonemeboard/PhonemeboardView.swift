@@ -26,7 +26,7 @@ class PhonemeboardView: AudioPlot {
     override func updateValuesFromCsound() {
         super.updateValuesFromCsound()
         
-        let locations = Array(([trailLocation] + trailLocations).prefix(trailLength))
+        let locations = selected ? Array(([trailLocation] + trailLocations).prefix(trailLength)) : []
         let hue = trailHue
         let saturation = trailSaturation
         
