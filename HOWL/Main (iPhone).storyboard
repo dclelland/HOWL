@@ -952,10 +952,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="51" width="279" height="133"/>
+                                <rect key="frame" x="2" y="51" width="139" height="133"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
+                                        <rect key="frame" x="2" y="115" width="135" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="137" height="111"/>
+                                        <rect key="frame" x="2" y="2" width="66" height="111"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -965,7 +972,7 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                <real key="value" value="12"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
@@ -979,7 +986,8 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="141" y="2" width="136" height="111"/>
+                                        <rect key="frame" x="70" y="2" width="67" height="111"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -989,7 +997,7 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                <real key="value" value="12"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
@@ -1002,12 +1010,6 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
-                                        <rect key="frame" x="2" y="115" width="275" height="16"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="2Ar-kQ-1ch" firstAttribute="top" secondItem="D4I-ss-N7k" secondAttribute="bottom" constant="2" id="3oe-aM-1dg"/>
@@ -1043,20 +1045,27 @@
                                     <mask key="constraints">
                                         <exclude reference="RfX-95-L14"/>
                                         <exclude reference="ddR-ev-XFY"/>
-                                        <exclude reference="czS-cO-1ee"/>
-                                        <exclude reference="jse-sw-ot7"/>
-                                        <exclude reference="rr9-g8-Gmg"/>
                                         <exclude reference="50o-aM-PnC"/>
                                         <exclude reference="5fE-D8-wlW"/>
                                         <exclude reference="RMw-fA-Ihw"/>
+                                        <exclude reference="czS-cO-1ee"/>
+                                        <exclude reference="jse-sw-ot7"/>
+                                        <exclude reference="rr9-g8-Gmg"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="186" width="279" height="132"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xo-cy-vcA" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="143" y="51" width="138" height="133"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="137" height="110"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqB-lm-a03">
+                                        <rect key="frame" x="2" y="115" width="134" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhf-mw-e9r" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="66" height="111"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bitcrush"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1066,31 +1075,31 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                <real key="value" value="12"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="141" y="2" width="136" height="110"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDj-7E-p9O" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="70" y="2" width="66" height="111"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                <real key="value" value="12"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
@@ -1101,10 +1110,98 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
-                                        <rect key="frame" x="2" y="114" width="275" height="16"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bhf-mw-e9r" firstAttribute="top" secondItem="1Xo-cy-vcA" secondAttribute="topMargin" id="7si-0w-rKM"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="DDj-7E-p9O" secondAttribute="trailing" id="IqB-bW-z7A"/>
+                                    <constraint firstItem="jqB-lm-a03" firstAttribute="top" secondItem="DDj-7E-p9O" secondAttribute="bottom" constant="2" id="Ow9-9u-NKg"/>
+                                    <constraint firstItem="jqB-lm-a03" firstAttribute="leading" secondItem="1Xo-cy-vcA" secondAttribute="leading" constant="2" id="YWZ-j2-V7f"/>
+                                    <constraint firstItem="bhf-mw-e9r" firstAttribute="leading" secondItem="1Xo-cy-vcA" secondAttribute="leadingMargin" id="Zmi-H1-m8w"/>
+                                    <constraint firstItem="jqB-lm-a03" firstAttribute="leading" secondItem="1Xo-cy-vcA" secondAttribute="leadingMargin" id="dFb-Wj-wRh"/>
+                                    <constraint firstAttribute="bottom" secondItem="jqB-lm-a03" secondAttribute="bottom" constant="2" id="hfE-GK-p5X"/>
+                                    <constraint firstItem="jqB-lm-a03" firstAttribute="trailing" secondItem="1Xo-cy-vcA" secondAttribute="trailingMargin" id="mJe-ZD-cS0"/>
+                                    <constraint firstItem="jqB-lm-a03" firstAttribute="top" secondItem="bhf-mw-e9r" secondAttribute="bottom" constant="2" id="oLW-hV-5bE"/>
+                                    <constraint firstAttribute="trailing" secondItem="jqB-lm-a03" secondAttribute="trailing" constant="2" id="q3E-w8-VaD"/>
+                                    <constraint firstItem="DDj-7E-p9O" firstAttribute="top" secondItem="1Xo-cy-vcA" secondAttribute="topMargin" id="qHu-Ev-zr3"/>
+                                    <constraint firstItem="jqB-lm-a03" firstAttribute="bottom" secondItem="1Xo-cy-vcA" secondAttribute="bottomMargin" id="w84-ep-tPj"/>
+                                    <constraint firstItem="DDj-7E-p9O" firstAttribute="leading" secondItem="bhf-mw-e9r" secondAttribute="trailing" constant="2" id="x8m-Wh-1nK"/>
+                                    <constraint firstItem="bhf-mw-e9r" firstAttribute="width" secondItem="DDj-7E-p9O" secondAttribute="width" id="yHk-rw-hK8"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YWZ-j2-V7f"/>
+                                        <exclude reference="hfE-GK-p5X"/>
+                                        <exclude reference="q3E-w8-VaD"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="186" width="139" height="132"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="66" height="110"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="70" y="2" width="67" height="110"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
+                                        <rect key="frame" x="2" y="114" width="135" height="16"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1144,29 +1241,140 @@
                                     <mask key="constraints">
                                         <exclude reference="5Mo-RD-DbQ"/>
                                         <exclude reference="Ps5-fw-Eeg"/>
-                                        <exclude reference="EOu-EG-pMu"/>
-                                        <exclude reference="ehg-0d-rbe"/>
-                                        <exclude reference="epZ-Y1-RAE"/>
                                         <exclude reference="NL8-jz-8in"/>
                                         <exclude reference="Nz4-Jc-Ixj"/>
                                         <exclude reference="ngS-OE-IE2"/>
+                                        <exclude reference="EOu-EG-pMu"/>
+                                        <exclude reference="ehg-0d-rbe"/>
+                                        <exclude reference="epZ-Y1-RAE"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gb-tu-f5p" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="143" y="186" width="138" height="132"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXS-vF-35R">
+                                        <rect key="frame" x="2" y="114" width="134" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uy-ot-b3b" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="66" height="110"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXE-P5-cU6" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="70" y="2" width="66" height="110"/>
+                                        <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qXE-P5-cU6" firstAttribute="trailing" secondItem="1gb-tu-f5p" secondAttribute="trailingMargin" id="9JN-Mo-n4Q"/>
+                                    <constraint firstItem="0uy-ot-b3b" firstAttribute="leading" secondItem="1gb-tu-f5p" secondAttribute="leadingMargin" id="FgD-l3-OSG"/>
+                                    <constraint firstAttribute="bottom" secondItem="NXS-vF-35R" secondAttribute="bottom" constant="2" id="KTU-wN-QAo"/>
+                                    <constraint firstItem="qXE-P5-cU6" firstAttribute="leading" secondItem="0uy-ot-b3b" secondAttribute="trailing" constant="2" id="KVN-5H-qHH"/>
+                                    <constraint firstItem="NXS-vF-35R" firstAttribute="bottom" secondItem="1gb-tu-f5p" secondAttribute="bottomMargin" id="OhS-zZ-dvv"/>
+                                    <constraint firstAttribute="trailing" secondItem="NXS-vF-35R" secondAttribute="trailing" constant="2" id="VCe-47-KmA"/>
+                                    <constraint firstItem="NXS-vF-35R" firstAttribute="leading" secondItem="1gb-tu-f5p" secondAttribute="leadingMargin" id="a5e-bo-tlt"/>
+                                    <constraint firstItem="qXE-P5-cU6" firstAttribute="top" secondItem="1gb-tu-f5p" secondAttribute="topMargin" id="cAm-hK-uSL"/>
+                                    <constraint firstItem="0uy-ot-b3b" firstAttribute="width" secondItem="qXE-P5-cU6" secondAttribute="width" id="eBb-oX-qjE"/>
+                                    <constraint firstItem="NXS-vF-35R" firstAttribute="top" secondItem="qXE-P5-cU6" secondAttribute="bottom" constant="2" id="omT-1Z-ThN"/>
+                                    <constraint firstItem="NXS-vF-35R" firstAttribute="trailing" secondItem="1gb-tu-f5p" secondAttribute="trailingMargin" id="pg3-0H-SHd"/>
+                                    <constraint firstItem="NXS-vF-35R" firstAttribute="leading" secondItem="1gb-tu-f5p" secondAttribute="leading" constant="2" id="ros-QZ-Bsj"/>
+                                    <constraint firstItem="0uy-ot-b3b" firstAttribute="top" secondItem="1gb-tu-f5p" secondAttribute="topMargin" id="yQU-Py-ufL"/>
+                                    <constraint firstItem="NXS-vF-35R" firstAttribute="top" secondItem="0uy-ot-b3b" secondAttribute="bottom" constant="2" id="zFp-fq-uPc"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KTU-wN-QAo"/>
+                                        <exclude reference="VCe-47-KmA"/>
+                                        <exclude reference="ros-QZ-Bsj"/>
                                     </mask>
                                 </variation>
                             </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="1Xo-cy-vcA" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="bottom" constant="2" id="0zC-Gx-O6m"/>
+                            <constraint firstItem="Xf9-Yn-6MU" firstAttribute="top" secondItem="1gb-tu-f5p" secondAttribute="bottom" constant="2" id="5g6-fM-h6c"/>
                             <constraint firstItem="H9Y-vc-Pea" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="AHl-c0-K5Q"/>
+                            <constraint firstItem="H9Y-vc-Pea" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="bottom" constant="2" id="ARJ-lj-y1d"/>
+                            <constraint firstItem="1gb-tu-f5p" firstAttribute="top" secondItem="1Xo-cy-vcA" secondAttribute="bottom" constant="2" id="AeR-4y-6OA"/>
+                            <constraint firstItem="1gb-tu-f5p" firstAttribute="leading" secondItem="H9Y-vc-Pea" secondAttribute="trailing" constant="2" id="B5b-q4-cNL"/>
+                            <constraint firstAttribute="trailing" secondItem="1Xo-cy-vcA" secondAttribute="trailing" constant="2" id="BUx-bM-KKW"/>
+                            <constraint firstItem="Xf9-Yn-6MU" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="bottom" constant="2" id="Et5-en-QOp"/>
                             <constraint firstItem="Xf9-Yn-6MU" firstAttribute="top" secondItem="H9Y-vc-Pea" secondAttribute="bottom" constant="2" id="LNe-xn-3OE"/>
                             <constraint firstAttribute="trailing" secondItem="Yb4-Tg-ZCd" secondAttribute="trailing" constant="2" id="MWp-bg-B26"/>
+                            <constraint firstItem="8c9-JQ-3WD" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="NPa-Hz-02g"/>
                             <constraint firstAttribute="trailing" secondItem="H9Y-vc-Pea" secondAttribute="trailing" constant="2" id="PcC-z1-uax"/>
                             <constraint firstAttribute="bottom" secondItem="8c9-JQ-3WD" secondAttribute="bottom" constant="2" id="TRc-SX-3gI"/>
                             <constraint firstItem="8c9-JQ-3WD" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="Tnr-Ld-jKz"/>
+                            <constraint firstItem="1gb-tu-f5p" firstAttribute="height" secondItem="1Xo-cy-vcA" secondAttribute="height" id="Usa-oZ-Oz9"/>
+                            <constraint firstItem="1Xo-cy-vcA" firstAttribute="leading" secondItem="8c9-JQ-3WD" secondAttribute="trailing" constant="2" id="VWg-5S-pS9"/>
                             <constraint firstItem="Yb4-Tg-ZCd" firstAttribute="top" secondItem="YQr-OB-l6s" secondAttribute="bottom" constant="2" id="Xsj-Nq-O7G"/>
                             <constraint firstAttribute="trailing" secondItem="8c9-JQ-3WD" secondAttribute="trailing" constant="2" id="c7i-6L-CHK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Xo-cy-vcA" secondAttribute="trailing" constant="2" id="dr9-Ho-PU6"/>
+                            <constraint firstItem="H9Y-vc-Pea" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="gNp-Mj-9ZC"/>
+                            <constraint firstItem="8c9-JQ-3WD" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="bottom" constant="2" id="i1K-ez-ANZ"/>
+                            <constraint firstItem="1gb-tu-f5p" firstAttribute="width" secondItem="H9Y-vc-Pea" secondAttribute="width" id="kWS-Qi-w6f"/>
                             <constraint firstItem="H9Y-vc-Pea" firstAttribute="height" secondItem="8c9-JQ-3WD" secondAttribute="height" id="kyx-LR-WXz"/>
                             <constraint firstItem="Yb4-Tg-ZCd" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leading" constant="2" id="map-Yk-rxe"/>
+                            <constraint firstItem="8c9-JQ-3WD" firstAttribute="height" secondItem="H9Y-vc-Pea" secondAttribute="height" id="pEf-4f-hTs"/>
+                            <constraint firstAttribute="trailing" secondItem="1gb-tu-f5p" secondAttribute="trailing" constant="2" id="q6P-sx-Hln"/>
                             <constraint firstItem="8c9-JQ-3WD" firstAttribute="top" secondItem="Yb4-Tg-ZCd" secondAttribute="bottom" constant="2" id="wBw-FE-4s1"/>
+                            <constraint firstItem="H9Y-vc-Pea" firstAttribute="leading" secondItem="VXD-5X-DfV" secondAttribute="leadingMargin" constant="2" id="yo1-2m-cs8"/>
                             <constraint firstItem="H9Y-vc-Pea" firstAttribute="top" secondItem="8c9-JQ-3WD" secondAttribute="bottom" constant="2" id="z6k-9j-4Bg"/>
+                            <constraint firstItem="8c9-JQ-3WD" firstAttribute="width" secondItem="1Xo-cy-vcA" secondAttribute="width" id="zjp-1d-UlN"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1179,14 +1387,28 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="TRc-SX-3gI"/>
+                                <exclude reference="Tnr-Ld-jKz"/>
+                                <exclude reference="c7i-6L-CHK"/>
+                                <exclude reference="wBw-FE-4s1"/>
+                                <exclude reference="dr9-Ho-PU6"/>
+                                <exclude reference="AHl-c0-K5Q"/>
+                                <exclude reference="PcC-z1-uax"/>
+                                <exclude reference="kyx-LR-WXz"/>
+                                <exclude reference="yo1-2m-cs8"/>
+                                <exclude reference="z6k-9j-4Bg"/>
+                                <exclude reference="LNe-xn-3OE"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="effectsBitcrushControl" destination="5wm-hF-13a" id="KMY-U9-J5v"/>
-                        <outlet property="effectsReverbControl" destination="woz-pj-zhQ" id="CCZ-z1-3oQ"/>
+                        <outlet property="effectsBitcrushControl" destination="bhf-mw-e9r" id="akj-Gg-OVV"/>
+                        <outlet property="effectsReverbControl" destination="DDj-7E-p9O" id="hxV-CU-Vwr"/>
                         <outlet property="formantsBandwidthControl" destination="D4I-ss-N7k" id="x80-hN-lUC"/>
                         <outlet property="formantsFrequencyControl" destination="6md-Za-K4d" id="xsK-Ta-gtf"/>
+                        <outlet property="lfoXDepthControl" destination="5wm-hF-13a" id="UUv-63-DYD"/>
+                        <outlet property="lfoXRateControl" destination="woz-pj-zhQ" id="jh4-dW-Q0K"/>
+                        <outlet property="lfoYDepthControl" destination="0uy-ot-b3b" id="m0h-Y5-Hyc"/>
+                        <outlet property="lfoYRateControl" destination="qXE-P5-cU6" id="zEe-S0-0lZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
