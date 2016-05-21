@@ -25,7 +25,7 @@ class Master: AKInstrument {
         
         let balance = AKBalance(
             input: input,
-            comparatorAudioSource: input * amplitude * 0.125.ak
+            comparatorAudioSource: input * amplitude * 0.5.ak
         )
         
         let bitcrush = AKDecimator(
