@@ -31,93 +31,83 @@ class VocoderViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var lfoFrequencyControl: AudioControl? {
+    @IBOutlet weak var effectsBitcrushControl: AudioControl? {
         didSet {
-            lfoFrequencyControl?.onChangeValue = { value in
-                Audio.vocoder.lfoFrequency.value = value
-                Settings.lfoFrequency.value = value
+            effectsBitcrushControl?.onChangeValue = { value in
+                Audio.master.effectsBitcrush.value = value
+                Settings.effectsBitcrush.value = value
             }
-            lfoFrequencyControl?.value = Settings.lfoFrequency.value
+            effectsBitcrushControl?.value = Settings.effectsBitcrush.value
         }
     }
     
-    @IBOutlet weak var lfoXAmplitudeControl: AudioControl? {
+    @IBOutlet weak var effectsReverbControl: AudioControl? {
         didSet {
-            lfoXAmplitudeControl?.onChangeValue = { value in
-                Audio.vocoder.lfoXAmplitude.value = value
-                Settings.lfoXAmplitude.value = value
+            effectsReverbControl?.onChangeValue = { value in
+                Audio.master.effectsReverb.value = value
+                Settings.effectsReverb.value = value
             }
-            lfoXAmplitudeControl?.value = Settings.lfoXAmplitude.value
+            effectsReverbControl?.value = Settings.effectsReverb.value
         }
     }
     
-    @IBOutlet weak var lfoYAmplitudeControl: AudioControl? {
+    @IBOutlet weak var lfoXShapeControl: AudioControl? {
         didSet {
-            lfoYAmplitudeControl?.onChangeValue = { value in
-                Audio.vocoder.lfoYAmplitude.value = value
-                Settings.lfoYAmplitude.value = value
+            lfoXShapeControl?.onChangeValue = { value in
+                Audio.vocoder.lfoXShape.value = value
+                Settings.lfoXShape.value = value
             }
-            lfoYAmplitudeControl?.value = Settings.lfoYAmplitude.value
+            lfoXShapeControl?.value = Settings.lfoXShape.value
         }
     }
     
-    @IBOutlet weak var bitcrushMixControl: AudioControl? {
+    @IBOutlet weak var lfoXDepthControl: AudioControl? {
         didSet {
-            bitcrushMixControl?.onChangeValue = { value in
-                Audio.master.bitcrushMix.value = value
-                Settings.bitcrushMix.value = value
+            lfoXDepthControl?.onChangeValue = { value in
+                Audio.vocoder.lfoXDepth.value = value
+                Settings.lfoXDepth.value = value
             }
-            bitcrushMixControl?.value = Settings.bitcrushMix.value
+            lfoXDepthControl?.value = Settings.lfoXDepth.value
         }
     }
     
-    @IBOutlet weak var bitcrushDepthControl: AudioControl? {
+    @IBOutlet weak var lfoXRateControl: AudioControl? {
         didSet {
-            bitcrushDepthControl?.onChangeValue = { value in
-                Audio.master.bitcrushDepth.value = value
-                Settings.bitcrushDepth.value = value
+            lfoXRateControl?.onChangeValue = { value in
+                Audio.vocoder.lfoXRate.value = value
+                Settings.lfoXRate.value = value
             }
-            bitcrushDepthControl?.value = Settings.bitcrushDepth.value
+            lfoXRateControl?.value = Settings.lfoXRate.value
         }
     }
     
-    @IBOutlet weak var bitcrushRateControl: AudioControl? {
+    @IBOutlet weak var lfoYShapeControl: AudioControl? {
         didSet {
-            bitcrushRateControl?.onChangeValue = { value in
-                Audio.master.bitcrushRate.value = value
-                Settings.bitcrushRate.value = value
+            lfoYShapeControl?.onChangeValue = { value in
+                Audio.vocoder.lfoYShape.value = value
+                Settings.lfoYShape.value = value
             }
-            bitcrushRateControl?.value = Settings.bitcrushRate.value
+            lfoYShapeControl?.value = Settings.lfoYShape.value
         }
     }
     
-    @IBOutlet weak var reverbMixControl: AudioControl? {
+    @IBOutlet weak var lfoYDepthControl: AudioControl? {
         didSet {
-            reverbMixControl?.onChangeValue = { value in
-                Audio.master.reverbMix.value = value
-                Settings.reverbMix.value = value
+            lfoYDepthControl?.onChangeValue = { value in
+                Audio.vocoder.lfoYDepth.value = value
+                Settings.lfoYDepth.value = value
             }
-            reverbMixControl?.value = Settings.reverbMix.value
+            lfoYDepthControl?.value = Settings.lfoYDepth.value
         }
     }
     
-    @IBOutlet weak var reverbFeedbackControl: AudioControl? {
+    @IBOutlet weak var lfoYRateControl: AudioControl? {
         didSet {
-            reverbFeedbackControl?.onChangeValue = { value in
-                Audio.master.reverbFeedback.value = value
-                Settings.reverbFeedback.value = value
+            lfoYRateControl?.onChangeValue = { value in
+                Audio.vocoder.lfoYRate.value = value
+                Settings.lfoYRate.value = value
             }
-            reverbFeedbackControl?.value = Settings.reverbFeedback.value
-        }
-    }
-    
-    @IBOutlet weak var reverbCutoffControl: AudioControl? {
-        didSet {
-            reverbCutoffControl?.onChangeValue = { value in
-                Audio.master.reverbCutoff.value = value
-                Settings.reverbCutoff.value = value
-            }
-            reverbCutoffControl?.value = Settings.reverbCutoff.value
+            lfoYRateControl?.value = Settings.lfoYRate.value
         }
     }
     
@@ -131,17 +121,16 @@ class VocoderViewController: UIViewController {
         formantsFrequencyControl?.value = Settings.formantsFrequency.defaultValue
         formantsBandwidthControl?.value = Settings.formantsBandwidth.defaultValue
         
-        lfoFrequencyControl?.value = Settings.lfoFrequency.defaultValue
-        lfoXAmplitudeControl?.value = Settings.lfoXAmplitude.defaultValue
-        lfoYAmplitudeControl?.value = Settings.lfoYAmplitude.defaultValue
+        effectsBitcrushControl?.value = Settings.effectsBitcrush.defaultValue
+        effectsReverbControl?.value = Settings.effectsReverb.defaultValue
         
-        bitcrushMixControl?.value = Settings.bitcrushMix.defaultValue
-        bitcrushDepthControl?.value = Settings.bitcrushDepth.defaultValue
-        bitcrushRateControl?.value = Settings.bitcrushRate.defaultValue
+        lfoXShapeControl?.value = Settings.lfoXShape.defaultValue
+        lfoXDepthControl?.value = Settings.lfoXDepth.defaultValue
+        lfoXRateControl?.value = Settings.lfoXRate.defaultValue
         
-        reverbMixControl?.value = Settings.reverbMix.defaultValue
-        reverbFeedbackControl?.value = Settings.reverbFeedback.defaultValue
-        reverbCutoffControl?.value = Settings.reverbCutoff.defaultValue
+        lfoYShapeControl?.value = Settings.lfoYShape.defaultValue
+        lfoYDepthControl?.value = Settings.lfoYDepth.defaultValue
+        lfoYRateControl?.value = Settings.lfoYRate.defaultValue
     }
     
 }

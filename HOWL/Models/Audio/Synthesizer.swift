@@ -14,11 +14,11 @@ class Synthesizer: AKInstrument {
     
     var vibratoWaveform = AKInstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value)
     var vibratoDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var vibratoFrequency = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    var vibratoRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
     
     var tremoloWaveform = AKInstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value)
     var tremoloDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var tremoloFrequency = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    var tremoloRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
     
     var envelopeAttack = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
     var envelopeDecay = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
@@ -32,11 +32,11 @@ class Synthesizer: AKInstrument {
         
         addProperty(vibratoWaveform)
         addProperty(vibratoDepth)
-        addProperty(vibratoFrequency)
+        addProperty(vibratoRate)
         
         addProperty(tremoloWaveform)
         addProperty(tremoloDepth)
-        addProperty(tremoloFrequency)
+        addProperty(tremoloRate)
         
         addProperty(envelopeAttack)
         addProperty(envelopeDecay)
@@ -55,13 +55,13 @@ class Synthesizer: AKInstrument {
         
         let vibrato = AKLowFrequencyOscillator(
             waveformType: note.vibratoWaveform,
-            frequency: vibratoFrequency,
+            frequency: vibratoRate,
             amplitude: vibratoDepth * (pow(2.0, 1.0 / 12.0) - 1.0).ak
         )
         
         let tremolo = AKLowFrequencyOscillator(
             waveformType: note.tremoloWaveform,
-            frequency: tremoloFrequency,
+            frequency: tremoloRate,
             amplitude: tremoloDepth * 0.5.ak
         )
         

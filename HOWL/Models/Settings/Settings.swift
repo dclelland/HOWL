@@ -17,17 +17,16 @@ struct Settings {
     static let formantsFrequency = Setting<Float>(key: "formantsFrequency", defaultValue: 1.0)
     static let formantsBandwidth = Setting<Float>(key: "formantsBandwidth", defaultValue: 1.0)
     
-    static let lfoFrequency = Setting<Float>(key: "lfoFrequency", defaultValue: 0.0)
-    static let lfoXAmplitude = Setting<Float>(key: "lfoXAmplitude", defaultValue: 0.0)
-    static let lfoYAmplitude = Setting<Float>(key: "lfoYAmplitude", defaultValue: 0.0)
+    static let effectsBitcrush = Setting<Float>(key: "effectsBitcrush", defaultValue: 0.0)
+    static let effectsReverb = Setting<Float>(key: "effectsReverb", defaultValue: 0.0)
     
-    static let bitcrushMix = Setting<Float>(key: "bitcrushMix", defaultValue: 0.0)
-    static let bitcrushDepth = Setting<Float>(key: "bitcrushDepth", defaultValue: 8.0)
-    static let bitcrushRate = Setting<Float>(key: "bitcrushRate", defaultValue: 4000.0)
+    static let lfoXShape = Setting<Float>(key: "lfoXShape", defaultValue: 0.0)
+    static let lfoXDepth = Setting<Float>(key: "lfoXDepth", defaultValue: 0.0)
+    static let lfoXRate = Setting<Float>(key: "lfoXRate", defaultValue: 0.0)
     
-    static let reverbMix = Setting<Float>(key: "reverbMix", defaultValue: 0.0)
-    static let reverbFeedback = Setting<Float>(key: "reverbFeedback", defaultValue: 0.0)
-    static let reverbCutoff = Setting<Float>(key: "reverbCutoff", defaultValue: 200.0)
+    static let lfoYShape = Setting<Float>(key: "lfoYShape", defaultValue: 0.0)
+    static let lfoYDepth = Setting<Float>(key: "lfoYDepth", defaultValue: 0.0)
+    static let lfoYRate = Setting<Float>(key: "lfoYRate", defaultValue: 0.0)
     
     static let keyboardLeftInterval = Setting<Int>(key: "keyboardLeftInterval", defaultValue: 4)
     static let keyboardRightInterval = Setting<Int>(key: "keyboardRightInterval", defaultValue: 7)
@@ -39,10 +38,10 @@ struct Settings {
     
     static let vibratoWaveform = Setting<Float>(key: "vibratoWaveform", defaultValue: AKLowFrequencyOscillator.waveformTypeForSine().value)
     static let vibratoDepth = Setting<Float>(key: "vibratoDepth", defaultValue: 0.0)
-    static let vibratoFrequency = Setting<Float>(key: "vibratoFrequency", defaultValue: 0.0)
+    static let vibratoRate = Setting<Float>(key: "vibratoRate", defaultValue: 0.0)
     
     static let tremoloWaveform = Setting<Float>(key: "tremoloWaveform", defaultValue: AKLowFrequencyOscillator.waveformTypeForSine().value)
     static let tremoloDepth = Setting<Float>(key: "tremoloDepth", defaultValue: 0.0)
-    static let tremoloFrequency = Setting<Float>(key: "tremoloFrequency", defaultValue: 0.0)
+    static let tremoloRate = Setting<Float>(key: "tremoloRate", defaultValue: 0.0)
 
 }

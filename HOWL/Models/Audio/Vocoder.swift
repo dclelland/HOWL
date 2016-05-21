@@ -18,12 +18,16 @@ class Vocoder: AKInstrument {
     var x = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
     var y = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
     
+    var lfoXShape = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var lfoXDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var lfoXRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    
+    var lfoYShape = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var lfoYDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var lfoYRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    
     var formantsFrequency = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 2.0)
     var formantsBandwidth = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 2.0)
-    
-    var lfoFrequency = AKInstrumentProperty(value: 0.0, minimum: -20.0, maximum: 20.0)
-    var lfoXAmplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var lfoYAmplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     
     var output = AKAudio.globalParameter()
     
@@ -33,23 +37,27 @@ class Vocoder: AKInstrument {
         addProperty(x)
         addProperty(y)
         
+        addProperty(lfoXShape)
+        addProperty(lfoXDepth)
+        addProperty(lfoXRate)
+        
+        addProperty(lfoYShape)
+        addProperty(lfoYDepth)
+        addProperty(lfoYRate)
+        
         addProperty(formantsFrequency)
         addProperty(formantsBandwidth)
         
-        addProperty(lfoFrequency)
-        addProperty(lfoXAmplitude)
-        addProperty(lfoYAmplitude)
-        
         let lfoX = AKLowFrequencyOscillator(
             waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
-            frequency: lfoFrequency,
-            amplitude: lfoXAmplitude * 0.5.ak
+            frequency: lfoXRate,
+            amplitude: lfoXDepth * 0.5.ak
         )
         
         let lfoY = AKLowFrequencyOscillator(
             waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
-            frequency: lfoFrequency,
-            amplitude: lfoYAmplitude * 0.5.ak
+            frequency: lfoYRate,
+            amplitude: lfoYDepth * 0.5.ak
         )
         
         let topFrequencies = zip(topLeftFrequencies, topRightFrequencies).map { topLeftFrequency, topRightFrequency in
@@ -88,7 +96,7 @@ class Vocoder: AKInstrument {
         
         assignOutput(output, to: balance)
         
-        self.resetParameter(input)
+        resetParameter(input)
     }
     
 }

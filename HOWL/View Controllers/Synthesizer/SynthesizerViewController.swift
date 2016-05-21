@@ -108,13 +108,13 @@ class SynthesizerViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var vibratoFrequencyControl: AudioControl? {
+    @IBOutlet weak var vibratoRateControl: AudioControl? {
         didSet {
-            vibratoFrequencyControl?.onChangeValue = { value in
-                Audio.synthesizer.vibratoFrequency.value = value
-                Settings.vibratoFrequency.value = value
+            vibratoRateControl?.onChangeValue = { value in
+                Audio.synthesizer.vibratoRate.value = value
+                Settings.vibratoRate.value = value
             }
-            vibratoFrequencyControl?.value = Settings.vibratoFrequency.value
+            vibratoRateControl?.value = Settings.vibratoRate.value
         }
     }
     
@@ -139,13 +139,13 @@ class SynthesizerViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var tremoloFrequencyControl: AudioControl? {
+    @IBOutlet weak var tremoloRateControl: AudioControl? {
         didSet {
-            tremoloFrequencyControl?.onChangeValue = { value in
-                Audio.synthesizer.tremoloFrequency.value = value
-                Settings.tremoloFrequency.value = value
+            tremoloRateControl?.onChangeValue = { value in
+                Audio.synthesizer.tremoloRate.value = value
+                Settings.tremoloRate.value = value
             }
-            tremoloFrequencyControl?.value = Settings.tremoloFrequency.value
+            tremoloRateControl?.value = Settings.tremoloRate.value
         }
     }
     
@@ -166,11 +166,11 @@ class SynthesizerViewController: UIViewController {
         
         vibratoWaveformControl?.value = Settings.vibratoWaveform.defaultValue
         vibratoDepthControl?.value = Settings.vibratoDepth.defaultValue
-        vibratoFrequencyControl?.value = Settings.vibratoFrequency.defaultValue
+        vibratoRateControl?.value = Settings.vibratoRate.defaultValue
         
         tremoloWaveformControl?.value = Settings.tremoloWaveform.defaultValue
         tremoloDepthControl?.value = Settings.tremoloDepth.defaultValue
-        tremoloFrequencyControl?.value = Settings.tremoloFrequency.defaultValue
+        tremoloRateControl?.value = Settings.tremoloRate.defaultValue
     }
     
     // MARK: - Private getters

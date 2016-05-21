@@ -12,65 +12,55 @@ class Master: AKInstrument {
     
     var amplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     
-    var bitcrushMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var bitcrushDepth = AKInstrumentProperty(value: 8.0, minimum: 8.0, maximum: 24.0)
-    var bitcrushRate = AKInstrumentProperty(value: 4000.0, minimum: 4000.0, maximum: 32000.0)
-    
-    var reverbMix = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var reverbFeedback = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var reverbCutoff = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 16000.0)
+    var effectsBitcrush = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var effectsReverb = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     
     init(withInput input: AKAudio) {
         super.init()
         
         addProperty(amplitude)
         
-        addProperty(bitcrushMix)
-        addProperty(bitcrushDepth)
-        addProperty(bitcrushRate)
+        addProperty(effectsBitcrush)
+        addProperty(effectsReverb)
         
-        addProperty(reverbMix)
-        addProperty(reverbMix)
-        addProperty(reverbMix)
-        
-        let bitcrush = AKDecimator(
+        let balance = AKBalance(
             input: input,
-            bitDepth: bitcrushDepth,
-            sampleRate: bitcrushRate
+            comparatorAudioSource: input * amplitude * 0.125.ak
         )
         
-        let postBitcrush = AKBalance(
-            input: bitcrush,
-            comparatorAudioSource:input
+        let bitcrush = AKDecimator(
+            input: balance,
+            bitDepth: 24.ak,
+            sampleRate: 4000.ak
         )
         
         let bitcrushOutput = AKMix(
-            input1: input,
-            input2: postBitcrush,
-            balance: bitcrushMix
+            input1: balance,
+            input2: bitcrush,
+            balance: effectsBitcrush
         )
         
         let reverb = AKReverb(
             input: bitcrushOutput,
-            feedback: reverbFeedback,
-            cutoffFrequency: reverbCutoff
+            feedback: 0.75.ak,
+            cutoffFrequency: 16000.ak
         )
         
         let reverbLeftOutput = AKMix(
             input1: bitcrushOutput,
             input2: reverb.leftOutput,
-            balance: reverbMix
+            balance: effectsReverb
         )
         
         let reverbRightOutput = AKMix(
             input1: bitcrushOutput,
             input2: reverb.rightOutput,
-            balance: reverbMix
+            balance: effectsReverb
         )
         
         let output = AKStereoAudio(
-            leftAudio: reverbLeftOutput * amplitude,
-            rightAudio: reverbRightOutput * amplitude
+            leftAudio: reverbLeftOutput,
+            rightAudio: reverbRightOutput
         )
         
         setStereoAudioOutput(output)
@@ -85,7 +75,7 @@ class Master: AKInstrument {
     }
     
     func unmute() {
-        amplitude.value = 0.125
+        amplitude.value = 1.0
     }
     
 }

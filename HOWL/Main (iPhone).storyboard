@@ -1183,10 +1183,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="bitcrushMixControl" destination="5wm-hF-13a" id="k7X-np-ReP"/>
+                        <outlet property="effectsBitcrushControl" destination="5wm-hF-13a" id="KMY-U9-J5v"/>
+                        <outlet property="effectsReverbControl" destination="woz-pj-zhQ" id="CCZ-z1-3oQ"/>
                         <outlet property="formantsBandwidthControl" destination="D4I-ss-N7k" id="x80-hN-lUC"/>
                         <outlet property="formantsFrequencyControl" destination="6md-Za-K4d" id="xsK-Ta-gtf"/>
-                        <outlet property="reverbMixControl" destination="woz-pj-zhQ" id="L6M-j5-4RI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1423,7 +1423,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agR-iM-jxl" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="141" y="2" width="136" height="111"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -1634,7 +1634,7 @@
                         <outlet property="keyboardLeftIntervalControl" destination="d8O-dp-Xy2" id="863-YA-mdC"/>
                         <outlet property="keyboardRightIntervalControl" destination="IlS-iC-Twg" id="ygg-8t-8mx"/>
                         <outlet property="vibratoDepthControl" destination="76k-PL-aZO" id="82Y-9F-U3s"/>
-                        <outlet property="vibratoFrequencyControl" destination="agR-iM-jxl" id="1K6-6c-xGG"/>
+                        <outlet property="vibratoRateControl" destination="agR-iM-jxl" id="UHG-OX-d8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAT-61-qeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
