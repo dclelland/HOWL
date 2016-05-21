@@ -62,14 +62,14 @@ class Master: AKInstrument {
             input: reverbLeftOutput,
             limit: 1.0.ak,
             method: AKClipper.clippingMethodBramDeJong(),
-            clippingStartPoint: 0.875.ak
+            clippingStartPoint: 0.9375.ak
         )
         
         let rightClipper = AKClipper(
             input: reverbRightOutput,
             limit: 1.0.ak,
             method: AKClipper.clippingMethodBramDeJong(),
-            clippingStartPoint: 0.875.ak
+            clippingStartPoint: 0.9375.ak
         )
         
         let output = AKStereoAudio(
