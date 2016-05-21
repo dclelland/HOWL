@@ -12,7 +12,7 @@ import ProtonomeAudioKitControls
 
 class PhonemeboardViewController: UIViewController {
     
-    @IBOutlet weak var phonemeboardView: AudioPlot?
+    @IBOutlet weak var phonemeboardView: PhonemeboardView?
     
     @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
         didSet {
@@ -36,8 +36,8 @@ class PhonemeboardViewController: UIViewController {
         
         Audio.master.unmute()
         
-        Audio.vocoder.x.value = Float(location.x)
-        Audio.vocoder.y.value = Float(location.y)
+        Audio.vocoder.xIn.value = Float(location.x)
+        Audio.vocoder.yIn.value = Float(location.y)
     }
     
     func refreshView() {
