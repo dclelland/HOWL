@@ -13,6 +13,26 @@ import ProtonomeAudioKitControls
 
 class PhonemeboardView: AudioPlot {
     
+    private let trailLength = 24
+    
+    private var trailLocations = [CGPoint]() {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    // MARK: - Overrides
+    
+    override func updateValuesFromCsound() {
+        super.updateValuesFromCsound()
+        
+        let locations = Array(([trailLocation] + trailLocations).prefix(trailLength))
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.trailLocations = locations
+        })
+    }
+    
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
@@ -24,21 +44,17 @@ class PhonemeboardView: AudioPlot {
         }
     }
     
-    private let trailLength = 24
+    // MARK: - Private getters
     
     private var trailPath: UIBezierPath {
-        trailLocations = Array(([trailLocation] + trailLocations).prefix(trailLength))
-        
         let path = UIBezierPath.makePath { make in
             trailLocations.enumerate().forEach { index, location in
-                make.oval(at: location, radius: CGFloat(trailLength - index))
+                make.oval(at: location, radius: CGFloat(trailLength - index) * 0.5)
             }
         }
         
         return path
     }
-    
-    private lazy var trailLocations = [CGPoint]()
     
     private var trailLocation: CGPoint {
         let x = CGFloat(Audio.vocoder.xOut.value).lerp(min: bounds.minX, max: bounds.maxX)
