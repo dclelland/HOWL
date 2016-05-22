@@ -112,7 +112,7 @@ import SnapKit
     // MARK: Formatter
     
     /// The control's formatter object, used for converting a generic value with arbitrary range to a user-readable string.
-    /// The formatter object is dynamically generated, and depends upon `formatterSteps`, if `formatterType` is `"stepped"`.
+    /// The formatter object is dynamically generated, and depends upon `formatterString`, if `formatterType` is `"string"`, or `formatterSteps`, if `formatterType` is `"stepped"`.
     /// Invalid values for `formatterType` will fire a fatal error.
     var formatter: ParameterFormatter {
         guard let type = FormatterType(rawValue: formatterType) else {
@@ -132,6 +132,8 @@ import SnapKit
             return AmplitudeParameterFormatter()
         case .Frequency:
             return FrequencyParameterFormatter()
+        case .String:
+            return StringParameterFormatter(string: formatterString)
         case .Stepped:
             let steps = NSDictionary.init(objects: formatterValues, forKeys: scaleValues) as! [Float: String]
             return SteppedParameterFormatter(steps: steps)
@@ -159,13 +161,23 @@ import SnapKit
         /// Specifies a `FrequencyParameterFormatter` object.
         case Frequency = "frequency"
         
+        /// Specifies a `StringParameterFormatter` object.
+        case String = "string"
+        
         /// Specifies a `SteppedParameterFormatter` object.
         case Stepped = "stepped"
     }
     
     /// A string constant specifying the chosen formatter.
-    /// Due to the limitations of `@IBInspectable`, this must be set to one of the constants `"number"`, `"integer"`, `"percentage"`, `"duration"`, `"amplitude"`, `"frequency"`, or `"stepped"`.
+    /// Due to the limitations of `@IBInspectable`, this must be set to one of the constants `"number"`, `"integer"`, `"percentage"`, `"duration"`, `"amplitude"`, `"frequency"`, `"string"`, or `"stepped"`.
     @IBInspectable public var formatterType: String = FormatterType.Number.rawValue {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    /// A custom string, used by the string formatter.
+    @IBInspectable public var formatterString: String? = nil {
         didSet {
             setNeedsLayout()
         }

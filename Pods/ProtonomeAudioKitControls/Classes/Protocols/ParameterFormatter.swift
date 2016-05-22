@@ -12,7 +12,7 @@ import UIKit
 public protocol ParameterFormatter {
     
     /// Converts a value to a formatted string.
-    func string(forValue value: Float) -> String
+    func string(forValue value: Float) -> String?
     
 }
 
@@ -26,8 +26,8 @@ public protocol ParameterFormatterConstructor: ParameterFormatter {
 
 extension ParameterFormatterConstructor {
     
-    public func string(forValue value: Float) -> String {
-        return formatter(forValue: value).stringFromNumber(NSNumber(float: value))!
+    public func string(forValue value: Float) -> String? {
+        return formatter(forValue: value).stringFromNumber(NSNumber(float: value))
     }
     
 }
@@ -120,6 +120,18 @@ public struct FrequencyParameterFormatter: ParameterFormatterConstructor {
     
 }
 
+/// A parameter formatter class which just returns a custom fixed string value.
+public struct StringParameterFormatter: ParameterFormatter {
+    
+    /// The formatter's string.
+    public var string: String?
+    
+    public func string(forValue value: Float) -> String? {
+        return string
+    }
+    
+}
+
 /// A parameter formatter class which picks a name from a stepped sequence, e.g. if `steps` is `[1: "A", 2: "B"]`, then the value `2` is formatted `"B"`.
 ///
 /// Invalid values will return an empty string, in the interest of type safety but at the disregard of sensible behaviour (we'd rather return `""` than crash in the event some process causes an invalid value to be sent here at run time).
@@ -130,7 +142,7 @@ public struct SteppedParameterFormatter: ParameterFormatter {
     /// The formatter's steps - a dictionary of unique values to names.
     public var steps: [Float: String]
     
-    public func string(forValue value: Float) -> String {
+    public func string(forValue value: Float) -> String? {
         return steps[value] ?? ""
     }
 

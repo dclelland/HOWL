@@ -55,13 +55,13 @@ class Vocoder: AKInstrument {
         addProperty(formantsBandwidth)
         
         let lfoX = AKLowFrequencyOscillator(
-            waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
+            waveformType: lfoXWaveform.value.ak,
             frequency: lfoXRate,
             amplitude: lfoXDepth * 0.5.ak
         )
         
         let lfoY = AKLowFrequencyOscillator(
-            waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
+            waveformType: lfoYWaveform.value.ak,
             frequency: lfoYRate,
             amplitude: lfoYDepth * 0.5.ak
         )

@@ -15,12 +15,12 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.0 Todo
 
-- Revise iPhone screen layout
 - Formant LFO system
-    - Suss out curve shape
+- Fix up PhonemeboardView IBDesignable issues
+- iPad Pro splash screen
+    - Might be able to use IBDesignable views...?
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
-- iPad Pro splash screen
 - Audiobus
     - Passthrough
 
