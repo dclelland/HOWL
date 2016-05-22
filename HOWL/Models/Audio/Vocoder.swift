@@ -10,9 +10,9 @@ import AudioKit
 
 class Vocoder: AKInstrument {
     
-    let topLeftFrequencies: [Float] = [588, 1952, 2601, 3624] // /æ/
+    let topLeftFrequencies: [Float] = [844, 1656, 2437, 3704] // /æ/
     let topRightFrequencies: [Float] = [768, 1333, 2522, 3687] // /α/
-    let bottomLeftFrequencies: [Float] = [342, 2322, 3000, 3657] // /i/
+    let bottomLeftFrequencies: [Float] = [324, 2985, 3329, 3807] // /i/
     let bottomRightFrequencies: [Float] = [378, 997, 2343, 3357] // /u/
     
     var xIn = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
@@ -36,6 +36,8 @@ class Vocoder: AKInstrument {
     
     init(withInput input: AKAudio) {
         super.init()
+        
+        printNewCorners()
         
         addProperty(xIn)
         addProperty(yIn)
@@ -122,6 +124,31 @@ extension Vocoder {
             let y = CGFloat(yOut.value)
             return CGPoint(x: x, y: y)
         }
+    }
+    
+    func printNewCorners() {
+        print(formants(atLocation: CGPoint(x: 1.0 / 3.0, y: -2.0 / 3.0)))
+        print(formants(atLocation: CGPoint(x: 1.75, y: 0.75)))
+        print(formants(atLocation: CGPoint(x: -0.5, y: 1.0)))
+        print(formants(atLocation: CGPoint(x: 1.5, y: 1.0)))
+    }
+    
+    func formants(atLocation location: CGPoint) -> [Float] {
+    
+        let topFrequencies = zip(topLeftFrequencies, topRightFrequencies).map { topLeftFrequency, topRightFrequency in
+            return Float(location.x).lerp(min: topLeftFrequency, max: topRightFrequency)
+        }
+        
+        let bottomFrequencies = zip(bottomLeftFrequencies, bottomRightFrequencies).map { bottomLeftFrequency, bottomRightFrequency in
+            return Float(location.x).lerp(min: bottomLeftFrequency, max: bottomRightFrequency)
+        }
+        
+        let frequencies = zip(topFrequencies, bottomFrequencies).map { topFrequency, bottomFrequency in
+            return Float(location.y).lerp(min: topFrequency, max: bottomFrequency)
+        }
+    
+        return frequencies
+    
     }
 
 }

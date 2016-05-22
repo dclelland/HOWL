@@ -75,7 +75,6 @@ class KeyboardViewController: UIViewController {
     // MARK: - Note actions
     
     func playNoteForTouch(touch: UITouch, withKey key: Key) {
-        print(key.pitch, key.pitch.frequency)
         let note = Audio.synthesizer.note(withFrequency: key.pitch.frequency)
         Audio.synthesizer.playNote(note)
         notes[touch] = (key: key, note: note)
