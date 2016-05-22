@@ -51,13 +51,13 @@ class VocoderViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var lfoXShapeControl: AudioControl? {
+    @IBOutlet weak var lfoXWaveformControl: AudioControl? {
         didSet {
-            lfoXShapeControl?.onChangeValue = { value in
-                Audio.vocoder.lfoXShape.value = value
-                Settings.lfoXShape.value = value
+            lfoXWaveformControl?.onChangeValue = { value in
+                Audio.vocoder.lfoXWaveform.value = value
+                Settings.lfoXWaveform.value = value
             }
-            lfoXShapeControl?.value = Settings.lfoXShape.value
+            lfoXWaveformControl?.value = Settings.lfoXWaveform.value
         }
     }
     
@@ -81,13 +81,13 @@ class VocoderViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var lfoYShapeControl: AudioControl? {
+    @IBOutlet weak var lfoYWaveformControl: AudioControl? {
         didSet {
-            lfoYShapeControl?.onChangeValue = { value in
-                Audio.vocoder.lfoYShape.value = value
-                Settings.lfoYShape.value = value
+            lfoYWaveformControl?.onChangeValue = { value in
+                Audio.vocoder.lfoYWaveform.value = value
+                Settings.lfoYWaveform.value = value
             }
-            lfoYShapeControl?.value = Settings.lfoYShape.value
+            lfoYWaveformControl?.value = Settings.lfoYWaveform.value
         }
     }
     
@@ -124,11 +124,11 @@ class VocoderViewController: UIViewController {
         effectsBitcrushControl?.value = Settings.effectsBitcrush.defaultValue
         effectsReverbControl?.value = Settings.effectsReverb.defaultValue
         
-        lfoXShapeControl?.value = Settings.lfoXShape.defaultValue
+        lfoXWaveformControl?.value = Settings.lfoXWaveform.defaultValue
         lfoXDepthControl?.value = Settings.lfoXDepth.defaultValue
         lfoXRateControl?.value = Settings.lfoXRate.defaultValue
         
-        lfoYShapeControl?.value = Settings.lfoYShape.defaultValue
+        lfoYWaveformControl?.value = Settings.lfoYWaveform.defaultValue
         lfoYDepthControl?.value = Settings.lfoYDepth.defaultValue
         lfoYRateControl?.value = Settings.lfoYRate.defaultValue
     }

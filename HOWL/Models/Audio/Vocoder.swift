@@ -21,11 +21,11 @@ class Vocoder: AKInstrument {
     var xOut = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
     var yOut = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
     
-    var lfoXShape = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var lfoXWaveform = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var lfoXDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var lfoXRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
     
-    var lfoYShape = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var lfoYWaveform = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var lfoYDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
     var lfoYRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
     
@@ -43,11 +43,11 @@ class Vocoder: AKInstrument {
         addProperty(xOut)
         addProperty(yOut)
         
-        addProperty(lfoXShape)
+        addProperty(lfoXWaveform)
         addProperty(lfoXDepth)
         addProperty(lfoXRate)
         
-        addProperty(lfoYShape)
+        addProperty(lfoYWaveform)
         addProperty(lfoYDepth)
         addProperty(lfoYRate)
         

@@ -20,11 +20,11 @@ struct Settings {
     static let effectsBitcrush = Setting<Float>(key: "effectsBitcrush", defaultValue: 0.0)
     static let effectsReverb = Setting<Float>(key: "effectsReverb", defaultValue: 0.0)
     
-    static let lfoXShape = Setting<Float>(key: "lfoXShape", defaultValue: 0.0)
+    static let lfoXWaveform = Setting<Float>(key: "lfoXWaveform", defaultValue: AKLowFrequencyOscillator.waveformTypeForSine().value)
     static let lfoXDepth = Setting<Float>(key: "lfoXDepth", defaultValue: 0.0)
     static let lfoXRate = Setting<Float>(key: "lfoXRate", defaultValue: 0.0)
     
-    static let lfoYShape = Setting<Float>(key: "lfoYShape", defaultValue: 0.0)
+    static let lfoYWaveform = Setting<Float>(key: "lfoYWaveform", defaultValue: AKLowFrequencyOscillator.waveformTypeForSine().value)
     static let lfoYDepth = Setting<Float>(key: "lfoYDepth", defaultValue: 0.0)
     static let lfoYRate = Setting<Float>(key: "lfoYRate", defaultValue: 0.0)
     
