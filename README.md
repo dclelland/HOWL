@@ -16,6 +16,10 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 ### 2.0 Todo
 
 - Formant LFO system
+    - Try reloading the instrument
+    - Try wave tables
+    - Try having 4 LFOs (lol)
+        - An if statement might be quite efficient perhaps, could do the same in the synth as in the vocoder
 - Fix up PhonemeboardView IBDesignable issues
 - iPad Pro splash screen
     - Might be able to use IBDesignable views...?
