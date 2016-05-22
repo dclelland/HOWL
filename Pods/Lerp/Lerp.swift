@@ -101,10 +101,10 @@ public protocol Clampable {
 Clamps the value between an lower and upper bound.
 
 - parameter value: The input value.
-- parameter min: The lower bound. Expected to be less than *max*.
-- parameter max: The upper bound. Expected to be greater than *min*.
+- parameter min: The lower bound.
+- parameter max: The upper bound.
 
-- returns: Returns *min* if *value* is less than min, or *max* if *value* is greater than *max*. Else, returns *value*. If *min* is greater than *max*, it just returns *value*.
+- returns: Returns *min* if *value* is less than min, or *max* if *value* is greater than *max*. *min* and *max* can safely be swapped.
 */
 
 public func clamp<T: Clampable>(value: T, min: T, max: T) -> T {
@@ -117,10 +117,7 @@ extension Double: Clampable {
     
     /// Clamp
     public func clamp(min min: Double, max: Double) -> Double {
-        if min < max {
-            return Swift.min(Swift.max(self, min), max)
-        }
-        return self
+        return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
     }
     
 }
@@ -129,10 +126,7 @@ extension Float: Clampable {
     
     /// Clamp
     public func clamp(min min: Float, max: Float) -> Float {
-        if min < max {
-            return Swift.min(Swift.max(self, min), max)
-        }
-        return self
+        return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
     }
     
 }
@@ -141,10 +135,7 @@ extension CGFloat: Clampable {
     
     /// Clamp
     public func clamp(min min: CGFloat, max: CGFloat) -> CGFloat {
-        if min < max {
-            return Swift.min(Swift.max(self, min), max)
-        }
-        return self
+        return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
     }
     
 }
