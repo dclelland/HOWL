@@ -11,7 +11,6 @@
 		6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD6C1C1C022900C2254B /* HowlViewController.swift */; };
 		6500FD761C1C02E500C2254B /* AudioKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */; };
 		6500FD781C1C02E500C2254B /* Int+Parity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD731C1C02E500C2254B /* Int+Parity.swift */; };
-		656505381CEF2326002DC3E2 /* CGRect+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656505371CEF2326002DC3E2 /* CGRect+Normalization.swift */; };
 		6565053C1CEFE567002DC3E2 /* PhonemeboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565053B1CEFE567002DC3E2 /* PhonemeboardView.swift */; };
 		657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657350F11CEEF44300EC1233 /* Vocoder.swift */; };
 		657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */; };
@@ -45,7 +44,6 @@
 		6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioKit+Helpers.swift"; sourceTree = "<group>"; };
 		6500FD731C1C02E500C2254B /* Int+Parity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Parity.swift"; sourceTree = "<group>"; };
 		656472CF1BF6BD2A00BDEB1B /* HOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		656505371CEF2326002DC3E2 /* CGRect+Normalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Normalization.swift"; sourceTree = "<group>"; };
 		6565053B1CEFE567002DC3E2 /* PhonemeboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardView.swift; sourceTree = "<group>"; };
 		657350F11CEEF44300EC1233 /* Vocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocoder.swift; sourceTree = "<group>"; };
 		657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesizerViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */,
-				656505371CEF2326002DC3E2 /* CGRect+Normalization.swift */,
 				6500FD731C1C02E500C2254B /* Int+Parity.swift */,
 			);
 			path = Extensions;
@@ -369,7 +366,6 @@
 				657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */,
 				6500FD781C1C02E500C2254B /* Int+Parity.swift in Sources */,
 				657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */,
-				656505381CEF2326002DC3E2 /* CGRect+Normalization.swift in Sources */,
 				65800FBA1C09D1BF000410CB /* SynthesizerNote.swift in Sources */,
 				657F0D141C0EFA72004B17EF /* FlipViewController.swift in Sources */,
 				65800FC11C09D1BF000410CB /* KeyboardViewLayout.swift in Sources */,

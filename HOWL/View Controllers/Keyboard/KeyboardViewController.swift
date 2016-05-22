@@ -143,7 +143,8 @@ extension KeyboardViewController: UICollectionViewDataSource {
     private func collectionView(collectionView: UICollectionView, pathForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIBezierPath {
         return key.path.makePath { make in
             make.translation(tx: -key.path.bounds.minX, ty: -key.path.bounds.minY)
-            make.transform(collectionView.bounds.denormalizationTransform())
+            make.scale(sx: collectionView.bounds.width, sy: collectionView.bounds.height)
+            make.translation(tx: collectionView.bounds.minX, ty: collectionView.bounds.minY)
         }
     }
     
@@ -177,7 +178,8 @@ extension KeyboardViewController: KeyboardViewLayoutDelegate {
         }
         
         return key.path.makePath { make in
-            make.transform(collectionView.bounds.denormalizationTransform())
+            make.scale(sx: collectionView.bounds.width, sy: collectionView.bounds.height)
+            make.translation(tx: collectionView.bounds.minX, ty: collectionView.bounds.minY)
         }
     }
     
@@ -216,7 +218,11 @@ extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
     // MARK: Private getters
     
     private func keyForTouch(touch: UITouch) -> Key? {
-        let location = CGPointApplyAffineTransform(touch.locationInView(keyboardView), keyboardView!.bounds.normalizationTransform())
+        guard let keyboardView = keyboardView else {
+            return nil
+        }
+        
+        let location = touch.locationInView(keyboardView).ilerp(rect: keyboardView.bounds)
         
         return keyboard.keyAtLocation(location)
     }
