@@ -75,7 +75,8 @@ class KeyboardViewController: UIViewController {
     // MARK: - Note actions
     
     func playNoteForTouch(touch: UITouch, withKey key: Key) {
-        let note = Audio.synthesizer.note(withFrequency: key.frequency)
+        print(key.pitch, key.pitch.frequency)
+        let note = Audio.synthesizer.note(withFrequency: key.pitch.frequency)
         Audio.synthesizer.playNote(note)
         notes[touch] = (key: key, note: note)
     }
@@ -151,9 +152,9 @@ extension KeyboardViewController: UICollectionViewDataSource {
     private func collectionView(collectionView: UICollectionView, colorForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIColor {
         let keyNotes = notes.values.filter { $0.key == key }
         
-        let hue = CGFloat(key.note) / 12.0
-        let saturation = 1.0 - CGFloat(key.pitch - keyboard.centerPitch) / CGFloat(keyboard.centerPitch)
-        let brightness = 1.0 - CGFloat(keyboard.centerPitch - key.pitch) / CGFloat(keyboard.centerPitch)
+        let hue = CGFloat(key.pitch.note.rawValue) / 12.0
+        let saturation = 1.0 - CGFloat(key.pitch.number - keyboard.centerPitch.number) / CGFloat(keyboard.centerPitch.number)
+        let brightness = 1.0 - CGFloat(keyboard.centerPitch.number - key.pitch.number) / CGFloat(keyboard.centerPitch.number)
         
         if keyNotes.count > 0 {
             return UIColor.protonome_lightColor(withHue: hue, saturation: saturation, brightness: brightness)

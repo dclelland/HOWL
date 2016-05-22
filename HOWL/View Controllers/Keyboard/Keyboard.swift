@@ -18,7 +18,7 @@ class Keyboard {
     var leftInterval: Int
     var rightInterval: Int
     
-    var centerPitch: Int = 48
+    var centerPitch: Pitch = 48
     
     init(width: Int, height: Int, leftInterval: Int, rightInterval: Int) {
         self.width = width
@@ -91,8 +91,8 @@ class Keyboard {
     
     // MARK: - Transforms
     
-    private func pitchForCoordinates(coordinates: KeyCoordinates) -> Int {
-        return centerPitch + coordinates.left * leftInterval + coordinates.right * rightInterval
+    private func pitchForCoordinates(coordinates: KeyCoordinates) -> Pitch {
+        return Pitch(number: centerPitch.number + coordinates.left * leftInterval + coordinates.right * rightInterval)
     }
     
     private func pathForCoordinates(coordinates: KeyCoordinates) -> UIBezierPath {

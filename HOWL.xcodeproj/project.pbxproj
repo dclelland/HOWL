@@ -27,6 +27,7 @@
 		65800FC01C09D1BF000410CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA41C09D1BF000410CB /* KeyboardViewController.swift */; };
 		65800FC11C09D1BF000410CB /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */; };
 		65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */; };
+		65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4EC9C1CF198C3000D5B16 /* Pitch.swift */; };
 		65F2B76B1C1FCF8E00E2DA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */; };
 		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
 		65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B871CD60D10001AB56A /* Main (iPad).storyboard */; };
@@ -59,6 +60,7 @@
 		65800FA41C09D1BF000410CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 		65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
+		65C4EC9C1CF198C3000D5B16 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		65D7E3701C0027CF009D6994 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
 		65F2B7661C1FCF8000E2DA15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				65800FA31C09D1BF000410CB /* KeyboardViewCell.swift */,
 				65800FA21C09D1BF000410CB /* Keyboard.swift */,
 				65800FA11C09D1BF000410CB /* Key.swift */,
+				65C4EC9C1CF198C3000D5B16 /* Pitch.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				6500FD761C1C02E500C2254B /* AudioKit+Helpers.swift in Sources */,
 				6500FD6B1C1BD43C00C2254B /* Setting.swift in Sources */,
 				6565053C1CEFE567002DC3E2 /* PhonemeboardView.swift in Sources */,
+				65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */,
 				65800FB81C09D1BF000410CB /* Master.swift in Sources */,
 				6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */,
 				657F0D0E1C0D94F3004B17EF /* VocoderViewController.swift in Sources */,
