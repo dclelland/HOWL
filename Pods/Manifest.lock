@@ -4,7 +4,7 @@ PODS:
   - Degrad (0.2.0)
   - Lerp (0.2.0)
   - MultitouchGestureRecognizer (0.1.1)
-  - ProtonomeAudioKitControls (0.2.2):
+  - ProtonomeAudioKitControls (0.2.3):
     - AudioKit (~> 2.0)
     - Bezzy
     - Degrad
@@ -27,7 +27,7 @@ SPEC CHECKSUMS:
   Degrad: 590415ee0f71c0516c661c806f7a2489376bfd7e
   Lerp: 71b55a57e6c89f24fd41c82fc30137961e5daeb2
   MultitouchGestureRecognizer: e32b5b78035c4c389973b410aae01bcd4f763f29
-  ProtonomeAudioKitControls: 7b0e0fe29534ef596c70a724c6ec6d30b06a0135
+  ProtonomeAudioKitControls: 3279d825d00bda04fddf8f88974d949cc94c492f
   ProtonomeRoundedViews: cceec203fb0ebc909e295429209b15144ab2996d
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
 

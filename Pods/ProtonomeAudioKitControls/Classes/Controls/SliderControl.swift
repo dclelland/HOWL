@@ -22,6 +22,7 @@ import Lerp
         let label = UILabel()
         label.textAlignment = .Center
         label.textColor = UIColor.protonome_blackColor()
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
