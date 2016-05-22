@@ -97,8 +97,8 @@ class Keyboard {
     private func pathForCoordinates(coordinates: KeyCoordinates) -> UIBezierPath {
         let location = locationForCoordinates(coordinates)
         
-        let horizontalKeyRadius = 1.0 / (2.0 * CGFloat(width))
-        let verticalKeyRadius = 1.0 / (2.0 * CGFloat(height))
+        let horizontalKeyRadius = 1.0 / CGFloat(width) / 2.0
+        let verticalKeyRadius = 1.0 / CGFloat(height) / 2.0
         
         return UIBezierPath.makePath { make in
             make.move(x: location.x, y: location.y - verticalKeyRadius)
