@@ -37,8 +37,6 @@ class Vocoder: AKInstrument {
     init(withInput input: AKAudio) {
         super.init()
         
-        printNewCorners()
-        
         addProperty(xIn)
         addProperty(yIn)
         
@@ -124,31 +122,6 @@ extension Vocoder {
             let y = CGFloat(yOut.value)
             return CGPoint(x: x, y: y)
         }
-    }
-    
-    func printNewCorners() {
-        print(formants(atLocation: CGPoint(x: 1.0 / 3.0, y: -2.0 / 3.0)))
-        print(formants(atLocation: CGPoint(x: 1.75, y: 0.75)))
-        print(formants(atLocation: CGPoint(x: -0.5, y: 1.0)))
-        print(formants(atLocation: CGPoint(x: 1.5, y: 1.0)))
-    }
-    
-    func formants(atLocation location: CGPoint) -> [Float] {
-    
-        let topFrequencies = zip(topLeftFrequencies, topRightFrequencies).map { topLeftFrequency, topRightFrequency in
-            return Float(location.x).lerp(min: topLeftFrequency, max: topRightFrequency)
-        }
-        
-        let bottomFrequencies = zip(bottomLeftFrequencies, bottomRightFrequencies).map { bottomLeftFrequency, bottomRightFrequency in
-            return Float(location.x).lerp(min: bottomLeftFrequency, max: bottomRightFrequency)
-        }
-        
-        let frequencies = zip(topFrequencies, bottomFrequencies).map { topFrequency, bottomFrequency in
-            return Float(location.y).lerp(min: topFrequency, max: bottomFrequency)
-        }
-    
-        return frequencies
-    
     }
 
 }
