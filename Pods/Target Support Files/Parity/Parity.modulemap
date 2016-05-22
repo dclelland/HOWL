@@ -1,0 +1,6 @@
+framework module Parity {
+  umbrella header "Parity-umbrella.h"
+
+  export *
+  module * { export * }
+}

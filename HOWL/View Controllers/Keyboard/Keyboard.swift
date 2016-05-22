@@ -8,6 +8,7 @@
 
 import UIKit
 import Bezzy
+import Parity
 
 class Keyboard {
     
