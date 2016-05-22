@@ -89,6 +89,44 @@ extension CGFloat: Lerpable {
     
 }
 
+extension CGPoint: Lerpable {
+    
+    /// Linear interpolation
+    public func lerp(min min: CGPoint, max: CGPoint) -> CGPoint {
+        let x = self.x.lerp(min: min.x, max: max.x)
+        let y = self.y.lerp(min: min.y, max: max.y)
+        return CGPoint(x: x, y: y)
+    }
+    
+    /// Inverse linear interpolation
+    public func ilerp(min min: CGPoint, max: CGPoint) -> CGPoint {
+        let x = self.x.ilerp(min: min.x, max: max.x)
+        let y = self.y.ilerp(min: min.y, max: max.y)
+        return CGPoint(x: x, y: y)
+    }
+
+}
+
+// MARK: CGPoint lerpable extension
+
+extension CGPoint {
+    
+    /// Linear interpolation on a rect
+    public func lerp(rect rect: CGRect) -> CGPoint {
+        let min = CGPoint(x: rect.minX, y: rect.minY)
+        let max = CGPoint(x: rect.maxX, y: rect.maxY)
+        return lerp(min: min, max: max)
+    }
+    
+    /// Inverse linear interpolation on a rect
+    public func ilerp(rect rect: CGRect) -> CGPoint {
+        let min = CGPoint(x: rect.minX, y: rect.minY)
+        let max = CGPoint(x: rect.maxX, y: rect.maxY)
+        return ilerp(min: min, max: max)
+    }
+
+}
+
 // MARK: Clampable protocol
 
 public protocol Clampable {
@@ -138,4 +176,28 @@ extension CGFloat: Clampable {
         return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
     }
     
+}
+
+extension CGPoint: Clampable {
+    
+    /// Clamp
+    public func clamp(min min: CGPoint, max: CGPoint) -> CGPoint {
+        let x = self.x.clamp(min: min.x, max: max.x)
+        let y = self.y.clamp(min: min.y, max: max.y)
+        return CGPoint(x: x, y: y)
+    }
+    
+}
+
+// MARK: CGPoint clampable extension
+
+extension CGPoint {
+    
+    /// Clamp to a rect
+    public func clamp(rect rect: CGRect) -> CGPoint {
+        let min = CGPoint(x: rect.minX, y: rect.minY)
+        let max = CGPoint(x: rect.maxX, y: rect.maxY)
+        return clamp(min: min, max: max)
+    }
+
 }

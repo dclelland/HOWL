@@ -36,8 +36,7 @@ class PhonemeboardViewController: UIViewController {
         
         Audio.master.unmute()
         
-        Audio.vocoder.xIn.value = Float(location.x)
-        Audio.vocoder.yIn.value = Float(location.y)
+        Audio.vocoder.location = location
     }
     
     func refreshView() {
@@ -77,7 +76,7 @@ class PhonemeboardViewController: UIViewController {
             return CGPoint(x: x, y: y)
         }
         
-        return CGPointApplyAffineTransform(location, phonemeboardView.bounds.normalizationTransform())
+        return location.ilerp(rect: phonemeboardView.bounds)
     }
     
 }

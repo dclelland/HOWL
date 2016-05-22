@@ -54,7 +54,7 @@ class PhonemeboardView: AudioPlot {
         let path = UIBezierPath.makePath { make in
             trailLocations.enumerate().forEach { index, location in
                 let ratio = CGFloat(index).ilerp(min: 0.0, max: CGFloat(trailLength)).lerp(min: 1.0, max: 0.0)
-                let radius = pow(ratio, 2.0) * 12.0
+                let radius = pow(ratio, 2.0) * 24.0
                 make.oval(at: location, radius: radius)
             }
         }
@@ -67,26 +67,21 @@ class PhonemeboardView: AudioPlot {
     }
     
     private var trailLocation: CGPoint {
-        let x = CGFloat(Audio.vocoder.xOut.value).lerp(min: bounds.minX, max: bounds.maxX)
-        let y = CGFloat(Audio.vocoder.yOut.value).lerp(min: bounds.minY, max: bounds.maxY)
-        
-        return CGPoint(x: x, y: y)
+        return Audio.vocoder.location.lerp(rect: bounds)
     }
     
     private var trailHue: CGFloat {
-        let x = CGFloat(Audio.vocoder.xOut.value) - 0.5
-        let y = CGFloat(Audio.vocoder.yOut.value) - 0.5
+        let location = Audio.vocoder.location
         
-        let angle = atan2(x, y)
+        let angle = atan2(location.x - 0.5, location.y - 0.5)
         
         return (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
     }
     
     private var trailSaturation: CGFloat {
-        let x = CGFloat(Audio.vocoder.xOut.value) - 0.5
-        let y = CGFloat(Audio.vocoder.yOut.value) - 0.5
+        let location = Audio.vocoder.location
         
-        let distance = hypot(x, y)
+        let distance = hypot(location.x - 0.5, location.y - 0.5)
         
         return distance * 2.0
     }

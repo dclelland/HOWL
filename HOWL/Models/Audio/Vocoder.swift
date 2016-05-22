@@ -109,3 +109,19 @@ class Vocoder: AKInstrument {
     }
     
 }
+
+extension Vocoder {
+    
+    var location: CGPoint {
+        set {
+            xIn.value = Float(newValue.x)
+            yIn.value = Float(newValue.y)
+        }
+        get {
+            let x = CGFloat(xOut.value)
+            let y = CGFloat(yOut.value)
+            return CGPoint(x: x, y: y)
+        }
+    }
+
+}
