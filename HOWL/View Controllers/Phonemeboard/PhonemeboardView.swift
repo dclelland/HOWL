@@ -11,7 +11,7 @@ import Bezzy
 import Lerp
 import ProtonomeAudioKitControls
 
-class PhonemeboardView: AudioPlot {
+@IBDesignable class PhonemeboardView: AudioPlot {
     
     private let trailLength = 24
     

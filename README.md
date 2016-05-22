@@ -23,7 +23,6 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Realign formants - need affine transform
 - Bug in reloadNotes when you change waveform
 - Bug in number formatter - can print "-0"
-- Fix up PhonemeboardView IBDesignable issues
 - iPad Pro splash screen
     - Might be able to use IBDesignable views...?
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
