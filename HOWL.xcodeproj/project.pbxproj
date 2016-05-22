@@ -27,8 +27,8 @@
 		65800FC01C09D1BF000410CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA41C09D1BF000410CB /* KeyboardViewController.swift */; };
 		65800FC11C09D1BF000410CB /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */; };
 		65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */; };
+		65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD31CF1D6D300D49967 /* Assets.xcassets */; };
 		65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4EC9C1CF198C3000D5B16 /* Pitch.swift */; };
-		65F2B76B1C1FCF8E00E2DA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */; };
 		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
 		65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B871CD60D10001AB56A /* Main (iPad).storyboard */; };
 		65F33B8A1CD60D10001AB56A /* Main (iPhone).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B881CD60D10001AB56A /* Main (iPhone).storyboard */; };
@@ -60,11 +60,11 @@
 		65800FA41C09D1BF000410CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 		65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
+		65A64DD31CF1D6D300D49967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = HOWL/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		65C4EC9C1CF198C3000D5B16 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		65D7E3701C0027CF009D6994 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
 		65F2B7661C1FCF8000E2DA15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		65F33B871CD60D10001AB56A /* Main (iPad).storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main (iPad).storyboard"; sourceTree = "<group>"; };
 		65F33B881CD60D10001AB56A /* Main (iPhone).storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main (iPhone).storyboard"; sourceTree = "<group>"; };
@@ -217,6 +217,7 @@
 		65F2B7641C1FCF8000E2DA15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65A64DD31CF1D6D300D49967 /* Assets.xcassets */,
 				65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */,
 				65F2B7661C1FCF8000E2DA15 /* Info.plist */,
 			);
@@ -226,7 +227,6 @@
 		65F2B7681C1FCF8E00E2DA15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				65F2B7691C1FCF8E00E2DA15 /* Assets.xcassets */,
 				65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */,
 			);
 			path = Resources;
@@ -303,8 +303,8 @@
 			files = (
 				65F33B8A1CD60D10001AB56A /* Main (iPhone).storyboard in Resources */,
 				65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */,
-				65F2B76B1C1FCF8E00E2DA15 /* Assets.xcassets in Resources */,
 				65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */,
+				65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,8 +477,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D2B569B9BD80BCFD8D1EFAE /* Pods.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "HOWL/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -495,8 +495,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2645469B5082872EBB904DC0 /* Pods.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "HOWL/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
