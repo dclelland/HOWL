@@ -92,12 +92,9 @@ import Lerp
      - returns: A bezier path used for the slider control's indicator.
      */
     override public func path(forRatio ratio: Float) -> UIBezierPath {
-        let x = bounds.minX
-        let y = bounds.minY + bounds.height * (1.0 - CGFloat(ratio))
-        let width = bounds.width
-        let height = bounds.height * CGFloat(ratio)
+        let rect = CGRect(x: 0.0, y: 1.0 - CGFloat(ratio), width: 1.0, height: CGFloat(ratio))
         
-        return UIBezierPath(rect: CGRect(x: x, y: y, width: width, height: height))
+        return UIBezierPath(rect: rect.lerp(rect: bounds))
     }
     
 }

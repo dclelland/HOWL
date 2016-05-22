@@ -77,10 +77,10 @@ import UIKit
      - returns: A ratio, in range `0.0...1.0`.
      */
     override public func ratio(forLocation location: CGPoint) -> Float {
-        let rect = containerView.frame
+        let location = location.ilerp(rect: containerView.frame)
         
-        let column = floor((Float(location.x.ilerp(min: rect.minX, max: rect.maxX)) * Float(gridColumns)).clamp(min: 0.0, max: Float(gridColumns - 1)))
-        let row = floor((Float(location.y.ilerp(min: rect.minY, max: rect.maxY)) * Float(gridRows)).clamp(min: 0.0, max: Float(gridRows - 1)))
+        let column = floor((Float(location.x) * Float(gridColumns)).clamp(min: 0.0, max: Float(gridColumns - 1)))
+        let row = floor((Float(location.y) * Float(gridRows)).clamp(min: 0.0, max: Float(gridRows - 1)))
         
         let index = UInt((Float(row) * Float(gridColumns) + column).clamp(min: 0.0, max: Float(gridCells - 1)))
         

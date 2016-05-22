@@ -113,18 +113,34 @@ extension CGPoint {
     
     /// Linear interpolation on a rect
     public func lerp(rect rect: CGRect) -> CGPoint {
-        let min = CGPoint(x: rect.minX, y: rect.minY)
-        let max = CGPoint(x: rect.maxX, y: rect.maxY)
-        return lerp(min: min, max: max)
+        return lerp(min: rect.min, max: rect.max)
     }
     
     /// Inverse linear interpolation on a rect
     public func ilerp(rect rect: CGRect) -> CGPoint {
-        let min = CGPoint(x: rect.minX, y: rect.minY)
-        let max = CGPoint(x: rect.maxX, y: rect.maxY)
-        return ilerp(min: min, max: max)
+        return ilerp(min: rect.min, max: rect.max)
     }
 
+}
+
+// MARK: CGRect lerpable extension
+
+extension CGRect {
+    
+    /// Linear interpolation on a rect
+    public func lerp(rect rect: CGRect) -> CGRect {
+        let min = self.min.lerp(min: rect.min, max: rect.max)
+        let max = self.max.lerp(min: rect.min, max: rect.max)
+        return CGRect(min: min, max: max)
+    }
+    
+    /// Inverse linear interpolation on a rect
+    public func ilerp(rect rect: CGRect) -> CGRect {
+        let min = self.min.ilerp(min: rect.min, max: rect.max)
+        let max = self.max.ilerp(min: rect.min, max: rect.max)
+        return CGRect(min: min, max: max)
+    }
+    
 }
 
 // MARK: Clampable protocol
@@ -195,9 +211,25 @@ extension CGPoint {
     
     /// Clamp to a rect
     public func clamp(rect rect: CGRect) -> CGPoint {
-        let min = CGPoint(x: rect.minX, y: rect.minY)
-        let max = CGPoint(x: rect.maxX, y: rect.maxY)
-        return clamp(min: min, max: max)
+        return clamp(min: rect.min, max: rect.max)
     }
 
+}
+
+// MARK: CGRect private extension
+
+private extension CGRect {
+    
+    var min: CGPoint {
+        return CGPoint(x: minX, y: minY)
+    }
+    
+    var max: CGPoint {
+        return CGPoint(x: maxX, y: maxY)
+    }
+    
+    init(min: CGPoint, max: CGPoint) {
+        self.init(x: min.x, y: min.y, width: max.x - min.x, height: max.y - min.y)
+    }
+    
 }

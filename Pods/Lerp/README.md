@@ -74,3 +74,15 @@ CGPoint(x: -10.0, y: 50.0).clamp(rect: CGRect(x: 0.0, y: 0.0, width: 20.0, heigh
 // CGPoint(x: 0.0, y: 40.0)
 
 ```
+
+### CGRect helpers:
+
+```swift
+
+CGRect(x: 0.0, y: 0.0, width: 0.5, height: 0.5).lerp(rect: CGRect(x: 0.0, y: 0.0, width: 20.0, height: 40.0))
+// CGRect(x: 0.0, y: 0.0, width: 10.0, height: 20.0)
+
+CGRect(x: 0.0, y: 0.0, width: 10.0, height: 20.0).ilerp(rect: CGRect(x: 0.0, y: 0.0, width: 20.0, height: 40.0))
+// CGRect(x: 0.0, y: 0.0, width: 0.5, height: 0.5)
+
+```

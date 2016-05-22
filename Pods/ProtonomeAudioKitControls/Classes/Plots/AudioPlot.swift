@@ -132,13 +132,15 @@ import AudioKit
             let sample = CGFloat(samples[i * 2])
             let safeSample = sample.isNaN ? 0.0 : sample
             
-            let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
-            let y = safeSample.lerp(min: 0.5, max: 0.5 + plotScale * 0.5) * bounds.height
+            let x = CGFloat(i) / CGFloat(length - 1)
+            let y = safeSample.lerp(min: 0.5, max: 0.5 + plotScale * 0.5)
+            
+            let location = CGPoint(x: x, y: y).lerp(rect: bounds)
             
             if (i == 0) {
-                CGPathMoveToPoint(path, nil, x, y)
+                CGPathMoveToPoint(path, nil, location.x, location.y)
             } else {
-                CGPathAddLineToPoint(path, nil, x, y)
+                CGPathAddLineToPoint(path, nil, location.x, location.y)
             }
         }
         
@@ -146,10 +148,12 @@ import AudioKit
             let sample = CGFloat(samples[i * 2 + 1])
             let safeSample = sample.isNaN ? 0.0 : sample
             
-            let x = CGFloat(i) * (bounds.width / CGFloat(length - 1))
-            let y = safeSample.lerp(min: 0.5, max: 0.5 - plotScale * 0.5) * bounds.height
+            let x = CGFloat(i) / CGFloat(length - 1)
+            let y = safeSample.lerp(min: 0.5, max: 0.5 - plotScale * 0.5)
             
-            CGPathAddLineToPoint(path, nil, x, y)
+            let location = CGPoint(x: x, y: y).lerp(rect: bounds)
+            
+            CGPathAddLineToPoint(path, nil, location.x, location.y)
         }
         
         if length > 0 {
