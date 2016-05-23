@@ -20,7 +20,6 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
     - Try wave tables
     - Try having 4 LFOs (lol)
         - An if statement might be quite efficient perhaps, could do the same in the synth as in the vocoder
-- Realign formants - need affine transform
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Bug in number formatter - can print "-0"
 - Try out slightly bigger fonts for iPad/iPad Pro support
