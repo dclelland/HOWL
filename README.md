@@ -21,10 +21,8 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
     - Try having 4 LFOs (lol)
         - An if statement might be quite efficient perhaps, could do the same in the synth as in the vocoder
 - Realign formants - need affine transform
-- Bug in reloadNotes when you change waveform
+- Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Bug in number formatter - can print "-0"
-- iPad Pro splash screen
-    - Might be able to use IBDesignable views...?
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
 - Audiobus

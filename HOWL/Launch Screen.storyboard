@@ -359,71 +359,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-Kh-NQB">
                                         <rect key="frame" x="0.0" y="0.0" width="511" height="306"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1t-jr-A2K">
-                                        <rect key="frame" x="2" y="2" width="507" height="47"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="TtF-Md-5rE">
-                                                <rect key="frame" x="0.0" y="0.0" width="507" height="47"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="47" id="OY7-qu-smo"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="OY7-qu-smo"/>
-                                                    </mask>
-                                                </variation>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="dI7-9v-VmV">
-                                                <rect key="frame" x="462" y="2" width="43" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="dI7-9v-VmV" secondAttribute="height" multiplier="1:1" id="bJS-Z4-JEx"/>
-                                                    <constraint firstAttribute="width" secondItem="dI7-9v-VmV" secondAttribute="height" id="noa-yj-oCt"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="noa-yj-oCt"/>
-                                                    </mask>
-                                                </variation>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="YRQ-YY-jrg">
-                                                <rect key="frame" x="2" y="2" width="458" height="43"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="47" id="2tY-7V-uDU"/>
-                                            <constraint firstItem="TtF-Md-5rE" firstAttribute="leading" secondItem="G1t-jr-A2K" secondAttribute="leading" id="Ckr-d3-M5o"/>
-                                            <constraint firstItem="TtF-Md-5rE" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="top" id="EDz-so-NYz"/>
-                                            <constraint firstItem="dI7-9v-VmV" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="topMargin" id="FBn-f2-t4D"/>
-                                            <constraint firstItem="dI7-9v-VmV" firstAttribute="trailing" secondItem="G1t-jr-A2K" secondAttribute="trailingMargin" id="NL2-A8-W7o"/>
-                                            <constraint firstItem="dI7-9v-VmV" firstAttribute="bottom" secondItem="G1t-jr-A2K" secondAttribute="bottomMargin" id="Nna-ON-9mh"/>
-                                            <constraint firstItem="YRQ-YY-jrg" firstAttribute="leading" secondItem="G1t-jr-A2K" secondAttribute="leadingMargin" id="RfQ-Bp-K1i"/>
-                                            <constraint firstItem="YRQ-YY-jrg" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="topMargin" id="T2j-iL-e8Y"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="dI7-9v-VmV" secondAttribute="bottom" id="VcF-A1-227"/>
-                                            <constraint firstAttribute="trailing" secondItem="TtF-Md-5rE" secondAttribute="trailing" id="ZUo-er-0dc"/>
-                                            <constraint firstItem="YRQ-YY-jrg" firstAttribute="bottom" secondItem="G1t-jr-A2K" secondAttribute="bottomMargin" id="c2Z-Ri-Nt7"/>
-                                            <constraint firstItem="dI7-9v-VmV" firstAttribute="leading" secondItem="YRQ-YY-jrg" secondAttribute="trailing" constant="2" id="edA-gE-kVR"/>
-                                            <constraint firstItem="dI7-9v-VmV" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="topMargin" id="h0A-7O-Ku6"/>
-                                            <constraint firstItem="dI7-9v-VmV" firstAttribute="leading" secondItem="YRQ-YY-jrg" secondAttribute="trailing" constant="2" id="igN-JV-YRQ"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="dI7-9v-VmV" secondAttribute="trailing" id="mti-c7-Hp1"/>
-                                            <constraint firstItem="YRQ-YY-jrg" firstAttribute="bottom" secondItem="G1t-jr-A2K" secondAttribute="bottomMargin" id="oSF-Sq-VoY"/>
-                                            <constraint firstItem="YRQ-YY-jrg" firstAttribute="leading" secondItem="G1t-jr-A2K" secondAttribute="leadingMargin" id="pbt-cG-GI1"/>
-                                            <constraint firstAttribute="bottom" secondItem="TtF-Md-5rE" secondAttribute="bottom" id="w5c-4h-2EP"/>
-                                            <constraint firstItem="YRQ-YY-jrg" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="topMargin" id="yPK-9Y-oix"/>
-                                        </constraints>
-                                        <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="T2j-iL-e8Y"/>
-                                                <exclude reference="oSF-Sq-VoY"/>
-                                                <exclude reference="pbt-cG-GI1"/>
-                                                <exclude reference="FBn-f2-t4D"/>
-                                                <exclude reference="VcF-A1-227"/>
-                                                <exclude reference="igN-JV-YRQ"/>
-                                                <exclude reference="mti-c7-Hp1"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcc-VY-ehZ">
                                         <rect key="frame" x="2" y="51" width="253" height="126"/>
                                         <subviews>
@@ -438,10 +373,10 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-ul-rzJ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-ul-rzJ">
                                                 <rect key="frame" x="127" y="2" width="124" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="5eK-VK-mIx">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="5eK-VK-mIx">
                                                 <rect key="frame" x="2" y="2" width="123" height="104"/>
                                             </imageView>
                                         </subviews>
@@ -484,10 +419,10 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="6A8-OA-tfP">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="6A8-OA-tfP">
                                                 <rect key="frame" x="2" y="2" width="123" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="jb9-fH-uLM">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="jb9-fH-uLM">
                                                 <rect key="frame" x="127" y="2" width="123" height="104"/>
                                             </imageView>
                                         </subviews>
@@ -542,13 +477,13 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-2P-HsS">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-2P-HsS">
                                                 <rect key="frame" x="129" y="2" width="60" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-Uq-ZYd">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-Uq-ZYd">
                                                 <rect key="frame" x="191" y="2" width="60" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="DUx-VV-HhC">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="DUx-VV-HhC">
                                                 <rect key="frame" x="4" y="2" width="123" height="103"/>
                                             </imageView>
                                         </subviews>
@@ -599,13 +534,13 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BPV-8r-2Ak">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BPV-8r-2Ak">
                                                 <rect key="frame" x="127" y="2" width="60" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="1AT-vR-B3r">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="1AT-vR-B3r">
                                                 <rect key="frame" x="189" y="2" width="61" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BON-Pm-ZiG">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BON-Pm-ZiG">
                                                 <rect key="frame" x="2" y="2" width="123" height="103"/>
                                             </imageView>
                                         </subviews>
@@ -642,33 +577,80 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4s-vP-sDR">
+                                        <rect key="frame" x="2" y="2" width="507" height="47"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-Kb-P1E">
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="47"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="CDS-Kb-mSQ">
+                                                <rect key="frame" x="462" y="2" width="43" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CDS-Kb-mSQ" secondAttribute="height" multiplier="1:1" id="1ga-kh-cyV"/>
+                                                    <constraint firstAttribute="width" secondItem="CDS-Kb-mSQ" secondAttribute="height" multiplier="1:1" id="xTf-OQ-Fs6"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="1ga-kh-cyV"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-I8-qth">
+                                                <rect key="frame" x="2" y="2" width="458" height="43"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aXb-Kb-P1E" secondAttribute="trailing" id="0ba-Ns-xjf"/>
+                                            <constraint firstItem="CDS-Kb-mSQ" firstAttribute="top" secondItem="T4s-vP-sDR" secondAttribute="topMargin" id="0km-nZ-W24"/>
+                                            <constraint firstAttribute="bottom" secondItem="aXb-Kb-P1E" secondAttribute="bottom" id="4iP-Ey-37l"/>
+                                            <constraint firstAttribute="bottom" secondItem="CDS-Kb-mSQ" secondAttribute="bottom" constant="2" id="Cbn-VS-P0l"/>
+                                            <constraint firstItem="O3m-I8-qth" firstAttribute="top" secondItem="T4s-vP-sDR" secondAttribute="top" constant="2" id="EJy-Fi-9dL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="CDS-Kb-mSQ" secondAttribute="trailing" id="ITq-8F-eWF"/>
+                                            <constraint firstAttribute="height" constant="47" id="Wm4-Kp-VJI"/>
+                                            <constraint firstItem="CDS-Kb-mSQ" firstAttribute="top" secondItem="T4s-vP-sDR" secondAttribute="top" constant="2" id="ZeH-Lr-mwd"/>
+                                            <constraint firstAttribute="bottom" secondItem="O3m-I8-qth" secondAttribute="bottom" constant="2" id="c0d-da-Bq9"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="CDS-Kb-mSQ" secondAttribute="bottom" id="doF-DG-Bzs"/>
+                                            <constraint firstItem="aXb-Kb-P1E" firstAttribute="top" secondItem="T4s-vP-sDR" secondAttribute="top" id="gfO-Ge-6PU"/>
+                                            <constraint firstItem="CDS-Kb-mSQ" firstAttribute="leading" secondItem="O3m-I8-qth" secondAttribute="trailing" constant="2" id="qD4-sH-pK7"/>
+                                            <constraint firstItem="aXb-Kb-P1E" firstAttribute="leading" secondItem="T4s-vP-sDR" secondAttribute="leading" id="sQ5-Bi-rDX"/>
+                                            <constraint firstAttribute="trailing" secondItem="CDS-Kb-mSQ" secondAttribute="trailing" constant="2" id="tt6-oe-kqF"/>
+                                            <constraint firstItem="O3m-I8-qth" firstAttribute="leading" secondItem="T4s-vP-sDR" secondAttribute="leading" constant="2" id="us8-3i-uvv"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="0km-nZ-W24"/>
+                                                <exclude reference="ITq-8F-eWF"/>
+                                                <exclude reference="doF-DG-Bzs"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottomMargin" secondItem="tcc-VY-ehZ" secondAttribute="bottom" id="0KX-Nd-wA8"/>
                                     <constraint firstItem="u8V-TE-P2F" firstAttribute="leading" secondItem="tcc-VY-ehZ" secondAttribute="trailing" constant="2" id="1aO-VT-swF"/>
+                                    <constraint firstItem="tcc-VY-ehZ" firstAttribute="top" secondItem="T4s-vP-sDR" secondAttribute="bottom" constant="2" id="3Pr-CL-7s4"/>
                                     <constraint firstItem="UY9-np-D1J" firstAttribute="top" secondItem="tcc-VY-ehZ" secondAttribute="bottom" constant="2" id="5dc-6l-2dl"/>
+                                    <constraint firstItem="T4s-vP-sDR" firstAttribute="leading" secondItem="IMl-yb-B0J" secondAttribute="leadingMargin" id="5eF-0f-8je"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="tcc-VY-ehZ" secondAttribute="trailing" id="6Hd-lk-fLE"/>
                                     <constraint firstItem="UY9-np-D1J" firstAttribute="width" secondItem="DPn-CG-jZL" secondAttribute="width" id="8aC-Ub-bP4"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="DPn-CG-jZL" secondAttribute="trailing" id="99p-Ub-PDj"/>
                                     <constraint firstItem="fdo-Kh-NQB" firstAttribute="top" secondItem="IMl-yb-B0J" secondAttribute="top" id="9zY-t8-q2E"/>
                                     <constraint firstItem="fdo-Kh-NQB" firstAttribute="leading" secondItem="IMl-yb-B0J" secondAttribute="leading" id="G5f-vC-gPn"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="T4s-vP-sDR" secondAttribute="trailing" id="HCb-te-wKw"/>
                                     <constraint firstAttribute="trailing" secondItem="fdo-Kh-NQB" secondAttribute="trailing" id="Huj-1t-5sZ"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="DPn-CG-jZL" secondAttribute="bottom" id="JjA-gc-T7c"/>
                                     <constraint firstItem="DPn-CG-jZL" firstAttribute="leading" secondItem="UY9-np-D1J" secondAttribute="trailing" constant="2" id="KhG-re-pq4"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="UY9-np-D1J" secondAttribute="bottom" id="Ot9-bL-ni0"/>
                                     <constraint firstItem="DPn-CG-jZL" firstAttribute="top" secondItem="u8V-TE-P2F" secondAttribute="bottom" constant="2" id="TS7-ao-0A3"/>
-                                    <constraint firstItem="u8V-TE-P2F" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="bottom" constant="2" id="TuW-Zc-xXD"/>
-                                    <constraint firstItem="tcc-VY-ehZ" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="bottom" constant="2" id="W4J-f6-QeV"/>
                                     <constraint firstAttribute="bottom" secondItem="fdo-Kh-NQB" secondAttribute="bottom" id="WzZ-gQ-oQQ"/>
-                                    <constraint firstItem="u8V-TE-P2F" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="bottom" id="XKO-8h-MC4"/>
+                                    <constraint firstItem="u8V-TE-P2F" firstAttribute="top" secondItem="T4s-vP-sDR" secondAttribute="bottom" constant="2" id="Xqv-Tz-bMa"/>
                                     <constraint firstItem="tcc-VY-ehZ" firstAttribute="width" secondItem="u8V-TE-P2F" secondAttribute="width" id="Zdg-w6-WZ1"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="G1t-jr-A2K" secondAttribute="trailing" id="fL0-3A-bL3"/>
                                     <constraint firstItem="tcc-VY-ehZ" firstAttribute="leading" secondItem="IMl-yb-B0J" secondAttribute="leadingMargin" id="gJy-FX-wba"/>
-                                    <constraint firstItem="u8V-TE-P2F" firstAttribute="top" secondItem="G1t-jr-A2K" secondAttribute="bottom" id="krm-M3-bS4"/>
-                                    <constraint firstItem="G1t-jr-A2K" firstAttribute="leading" secondItem="IMl-yb-B0J" secondAttribute="leadingMargin" id="qOa-7e-v6G"/>
                                     <constraint firstItem="tcc-VY-ehZ" firstAttribute="height" secondItem="UY9-np-D1J" secondAttribute="height" id="tEy-jE-re3"/>
-                                    <constraint firstItem="G1t-jr-A2K" firstAttribute="top" secondItem="IMl-yb-B0J" secondAttribute="topMargin" id="uRb-ZH-hFR"/>
+                                    <constraint firstItem="T4s-vP-sDR" firstAttribute="top" secondItem="IMl-yb-B0J" secondAttribute="topMargin" id="tZB-Qu-9XN"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="u8V-TE-P2F" secondAttribute="trailing" id="vFC-4A-7cc"/>
                                     <constraint firstItem="u8V-TE-P2F" firstAttribute="height" secondItem="DPn-CG-jZL" secondAttribute="height" id="yyc-37-0Hk"/>
                                     <constraint firstItem="UY9-np-D1J" firstAttribute="leading" secondItem="IMl-yb-B0J" secondAttribute="leadingMargin" id="zTQ-Nw-DIg"/>
@@ -678,8 +660,6 @@
                                     <mask key="constraints">
                                         <exclude reference="0KX-Nd-wA8"/>
                                         <exclude reference="6Hd-lk-fLE"/>
-                                        <exclude reference="XKO-8h-MC4"/>
-                                        <exclude reference="krm-M3-bS4"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -716,8 +696,11 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="ajC-hk-zgr" secondAttribute="bottom" id="2Os-sU-OgV"/>
-                                            <constraint firstItem="xyf-ca-VIZ" firstAttribute="top" secondItem="bcy-Cx-5yS" secondAttribute="topMargin" id="4fM-io-Y6u"/>
+                                            <constraint firstItem="ajC-hk-zgr" firstAttribute="top" secondItem="bcy-Cx-5yS" secondAttribute="top" constant="2" id="3fR-ei-c5j"/>
+                                            <constraint firstAttribute="trailing" secondItem="ajC-hk-zgr" secondAttribute="trailing" constant="2" id="3kU-kh-NsG"/>
+                                            <constraint firstItem="xyf-ca-VIZ" firstAttribute="top" secondItem="bcy-Cx-5yS" secondAttribute="top" constant="2" id="4fM-io-Y6u"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="ajC-hk-zgr" secondAttribute="trailing" id="9DH-R3-mzQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ajC-hk-zgr" secondAttribute="bottom" constant="2" id="LmU-VA-LfI"/>
                                             <constraint firstAttribute="height" constant="47" id="Nhp-ds-EbI"/>
                                             <constraint firstAttribute="bottom" secondItem="Nmh-uS-HRL" secondAttribute="bottom" id="Syk-ha-A3I"/>
                                             <constraint firstAttribute="trailing" secondItem="Nmh-uS-HRL" secondAttribute="trailing" id="XTg-jB-oGV"/>
@@ -725,10 +708,19 @@
                                             <constraint firstItem="Nmh-uS-HRL" firstAttribute="top" secondItem="bcy-Cx-5yS" secondAttribute="top" id="ZUg-pB-3RO"/>
                                             <constraint firstItem="ajC-hk-zgr" firstAttribute="leading" secondItem="xyf-ca-VIZ" secondAttribute="trailing" constant="2" id="fwz-b5-Lhc"/>
                                             <constraint firstItem="Nmh-uS-HRL" firstAttribute="leading" secondItem="bcy-Cx-5yS" secondAttribute="leading" id="nAy-ME-wKE"/>
-                                            <constraint firstItem="xyf-ca-VIZ" firstAttribute="bottom" secondItem="bcy-Cx-5yS" secondAttribute="bottomMargin" id="sTm-cL-18y"/>
-                                            <constraint firstItem="xyf-ca-VIZ" firstAttribute="leading" secondItem="bcy-Cx-5yS" secondAttribute="leadingMargin" id="xkw-PF-ulP"/>
+                                            <constraint firstItem="xyf-ca-VIZ" firstAttribute="bottom" secondItem="bcy-Cx-5yS" secondAttribute="bottom" constant="2" id="sTm-cL-18y"/>
+                                            <constraint firstAttribute="bottom" secondItem="xyf-ca-VIZ" secondAttribute="bottom" constant="2" id="wlR-c5-E1s"/>
+                                            <constraint firstItem="xyf-ca-VIZ" firstAttribute="leading" secondItem="bcy-Cx-5yS" secondAttribute="leading" constant="2" id="xkw-PF-ulP"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="sTm-cL-18y"/>
+                                                <exclude reference="2Os-sU-OgV"/>
+                                                <exclude reference="9DH-R3-mzQ"/>
+                                                <exclude reference="Xvu-TE-sNg"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdO-HW-Tzn">
                                         <rect key="frame" x="2" y="51" width="253" height="126"/>
@@ -744,10 +736,10 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="0NO-ck-nUP">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="0NO-ck-nUP">
                                                 <rect key="frame" x="2" y="2" width="123" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-0N-r3L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-0N-r3L">
                                                 <rect key="frame" x="127" y="2" width="124" height="104"/>
                                             </imageView>
                                         </subviews>
@@ -790,16 +782,16 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="qff-oW-o8n">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="qff-oW-o8n">
                                                 <rect key="frame" x="2" y="2" width="60" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-7P-qfV">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-7P-qfV">
                                                 <rect key="frame" x="64" y="2" width="61" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="I6E-vI-nbi">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="I6E-vI-nbi">
                                                 <rect key="frame" x="127" y="2" width="60" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-14-cxA">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-14-cxA">
                                                 <rect key="frame" x="189" y="2" width="61" height="104"/>
                                             </imageView>
                                         </subviews>
@@ -850,13 +842,13 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="XmF-S5-wv7">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="XmF-S5-wv7">
                                                 <rect key="frame" x="127" y="2" width="61" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="S7v-0O-0MK">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="S7v-0O-0MK">
                                                 <rect key="frame" x="190" y="2" width="61" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="dXa-Ca-pOH">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="dXa-Ca-pOH">
                                                 <rect key="frame" x="2" y="2" width="123" height="103"/>
                                             </imageView>
                                         </subviews>
@@ -903,13 +895,13 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="lvm-mE-RvL">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="lvm-mE-RvL">
                                                 <rect key="frame" x="127" y="2" width="60" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-6c-NYn">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-6c-NYn">
                                                 <rect key="frame" x="189" y="2" width="61" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="QU4-Sc-ydV">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="QU4-Sc-ydV">
                                                 <rect key="frame" x="2" y="2" width="123" height="103"/>
                                             </imageView>
                                         </subviews>
@@ -1019,12 +1011,18 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="dkB-Ps-ycj" firstAttribute="leading" secondItem="asJ-sM-pfJ" secondAttribute="leading" constant="2" id="5ah-Gr-4Ue"/>
                                             <constraint firstItem="lmj-Yk-t1i" firstAttribute="leading" secondItem="asJ-sM-pfJ" secondAttribute="leading" id="7Np-Zo-SvX"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="yky-AP-H4J" secondAttribute="bottom" id="8Ff-Y4-d2w"/>
+                                            <constraint firstAttribute="trailing" secondItem="yky-AP-H4J" secondAttribute="trailing" constant="2" id="8oH-pJ-2bE"/>
                                             <constraint firstItem="lmj-Yk-t1i" firstAttribute="top" secondItem="asJ-sM-pfJ" secondAttribute="top" id="Hzr-iT-nbY"/>
                                             <constraint firstItem="dkB-Ps-ycj" firstAttribute="leading" secondItem="asJ-sM-pfJ" secondAttribute="leadingMargin" id="KFg-9S-OgR"/>
+                                            <constraint firstAttribute="bottom" secondItem="dkB-Ps-ycj" secondAttribute="bottom" constant="2" id="Mzo-Yw-xBJ"/>
+                                            <constraint firstItem="yky-AP-H4J" firstAttribute="top" secondItem="asJ-sM-pfJ" secondAttribute="top" constant="2" id="Ujg-5d-5Kv"/>
                                             <constraint firstItem="dkB-Ps-ycj" firstAttribute="top" secondItem="asJ-sM-pfJ" secondAttribute="topMargin" id="Ukh-Ty-ryu"/>
                                             <constraint firstItem="yky-AP-H4J" firstAttribute="top" secondItem="asJ-sM-pfJ" secondAttribute="topMargin" id="aUG-uw-J17"/>
+                                            <constraint firstItem="dkB-Ps-ycj" firstAttribute="top" secondItem="asJ-sM-pfJ" secondAttribute="top" constant="2" id="btX-Su-OCd"/>
+                                            <constraint firstAttribute="bottom" secondItem="yky-AP-H4J" secondAttribute="bottom" constant="2" id="coE-Ya-nEE"/>
                                             <constraint firstItem="dkB-Ps-ycj" firstAttribute="bottom" secondItem="asJ-sM-pfJ" secondAttribute="bottomMargin" id="e4w-vF-dNP"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="yky-AP-H4J" secondAttribute="trailing" id="fDa-78-bGf"/>
                                             <constraint firstAttribute="trailing" secondItem="lmj-Yk-t1i" secondAttribute="trailing" id="iQh-DF-0Rx"/>
@@ -1033,6 +1031,16 @@
                                             <constraint firstItem="yky-AP-H4J" firstAttribute="leading" secondItem="dkB-Ps-ycj" secondAttribute="trailing" constant="2" id="zcY-wW-rJd"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="KFg-9S-OgR"/>
+                                                <exclude reference="Ukh-Ty-ryu"/>
+                                                <exclude reference="e4w-vF-dNP"/>
+                                                <exclude reference="8Ff-Y4-d2w"/>
+                                                <exclude reference="aUG-uw-J17"/>
+                                                <exclude reference="fDa-78-bGf"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HW7-FK-i6a">
                                         <rect key="frame" x="2" y="51" width="507" height="407"/>
@@ -1116,18 +1124,34 @@
                                         <constraints>
                                             <constraint firstItem="5ka-Qu-yZn" firstAttribute="top" secondItem="6mX-Oh-xhL" secondAttribute="top" id="2Rg-H1-wrZ"/>
                                             <constraint firstItem="wdH-lv-NOa" firstAttribute="top" secondItem="6mX-Oh-xhL" secondAttribute="topMargin" id="7Jn-GP-PkT"/>
+                                            <constraint firstItem="wdH-lv-NOa" firstAttribute="top" secondItem="6mX-Oh-xhL" secondAttribute="top" constant="2" id="A40-G7-X8Z"/>
                                             <constraint firstAttribute="height" constant="47" id="ACT-3m-1Kj"/>
                                             <constraint firstItem="QX0-Hf-O5K" firstAttribute="leading" secondItem="6mX-Oh-xhL" secondAttribute="leadingMargin" id="BOX-al-WYy"/>
+                                            <constraint firstAttribute="bottom" secondItem="wdH-lv-NOa" secondAttribute="bottom" constant="2" id="Gqe-4E-oe2"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="wdH-lv-NOa" secondAttribute="bottom" id="HlJ-dk-we7"/>
                                             <constraint firstAttribute="trailing" secondItem="5ka-Qu-yZn" secondAttribute="trailing" id="QiK-8Y-JFg"/>
+                                            <constraint firstItem="QX0-Hf-O5K" firstAttribute="leading" secondItem="6mX-Oh-xhL" secondAttribute="leading" constant="2" id="TGg-x4-b19"/>
+                                            <constraint firstAttribute="bottom" secondItem="QX0-Hf-O5K" secondAttribute="bottom" constant="2" id="TPS-oQ-JUI"/>
                                             <constraint firstItem="QX0-Hf-O5K" firstAttribute="bottom" secondItem="6mX-Oh-xhL" secondAttribute="bottomMargin" id="X9t-fZ-GdQ"/>
+                                            <constraint firstItem="QX0-Hf-O5K" firstAttribute="top" secondItem="6mX-Oh-xhL" secondAttribute="top" constant="2" id="XeK-fZ-dNG"/>
                                             <constraint firstItem="QX0-Hf-O5K" firstAttribute="top" secondItem="6mX-Oh-xhL" secondAttribute="topMargin" id="Z6T-gT-CmU"/>
                                             <constraint firstAttribute="bottom" secondItem="5ka-Qu-yZn" secondAttribute="bottom" id="bSr-My-sXI"/>
                                             <constraint firstItem="5ka-Qu-yZn" firstAttribute="leading" secondItem="6mX-Oh-xhL" secondAttribute="leading" id="fam-Ua-XvG"/>
+                                            <constraint firstAttribute="trailing" secondItem="wdH-lv-NOa" secondAttribute="trailing" constant="2" id="pbC-h1-hfV"/>
                                             <constraint firstItem="wdH-lv-NOa" firstAttribute="leading" secondItem="QX0-Hf-O5K" secondAttribute="trailing" constant="2" id="q6K-gL-dkM"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="wdH-lv-NOa" secondAttribute="trailing" id="uJL-sb-87A"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BOX-al-WYy"/>
+                                                <exclude reference="X9t-fZ-GdQ"/>
+                                                <exclude reference="Z6T-gT-CmU"/>
+                                                <exclude reference="7Jn-GP-PkT"/>
+                                                <exclude reference="HlJ-dk-we7"/>
+                                                <exclude reference="uJL-sb-87A"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fy-CG-5HA">
                                         <rect key="frame" x="2" y="51" width="507" height="407"/>
