@@ -74,7 +74,8 @@
                             <constraint firstItem="SG5-bT-Rms" firstAttribute="top" secondItem="kQc-ji-xuA" secondAttribute="bottom" constant="2" id="kv2-vx-Xq5"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lZL-b5-n81"/>
                             <constraint firstAttribute="trailing" secondItem="zJH-ao-YKj" secondAttribute="trailing" id="mLw-rA-btc"/>
-                            <constraint firstItem="0ec-Me-B2D" firstAttribute="height" secondItem="zJH-ao-YKj" secondAttribute="height" multiplier="3/2" constant="1" id="nS1-3h-KnW"/>
+                            <constraint firstItem="SG5-bT-Rms" firstAttribute="height" secondItem="0ec-Me-B2D" secondAttribute="height" id="nNH-HG-geU"/>
+                            <constraint firstItem="0ec-Me-B2D" firstAttribute="height" secondItem="zJH-ao-YKj" secondAttribute="height" multiplier="3/2" id="nS1-3h-KnW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zJH-ao-YKj" secondAttribute="trailing" id="p5V-xP-noT"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pcC-HF-I6c"/>
                             <constraint firstItem="zJH-ao-YKj" firstAttribute="leading" secondItem="kQc-ji-xuA" secondAttribute="trailing" constant="2" id="qW8-Lh-gdP"/>
@@ -92,6 +93,7 @@
                                 <exclude reference="kR2-wq-SVL"/>
                                 <exclude reference="pcC-HF-I6c"/>
                                 <exclude reference="t07-u2-9fZ"/>
+                                <exclude reference="nNH-HG-geU"/>
                                 <exclude reference="3ky-F4-wPh"/>
                                 <exclude reference="AJZ-8l-ozc"/>
                                 <exclude reference="DrL-yf-5NH"/>
