@@ -23,6 +23,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Realign formants - need affine transform
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Bug in number formatter - can print "-0"
+- Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
 - Audiobus
