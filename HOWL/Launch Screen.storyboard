@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -15,13 +17,13 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qm-yL-Bzd" userLabel="iPhone View">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                                 <connections>
-                                    <segue destination="QyV-ju-AHG" kind="embed" id="Bpe-2n-xAs"/>
+                                    <segue destination="QyV-ju-AHG" kind="embed" id="xaq-c5-9O7"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZS-QS-HsI" userLabel="iPad View">
@@ -61,7 +63,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,35 +78,237 @@
                         <viewControllerLayoutGuide type="bottom" id="NmV-Kh-dha"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jbS-6C-fN4">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="N4v-A8-fwb">
-                                <rect key="frame" x="0.0" y="0.0" width="333" height="375"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BW8-bm-Bpg">
-                                <rect key="frame" x="335" y="0.0" width="332" height="375"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q4-LV-vBH">
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="N4v-A8-fwb">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hr2-NH-Ikh">
+                                        <rect key="frame" x="2" y="2" width="279" height="47"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-AA-kbd">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="iEc-4B-9gQ"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="iEc-4B-9gQ"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="FCK-5K-804">
+                                                <rect key="frame" x="234" y="2" width="43" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="FCK-5K-804" secondAttribute="height" id="JJr-ZE-JWC"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="CqM-Qt-FhW">
+                                                <rect key="frame" x="47" y="2" width="185" height="43"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="Stn-6G-lom">
+                                                <rect key="frame" x="2" y="2" width="43" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Stn-6G-lom" secondAttribute="height" id="NA1-Ns-a0d"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ehj-AA-kbd" secondAttribute="bottom" id="71f-3v-ejY"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Stn-6G-lom" secondAttribute="bottom" id="AYK-q2-IRm"/>
+                                            <constraint firstItem="FCK-5K-804" firstAttribute="top" secondItem="Hr2-NH-Ikh" secondAttribute="topMargin" id="ENH-G3-QeA"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="FCK-5K-804" secondAttribute="bottom" id="MSU-fF-Wao"/>
+                                            <constraint firstAttribute="height" constant="47" id="NWK-Vd-Q9w"/>
+                                            <constraint firstItem="CqM-Qt-FhW" firstAttribute="bottom" secondItem="Hr2-NH-Ikh" secondAttribute="bottomMargin" id="Or9-el-247"/>
+                                            <constraint firstItem="ehj-AA-kbd" firstAttribute="top" secondItem="Hr2-NH-Ikh" secondAttribute="top" id="RGM-Kb-EdM"/>
+                                            <constraint firstItem="Stn-6G-lom" firstAttribute="leading" secondItem="Hr2-NH-Ikh" secondAttribute="leadingMargin" id="RKs-LN-f8K"/>
+                                            <constraint firstItem="Stn-6G-lom" firstAttribute="top" secondItem="Hr2-NH-Ikh" secondAttribute="topMargin" id="TJ5-EC-4xv"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="FCK-5K-804" secondAttribute="trailing" id="b1m-ME-0Ra"/>
+                                            <constraint firstItem="ehj-AA-kbd" firstAttribute="leading" secondItem="Hr2-NH-Ikh" secondAttribute="leading" id="fG1-i0-wRD"/>
+                                            <constraint firstItem="FCK-5K-804" firstAttribute="leading" secondItem="CqM-Qt-FhW" secondAttribute="trailing" constant="2" id="lp9-x1-n5W"/>
+                                            <constraint firstItem="CqM-Qt-FhW" firstAttribute="top" secondItem="Hr2-NH-Ikh" secondAttribute="topMargin" id="sM5-x5-BIl"/>
+                                            <constraint firstAttribute="trailing" secondItem="ehj-AA-kbd" secondAttribute="trailing" id="vVV-p4-f8L"/>
+                                            <constraint firstItem="CqM-Qt-FhW" firstAttribute="leading" secondItem="Stn-6G-lom" secondAttribute="trailing" constant="2" id="zH0-3n-5kX"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oJ-AX-UtM">
+                                        <rect key="frame" x="2" y="51" width="279" height="267"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="Cse-U1-EzJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="267"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="SoZ-gC-FnY"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="SoZ-gC-FnY"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="LBT-9P-CNA">
+                                                <rect key="frame" x="2" y="2" width="275" height="263"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="LBT-9P-CNA" firstAttribute="leading" secondItem="6oJ-AX-UtM" secondAttribute="leadingMargin" id="5Xx-wS-dcp"/>
+                                            <constraint firstItem="LBT-9P-CNA" firstAttribute="trailing" secondItem="6oJ-AX-UtM" secondAttribute="trailingMargin" id="CQf-WQ-yCl"/>
+                                            <constraint firstItem="Cse-U1-EzJ" firstAttribute="leading" secondItem="6oJ-AX-UtM" secondAttribute="leading" id="K9p-mB-lgf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Cse-U1-EzJ" secondAttribute="bottom" id="SmQ-RB-T3s"/>
+                                            <constraint firstItem="Cse-U1-EzJ" firstAttribute="top" secondItem="6oJ-AX-UtM" secondAttribute="top" id="bfD-d0-7Ob"/>
+                                            <constraint firstItem="LBT-9P-CNA" firstAttribute="top" secondItem="6oJ-AX-UtM" secondAttribute="topMargin" id="f3p-nO-cUZ"/>
+                                            <constraint firstItem="LBT-9P-CNA" firstAttribute="bottom" secondItem="6oJ-AX-UtM" secondAttribute="bottomMargin" id="jBr-k6-rwE"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cse-U1-EzJ" secondAttribute="trailing" id="nU6-iS-XGC"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Hr2-NH-Ikh" firstAttribute="top" secondItem="5q4-LV-vBH" secondAttribute="topMargin" id="HyF-NC-BAl"/>
+                                    <constraint firstAttribute="bottom" secondItem="N4v-A8-fwb" secondAttribute="bottom" id="J4f-Bc-j3y"/>
+                                    <constraint firstItem="6oJ-AX-UtM" firstAttribute="leading" secondItem="5q4-LV-vBH" secondAttribute="leadingMargin" id="QPY-9b-80z"/>
+                                    <constraint firstItem="Hr2-NH-Ikh" firstAttribute="leading" secondItem="5q4-LV-vBH" secondAttribute="leadingMargin" id="WIK-nM-8W9"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="6oJ-AX-UtM" secondAttribute="trailing" id="daw-nz-QiN"/>
+                                    <constraint firstAttribute="trailing" secondItem="N4v-A8-fwb" secondAttribute="trailing" id="ft6-Vo-8oL"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="6oJ-AX-UtM" secondAttribute="bottom" id="hcK-mk-dDl"/>
+                                    <constraint firstItem="6oJ-AX-UtM" firstAttribute="top" secondItem="Hr2-NH-Ikh" secondAttribute="bottom" constant="2" id="uou-vE-WL4"/>
+                                    <constraint firstItem="N4v-A8-fwb" firstAttribute="leading" secondItem="5q4-LV-vBH" secondAttribute="leading" id="x32-5Q-4Hg"/>
+                                    <constraint firstItem="N4v-A8-fwb" firstAttribute="top" secondItem="5q4-LV-vBH" secondAttribute="top" id="xAO-eP-bCG"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Hr2-NH-Ikh" secondAttribute="trailing" id="ypN-Vq-BUR"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDK-0d-DaN">
+                                <rect key="frame" x="285" y="0.0" width="283" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="l5t-5S-YX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXi-ee-pbr">
+                                        <rect key="frame" x="2" y="2" width="279" height="47"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-CG-1BG">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="Isx-8b-K3u"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Isx-8b-K3u"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="ryu-qf-wHV">
+                                                <rect key="frame" x="234" y="2" width="43" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ryu-qf-wHV" secondAttribute="height" id="G9W-KA-84A"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="2x2-mb-iEi">
+                                                <rect key="frame" x="47" y="2" width="185" height="43"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="dke-Ww-7g6">
+                                                <rect key="frame" x="2" y="2" width="43" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="dke-Ww-7g6" secondAttribute="height" id="xWC-OM-fTV"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ryu-qf-wHV" secondAttribute="bottom" id="2GH-z9-7GM"/>
+                                            <constraint firstItem="nhH-CG-1BG" firstAttribute="top" secondItem="SXi-ee-pbr" secondAttribute="top" id="39I-tv-3gS"/>
+                                            <constraint firstItem="dke-Ww-7g6" firstAttribute="leading" secondItem="SXi-ee-pbr" secondAttribute="leadingMargin" id="72I-dM-htB"/>
+                                            <constraint firstItem="2x2-mb-iEi" firstAttribute="leading" secondItem="dke-Ww-7g6" secondAttribute="trailing" constant="2" id="Bs5-Wj-IWh"/>
+                                            <constraint firstAttribute="height" constant="47" id="Ced-YR-9LA"/>
+                                            <constraint firstItem="ryu-qf-wHV" firstAttribute="leading" secondItem="2x2-mb-iEi" secondAttribute="trailing" constant="2" id="JUy-Iz-gyo"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="dke-Ww-7g6" secondAttribute="bottom" id="Jii-nn-uch"/>
+                                            <constraint firstItem="2x2-mb-iEi" firstAttribute="top" secondItem="SXi-ee-pbr" secondAttribute="topMargin" id="NzV-Sh-cPo"/>
+                                            <constraint firstItem="ryu-qf-wHV" firstAttribute="top" secondItem="SXi-ee-pbr" secondAttribute="topMargin" id="VaT-CZ-Xs5"/>
+                                            <constraint firstAttribute="trailing" secondItem="nhH-CG-1BG" secondAttribute="trailing" id="cc1-iw-fgK"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ryu-qf-wHV" secondAttribute="trailing" id="cum-O8-rpP"/>
+                                            <constraint firstAttribute="bottom" secondItem="nhH-CG-1BG" secondAttribute="bottom" id="cwd-oi-XOL"/>
+                                            <constraint firstItem="dke-Ww-7g6" firstAttribute="top" secondItem="SXi-ee-pbr" secondAttribute="topMargin" id="iR9-84-uN3"/>
+                                            <constraint firstItem="nhH-CG-1BG" firstAttribute="leading" secondItem="SXi-ee-pbr" secondAttribute="leading" id="lEQ-hj-Pt0"/>
+                                            <constraint firstItem="2x2-mb-iEi" firstAttribute="bottom" secondItem="SXi-ee-pbr" secondAttribute="bottomMargin" id="vKS-bd-xZu"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXP-qS-lWb">
+                                        <rect key="frame" x="2" y="51" width="279" height="267"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="4EK-Mh-27r">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="267"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="Bwc-Dn-Ea5"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Bwc-Dn-Ea5"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="rD4-ZK-TuA">
+                                                <rect key="frame" x="2" y="2" width="275" height="263"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rD4-ZK-TuA" firstAttribute="top" secondItem="oXP-qS-lWb" secondAttribute="topMargin" id="7fd-na-gzV"/>
+                                            <constraint firstItem="4EK-Mh-27r" firstAttribute="leading" secondItem="oXP-qS-lWb" secondAttribute="leading" id="7py-RO-gQX"/>
+                                            <constraint firstItem="rD4-ZK-TuA" firstAttribute="bottom" secondItem="oXP-qS-lWb" secondAttribute="bottomMargin" id="Fkf-sH-O1N"/>
+                                            <constraint firstAttribute="bottom" secondItem="4EK-Mh-27r" secondAttribute="bottom" id="HVp-nc-VcQ"/>
+                                            <constraint firstItem="rD4-ZK-TuA" firstAttribute="leading" secondItem="oXP-qS-lWb" secondAttribute="leadingMargin" id="Hjz-wF-t2i"/>
+                                            <constraint firstAttribute="trailing" secondItem="4EK-Mh-27r" secondAttribute="trailing" id="QL4-cg-EO9"/>
+                                            <constraint firstItem="rD4-ZK-TuA" firstAttribute="trailing" secondItem="oXP-qS-lWb" secondAttribute="trailingMargin" id="QlI-O0-4if"/>
+                                            <constraint firstItem="4EK-Mh-27r" firstAttribute="top" secondItem="oXP-qS-lWb" secondAttribute="top" id="aDz-Dg-MdE"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="l5t-5S-YX5" secondAttribute="bottom" id="3dt-YI-qrz"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="SXi-ee-pbr" secondAttribute="trailing" id="4Zr-io-YbZ"/>
+                                    <constraint firstItem="oXP-qS-lWb" firstAttribute="top" secondItem="SXi-ee-pbr" secondAttribute="bottom" constant="2" id="Nyw-Ov-Lhb"/>
+                                    <constraint firstItem="SXi-ee-pbr" firstAttribute="leading" secondItem="FDK-0d-DaN" secondAttribute="leadingMargin" id="R6U-HM-mgv"/>
+                                    <constraint firstItem="SXi-ee-pbr" firstAttribute="top" secondItem="FDK-0d-DaN" secondAttribute="topMargin" id="Tzf-mr-LoK"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="oXP-qS-lWb" secondAttribute="bottom" id="bBX-5q-Zoj"/>
+                                    <constraint firstAttribute="trailing" secondItem="l5t-5S-YX5" secondAttribute="trailing" id="fQz-ic-Rb5"/>
+                                    <constraint firstItem="oXP-qS-lWb" firstAttribute="leading" secondItem="FDK-0d-DaN" secondAttribute="leadingMargin" id="jUR-g4-h3h"/>
+                                    <constraint firstItem="l5t-5S-YX5" firstAttribute="top" secondItem="FDK-0d-DaN" secondAttribute="top" id="ovS-0s-5NJ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="oXP-qS-lWb" secondAttribute="trailing" id="pWX-6n-5wS"/>
+                                    <constraint firstItem="l5t-5S-YX5" firstAttribute="leading" secondItem="FDK-0d-DaN" secondAttribute="leading" id="wY9-hu-icJ"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BW8-bm-Bpg" firstAttribute="leading" secondItem="N4v-A8-fwb" secondAttribute="trailing" constant="2" id="2mZ-sn-Ju7"/>
-                            <constraint firstAttribute="trailing" secondItem="BW8-bm-Bpg" secondAttribute="trailing" id="3IH-Nw-3rz"/>
-                            <constraint firstItem="N4v-A8-fwb" firstAttribute="width" secondItem="BW8-bm-Bpg" secondAttribute="width" id="4iF-tG-pMc"/>
-                            <constraint firstItem="NmV-Kh-dha" firstAttribute="top" secondItem="N4v-A8-fwb" secondAttribute="bottom" id="5UA-oS-LMY"/>
-                            <constraint firstItem="N4v-A8-fwb" firstAttribute="leading" secondItem="jbS-6C-fN4" secondAttribute="leading" id="FKH-pX-aaI"/>
-                            <constraint firstItem="N4v-A8-fwb" firstAttribute="top" secondItem="YEQ-5N-BtE" secondAttribute="bottom" id="qDd-s6-u76"/>
-                            <constraint firstItem="NmV-Kh-dha" firstAttribute="top" secondItem="BW8-bm-Bpg" secondAttribute="bottom" id="t6w-Dn-Psz"/>
-                            <constraint firstItem="BW8-bm-Bpg" firstAttribute="top" secondItem="YEQ-5N-BtE" secondAttribute="bottom" id="yyG-7J-4jp"/>
+                            <constraint firstItem="NmV-Kh-dha" firstAttribute="top" secondItem="FDK-0d-DaN" secondAttribute="bottom" id="2dJ-ls-PUp"/>
+                            <constraint firstItem="FDK-0d-DaN" firstAttribute="top" secondItem="YEQ-5N-BtE" secondAttribute="bottom" id="7en-E4-55A"/>
+                            <constraint firstItem="NmV-Kh-dha" firstAttribute="top" secondItem="5q4-LV-vBH" secondAttribute="bottom" id="Bd9-ne-tuY"/>
+                            <constraint firstItem="5q4-LV-vBH" firstAttribute="width" secondItem="FDK-0d-DaN" secondAttribute="width" id="QlH-BN-2XY"/>
+                            <constraint firstAttribute="trailing" secondItem="FDK-0d-DaN" secondAttribute="trailing" id="ZaF-Qb-KTr"/>
+                            <constraint firstItem="5q4-LV-vBH" firstAttribute="leading" secondItem="jbS-6C-fN4" secondAttribute="leading" id="jRs-Ym-wu0"/>
+                            <constraint firstItem="5q4-LV-vBH" firstAttribute="top" secondItem="YEQ-5N-BtE" secondAttribute="bottom" id="nh6-px-m7g"/>
+                            <constraint firstItem="FDK-0d-DaN" firstAttribute="leading" secondItem="5q4-LV-vBH" secondAttribute="trailing" constant="2" id="pdC-g6-ZcS"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIX-gn-mOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313.5" y="1012.5"/>
+            <point key="canvasLocation" x="-274" y="985"/>
         </scene>
         <!--iPad-->
         <scene sceneID="00E-sc-eYV">
@@ -169,6 +373,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rounded Rect 3.0pt Dark Gray" width="7" height="7"/>
+        <image name="Rounded Rect 3.0pt Light Gray" width="7" height="7"/>
+        <image name="Rounded Rect 4.5pt Black" width="11" height="11"/>
         <image name="Rounded Rect 6.0pt Light Gray" width="13" height="13"/>
     </resources>
 </document>
