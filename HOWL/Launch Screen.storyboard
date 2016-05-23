@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qm-yL-Bzd" userLabel="iPhone View">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <connections>
+                                    <segue destination="QyV-ju-AHG" kind="embed" id="Bpe-2n-xAs"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZS-QS-HsI" userLabel="iPad View">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <connections>
+                                    <segue destination="RcW-Cl-wW8" kind="embed" id="68L-V5-AWY"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Qm-yL-Bzd" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="5i5-BU-LCY"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="NZS-QS-HsI" secondAttribute="bottom" id="HU6-J5-kls"/>
+                            <constraint firstAttribute="trailing" secondItem="9Qm-yL-Bzd" secondAttribute="trailing" id="Ins-QS-cwA"/>
+                            <constraint firstItem="9Qm-yL-Bzd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="TPc-bZ-ign"/>
+                            <constraint firstItem="NZS-QS-HsI" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="etJ-yX-JwI"/>
+                            <constraint firstItem="NZS-QS-HsI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="h3A-Yc-lCR"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9Qm-yL-Bzd" secondAttribute="bottom" id="kUm-Fj-jge"/>
+                            <constraint firstAttribute="trailing" secondItem="NZS-QS-HsI" secondAttribute="trailing" id="mcD-PF-LNA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9Qm-yL-Bzd"/>
+                                <exclude reference="NZS-QS-HsI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="9Qm-yL-Bzd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="NZS-QS-HsI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
+        </scene>
+        <!--iPhone-->
+        <scene sceneID="8W7-w4-tmg">
+            <objects>
+                <viewController title="iPhone" id="QyV-ju-AHG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YEQ-5N-BtE"/>
+                        <viewControllerLayoutGuide type="bottom" id="NmV-Kh-dha"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jbS-6C-fN4">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="N4v-A8-fwb">
+                                <rect key="frame" x="0.0" y="0.0" width="333" height="375"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BW8-bm-Bpg">
+                                <rect key="frame" x="335" y="0.0" width="332" height="375"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BW8-bm-Bpg" firstAttribute="leading" secondItem="N4v-A8-fwb" secondAttribute="trailing" constant="2" id="2mZ-sn-Ju7"/>
+                            <constraint firstAttribute="trailing" secondItem="BW8-bm-Bpg" secondAttribute="trailing" id="3IH-Nw-3rz"/>
+                            <constraint firstItem="N4v-A8-fwb" firstAttribute="width" secondItem="BW8-bm-Bpg" secondAttribute="width" id="4iF-tG-pMc"/>
+                            <constraint firstItem="NmV-Kh-dha" firstAttribute="top" secondItem="N4v-A8-fwb" secondAttribute="bottom" id="5UA-oS-LMY"/>
+                            <constraint firstItem="N4v-A8-fwb" firstAttribute="leading" secondItem="jbS-6C-fN4" secondAttribute="leading" id="FKH-pX-aaI"/>
+                            <constraint firstItem="N4v-A8-fwb" firstAttribute="top" secondItem="YEQ-5N-BtE" secondAttribute="bottom" id="qDd-s6-u76"/>
+                            <constraint firstItem="NmV-Kh-dha" firstAttribute="top" secondItem="BW8-bm-Bpg" secondAttribute="bottom" id="t6w-Dn-Psz"/>
+                            <constraint firstItem="BW8-bm-Bpg" firstAttribute="top" secondItem="YEQ-5N-BtE" secondAttribute="bottom" id="yyG-7J-4jp"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIX-gn-mOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313.5" y="1012.5"/>
+        </scene>
+        <!--iPad-->
+        <scene sceneID="00E-sc-eYV">
+            <objects>
+                <viewController title="iPad" id="RcW-Cl-wW8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RY3-hp-bQu"/>
+                        <viewControllerLayoutGuide type="bottom" id="GGO-nY-VZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bcJ-ee-ryn">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="jp4-7r-5hI">
+                                <rect key="frame" x="0.0" y="308" width="511" height="460"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="cY7-9w-TkZ">
+                                <rect key="frame" x="513" y="308" width="511" height="460"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-f5-rVW">
+                                <rect key="frame" x="0.0" y="0.0" width="511" height="306"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="ocV-wV-Bkc">
+                                <rect key="frame" x="513" y="0.0" width="511" height="306"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cY7-9w-TkZ" secondAttribute="trailing" id="0FH-sr-yFR"/>
+                            <constraint firstItem="PeE-f5-rVW" firstAttribute="width" secondItem="ocV-wV-Bkc" secondAttribute="width" id="6Pd-5T-3fH"/>
+                            <constraint firstAttribute="trailing" secondItem="ocV-wV-Bkc" secondAttribute="trailing" id="6wB-Jf-UoO"/>
+                            <constraint firstItem="jp4-7r-5hI" firstAttribute="width" secondItem="cY7-9w-TkZ" secondAttribute="width" id="Baw-0b-C4l"/>
+                            <constraint firstItem="GGO-nY-VZl" firstAttribute="top" secondItem="jp4-7r-5hI" secondAttribute="bottom" id="EsU-f4-Luc"/>
+                            <constraint firstItem="PeE-f5-rVW" firstAttribute="leading" secondItem="bcJ-ee-ryn" secondAttribute="leading" id="ITz-73-gjH"/>
+                            <constraint firstItem="GGO-nY-VZl" firstAttribute="top" secondItem="cY7-9w-TkZ" secondAttribute="bottom" id="Jdd-ir-B76"/>
+                            <constraint firstItem="jp4-7r-5hI" firstAttribute="leading" secondItem="bcJ-ee-ryn" secondAttribute="leading" id="LZ9-Hn-RT3"/>
+                            <constraint firstItem="PeE-f5-rVW" firstAttribute="top" secondItem="RY3-hp-bQu" secondAttribute="bottom" id="Ldi-XO-RlU"/>
+                            <constraint firstItem="ocV-wV-Bkc" firstAttribute="height" secondItem="cY7-9w-TkZ" secondAttribute="height" multiplier="2/3" id="Luu-SM-llw"/>
+                            <constraint firstItem="cY7-9w-TkZ" firstAttribute="top" secondItem="RY3-hp-bQu" secondAttribute="bottom" id="Tcy-RQ-HP0"/>
+                            <constraint firstItem="ocV-wV-Bkc" firstAttribute="leading" secondItem="PeE-f5-rVW" secondAttribute="trailing" constant="2" id="UIt-HA-khS"/>
+                            <constraint firstItem="PeE-f5-rVW" firstAttribute="height" secondItem="jp4-7r-5hI" secondAttribute="height" multiplier="2/3" id="XM0-eK-oP7"/>
+                            <constraint firstItem="cY7-9w-TkZ" firstAttribute="leading" secondItem="jp4-7r-5hI" secondAttribute="trailing" constant="2" id="Xpd-gX-7N8"/>
+                            <constraint firstItem="cY7-9w-TkZ" firstAttribute="top" secondItem="ocV-wV-Bkc" secondAttribute="bottom" constant="2" id="ZOf-T3-zue"/>
+                            <constraint firstItem="jp4-7r-5hI" firstAttribute="top" secondItem="RY3-hp-bQu" secondAttribute="bottom" id="qOf-R5-C0Y"/>
+                            <constraint firstItem="jp4-7r-5hI" firstAttribute="top" secondItem="PeE-f5-rVW" secondAttribute="bottom" constant="2" id="uAT-W0-9cU"/>
+                            <constraint firstItem="ocV-wV-Bkc" firstAttribute="top" secondItem="RY3-hp-bQu" secondAttribute="bottom" id="vai-Km-IeX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qOf-R5-C0Y"/>
+                                <exclude reference="Tcy-RQ-HP0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCh-iP-Er1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="1209"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rounded Rect 6.0pt Light Gray" width="13" height="13"/>
+    </resources>
+</document>
