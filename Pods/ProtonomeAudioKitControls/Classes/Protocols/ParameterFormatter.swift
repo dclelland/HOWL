@@ -27,6 +27,11 @@ public protocol ParameterFormatterConstructor: ParameterFormatter {
 extension ParameterFormatterConstructor {
     
     public func string(forValue value: Float) -> String? {
+        // Don't print negative zero
+        guard (value.floatingPointClass != .NegativeZero) else {
+            return formatter(forValue: 0.0).stringFromNumber(NSNumber(float: 0.0))
+        }
+        
         return formatter(forValue: value).stringFromNumber(NSNumber(float: value))
     }
     
