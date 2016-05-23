@@ -49,15 +49,45 @@
                                 <exclude reference="9Qm-yL-Bzd"/>
                                 <exclude reference="NZS-QS-HsI"/>
                             </mask>
+                            <mask key="constraints">
+                                <exclude reference="5i5-BU-LCY"/>
+                                <exclude reference="Ins-QS-cwA"/>
+                                <exclude reference="TPc-bZ-ign"/>
+                                <exclude reference="etJ-yX-JwI"/>
+                                <exclude reference="h3A-Yc-lCR"/>
+                                <exclude reference="mcD-PF-LNA"/>
+                                <exclude reference="HU6-J5-kls"/>
+                                <exclude reference="kUm-Fj-jge"/>
+                            </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
                                 <include reference="9Qm-yL-Bzd"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="5i5-BU-LCY"/>
+                                <include reference="Ins-QS-cwA"/>
+                                <include reference="TPc-bZ-ign"/>
+                                <exclude reference="etJ-yX-JwI"/>
+                                <exclude reference="h3A-Yc-lCR"/>
+                                <exclude reference="mcD-PF-LNA"/>
+                                <exclude reference="HU6-J5-kls"/>
+                                <include reference="kUm-Fj-jge"/>
+                            </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="NZS-QS-HsI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5i5-BU-LCY"/>
+                                <exclude reference="Ins-QS-cwA"/>
+                                <exclude reference="TPc-bZ-ign"/>
+                                <include reference="etJ-yX-JwI"/>
+                                <include reference="h3A-Yc-lCR"/>
+                                <include reference="mcD-PF-LNA"/>
+                                <include reference="HU6-J5-kls"/>
+                                <exclude reference="kUm-Fj-jge"/>
                             </mask>
                         </variation>
                     </view>
