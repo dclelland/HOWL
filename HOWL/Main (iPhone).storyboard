@@ -1235,9 +1235,9 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.0,0.5,1.0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.0,0.33,0.67,1.0"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
-                                                <integer key="value" value="3"/>
+                                                <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridRows">
                                                 <integer key="value" value="1"/>
@@ -1400,9 +1400,9 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.0,0.5,1.0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.0,0.33,0.67,1.0"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
-                                                <integer key="value" value="3"/>
+                                                <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridRows">
                                                 <integer key="value" value="1"/>

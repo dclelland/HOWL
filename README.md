@@ -22,6 +22,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
         - An if statement might be quite efficient perhaps, could do the same in the synth as in the vocoder
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
+- Still need to fix log scale to work from zero
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
 - Audiobus

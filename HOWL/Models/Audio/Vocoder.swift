@@ -57,17 +57,25 @@ class Vocoder: AKInstrument {
         let lfoX = AKLowFrequencyOscillator(
             waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
             frequency: lfoXRate,
-            amplitude: lfoXDepth * 0.5.ak
+            amplitude: lfoXShape
         )
+        
+        let lfoXDistortion = tanh(lfoX) * (sinh(lfoXShape * 2.0.ak) / (1.0.ak - cosh(lfoXShape * 2.0.ak)))
+        
+        let lfoXPost = lfoXDistortion * lfoXDepth * 0.5.ak
         
         let lfoY = AKLowFrequencyOscillator(
             waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
             frequency: lfoYRate,
-            amplitude: lfoYDepth * 0.5.ak
+            amplitude: lfoYShape
         )
         
-        connect(AKAssignment(output: xOut, input: lfoX + xIn))
-        connect(AKAssignment(output: yOut, input: lfoY + yIn))
+        let lfoYDistortion = tanh(lfoY) * (sinh(lfoYShape * 2.0.ak) / (1.0.ak - cosh(lfoYShape * 2.0.ak)))
+        
+        let lfoYPost = lfoYDistortion * lfoYDepth * 0.5.ak
+        
+        connect(AKAssignment(output: xOut, input: lfoXPost + xIn))
+        connect(AKAssignment(output: yOut, input: lfoYPost + yIn))
         
         let topFrequencies = zip(topLeftFrequencies, topRightFrequencies).map { topLeftFrequency, topRightFrequency in
             return xOut * (topRightFrequency - topLeftFrequency).ak + topLeftFrequency.ak
