@@ -16,13 +16,12 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 ### 2.0 Todo
 
 - Formant LFO system
-    - Try reloading the instrument
-    - Try wave tables
-    - Try having 4 LFOs (lol)
-        - An if statement might be quite efficient perhaps, could do the same in the synth as in the vocoder
+    - Need to move shaper + coefficient out into helper method (0% ~ 33% ~ 67% ~ 100% -> 0.01 ~ 0.1 ~ 1.0 ~ 10.0)
+    - Still need to fix log scale to work from zero
+    - Do pass over and check efficiency stuff
+    - iPhone control
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
-- Still need to fix log scale to work from zero
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
 - Audiobus
