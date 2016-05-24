@@ -1222,7 +1222,7 @@
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Waveform"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -1234,11 +1234,10 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0,1,4,2"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="SIN,TRI,SAW,SQR"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.0,0.5,1.0"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
-                                                <integer key="value" value="4"/>
+                                                <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridRows">
                                                 <integer key="value" value="1"/>
@@ -1388,7 +1387,7 @@
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Waveform"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -1400,11 +1399,10 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0,1,4,2"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="SIN,TRI,SAW,SQR"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.0,0.5,1.0"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
-                                                <integer key="value" value="4"/>
+                                                <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridRows">
                                                 <integer key="value" value="1"/>
@@ -1544,10 +1542,10 @@
                         <outlet property="formantsFrequencyControl" destination="6md-Za-K4d" id="xsK-Ta-gtf"/>
                         <outlet property="lfoXDepthControl" destination="5wm-hF-13a" id="UUv-63-DYD"/>
                         <outlet property="lfoXRateControl" destination="woz-pj-zhQ" id="jh4-dW-Q0K"/>
-                        <outlet property="lfoXWaveformControl" destination="P5S-54-85e" id="lYW-CZ-MFi"/>
+                        <outlet property="lfoXShapeControl" destination="P5S-54-85e" id="m63-dv-zNa"/>
                         <outlet property="lfoYDepthControl" destination="0uy-ot-b3b" id="m0h-Y5-Hyc"/>
                         <outlet property="lfoYRateControl" destination="qXE-P5-cU6" id="zEe-S0-0lZ"/>
-                        <outlet property="lfoYWaveformControl" destination="2lE-v4-OiD" id="wC7-1N-qYD"/>
+                        <outlet property="lfoYShapeControl" destination="2lE-v4-OiD" id="TjQ-eS-s9n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>

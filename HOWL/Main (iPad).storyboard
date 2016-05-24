@@ -1001,10 +1001,10 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwf-a9-TCN" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwf-a9-TCN" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="123" height="103"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Waveform"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -1015,18 +1015,13 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0,1,4,2"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="SIN,TRI,SAW,SQR"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
-                                                <integer key="value" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="gridRows">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="gutter">
-                                                <real key="value" value="2"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -1120,13 +1115,13 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-zn-1d9" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-zn-1d9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="123" height="103"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Waveform"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
@@ -1134,10 +1129,6 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="SIN,TRI,SAW,SQR"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0,1,4,2"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridRows">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
@@ -1147,6 +1138,14 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="gutter">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-d7-FiP" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
@@ -1317,10 +1316,10 @@
                         <outlet property="formantsFrequencyControl" destination="mpM-fX-G4z" id="czi-ET-3wJ"/>
                         <outlet property="lfoXDepthControl" destination="YSg-wJ-05G" id="lgp-OK-odr"/>
                         <outlet property="lfoXRateControl" destination="Cgk-V9-p8W" id="MHN-nM-p3t"/>
-                        <outlet property="lfoXWaveformControl" destination="bwf-a9-TCN" id="tah-qs-Ce5"/>
+                        <outlet property="lfoXShapeControl" destination="bwf-a9-TCN" id="zgE-hu-acm"/>
                         <outlet property="lfoYDepthControl" destination="fQx-8s-SBM" id="jCB-hx-CtZ"/>
                         <outlet property="lfoYRateControl" destination="S9v-d7-FiP" id="8hP-cF-AzR"/>
-                        <outlet property="lfoYWaveformControl" destination="LtI-zn-1d9" id="F3d-o9-GCN"/>
+                        <outlet property="lfoYShapeControl" destination="LtI-zn-1d9" id="JSx-iU-7bw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9k-Pt-L00" userLabel="First Responder" sceneMemberID="firstResponder"/>
