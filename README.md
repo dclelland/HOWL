@@ -17,6 +17,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 - Fix that random crash
 - Fix log scale, just for the sake of it
+- Bandwidth glitch
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
