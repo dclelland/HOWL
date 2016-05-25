@@ -1006,7 +1006,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="0.01"/>
+                                                <real key="value" value="0.25"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -1015,14 +1015,10 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
-                                                <real key="value" value="0.01"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="number"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.25,0.5,1.0,2.0,4.0,8.0,16.0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="1:4,1:2,1:1,2:1,4:1,8:1,16:1"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-wJ-05G" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
@@ -1119,7 +1115,7 @@
                                         <rect key="frame" x="2" y="2" width="123" height="103"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="0.01"/>
+                                                <real key="value" value="0.25"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1129,14 +1125,10 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
-                                                <real key="value" value="0.01"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleMax">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="number"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.25,0.5,1.0,2.0,4.0,8.0,16.0,32.0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="formatterSteps" value="1:4,1:2,1:1,2:1,4:1,8:1,16:1,32:1"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-d7-FiP" customClass="SliderControl" customModule="ProtonomeAudioKitControls">

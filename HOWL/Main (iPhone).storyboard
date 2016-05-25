@@ -1224,7 +1224,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="1.3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -1235,7 +1235,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.01,0.1,1.0,10.0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.25,1.0,4.0,16.0"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
@@ -1390,7 +1390,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="0.25"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -1401,7 +1401,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="stepped"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="stepped"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.01,0.1,1.0,10.0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleSteps" value="0.25,1.0,4.0,16.0"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gridColumns">
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>

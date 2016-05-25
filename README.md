@@ -15,11 +15,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.0 Todo
 
-- Formant LFO system
-    - Need to move shaper + coefficient out into helper method (0% ~ 33% ~ 67% ~ 100% -> 0.01 ~ 0.1 ~ 1.0 ~ 10.0)
-    - Still need to fix log scale to work from zero
-    - Do pass over and check efficiency stuff
-    - iPhone control
+- Fix that random crash
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
