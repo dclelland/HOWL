@@ -7,7 +7,7 @@ This is mostly a set of opinionated classes I wanted to share between my own app
 ## Installation:
 
 ```ruby
-pod 'ProtonomeAudioKitControls', '~> 0.2'
+pod 'ProtonomeAudioKitControls', '~> 0.3'
 ```
 
 ## Classes:

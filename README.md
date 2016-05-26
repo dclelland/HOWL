@@ -15,7 +15,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.0 Todo
 
-- Fix log scale, just for the sake of it
+- Cocoapods 1.0
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit

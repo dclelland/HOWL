@@ -1196,7 +1196,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="exponential"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -1204,6 +1204,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleExponent">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
@@ -1224,7 +1227,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="1.3"/>
+                                                <real key="value" value="0.25"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
@@ -1371,7 +1374,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="exponential"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -1379,6 +1382,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleExponent">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lE-v4-OiD" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
@@ -1883,7 +1889,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="exponential"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.002"/>
                                             </userDefinedRuntimeAttribute>
@@ -1892,6 +1898,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="string"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterString" value="A"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleExponent">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcf-Zt-879" customClass="DialControl" customModule="ProtonomeAudioKitControls">
@@ -1933,7 +1942,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="exponential"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.002"/>
                                             </userDefinedRuntimeAttribute>
@@ -1942,6 +1951,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="string"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterString" value="R"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleExponent">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGD-vf-7Dl" customClass="DialControl" customModule="ProtonomeAudioKitControls">
@@ -1958,7 +1970,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="exponential"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.002"/>
                                             </userDefinedRuntimeAttribute>
@@ -1967,6 +1979,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="string"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterString" value="D"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleExponent">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -2104,7 +2119,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="exponential"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -2112,6 +2127,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleExponent">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-IL-b65" customClass="DialControl" customModule="ProtonomeAudioKitControls">
@@ -2284,7 +2302,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Futura-Medium"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="logarithmic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="exponential"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleMin">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
@@ -2292,6 +2310,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="frequency"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleExponent">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nZ-au-PHp" customClass="DialControl" customModule="ProtonomeAudioKitControls">

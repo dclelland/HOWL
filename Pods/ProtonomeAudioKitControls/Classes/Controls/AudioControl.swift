@@ -51,6 +51,8 @@ import SnapKit
             return LinearParameterScale(minimum: scaleMin, maximum: scaleMax)
         case .Logarithmic:
             return LogarithmicParameterScale(minimum: scaleMin, maximum: scaleMax)
+        case .Exponential:
+            return ExponentialParameterScale(minimum: scaleMin, maximum: scaleMax, exponent: scaleExponent)
         case .Integer:
             return IntegerParameterScale(minimum: scaleMin, maximum: scaleMax)
         case .Stepped:
@@ -67,6 +69,9 @@ import SnapKit
         /// Specifies a `LogarithmicParameterScale` object.
         case Logarithmic = "logarithmic"
         
+        /// Specifies a `ExponentialParameterScale` object.
+        case Exponential = "exponential"
+        
         /// Specifies an `IntegerParameterScale` object.
         case Integer = "integer"
         
@@ -75,22 +80,29 @@ import SnapKit
     }
     
     /// A string constant specifying the chosen scale.
-    /// Due to the limitations of `@IBInspectable`, this must be set to one of the constants `"linear"`, `"logarithmic"`, `"integer"`, or `"stepped"`.
+    /// Due to the limitations of `@IBInspectable`, this must be set to one of the constants `"linear"`, `"logarithmic"`, `"exponential"`, `"integer"`, or `"stepped"`.
     @IBInspectable public var scaleType: String = ScaleType.Linear.rawValue {
         didSet {
             setNeedsLayout()
         }
     }
     
-    /// A minimum value, used by the linear, logarithmic, or integer scales.
+    /// A minimum value, used by the linear, logarithmic, exponential, or integer scales.
     @IBInspectable public var scaleMin: Float = 1.0 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    /// A maximum value, used by the linear, logarithmic, or integer scales.
+    /// A maximum value, used by the linear, logarithmic, exponential, or integer scales.
     @IBInspectable public var scaleMax: Float = 0.0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    /// An exponent value, used by the exponential scale.
+    @IBInspectable public var scaleExponent: Float = 1.0 {
         didSet {
             setNeedsLayout()
         }

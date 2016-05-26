@@ -41,9 +41,10 @@ struct LinearParameterScale: ParameterScale {
     
 }
 
-/// A scale describing a logarithmic conversion. Interpolates a ratio in range `0.0...1.0` to a value range `minimum...maximum`, taking the value to the power of *e* before the conversion.
+/// A scale describing a logarithmic conversion. Interpolates a ratio in range `0.0...1.0` to a value range `minimum...maximum`, on a logarithmic scale, where the value never hits zero.
 /// This results in a scale with a subtle gradient at the start, but a dramatic gradient near the end. This is most useful if you would like your control to cover multiple orders of magnitude.
 /// Ratios out of bounds are truncated.
+/// Minimum and maximum are expected to either both be positive or both be negative, and neither can be zero.
 struct LogarithmicParameterScale: ParameterScale {
     
     /// The scale's minimum value.
@@ -53,11 +54,35 @@ struct LogarithmicParameterScale: ParameterScale {
     var maximum: Float
     
     func value(forRatio ratio: Float) -> Float {
-        return pow(ratio.clamp(min: 0.0, max: 1.0), Float(M_E)).lerp(min: minimum, max: maximum)
+        return minimum * pow(maximum / minimum, ratio.clamp(min: 0.0, max: 1.0))
     }
     
     func ratio(forValue value: Float) -> Float {
-        return pow(value.ilerp(min: minimum, max: maximum), 1.0 / Float(M_E)).clamp(min: 0.0, max: 1.0)
+        return log(value / minimum) / log(maximum / minimum)
+    }
+    
+}
+
+/// A scale describing a logarithmic conversion. Interpolates a ratio in range `0.0...1.0` to a value range `minimum...maximum`, taking the value to the power of `exponent` before the conversion.
+/// This is useful if you would like to approximate a logarithmic conversion, but need to support zero values, or values both above and below zero.
+/// Ratios out of bounds are truncated.
+struct ExponentialParameterScale: ParameterScale {
+    
+    /// The scale's minimum value.
+    var minimum: Float
+    
+    /// The scale's maximum value.
+    var maximum: Float
+    
+    /// The scale's exponent.
+    var exponent: Float
+    
+    func value(forRatio ratio: Float) -> Float {
+        return pow(ratio.clamp(min: 0.0, max: 1.0), exponent).lerp(min: minimum, max: maximum)
+    }
+    
+    func ratio(forValue value: Float) -> Float {
+        return pow(value.ilerp(min: minimum, max: maximum), 1.0 / exponent).clamp(min: 0.0, max: 1.0)
     }
     
 }
