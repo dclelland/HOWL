@@ -111,7 +111,14 @@ class Vocoder: AKInstrument {
             comparatorAudioSource: input
         )
         
-        assignOutput(output, to: balance)
+        let clipper = AKClipper(
+            input: balance * 0.25.ak,
+            limit: 1.0.ak,
+            method: AKClipper.clippingMethodBramDeJong(),
+            clippingStartPoint: 0.9375.ak
+        )
+        
+        assignOutput(output, to: clipper)
         
         resetParameter(input)
     }
