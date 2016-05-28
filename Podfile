@@ -3,6 +3,7 @@ platform :ios, '8.0'
 
 use_frameworks!
 
+pod 'Audiobus', '~> 2.3'
 pod 'AudioKit', '~> 2.3'
 pod 'Bezzy', '~> 0.1'
 pod 'MultitouchGestureRecognizer', '~> 0.1'
