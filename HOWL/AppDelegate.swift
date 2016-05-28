@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        AKManager.sharedManager().disableAudioInput()
+        AKSettings.shared().audioInputEnabled = false
+        AKSettings.shared().playbackWhileMuted = true
         
         Audio.start()
         Audio.play()
