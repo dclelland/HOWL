@@ -15,13 +15,17 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.0 Todo
 
+- Audiobus
+    - Passthrough
+    - Background audio:
+        - Might need settings page addition
+        - Will need to shut down audio correctly as per the applicationDidEnterBackground implementation in https://developer.audiob.us/doc/_thirty-_minute-_integration.html
+    - What is Inter-app audio and how does it relate?
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
     - After running the profiler, turns out both of these are the biggest performance sink
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
-- Audiobus
-    - Passthrough
 - Fix that random crash
 
 ### Wishlist
