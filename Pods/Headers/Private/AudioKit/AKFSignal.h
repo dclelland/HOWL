@@ -1,1 +1,0 @@
-../../../AudioKit/AudioKit/Parameters/AKFSignal.h

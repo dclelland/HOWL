@@ -1,1 +1,0 @@
-../../../AudioKit/AudioKit/Operations/AKParameter+Operation.h

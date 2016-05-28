@@ -1,1 +1,0 @@
-../../../AudioKit/AudioKit/Operations/Signal Generators/Segment Arrays/AKSegmentArray.h

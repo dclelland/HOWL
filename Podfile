@@ -11,7 +11,9 @@ pod 'ProtonomeAudioKitControls', '~> 0.3'
 pod 'ProtonomeRoundedViews', '~> 0.1'
 pod 'SnapKit', '~> 0.17'
 
+target 'HOWL'
+
 post_install do | installer |
     require 'fileutils'
-    FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'HOWL/Resources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+    FileUtils.cp_r('Pods/Target Support Files/Pods-HOWL/Pods-HOWL-Acknowledgements.plist', 'HOWL/Resources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
 end

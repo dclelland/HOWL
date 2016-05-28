@@ -1,1 +1,0 @@
-../../../AudioKit/AudioKit/Operations/Signal Modifiers/Convolutions/AKConvolution.h

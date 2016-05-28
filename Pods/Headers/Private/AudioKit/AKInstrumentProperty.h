@@ -1,1 +1,0 @@
-../../../AudioKit/AudioKit/Instruments/AKInstrumentProperty.h

@@ -1,1 +1,0 @@
-../../../AudioKit/AudioKit/Operations/Math/AKInverse.h

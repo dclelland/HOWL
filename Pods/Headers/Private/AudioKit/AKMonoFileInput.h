@@ -1,1 +1,0 @@
-../../../AudioKit/AudioKit/Operations/Signal Input and Output/AKMonoFileInput.h
