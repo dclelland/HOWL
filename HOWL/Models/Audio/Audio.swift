@@ -10,11 +10,9 @@ import AudioKit
 
 struct Audio {
     
-    static let synthesizer = Synthesizer()
-    
-    static let vocoder = Vocoder(withInput: synthesizer.output)
-    
-    static let master = Master(withInput: vocoder.output)
+    static var synthesizer: Synthesizer!
+    static var vocoder: Vocoder!
+    static var master: Master!
     
     static var instruments: [AKInstrument] {
         return [
@@ -27,6 +25,10 @@ struct Audio {
     // MARK: - Life cycle
     
     static func start() {
+        synthesizer = Synthesizer()
+        vocoder = Vocoder(withInput: synthesizer.output)
+        master = Master(withInput: vocoder.output)
+        
         for instrument in instruments {
             AKOrchestra.addInstrument(instrument)
         }
@@ -44,6 +46,15 @@ struct Audio {
         for instrument in instruments {
             instrument.stop()
         }
+        
+        AKManager.sharedManager().resetOrchestra()
+        AKManager.sharedManager().stop()
+    }
+    
+    // MARK: - Helpers
+    
+    static var stopsInBackground: Bool {
+        return Settings.phonemeboardSustain.value == false && Settings.keyboardSustain.value == false
     }
 
 }

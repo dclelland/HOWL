@@ -25,6 +25,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
+    - https://github.com/syedhali/EZAudio#EZAudioPlot
     - After running the profiler, turns out both of these are the biggest performance sink
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
 - Fix that random crash

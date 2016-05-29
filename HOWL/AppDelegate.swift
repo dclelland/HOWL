@@ -15,13 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        AKSettings.shared().audioInputEnabled = true
+        AKSettings.shared().audioInputEnabled = false
         AKSettings.shared().playbackWhileMuted = true
         
         Audio.start()
         Audio.play()
         
         return true
+    }
+    
+    func applicationWillEnterForeground(application: UIApplication) {
+        if (Audio.stopsInBackground) {
+            Audio.start()
+            Audio.play()
+        }
+    }
+    
+    func applicationDidEnterBackground(application: UIApplication) {
+        if (Audio.stopsInBackground) {
+            Audio.stop()
+        }
     }
 
 }
