@@ -18,8 +18,6 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Audiobus
     - Passthrough
     - Background audio:
-        - Should only turn off if both HOLD buttons are off
-        - Might need settings page addition
         - Will need to shut down audio correctly as per the applicationDidEnterBackground implementation in https://developer.audiob.us/doc/_thirty-_minute-_integration.html
     - What is Inter-app audio and how does it relate?
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
