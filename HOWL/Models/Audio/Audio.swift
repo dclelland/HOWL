@@ -47,8 +47,8 @@ struct Audio {
             instrument.stop()
         }
         
-        AKManager.sharedManager().resetOrchestra()
         AKManager.sharedManager().stop()
+        AKManager.sharedManager().resetOrchestra()
     }
     
     // MARK: - Helpers
