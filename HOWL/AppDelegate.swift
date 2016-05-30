@@ -9,6 +9,7 @@
 import UIKit
 import AudioKit
 import AudioToolbox
+import LVGFourCharCodes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,34 +24,95 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Audio.start()
         Audio.play()
         
-        if let apiKey = self.apiKey {
-            audiobusController = ABAudiobusController(apiKey: apiKey)
-            audiobusController?.connectionPanelPosition = ABConnectionPanelPositionRight
-        }
+        setupAudiobus()
         
         return true
     }
     
     func applicationWillEnterForeground(application: UIApplication) {
-        if (Audio.stopsInBackground) {
+        if (AKManager.sharedManager().isRunning == false) {
             Audio.start()
             Audio.play()
         }
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
-        if (Audio.stopsInBackground) {
+        if (audiobusController?.connected != true && audiobusController?.memberOfActiveAudiobusSession != true) {
             Audio.stop()
         }
     }
 
 }
 
-// MARK: - Private helpers
+// MARK: - Audiobus
 
-private extension AppDelegate {
+extension AppDelegate {
     
-    var apiKey: String? {
+    private func setupAudiobus() {
+        if let apiKey = self.apiKey {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(audiobusConnectionsChanged(_:)), name: ABConnectionsChangedNotification, object: nil)
+            
+            audiobusController = ABAudiobusController(apiKey: apiKey)
+            audiobusController?.connectionPanelPosition = ABConnectionPanelPositionRight
+            
+            audiobusController?.addObserver(self, forKeyPath: "connected", options: [.New], context: nil)
+            audiobusController?.addObserver(self, forKeyPath: "memberOfActiveAudiobusSession", options: [.New], context: nil)
+            
+            let vocoderDescription = AudioComponentDescription(
+                componentType: kAudioUnitType_RemoteEffect,
+                componentSubType: "voco".code!,
+                componentManufacturer: "ptnm".code!,
+                componentFlags: 0,
+                componentFlagsMask: 0
+            )
+            
+            let synthesizerDescription = AudioComponentDescription(
+                componentType: kAudioUnitType_RemoteGenerator,
+                componentSubType: "synt".code!,
+                componentManufacturer: "ptnm".code!,
+                componentFlags: 0,
+                componentFlagsMask: 0
+            )
+            
+            let vocoderPort = ABFilterPort(
+                name: "Vocoder",
+                title: "HOWL: Vocoder",
+                audioComponentDescription: vocoderDescription,
+                audioUnit: audioUnit
+            )
+            
+            let synthesizerPort = ABSenderPort(
+                name: "Synthesizer",
+                title: "HOWL: Synthesizer",
+                audioComponentDescription: synthesizerDescription,
+                audioUnit: audioUnit
+            )
+            
+            audiobusController?.addFilterPort(vocoderPort)
+            audiobusController?.addSenderPort(synthesizerPort)
+        }
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        // This needs cleaning...
+//        super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+        
+        if (keyPath == "connected" || keyPath == "memberOfActiveAudiobusSession") {
+            if (UIApplication.sharedApplication().applicationState == .Background && audiobusController?.connected != true && audiobusController?.memberOfActiveAudiobusSession != true) {
+                Audio.stop()
+            }
+        }
+    }
+    
+    internal func audiobusConnectionsChanged(notification: NSNotification) {
+        if (audiobusController?.connected == true && AKManager.sharedManager().isRunning == false) {
+//        if (audiobusController?.connected == true) {
+            Audio.start()
+            Audio.play()
+        }
+    }
+    
+    private var apiKey: String? {
         guard let path = NSBundle.mainBundle().pathForResource("audiobus", ofType: "txt") else {
             return nil
         }
@@ -62,5 +124,8 @@ private extension AppDelegate {
         }
     }
     
+    private var audioUnit: AudioUnit {
+        return AKManager.sharedManager().engine.audioUnit
+    }
+    
 }
-

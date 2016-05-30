@@ -69,5 +69,32 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>manufacturer</key>
+			<string>ptnm</string>
+			<key>name</key>
+			<string>HOWL Vocoder</string>
+			<key>type</key>
+			<string>aurx</string>
+			<key>subtype</key>
+			<string>voco</string>
+			<key>version</key>
+			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>manufacturer</key>
+			<string>ptnm</string>
+			<key>name</key>
+			<string>HOWL Synthesizer</string>
+			<key>type</key>
+			<string>aurg</string>
+			<key>subtype</key>
+			<string>synt</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
 </dict>
 </plist>

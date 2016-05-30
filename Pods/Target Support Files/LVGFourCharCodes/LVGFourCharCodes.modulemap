@@ -1,0 +1,6 @@
+framework module LVGFourCharCodes {
+  umbrella header "LVGFourCharCodes-umbrella.h"
+
+  export *
+  module * { export * }
+}
