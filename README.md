@@ -18,6 +18,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Audiobus todo
     - Cleanup
         - App delegate
+        - The Csound AVAudioSessionCategoryOptionMixWithOthers thing
     - Effects
         - Need to figure out how to set up passthrough with the vocoder
     - Interface
