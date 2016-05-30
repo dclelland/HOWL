@@ -125,7 +125,6 @@ extension AppDelegate {
     }
     
     private var audioUnit: AudioUnit {
-        // need better way of doing this, too
         return AKManager.sharedManager().engine.audioUnit
     }
     

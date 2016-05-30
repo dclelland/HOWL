@@ -125,7 +125,6 @@ extern NSString * const AKCsoundAPIMessageNotification;
 // -----------------------------------------------------------------------------
 
 @property (nonatomic,readonly,getter=getCsound)       CSOUND *csound;
-@property (nonatomic,readonly,getter=getAudioUnit)    AudioUnit audioUnit;
 
 @property (readonly,nonatomic, getter=getNumChannels) int numChannels;
 @property (readonly,nonatomic, getter=getKsmps)       int ksmps;
