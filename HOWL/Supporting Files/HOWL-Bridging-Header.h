@@ -6,4 +6,4 @@
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
 //
 
-#import "Audiobus.h"
+#import <Audiobus/Audiobus.h>
