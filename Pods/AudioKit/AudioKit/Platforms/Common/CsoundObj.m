@@ -375,6 +375,11 @@ static void messageCallback(CSOUND *cs, int attr, const char *format, va_list va
     return _cs;
 }
 
+- (AudioUnit *)getAudioUnit
+{
+    return _csAUHAL;
+}
+
 - (MYFLT *)getInputChannelPtr:(NSString *)channelName
                   channelType:(AKControlChannelType)channelType
 {

@@ -13,7 +13,6 @@
 		650D8BFB1CFBB87600EFD767 /* audiobus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 650D8BFA1CFBB87600EFD767 /* audiobus.txt */; };
 		650D8BFE1CFBF67A00EFD767 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650D8BFD1CFBF67A00EFD767 /* AudioToolbox.framework */; };
 		650D8C001CFBF71800EFD767 /* HOWL.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */; };
-		650D8C031CFC614C00EFD767 /* CsoundObj+AudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 650D8C021CFC614C00EFD767 /* CsoundObj+AudioUnit.m */; };
 		6565053C1CEFE567002DC3E2 /* PhonemeboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565053B1CEFE567002DC3E2 /* PhonemeboardView.swift */; };
 		657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657350F11CEEF44300EC1233 /* Vocoder.swift */; };
 		657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */; };
@@ -49,8 +48,6 @@
 		650D8BFA1CFBB87600EFD767 /* audiobus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = audiobus.txt; sourceTree = "<group>"; };
 		650D8BFD1CFBF67A00EFD767 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HOWL.entitlements; sourceTree = "<group>"; };
-		650D8C011CFC614C00EFD767 /* CsoundObj+AudioUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CsoundObj+AudioUnit.h"; sourceTree = "<group>"; };
-		650D8C021CFC614C00EFD767 /* CsoundObj+AudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CsoundObj+AudioUnit.m"; sourceTree = "<group>"; };
 		656472CF1BF6BD2A00BDEB1B /* HOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6565053B1CEFE567002DC3E2 /* PhonemeboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardView.swift; sourceTree = "<group>"; };
 		657350F11CEEF44300EC1233 /* Vocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocoder.swift; sourceTree = "<group>"; };
@@ -99,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */,
-				650D8C011CFC614C00EFD767 /* CsoundObj+AudioUnit.h */,
-				650D8C021CFC614C00EFD767 /* CsoundObj+AudioUnit.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				650D8C031CFC614C00EFD767 /* CsoundObj+AudioUnit.m in Sources */,
 				657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */,
 				657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */,
 				65800FBA1C09D1BF000410CB /* SynthesizerNote.swift in Sources */,

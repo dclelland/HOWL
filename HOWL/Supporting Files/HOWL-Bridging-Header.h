@@ -7,5 +7,3 @@
 //
 
 #import <Audiobus/Audiobus.h>
-
-#import "CsoundObj+AudioUnit.h"
