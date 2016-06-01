@@ -18,11 +18,11 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Audiobus todo
     - Cleanup
         - App delegate
-        - The Csound AVAudioSessionCategoryOptionMixWithOthers thing
+    - Fork Audiobus
+        - The AVAudioSessionCategoryOptionMixWithOthers thing
+        - The AudioUnit thing
     - Effects
         - Need to figure out how to set up passthrough with the vocoder
-    - Interface
-        - Might need Audiobus/IAA buttons with dropdowns (Apple and Audiobus ones)
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
