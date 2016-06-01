@@ -25,6 +25,8 @@ class Synthesizer: AKInstrument {
     var envelopeSustain = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 1.0)
     var envelopeRelease = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
     
+    var microphoneAmplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    
     var output = AKAudio.globalParameter()
     
     override init() {
@@ -42,6 +44,8 @@ class Synthesizer: AKInstrument {
         addProperty(envelopeDecay)
         addProperty(envelopeSustain)
         addProperty(envelopeRelease)
+        
+        addProperty(microphoneAmplitude)
         
         let note = SynthesizerNote()
         
@@ -73,7 +77,9 @@ class Synthesizer: AKInstrument {
             amplitude: note.amplitude * envelope * (tremolo - ((tremoloDepth * 0.5.ak) - 1.0.ak))
         )
         
-        assignOutput(output, to: oscillator)
+        let input = AKAudioInput()
+        
+        assignOutput(output, to: oscillator + input)
     }
     
     // MARK: - Note creation
@@ -88,6 +94,16 @@ class Synthesizer: AKInstrument {
             envelopeSustain: envelopeSustain.value,
             envelopeRelease: envelopeRelease.value
         )
+    }
+    
+    // MARK: Actions
+    
+    func muteMicrophone() {
+        microphoneAmplitude.value = 0.0
+    }
+    
+    func unmuteMicrophone() {
+        microphoneAmplitude.value = 1.0
     }
     
 }

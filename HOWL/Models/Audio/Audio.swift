@@ -50,5 +50,11 @@ struct Audio {
         AKManager.sharedManager().stop()
         AKManager.sharedManager().resetOrchestra()
     }
+    
+    // MARK: - Properties
+    
+    static var sustained: Bool {
+        return Settings.phonemeboardSustain.value == true || Settings.keyboardSustain.value == true
+    }
 
 }

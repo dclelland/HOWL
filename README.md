@@ -20,9 +20,10 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
         - App delegate
     - Fork Audiobus
         - The AVAudioSessionCategoryOptionMixWithOthers thing
+            - See https://github.com/audiokit/AudioKit/blob/84981bf694088405020974caf1b8ef986e859790/AudioKit/Common/Internals/AKSettings.swift
         - The AudioUnit thing
     - Effects
-        - Need to figure out how to set up passthrough with the vocoder
+        - Need to figure out decent mic control
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
@@ -30,6 +31,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
     - After running the profiler, turns out both of these are the biggest performance sink
     - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
 - Fix that random crash
+- Show note names while holding down dial?
 
 ### Wishlist
 

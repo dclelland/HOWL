@@ -81,7 +81,7 @@
 			<key>subtype</key>
 			<string>voco</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>7</integer>
 		</dict>
 		<dict>
 			<key>manufacturer</key>
@@ -93,7 +93,7 @@
 			<key>subtype</key>
 			<string>synt</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>7</integer>
 		</dict>
 	</array>
 </dict>
