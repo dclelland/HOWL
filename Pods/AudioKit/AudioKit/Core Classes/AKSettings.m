@@ -63,6 +63,8 @@ static AKSettings *_settings = nil;
                 _messagesEnabled = [dict[@"Prefix Csound Messages"] boolValue];
             if (dict[@"Playback While Muted"])
                 _playbackWhileMuted = [dict[@"Playback While Muted"] boolValue];
+            if (dict[@"Default To Speaker"])
+                _defaultToSpeaker = [dict[@"Default To Speaker"] boolValue];
             if (dict[@"MIDI Enabled"])
                 _MIDIEnabled = [dict[@"MIDI Enabled"] boolValue];
         }
@@ -84,6 +86,14 @@ static AKSettings *_settings = nil;
 {
     if (playbackWhileMuted != _playbackWhileMuted) {
         _playbackWhileMuted = playbackWhileMuted;
+        [[AKManager sharedManager].engine resetSession];
+    }
+}
+
+- (void)setDefaultToSpeaker:(BOOL)defaultToSpeaker
+{
+    if (defaultToSpeaker != _defaultToSpeaker) {
+        _defaultToSpeaker = defaultToSpeaker;
         [[AKManager sharedManager].engine resetSession];
     }
 }

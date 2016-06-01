@@ -990,8 +990,16 @@ static void AKBreakpoint(CSOUND *cs, debug_bkpt_info_t *bkpt, void *userdata)
         BOOL success;
 
         AVAudioSession *session = [AVAudioSession sharedInstance];
-        
-        AVAudioSessionCategoryOptions options = AVAudioSessionCategoryOptionMixWithOthers;
+        AVAudioSessionCategoryOptions options;
+#if TARGET_OS_TV
+        options = AVAudioSessionCategoryOptionMixWithOthers;
+#else
+        if (AKSettings.shared.defaultToSpeaker) {
+            options = AVAudioSessionCategoryOptionMixWithOthers | AVAudioSessionCategoryOptionDefaultToSpeaker;
+        } else {
+            options = AVAudioSessionCategoryOptionMixWithOthers;
+        }
+#endif
         
         if (AKSettings.shared.audioInputEnabled) {
             success = [session setCategory:AVAudioSessionCategoryPlayAndRecord
