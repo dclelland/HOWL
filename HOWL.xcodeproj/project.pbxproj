@@ -33,6 +33,7 @@
 		65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD31CF1D6D300D49967 /* Assets.xcassets */; };
 		65A64DD61CF2DF1900D49967 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */; };
 		65AD197F1D001B8300CA39D1 /* Audiobus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AD197E1D001B8300CA39D1 /* Audiobus.swift */; };
+		65AD19811D003D1600CA39D1 /* InstrumentProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AD19801D003D1600CA39D1 /* InstrumentProperty.swift */; };
 		65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4EC9C1CF198C3000D5B16 /* Pitch.swift */; };
 		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
 		65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B871CD60D10001AB56A /* Main (iPad).storyboard */; };
@@ -70,6 +71,7 @@
 		65A64DD31CF1D6D300D49967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = HOWL/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		65AD197E1D001B8300CA39D1 /* Audiobus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audiobus.swift; sourceTree = "<group>"; };
+		65AD19801D003D1600CA39D1 /* InstrumentProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentProperty.swift; sourceTree = "<group>"; };
 		65C4EC9C1CF198C3000D5B16 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		65D7E3701C0027CF009D6994 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				65800F9E1C09D1BF000410CB /* Settings.swift */,
 				6500FD6A1C1BD43C00C2254B /* Setting.swift */,
+				65AD19801D003D1600CA39D1 /* InstrumentProperty.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				65800FBD1C09D1BF000410CB /* Key.swift in Sources */,
 				65800FBF1C09D1BF000410CB /* KeyboardViewCell.swift in Sources */,
 				65800FAE1C09D1BF000410CB /* AppDelegate.swift in Sources */,
+				65AD19811D003D1600CA39D1 /* InstrumentProperty.swift in Sources */,
 				65800FC01C09D1BF000410CB /* KeyboardViewController.swift in Sources */,
 				65800FB91C09D1BF000410CB /* Synthesizer.swift in Sources */,
 				65800FBC1C09D1BF000410CB /* Settings.swift in Sources */,

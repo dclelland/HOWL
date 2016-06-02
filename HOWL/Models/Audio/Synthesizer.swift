@@ -12,18 +12,18 @@ class Synthesizer: AKInstrument {
     
     var notes = [SynthesizerNote]()
     
-    var vibratoWaveform = AKInstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value)
-    var vibratoDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var vibratoRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    var vibratoWaveform = InstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerVibratoWaveform")
+    var vibratoDepth = InstrumentProperty(value: 0.0, key: "synthesizerVibratoDepth")
+    var vibratoRate = InstrumentProperty(value: 0.0, key: "synthesizerVibratoRate")
     
-    var tremoloWaveform = AKInstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value)
-    var tremoloDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var tremoloRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    var tremoloWaveform = InstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerTremoloWaveform")
+    var tremoloDepth = InstrumentProperty(value: 0.0, key: "synthesizerTremoloDepth")
+    var tremoloRate = InstrumentProperty(value: 0.0, key: "synthesizerTremoloRate")
     
-    var envelopeAttack = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
-    var envelopeDecay = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
-    var envelopeSustain = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 1.0)
-    var envelopeRelease = AKInstrumentProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    var envelopeAttack = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeAttack")
+    var envelopeDecay = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeDecay")
+    var envelopeSustain = InstrumentProperty(value: 1.0, key: "synthesizerEnvelopeSustain")
+    var envelopeRelease = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeRelease")
     
     var output = AKAudio.globalParameter()
     
@@ -85,6 +85,7 @@ class Synthesizer: AKInstrument {
     func note(withFrequency frequency: Float) -> SynthesizerNote {
         return SynthesizerNote(
             frequency: frequency,
+            amplitude: 1.0,
             vibratoWaveform: vibratoWaveform.value,
             tremoloWaveform: tremoloWaveform.value,
             envelopeAttack: envelopeAttack.value,

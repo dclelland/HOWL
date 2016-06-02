@@ -10,10 +10,10 @@ import AudioKit
 
 class Master: AKInstrument {
     
-    var amplitude = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var amplitude = InstrumentProperty(value: 0.0)
     
-    var effectsBitcrush = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var effectsReverb = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
+    var effectsBitcrush = InstrumentProperty(value: 0.0, key: "masterEffectsBitcrush")
+    var effectsReverb = InstrumentProperty(value: 0.0, key: "masterEffectsReverb")
     
     init(withInput input: AKAudio) {
         super.init()

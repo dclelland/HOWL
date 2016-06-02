@@ -11,15 +11,15 @@ import AudioKit
 class SynthesizerNote: AKNote {
     
     var frequency = AKNoteProperty()
-    var amplitude = AKNoteProperty(minimum: 0.0, maximum: 1.0)
+    var amplitude = AKNoteProperty()
     
-    var vibratoWaveform = AKNoteProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value)
-    var tremoloWaveform = AKNoteProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value)
+    var vibratoWaveform = AKNoteProperty()
+    var tremoloWaveform = AKNoteProperty()
     
-    var envelopeAttack = AKNoteProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
-    var envelopeDecay = AKNoteProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
-    var envelopeSustain = AKNoteProperty(value: 1.0, minimum: 0.0, maximum: 1.0)
-    var envelopeRelease = AKNoteProperty(value: 0.002, minimum: 0.002, maximum: 2.0)
+    var envelopeAttack = AKNoteProperty()
+    var envelopeDecay = AKNoteProperty()
+    var envelopeSustain = AKNoteProperty()
+    var envelopeRelease = AKNoteProperty()
     
     override init() {
         super.init()
@@ -36,13 +36,13 @@ class SynthesizerNote: AKNote {
     }
     
     convenience init(frequency: Float,
-                     amplitude: Float = 1.0,
-                     vibratoWaveform: Float = AKLowFrequencyOscillator.waveformTypeForSine().value,
-                     tremoloWaveform: Float = AKLowFrequencyOscillator.waveformTypeForSine().value,
-                     envelopeAttack: Float = 0.002,
-                     envelopeDecay: Float = 0.002,
-                     envelopeSustain: Float = 1.0,
-                     envelopeRelease: Float = 0.002) {
+                     amplitude: Float,
+                     vibratoWaveform: Float,
+                     tremoloWaveform: Float,
+                     envelopeAttack: Float,
+                     envelopeDecay: Float,
+                     envelopeSustain: Float,
+                     envelopeRelease: Float) {
         self.init()
         self.frequency.value = frequency
         self.amplitude.value = amplitude

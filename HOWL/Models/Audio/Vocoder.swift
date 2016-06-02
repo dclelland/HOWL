@@ -15,22 +15,22 @@ class Vocoder: AKInstrument {
     let bottomLeftFrequencies: [Float] = [324, 2985, 3329, 3807] // /i/
     let bottomRightFrequencies: [Float] = [378, 997, 2343, 3357] // /u/
     
-    var xIn = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
-    var yIn = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
+    var xIn = InstrumentProperty(value: 0.5, key: "vocoderXIn")
+    var yIn = InstrumentProperty(value: 0.5, key: "vocoderYIn")
     
-    var xOut = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
-    var yOut = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
+    var xOut = InstrumentProperty(value: 0.5)
+    var yOut = InstrumentProperty(value: 0.5)
     
-    var lfoXShape = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var lfoXDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var lfoXRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    var lfoXShape = InstrumentProperty(value: 0.0, key: "vocoderLfoXShape")
+    var lfoXDepth = InstrumentProperty(value: 0.0, key: "vocoderLfoXDepth")
+    var lfoXRate = InstrumentProperty(value: 0.0, key: "vocoderLfoXRate")
     
-    var lfoYShape = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var lfoYDepth = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    var lfoYRate = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 20.0)
+    var lfoYShape = InstrumentProperty(value: 0.0, key: "vocoderLfoYShape")
+    var lfoYDepth = InstrumentProperty(value: 0.0, key: "vocoderLfoYDepth")
+    var lfoYRate = InstrumentProperty(value: 0.0, key: "vocoderLfoYRate")
     
-    var formantsFrequency = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 2.0)
-    var formantsBandwidth = AKInstrumentProperty(value: 1.0, minimum: 0.0, maximum: 2.0)
+    var formantsFrequency = InstrumentProperty(value: 1.0, key: "vocoderFormantsFrequency")
+    var formantsBandwidth = InstrumentProperty(value: 1.0, key: "vocoderFormantsBandwidth")
     
     var output = AKAudio.globalParameter()
     
