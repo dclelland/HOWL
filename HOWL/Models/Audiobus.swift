@@ -11,17 +11,33 @@ import LVGFourCharCodes
 
 struct Audiobus {
     
-    // MARK: Shared
+    // MARK: Shared client
     
-    static var client = Audiobus()
-    
-    // MARK: Variables
-    
-    lazy var controller: ABAudiobusController? = {
-        guard let apiKey = self.apiKey else {
+    static var client: Audiobus? = {
+        guard let apiKey = apiKey else {
             return nil
         }
         
+        return Audiobus(apiKey: apiKey)
+    }()
+    
+    private static var apiKey: String? = {
+        guard let path = NSBundle.mainBundle().pathForResource("audiobus", ofType: "txt") else {
+            return nil
+        }
+        
+        do {
+            return try String(contentsOfFile: path)
+        } catch {
+            return nil
+        }
+    }()
+    
+    // MARK: Variables
+    
+    var apiKey: String
+    
+    lazy var controller: ABAudiobusController = {
         return ABAudiobusController(apiKey: apiKey)
     }()
         
@@ -55,48 +71,36 @@ struct Audiobus {
         )
     }()
     
+    init(apiKey: String) {
+        self.apiKey = apiKey
+    }
+    
     // MARK: Actions
     
     mutating func start() {
-        if let controller = controller {
-            NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { (notification) in
-                self.connectionsChanged(notification)
-            })
-            
-            controller.addSenderPort(senderPort)
-            controller.addFilterPort(filterPort)
-        }
+        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { (notification) in
+            self.connectionsChanged(notification)
+        })
+        
+        controller.addSenderPort(senderPort)
+        controller.addFilterPort(filterPort)
     }
     
     // MARK: Notifications
     
     private mutating func connectionsChanged(notification: NSNotification) {
         if (UIApplication.sharedApplication().applicationState == .Background) {
-            if (controller?.isConnected == true) {
+            if (controller.isConnected) {
                 Audio.start()
             } else {
                 Audio.stop()
             }
         }
         
-        if (controller?.isConnectedToSender == true) {
+        if (controller.isConnectedToSender) {
             Audio.synthesizer.unmuteMicrophone()
         } else {
             Audio.synthesizer.muteMicrophone()
-        }
-    }
-    
-    // MARK: - Private properties
-    
-    private var apiKey: String? {
-        guard let path = NSBundle.mainBundle().pathForResource("audiobus", ofType: "txt") else {
-            return nil
-        }
-        
-        do {
-            return try String(contentsOfFile: path)
-        } catch {
-            return nil
         }
     }
 
