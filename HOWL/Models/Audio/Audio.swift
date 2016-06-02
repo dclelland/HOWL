@@ -8,11 +8,11 @@
 
 import AudioKit
 
-struct Audio {
+class Audio {
     
-    static var synthesizer: Synthesizer!
-    static var vocoder: Vocoder!
-    static var master: Master!
+    // MARK: Client
+    
+    static var client: Audio?
     
     // MARK: Actions
     
@@ -21,45 +21,61 @@ struct Audio {
             return
         }
         
-        synthesizer = Synthesizer()
-        vocoder = Vocoder(withInput: synthesizer.output)
-        master = Master(withInput: vocoder.output)
-        
-        for instrument in instruments {
-            AKOrchestra.addInstrument(instrument)
-        }
-        
-        AKOrchestra.start()
-        
-        for instrument in instruments {
-            instrument.play()
-        }
+        client = Audio(audioInputEnabled: Audiobus.client?.controller.isConnectedToSender == true)
     }
     
     static func stop() {
-        guard AKManager.sharedManager().isRunning == true && Audio.sustained == false else {
+        guard AKManager.sharedManager().isRunning == true && client?.sustained == false else {
             return
-        }
-        
-        for instrument in instruments {
-            instrument.stop()
         }
         
         AKManager.sharedManager().stop()
         AKManager.sharedManager().resetOrchestra()
+        
+        client = nil
+    }
+    
+    static func startInput() {
+        guard AKSettings.shared().audioInputEnabled == false else {
+            return
+        }
+        
+        client = Audio(audioInputEnabled: true)
+    }
+    
+    static func stopInput() {
+        guard AKSettings.shared().audioInputEnabled == true else {
+            return
+        }
+        
+        client = Audio(audioInputEnabled: false)
+    }
+    
+    // MARK: Initialization
+    
+    var synthesizer: Synthesizer
+    var vocoder: Vocoder
+    var master: Master
+    
+    init(audioInputEnabled: Bool) {
+        AKSettings.shared().audioInputEnabled = audioInputEnabled
+        
+        synthesizer = Synthesizer()
+        vocoder = Vocoder(withInput: synthesizer.output)
+        master = Master(withInput: vocoder.output)
+        
+        AKOrchestra.addInstrument(synthesizer)
+        AKOrchestra.addInstrument(vocoder)
+        AKOrchestra.addInstrument(master)
+        
+        synthesizer.play()
+        vocoder.play()
+        master.play()
     }
     
     // MARK: Properties
-    
-    private static var instruments: [AKInstrument] {
-        return [
-            synthesizer,
-            vocoder,
-            master
-        ]
-    }
-    
-    private static var sustained: Bool {
+
+    private var sustained: Bool {
         return Settings.phonemeboardSustain.value == true || Settings.keyboardSustain.value == true
     }
 

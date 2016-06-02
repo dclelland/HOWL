@@ -50,7 +50,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var envelopeAttackControl: AudioControl? {
         didSet {
             envelopeAttackControl?.onChangeValue = { value in
-                Audio.synthesizer.envelopeAttack.value = value
+                Audio.client?.synthesizer.envelopeAttack.value = value
                 Settings.envelopeAttack.value = value
             }
             envelopeAttackControl?.value = Settings.envelopeAttack.value
@@ -60,7 +60,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var envelopeDecayControl: AudioControl? {
         didSet {
             envelopeDecayControl?.onChangeValue = { value in
-                Audio.synthesizer.envelopeDecay.value = value
+                Audio.client?.synthesizer.envelopeDecay.value = value
                 Settings.envelopeDecay.value = value
             }
             envelopeDecayControl?.value = Settings.envelopeDecay.value
@@ -70,7 +70,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var envelopeSustainControl: AudioControl? {
         didSet {
             envelopeSustainControl?.onChangeValue = { value in
-                Audio.synthesizer.envelopeSustain.value = value
+                Audio.client?.synthesizer.envelopeSustain.value = value
                 Settings.envelopeSustain.value = value
             }
             envelopeSustainControl?.value = Settings.envelopeSustain.value
@@ -80,7 +80,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var envelopeReleaseControl: AudioControl? {
         didSet {
             envelopeReleaseControl?.onChangeValue = { value in
-                Audio.synthesizer.envelopeRelease.value = value
+                Audio.client?.synthesizer.envelopeRelease.value = value
                 Settings.envelopeRelease.value = value
             }
             envelopeReleaseControl?.value = Settings.envelopeRelease.value
@@ -90,7 +90,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var vibratoWaveformControl: AudioControl? {
         didSet {
             vibratoWaveformControl?.onChangeValue = { value in
-                Audio.synthesizer.vibratoWaveform.value = value
+                Audio.client?.synthesizer.vibratoWaveform.value = value
                 self.keyboardViewController?.restartNotes()
                 Settings.vibratoWaveform.value = value
             }
@@ -101,7 +101,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var vibratoDepthControl: AudioControl? {
         didSet {
             vibratoDepthControl?.onChangeValue = { value in
-                Audio.synthesizer.vibratoDepth.value = value
+                Audio.client?.synthesizer.vibratoDepth.value = value
                 Settings.vibratoDepth.value = value
             }
             vibratoDepthControl?.value = Settings.vibratoDepth.value
@@ -111,7 +111,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var vibratoRateControl: AudioControl? {
         didSet {
             vibratoRateControl?.onChangeValue = { value in
-                Audio.synthesizer.vibratoRate.value = value
+                Audio.client?.synthesizer.vibratoRate.value = value
                 Settings.vibratoRate.value = value
             }
             vibratoRateControl?.value = Settings.vibratoRate.value
@@ -121,7 +121,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var tremoloWaveformControl: AudioControl? {
         didSet {
             tremoloWaveformControl?.onChangeValue = { value in
-                Audio.synthesizer.tremoloWaveform.value = value
+                Audio.client?.synthesizer.tremoloWaveform.value = value
                 self.keyboardViewController?.restartNotes()
                 Settings.tremoloWaveform.value = value
             }
@@ -132,7 +132,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var tremoloDepthControl: AudioControl? {
         didSet {
             tremoloDepthControl?.onChangeValue = { value in
-                Audio.synthesizer.tremoloDepth.value = value
+                Audio.client?.synthesizer.tremoloDepth.value = value
                 Settings.tremoloDepth.value = value
             }
             tremoloDepthControl?.value = Settings.tremoloDepth.value
@@ -142,7 +142,7 @@ class SynthesizerViewController: UIViewController {
     @IBOutlet weak var tremoloRateControl: AudioControl? {
         didSet {
             tremoloRateControl?.onChangeValue = { value in
-                Audio.synthesizer.tremoloRate.value = value
+                Audio.client?.synthesizer.tremoloRate.value = value
                 Settings.tremoloRate.value = value
             }
             tremoloRateControl?.value = Settings.tremoloRate.value

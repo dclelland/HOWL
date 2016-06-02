@@ -30,13 +30,13 @@ class PhonemeboardViewController: UIViewController {
     
     func refreshAudio() {
         guard let touches = multitouchGestureRecognizer?.touches, location = locationForTouches(touches) else {
-            Audio.master.mute()
+            Audio.client?.master.mute()
             return
         }
         
-        Audio.master.unmute()
+        Audio.client?.master.unmute()
         
-        Audio.vocoder.location = location
+        Audio.client?.vocoder.location = location
     }
     
     func refreshView() {

@@ -16,18 +16,17 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 ### 2.0 Todo
 
 - Audiobus todo
-    - Cleanup
-        - App delegate
-        - Audiobus class? Audio manager class?
-        - Look on port
-        - Retain ports
-            - isConnectedToSelf...
+    - Figure out bug with multiple audio instances running
     - Fork AudioKit
         - The AVAudioSessionCategoryOptionMixWithOthers thing
             - See https://github.com/audiokit/AudioKit/blob/84981bf694088405020974caf1b8ef986e859790/AudioKit/Common/Internals/AKSettings.swift
         - The AudioUnit thing
-    - Effects
-        - Need to figure out decent mic control
+
+- Sort out InstrumentProperty class
+    - persistentString
+    - defaultValue
+    - reset()
+
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit

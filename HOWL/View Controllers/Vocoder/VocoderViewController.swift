@@ -14,7 +14,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var formantsFrequencyControl: AudioControl? {
         didSet {
             formantsFrequencyControl?.onChangeValue = { value in
-                Audio.vocoder.formantsFrequency.value = value
+                Audio.client?.vocoder.formantsFrequency.value = value
                 Settings.formantsFrequency.value = value
             }
             formantsFrequencyControl?.value = Settings.formantsFrequency.value
@@ -24,7 +24,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var formantsBandwidthControl: AudioControl? {
         didSet {
             formantsBandwidthControl?.onChangeValue = { value in
-                Audio.vocoder.formantsBandwidth.value = value
+                Audio.client?.vocoder.formantsBandwidth.value = value
                 Settings.formantsBandwidth.value = value
             }
             formantsBandwidthControl?.value = Settings.formantsBandwidth.value
@@ -34,7 +34,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var effectsBitcrushControl: AudioControl? {
         didSet {
             effectsBitcrushControl?.onChangeValue = { value in
-                Audio.master.effectsBitcrush.value = value
+                Audio.client?.master.effectsBitcrush.value = value
                 Settings.effectsBitcrush.value = value
             }
             effectsBitcrushControl?.value = Settings.effectsBitcrush.value
@@ -44,7 +44,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var effectsReverbControl: AudioControl? {
         didSet {
             effectsReverbControl?.onChangeValue = { value in
-                Audio.master.effectsReverb.value = value
+                Audio.client?.master.effectsReverb.value = value
                 Settings.effectsReverb.value = value
             }
             effectsReverbControl?.value = Settings.effectsReverb.value
@@ -54,7 +54,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoXShapeControl: AudioControl? {
         didSet {
             lfoXShapeControl?.onChangeValue = { value in
-                Audio.vocoder.lfoXShape.value = value
+                Audio.client?.vocoder.lfoXShape.value = value
                 Settings.lfoXShape.value = value
             }
             lfoXShapeControl?.value = Settings.lfoXShape.value
@@ -64,7 +64,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoXDepthControl: AudioControl? {
         didSet {
             lfoXDepthControl?.onChangeValue = { value in
-                Audio.vocoder.lfoXDepth.value = value
+                Audio.client?.vocoder.lfoXDepth.value = value
                 Settings.lfoXDepth.value = value
             }
             lfoXDepthControl?.value = Settings.lfoXDepth.value
@@ -74,7 +74,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoXRateControl: AudioControl? {
         didSet {
             lfoXRateControl?.onChangeValue = { value in
-                Audio.vocoder.lfoXRate.value = value
+                Audio.client?.vocoder.lfoXRate.value = value
                 Settings.lfoXRate.value = value
             }
             lfoXRateControl?.value = Settings.lfoXRate.value
@@ -84,7 +84,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoYShapeControl: AudioControl? {
         didSet {
             lfoYShapeControl?.onChangeValue = { value in
-                Audio.vocoder.lfoYShape.value = value
+                Audio.client?.vocoder.lfoYShape.value = value
                 Settings.lfoYShape.value = value
             }
             lfoYShapeControl?.value = Settings.lfoYShape.value
@@ -94,7 +94,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoYDepthControl: AudioControl? {
         didSet {
             lfoYDepthControl?.onChangeValue = { value in
-                Audio.vocoder.lfoYDepth.value = value
+                Audio.client?.vocoder.lfoYDepth.value = value
                 Settings.lfoYDepth.value = value
             }
             lfoYDepthControl?.value = Settings.lfoYDepth.value
@@ -104,7 +104,7 @@ class VocoderViewController: UIViewController {
     @IBOutlet weak var lfoYRateControl: AudioControl? {
         didSet {
             lfoYRateControl?.onChangeValue = { value in
-                Audio.vocoder.lfoYRate.value = value
+                Audio.client?.vocoder.lfoYRate.value = value
                 Settings.lfoYRate.value = value
             }
             lfoYRateControl?.value = Settings.lfoYRate.value

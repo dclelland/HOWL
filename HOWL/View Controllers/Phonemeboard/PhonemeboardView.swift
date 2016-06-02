@@ -15,7 +15,7 @@ import ProtonomeAudioKitControls
     
     private let trailLength = 24
     
-    private var trailLocations = [CGPoint]() {
+    private var trailLocations = [CGPoint?]() {
         didSet {
             setNeedsDisplay()
         }
@@ -52,7 +52,7 @@ import ProtonomeAudioKitControls
     
     private var trailPath: UIBezierPath {
         let path = UIBezierPath.makePath { make in
-            trailLocations.enumerate().forEach { index, location in
+            trailLocations.flatMap { $0 }.enumerate().forEach { index, location in
                 let ratio = CGFloat(index).ilerp(min: 0.0, max: CGFloat(trailLength)).lerp(min: 1.0, max: 0.0)
                 let radius = pow(ratio, 2.0) * 24.0
                 make.oval(at: location, radius: radius)
@@ -66,12 +66,14 @@ import ProtonomeAudioKitControls
         return UIColor.protonome_lightColor(withHue: colorHue, saturation: colorSaturation)
     }
     
-    private var trailLocation: CGPoint {
-        return Audio.vocoder.location.lerp(rect: bounds)
+    private var trailLocation: CGPoint? {
+        return Audio.client?.vocoder.location.lerp(rect: bounds)
     }
     
     private var trailHue: CGFloat {
-        let location = Audio.vocoder.location
+        guard let location = Audio.client?.vocoder.location else {
+            return 0.0
+        }
         
         let angle = atan2(location.x - 0.5, location.y - 0.5)
         
@@ -79,7 +81,9 @@ import ProtonomeAudioKitControls
     }
     
     private var trailSaturation: CGFloat {
-        let location = Audio.vocoder.location
+        guard let location = Audio.client?.vocoder.location else {
+            return 0.0
+        }
         
         let distance = hypot(location.x - 0.5, location.y - 0.5)
         

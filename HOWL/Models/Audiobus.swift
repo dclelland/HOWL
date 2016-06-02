@@ -9,7 +9,7 @@
 import AudioKit
 import LVGFourCharCodes
 
-struct Audiobus {
+class Audiobus {
     
     // MARK: Client
     
@@ -18,7 +18,7 @@ struct Audiobus {
     // MARK: Actions
     
     static func start() {
-        guard client != nil else {
+        guard client == nil else {
             return
         }
         
@@ -46,31 +46,33 @@ struct Audiobus {
     init(apiKey: String) {
         self.controller = ABAudiobusController(apiKey: apiKey)
         
-        self.controller.addSenderPort(ABSenderPort(
-            name: "Synthesizer",
-            title: "HOWL: Synthesizer",
-            audioComponentDescription: AudioComponentDescription(
-                componentType: kAudioUnitType_RemoteGenerator,
-                componentSubType: "synt".code!,
-                componentManufacturer: "ptnm".code!,
-                componentFlags: 0,
-                componentFlagsMask: 0
-            ),
-            audioUnit: AKManager.sharedManager().engine.audioUnit
+        self.controller.addSenderPort(
+            ABSenderPort(
+                name: "Synthesizer",
+                title: "HOWL: Synthesizer",
+                audioComponentDescription: AudioComponentDescription(
+                    componentType: kAudioUnitType_RemoteGenerator,
+                    componentSubType: "synt".code!,
+                    componentManufacturer: "ptnm".code!,
+                    componentFlags: 0,
+                    componentFlagsMask: 0
+                ),
+                audioUnit: AKManager.sharedManager().engine.audioUnit
             )
         )
         
-        self.controller.addFilterPort(ABFilterPort(
-            name: "Vocoder",
-            title: "HOWL: Vocoder",
-            audioComponentDescription: AudioComponentDescription(
-                componentType: kAudioUnitType_RemoteEffect,
-                componentSubType: "voco".code!,
-                componentManufacturer: "ptnm".code!,
-                componentFlags: 0,
-                componentFlagsMask: 0
-            ),
-            audioUnit: AKManager.sharedManager().engine.audioUnit
+        self.controller.addFilterPort(
+            ABFilterPort(
+                name: "Vocoder",
+                title: "HOWL: Vocoder",
+                audioComponentDescription: AudioComponentDescription(
+                    componentType: kAudioUnitType_RemoteEffect,
+                    componentSubType: "voco".code!,
+                    componentManufacturer: "ptnm".code!,
+                    componentFlags: 0,
+                    componentFlagsMask: 0
+                ),
+                audioUnit: AKManager.sharedManager().engine.audioUnit
             )
         )
         
@@ -91,9 +93,9 @@ struct Audiobus {
         }
         
         if (controller.isConnectedToSender) {
-            Audio.synthesizer.unmuteMicrophone()
+            Audio.startInput()
         } else {
-            Audio.synthesizer.muteMicrophone()
+            Audio.stopInput()
         }
     }
 
@@ -106,7 +108,11 @@ extension ABAudiobusController {
     }
     
     var isConnectedToSender: Bool {
-        return connectedPorts.map { $0 as! ABPort }.filter { $0.type == ABPortTypeSender }.isEmpty == false
+        guard connectedPorts != nil else {
+            return false
+        }
+        
+        return connectedPorts.flatMap { $0 as? ABPort }.filter { $0.type == ABPortTypeSender }.isEmpty == false
     }
     
 }
