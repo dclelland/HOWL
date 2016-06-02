@@ -20,7 +20,7 @@ import AudioToolbox
         AKSettings.shared().defaultToSpeaker = false
         
         Audio.start()
-        Audiobus.client?.start()
+        Audiobus.start()
         
         return true
     }

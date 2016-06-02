@@ -17,32 +17,36 @@ struct Audio {
     // MARK: Actions
     
     static func start() {
-        if (AKManager.sharedManager().isRunning == false) {
-            synthesizer = Synthesizer()
-            vocoder = Vocoder(withInput: synthesizer.output)
-            master = Master(withInput: vocoder.output)
-            
-            for instrument in instruments {
-                AKOrchestra.addInstrument(instrument)
-            }
-            
-            AKOrchestra.start()
-            
-            for instrument in instruments {
-                instrument.play()
-            }
+        guard AKManager.sharedManager().isRunning == false else {
+            return
+        }
+        
+        synthesizer = Synthesizer()
+        vocoder = Vocoder(withInput: synthesizer.output)
+        master = Master(withInput: vocoder.output)
+        
+        for instrument in instruments {
+            AKOrchestra.addInstrument(instrument)
+        }
+        
+        AKOrchestra.start()
+        
+        for instrument in instruments {
+            instrument.play()
         }
     }
     
     static func stop() {
-        if (AKManager.sharedManager().isRunning == true && Audio.sustained == false) {
-            for instrument in instruments {
-                instrument.stop()
-            }
-            
-            AKManager.sharedManager().stop()
-            AKManager.sharedManager().resetOrchestra()
+        guard AKManager.sharedManager().isRunning == true && Audio.sustained == false else {
+            return
         }
+        
+        for instrument in instruments {
+            instrument.stop()
+        }
+        
+        AKManager.sharedManager().stop()
+        AKManager.sharedManager().resetOrchestra()
     }
     
     // MARK: Properties

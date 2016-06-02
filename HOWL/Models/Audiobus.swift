@@ -11,17 +11,23 @@ import LVGFourCharCodes
 
 struct Audiobus {
     
-    // MARK: Shared client
+    // MARK: Client
     
-    static var client: Audiobus? = {
-        guard let apiKey = apiKey else {
-            return nil
+    static var client: Audiobus?
+    
+    // MARK: Actions
+    
+    static func start() {
+        guard client != nil else {
+            return
         }
         
-        return Audiobus(apiKey: apiKey)
-    }()
+        if let apiKey = apiKey {
+            client = Audiobus(apiKey: apiKey)
+        }
+    }
     
-    private static var apiKey: String? = {
+    private static var apiKey: String? {
         guard let path = NSBundle.mainBundle().pathForResource("audiobus", ofType: "txt") else {
             return nil
         }
@@ -31,18 +37,16 @@ struct Audiobus {
         } catch {
             return nil
         }
-    }()
+    }
     
-    // MARK: Variables
+    // MARK: Initialization
     
-    var apiKey: String
-    
-    lazy var controller: ABAudiobusController = {
-        return ABAudiobusController(apiKey: apiKey)
-    }()
+    var controller: ABAudiobusController
+
+    init(apiKey: String) {
+        self.controller = ABAudiobusController(apiKey: apiKey)
         
-    lazy var senderPort: ABSenderPort = {
-        return ABSenderPort(
+        self.controller.addSenderPort(ABSenderPort(
             name: "Synthesizer",
             title: "HOWL: Synthesizer",
             audioComponentDescription: AudioComponentDescription(
@@ -53,11 +57,10 @@ struct Audiobus {
                 componentFlagsMask: 0
             ),
             audioUnit: AKManager.sharedManager().engine.audioUnit
+            )
         )
-    }()
-    
-    lazy var filterPort: ABFilterPort = {
-        return ABFilterPort(
+        
+        self.controller.addFilterPort(ABFilterPort(
             name: "Vocoder",
             title: "HOWL: Vocoder",
             audioComponentDescription: AudioComponentDescription(
@@ -68,27 +71,17 @@ struct Audiobus {
                 componentFlagsMask: 0
             ),
             audioUnit: AKManager.sharedManager().engine.audioUnit
+            )
         )
-    }()
-    
-    init(apiKey: String) {
-        self.apiKey = apiKey
-    }
-    
-    // MARK: Actions
-    
-    mutating func start() {
+        
         NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { (notification) in
             self.connectionsChanged(notification)
         })
-        
-        controller.addSenderPort(senderPort)
-        controller.addFilterPort(filterPort)
     }
     
     // MARK: Notifications
     
-    private mutating func connectionsChanged(notification: NSNotification) {
+    private func connectionsChanged(notification: NSNotification) {
         if (UIApplication.sharedApplication().applicationState == .Background) {
             if (controller.isConnected) {
                 Audio.start()
