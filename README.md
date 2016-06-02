@@ -16,7 +16,6 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 ### 2.0 Todo
 
 - Audiobus todo
-    - Figure out bug with multiple audio instances running
     - Fork AudioKit
         - The AVAudioSessionCategoryOptionMixWithOthers thing
             - See https://github.com/audiokit/AudioKit/blob/84981bf694088405020974caf1b8ef986e859790/AudioKit/Common/Internals/AKSettings.swift
