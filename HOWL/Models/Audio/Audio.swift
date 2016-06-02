@@ -21,7 +21,9 @@ class Audio {
             return
         }
         
-        client = Audio(audioInputEnabled: Audiobus.client?.controller.isConnectedToSender == true)
+        AKSettings.shared().audioInputEnabled = Audiobus.client?.controller.isConnectedToSender == true
+        
+        client = Audio()
     }
     
     static func stop() {
@@ -29,10 +31,10 @@ class Audio {
             return
         }
         
+        client = nil
+        
         AKManager.sharedManager().stop()
         AKManager.sharedManager().resetOrchestra()
-        
-        client = nil
     }
     
     static func startInput() {
@@ -40,7 +42,9 @@ class Audio {
             return
         }
         
-        client = Audio(audioInputEnabled: true)
+        AKSettings.shared().audioInputEnabled = true
+        
+        client = Audio()
     }
     
     static func stopInput() {
@@ -48,7 +52,9 @@ class Audio {
             return
         }
         
-        client = Audio(audioInputEnabled: false)
+        AKSettings.shared().audioInputEnabled = false
+        
+        client = Audio()
     }
     
     // MARK: Initialization
@@ -57,20 +63,25 @@ class Audio {
     var vocoder: Vocoder
     var master: Master
     
-    init(audioInputEnabled: Bool) {
-        AKSettings.shared().audioInputEnabled = audioInputEnabled
-        
+    init() {
         synthesizer = Synthesizer()
         vocoder = Vocoder(withInput: synthesizer.output)
         master = Master(withInput: vocoder.output)
         
+        AKOrchestra.reset()
         AKOrchestra.addInstrument(synthesizer)
         AKOrchestra.addInstrument(vocoder)
         AKOrchestra.addInstrument(master)
         
-        synthesizer.play()
-        vocoder.play()
-        master.play()
+        synthesizer.start()
+        vocoder.start()
+        master.start()
+    }
+    
+    deinit {
+        synthesizer.stop()
+        vocoder.stop()
+        master.stop()
     }
     
     // MARK: Properties
