@@ -18,7 +18,11 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Audiobus todo
     - Cleanup
         - App delegate
-    - Fork Audiobus
+        - Audiobus class? Audio manager class?
+        - Look on port
+        - Retain ports
+            - isConnectedToSelf...
+    - Fork AudioKit
         - The AVAudioSessionCategoryOptionMixWithOthers thing
             - See https://github.com/audiokit/AudioKit/blob/84981bf694088405020974caf1b8ef986e859790/AudioKit/Common/Internals/AKSettings.swift
         - The AudioUnit thing

@@ -14,7 +14,40 @@ struct Audio {
     static var vocoder: Vocoder!
     static var master: Master!
     
-    static var instruments: [AKInstrument] {
+    // MARK: Actions
+    
+    static func start() {
+        if (AKManager.sharedManager().isRunning == false) {
+            synthesizer = Synthesizer()
+            vocoder = Vocoder(withInput: synthesizer.output)
+            master = Master(withInput: vocoder.output)
+            
+            for instrument in instruments {
+                AKOrchestra.addInstrument(instrument)
+            }
+            
+            AKOrchestra.start()
+            
+            for instrument in instruments {
+                instrument.play()
+            }
+        }
+    }
+    
+    static func stop() {
+        if (AKManager.sharedManager().isRunning == true && Audio.sustained == false) {
+            for instrument in instruments {
+                instrument.stop()
+            }
+            
+            AKManager.sharedManager().stop()
+            AKManager.sharedManager().resetOrchestra()
+        }
+    }
+    
+    // MARK: Properties
+    
+    private static var instruments: [AKInstrument] {
         return [
             synthesizer,
             vocoder,
@@ -22,38 +55,7 @@ struct Audio {
         ]
     }
     
-    // MARK: - Life cycle
-    
-    static func start() {
-        synthesizer = Synthesizer()
-        vocoder = Vocoder(withInput: synthesizer.output)
-        master = Master(withInput: vocoder.output)
-        
-        for instrument in instruments {
-            AKOrchestra.addInstrument(instrument)
-        }
-        
-        AKOrchestra.start()
-    }
-    
-    static func play() {
-        for instrument in instruments {
-            instrument.play()
-        }
-    }
-    
-    static func stop() {
-        for instrument in instruments {
-            instrument.stop()
-        }
-        
-        AKManager.sharedManager().stop()
-        AKManager.sharedManager().resetOrchestra()
-    }
-    
-    // MARK: - Properties
-    
-    static var sustained: Bool {
+    private static var sustained: Bool {
         return Settings.phonemeboardSustain.value == true || Settings.keyboardSustain.value == true
     }
 

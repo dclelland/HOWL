@@ -32,6 +32,7 @@
 		65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */; };
 		65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD31CF1D6D300D49967 /* Assets.xcassets */; };
 		65A64DD61CF2DF1900D49967 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */; };
+		65AD197F1D001B8300CA39D1 /* Audiobus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AD197E1D001B8300CA39D1 /* Audiobus.swift */; };
 		65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4EC9C1CF198C3000D5B16 /* Pitch.swift */; };
 		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
 		65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B871CD60D10001AB56A /* Main (iPad).storyboard */; };
@@ -68,6 +69,7 @@
 		65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
 		65A64DD31CF1D6D300D49967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = HOWL/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		65AD197E1D001B8300CA39D1 /* Audiobus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audiobus.swift; sourceTree = "<group>"; };
 		65C4EC9C1CF198C3000D5B16 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		65D7E3701C0027CF009D6994 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				65800F971C09D1BF000410CB /* Audio */,
+				65AD197D1D001B7700CA39D1 /* Audiobus */,
 				65800F9D1C09D1BF000410CB /* Settings */,
 			);
 			path = Models;
@@ -214,6 +217,14 @@
 				6565053B1CEFE567002DC3E2 /* PhonemeboardView.swift */,
 			);
 			path = Phonemeboard;
+			sourceTree = "<group>";
+		};
+		65AD197D1D001B7700CA39D1 /* Audiobus */ = {
+			isa = PBXGroup;
+			children = (
+				65AD197E1D001B8300CA39D1 /* Audiobus.swift */,
+			);
+			name = Audiobus;
 			sourceTree = "<group>";
 		};
 		65F2B7641C1FCF8000E2DA15 /* Supporting Files */ = {
@@ -409,6 +420,7 @@
 				65800FB81C09D1BF000410CB /* Master.swift in Sources */,
 				6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */,
 				657F0D0E1C0D94F3004B17EF /* VocoderViewController.swift in Sources */,
+				65AD197F1D001B8300CA39D1 /* Audiobus.swift in Sources */,
 				65800FB71C09D1BF000410CB /* Audio.swift in Sources */,
 				65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */,
 			);
