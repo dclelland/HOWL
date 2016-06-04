@@ -8,6 +8,32 @@
 
 import Foundation
 
+struct PersistableProperty<T: PersistableType>: Persistable {
+    
+    typealias PersistentType = T
+    
+    var value: T {
+        set {
+            persistentValue = newValue
+        }
+        get {
+            return persistentValue
+        }
+    }
+    
+    let defaultValue: T
+    
+    let persistentKey: String
+    
+    init(value: T, key: String) {
+        self.defaultValue = value
+        self.persistentKey = key
+        
+        PersistentType.setDefaultPersistentValue(value, forKey: key)
+    }
+    
+}
+
 protocol Persistable {
     
     associatedtype PersistentType: PersistableType
@@ -25,10 +51,6 @@ extension Persistable {
         get {
             return PersistentType.persistentValue(forKey: persistentKey)
         }
-    }
-    
-    func setDefaultPersistentValue(value: PersistentType) {
-        PersistentType.setDefaultPersistentValue(value, forKey: persistentKey)
     }
     
 }

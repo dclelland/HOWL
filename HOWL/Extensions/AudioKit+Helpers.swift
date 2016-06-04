@@ -14,28 +14,26 @@ class InstrumentProperty: AKInstrumentProperty, Persistable {
     
     typealias PersistentType = Float
     
-    var persistentKey: String
-    
-    var defaultValue: Float {
-        didSet {
-            setDefaultPersistentValue(defaultValue)
-        }
-    }
-    
     override var value: Float {
         didSet {
             NSUserDefaults.standardUserDefaults().setFloat(value, forKey: persistentKey)
         }
     }
     
+    let defaultValue: Float
+    
+    let persistentKey: String
+    
     init(value: Float, key: String) {
         self.defaultValue = value
         self.persistentKey = key
         
+        Float.setDefaultPersistentValue(value, forKey: key)
+        
         super.init()
         
-        self.value = NSUserDefaults.standardUserDefaults().floatForKey(key)
-        self.initialValue = NSUserDefaults.standardUserDefaults().floatForKey(key)
+        self.value = self.persistentValue
+        self.initialValue = self.persistentValue
     }
     
 }
