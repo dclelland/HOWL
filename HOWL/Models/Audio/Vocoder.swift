@@ -21,11 +21,11 @@ class Vocoder: AKInstrument {
     var xOut = AKInstrumentProperty(value: 0.5)
     var yOut = AKInstrumentProperty(value: 0.5)
     
-    var lfoXShape = InstrumentProperty(value: 0.0, key: "vocoderLfoXShape")
+    var lfoXShape = InstrumentProperty(value: 0.25, key: "vocoderLfoXShape")
     var lfoXDepth = InstrumentProperty(value: 0.0, key: "vocoderLfoXDepth")
     var lfoXRate = InstrumentProperty(value: 0.0, key: "vocoderLfoXRate")
     
-    var lfoYShape = InstrumentProperty(value: 0.0, key: "vocoderLfoYShape")
+    var lfoYShape = InstrumentProperty(value: 0.25, key: "vocoderLfoYShape")
     var lfoYDepth = InstrumentProperty(value: 0.0, key: "vocoderLfoYDepth")
     var lfoYRate = InstrumentProperty(value: 0.0, key: "vocoderLfoYRate")
     

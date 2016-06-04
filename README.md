@@ -15,6 +15,8 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.0 Todo
 
+- Weird note click thing
+
 - Audiobus todo
     - Fork AudioKit
         - The AVAudioSessionCategoryOptionMixWithOthers thing
