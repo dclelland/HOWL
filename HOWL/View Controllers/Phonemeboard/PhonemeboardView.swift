@@ -26,14 +26,10 @@ import ProtonomeAudioKitControls
     override func updateValuesFromCsound() {
         super.updateValuesFromCsound()
         
-        let locations = selected ? Array(([trailLocation] + trailLocations).prefix(trailLength)) : []
-        let hue = trailHue
-        let saturation = trailSaturation
-        
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.trailLocations = locations
-            self.colorHue = hue
-            self.colorSaturation = saturation
+            self.trailLocations = self.selected ? Array(([self.trailLocation] + self.trailLocations).prefix(self.trailLength)) : []
+            self.colorHue = self.trailHue
+            self.colorSaturation = self.trailSaturation
         })
     }
     

@@ -16,7 +16,6 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 ### 2.0 todo
 
 - Show note names while holding down dial?
-- Fix that random crash
 
 ### 2.1 wishlist
 
