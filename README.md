@@ -17,6 +17,9 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 - Weird note click thing
 
+- Rebuild the phonemeboard/keyboard using Metal/SpriteKit
+    - Just use https://github.com/syedhali/EZAudio / EZAudioPlotGL
+
 - Audiobus todo
     - Fork AudioKit
         - The AVAudioSessionCategoryOptionMixWithOthers thing
@@ -24,11 +27,9 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
         - The AudioUnit thing
 
 - Try out slightly bigger fonts for iPad/iPad Pro support
-- Rebuild the phonemeboard/keyboard using Metal/SpriteKit
-    - https://github.com/syedhali/EZAudio#EZAudioPlot
-    - After running the profiler, turns out both of these are the biggest performance sink
-    - https://spin.atomicobject.com/2014/05/28/ios-interpolating-points/
+
 - Fix that random crash
+
 - Show note names while holding down dial?
 
 ### Wishlist
