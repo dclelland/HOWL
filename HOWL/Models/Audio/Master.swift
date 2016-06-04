@@ -10,32 +10,23 @@ import AudioKit
 
 class Master: AKInstrument {
     
-    var amplitude = AKInstrumentProperty(value: 0.0)
-    
     var effectsBitcrush = InstrumentProperty(value: 0.0, key: "masterEffectsBitcrush")
     var effectsReverb = InstrumentProperty(value: 0.0, key: "masterEffectsReverb")
     
     init(withInput input: AKAudio) {
         super.init()
         
-        addProperty(amplitude)
-        
         addProperty(effectsBitcrush)
         addProperty(effectsReverb)
         
-        let balance = AKBalance(
-            input: input,
-            comparatorAudioSource: input * amplitude
-        )
-        
         let bitcrush = AKDecimator(
-            input: balance,
+            input: input,
             bitDepth: 24.ak,
             sampleRate: 4000.ak
         )
         
         let bitcrushOutput = AKMix(
-            input1: balance,
+            input1: input,
             input2: bitcrush,
             balance: effectsBitcrush
         )
@@ -80,24 +71,6 @@ class Master: AKInstrument {
         setStereoAudioOutput(output)
         
         resetParameter(input)
-    }
-    
-    // MARK: - Actions
-    
-    func mute() {
-        guard amplitude.value != 0.0 else {
-            return
-        }
-        
-        amplitude.value = 0.0
-    }
-    
-    func unmute() {
-        guard amplitude.value != 1.0 else {
-            return
-        }
-        
-        amplitude.value = 1.0
     }
     
 }

@@ -32,6 +32,8 @@ class Vocoder: AKInstrument {
     var formantsFrequency = InstrumentProperty(value: 1.0, key: "vocoderFormantsFrequency")
     var formantsBandwidth = InstrumentProperty(value: 1.0, key: "vocoderFormantsBandwidth")
     
+    var amplitude = AKInstrumentProperty(value: 0.0)
+    
     var output = AKAudio.globalParameter()
     
     init(withInput input: AKAudio) {
@@ -53,6 +55,8 @@ class Vocoder: AKInstrument {
         
         addProperty(formantsFrequency)
         addProperty(formantsBandwidth)
+        
+        addProperty(amplitude)
         
         let lfoX = AKLowFrequencyOscillator(
             waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
@@ -108,7 +112,7 @@ class Vocoder: AKInstrument {
         
         let balance = AKBalance(
             input: filter,
-            comparatorAudioSource: input
+            comparatorAudioSource: input * amplitude
         )
         
         let clipper = AKClipper(
@@ -123,9 +127,23 @@ class Vocoder: AKInstrument {
         resetParameter(input)
     }
     
-}
-
-extension Vocoder {
+    // MARK: - Actions
+    
+    func mute() {
+        guard amplitude.value != 0.0 else {
+            return
+        }
+        
+        amplitude.value = 0.0
+    }
+    
+    func unmute() {
+        guard amplitude.value != 1.0 else {
+            return
+        }
+        
+        amplitude.value = 1.0
+    }
     
     var location: CGPoint {
         set {
@@ -139,5 +157,5 @@ extension Vocoder {
             )
         }
     }
-
+    
 }
