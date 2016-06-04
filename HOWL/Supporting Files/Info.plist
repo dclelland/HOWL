@@ -2,8 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>manufacturer</key>
+			<string>ptnm</string>
+			<key>name</key>
+			<string>HOWL Vocoder</string>
+			<key>subtype</key>
+			<string>voco</string>
+			<key>type</key>
+			<string>aurx</string>
+			<key>version</key>
+			<integer>7</integer>
+		</dict>
+		<dict>
+			<key>manufacturer</key>
+			<string>ptnm</string>
+			<key>name</key>
+			<string>HOWL Synthesizer</string>
+			<key>subtype</key>
+			<string>synt</string>
+			<key>type</key>
+			<string>aurg</string>
+			<key>version</key>
+			<integer>7</integer>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>HOWL</string>
 	<key>CFBundleExecutable</key>
 	<string>HOWL</string>
 	<key>CFBundleIdentifier</key>
@@ -12,12 +41,10 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>HOWL</string>
-	<key>CFBundleDisplayName</key>
-	<string>HOWL</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>2.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -34,7 +61,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIBackgroundModes</key>
@@ -69,32 +96,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>AudioComponents</key>
-	<array>
-		<dict>
-			<key>manufacturer</key>
-			<string>ptnm</string>
-			<key>name</key>
-			<string>HOWL Vocoder</string>
-			<key>type</key>
-			<string>aurx</string>
-			<key>subtype</key>
-			<string>voco</string>
-			<key>version</key>
-			<integer>7</integer>
-		</dict>
-		<dict>
-			<key>manufacturer</key>
-			<string>ptnm</string>
-			<key>name</key>
-			<string>HOWL Synthesizer</string>
-			<key>type</key>
-			<string>aurg</string>
-			<key>subtype</key>
-			<string>synt</string>
-			<key>version</key>
-			<integer>7</integer>
-		</dict>
-	</array>
 </dict>
 </plist>
