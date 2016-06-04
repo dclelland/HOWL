@@ -6,8 +6,7 @@
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
 //
 
-import UIKit
-import AudioKit
+import Persistable
 
 struct Settings {
     

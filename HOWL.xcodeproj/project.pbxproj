@@ -270,12 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 656472E11BF6BD2A00BDEB1B /* Build configuration list for PBXNativeTarget "HOWL" */;
 			buildPhases = (
-				7E3E3CBF89E0AFC9D60F2BD0 /* 📦 Check Pods Manifest.lock */,
+				7E3E3CBF89E0AFC9D60F2BD0 /* [CP] Check Pods Manifest.lock */,
 				656472CB1BF6BD2A00BDEB1B /* Sources */,
 				656472CC1BF6BD2A00BDEB1B /* Frameworks */,
 				656472CD1BF6BD2A00BDEB1B /* Resources */,
-				3E29D09746412FA617D2AE1A /* 📦 Embed Pods Frameworks */,
-				8A9AF99CBBCAF14B881828E0 /* 📦 Copy Pods Resources */,
+				3E29D09746412FA617D2AE1A /* [CP] Embed Pods Frameworks */,
+				8A9AF99CBBCAF14B881828E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,14 +346,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E29D09746412FA617D2AE1A /* 📦 Embed Pods Frameworks */ = {
+		3E29D09746412FA617D2AE1A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,14 +361,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HOWL/Pods-HOWL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E3E3CBF89E0AFC9D60F2BD0 /* 📦 Check Pods Manifest.lock */ = {
+		7E3E3CBF89E0AFC9D60F2BD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,14 +376,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8A9AF99CBBCAF14B881828E0 /* 📦 Copy Pods Resources */ = {
+		8A9AF99CBBCAF14B881828E0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

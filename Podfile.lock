@@ -7,7 +7,7 @@ PODS:
   - LVGFourCharCodes (0.1.0)
   - MultitouchGestureRecognizer (0.1.1)
   - Parity (0.1.2)
-  - Persist (0.1.0)
+  - Persistable (0.1.0)
   - ProtonomeAudioKitControls (0.3.0):
     - AudioKit (~> 2.0)
     - Bezzy
@@ -24,14 +24,10 @@ DEPENDENCIES:
   - LVGFourCharCodes (~> 0.1)
   - MultitouchGestureRecognizer (~> 0.1)
   - Parity (~> 0.1)
-  - Persist (from `../Persist`)
+  - Persistable (~> 0.1)
   - ProtonomeAudioKitControls (~> 0.3)
   - ProtonomeRoundedViews (~> 0.1)
   - SnapKit (~> 0.17)
-
-EXTERNAL SOURCES:
-  Persist:
-    :path: ../Persist
 
 SPEC CHECKSUMS:
   Audiobus: d75ef3f0d625abf3007a147548423e76ca61043d
@@ -42,11 +38,11 @@ SPEC CHECKSUMS:
   LVGFourCharCodes: c96ae7df28d8d9c49d174d1749c4c35b167655a6
   MultitouchGestureRecognizer: e32b5b78035c4c389973b410aae01bcd4f763f29
   Parity: 1e9c0c866a477063cb763be765e13d70b25041e1
-  Persist: 9537c904517e1584a67fbe684dca52defa9fcc99
+  Persistable: 22d7fce01b8e2e1d54d629059dddc5b66fb8f3c5
   ProtonomeAudioKitControls: 9c17a351e24dad0f385361d769fa1a8d3c61e934
   ProtonomeRoundedViews: cceec203fb0ebc909e295429209b15144ab2996d
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
 
-PODFILE CHECKSUM: c8cd5f2032441873f01d4b02e1223e9f9f9bc07e
+PODFILE CHECKSUM: 693aba5b6244140c3ad11f1013dc992bbb4793a7
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1
