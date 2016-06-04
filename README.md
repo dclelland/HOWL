@@ -11,7 +11,7 @@ It's extremely basic - just a sawtooth wave VCO run through four parallel bandpa
 
 ### Building
 
-Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 7.2).
+Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 7.3).
 
 ### 2.0 todo
 
