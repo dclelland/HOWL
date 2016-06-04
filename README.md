@@ -13,21 +13,12 @@ It's extremely basic - just a sawtooth wave VCO run through four parallel bandpa
 
 Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 7.2).
 
-### 2.0 Todo
-
-- Audiobus todo
-    - Fork AudioKit
-        - The AVAudioSessionCategoryOptionMixWithOthers thing
-            - See https://github.com/audiokit/AudioKit/blob/84981bf694088405020974caf1b8ef986e859790/AudioKit/Common/Internals/AKSettings.swift
-        - The AudioUnit thing
-
-- Try out slightly bigger fonts for iPad/iPad Pro support
-
-- Fix that random crash
+### 2.0 todo
 
 - Show note names while holding down dial?
+- Fix that random crash
 
-### Wishlist
+### 2.1 wishlist
 
 - MIDI input support
     - kAudioUnitType_RemoteMusicEffect

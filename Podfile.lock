@@ -19,7 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - Audiobus (~> 2.3)
-  - AudioKit (~> 2.3)
+  - AudioKit (from `https://github.com/dclelland/AudioKit/`, commit `aca9b73755df0beb488439ddd7ef36fe912bcb9c`)
   - Bezzy (~> 0.1)
   - LVGFourCharCodes (~> 0.1)
   - MultitouchGestureRecognizer (~> 0.1)
@@ -28,6 +28,16 @@ DEPENDENCIES:
   - ProtonomeAudioKitControls (~> 0.3)
   - ProtonomeRoundedViews (~> 0.1)
   - SnapKit (~> 0.17)
+
+EXTERNAL SOURCES:
+  AudioKit:
+    :commit: aca9b73755df0beb488439ddd7ef36fe912bcb9c
+    :git: https://github.com/dclelland/AudioKit/
+
+CHECKOUT OPTIONS:
+  AudioKit:
+    :commit: aca9b73755df0beb488439ddd7ef36fe912bcb9c
+    :git: https://github.com/dclelland/AudioKit/
 
 SPEC CHECKSUMS:
   Audiobus: d75ef3f0d625abf3007a147548423e76ca61043d
@@ -43,6 +53,6 @@ SPEC CHECKSUMS:
   ProtonomeRoundedViews: cceec203fb0ebc909e295429209b15144ab2996d
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
 
-PODFILE CHECKSUM: 693aba5b6244140c3ad11f1013dc992bbb4793a7
+PODFILE CHECKSUM: de741cd740f63bd14870c7a443af18df85e60f9b
 
 COCOAPODS: 1.0.1
