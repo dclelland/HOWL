@@ -19,7 +19,7 @@ public struct Persistent<T: PersistableType>: Persistable {
     /// Alias around `persistentValue` and `setPersistentValue:`.
     public var value: T {
         set {
-            setPersistentValue(value)
+            setPersistentValue(newValue)
         }
         get {
             return persistentValue()

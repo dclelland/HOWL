@@ -23,7 +23,8 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
             - See https://github.com/audiokit/AudioKit/blob/84981bf694088405020974caf1b8ef986e859790/AudioKit/Common/Internals/AKSettings.swift
         - The AudioUnit thing
 
-- Persistent notes/vocoder state when opening and closing the app
+- Persistent notes/vocoder state when stopping and starting the audio engine
+
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
 - Rebuild the phonemeboard/keyboard using Metal/SpriteKit
