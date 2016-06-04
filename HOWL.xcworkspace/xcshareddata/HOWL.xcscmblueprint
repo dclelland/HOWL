@@ -7,6 +7,7 @@
     "E739478ACB846B91AE7D579DF1AD75E75078624D" : 0,
     "E9CF89D87D276DB579D810B9194D8FC9D2609CC2" : 0,
     "EB4BDDBC51578A3C84AD2C1CEF7E94CD3CA812F8" : 0,
+    "A0576489C950C8E026F476D6839B88B192E1F1CA" : 0,
     "517A59507AEF56594B177A51CD26A28FC4949CEE" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E835B4C9-E3B4-4BE9-8DB7-5A3FE20B3310",
@@ -14,6 +15,7 @@
     "E739478ACB846B91AE7D579DF1AD75E75078624D" : "ProtonomeRoundedViews\/",
     "E9CF89D87D276DB579D810B9194D8FC9D2609CC2" : "MultitouchGestureRecognizer\/",
     "EB4BDDBC51578A3C84AD2C1CEF7E94CD3CA812F8" : "HOWL\/",
+    "A0576489C950C8E026F476D6839B88B192E1F1CA" : "Persist\/",
     "517A59507AEF56594B177A51CD26A28FC4949CEE" : "ProtonomeAudioKitControls\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "HOWL",
@@ -24,6 +26,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/ProtonomeAudioKitControls.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "517A59507AEF56594B177A51CD26A28FC4949CEE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/Persist.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A0576489C950C8E026F476D6839B88B192E1F1CA"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/ProtonomeRoundedViews.git",
