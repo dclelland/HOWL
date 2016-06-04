@@ -8,6 +8,38 @@
 
 import AudioKit
 
+// MARK: Persistence
+
+class InstrumentProperty: AKInstrumentProperty, Persistable {
+    
+    typealias PersistentType = Float
+    
+    var persistentKey: String
+    
+    var defaultValue: Float {
+        didSet {
+            setDefaultPersistentValue(defaultValue)
+        }
+    }
+    
+    override var value: Float {
+        didSet {
+            NSUserDefaults.standardUserDefaults().setFloat(value, forKey: persistentKey)
+        }
+    }
+    
+    init(value: Float, key: String) {
+        self.defaultValue = value
+        self.persistentKey = key
+        
+        super.init()
+        
+        self.value = NSUserDefaults.standardUserDefaults().floatForKey(key)
+        self.initialValue = NSUserDefaults.standardUserDefaults().floatForKey(key)
+    }
+    
+}
+
 // MARK: Conversion
 
 protocol AKConvertible {

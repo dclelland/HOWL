@@ -25,6 +25,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
     - persistentString
     - defaultValue
     - reset()
+    - Persistable, PersistableType protocols
 
 - Bug in reloadNotes when you change waveform (seems to have vanished?)
 - Try out slightly bigger fonts for iPad/iPad Pro support
