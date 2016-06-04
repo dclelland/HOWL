@@ -15,8 +15,8 @@ class SynthesizerViewController: UIViewController {
         didSet {
             keyboardLeftIntervalControl?.onChangeValue = { value in
                 self.keyboardViewController?.keyboard.leftInterval = Int(value)
-                self.keyboardViewController?.refreshNotes()
-                self.keyboardViewController?.refreshView()
+                self.keyboardViewController?.reloadSynthesizer()
+                self.keyboardViewController?.reloadView()
                 Settings.keyboardLeftInterval.value = Int(value)
             }
             keyboardLeftIntervalControl?.onTouchDown = {
@@ -33,8 +33,8 @@ class SynthesizerViewController: UIViewController {
         didSet {
             keyboardRightIntervalControl?.onChangeValue = { value in
                 self.keyboardViewController?.keyboard.rightInterval = Int(value)
-                self.keyboardViewController?.refreshNotes()
-                self.keyboardViewController?.refreshView()
+                self.keyboardViewController?.reloadSynthesizer()
+                self.keyboardViewController?.reloadView()
                 Settings.keyboardRightInterval.value = Int(value)
             }
             keyboardRightIntervalControl?.onTouchDown = {
@@ -88,7 +88,7 @@ class SynthesizerViewController: UIViewController {
             vibratoWaveformControl?.value = Audio.client!.synthesizer.vibratoWaveform.value
             vibratoWaveformControl?.onChangeValue = { value in
                 Audio.client?.synthesizer.vibratoWaveform.value = value
-                self.keyboardViewController?.restartNotes()
+                self.keyboardViewController?.reloadSynthesizer()
             }
         }
     }
@@ -116,7 +116,7 @@ class SynthesizerViewController: UIViewController {
             tremoloWaveformControl?.value = Audio.client!.synthesizer.tremoloWaveform.value
             tremoloWaveformControl?.onChangeValue = { value in
                 Audio.client?.synthesizer.tremoloWaveform.value = value
-                self.keyboardViewController?.restartNotes()
+                self.keyboardViewController?.reloadSynthesizer()
             }
         }
     }

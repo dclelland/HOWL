@@ -28,7 +28,7 @@ class PhonemeboardViewController: UIViewController {
     
     // MARK: - Life cycle
     
-    func refreshAudio() {
+    func reloadVocoder() {
         guard let touches = multitouchGestureRecognizer?.touches, location = locationForTouches(touches) else {
             Audio.client?.master.mute()
             return
@@ -39,7 +39,7 @@ class PhonemeboardViewController: UIViewController {
         Audio.client?.vocoder.location = location
     }
     
-    func refreshView() {
+    func reloadView() {
         guard let multitouchState = multitouchGestureRecognizer?.multitouchState, let touches = multitouchGestureRecognizer?.touches else {
             return
         }
@@ -70,10 +70,10 @@ class PhonemeboardViewController: UIViewController {
         let location = touches.reduce(CGPointZero) { (location, touch) -> CGPoint in
             let touchLocation = touch.locationInView(phonemeboardView)
             
-            let x = location.x + touchLocation.x / CGFloat(touches.count)
-            let y = location.y + touchLocation.y / CGFloat(touches.count)
-            
-            return CGPoint(x: x, y: y)
+            return CGPoint(
+                x: location.x + touchLocation.x / CGFloat(touches.count),
+                y: location.y + touchLocation.y / CGFloat(touches.count)
+            )
         }
         
         return location.ilerp(rect: phonemeboardView.bounds)
@@ -86,23 +86,23 @@ class PhonemeboardViewController: UIViewController {
 extension PhonemeboardViewController: MultitouchGestureRecognizerDelegate {
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
-        refreshAudio()
-        refreshView()
+        reloadVocoder()
+        reloadView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
-        refreshAudio()
-        refreshView()
+        reloadVocoder()
+        reloadView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
-        refreshAudio()
-        refreshView()
+        reloadVocoder()
+        reloadView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
-        refreshAudio()
-        refreshView()
+        reloadVocoder()
+        reloadView()
     }
     
 }

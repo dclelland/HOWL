@@ -80,6 +80,16 @@ class Synthesizer: AKInstrument {
         }
     }
     
+    // MARK: - Overrides
+    
+    override func playNote(note: AKNote) {
+        super.playNote(note)
+    }
+    
+    override func stopNote(note: AKNote) {
+        super.stopNote(note)
+    }
+    
     // MARK: - Note creation
     
     func note(withFrequency frequency: Float) -> SynthesizerNote {

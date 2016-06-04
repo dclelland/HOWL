@@ -85,10 +85,18 @@ class Master: AKInstrument {
     // MARK: - Actions
     
     func mute() {
+        guard amplitude.value != 0.0 else {
+            return
+        }
+        
         amplitude.value = 0.0
     }
     
     func unmute() {
+        guard amplitude.value != 1.0 else {
+            return
+        }
+        
         amplitude.value = 1.0
     }
     

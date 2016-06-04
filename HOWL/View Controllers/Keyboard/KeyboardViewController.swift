@@ -37,7 +37,9 @@ class KeyboardViewController: UIViewController {
     var notes = [UITouch: (key: Key, note: SynthesizerNote)]()
     
     var mode: Mode = .Normal {
-        didSet { refreshView() }
+        didSet {
+            reloadView()
+        }
     }
     
     enum Mode {
@@ -47,7 +49,7 @@ class KeyboardViewController: UIViewController {
     
     // MARK: - Life cycle
     
-    func refreshNotes() {
+    func updateSynthesizer() {
         notes.keys.forEach { touch in
             if let key = keyForTouch(touch) {
                 updateNoteForTouch(touch, withKey: key)
@@ -57,7 +59,7 @@ class KeyboardViewController: UIViewController {
         }
     }
     
-    func restartNotes() {
+    func reloadSynthesizer() {
         notes.keys.forEach { touch in
             if let key = keyForTouch(touch) {
                 stopNoteForTouch(touch)
@@ -68,7 +70,7 @@ class KeyboardViewController: UIViewController {
         }
     }
     
-    func refreshView() {
+    func reloadView() {
         keyboardView?.reloadData()
     }
     
@@ -194,7 +196,7 @@ extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
         if let key = keyForTouch(touch) {
             playNoteForTouch(touch, withKey: key)
         }
-        refreshView()
+        reloadView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
@@ -203,17 +205,17 @@ extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
         } else {
             stopNoteForTouch(touch)
         }
-        refreshView()
+        reloadView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
         stopNoteForTouch(touch)
-        refreshView()
+        reloadView()
     }
     
     func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         stopNoteForTouch(touch)
-        refreshView()
+        reloadView()
     }
     
     // MARK: Private getters

@@ -12,7 +12,13 @@ class Audio {
     
     // MARK: Client
     
-    static var client: Audio?
+    static var client: Audio? {
+        didSet {
+            didSetClient?()
+        }
+    }
+    
+    static var didSetClient: (Void -> Void)?
     
     // MARK: Actions
     

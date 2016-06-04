@@ -13,6 +13,10 @@ import AudioToolbox
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var howlViewController: HowlViewController? {
+        return window?.rootViewController as? HowlViewController
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         AKSettings.shared().playbackWhileMuted = true
@@ -20,6 +24,11 @@ import AudioToolbox
         
         Audio.start()
         Audiobus.start()
+        
+        Audio.didSetClient = {
+            self.howlViewController?.keyboardViewController?.reloadSynthesizer()
+            self.howlViewController?.phonemeboardViewController?.reloadVocoder()
+        }
         
         return true
     }

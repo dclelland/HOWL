@@ -133,9 +133,10 @@ extension Vocoder {
             yIn.value = Float(newValue.y)
         }
         get {
-            let x = CGFloat(xOut.value)
-            let y = CGFloat(yOut.value)
-            return CGPoint(x: x, y: y)
+            return CGPoint(
+                x: CGFloat(xOut.value),
+                y: CGFloat(yOut.value)
+            )
         }
     }
 
