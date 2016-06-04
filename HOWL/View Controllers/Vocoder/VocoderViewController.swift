@@ -108,19 +108,19 @@ class VocoderViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: UIButton) {
-        formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.initialValue
-        formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.initialValue
+        formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.defaultValue
+        formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.defaultValue
         
-        effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.initialValue
-        effectsReverbControl?.value = Audio.client!.master.effectsReverb.initialValue
+        effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.defaultValue
+        effectsReverbControl?.value = Audio.client!.master.effectsReverb.defaultValue
         
-        lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.initialValue
-        lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.initialValue
-        lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.initialValue
+        lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.defaultValue
+        lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.defaultValue
+        lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.defaultValue
         
-        lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.initialValue
-        lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.initialValue
-        lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.initialValue
+        lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.defaultValue
+        lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.defaultValue
+        lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.defaultValue
     }
     
 }

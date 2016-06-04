@@ -149,18 +149,18 @@ class SynthesizerViewController: UIViewController {
         keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
         keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
         
-        envelopeAttackControl?.value = Audio.client!.synthesizer.envelopeAttack.initialValue
-        envelopeDecayControl?.value = Audio.client!.synthesizer.envelopeDecay.initialValue
-        envelopeSustainControl?.value = Audio.client!.synthesizer.envelopeSustain.initialValue
-        envelopeReleaseControl?.value = Audio.client!.synthesizer.envelopeRelease.initialValue
+        envelopeAttackControl?.value = Audio.client!.synthesizer.envelopeAttack.defaultValue
+        envelopeDecayControl?.value = Audio.client!.synthesizer.envelopeDecay.defaultValue
+        envelopeSustainControl?.value = Audio.client!.synthesizer.envelopeSustain.defaultValue
+        envelopeReleaseControl?.value = Audio.client!.synthesizer.envelopeRelease.defaultValue
         
-        vibratoWaveformControl?.value = Audio.client!.synthesizer.vibratoWaveform.initialValue
-        vibratoDepthControl?.value = Audio.client!.synthesizer.vibratoDepth.initialValue
-        vibratoRateControl?.value = Audio.client!.synthesizer.vibratoRate.initialValue
+        vibratoWaveformControl?.value = Audio.client!.synthesizer.vibratoWaveform.defaultValue
+        vibratoDepthControl?.value = Audio.client!.synthesizer.vibratoDepth.defaultValue
+        vibratoRateControl?.value = Audio.client!.synthesizer.vibratoRate.defaultValue
         
-        tremoloWaveformControl?.value = Audio.client!.synthesizer.tremoloWaveform.initialValue
-        tremoloDepthControl?.value = Audio.client!.synthesizer.tremoloDepth.initialValue
-        tremoloRateControl?.value = Audio.client!.synthesizer.tremoloRate.initialValue
+        tremoloWaveformControl?.value = Audio.client!.synthesizer.tremoloWaveform.defaultValue
+        tremoloDepthControl?.value = Audio.client!.synthesizer.tremoloDepth.defaultValue
+        tremoloRateControl?.value = Audio.client!.synthesizer.tremoloRate.defaultValue
     }
     
     // MARK: - Private getters
