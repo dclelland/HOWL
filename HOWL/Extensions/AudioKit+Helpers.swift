@@ -16,7 +16,7 @@ class InstrumentProperty: AKInstrumentProperty, Persistable {
     
     override var value: Float {
         didSet {
-            NSUserDefaults.standardUserDefaults().setFloat(value, forKey: persistentKey)
+            setPersistentValue(value)
         }
     }
     
@@ -28,12 +28,12 @@ class InstrumentProperty: AKInstrumentProperty, Persistable {
         self.defaultValue = value
         self.persistentKey = key
         
-        Float.setDefaultPersistentValue(value, forKey: key)
-        
         super.init()
         
-        self.value = self.persistentValue
-        self.initialValue = self.persistentValue
+        self.setDefaultPersistentValue(value)
+        
+        self.value = self.persistentValue()
+        self.initialValue = self.persistentValue()
     }
     
 }
