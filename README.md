@@ -15,9 +15,6 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.0 Todo
 
-- Rebuild the phonemeboard/keyboard using Metal/SpriteKit
-    - Just use https://github.com/syedhali/EZAudio / EZAudioPlotGL
-
 - Audiobus todo
     - Fork AudioKit
         - The AVAudioSessionCategoryOptionMixWithOthers thing
@@ -35,3 +32,5 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 - MIDI input support
     - kAudioUnitType_RemoteMusicEffect
 - 3D touch
+- Rebuild the phonemeboard/keyboard using Metal/SpriteKit/OpenGL/EZAudio
+- Try out slightly bigger fonts for the iPad Pro
