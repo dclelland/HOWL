@@ -40,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0399AACDF06DEB159782399F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FB5134D43AFB52B2A8E8B0 /* Pods-HOWL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOWL.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOWL/Pods-HOWL.release.xcconfig"; sourceTree = "<group>"; };
 		6500FD6C1C1C022900C2254B /* HowlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowlViewController.swift; sourceTree = "<group>"; };
 		6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioKit+Helpers.swift"; sourceTree = "<group>"; };
@@ -248,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				650D8BFD1CFBF67A00EFD767 /* AudioToolbox.framework */,
-				0399AACDF06DEB159782399F /* Pods.framework */,
 				C1AFBCF66E6183BF8BC06AC6 /* Pods_HOWL.framework */,
 			);
 			name = Frameworks;
