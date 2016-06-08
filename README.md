@@ -13,12 +13,9 @@ It's extremely basic - just a sawtooth wave VCO run through four parallel bandpa
 
 Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 7.3).
 
-### 2.0 todo
-
-- Show note names while holding down dial?
-
 ### 2.1 wishlist
 
+- Note labels
 - MIDI input support
     - kAudioUnitType_RemoteMusicEffect
 - 3D touch
