@@ -15,6 +15,8 @@ class Vocoder: AKInstrument {
     let bottomLeftFrequencies: [Float] = [324, 2985, 3329, 3807] // /i/
     let bottomRightFrequencies: [Float] = [378, 997, 2343, 3357] // /u/
     
+    var amplitude = AKInstrumentProperty(value: 0.0)
+    
     var xIn = InstrumentProperty(value: 0.5, key: "vocoderXIn")
     var yIn = InstrumentProperty(value: 0.5, key: "vocoderYIn")
     
@@ -32,12 +34,12 @@ class Vocoder: AKInstrument {
     var formantsFrequency = InstrumentProperty(value: 1.0, key: "vocoderFormantsFrequency")
     var formantsBandwidth = InstrumentProperty(value: 1.0, key: "vocoderFormantsBandwidth")
     
-    var amplitude = AKInstrumentProperty(value: 0.0)
-    
     var output = AKAudio.globalParameter()
     
     init(withInput input: AKAudio) {
         super.init()
+        
+        addProperty(amplitude)
         
         addProperty(xIn)
         addProperty(yIn)
@@ -55,8 +57,6 @@ class Vocoder: AKInstrument {
         
         addProperty(formantsFrequency)
         addProperty(formantsBandwidth)
-        
-        addProperty(amplitude)
         
         let lfoX = AKLowFrequencyOscillator(
             waveformType: AKLowFrequencyOscillator.waveformTypeForSine(),
@@ -101,7 +101,9 @@ class Vocoder: AKInstrument {
             return (frequency * 0.02.ak + 50.0.ak) * bandwidthScale
         }
         
-        let filter = zip(frequencies, bandwidths).reduce(input) { input, parameters in
+        let mutedInput = input * AKPortamento(input: amplitude, halfTime: 0.001.ak)
+        
+        let filter = zip(frequencies, bandwidths).reduce(mutedInput) { input, parameters in
             let (frequency, bandwidth) = parameters
             return AKResonantFilter(
                 input: input,
@@ -112,7 +114,7 @@ class Vocoder: AKInstrument {
         
         let balance = AKBalance(
             input: filter,
-            comparatorAudioSource: input
+            comparatorAudioSource: mutedInput
         )
         
         let clipper = AKClipper(
@@ -122,12 +124,7 @@ class Vocoder: AKInstrument {
             clippingStartPoint: 0.9375.ak
         )
         
-        let muter = AKPortamento(
-            input: amplitude,
-            halfTime: 0.001.ak
-        )
-        
-        assignOutput(output, to: clipper * muter)
+        assignOutput(output, to: clipper)
         
         resetParameter(input)
     }
