@@ -112,7 +112,7 @@ class Vocoder: AKInstrument {
         
         let balance = AKBalance(
             input: filter,
-            comparatorAudioSource: AKPortamento(input: input * amplitude, halfTime: 0.001.ak)
+            comparatorAudioSource: input
         )
         
         let clipper = AKClipper(
@@ -122,7 +122,12 @@ class Vocoder: AKInstrument {
             clippingStartPoint: 0.9375.ak
         )
         
-        assignOutput(output, to: clipper)
+        let muter = AKPortamento(
+            input: amplitude,
+            halfTime: 0.001.ak
+        )
+        
+        assignOutput(output, to: clipper * muter)
         
         resetParameter(input)
     }
