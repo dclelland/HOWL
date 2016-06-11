@@ -2,7 +2,7 @@
 
 HOWL is a simple formant synthesizer for iOS, written in Swift and built using the [AudioKit](https://github.com/audiokit/AudioKit) framework.
 
-It's extremely basic - just a sawtooth wave VCO run through four parallel bandpass filters.
+It's extremely basic - just a sawtooth wave VCO run through four bandpass filters in series.
 
 ### Links
 
