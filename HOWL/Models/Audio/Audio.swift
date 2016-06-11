@@ -27,7 +27,7 @@ class Audio {
             return
         }
         
-        AKSettings.shared().audioInputEnabled = Audiobus.client?.controller.isConnectedToSender == true
+        AKSettings.shared().audioInputEnabled = Audiobus.client?.controller.isConnected(toPortOfType: ABPortTypeSender) == true
         
         client = Audio()
     }

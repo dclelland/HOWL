@@ -38,7 +38,7 @@ import AudioToolbox
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
-        if (Audiobus.client?.controller.isConnected == false) {
+        if (Audiobus.client?.controller.isConnected() == false) {
             Audio.stop()
         }
     }

@@ -8,25 +8,25 @@
 			<key>manufacturer</key>
 			<string>ptnm</string>
 			<key>name</key>
-			<string>HOWL Vocoder</string>
+			<string>Sender</string>
 			<key>subtype</key>
-			<string>voco</string>
+			<string>howg</string>
 			<key>type</key>
-			<string>aurx</string>
+			<string>aurg</string>
 			<key>version</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<dict>
 			<key>manufacturer</key>
 			<string>ptnm</string>
 			<key>name</key>
-			<string>HOWL Synthesizer</string>
+			<string>Filter</string>
 			<key>subtype</key>
-			<string>synt</string>
+			<string>howx</string>
 			<key>type</key>
-			<string>aurg</string>
+			<string>aurx</string>
 			<key>version</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

@@ -48,11 +48,11 @@ class Audiobus {
         
         self.controller.addSenderPort(
             ABSenderPort(
-                name: "Synthesizer",
-                title: "HOWL: Synthesizer",
+                name: "Sender",
+                title: "Sender",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteGenerator,
-                    componentSubType: "synt".code!,
+                    componentSubType: "howg".code!,
                     componentManufacturer: "ptnm".code!,
                     componentFlags: 0,
                     componentFlagsMask: 0
@@ -63,11 +63,11 @@ class Audiobus {
         
         self.controller.addFilterPort(
             ABFilterPort(
-                name: "Vocoder",
-                title: "HOWL: Vocoder",
+                name: "Filter",
+                title: "Filter",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteEffect,
-                    componentSubType: "voco".code!,
+                    componentSubType: "howx".code!,
                     componentManufacturer: "ptnm".code!,
                     componentFlags: 0,
                     componentFlagsMask: 0
@@ -85,14 +85,14 @@ class Audiobus {
     
     private func connectionsChanged(notification: NSNotification) {
         if (UIApplication.sharedApplication().applicationState == .Background) {
-            if (controller.isConnected) {
+            if (controller.isConnected()) {
                 Audio.start()
             } else {
                 Audio.stop()
             }
         }
         
-        if (controller.isConnectedToSender) {
+        if (controller.isConnected(toPortOfType: ABPortTypeSender)) {
             Audio.startInput()
         } else {
             Audio.stopInput()
@@ -103,16 +103,16 @@ class Audiobus {
 
 extension ABAudiobusController {
     
-    var isConnected: Bool {
+    func isConnected() -> Bool {
         return connected == true || memberOfActiveAudiobusSession == true
     }
     
-    var isConnectedToSender: Bool {
+    func isConnected(toPortOfType type: ABPortType) -> Bool {
         guard connectedPorts != nil else {
             return false
         }
         
-        return connectedPorts.flatMap { $0 as? ABPort }.filter { $0.type == ABPortTypeSender }.isEmpty == false
+        return connectedPorts.flatMap { $0 as? ABPort }.filter { $0.type == type }.isEmpty == false
     }
     
 }
