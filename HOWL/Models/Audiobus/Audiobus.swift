@@ -49,7 +49,7 @@ class Audiobus {
         self.controller.addSenderPort(
             ABSenderPort(
                 name: "Sender",
-                title: "Sender",
+                title: "HOWL (Sender)",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteGenerator,
                     componentSubType: "howg".code!,
@@ -64,7 +64,7 @@ class Audiobus {
         self.controller.addFilterPort(
             ABFilterPort(
                 name: "Filter",
-                title: "Filter",
+                title: "HOWL (Filter)",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteEffect,
                     componentSubType: "howx".code!,
