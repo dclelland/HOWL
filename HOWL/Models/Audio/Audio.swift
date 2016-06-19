@@ -27,6 +27,7 @@ class Audio {
             return
         }
         
+        // TODO: Need to add "or if IAA is connected" conditional
         AKSettings.shared().audioInputEnabled = Audiobus.client?.controller.isConnected(toPortOfType: ABPortTypeSender) == true
         
         client = Audio()
