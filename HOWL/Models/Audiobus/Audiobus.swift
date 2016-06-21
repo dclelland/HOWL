@@ -7,7 +7,6 @@
 //
 
 import AudioKit
-import LVGFourCharCodes
 
 class Audiobus {
     
@@ -52,8 +51,8 @@ class Audiobus {
                 title: "HOWL (Sender)",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteGenerator,
-                    componentSubType: "howg".code!,
-                    componentManufacturer: "ptnm".code!,
+                    componentSubType: UInt32(fourCharacterCode: "howg"),
+                    componentManufacturer: UInt32(fourCharacterCode: "ptnm"),
                     componentFlags: 0,
                     componentFlagsMask: 0
                 ),
@@ -67,8 +66,8 @@ class Audiobus {
                 title: "HOWL (Filter)",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteEffect,
-                    componentSubType: "howx".code!,
-                    componentManufacturer: "ptnm".code!,
+                    componentSubType: UInt32(fourCharacterCode: "howx"),
+                    componentManufacturer: UInt32(fourCharacterCode: "ptnm"),
                     componentFlags: 0,
                     componentFlagsMask: 0
                 ),

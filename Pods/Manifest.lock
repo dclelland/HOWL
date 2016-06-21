@@ -4,7 +4,6 @@ PODS:
   - Bezzy (0.1.0)
   - Degrad (0.2.0)
   - Lerp (1.2.0)
-  - LVGFourCharCodes (0.1.0)
   - MultitouchGestureRecognizer (0.1.1)
   - Parity (0.1.2)
   - Persistable (0.1.1)
@@ -21,7 +20,6 @@ DEPENDENCIES:
   - Audiobus (~> 2.3)
   - AudioKit (from `https://github.com/dclelland/AudioKit/`, commit `aca9b73755df0beb488439ddd7ef36fe912bcb9c`)
   - Bezzy (~> 0.1)
-  - LVGFourCharCodes (~> 0.1)
   - MultitouchGestureRecognizer (~> 0.1)
   - Parity (~> 0.1)
   - Persistable (~> 0.1)
@@ -45,7 +43,6 @@ SPEC CHECKSUMS:
   Bezzy: e3fc0a79f83d6d46e382ac578d81b234f2f97f90
   Degrad: 590415ee0f71c0516c661c806f7a2489376bfd7e
   Lerp: 0d6b524e0428a131cdbf8872bf027db94cca5a4e
-  LVGFourCharCodes: c96ae7df28d8d9c49d174d1749c4c35b167655a6
   MultitouchGestureRecognizer: e32b5b78035c4c389973b410aae01bcd4f763f29
   Parity: 1e9c0c866a477063cb763be765e13d70b25041e1
   Persistable: fd9992fcfd9506f6211d6893d41cff138b414150
@@ -53,6 +50,6 @@ SPEC CHECKSUMS:
   ProtonomeRoundedViews: cceec203fb0ebc909e295429209b15144ab2996d
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
 
-PODFILE CHECKSUM: de741cd740f63bd14870c7a443af18df85e60f9b
+PODFILE CHECKSUM: 36293424f80cd0c78f5a76bc0191550ac0e91b2e
 
 COCOAPODS: 1.0.1
