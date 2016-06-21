@@ -76,6 +76,30 @@ class Audiobus {
             )
         )
         
+        let listener = PropertyListener { (audioUnit, property) in
+            let value: UInt32 = try! audioUnit.getProperty(property)
+            
+            print("WHOA", property, value)
+        }
+        
+        try! AKManager.sharedManager().engine.audioUnit.addPropertyListener(listener, toProperty: kAudioUnitProperty_IsInterAppConnected)
+//        try! AKManager.sharedManager().engine.audioUnit.removePropertyListener(listener, fromProperty: kAudioUnitProperty_IsInterAppConnected)
+        
+        
+        let propertyInfo = try! AKManager.sharedManager().engine.audioUnit.getPropertyInfo(kAudioUnitProperty_IsInterAppConnected)
+        let property: UInt32 = try! AKManager.sharedManager().engine.audioUnit.getProperty(kAudioUnitProperty_IsInterAppConnected)
+        
+        print("FUCK", propertyInfo, property)
+        
+        let parameters = AKManager.sharedManager().engine.audioUnit.parameters
+        print("FUCK", parameters)
+        
+        let notify = RenderNotify { (actionFlags, timestamp, numberOfFrames, buffers) in
+//            print(actionFlags, timestamp, numberOfFrames, buffers)
+        }
+        
+        try! AKManager.sharedManager().engine.audioUnit.addRenderNotify(notify)
+        
         NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { (notification) in
             self.connectionsChanged(notification)
         })
