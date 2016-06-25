@@ -20,6 +20,8 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var flipButton: UIButton?
+    
     @IBOutlet weak var holdButton: UIButton? {
         didSet {
             holdButton?.selected = Settings.keyboardSustain.value

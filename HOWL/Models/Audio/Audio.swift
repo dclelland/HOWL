@@ -43,6 +43,20 @@ class Audio {
         AKManager.sharedManager().resetOrchestra()
     }
     
+    static let didResetNotification = "AudioDidResetNotification"
+    
+    static func reset() {
+        guard let client = client else {
+            return
+        }
+        
+        client.synthesizer.reset()
+        client.vocoder.reset()
+        client.master.reset()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(didResetNotification, object: nil, userInfo: nil)
+    }
+    
     static func startInput() {
         guard AKSettings.shared().audioInputEnabled == false else {
             return

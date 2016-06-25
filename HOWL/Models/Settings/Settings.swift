@@ -15,5 +15,14 @@ struct Settings {
     
     static var keyboardLeftInterval = Persistent(value: 4, key: "keyboardLeftInterval")
     static var keyboardRightInterval = Persistent(value: 7, key: "keyboardRightInterval")
+    
+    static let didResetNotification = "SettingsDidResetNotification"
+    
+    static func reset() {
+        keyboardLeftInterval.resetValue()
+        keyboardRightInterval.resetValue()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(didResetNotification, object: nil, userInfo: nil)
+    }
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G12a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -387,6 +387,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="flipButton" destination="2ML-9Q-mzI" id="LLm-eR-Vih"/>
                         <outlet property="holdButton" destination="SSe-rB-Cz2" id="OHS-HX-wwx"/>
                         <outlet property="keyboardView" destination="2Xe-UY-uHE" id="VLh-at-J1V"/>
                         <outlet property="multitouchGestureRecognizer" destination="LrJ-MY-OPU" id="lzD-AL-m8C"/>
@@ -737,6 +738,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="flipButton" destination="gIf-oS-ACy" id="JCL-1u-kdD"/>
                         <outlet property="holdButton" destination="Cym-3r-t5S" id="IxL-OF-nzU"/>
                         <outlet property="multitouchGestureRecognizer" destination="m5e-OB-eOs" id="c6q-k5-bby"/>
                         <outlet property="phonemeboardView" destination="nKs-R2-KFV" id="wrb-WF-L6K"/>
@@ -826,7 +828,7 @@
                                             <constraint firstAttribute="width" secondItem="1vE-og-Bf3" secondAttribute="height" multiplier="1:1" id="uW6-2Y-XJ4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                                        <state key="normal" title="RESET">
+                                        <state key="normal" title="INPUT">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -850,7 +852,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="resetButtonTapped:" destination="5Oq-Ld-xFp" eventType="touchUpInside" id="hnM-Fr-XLG"/>
+                                            <action selector="inputButtonTapped:" destination="5Oq-Ld-xFp" eventType="touchUpInside" id="0zl-8V-PlS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -988,7 +990,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="70" y="2" width="67" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
@@ -1156,7 +1158,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea" customClass="RoundedView" customModule="ProtonomeRoundedViews">
                                 <rect key="frame" x="2" y="159" width="139" height="159"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
@@ -1181,7 +1183,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="70" y="2" width="67" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
@@ -1218,7 +1220,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5S-54-85e" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5S-54-85e" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="89" width="135" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P5S-54-85e" secondAttribute="height" multiplier="8:3" id="hRz-MC-GAS"/>
@@ -1546,8 +1548,10 @@
                     <connections>
                         <outlet property="effectsBitcrushControl" destination="bhf-mw-e9r" id="akj-Gg-OVV"/>
                         <outlet property="effectsReverbControl" destination="DDj-7E-p9O" id="hxV-CU-Vwr"/>
+                        <outlet property="flipButton" destination="b8G-z2-kPq" id="x8M-Ll-Y3F"/>
                         <outlet property="formantsBandwidthControl" destination="D4I-ss-N7k" id="x80-hN-lUC"/>
                         <outlet property="formantsFrequencyControl" destination="6md-Za-K4d" id="xsK-Ta-gtf"/>
+                        <outlet property="inputButton" destination="1vE-og-Bf3" id="zwI-SD-pHk"/>
                         <outlet property="lfoXDepthControl" destination="5wm-hF-13a" id="UUv-63-DYD"/>
                         <outlet property="lfoXRateControl" destination="woz-pj-zhQ" id="jh4-dW-Q0K"/>
                         <outlet property="lfoXShapeControl" destination="P5S-54-85e" id="m63-dv-zNa"/>
@@ -1787,7 +1791,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="integer"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="70" y="2" width="67" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
@@ -2104,7 +2108,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAW-db-H4s" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAW-db-H4s" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="70" y="2" width="67" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
@@ -2132,7 +2136,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-IL-b65" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-IL-b65" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
@@ -2157,7 +2161,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJI-tK-vl7" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJI-tK-vl7" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="89" width="135" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bJI-tK-vl7" secondAttribute="height" multiplier="8:3" id="lk4-mh-MdU"/>
@@ -2533,8 +2537,10 @@
                         <outlet property="envelopeDecayControl" destination="WGD-vf-7Dl" id="AgA-QG-maF"/>
                         <outlet property="envelopeReleaseControl" destination="exS-OE-TDF" id="xdB-B0-glg"/>
                         <outlet property="envelopeSustainControl" destination="vcf-Zt-879" id="XAv-1r-zg4"/>
+                        <outlet property="flipButton" destination="yhD-Tv-WFf" id="gPL-1W-jYX"/>
                         <outlet property="keyboardLeftIntervalControl" destination="d8O-dp-Xy2" id="863-YA-mdC"/>
                         <outlet property="keyboardRightIntervalControl" destination="IlS-iC-Twg" id="ygg-8t-8mx"/>
+                        <outlet property="resetButton" destination="xdU-6t-ZK6" id="84W-bi-DIw"/>
                         <outlet property="tremoloDepthControl" destination="7nZ-au-PHp" id="ZhZ-8e-Twk"/>
                         <outlet property="tremoloRateControl" destination="uvJ-cP-6yI" id="LSF-4r-8nW"/>
                         <outlet property="tremoloWaveformControl" destination="B5Y-vh-6yj" id="wuK-86-468"/>

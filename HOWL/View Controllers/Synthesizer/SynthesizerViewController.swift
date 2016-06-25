@@ -11,6 +11,10 @@ import ProtonomeAudioKitControls
 
 class SynthesizerViewController: UIViewController {
     
+    @IBOutlet weak var flipButton: UIButton?
+    
+    @IBOutlet weak var resetButton: UIButton?
+    
     @IBOutlet weak var keyboardLeftIntervalControl: AudioControl? {
         didSet {
             keyboardLeftIntervalControl?.onChangeValue = { value in
@@ -139,6 +143,37 @@ class SynthesizerViewController: UIViewController {
         }
     }
     
+    // MARK: - Overrides
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Audio.didResetNotification, object: nil, queue: nil) { notification in
+            self.keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
+            self.keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Settings.didResetNotification, object: nil, queue: nil) { notification in
+            self.envelopeAttackControl?.value = Audio.client!.synthesizer.envelopeAttack.defaultValue
+            self.envelopeDecayControl?.value = Audio.client!.synthesizer.envelopeDecay.defaultValue
+            self.envelopeSustainControl?.value = Audio.client!.synthesizer.envelopeSustain.defaultValue
+            self.envelopeReleaseControl?.value = Audio.client!.synthesizer.envelopeRelease.defaultValue
+            
+            self.vibratoWaveformControl?.value = Audio.client!.synthesizer.vibratoWaveform.defaultValue
+            self.vibratoDepthControl?.value = Audio.client!.synthesizer.vibratoDepth.defaultValue
+            self.vibratoRateControl?.value = Audio.client!.synthesizer.vibratoRate.defaultValue
+            
+            self.tremoloWaveformControl?.value = Audio.client!.synthesizer.tremoloWaveform.defaultValue
+            self.tremoloDepthControl?.value = Audio.client!.synthesizer.tremoloDepth.defaultValue
+            self.tremoloRateControl?.value = Audio.client!.synthesizer.tremoloRate.defaultValue
+        }
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: Audio.didResetNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: Settings.didResetNotification, object: nil)
+    }
+    
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: UIButton) {
@@ -146,21 +181,8 @@ class SynthesizerViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(button: UIButton) {
-        keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
-        keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
-        
-        envelopeAttackControl?.value = Audio.client!.synthesizer.envelopeAttack.defaultValue
-        envelopeDecayControl?.value = Audio.client!.synthesizer.envelopeDecay.defaultValue
-        envelopeSustainControl?.value = Audio.client!.synthesizer.envelopeSustain.defaultValue
-        envelopeReleaseControl?.value = Audio.client!.synthesizer.envelopeRelease.defaultValue
-        
-        vibratoWaveformControl?.value = Audio.client!.synthesizer.vibratoWaveform.defaultValue
-        vibratoDepthControl?.value = Audio.client!.synthesizer.vibratoDepth.defaultValue
-        vibratoRateControl?.value = Audio.client!.synthesizer.vibratoRate.defaultValue
-        
-        tremoloWaveformControl?.value = Audio.client!.synthesizer.tremoloWaveform.defaultValue
-        tremoloDepthControl?.value = Audio.client!.synthesizer.tremoloDepth.defaultValue
-        tremoloRateControl?.value = Audio.client!.synthesizer.tremoloRate.defaultValue
+        Audio.reset()
+        Settings.reset()
     }
     
     // MARK: - Private getters

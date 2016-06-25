@@ -20,6 +20,7 @@ struct Settings {
 // Setting
 Settings.darkMode.value = true
 Settings.openCount.value = Settings.openCount.value + 1
+Settings.volume.resetValue()
 
 // Getting
 print(Settings.darkMode.value) // true

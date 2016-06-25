@@ -11,6 +11,14 @@ import ProtonomeAudioKitControls
 
 class VocoderViewController: UIViewController {
     
+    @IBOutlet weak var flipButton: UIButton?
+    
+    @IBOutlet weak var inputButton: UIButton? {
+        didSet {
+//            inputButton?.selected = ...
+        }
+    }
+    
     @IBOutlet weak var formantsFrequencyControl: AudioControl? {
         didSet {
             formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.value
@@ -101,26 +109,40 @@ class VocoderViewController: UIViewController {
         }
     }
     
+    // MARK: - Overrides
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Settings.didResetNotification, object: nil, queue: nil) { notification in
+            self.formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.defaultValue
+            self.formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.defaultValue
+            
+            self.effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.defaultValue
+            self.effectsReverbControl?.value = Audio.client!.master.effectsReverb.defaultValue
+            
+            self.lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.defaultValue
+            self.lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.defaultValue
+            self.lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.defaultValue
+            
+            self.lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.defaultValue
+            self.lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.defaultValue
+            self.lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.defaultValue
+        }
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: Settings.didResetNotification, object: nil)
+    }
+    
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func resetButtonTapped(button: UIButton) {
-        formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.defaultValue
-        formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.defaultValue
-        
-        effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.defaultValue
-        effectsReverbControl?.value = Audio.client!.master.effectsReverb.defaultValue
-        
-        lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.defaultValue
-        lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.defaultValue
-        lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.defaultValue
-        
-        lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.defaultValue
-        lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.defaultValue
-        lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.defaultValue
+    @IBAction func inputButtonTapped(button: UIButton) {
+        // inputButton.selected == ...
     }
     
 }

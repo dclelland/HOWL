@@ -20,6 +20,8 @@ class PhonemeboardViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var flipButton: UIButton?
+    
     @IBOutlet weak var holdButton: UIButton? {
         didSet {
             holdButton?.selected = Settings.phonemeboardSustain.value
