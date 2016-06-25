@@ -15,7 +15,7 @@ class VocoderViewController: UIViewController {
     
     @IBOutlet weak var inputButton: UIButton? {
         didSet {
-//            inputButton?.selected = ...
+            inputButton?.selected = Audio.client!.vocoder.inputEnabled
         }
     }
     
@@ -142,7 +142,8 @@ class VocoderViewController: UIViewController {
     }
     
     @IBAction func inputButtonTapped(button: UIButton) {
-        // inputButton.selected == ...
+        Audio.client!.vocoder.inputEnabled = !Audio.client!.vocoder.inputEnabled
+        inputButton?.selected = Audio.client!.vocoder.inputEnabled
     }
     
 }

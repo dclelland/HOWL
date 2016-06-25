@@ -32,12 +32,11 @@ class PhonemeboardViewController: UIViewController {
     
     func reloadVocoder() {
         guard let touches = multitouchGestureRecognizer?.touches, location = locationForTouches(touches) else {
-            Audio.client?.vocoder.mute()
+            Audio.client?.vocoder.enabled = false
             return
         }
         
-        Audio.client?.vocoder.unmute()
-        
+        Audio.client?.vocoder.enabled = true
         Audio.client?.vocoder.location = location
     }
     
@@ -59,7 +58,7 @@ class PhonemeboardViewController: UIViewController {
     @IBAction func holdButtonTapped(button: UIButton) {
         Settings.phonemeboardSustain.value = !Settings.phonemeboardSustain.value
         multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value
-        button.selected = Settings.phonemeboardSustain.value
+        holdButton?.selected = Settings.phonemeboardSustain.value
     }
     
     // MARK: - Private Getters

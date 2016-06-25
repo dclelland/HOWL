@@ -73,11 +73,7 @@ class Synthesizer: AKInstrument {
             amplitude: note.amplitude * envelope * (tremolo - ((tremoloDepth * 0.5.ak) - 1.0.ak))
         )
         
-        if (AKSettings.shared().audioInputEnabled == true) {
-            assignOutput(output, to: oscillator + AKAudioInput())
-        } else {
-            assignOutput(output, to: oscillator)
-        }
+        assignOutput(output, to: oscillator)
     }
     
     // MARK: - Note creation

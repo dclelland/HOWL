@@ -27,8 +27,6 @@ class Audio {
             return
         }
         
-        AKSettings.shared().audioInputEnabled = Audiobus.client?.isConnectedToInput == true
-        
         client = Audio()
     }
     
@@ -55,26 +53,6 @@ class Audio {
         client.master.reset()
         
         NSNotificationCenter.defaultCenter().postNotificationName(didResetNotification, object: nil, userInfo: nil)
-    }
-    
-    static func startInput() {
-        guard AKSettings.shared().audioInputEnabled == false else {
-            return
-        }
-        
-        AKSettings.shared().audioInputEnabled = true
-        
-        client = Audio()
-    }
-    
-    static func stopInput() {
-        guard AKSettings.shared().audioInputEnabled == true else {
-            return
-        }
-        
-        AKSettings.shared().audioInputEnabled = false
-        
-        client = Audio()
     }
     
     // MARK: Initialization

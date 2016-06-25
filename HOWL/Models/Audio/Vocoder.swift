@@ -16,6 +16,7 @@ class Vocoder: AKInstrument {
     let bottomRightFrequencies: [Float] = [378, 997, 2343, 3357] // /u/
     
     var amplitude = AKInstrumentProperty(value: 0.0)
+    var inputAmplitude = AKInstrumentProperty(value: 0.0)
     
     var xIn = InstrumentProperty(value: 0.5, key: "vocoderXIn")
     var yIn = InstrumentProperty(value: 0.5, key: "vocoderYIn")
@@ -101,7 +102,7 @@ class Vocoder: AKInstrument {
             return (frequency * 0.02.ak + 50.0.ak) * bandwidthScale
         }
         
-        let mutedInput = input * AKPortamento(input: amplitude, halfTime: 0.001.ak)
+        let mutedInput = (input * AKPortamento(input: amplitude, halfTime: 0.001.ak)) + (AKAudioInput() * AKPortamento(input: inputAmplitude, halfTime: 0.001.ak))
         
         let filter = zip(frequencies, bandwidths).reduce(mutedInput) { input, parameters in
             let (frequency, bandwidth) = parameters
@@ -131,21 +132,25 @@ class Vocoder: AKInstrument {
     
     // MARK: - Actions
     
-    func mute() {
-        guard amplitude.value != 0.0 else {
-            return
+    var enabled: Bool {
+        set {
+            amplitude.value = newValue ? 1.0 : 0.0
         }
-        
-        amplitude.value = 0.0
+        get {
+            return amplitude.value != 0.0
+        }
     }
     
-    func unmute() {
-        guard amplitude.value != 1.0 else {
-            return
+    var inputEnabled: Bool {
+        set {
+            inputAmplitude.value = newValue ? 1.0 : 0.0
         }
-        
-        amplitude.value = 1.0
+        get {
+            return inputAmplitude.value != 0.0
+        }
     }
+    
+    // MARK: - Properties
     
     var location: CGPoint {
         set {

@@ -112,7 +112,7 @@ class KeyboardViewController: UIViewController {
     @IBAction func holdButtonTapped(button: UIButton) {
         Settings.keyboardSustain.value = !Settings.keyboardSustain.value
         multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value
-        button.selected = Settings.keyboardSustain.value
+        holdButton?.selected = Settings.keyboardSustain.value
     }
     
 }

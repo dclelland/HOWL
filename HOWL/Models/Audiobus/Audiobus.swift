@@ -128,9 +128,7 @@ class Audiobus {
         }
         
         if (isConnectedToInput) {
-            Audio.startInput()
-        } else {
-            Audio.stopInput()
+            Audio.client?.vocoder.inputEnabled = true
         }
     }
 
