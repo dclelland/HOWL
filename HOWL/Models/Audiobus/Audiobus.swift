@@ -116,7 +116,9 @@ class Audiobus {
         return controller.isConnectedToAudiobus(portOfType: ABPortTypeSender) || audioUnit.isConnectedToInterAppAudio(nodeOfType: kAudioUnitType_RemoteEffect)
     }
     
-    // MARK: Notifications
+    // MARK: Connections
+    
+    static let didUpdateConnections = "AudiobusDidUpdateConnectionsNotification"
     
     private func updateConnections() {
         if (UIApplication.sharedApplication().applicationState == .Background) {
@@ -130,6 +132,8 @@ class Audiobus {
         if (isConnectedToInput) {
             Audio.client?.vocoder.inputEnabled = true
         }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(Audiobus.didUpdateConnections, object: nil, userInfo: nil)
     }
 
 }

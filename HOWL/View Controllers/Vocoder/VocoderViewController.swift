@@ -129,10 +129,15 @@ class VocoderViewController: UIViewController {
             self.lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.defaultValue
             self.lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.defaultValue
         }
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Audiobus.didUpdateConnections, object: nil, queue: nil) { notification in
+            self.inputButton?.selected = Audio.client!.vocoder.inputEnabled
+        }
     }
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: Settings.didResetNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: Audiobus.didUpdateConnections, object: nil)
     }
     
     // MARK: - Interface events
