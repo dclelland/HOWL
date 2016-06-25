@@ -84,7 +84,8 @@ class Audiobus {
         self.audioUnitPropertyListener = AudioUnitPropertyListener { (audioUnit, property) in
             switch property {
             case kAudioUnitProperty_IsInterAppConnected:
-                print("IAA changed:", audioUnit.isConnectedToInterAppAudio, "input:", self.isConnectedToInput)
+                self.updateConnections()
+            case kAudioOutputUnitProperty_NodeComponentDescription:
                 self.updateConnections()
             default:
                 break
@@ -92,9 +93,9 @@ class Audiobus {
         }
         
         self.audioUnit.add(listener: self.audioUnitPropertyListener, toProperty: kAudioUnitProperty_IsInterAppConnected)
+        self.audioUnit.add(listener: self.audioUnitPropertyListener, toProperty: kAudioOutputUnitProperty_NodeComponentDescription)
         
         NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { notification in
-            print("Audiobus changed:", self.controller.isConnectedToAudiobus, "input:", self.isConnectedToInput)
             self.updateConnections()
         })
     }
@@ -112,7 +113,7 @@ class Audiobus {
     }
     
     var isConnectedToInput: Bool {
-        return controller.isConnectedToAudiobus(portOfType: ABPortTypeSender) // need to be able to check IAA too!
+        return controller.isConnectedToAudiobus(portOfType: ABPortTypeSender) || audioUnit.isConnectedToInterAppAudio(nodeOfType: kAudioUnitType_RemoteEffect)
     }
     
     // MARK: Notifications
@@ -156,6 +157,11 @@ private extension AudioUnit {
     var isConnectedToInterAppAudio: Bool {
         let value: UInt32 = getValue(forProperty: kAudioUnitProperty_IsInterAppConnected)
         return value != 0
+    }
+    
+    func isConnectedToInterAppAudio(nodeOfType type: OSType) -> Bool {
+        let value: AudioComponentDescription = getValue(forProperty: kAudioOutputUnitProperty_NodeComponentDescription)
+        return value.componentType == type
     }
     
 }
