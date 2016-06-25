@@ -102,7 +102,9 @@ class Vocoder: AKInstrument {
             return (frequency * 0.02.ak + 50.0.ak) * bandwidthScale
         }
         
-        let mutedInput = (input * AKPortamento(input: amplitude, halfTime: 0.001.ak)) + (AKAudioInput() * AKPortamento(input: inputAmplitude, halfTime: 0.001.ak))
+        let mutedAudioInput = AKAudioInput() * AKPortamento(input: inputAmplitude, halfTime: 0.001.ak)
+        
+        let mutedInput = (input + mutedAudioInput) * AKPortamento(input: amplitude, halfTime: 0.001.ak)
         
         let filter = zip(frequencies, bandwidths).reduce(mutedInput) { input, parameters in
             let (frequency, bandwidth) = parameters
