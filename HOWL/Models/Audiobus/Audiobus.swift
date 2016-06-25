@@ -7,7 +7,6 @@
 //
 
 import AudioKit
-import LVGFourCharCodes
 
 class Audiobus {
     
@@ -42,6 +41,12 @@ class Audiobus {
     // MARK: Initialization
     
     var controller: ABAudiobusController
+    
+    var audioUnit: AudioUnit {
+        return AKManager.sharedManager().engine.audioUnit
+    }
+    
+    private var audioUnitPropertyListener: AudioUnitPropertyListener!
 
     init(apiKey: String) {
         self.controller = ABAudiobusController(apiKey: apiKey)
@@ -52,8 +57,8 @@ class Audiobus {
                 title: "HOWL (Sender)",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteGenerator,
-                    componentSubType: "howg".code!,
-                    componentManufacturer: "ptnm".code!,
+                    componentSubType: UInt32(fourCharacterCode: "howg"),
+                    componentManufacturer: UInt32(fourCharacterCode: "ptnm"),
                     componentFlags: 0,
                     componentFlagsMask: 0
                 ),
@@ -67,8 +72,8 @@ class Audiobus {
                 title: "HOWL (Filter)",
                 audioComponentDescription: AudioComponentDescription(
                     componentType: kAudioUnitType_RemoteEffect,
-                    componentSubType: "howx".code!,
-                    componentManufacturer: "ptnm".code!,
+                    componentSubType: UInt32(fourCharacterCode: "howx"),
+                    componentManufacturer: UInt32(fourCharacterCode: "ptnm"),
                     componentFlags: 0,
                     componentFlagsMask: 0
                 ),
@@ -76,47 +81,52 @@ class Audiobus {
             )
         )
         
-        let listener = PropertyListener { (audioUnit, property) in
-            let value: UInt32 = try! audioUnit.getProperty(property)
-            
-            print("WHOA", property, value)
+        self.audioUnitPropertyListener = AudioUnitPropertyListener { (audioUnit, property) in
+            switch property {
+            case kAudioUnitProperty_IsInterAppConnected:
+                print("IAA changed:", audioUnit.isConnectedToInterAppAudio, "input:", self.isConnectedToInput)
+                self.updateConnections()
+            default:
+                break
+            }
         }
         
-        try! AKManager.sharedManager().engine.audioUnit.addPropertyListener(listener, toProperty: kAudioUnitProperty_IsInterAppConnected)
-//        try! AKManager.sharedManager().engine.audioUnit.removePropertyListener(listener, fromProperty: kAudioUnitProperty_IsInterAppConnected)
+        self.audioUnit.add(listener: self.audioUnitPropertyListener, toProperty: kAudioUnitProperty_IsInterAppConnected)
         
-        
-        let propertyInfo = try! AKManager.sharedManager().engine.audioUnit.getPropertyInfo(kAudioUnitProperty_IsInterAppConnected)
-        let property: UInt32 = try! AKManager.sharedManager().engine.audioUnit.getProperty(kAudioUnitProperty_IsInterAppConnected)
-        
-        print("FUCK", propertyInfo, property)
-        
-        let parameters = AKManager.sharedManager().engine.audioUnit.parameters
-        print("FUCK", parameters)
-        
-        let notify = RenderNotify { (actionFlags, timestamp, numberOfFrames, buffers) in
-//            print(actionFlags, timestamp, numberOfFrames, buffers)
-        }
-        
-        try! AKManager.sharedManager().engine.audioUnit.addRenderNotify(notify)
-        
-        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { (notification) in
-            self.connectionsChanged(notification)
+        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { notification in
+            print("Audiobus changed:", self.controller.isConnectedToAudiobus, "input:", self.isConnectedToInput)
+            self.updateConnections()
         })
+    }
+    
+    deinit {
+        AKManager.sharedManager().engine.audioUnit.remove(listener: self.audioUnitPropertyListener, fromProperty: kAudioUnitProperty_IsInterAppConnected)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: ABConnectionsChangedNotification, object: nil)
+    }
+    
+    // MARK: Properties
+    
+    var isConnected: Bool {
+        return controller.isConnectedToAudiobus || audioUnit.isConnectedToInterAppAudio
+    }
+    
+    var isConnectedToInput: Bool {
+        return controller.isConnectedToAudiobus(portOfType: ABPortTypeSender) // need to be able to check IAA too!
     }
     
     // MARK: Notifications
     
-    private func connectionsChanged(notification: NSNotification) {
+    private func updateConnections() {
         if (UIApplication.sharedApplication().applicationState == .Background) {
-            if (controller.isConnected()) {
+            if (isConnected) {
                 Audio.start()
             } else {
                 Audio.stop()
             }
         }
         
-        if (controller.isConnected(toPortOfType: ABPortTypeSender)) {
+        if (isConnectedToInput) {
             Audio.startInput()
         } else {
             Audio.stopInput()
@@ -125,18 +135,27 @@ class Audiobus {
 
 }
 
-extension ABAudiobusController {
+private extension ABAudiobusController {
     
-    func isConnected() -> Bool {
+    var isConnectedToAudiobus: Bool {
         return connected == true || memberOfActiveAudiobusSession == true
     }
     
-    func isConnected(toPortOfType type: ABPortType) -> Bool {
+    func isConnectedToAudiobus(portOfType type: ABPortType) -> Bool {
         guard connectedPorts != nil else {
             return false
         }
         
         return connectedPorts.flatMap { $0 as? ABPort }.filter { $0.type == type }.isEmpty == false
+    }
+    
+}
+
+private extension AudioUnit {
+    
+    var isConnectedToInterAppAudio: Bool {
+        let value: UInt32 = getValue(forProperty: kAudioUnitProperty_IsInterAppConnected)
+        return value != 0
     }
     
 }
