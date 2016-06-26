@@ -12,28 +12,26 @@ class Audio {
     
     // MARK: Client
     
-    static var client: Audio? {
-        didSet {
-            didSetClient?()
-        }
-    }
-    
-    static var didSetClient: (Void -> Void)?
+    static var client: Audio?
     
     // MARK: Actions
+    
+    static let didStartNotification = "AudioDidStartNotification"
     
     static func start() {
         guard AKManager.sharedManager().isRunning == false else {
             return
         }
         
-        AKSettings.shared().audioInputEnabled = Audiobus.client?.controller.isConnected(toPortOfType: ABPortTypeSender) == true
-        
         client = Audio()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(didStartNotification, object: nil, userInfo: nil)
     }
     
+    static let didStopNotification = "AudioDidStopNotification"
+    
     static func stop() {
-        guard AKManager.sharedManager().isRunning == true && client?.sustained == false else {
+        guard AKManager.sharedManager().isRunning == true else {
             return
         }
         
@@ -41,26 +39,22 @@ class Audio {
         
         AKManager.sharedManager().stop()
         AKManager.sharedManager().resetOrchestra()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(didStopNotification, object: nil, userInfo: nil)
     }
     
-    static func startInput() {
-        guard AKSettings.shared().audioInputEnabled == false else {
+    static let didResetNotification = "AudioDidResetNotification"
+    
+    static func reset() {
+        guard let client = client else {
             return
         }
         
-        AKSettings.shared().audioInputEnabled = true
+        client.synthesizer.reset()
+        client.vocoder.reset()
+        client.master.reset()
         
-        client = Audio()
-    }
-    
-    static func stopInput() {
-        guard AKSettings.shared().audioInputEnabled == true else {
-            return
-        }
-        
-        AKSettings.shared().audioInputEnabled = false
-        
-        client = Audio()
+        NSNotificationCenter.defaultCenter().postNotificationName(didResetNotification, object: nil, userInfo: nil)
     }
     
     // MARK: Initialization
@@ -88,12 +82,6 @@ class Audio {
         synthesizer.stop()
         vocoder.stop()
         master.stop()
-    }
-    
-    // MARK: Properties
-
-    private var sustained: Bool {
-        return Settings.phonemeboardSustain.value == true || Settings.keyboardSustain.value == true
     }
 
 }

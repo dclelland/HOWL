@@ -20,9 +20,25 @@ class PhonemeboardViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var flipButton: UIButton?
+    
     @IBOutlet weak var holdButton: UIButton? {
         didSet {
             holdButton?.selected = Settings.phonemeboardSustain.value
+        }
+    }
+    
+    // MARK: - Overrides
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Audio.didStartNotification, object: nil, queue: nil) { notification in
+            self.reloadVocoder()
         }
     }
     
@@ -30,13 +46,16 @@ class PhonemeboardViewController: UIViewController {
     
     func reloadVocoder() {
         guard let touches = multitouchGestureRecognizer?.touches, location = locationForTouches(touches) else {
-            Audio.client?.vocoder.mute()
+            Audio.client?.vocoder.enabled = false
             return
         }
         
-        Audio.client?.vocoder.unmute()
-        
+        Audio.client?.vocoder.enabled = true
         Audio.client?.vocoder.location = location
+    }
+    
+    func stopVocoder() {
+        Audio.client?.vocoder.enabled = false
     }
     
     func reloadView() {
@@ -52,12 +71,17 @@ class PhonemeboardViewController: UIViewController {
     
     @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
+        
+        if !Settings.phonemeboardSustain.value {
+            stopVocoder()
+            reloadView()
+        }
     }
     
     @IBAction func holdButtonTapped(button: UIButton) {
         Settings.phonemeboardSustain.value = !Settings.phonemeboardSustain.value
         multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value
-        button.selected = Settings.phonemeboardSustain.value
+        holdButton?.selected = Settings.phonemeboardSustain.value
     }
     
     // MARK: - Private Getters

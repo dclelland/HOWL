@@ -20,6 +20,8 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var flipButton: UIButton?
+    
     @IBOutlet weak var holdButton: UIButton? {
         didSet {
             holdButton?.selected = Settings.keyboardSustain.value
@@ -47,6 +49,20 @@ class KeyboardViewController: UIViewController {
         case ShowBackground
     }
     
+    // MARK: - Overrides
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Audio.didStartNotification, object: nil, queue: nil) { notification in
+            self.reloadSynthesizer()
+        }
+    }
+    
     // MARK: - Life cycle
     
     func updateSynthesizer() {
@@ -67,6 +83,12 @@ class KeyboardViewController: UIViewController {
             } else {
                 stopNoteForTouch(touch)
             }
+        }
+    }
+    
+    func stopSynthesizer() {
+        notes.keys.forEach { touch in
+            stopNoteForTouch(touch)
         }
     }
     
@@ -105,12 +127,17 @@ class KeyboardViewController: UIViewController {
     
     @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
+        
+        if !Settings.keyboardSustain.value {
+            stopSynthesizer()
+            reloadView()
+        }
     }
     
     @IBAction func holdButtonTapped(button: UIButton) {
         Settings.keyboardSustain.value = !Settings.keyboardSustain.value
         multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value
-        button.selected = Settings.keyboardSustain.value
+        holdButton?.selected = Settings.keyboardSustain.value
     }
     
 }

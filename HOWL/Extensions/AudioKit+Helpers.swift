@@ -9,7 +9,7 @@
 import AudioKit
 import Persistable
 
-// MARK: Persistence
+// MARK: Instrument properties
 
 class InstrumentProperty: AKInstrumentProperty, Persistable {
     
@@ -34,10 +34,27 @@ class InstrumentProperty: AKInstrumentProperty, Persistable {
         self.setDefaultPersistentValue(value)
         
         self.value = self.persistentValue()
-        self.initialValue = self.persistentValue()
+        self.initialValue = value
     }
     
 }
+
+// MARK: Instruments
+
+extension AKInstrument {
+    
+    var instrumentProperties: [InstrumentProperty] {
+        return properties.flatMap { $0 as? InstrumentProperty }
+    }
+    
+    func reset() {
+        for instrumentProperty in instrumentProperties {
+            instrumentProperty.reset()
+        }
+    }
+    
+}
+
 
 // MARK: Conversion
 

@@ -41,6 +41,10 @@ class Audiobus {
     // MARK: Initialization
     
     var controller: ABAudiobusController
+    
+    var audioUnit: AudioUnit {
+        return AKManager.sharedManager().engine.audioUnit
+    }
 
     init(apiKey: String) {
         self.controller = ABAudiobusController(apiKey: apiKey)
@@ -75,43 +79,97 @@ class Audiobus {
             )
         )
         
-        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { (notification) in
-            self.connectionsChanged(notification)
+        startObservingInterAppAudioConnections()
+        startObservingAudiobusConnections()
+    }
+    
+    deinit {
+        stopObservingInterAppAudioConnections()
+        stopObservingAudiobusConnections()
+    }
+    
+    // MARK: Properties
+    
+    var isConnected: Bool {
+        return controller.isConnectedToAudiobus || audioUnit.isConnectedToInterAppAudio
+    }
+    
+    var isConnectedToInput: Bool {
+        return controller.isConnectedToAudiobus(portOfType: ABPortTypeSender) || audioUnit.isConnectedToInterAppAudio(nodeOfType: kAudioUnitType_RemoteEffect)
+    }
+    
+    // MARK: Connections
+    
+    private var audioUnitPropertyListener: AudioUnitPropertyListener!
+    
+    private func startObservingInterAppAudioConnections() {
+        audioUnitPropertyListener = AudioUnitPropertyListener { (audioUnit, property) in
+            self.updateConnections()
+        }
+        
+        audioUnit.add(listener: audioUnitPropertyListener, toProperty: kAudioUnitProperty_IsInterAppConnected)
+    }
+    
+    private func stopObservingInterAppAudioConnections() {
+        AKManager.sharedManager().engine.audioUnit.remove(listener: self.audioUnitPropertyListener, fromProperty: kAudioUnitProperty_IsInterAppConnected)
+    }
+    
+    private func startObservingAudiobusConnections() {
+        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { notification in
+            self.updateConnections()
         })
     }
     
-    // MARK: Notifications
+    private func stopObservingAudiobusConnections() {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: ABConnectionsChangedNotification, object: nil)
+    }
     
-    private func connectionsChanged(notification: NSNotification) {
+    static let didUpdateConnections = "AudiobusDidUpdateConnectionsNotification"
+    
+    private func updateConnections() {
         if (UIApplication.sharedApplication().applicationState == .Background) {
-            if (controller.isConnected()) {
+            if (isConnected) {
                 Audio.start()
             } else {
                 Audio.stop()
             }
         }
         
-        if (controller.isConnected(toPortOfType: ABPortTypeSender)) {
-            Audio.startInput()
-        } else {
-            Audio.stopInput()
+        if (isConnectedToInput) {
+            Audio.client?.vocoder.inputEnabled = true
         }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(Audiobus.didUpdateConnections, object: nil, userInfo: nil)
     }
 
 }
 
-extension ABAudiobusController {
+private extension ABAudiobusController {
     
-    func isConnected() -> Bool {
+    var isConnectedToAudiobus: Bool {
         return connected == true || memberOfActiveAudiobusSession == true
     }
     
-    func isConnected(toPortOfType type: ABPortType) -> Bool {
+    func isConnectedToAudiobus(portOfType type: ABPortType) -> Bool {
         guard connectedPorts != nil else {
             return false
         }
         
         return connectedPorts.flatMap { $0 as? ABPort }.filter { $0.type == type }.isEmpty == false
+    }
+    
+}
+
+private extension AudioUnit {
+    
+    var isConnectedToInterAppAudio: Bool {
+        let value: UInt32 = getValue(forProperty: kAudioUnitProperty_IsInterAppConnected)
+        return value != 0
+    }
+    
+    func isConnectedToInterAppAudio(nodeOfType type: OSType) -> Bool {
+        let value: AudioComponentDescription = getValue(forProperty: kAudioOutputUnitProperty_NodeComponentDescription)
+        return value.componentType == type
     }
     
 }

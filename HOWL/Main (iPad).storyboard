@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G12a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -689,7 +689,7 @@
                                             <constraint firstAttribute="width" secondItem="ihs-Lx-S66" secondAttribute="height" multiplier="1:1" id="ao2-kr-d7P"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                                        <state key="normal" title="RESET">
+                                        <state key="normal" title="INPUT">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -713,7 +713,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="resetButtonTapped:" destination="eQs-SH-hmG" eventType="touchUpInside" id="rLg-UB-uN9"/>
+                                            <action selector="inputButtonTapped:" destination="eQs-SH-hmG" eventType="touchUpInside" id="YDY-eY-myz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -820,7 +820,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-UR-sD9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-UR-sD9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="124" height="104"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
@@ -1142,7 +1142,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-d7-FiP" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-d7-FiP" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="189" y="2" width="61" height="103"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -1311,6 +1311,7 @@
                         <outlet property="effectsReverbControl" destination="Wle-Ds-2Xx" id="ai5-ll-9kk"/>
                         <outlet property="formantsBandwidthControl" destination="lrZ-UR-sD9" id="7Kt-Dl-ByP"/>
                         <outlet property="formantsFrequencyControl" destination="mpM-fX-G4z" id="czi-ET-3wJ"/>
+                        <outlet property="inputButton" destination="ihs-Lx-S66" id="GlF-Ol-LE0"/>
                         <outlet property="lfoXDepthControl" destination="YSg-wJ-05G" id="lgp-OK-odr"/>
                         <outlet property="lfoXRateControl" destination="Cgk-V9-p8W" id="MHN-nM-p3t"/>
                         <outlet property="lfoXShapeControl" destination="bwf-a9-TCN" id="zgE-hu-acm"/>
@@ -1494,7 +1495,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="124" height="104"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Right Interval"/>
@@ -1634,7 +1635,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-Cw-P8X" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-Cw-P8X" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="189" y="2" width="61" height="104"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -1903,7 +1904,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-wY-Bce" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-wY-Bce" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="189" y="2" width="61" height="103"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
@@ -2124,6 +2125,7 @@
                         <outlet property="envelopeSustainControl" destination="yze-Sh-bGC" id="bj6-Ok-JSn"/>
                         <outlet property="keyboardLeftIntervalControl" destination="8cB-QC-O8r" id="IvJ-VE-FTO"/>
                         <outlet property="keyboardRightIntervalControl" destination="VrU-cW-RTC" id="6RR-NL-fOt"/>
+                        <outlet property="resetButton" destination="XNQ-GJ-Io2" id="HZX-xv-bhi"/>
                         <outlet property="tremoloDepthControl" destination="1Mn-mM-A0Z" id="Cj3-vm-cDP"/>
                         <outlet property="tremoloRateControl" destination="Hcz-wY-Bce" id="ap1-AC-DQC"/>
                         <outlet property="tremoloWaveformControl" destination="R6s-Tc-XJX" id="cI1-J4-Bq2"/>

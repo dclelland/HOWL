@@ -45,6 +45,11 @@ public struct Persistent<T: PersistableType>: Persistable {
         self.setDefaultPersistentValue(value)
     }
     
+    /// Resets the persistent value to the default persistent value.
+    public mutating func resetValue() {
+        value = defaultValue
+    }
+    
 }
 
 // MARK: Persistable
