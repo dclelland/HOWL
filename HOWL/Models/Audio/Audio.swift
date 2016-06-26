@@ -12,15 +12,11 @@ class Audio {
     
     // MARK: Client
     
-    static var client: Audio? {
-        didSet {
-            didSetClient?()
-        }
-    }
-    
-    static var didSetClient: (Void -> Void)?
+    static var client: Audio?
     
     // MARK: Actions
+    
+    static let didStartNotification = "AudioDidStartNotification"
     
     static func start() {
         guard AKManager.sharedManager().isRunning == false else {
@@ -28,10 +24,14 @@ class Audio {
         }
         
         client = Audio()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(didStartNotification, object: nil, userInfo: nil)
     }
     
+    static let didStopNotification = "AudioDidStopNotification"
+    
     static func stop() {
-        guard AKManager.sharedManager().isRunning == true && client?.sustained == false else {
+        guard AKManager.sharedManager().isRunning == true else {
             return
         }
         
@@ -39,6 +39,8 @@ class Audio {
         
         AKManager.sharedManager().stop()
         AKManager.sharedManager().resetOrchestra()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(didStopNotification, object: nil, userInfo: nil)
     }
     
     static let didResetNotification = "AudioDidResetNotification"
@@ -80,12 +82,6 @@ class Audio {
         synthesizer.stop()
         vocoder.stop()
         master.stop()
-    }
-    
-    // MARK: Properties
-
-    private var sustained: Bool {
-        return Settings.phonemeboardSustain.value == true || Settings.keyboardSustain.value == true
     }
 
 }

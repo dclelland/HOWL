@@ -28,6 +28,20 @@ class PhonemeboardViewController: UIViewController {
         }
     }
     
+    // MARK: - Overrides
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Audio.didStartNotification, object: nil, queue: nil) { notification in
+            self.reloadVocoder()
+        }
+    }
+    
     // MARK: - Life cycle
     
     func reloadVocoder() {

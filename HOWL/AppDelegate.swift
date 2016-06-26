@@ -13,10 +13,6 @@ import AudioToolbox
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    var howlViewController: HowlViewController? {
-        return window?.rootViewController as? HowlViewController
-    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         AKSettings.shared().audioInputEnabled = true
@@ -26,11 +22,6 @@ import AudioToolbox
         Audio.start()
         Audiobus.start()
         
-        Audio.didSetClient = {
-            self.howlViewController?.keyboardViewController?.reloadSynthesizer()
-            self.howlViewController?.phonemeboardViewController?.reloadVocoder()
-        }
-        
         return true
     }
     
@@ -39,7 +30,7 @@ import AudioToolbox
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
-        if (Audiobus.client?.isConnected == false) {
+        if (Audiobus.client?.isConnected == false && Settings.sustained == false) {
             Audio.stop()
         }
     }

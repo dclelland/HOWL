@@ -49,6 +49,20 @@ class KeyboardViewController: UIViewController {
         case ShowBackground
     }
     
+    // MARK: - Overrides
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(Audio.didStartNotification, object: nil, queue: nil) { notification in
+            self.reloadSynthesizer()
+        }
+    }
+    
     // MARK: - Life cycle
     
     func updateSynthesizer() {

@@ -45,8 +45,6 @@ class Audiobus {
     var audioUnit: AudioUnit {
         return AKManager.sharedManager().engine.audioUnit
     }
-    
-    private var audioUnitPropertyListener: AudioUnitPropertyListener!
 
     init(apiKey: String) {
         self.controller = ABAudiobusController(apiKey: apiKey)
@@ -81,29 +79,13 @@ class Audiobus {
             )
         )
         
-        self.audioUnitPropertyListener = AudioUnitPropertyListener { (audioUnit, property) in
-            switch property {
-            case kAudioUnitProperty_IsInterAppConnected:
-                self.updateConnections()
-            case kAudioOutputUnitProperty_NodeComponentDescription:
-                self.updateConnections()
-            default:
-                break
-            }
-        }
-        
-        self.audioUnit.add(listener: self.audioUnitPropertyListener, toProperty: kAudioUnitProperty_IsInterAppConnected)
-        self.audioUnit.add(listener: self.audioUnitPropertyListener, toProperty: kAudioOutputUnitProperty_NodeComponentDescription)
-        
-        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { notification in
-            self.updateConnections()
-        })
+        startObservingInterAppAudioConnections()
+        startObservingAudiobusConnections()
     }
     
     deinit {
-        AKManager.sharedManager().engine.audioUnit.remove(listener: self.audioUnitPropertyListener, fromProperty: kAudioUnitProperty_IsInterAppConnected)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: ABConnectionsChangedNotification, object: nil)
+        stopObservingInterAppAudioConnections()
+        stopObservingAudiobusConnections()
     }
     
     // MARK: Properties
@@ -117,6 +99,30 @@ class Audiobus {
     }
     
     // MARK: Connections
+    
+    private var audioUnitPropertyListener: AudioUnitPropertyListener!
+    
+    private func startObservingInterAppAudioConnections() {
+        audioUnitPropertyListener = AudioUnitPropertyListener { (audioUnit, property) in
+            self.updateConnections()
+        }
+        
+        audioUnit.add(listener: audioUnitPropertyListener, toProperty: kAudioUnitProperty_IsInterAppConnected)
+    }
+    
+    private func stopObservingInterAppAudioConnections() {
+        AKManager.sharedManager().engine.audioUnit.remove(listener: self.audioUnitPropertyListener, fromProperty: kAudioUnitProperty_IsInterAppConnected)
+    }
+    
+    private func startObservingAudiobusConnections() {
+        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { notification in
+            self.updateConnections()
+        })
+    }
+    
+    private func stopObservingAudiobusConnections() {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: ABConnectionsChangedNotification, object: nil)
+    }
     
     static let didUpdateConnections = "AudiobusDidUpdateConnectionsNotification"
     
