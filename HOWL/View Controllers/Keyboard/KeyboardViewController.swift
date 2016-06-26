@@ -86,6 +86,12 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    func stopSynthesizer() {
+        notes.keys.forEach { touch in
+            stopNoteForTouch(touch)
+        }
+    }
+    
     func reloadView() {
         keyboardView?.reloadData()
     }
@@ -121,6 +127,11 @@ class KeyboardViewController: UIViewController {
     
     @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
+        
+        if !Settings.keyboardSustain.value {
+            stopSynthesizer()
+            reloadView()
+        }
     }
     
     @IBAction func holdButtonTapped(button: UIButton) {

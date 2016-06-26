@@ -54,6 +54,10 @@ class PhonemeboardViewController: UIViewController {
         Audio.client?.vocoder.location = location
     }
     
+    func stopVocoder() {
+        Audio.client?.vocoder.enabled = false
+    }
+    
     func reloadView() {
         guard let multitouchState = multitouchGestureRecognizer?.multitouchState, let touches = multitouchGestureRecognizer?.touches else {
             return
@@ -67,6 +71,11 @@ class PhonemeboardViewController: UIViewController {
     
     @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
+        
+        if !Settings.phonemeboardSustain.value {
+            stopVocoder()
+            reloadView()
+        }
     }
     
     @IBAction func holdButtonTapped(button: UIButton) {
