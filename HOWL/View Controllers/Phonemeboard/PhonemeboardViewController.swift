@@ -79,9 +79,11 @@ class PhonemeboardViewController: UIViewController {
     }
     
     @IBAction func holdButtonTapped(button: UIButton) {
-        Settings.phonemeboardSustain.value = !Settings.phonemeboardSustain.value
-        multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value
-        holdButton?.selected = Settings.phonemeboardSustain.value
+        let sustain = !Settings.phonemeboardSustain.value
+        
+        holdButton?.selected = sustain
+        Settings.phonemeboardSustain.value = sustain
+        multitouchGestureRecognizer?.sustain = sustain
     }
     
     // MARK: - Private Getters

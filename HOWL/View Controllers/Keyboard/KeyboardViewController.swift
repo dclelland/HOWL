@@ -86,6 +86,14 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    func cleanupSynthesizer() {
+        notes.keys.forEach { touch in
+            if (touch.phase == .Ended) {
+                stopNoteForTouch(touch)
+            }
+        }
+    }
+    
     func stopSynthesizer() {
         notes.keys.forEach { touch in
             stopNoteForTouch(touch)
@@ -135,9 +143,15 @@ class KeyboardViewController: UIViewController {
     }
     
     @IBAction func holdButtonTapped(button: UIButton) {
-        Settings.keyboardSustain.value = !Settings.keyboardSustain.value
-        multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value
-        holdButton?.selected = Settings.keyboardSustain.value
+        let sustain = !Settings.keyboardSustain.value
+        
+        holdButton?.selected = sustain
+        Settings.keyboardSustain.value = sustain
+        multitouchGestureRecognizer?.sustain = sustain
+        
+        if (!sustain) {
+            cleanupSynthesizer()
+        }
     }
     
 }
