@@ -43,20 +43,6 @@ class Audio {
         NSNotificationCenter.defaultCenter().postNotificationName(didStopNotification, object: nil, userInfo: nil)
     }
     
-    static let didResetNotification = "AudioDidResetNotification"
-    
-    static func reset() {
-        guard let client = client else {
-            return
-        }
-        
-        client.synthesizer.reset()
-        client.vocoder.reset()
-        client.master.reset()
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(didResetNotification, object: nil, userInfo: nil)
-    }
-    
     // MARK: Initialization
     
     var synthesizer: Synthesizer

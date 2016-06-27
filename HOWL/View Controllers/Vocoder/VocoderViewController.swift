@@ -13,11 +13,7 @@ class VocoderViewController: UIViewController {
     
     @IBOutlet weak var flipButton: UIButton?
     
-    @IBOutlet weak var inputButton: UIButton? {
-        didSet {
-            inputButton?.selected = Audio.client!.vocoder.inputEnabled
-        }
-    }
+    @IBOutlet weak var resetButton: UIButton?
     
     @IBOutlet weak var formantsFrequencyControl: AudioControl? {
         didSet {
@@ -109,46 +105,26 @@ class VocoderViewController: UIViewController {
         }
     }
     
-    // MARK: - Overrides
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        NSNotificationCenter.defaultCenter().addObserverForName(Settings.didResetNotification, object: nil, queue: nil) { notification in
-            self.formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.defaultValue
-            self.formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.defaultValue
-            
-            self.effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.defaultValue
-            self.effectsReverbControl?.value = Audio.client!.master.effectsReverb.defaultValue
-            
-            self.lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.defaultValue
-            self.lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.defaultValue
-            self.lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.defaultValue
-            
-            self.lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.defaultValue
-            self.lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.defaultValue
-            self.lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.defaultValue
-        }
-        
-        NSNotificationCenter.defaultCenter().addObserverForName(Audiobus.didUpdateConnections, object: nil, queue: nil) { notification in
-            self.inputButton?.selected = Audio.client!.vocoder.inputEnabled
-        }
-    }
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: Settings.didResetNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: Audiobus.didUpdateConnections, object: nil)
-    }
-    
     // MARK: - Interface events
     
     @IBAction func flipButtonTapped(button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func inputButtonTapped(button: UIButton) {
-        Audio.client!.vocoder.inputEnabled = !Audio.client!.vocoder.inputEnabled
-        inputButton?.selected = Audio.client!.vocoder.inputEnabled
+    @IBAction func resetButtonTapped(button: UIButton) {
+        formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.defaultValue
+        formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.defaultValue
+        
+        effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.defaultValue
+        effectsReverbControl?.value = Audio.client!.master.effectsReverb.defaultValue
+        
+        lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.defaultValue
+        lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.defaultValue
+        lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.defaultValue
+        
+        lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.defaultValue
+        lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.defaultValue
+        lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.defaultValue
     }
     
 }

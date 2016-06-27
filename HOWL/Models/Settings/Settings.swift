@@ -21,16 +21,5 @@ struct Settings {
     static var sustained: Bool {
         return phonemeboardSustain.value == true || keyboardSustain.value == true
     }
-    
-    // MARK: Actions
-    
-    static let didResetNotification = "SettingsDidResetNotification"
-    
-    static func reset() {
-        keyboardLeftInterval.resetValue()
-        keyboardRightInterval.resetValue()
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(didResetNotification, object: nil, userInfo: nil)
-    }
 
 }

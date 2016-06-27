@@ -689,7 +689,7 @@
                                             <constraint firstAttribute="width" secondItem="ihs-Lx-S66" secondAttribute="height" multiplier="1:1" id="ao2-kr-d7P"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                                        <state key="normal" title="INPUT">
+                                        <state key="normal" title="RESET">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -713,7 +713,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="inputButtonTapped:" destination="eQs-SH-hmG" eventType="touchUpInside" id="YDY-eY-myz"/>
+                                            <action selector="resetButtonTapped:" destination="eQs-SH-hmG" eventType="touchUpInside" id="EPX-Bu-PlH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1311,13 +1311,13 @@
                         <outlet property="effectsReverbControl" destination="Wle-Ds-2Xx" id="ai5-ll-9kk"/>
                         <outlet property="formantsBandwidthControl" destination="lrZ-UR-sD9" id="7Kt-Dl-ByP"/>
                         <outlet property="formantsFrequencyControl" destination="mpM-fX-G4z" id="czi-ET-3wJ"/>
-                        <outlet property="inputButton" destination="ihs-Lx-S66" id="GlF-Ol-LE0"/>
                         <outlet property="lfoXDepthControl" destination="YSg-wJ-05G" id="lgp-OK-odr"/>
                         <outlet property="lfoXRateControl" destination="Cgk-V9-p8W" id="MHN-nM-p3t"/>
                         <outlet property="lfoXShapeControl" destination="bwf-a9-TCN" id="zgE-hu-acm"/>
                         <outlet property="lfoYDepthControl" destination="fQx-8s-SBM" id="jCB-hx-CtZ"/>
                         <outlet property="lfoYRateControl" destination="S9v-d7-FiP" id="8hP-cF-AzR"/>
                         <outlet property="lfoYShapeControl" destination="LtI-zn-1d9" id="JSx-iU-7bw"/>
+                        <outlet property="resetButton" destination="ihs-Lx-S66" id="ST4-lr-oSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9k-Pt-L00" userLabel="First Responder" sceneMemberID="firstResponder"/>
