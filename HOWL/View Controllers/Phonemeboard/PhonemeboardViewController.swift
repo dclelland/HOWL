@@ -12,11 +12,11 @@ import ProtonomeAudioKitControls
 
 class PhonemeboardViewController: UIViewController {
     
-    @IBOutlet weak var phonemeboardView: PhonemeboardView?
+    @IBOutlet weak var phonemeboardView: PhonemeboardView!
     
-    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
+    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer! {
         didSet {
-            multitouchGestureRecognizer?.sustain = Settings.phonemeboardSustain.value
+            multitouchGestureRecognizer.sustain = Settings.phonemeboardSustain.value
         }
     }
     
@@ -45,7 +45,7 @@ class PhonemeboardViewController: UIViewController {
     // MARK: - Life cycle
     
     func reloadVocoder() {
-        guard let touches = multitouchGestureRecognizer?.touches, location = locationForTouches(touches) else {
+        guard let location = locationForTouches(multitouchGestureRecognizer.touches) else {
             Audio.client?.vocoder.enabled = false
             return
         }
@@ -59,12 +59,8 @@ class PhonemeboardViewController: UIViewController {
     }
     
     func reloadView() {
-        guard let multitouchState = multitouchGestureRecognizer?.multitouchState, let touches = multitouchGestureRecognizer?.touches else {
-            return
-        }
-        
-        phonemeboardView?.highlighted = multitouchState == .Live
-        phonemeboardView?.selected = !touches.isEmpty
+        phonemeboardView.highlighted = multitouchGestureRecognizer.multitouchState == .Live
+        phonemeboardView.selected = multitouchGestureRecognizer.touches.isEmpty == false
     }
     
     // MARK: - Button events
@@ -83,13 +79,13 @@ class PhonemeboardViewController: UIViewController {
         
         holdButton?.selected = sustain
         Settings.phonemeboardSustain.value = sustain
-        multitouchGestureRecognizer?.sustain = sustain
+        multitouchGestureRecognizer.sustain = sustain
     }
     
     // MARK: - Private Getters
     
     private func locationForTouches(touches: [UITouch]) -> CGPoint? {
-        guard let phonemeboardView = phonemeboardView where touches.count > 0 else {
+        guard touches.count > 0 else {
             return nil
         }
         

@@ -12,11 +12,11 @@ import MultitouchGestureRecognizer
 
 class KeyboardViewController: UIViewController {
     
-    @IBOutlet weak var keyboardView: UICollectionView?
+    @IBOutlet weak var keyboardView: UICollectionView!
     
-    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer? {
+    @IBOutlet weak var multitouchGestureRecognizer: MultitouchGestureRecognizer! {
         didSet {
-            multitouchGestureRecognizer?.sustain = Settings.keyboardSustain.value
+            multitouchGestureRecognizer.sustain = Settings.keyboardSustain.value
         }
     }
     
@@ -86,14 +86,6 @@ class KeyboardViewController: UIViewController {
         }
     }
     
-    func cleanupSynthesizer() {
-        notes.keys.forEach { touch in
-            if (touch.phase == .Ended) {
-                stopNoteForTouch(touch)
-            }
-        }
-    }
-    
     func stopSynthesizer() {
         notes.keys.forEach { touch in
             stopNoteForTouch(touch)
@@ -101,7 +93,7 @@ class KeyboardViewController: UIViewController {
     }
     
     func reloadView() {
-        keyboardView?.reloadData()
+        keyboardView.reloadData()
     }
     
     // MARK: - Note actions
@@ -119,7 +111,7 @@ class KeyboardViewController: UIViewController {
                 stopNoteForTouch(touch)
                 playNoteForTouch(touch, withKey: key)
             }
-        } else {
+        } else if (touch.phase != .Ended) {
             playNoteForTouch(touch, withKey: key)
         }
     }
@@ -147,11 +139,7 @@ class KeyboardViewController: UIViewController {
         
         holdButton?.selected = sustain
         Settings.keyboardSustain.value = sustain
-        multitouchGestureRecognizer?.sustain = sustain
-        
-        if (!sustain) {
-            cleanupSynthesizer()
-        }
+        multitouchGestureRecognizer.sustain = sustain
     }
     
 }
