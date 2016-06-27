@@ -98,7 +98,7 @@ class PhonemeboardViewController: UIViewController {
             )
         }
         
-        return location.ilerp(rect: phonemeboardView.bounds)
+        return location.clamp(rect: phonemeboardView.bounds).ilerp(rect: phonemeboardView.bounds)
     }
     
 }
