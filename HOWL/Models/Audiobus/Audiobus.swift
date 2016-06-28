@@ -64,6 +64,21 @@ class Audiobus {
             )
         )
         
+        self.controller.addFilterPort(
+            ABFilterPort(
+                name: "Filter",
+                title: "HOWL (Filter)",
+                audioComponentDescription: AudioComponentDescription(
+                    componentType: kAudioUnitType_RemoteEffect,
+                    componentSubType: UInt32(fourCharacterCode: "howx"),
+                    componentManufacturer: UInt32(fourCharacterCode: "ptnm"),
+                    componentFlags: 0,
+                    componentFlagsMask: 0
+                ),
+                audioUnit: AKManager.sharedManager().engine.audioUnit
+            )
+        )
+        
         startObservingInterAppAudioConnections()
         startObservingAudiobusConnections()
     }
@@ -77,6 +92,10 @@ class Audiobus {
     
     var isConnected: Bool {
         return controller.isConnectedToAudiobus || audioUnit.isConnectedToInterAppAudio
+    }
+    
+    var isConnectedToInput: Bool {
+        return controller.isConnectedToAudiobus(portOfType: ABPortTypeSender) || audioUnit.isConnectedToInterAppAudio(nodeOfType: kAudioUnitType_RemoteEffect)
     }
     
     // MARK: Connections
@@ -113,6 +132,10 @@ class Audiobus {
                 Audio.stop()
             }
         }
+        
+        if (isConnectedToInput) {
+            Audio.client?.vocoder.inputEnabled = true
+        }
     }
 
 }
@@ -123,6 +146,14 @@ private extension ABAudiobusController {
         return connected == true || memberOfActiveAudiobusSession == true
     }
     
+    func isConnectedToAudiobus(portOfType type: ABPortType) -> Bool {
+        guard connectedPorts != nil else {
+            return false
+        }
+        
+        return connectedPorts.flatMap { $0 as? ABPort }.filter { $0.type == type }.isEmpty == false
+    }
+    
 }
 
 private extension AudioUnit {
@@ -130,6 +161,11 @@ private extension AudioUnit {
     var isConnectedToInterAppAudio: Bool {
         let value: UInt32 = getValue(forProperty: kAudioUnitProperty_IsInterAppConnected)
         return value != 0
+    }
+    
+    func isConnectedToInterAppAudio(nodeOfType type: OSType) -> Bool {
+        let value: AudioComponentDescription = getValue(forProperty: kAudioOutputUnitProperty_NodeComponentDescription)
+        return value.componentType == type
     }
     
 }

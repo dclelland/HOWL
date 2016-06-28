@@ -15,6 +15,7 @@ import AudioToolbox
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        AKSettings.shared().audioInputEnabled = true
         AKSettings.shared().playbackWhileMuted = true
         AKSettings.shared().defaultToSpeaker = false
         

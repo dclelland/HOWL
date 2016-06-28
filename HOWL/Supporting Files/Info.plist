@@ -8,13 +8,25 @@
 			<key>manufacturer</key>
 			<string>ptnm</string>
 			<key>name</key>
-			<string>HOWL</string>
+			<string>HOWL (Sender)</string>
 			<key>subtype</key>
 			<string>howg</string>
 			<key>type</key>
 			<string>aurg</string>
 			<key>version</key>
-			<integer>12</integer>
+			<integer>13</integer>
+		</dict>
+		<dict>
+			<key>manufacturer</key>
+			<string>ptnm</string>
+			<key>name</key>
+			<string>HOWL (Filter)</string>
+			<key>subtype</key>
+			<string>howx</string>
+			<key>type</key>
+			<string>aurx</string>
+			<key>version</key>
+			<integer>13</integer>
 		</dict>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
