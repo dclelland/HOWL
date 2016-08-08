@@ -4,6 +4,10 @@ HOWL is a simple formant synthesizer for iOS, written in Swift and built using t
 
 It's extremely basic - just a sawtooth wave VCO run through four bandpass filters in series.
 
+### Screenshot
+
+![HOWL screenshot](/Screenshot.gif?raw=true "HOWL screenshot")
+
 ### Links
 
 - [Project page](http://protonome.com/apps/howl/)
