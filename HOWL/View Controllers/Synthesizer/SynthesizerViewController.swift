@@ -145,11 +145,11 @@ class SynthesizerViewController: UIViewController {
     
     // MARK: - Interface events
     
-    @IBAction func flipButtonTapped(button: UIButton) {
+    @IBAction func flipButtonTapped(_ button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func resetButtonTapped(button: UIButton) {
+    @IBAction func resetButtonTapped(_ button: UIButton) {
         keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
         keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
         
@@ -178,11 +178,11 @@ class SynthesizerViewController: UIViewController {
     }
     
     private var keyboardViewControllerMode: KeyboardViewController.Mode {
-        if keyboardLeftIntervalControl?.selected == true || keyboardRightIntervalControl?.selected == true {
-            return .ShowBackground
+        if keyboardLeftIntervalControl?.isSelected == true || keyboardRightIntervalControl?.isSelected == true {
+            return .showBackground
         }
         
-        return .Normal
+        return .normal
     }
     
 }

@@ -27,7 +27,7 @@ import ProtonomeAudioKitControls
         super.updateValuesFromCsound()
         
         let trailLocations: [CGPoint?] = {
-            guard self.selected == true else {
+            guard self.isSelected == true else {
                 return []
             }
             
@@ -40,20 +40,20 @@ import ProtonomeAudioKitControls
         let colorHue = self.trailHue
         let colorSaturation = self.trailSaturation
         
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        DispatchQueue.main.async {
             self.trailLocations = trailLocations
             self.colorHue = colorHue
             self.colorSaturation = colorSaturation
-        })
+        }
     }
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
         let context = UIGraphicsGetCurrentContext()
         
-        if (self.selected) {
-            CGContextSetFillColorWithColor(context, trailPathColor.CGColor)
+        if (self.isSelected) {
+            context?.setFillColor(trailPathColor.cgColor)
             trailPath.fill()
         }
     }
@@ -62,7 +62,7 @@ import ProtonomeAudioKitControls
     
     private var trailPath: UIBezierPath {
         let path = UIBezierPath.makePath { make in
-            trailLocations.flatMap { $0 }.enumerate().forEach { index, location in
+            trailLocations.flatMap { $0 }.enumerated().forEach { index, location in
                 let ratio = CGFloat(index).ilerp(min: 0.0, max: CGFloat(trailLength)).lerp(min: 1.0, max: 0.0)
                 let radius = pow(ratio, 2.0) * 24.0
                 make.oval(at: location, radius: radius)

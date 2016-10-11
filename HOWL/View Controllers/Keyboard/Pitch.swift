@@ -19,18 +19,18 @@ struct Pitch {
     // MARK: Helpers
     
     enum Note: Int {
-        case C = 0
-        case CSharp = 1
-        case D = 2
-        case DSharp = 3
-        case E = 4
-        case F = 5
-        case FSharp = 6
-        case G = 7
-        case GSharp = 8
-        case A = 9
-        case ASharp = 10
-        case B = 11
+        case c = 0
+        case cSharp = 1
+        case d = 2
+        case dSharp = 3
+        case e = 4
+        case f = 5
+        case fSharp = 6
+        case g = 7
+        case gSharp = 8
+        case a = 9
+        case aSharp = 10
+        case b = 11
     }
     
     var note: Note {
@@ -70,7 +70,7 @@ func <(lhs: Pitch, rhs: Pitch) -> Bool {
 
 // MARK: - IntegerLiteralConvertible
 
-extension Pitch: IntegerLiteralConvertible {
+extension Pitch: ExpressibleByIntegerLiteral {
     
     init(integerLiteral: Int) {
         self.init(number: integerLiteral)
@@ -92,18 +92,18 @@ extension Pitch.Note: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .C: return "C"
-        case .CSharp: return "C#"
-        case .D: return "D"
-        case .DSharp: return "D#"
-        case .E: return "E"
-        case .F: return "F"
-        case .FSharp: return "F#"
-        case .G: return "G"
-        case .GSharp: return "G#"
-        case .A: return "A"
-        case .ASharp: return "A#"
-        case .B: return "B"
+        case .c: return "C"
+        case .cSharp: return "C#"
+        case .d: return "D"
+        case .dSharp: return "D#"
+        case .e: return "E"
+        case .f: return "F"
+        case .fSharp: return "F#"
+        case .g: return "G"
+        case .gSharp: return "G#"
+        case .a: return "A"
+        case .aSharp: return "A#"
+        case .b: return "B"
         }
     }
     

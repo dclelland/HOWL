@@ -107,11 +107,11 @@ class VocoderViewController: UIViewController {
     
     // MARK: - Interface events
     
-    @IBAction func flipButtonTapped(button: UIButton) {
+    @IBAction func flipButtonTapped(_ button: UIButton) {
         flipViewController?.flip()
     }
     
-    @IBAction func resetButtonTapped(button: UIButton) {
+    @IBAction func resetButtonTapped(_ button: UIButton) {
         formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.defaultValue
         formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.defaultValue
         

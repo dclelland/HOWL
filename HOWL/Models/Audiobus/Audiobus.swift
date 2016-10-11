@@ -27,7 +27,7 @@ class Audiobus {
     }
     
     private static var apiKey: String? {
-        guard let path = NSBundle.mainBundle().pathForResource("audiobus", ofType: "txt") else {
+        guard let path = Bundle.main.path(forResource: "audiobus", ofType: "txt") else {
             return nil
         }
         
@@ -43,7 +43,7 @@ class Audiobus {
     var controller: ABAudiobusController
     
     var audioUnit: AudioUnit {
-        return AKManager.sharedManager().engine.audioUnit
+        return AKManager.shared().engine.audioUnit
     }
 
     init(apiKey: String) {
@@ -60,7 +60,7 @@ class Audiobus {
                     componentFlags: 0,
                     componentFlagsMask: 0
                 ),
-                audioUnit: AKManager.sharedManager().engine.audioUnit
+                audioUnit: AKManager.shared().engine.audioUnit
             )
         )
         
@@ -75,7 +75,7 @@ class Audiobus {
                     componentFlags: 0,
                     componentFlagsMask: 0
                 ),
-                audioUnit: AKManager.sharedManager().engine.audioUnit
+                audioUnit: AKManager.shared().engine.audioUnit
             )
         )
         
@@ -107,25 +107,25 @@ class Audiobus {
             self.updateConnections()
         }
         
-        audioUnit.add(listener: audioUnitPropertyListener, toProperty: kAudioUnitProperty_IsInterAppConnected)
+        audioUnit.add(listener: audioUnitPropertyListener, to: kAudioUnitProperty_IsInterAppConnected)
     }
     
     private func stopObservingInterAppAudioConnections() {
-        AKManager.sharedManager().engine.audioUnit.remove(listener: self.audioUnitPropertyListener, fromProperty: kAudioUnitProperty_IsInterAppConnected)
+        AKManager.shared().engine.audioUnit.remove(listener: self.audioUnitPropertyListener, from: kAudioUnitProperty_IsInterAppConnected)
     }
     
     private func startObservingAudiobusConnections() {
-        NSNotificationCenter.defaultCenter().addObserverForName(ABConnectionsChangedNotification, object: nil, queue: nil, usingBlock: { notification in
+        NotificationCenter.default.addObserver(forName: .ABConnectionsChanged, object: nil, queue: nil, using: { notification in
             self.updateConnections()
         })
     }
     
     private func stopObservingAudiobusConnections() {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: ABConnectionsChangedNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .ABConnectionsChanged, object: nil)
     }
     
     private func updateConnections() {
-        if (UIApplication.sharedApplication().applicationState == .Background) {
+        if (UIApplication.shared.applicationState == .background) {
             if (isConnected) {
                 Audio.start()
             } else {
@@ -157,12 +157,12 @@ private extension ABAudiobusController {
 private extension AudioUnit {
     
     var isConnectedToInterAppAudio: Bool {
-        let value: UInt32 = getValue(forProperty: kAudioUnitProperty_IsInterAppConnected)
+        let value: UInt32 = getValue(for: kAudioUnitProperty_IsInterAppConnected)
         return value != 0
     }
     
     func isConnectedToInterAppAudio(nodeOfType type: OSType) -> Bool {
-        let value: AudioComponentDescription = getValue(forProperty: kAudioOutputUnitProperty_NodeComponentDescription)
+        let value: AudioComponentDescription = getValue(for: kAudioOutputUnitProperty_NodeComponentDescription)
         return value.componentType == type
     }
     

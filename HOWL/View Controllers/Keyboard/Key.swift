@@ -20,19 +20,9 @@ func ==(lhs: KeyCoordinates, rhs: KeyCoordinates) -> Bool {
 }
 
 struct Key {
-
     var pitch: Pitch
-    
     var path: UIBezierPath
-    
     var coordinates: KeyCoordinates
-    
-    init(withPitch pitch: Pitch, path: UIBezierPath, coordinates: KeyCoordinates) {
-        self.pitch = pitch
-        self.path = path
-        self.coordinates = coordinates
-    }
-    
 }
 
 extension Key: Equatable {}

@@ -14,7 +14,7 @@ public let π: Double = M_PI
 
 // MARK: Postfix operators
 
-postfix operator ° {}
+postfix operator °
 
 public postfix func °<T: Degradable> (angle: T) -> T {
     return deg2rad(angle)
@@ -37,7 +37,7 @@ Converts degrees to radians.
 - returns: The angle's value in radians.
 */
 
-public func deg2rad<T: Degradable>(angle: T) -> T {
+public func deg2rad<T: Degradable>(_ angle: T) -> T {
     return angle.degrees
 }
 
@@ -49,7 +49,7 @@ Converts radians to degrees.
 - returns: The angle's value in degrees.
 */
 
-public func rad2deg<T: Degradable>(angle: T) -> T {
+public func rad2deg<T: Degradable>(_ angle: T) -> T {
     return angle.radians
 }
 
@@ -100,8 +100,8 @@ extension CGFloat: Degradable {
 // MARK: Polrectable protocol
 
 public protocol Polrectable {
-    static func rec2pol(x x: Self, y: Self) -> (r: Self, θ: Self)
-    static func pol2rec(r r: Self, θ: Self) -> (x: Self, y: Self)
+    static func rec2pol(x: Self, y: Self) -> (r: Self, θ: Self)
+    static func pol2rec(r: Self, θ: Self) -> (x: Self, y: Self)
 }
 
 // MARK: Polrectable global functions
@@ -114,7 +114,7 @@ Converts rectangular coordinates to polar coordinates.
 
 - returns: A tuple `(r, θ)` with the polar coordinates.
 */
-public func rec2pol<T: Polrectable>(x x: T, y: T) -> (r: T, θ: T) {
+public func rec2pol<T: Polrectable>(x: T, y: T) -> (r: T, θ: T) {
     return T.rec2pol(x: x, y: y)
 }
 
@@ -126,7 +126,7 @@ Converts polar coordinates to rectangular coordinates.
  
 - returns: A tuple `(x, y)` with the rectangular coordinates.
 */
-public func pol2rec<T: Polrectable>(r r: T, θ: T) -> (x: T, y: T) {
+public func pol2rec<T: Polrectable>(r: T, θ: T) -> (x: T, y: T) {
     return T.pol2rec(r: r, θ: θ)
 }
 
@@ -135,12 +135,12 @@ public func pol2rec<T: Polrectable>(r r: T, θ: T) -> (x: T, y: T) {
 extension Double: Polrectable {
     
     /// Converts rectangular coordinates to polar coordinates
-    public static func rec2pol(x x: Double, y: Double) -> (r: Double, θ: Double) {
+    public static func rec2pol(x: Double, y: Double) -> (r: Double, θ: Double) {
         return (r: hypot(y, x), θ: atan2(y, x))
     }
     
     /// Converts polar coordinates to rectangular coordinates
-    public static func pol2rec(r r: Double, θ: Double) -> (x: Double, y: Double) {
+    public static func pol2rec(r: Double, θ: Double) -> (x: Double, y: Double) {
         return (x: r * cos(θ), y: r * sin(θ))
     }
     
@@ -149,12 +149,12 @@ extension Double: Polrectable {
 extension Float: Polrectable {
     
     /// Converts rectangular coordinates to polar coordinates
-    public static func rec2pol(x x: Float, y: Float) -> (r: Float, θ: Float) {
+    public static func rec2pol(x: Float, y: Float) -> (r: Float, θ: Float) {
         return (r: hypot(y, x), θ: atan2(y, x))
     }
     
     /// Converts polar coordinates to rectangular coordinates
-    public static func pol2rec(r r: Float, θ: Float) -> (x: Float, y: Float) {
+    public static func pol2rec(r: Float, θ: Float) -> (x: Float, y: Float) {
         return (x: r * cos(θ), y: r * sin(θ))
     }
     
@@ -163,12 +163,12 @@ extension Float: Polrectable {
 extension CGFloat: Polrectable {
     
     /// Converts rectangular coordinates to polar coordinates
-    public static func rec2pol(x x: CGFloat, y: CGFloat) -> (r: CGFloat, θ: CGFloat) {
+    public static func rec2pol(x: CGFloat, y: CGFloat) -> (r: CGFloat, θ: CGFloat) {
         return (r: hypot(y, x), θ: atan2(y, x))
     }
     
     /// Converts polar coordinates to rectangular coordinates
-    public static func pol2rec(r r: CGFloat, θ: CGFloat) -> (x: CGFloat, y: CGFloat) {
+    public static func pol2rec(r: CGFloat, θ: CGFloat) -> (x: CGFloat, y: CGFloat) {
         return (x: r * cos(θ), y: r * sin(θ))
     }
     

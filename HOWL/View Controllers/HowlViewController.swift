@@ -20,7 +20,7 @@ class HowlViewController: UIViewController {
     
     // MARK: - Overrides
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
     
@@ -57,7 +57,7 @@ class HowlViewController: UIViewController {
 extension UIViewController {
     
     var howlViewController: HowlViewController? {
-        return parentViewController as? HowlViewController
+        return parent as? HowlViewController
     }
     
 }

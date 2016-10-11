@@ -16,31 +16,31 @@ class Audio {
     
     // MARK: Actions
     
-    static let didStartNotification = "AudioDidStartNotification"
+    static let didStartNotification = NSNotification.Name("AudioDidStartNotification")
     
     static func start() {
-        guard AKManager.sharedManager().isRunning == false else {
+        guard AKManager.shared().isRunning == false else {
             return
         }
         
         client = Audio()
         
-        NSNotificationCenter.defaultCenter().postNotificationName(didStartNotification, object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: didStartNotification, object: nil, userInfo: nil)
     }
     
-    static let didStopNotification = "AudioDidStopNotification"
+    static let didStopNotification = NSNotification.Name("AudioDidStopNotification")
     
     static func stop() {
-        guard AKManager.sharedManager().isRunning == true else {
+        guard AKManager.shared().isRunning == true else {
             return
         }
         
         client = nil
         
-        AKManager.sharedManager().stop()
-        AKManager.sharedManager().resetOrchestra()
+        AKManager.shared().stop()
+        AKManager.shared().resetOrchestra()
         
-        NSNotificationCenter.defaultCenter().postNotificationName(didStopNotification, object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: didStopNotification, object: nil, userInfo: nil)
     }
     
     // MARK: Initialization
@@ -51,13 +51,13 @@ class Audio {
     
     init() {
         synthesizer = Synthesizer()
-        vocoder = Vocoder(withInput: synthesizer.output)
-        master = Master(withInput: vocoder.output)
+        vocoder = Vocoder(input: synthesizer.output)
+        master = Master(input: vocoder.output)
         
         AKOrchestra.reset()
-        AKOrchestra.addInstrument(synthesizer)
-        AKOrchestra.addInstrument(vocoder)
-        AKOrchestra.addInstrument(master)
+        AKOrchestra.add(synthesizer)
+        AKOrchestra.add(vocoder)
+        AKOrchestra.add(master)
         
         synthesizer.start()
         vocoder.start()

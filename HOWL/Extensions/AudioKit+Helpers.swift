@@ -99,35 +99,35 @@ func -<T: AKParameter, U: AKParameter> (left: T, right: U) -> T {
 }
 
 func *<T: AKParameter, U: AKParameter> (left: T, right: U) -> T {
-    return left.scaledBy(right)
+    return left.scaled(by: right)
 }
 
 func /<T: AKParameter, U: AKParameter> (left: T, right: U) -> T {
-    return left.dividedBy(right)
+    return left.divided(by: right)
 }
 
 // MARK: Trig functions
 
-func sin(x: AKParameter) -> AKParameter {
+func sin(_ x: AKParameter) -> AKParameter {
     return AKSingleInputMathOperation(functionString: "sin", input: x)
 }
 
-func cos(x: AKParameter) -> AKParameter {
+func cos(_ x: AKParameter) -> AKParameter {
     return AKSingleInputMathOperation(functionString: "cos", input: x)
 }
 
-func tan(x: AKParameter) -> AKParameter {
+func tan(_ x: AKParameter) -> AKParameter {
     return AKSingleInputMathOperation(functionString: "tan", input: x)
 }
 
-func sinh(x: AKParameter) -> AKParameter {
+func sinh(_ x: AKParameter) -> AKParameter {
     return AKSingleInputMathOperation(functionString: "sinh", input: x)
 }
 
-func cosh(x: AKParameter) -> AKParameter {
+func cosh(_ x: AKParameter) -> AKParameter {
     return AKSingleInputMathOperation(functionString: "cosh", input: x)
 }
 
-func tanh(x: AKParameter) -> AKParameter {
+func tanh(_ x: AKParameter) -> AKParameter {
     return AKSingleInputMathOperation(functionString: "tanh", input: x)
 }

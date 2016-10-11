@@ -24,12 +24,12 @@ class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var holdButton: UIButton? {
         didSet {
-            holdButton?.selected = Settings.keyboardSustain.value
+            holdButton?.isSelected = Settings.keyboardSustain.value
         }
     }
     
     let keyboard: Keyboard = {
-        if case .Phone = UIDevice.currentDevice().userInterfaceIdiom {
+        if case .phone = UIDevice.current.userInterfaceIdiom {
             return Keyboard(width: 4, height: 5, leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
         } else {
             return Keyboard(width: 5, height: 5, leftInterval: Settings.keyboardLeftInterval.value, rightInterval: Settings.keyboardRightInterval.value)
@@ -38,27 +38,27 @@ class KeyboardViewController: UIViewController {
     
     var notes = [UITouch: (key: Key, note: SynthesizerNote)]()
     
-    var mode: Mode = .Normal {
+    var mode: Mode = .normal {
         didSet {
             reloadView()
         }
     }
     
     enum Mode {
-        case Normal
-        case ShowBackground
+        case normal
+        case showBackground
     }
     
     // MARK: - Overrides
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserverForName(Audio.didStartNotification, object: nil, queue: nil) { notification in
+        NotificationCenter.default.addObserver(forName: Audio.didStartNotification, object: nil, queue: nil) { notification in
             self.reloadSynthesizer()
         }
     }
@@ -67,28 +67,28 @@ class KeyboardViewController: UIViewController {
     
     func updateSynthesizer() {
         notes.keys.forEach { touch in
-            if let key = keyForTouch(touch) {
-                updateNoteForTouch(touch, withKey: key)
+            if let key = key(for: touch) {
+                updateNote(for: touch, with: key)
             } else {
-                stopNoteForTouch(touch)
+                stopNote(for: touch)
             }
         }
     }
     
     func reloadSynthesizer() {
         notes.keys.forEach { touch in
-            if let key = keyForTouch(touch) {
-                stopNoteForTouch(touch)
-                playNoteForTouch(touch, withKey: key)
+            if let key = key(for: touch) {
+                stopNote(for: touch)
+                playNote(for: touch, with: key)
             } else {
-                stopNoteForTouch(touch)
+                stopNote(for: touch)
             }
         }
     }
     
     func stopSynthesizer() {
         notes.keys.forEach { touch in
-            stopNoteForTouch(touch)
+            stopNote(for: touch)
         }
     }
     
@@ -98,34 +98,34 @@ class KeyboardViewController: UIViewController {
     
     // MARK: - Note actions
     
-    func playNoteForTouch(touch: UITouch, withKey key: Key) {
-        if let note = Audio.client?.synthesizer.note(withFrequency: key.pitch.frequency) {
-            Audio.client?.synthesizer.playNote(note)
+    func playNote(for touch: UITouch, with key: Key) {
+        if let note = Audio.client?.synthesizer.note(with: key.pitch.frequency) {
+            Audio.client?.synthesizer.play(note)
             notes[touch] = (key: key, note: note)
         }
     }
     
-    func updateNoteForTouch(touch: UITouch, withKey key: Key) {
+    func updateNote(for touch: UITouch, with key: Key) {
         if let oldKey = notes[touch]?.key {
             if oldKey != key {
-                stopNoteForTouch(touch)
-                playNoteForTouch(touch, withKey: key)
+                stopNote(for: touch)
+                playNote(for: touch, with: key)
             }
-        } else if (touch.phase != .Ended) {
-            playNoteForTouch(touch, withKey: key)
+        } else if (touch.phase != .ended) {
+            playNote(for: touch, with: key)
         }
     }
     
-    func stopNoteForTouch(touch: UITouch) {
+    func stopNote(for touch: UITouch) {
         if let note = notes[touch]?.note {
-            Audio.client?.synthesizer.stopNote(note)
+            Audio.client?.synthesizer.stop(note)
             notes[touch] = nil
         }
     }
     
     // MARK: - Button events
     
-    @IBAction func flipButtonTapped(button: UIButton) {
+    @IBAction func flipButtonTapped(_ button: UIButton) {
         flipViewController?.flip()
         
         if !Settings.keyboardSustain.value {
@@ -134,45 +134,57 @@ class KeyboardViewController: UIViewController {
         }
     }
     
-    @IBAction func holdButtonTapped(button: UIButton) {
+    @IBAction func holdButtonTapped(_ button: UIButton) {
         let sustain = !Settings.keyboardSustain.value
         
-        holdButton?.selected = sustain
+        holdButton?.isSelected = sustain
         Settings.keyboardSustain.value = sustain
         multitouchGestureRecognizer.sustain = sustain
     }
     
+    // MARK: Private getters
+    
+    fileprivate func key(for touch: UITouch) -> Key? {
+        guard let keyboardView = keyboardView else {
+            return nil
+        }
+        
+        let location = touch.location(in: keyboardView).ilerp(rect: keyboardView.bounds)
+        
+        return keyboard.key(at: location)
+    }
+
 }
 
 // MARK: - Collection view data source
 
 extension KeyboardViewController: UICollectionViewDataSource {
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return keyboard.numberOfRows()
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return keyboard.numberOfRows
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return keyboard.numberOfKeysInRow(section)
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return keyboard.numberOfKeys(in: section)
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("keyboardViewCell", forIndexPath: indexPath) as! KeyboardViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "keyboardViewCell", for: indexPath) as! KeyboardViewCell
         let layer = cell.layer as! CAShapeLayer
         
-        guard let key = keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section) else {
+        guard let key = keyboard.key(at: indexPath.item, in: indexPath.section) else {
             return cell
         }
         
-        layer.path = self.collectionView(collectionView, pathForCellAtIndexPath: indexPath, withKey: key).CGPath
-        layer.fillColor = self.collectionView(collectionView, colorForCellAtIndexPath: indexPath, withKey: key).CGColor
+        layer.path = self.collectionView(collectionView, pathForCellAt: indexPath, with: key).cgPath
+        layer.fillColor = self.collectionView(collectionView, colorForCellAt: indexPath, with: key).cgColor
         
         return cell
     }
     
     // MARK: - Private getters
     
-    private func collectionView(collectionView: UICollectionView, pathForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIBezierPath {
+    private func collectionView(_ collectionView: UICollectionView, pathForCellAt indexPath: IndexPath, with key: Key) -> UIBezierPath {
         return key.path.makePath { make in
             make.translation(tx: -key.path.bounds.minX, ty: -key.path.bounds.minY)
             make.scale(sx: collectionView.bounds.width, sy: collectionView.bounds.height)
@@ -180,7 +192,7 @@ extension KeyboardViewController: UICollectionViewDataSource {
         }
     }
     
-    private func collectionView(collectionView: UICollectionView, colorForCellAtIndexPath indexPath: NSIndexPath, withKey key: Key) -> UIColor {
+    private func collectionView(_ collectionView: UICollectionView, colorForCellAt indexPath: IndexPath, with key: Key) -> UIColor {
         let keyNotes = notes.values.filter { $0.key == key }
         
         let hue = CGFloat(key.pitch.note.rawValue) / 12.0
@@ -191,7 +203,7 @@ extension KeyboardViewController: UICollectionViewDataSource {
             return UIColor.protonome_lightColor(withHue: hue, saturation: saturation, brightness: brightness)
         }
         
-        if mode == .ShowBackground {
+        if mode == .showBackground {
             return UIColor.protonome_darkColor(withHue: hue, saturation: saturation, brightness: brightness)
         } else {
             return UIColor.protonome_darkGrayColor()
@@ -204,8 +216,8 @@ extension KeyboardViewController: UICollectionViewDataSource {
 
 extension KeyboardViewController: KeyboardViewLayoutDelegate {
     
-    func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: NSIndexPath) -> UIBezierPath? {
-        guard let key = keyboard.keyAtIndex(indexPath.item, inRow: indexPath.section) else {
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, pathForItemAtIndexPath indexPath: IndexPath) -> UIBezierPath? {
+        guard let key = keyboard.key(at: indexPath.item, in: indexPath.section) else {
             return nil
         }
         
@@ -221,42 +233,30 @@ extension KeyboardViewController: KeyboardViewLayoutDelegate {
 
 extension KeyboardViewController: MultitouchGestureRecognizerDelegate {
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
-        if let key = keyForTouch(touch) {
-            playNoteForTouch(touch, withKey: key)
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
+        if let key = key(for: touch) {
+            playNote(for: touch, with: key)
         }
         reloadView()
     }
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
-        if let key = keyForTouch(touch) {
-            updateNoteForTouch(touch, withKey: key)
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
+        if let key = key(for: touch) {
+            updateNote(for: touch, with: key)
         } else {
-            stopNoteForTouch(touch)
+            stopNote(for: touch)
         }
         reloadView()
     }
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
-        stopNoteForTouch(touch)
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
+        stopNote(for: touch)
         reloadView()
     }
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
-        stopNoteForTouch(touch)
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
+        stopNote(for: touch)
         reloadView()
-    }
-    
-    // MARK: Private getters
-    
-    private func keyForTouch(touch: UITouch) -> Key? {
-        guard let keyboardView = keyboardView else {
-            return nil
-        }
-        
-        let location = touch.locationInView(keyboardView).ilerp(rect: keyboardView.bounds)
-        
-        return keyboard.keyAtLocation(location)
     }
     
 }

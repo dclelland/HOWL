@@ -35,9 +35,9 @@ class Vocoder: AKInstrument {
     var formantsFrequency = InstrumentProperty(value: 1.0, key: "vocoderFormantsFrequency")
     var formantsBandwidth = InstrumentProperty(value: 1.0, key: "vocoderFormantsBandwidth")
     
-    var output = AKAudio.globalParameter()
+    var output = AKAudio.global()
     
-    init(withInput input: AKAudio) {
+    init(input: AKAudio) {
         super.init()
         
         addProperty(amplitude)

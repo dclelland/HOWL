@@ -11,8 +11,8 @@ import Foundation
 // MARK: Lerpable protocol
 
 public protocol Lerpable {
-    func lerp(min min: Self, max: Self) -> Self
-    func ilerp(min min: Self, max: Self) -> Self
+    func lerp(min: Self, max: Self) -> Self
+    func ilerp(min: Self, max: Self) -> Self
 }
 
 // MARK: Lerpable global functions
@@ -27,7 +27,7 @@ Calculates the linear interpolation between a minimum and a maximum value.
 - returns: The weighted average. Typically in the range `min...max` but other values are supported.
 */
 
-public func lerp<T: Lerpable>(weighting: T, min: T, max: T) -> T {
+public func lerp<T: Lerpable>(_ weighting: T, min: T, max: T) -> T {
     return weighting.lerp(min: min, max: max)
 }
 
@@ -41,7 +41,7 @@ Calculates the inverse linear interpolation between a minimum and a maximum valu
 - returns: The weighting of *value* between *min* and *max*. Typically in the range `0...1` but other values are supported.
 */
 
-public func ilerp<T: Lerpable>(value: T, min: T, max: T) -> T {
+public func ilerp<T: Lerpable>(_ value: T, min: T, max: T) -> T {
     return value.ilerp(min: min, max: max)
 }
 
@@ -50,12 +50,12 @@ public func ilerp<T: Lerpable>(value: T, min: T, max: T) -> T {
 extension Double: Lerpable {
     
     /// Linear interpolation
-    public func lerp(min min: Double, max: Double) -> Double {
+    public func lerp(min: Double, max: Double) -> Double {
         return min + (self * (max - min))
     }
     
     /// Inverse linear interpolation
-    public func ilerp(min min: Double, max: Double) -> Double {
+    public func ilerp(min: Double, max: Double) -> Double {
         return (self - min) / (max - min)
     }
     
@@ -64,12 +64,12 @@ extension Double: Lerpable {
 extension Float: Lerpable {
     
     /// Linear interpolation
-    public func lerp(min min: Float, max: Float) -> Float {
+    public func lerp(min: Float, max: Float) -> Float {
         return min + (self * (max - min))
     }
     
     /// Inverse linear interpolation
-    public func ilerp(min min: Float, max: Float) -> Float {
+    public func ilerp(min: Float, max: Float) -> Float {
         return (self - min) / (max - min)
     }
     
@@ -78,12 +78,12 @@ extension Float: Lerpable {
 extension CGFloat: Lerpable {
     
     /// Linear interpolation
-    public func lerp(min min: CGFloat, max: CGFloat) -> CGFloat {
+    public func lerp(min: CGFloat, max: CGFloat) -> CGFloat {
         return min + (self * (max - min))
     }
     
     /// Inverse linear interpolation
-    public func ilerp(min min: CGFloat, max: CGFloat) -> CGFloat {
+    public func ilerp(min: CGFloat, max: CGFloat) -> CGFloat {
         return (self - min) / (max - min)
     }
     
@@ -92,14 +92,14 @@ extension CGFloat: Lerpable {
 extension CGPoint: Lerpable {
     
     /// Linear interpolation
-    public func lerp(min min: CGPoint, max: CGPoint) -> CGPoint {
+    public func lerp(min: CGPoint, max: CGPoint) -> CGPoint {
         let x = self.x.lerp(min: min.x, max: max.x)
         let y = self.y.lerp(min: min.y, max: max.y)
         return CGPoint(x: x, y: y)
     }
     
     /// Inverse linear interpolation
-    public func ilerp(min min: CGPoint, max: CGPoint) -> CGPoint {
+    public func ilerp(min: CGPoint, max: CGPoint) -> CGPoint {
         let x = self.x.ilerp(min: min.x, max: max.x)
         let y = self.y.ilerp(min: min.y, max: max.y)
         return CGPoint(x: x, y: y)
@@ -112,12 +112,12 @@ extension CGPoint: Lerpable {
 extension CGPoint {
     
     /// Linear interpolation on a rect
-    public func lerp(rect rect: CGRect) -> CGPoint {
+    public func lerp(rect: CGRect) -> CGPoint {
         return lerp(min: rect.min, max: rect.max)
     }
     
     /// Inverse linear interpolation on a rect
-    public func ilerp(rect rect: CGRect) -> CGPoint {
+    public func ilerp(rect: CGRect) -> CGPoint {
         return ilerp(min: rect.min, max: rect.max)
     }
 
@@ -128,14 +128,14 @@ extension CGPoint {
 extension CGRect {
     
     /// Linear interpolation on a rect
-    public func lerp(rect rect: CGRect) -> CGRect {
+    public func lerp(rect: CGRect) -> CGRect {
         let min = self.min.lerp(min: rect.min, max: rect.max)
         let max = self.max.lerp(min: rect.min, max: rect.max)
         return CGRect(min: min, max: max)
     }
     
     /// Inverse linear interpolation on a rect
-    public func ilerp(rect rect: CGRect) -> CGRect {
+    public func ilerp(rect: CGRect) -> CGRect {
         let min = self.min.ilerp(min: rect.min, max: rect.max)
         let max = self.max.ilerp(min: rect.min, max: rect.max)
         return CGRect(min: min, max: max)
@@ -146,7 +146,7 @@ extension CGRect {
 // MARK: Clampable protocol
 
 public protocol Clampable {
-    func clamp(min min: Self, max: Self) -> Self
+    func clamp(min: Self, max: Self) -> Self
 }
 
 // MARK: Clampable global functions
@@ -161,7 +161,7 @@ Clamps the value between an lower and upper bound.
 - returns: Returns *min* if *value* is less than min, or *max* if *value* is greater than *max*. *min* and *max* can safely be swapped.
 */
 
-public func clamp<T: Clampable>(value: T, min: T, max: T) -> T {
+public func clamp<T: Clampable>(_ value: T, min: T, max: T) -> T {
     return value.clamp(min: min, max: max)
 }
 
@@ -170,7 +170,7 @@ public func clamp<T: Clampable>(value: T, min: T, max: T) -> T {
 extension Double: Clampable {
     
     /// Clamp
-    public func clamp(min min: Double, max: Double) -> Double {
+    public func clamp(min: Double, max: Double) -> Double {
         return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
     }
     
@@ -179,7 +179,7 @@ extension Double: Clampable {
 extension Float: Clampable {
     
     /// Clamp
-    public func clamp(min min: Float, max: Float) -> Float {
+    public func clamp(min: Float, max: Float) -> Float {
         return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
     }
     
@@ -188,7 +188,7 @@ extension Float: Clampable {
 extension CGFloat: Clampable {
     
     /// Clamp
-    public func clamp(min min: CGFloat, max: CGFloat) -> CGFloat {
+    public func clamp(min: CGFloat, max: CGFloat) -> CGFloat {
         return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
     }
     
@@ -197,7 +197,7 @@ extension CGFloat: Clampable {
 extension CGPoint: Clampable {
     
     /// Clamp
-    public func clamp(min min: CGPoint, max: CGPoint) -> CGPoint {
+    public func clamp(min: CGPoint, max: CGPoint) -> CGPoint {
         let x = self.x.clamp(min: min.x, max: max.x)
         let y = self.y.clamp(min: min.y, max: max.y)
         return CGPoint(x: x, y: y)
@@ -210,7 +210,7 @@ extension CGPoint: Clampable {
 extension CGPoint {
     
     /// Clamp to a rect
-    public func clamp(rect rect: CGRect) -> CGPoint {
+    public func clamp(rect: CGRect) -> CGPoint {
         return clamp(min: rect.min, max: rect.max)
     }
 

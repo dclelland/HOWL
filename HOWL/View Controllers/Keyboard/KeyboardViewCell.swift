@@ -10,13 +10,13 @@ import UIKit
 
 class KeyboardViewCell: UICollectionViewCell {
     
-    override class func layerClass() -> AnyClass {
+    override class var layerClass: AnyClass {
         return CAShapeLayer.self
     }
     
     override func awakeFromNib() {
         if let layer = layer as? CAShapeLayer {
-            layer.strokeColor = UIColor.protonome_blackColor().CGColor
+            layer.strokeColor = UIColor.protonome_blackColor().cgColor
             layer.lineWidth = CGFloat(M_SQRT2)
         }
     }

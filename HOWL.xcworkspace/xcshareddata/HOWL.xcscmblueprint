@@ -4,40 +4,47 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "E739478ACB846B91AE7D579DF1AD75E75078624D" : 0,
-    "A0576489C950C8E026F476D6839B88B192E1F1CA" : 0,
-    "EB4BDDBC51578A3C84AD2C1CEF7E94CD3CA812F8" : 0,
-    "E9CF89D87D276DB579D810B9194D8FC9D2609CC2" : 0,
-    "92CBA65579F61C75FEC665D01E78C47FFFAA6B01" : 0,
-    "517A59507AEF56594B177A51CD26A28FC4949CEE" : 0
+    "BD2E7B60B505080468978583A493FA9479D81E51" : 9223372036854775807,
+    "E739478ACB846B91AE7D579DF1AD75E75078624D" : 9223372036854775807,
+    "2DAFAB6B8891AEE4619B8BE4F423BE37835E3E47" : 9223372036854775807,
+    "A0576489C950C8E026F476D6839B88B192E1F1CA" : 9223372036854775807,
+    "EB4BDDBC51578A3C84AD2C1CEF7E94CD3CA812F8" : 9223372036854775807,
+    "517A59507AEF56594B177A51CD26A28FC4949CEE" : 9223372036854775807,
+    "E9CF89D87D276DB579D810B9194D8FC9D2609CC2" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E835B4C9-E3B4-4BE9-8DB7-5A3FE20B3310",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "50BC2063-BF8F-4AA9-B2EE-A96BF82AAB48",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "E739478ACB846B91AE7D579DF1AD75E75078624D" : "ProtonomeRoundedViews\/",
-    "A0576489C950C8E026F476D6839B88B192E1F1CA" : "Persist\/",
+    "BD2E7B60B505080468978583A493FA9479D81E51" : "..\/Libraries\/Bezzy",
+    "E739478ACB846B91AE7D579DF1AD75E75078624D" : "..\/Libraries\/ProtonomeRoundedViews",
+    "2DAFAB6B8891AEE4619B8BE4F423BE37835E3E47" : "..\/Libraries\/Parity",
+    "A0576489C950C8E026F476D6839B88B192E1F1CA" : "..\/Libraries\/Persistable",
     "EB4BDDBC51578A3C84AD2C1CEF7E94CD3CA812F8" : "HOWL\/",
-    "E9CF89D87D276DB579D810B9194D8FC9D2609CC2" : "MultitouchGestureRecognizer\/",
-    "92CBA65579F61C75FEC665D01E78C47FFFAA6B01" : "AudioKit-fork\/",
-    "517A59507AEF56594B177A51CD26A28FC4949CEE" : "ProtonomeAudioKitControls\/"
+    "517A59507AEF56594B177A51CD26A28FC4949CEE" : "..\/Libraries\/ProtonomeAudioKitControls",
+    "E9CF89D87D276DB579D810B9194D8FC9D2609CC2" : "..\/Libraries\/MultitouchGestureRecognizer"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "HOWL",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HOWL.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/Parity.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2DAFAB6B8891AEE4619B8BE4F423BE37835E3E47"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/ProtonomeAudioKitControls.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "517A59507AEF56594B177A51CD26A28FC4949CEE"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/AudioKit.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "92CBA65579F61C75FEC665D01E78C47FFFAA6B01"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/Persist.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/Persistable.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A0576489C950C8E026F476D6839B88B192E1F1CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/Bezzy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD2E7B60B505080468978583A493FA9479D81E51"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dclelland\/ProtonomeRoundedViews.git",

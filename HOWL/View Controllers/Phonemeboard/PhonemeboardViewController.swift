@@ -24,20 +24,20 @@ class PhonemeboardViewController: UIViewController {
     
     @IBOutlet weak var holdButton: UIButton? {
         didSet {
-            holdButton?.selected = Settings.phonemeboardSustain.value
+            holdButton?.isSelected = Settings.phonemeboardSustain.value
         }
     }
     
     // MARK: - Overrides
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserverForName(Audio.didStartNotification, object: nil, queue: nil) { notification in
+        NotificationCenter.default.addObserver(forName: Audio.didStartNotification, object: nil, queue: nil) { notification in
             self.reloadVocoder()
         }
     }
@@ -45,7 +45,7 @@ class PhonemeboardViewController: UIViewController {
     // MARK: - Life cycle
     
     func reloadVocoder() {
-        guard let location = locationForTouches(multitouchGestureRecognizer.touches) else {
+        guard let location = location(for: multitouchGestureRecognizer.touches) else {
             Audio.client?.vocoder.enabled = false
             return
         }
@@ -59,13 +59,13 @@ class PhonemeboardViewController: UIViewController {
     }
     
     func reloadView() {
-        phonemeboardView.highlighted = multitouchGestureRecognizer.multitouchState == .Live
-        phonemeboardView.selected = multitouchGestureRecognizer.touches.isEmpty == false
+        phonemeboardView.isHighlighted = multitouchGestureRecognizer.multitouchState == .live
+        phonemeboardView.isSelected = multitouchGestureRecognizer.touches.isEmpty == false
     }
     
     // MARK: - Button events
     
-    @IBAction func flipButtonTapped(button: UIButton) {
+    @IBAction func flipButtonTapped(_ button: UIButton) {
         flipViewController?.flip()
         
         if !Settings.phonemeboardSustain.value {
@@ -74,23 +74,23 @@ class PhonemeboardViewController: UIViewController {
         }
     }
     
-    @IBAction func holdButtonTapped(button: UIButton) {
+    @IBAction func holdButtonTapped(_ button: UIButton) {
         let sustain = !Settings.phonemeboardSustain.value
         
-        holdButton?.selected = sustain
+        holdButton?.isSelected = sustain
         Settings.phonemeboardSustain.value = sustain
         multitouchGestureRecognizer.sustain = sustain
     }
     
     // MARK: - Private Getters
     
-    private func locationForTouches(touches: [UITouch]) -> CGPoint? {
+    private func location(for touches: [UITouch]) -> CGPoint? {
         guard touches.count > 0 else {
             return nil
         }
         
-        let location = touches.reduce(CGPointZero) { (location, touch) -> CGPoint in
-            let touchLocation = touch.locationInView(phonemeboardView)
+        let location = touches.reduce(CGPoint.zero) { (location, touch) -> CGPoint in
+            let touchLocation = touch.location(in: phonemeboardView)
             
             return CGPoint(
                 x: location.x + touchLocation.x / CGFloat(touches.count),
@@ -107,22 +107,22 @@ class PhonemeboardViewController: UIViewController {
 
 extension PhonemeboardViewController: MultitouchGestureRecognizerDelegate {
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidBegin touch: UITouch) {
         reloadVocoder()
         reloadView()
     }
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidMove touch: UITouch) {
         reloadVocoder()
         reloadView()
     }
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidCancel touch: UITouch) {
         reloadVocoder()
         reloadView()
     }
     
-    func multitouchGestureRecognizer(gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
+    func multitouchGestureRecognizer(_ gestureRecognizer: MultitouchGestureRecognizer, touchDidEnd touch: UITouch) {
         reloadVocoder()
         reloadView()
     }

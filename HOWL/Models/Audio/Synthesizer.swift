@@ -25,7 +25,7 @@ class Synthesizer: AKInstrument {
     var envelopeSustain = InstrumentProperty(value: 1.0, key: "synthesizerEnvelopeSustain")
     var envelopeRelease = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeRelease")
     
-    var output = AKAudio.globalParameter()
+    var output = AKAudio.global()
     
     override init() {
         super.init()
@@ -78,7 +78,7 @@ class Synthesizer: AKInstrument {
     
     // MARK: - Note creation
     
-    func note(withFrequency frequency: Float) -> SynthesizerNote {
+    func note(with frequency: Float) -> SynthesizerNote {
         return SynthesizerNote(
             frequency: frequency,
             amplitude: 1.0,

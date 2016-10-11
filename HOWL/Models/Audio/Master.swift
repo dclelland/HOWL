@@ -13,7 +13,7 @@ class Master: AKInstrument {
     var effectsBitcrush = InstrumentProperty(value: 0.0, key: "masterEffectsBitcrush")
     var effectsReverb = InstrumentProperty(value: 0.0, key: "masterEffectsReverb")
     
-    init(withInput input: AKAudio) {
+    init(input: AKAudio) {
         super.init()
         
         addProperty(effectsBitcrush)
@@ -68,7 +68,7 @@ class Master: AKInstrument {
             rightAudio: rightClipper
         )
         
-        setStereoAudioOutput(output)
+        setStereoAudioOutput(output!)
         
         resetParameter(input)
     }

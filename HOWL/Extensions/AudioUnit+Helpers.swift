@@ -13,21 +13,21 @@ import CoreAudio
 
 extension AudioUnit {
     
-    func getValue<T>(forProperty property: AudioUnitPropertyID) -> T {
+    func getValue<T>(for property: AudioUnitPropertyID) -> T {
         let (dataSize, _) = try! getPropertyInfo(property)
         return try! getProperty(property, dataSize: dataSize)
     }
     
-    func setValue<T>(value: T, forProperty property: AudioUnitPropertyID) {
+    func setValue<T>(_ value: T, for property: AudioUnitPropertyID) {
         let (dataSize, _) = try! getPropertyInfo(property)
         return try! setProperty(property, dataSize: dataSize, data: value)
     }
     
-    func add(listener listener: AudioUnitPropertyListener, toProperty property: AudioUnitPropertyID) {
+    func add(listener: AudioUnitPropertyListener, to property: AudioUnitPropertyID) {
         try! addPropertyListener(listener, toProperty: property)
     }
     
-    func remove(listener listener: AudioUnitPropertyListener, fromProperty property: AudioUnitPropertyID) {
+    func remove(listener: AudioUnitPropertyListener, from property: AudioUnitPropertyID) {
         try! removePropertyListener(listener, fromProperty: property)
     }
     
@@ -37,18 +37,18 @@ extension AudioUnit {
 
 struct AudioUnitPropertyListener {
     
-    typealias Callback = (audioUnit: AudioUnit, property: AudioUnitPropertyID) -> Void
+    typealias Callback = (_ audioUnit: AudioUnit, _ property: AudioUnitPropertyID) -> Void
     
-    private let proc: AudioUnitPropertyListenerProc
-    private let procInput: UnsafeMutablePointer<Callback>
+    fileprivate let proc: AudioUnitPropertyListenerProc
+    fileprivate let procInput: UnsafeMutablePointer<Callback>
     
-    init(_ callback: Callback) {
+    init(_ callback: @escaping Callback) {
         self.proc = { (inRefCon, inUnit, inID, inScope, inElement) in
-            UnsafeMutablePointer<Callback>(inRefCon).memory(audioUnit: inUnit, property: inID)
+            inRefCon.assumingMemoryBound(to: Callback.self).pointee(inUnit, inID)
         }
         
-        self.procInput = UnsafeMutablePointer<Callback>.alloc(strideof(Callback))
-        self.procInput.initialize(callback)
+        self.procInput = UnsafeMutablePointer<Callback>.allocate(capacity: MemoryLayout<Callback>.stride)
+        self.procInput.initialize(to: callback)
     }
     
 }
@@ -57,38 +57,38 @@ struct AudioUnitPropertyListener {
 
 private extension AudioUnit {
     
-    func getPropertyInfo(propertyID: AudioUnitPropertyID) throws -> (dataSize: UInt32, writable: Bool) {
+    func getPropertyInfo(_ propertyID: AudioUnitPropertyID) throws -> (dataSize: UInt32, writable: Bool) {
         var dataSize: UInt32 = 0
         var writable: DarwinBoolean = false
         
         try AudioUnitGetPropertyInfo(self, propertyID, kAudioUnitScope_Global, 0, &dataSize, &writable).check()
         
-        return (dataSize: dataSize, writable: Bool(writable))
+        return (dataSize: dataSize, writable: writable.boolValue)
     }
     
-    func getProperty<T>(propertyID: AudioUnitPropertyID, dataSize: UInt32) throws -> T {
+    func getProperty<T>(_ propertyID: AudioUnitPropertyID, dataSize: UInt32) throws -> T {
         var dataSize = dataSize
-        var data = UnsafeMutablePointer<T>.alloc(Int(dataSize))
+        var data = UnsafeMutablePointer<T>.allocate(capacity: Int(dataSize))
         defer {
-            data.dealloc(Int(dataSize))
+            data.deallocate(capacity: Int(dataSize))
         }
         
         try AudioUnitGetProperty(self, propertyID, kAudioUnitScope_Global, 0, data, &dataSize).check()
         
-        return data.memory
+        return data.pointee
     }
     
-    func setProperty<T>(propertyID: AudioUnitPropertyID, dataSize: UInt32, data: T) throws {
+    func setProperty<T>(_ propertyID: AudioUnitPropertyID, dataSize: UInt32, data: T) throws {
         var data = data
         
         try AudioFileSetProperty(self, propertyID, dataSize, &data).check()
     }
     
-    func addPropertyListener(listener: AudioUnitPropertyListener, toProperty propertyID: AudioUnitPropertyID) throws {
+    func addPropertyListener(_ listener: AudioUnitPropertyListener, toProperty propertyID: AudioUnitPropertyID) throws {
         try AudioUnitAddPropertyListener(self, propertyID, listener.proc, listener.procInput).check()
     }
     
-    func removePropertyListener(listener: AudioUnitPropertyListener, fromProperty propertyID: AudioUnitPropertyID) throws {
+    func removePropertyListener(_ listener: AudioUnitPropertyListener, fromProperty propertyID: AudioUnitPropertyID) throws {
         try AudioUnitRemovePropertyListenerWithUserData(self, propertyID, listener.proc, listener.procInput).check()
     }
     
@@ -113,16 +113,16 @@ extension UInt32 {
     init(fourCharacterCode: String) {
         assert(fourCharacterCode.characters.count == 4, "String should be four characters long")
         
-        let reversed = String(fourCharacterCode.characters.reverse())
-        let bytes = (reversed as NSString).UTF8String
-        let pointer = UnsafeMutablePointer<UInt32>(bytes)
+        let reversed = String(fourCharacterCode.characters.reversed())
+        let bytes = (reversed as NSString).utf8String
+        let pointer = UnsafeRawPointer(bytes)!.assumingMemoryBound(to: UInt32.self)
         
-        self = pointer.memory.littleEndian
+        self = pointer.pointee.littleEndian
     }
     
     var fourCharacterCode: String {
         var bytes = bigEndian
-        return String(bytesNoCopy: &bytes, length: 4, encoding: NSASCIIStringEncoding, freeWhenDone: false)!
+        return String(bytesNoCopy: &bytes, length: 4, encoding: .ascii, freeWhenDone: false)!
     }
     
 }

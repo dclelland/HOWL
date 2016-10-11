@@ -25,37 +25,37 @@ class FlipViewController: UIViewController {
         }
         
         switch state {
-        case .PresentingFrontView:
+        case .presentingFrontView:
             flip(fromView: frontView, toView: backView)
-        case .PresentingBackView:
+        case .presentingBackView:
             flip(fromView: backView, toView: frontView)
         }
     }
     
-    private func flip(fromView fromView: UIView, toView: UIView) {
+    private func flip(fromView: UIView, toView: UIView) {
         view.addSubview(toView)
         
-        toView.snp_makeConstraints { make in
+        toView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
         
-        UIView.transitionFromView(fromView, toView: toView, duration: 0.5, options: [.TransitionFlipFromLeft], completion: nil)
+        UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionFlipFromLeft], completion: nil)
     }
     
     // MARK: - State
     
     enum State {
-        case PresentingFrontView
-        case PresentingBackView
+        case presentingFrontView
+        case presentingBackView
     }
     
     var state: State? {
         if frontView?.superview != nil {
-            return .PresentingFrontView
+            return .presentingFrontView
         }
         
         if backView?.superview != nil {
-            return .PresentingBackView
+            return .presentingBackView
         }
         
         return nil
@@ -78,7 +78,7 @@ class FlipViewController: UIViewController {
 extension UIViewController {
     
     var flipViewController: FlipViewController? {
-        return parentViewController as? FlipViewController
+        return parent as? FlipViewController
     }
     
 }
