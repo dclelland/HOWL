@@ -1,16 +1,12 @@
 //
-//  Lerp.swift
-//  Lerp
+//  Degrad.swift
+//  Degrad
 //
 //  Created by Daniel Clelland on 6/12/15.
 //  Copyright © 2015 Daniel Clelland. All rights reserved.
 //
 
 import Foundation
-
-// MARK: Constants
-
-public let π: Double = M_PI
 
 // MARK: Postfix operators
 
@@ -59,12 +55,12 @@ extension Double: Degradable {
   
     /// Self (in degrees) value in radians
     public var degrees: Double {
-        return self * π / 180.0
+        return self * .pi / 180.0
     }
     
     /// Self (in radians) value in degrees
     public var radians: Double {
-        return self * 180.0 / π
+        return self * 180.0 / .pi
     }
     
 }
@@ -73,12 +69,12 @@ extension Float: Degradable {
   
     /// Self (in degrees) value in radians
     public var degrees: Float {
-        return self * Float(π) / 180.0
+        return self * .pi / 180.0
     }
     
     /// Self (in radians) value in degrees
     public var radians: Float {
-        return self * 180.0 / Float(π)
+        return self * 180.0 / .pi
     }
     
 }
@@ -87,12 +83,12 @@ extension CGFloat: Degradable {
   
     /// Self (in degrees) value in radians
     public var degrees: CGFloat {
-        return self * CGFloat(π) / 180.0
+        return self * .pi / 180.0
     }
     
     /// Self (in radians) value in degrees
     public var radians: CGFloat {
-        return self * 180.0 / CGFloat(π)
+        return self * 180.0 / .pi
     }
     
 }

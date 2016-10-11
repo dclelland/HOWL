@@ -2,29 +2,29 @@ PODS:
   - Audiobus (2.3.1)
   - AudioKit (2.3)
   - Bezzy (0.1.0)
-  - Degrad (0.2.0)
-  - Lerp (1.2.0)
-  - MultitouchGestureRecognizer (0.1.1)
-  - Parity (0.1.2)
+  - Degrad (1.0.0)
+  - Lerp (2.0.0)
+  - MultitouchGestureRecognizer (1.0.0)
+  - Parity (1.0.0)
   - Persistable (0.1.2)
-  - ProtonomeAudioKitControls (0.3.0):
+  - ProtonomeAudioKitControls (1.0.0):
     - AudioKit (~> 2.0)
     - Bezzy
     - Degrad
     - Lerp
     - SnapKit
-  - ProtonomeRoundedViews (0.1.1)
+  - ProtonomeRoundedViews (1.0.0)
   - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - Audiobus (~> 2.3)
   - AudioKit (from `https://github.com/dclelland/AudioKit/`, branch `howl`)
   - Bezzy (from `../../Libraries/Bezzy/`)
-  - MultitouchGestureRecognizer (from `../../Libraries/MultitouchGestureRecognizer`)
-  - Parity (from `../../Libraries/Parity`)
+  - MultitouchGestureRecognizer (~> 1.0)
+  - Parity (~> 1.0)
   - Persistable (from `../../Libraries/Persistable`)
   - ProtonomeAudioKitControls (from `../../Libraries/ProtonomeAudioKitControls`)
-  - ProtonomeRoundedViews (from `../../Libraries/ProtonomeRoundedViews`)
+  - ProtonomeRoundedViews (~> 1.0)
   - SnapKit (~> 3.0)
 
 EXTERNAL SOURCES:
@@ -33,16 +33,10 @@ EXTERNAL SOURCES:
     :git: https://github.com/dclelland/AudioKit/
   Bezzy:
     :path: "../../Libraries/Bezzy/"
-  MultitouchGestureRecognizer:
-    :path: "../../Libraries/MultitouchGestureRecognizer"
-  Parity:
-    :path: "../../Libraries/Parity"
   Persistable:
     :path: "../../Libraries/Persistable"
   ProtonomeAudioKitControls:
     :path: "../../Libraries/ProtonomeAudioKitControls"
-  ProtonomeRoundedViews:
-    :path: "../../Libraries/ProtonomeRoundedViews"
 
 CHECKOUT OPTIONS:
   AudioKit:
@@ -53,15 +47,15 @@ SPEC CHECKSUMS:
   Audiobus: d75ef3f0d625abf3007a147548423e76ca61043d
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
   Bezzy: e3fc0a79f83d6d46e382ac578d81b234f2f97f90
-  Degrad: 590415ee0f71c0516c661c806f7a2489376bfd7e
-  Lerp: 0d6b524e0428a131cdbf8872bf027db94cca5a4e
-  MultitouchGestureRecognizer: e32b5b78035c4c389973b410aae01bcd4f763f29
-  Parity: 1e9c0c866a477063cb763be765e13d70b25041e1
+  Degrad: 5119a3ed5aaab6be286c209386035befd04b2aa5
+  Lerp: fe0fd19edf08a7dab2283a3f250f2c840b6a97aa
+  MultitouchGestureRecognizer: 1ff5a5483168cbcbf474f5cf1672765a3f942b39
+  Parity: 1a6e22bb3ec32f8bcd3d78e01cc9919062c3bebc
   Persistable: 1e5ab95cc567d02dffec139a5bdf1e244604d49d
-  ProtonomeAudioKitControls: 9c17a351e24dad0f385361d769fa1a8d3c61e934
-  ProtonomeRoundedViews: cceec203fb0ebc909e295429209b15144ab2996d
+  ProtonomeAudioKitControls: e3b037ab4ef52f23d157a8ea215f97323d2bac40
+  ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: e801b501cd9de6a77f5edd79e10ef9942f31e22a
+PODFILE CHECKSUM: e4136eda2525fe37040169768545d2b26356c13f
 
 COCOAPODS: 1.1.0.rc.2

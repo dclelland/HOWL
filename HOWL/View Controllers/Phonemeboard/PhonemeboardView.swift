@@ -50,10 +50,12 @@ import ProtonomeAudioKitControls
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         
         if (self.isSelected) {
-            context?.setFillColor(trailPathColor.cgColor)
+            context.setFillColor(trailPathColor.cgColor)
             trailPath.fill()
         }
     }
@@ -73,7 +75,7 @@ import ProtonomeAudioKitControls
     }
     
     private var trailPathColor: UIColor {
-        return UIColor.protonome_lightColor(withHue: colorHue, saturation: colorSaturation)
+        return .protonomeLight(hue: colorHue, saturation: colorSaturation)
     }
     
     private var trailLocation: CGPoint? {

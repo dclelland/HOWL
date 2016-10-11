@@ -4,12 +4,6 @@ Degrad is a microlibrary for working with angles. It provides functions from con
 
 Degrad works by implementing `Degradable` and `Polrectable` protocols on `Float`, `Double`, and `CGFloat`.
 
-### Versions
-
-#### 0.2.0
-
-Added `Polrectable` protocol and `clamp()` function.
-
 ### Examples
 
 ✓ Terse unit syntax
@@ -19,7 +13,7 @@ Added `Polrectable` protocol and `clamp()` function.
 180.degrees
 // 3.1415926535897931
 
-π.radians
+Float.pi.radians
 // 180
 
 ```
@@ -42,12 +36,9 @@ pol2rec(r: 1, θ: 90°)
 
 ```
 
-✓ Fancy unicode pi constant and degree symbol postfix operator (if you're into that kind of thing)
+✓ Fancy unicode degree symbol postfix operator (if you're into that kind of thing)
 
 ```swift
-
-π
-// 3.1415926535897931
 
 45°
 // 0.78539816339744828
