@@ -6,7 +6,7 @@ PODS:
   - Lerp (2.0.0)
   - MultitouchGestureRecognizer (1.0.0)
   - Parity (1.0.0)
-  - Persistable (0.1.2)
+  - Persistable (1.0.0)
   - ProtonomeAudioKitControls (1.0.0):
     - AudioKit (~> 2.0)
     - Bezzy
@@ -22,7 +22,7 @@ DEPENDENCIES:
   - Bezzy (from `../../Libraries/Bezzy/`)
   - MultitouchGestureRecognizer (~> 1.0)
   - Parity (~> 1.0)
-  - Persistable (from `../../Libraries/Persistable`)
+  - Persistable (~> 1.0)
   - ProtonomeAudioKitControls (from `../../Libraries/ProtonomeAudioKitControls`)
   - ProtonomeRoundedViews (~> 1.0)
   - SnapKit (~> 3.0)
@@ -33,8 +33,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/dclelland/AudioKit/
   Bezzy:
     :path: "../../Libraries/Bezzy/"
-  Persistable:
-    :path: "../../Libraries/Persistable"
   ProtonomeAudioKitControls:
     :path: "../../Libraries/ProtonomeAudioKitControls"
 
@@ -51,11 +49,11 @@ SPEC CHECKSUMS:
   Lerp: fe0fd19edf08a7dab2283a3f250f2c840b6a97aa
   MultitouchGestureRecognizer: 1ff5a5483168cbcbf474f5cf1672765a3f942b39
   Parity: 1a6e22bb3ec32f8bcd3d78e01cc9919062c3bebc
-  Persistable: 1e5ab95cc567d02dffec139a5bdf1e244604d49d
+  Persistable: a01ea48283e7f977ad435a32bd7bfafbb415ba58
   ProtonomeAudioKitControls: e3b037ab4ef52f23d157a8ea215f97323d2bac40
   ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: e4136eda2525fe37040169768545d2b26356c13f
+PODFILE CHECKSUM: 422bc39ba889321984e1411fa6094660190933ea
 
 COCOAPODS: 1.1.0.rc.2

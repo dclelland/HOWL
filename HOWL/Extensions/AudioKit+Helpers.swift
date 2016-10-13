@@ -17,7 +17,7 @@ class InstrumentProperty: AKInstrumentProperty, Persistable {
     
     override var value: Float {
         didSet {
-            setPersistentValue(value)
+            self.persistentValue = value
         }
     }
     
@@ -31,9 +31,9 @@ class InstrumentProperty: AKInstrumentProperty, Persistable {
         
         super.init()
         
-        self.setDefaultPersistentValue(value)
+        self.register(defaultPersistentValue: value)
         
-        self.value = self.persistentValue()
+        self.value = self.persistentValue
         self.initialValue = value
     }
     
