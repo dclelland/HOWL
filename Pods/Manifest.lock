@@ -1,7 +1,7 @@
 PODS:
   - Audiobus (2.3.1)
   - AudioKit (2.3)
-  - Bezzy (0.1.0)
+  - Bezzy (1.0.0)
   - Degrad (1.0.0)
   - Lerp (2.0.0)
   - MultitouchGestureRecognizer (1.0.0)
@@ -19,7 +19,7 @@ PODS:
 DEPENDENCIES:
   - Audiobus (~> 2.3)
   - AudioKit (from `https://github.com/dclelland/AudioKit/`, branch `howl`)
-  - Bezzy (from `../../Libraries/Bezzy/`)
+  - Bezzy (~> 1.0)
   - MultitouchGestureRecognizer (~> 1.0)
   - Parity (~> 1.0)
   - Persistable (~> 1.0)
@@ -31,8 +31,6 @@ EXTERNAL SOURCES:
   AudioKit:
     :branch: howl
     :git: https://github.com/dclelland/AudioKit/
-  Bezzy:
-    :path: "../../Libraries/Bezzy/"
   ProtonomeAudioKitControls:
     :path: "../../Libraries/ProtonomeAudioKitControls"
 
@@ -44,7 +42,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Audiobus: d75ef3f0d625abf3007a147548423e76ca61043d
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
-  Bezzy: e3fc0a79f83d6d46e382ac578d81b234f2f97f90
+  Bezzy: ff253ca2a65f7fe2befda215d5b657cad2fc731b
   Degrad: 5119a3ed5aaab6be286c209386035befd04b2aa5
   Lerp: fe0fd19edf08a7dab2283a3f250f2c840b6a97aa
   MultitouchGestureRecognizer: 1ff5a5483168cbcbf474f5cf1672765a3f942b39
@@ -54,6 +52,6 @@ SPEC CHECKSUMS:
   ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: 422bc39ba889321984e1411fa6094660190933ea
+PODFILE CHECKSUM: 0a6c9a32b3c2ee6cf7810083d2bc1e783a8970e2
 
 COCOAPODS: 1.1.0.rc.2

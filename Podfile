@@ -5,8 +5,7 @@ use_frameworks!
 
 pod 'Audiobus', '~> 2.3'
 pod 'AudioKit', git: 'https://github.com/dclelland/AudioKit/', branch: 'howl'
-#pod 'Bezzy', '~> 0.1'
-pod 'Bezzy', path: '../../Libraries/Bezzy/'
+pod 'Bezzy', '~> 1.0'
 pod 'MultitouchGestureRecognizer', '~> 1.0'
 pod 'Parity', '~> 1.0'
 pod 'Persistable', '~> 1.0'

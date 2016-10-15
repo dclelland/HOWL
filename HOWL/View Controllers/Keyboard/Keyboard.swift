@@ -102,12 +102,12 @@ class Keyboard {
         let horizontalKeyRadius = 1.0 / CGFloat(width) / 2.0
         let verticalKeyRadius = 1.0 / CGFloat(height) / 2.0
         
-        return UIBezierPath.makePath { make in
-            make.move(x: location.x, y: location.y - verticalKeyRadius)
-            make.line(x: location.x + horizontalKeyRadius, y: location.y)
-            make.line(x: location.x, y: location.y + verticalKeyRadius)
-            make.line(x: location.x - horizontalKeyRadius, y: location.y)
-            make.closed()
+        return UIBezierPath { path in
+            path.add(.move, x: location.x, y: location.y - verticalKeyRadius)
+            path.add(.line, x: location.x + horizontalKeyRadius, y: location.y)
+            path.add(.line, x: location.x, y: location.y + verticalKeyRadius)
+            path.add(.line, x: location.x - horizontalKeyRadius, y: location.y)
+            path.close()
         }
     }
     

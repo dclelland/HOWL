@@ -185,10 +185,10 @@ extension KeyboardViewController: UICollectionViewDataSource {
     // MARK: - Private getters
     
     private func collectionView(_ collectionView: UICollectionView, pathForCellAt indexPath: IndexPath, with key: Key) -> UIBezierPath {
-        return key.path.makePath { make in
-            make.translation(tx: -key.path.bounds.minX, ty: -key.path.bounds.minY)
-            make.scale(sx: collectionView.bounds.width, sy: collectionView.bounds.height)
-            make.translation(tx: collectionView.bounds.minX, ty: collectionView.bounds.minY)
+        return UIBezierPath.make(key.path) { path in
+            path.translate(tx: -key.path.bounds.minX, ty: -key.path.bounds.minY)
+            path.scale(sx: collectionView.bounds.width, sy: collectionView.bounds.height)
+            path.translate(tx: collectionView.bounds.minX, ty: collectionView.bounds.minY)
         }
     }
     
@@ -221,9 +221,9 @@ extension KeyboardViewController: KeyboardViewLayoutDelegate {
             return nil
         }
         
-        return key.path.makePath { make in
-            make.scale(sx: collectionView.bounds.width, sy: collectionView.bounds.height)
-            make.translation(tx: collectionView.bounds.minX, ty: collectionView.bounds.minY)
+        return UIBezierPath.make(key.path) { path in
+            path.scale(sx: collectionView.bounds.width, sy: collectionView.bounds.height)
+            path.translate(tx: collectionView.bounds.minX, ty: collectionView.bounds.minY)
         }
     }
     
