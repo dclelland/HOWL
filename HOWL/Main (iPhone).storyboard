@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G12a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Howl View Controller-->
@@ -21,19 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-ao-YKj">
-                                <rect key="frame" x="285" y="0.0" width="283" height="320"/>
                                 <connections>
                                     <segue destination="myQ-Pk-G9S" kind="embed" id="1VL-gJ-j8w"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <connections>
                                     <segue destination="d4d-kx-v1a" kind="embed" id="cQk-4m-Tok"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zJH-ao-YKj" secondAttribute="bottom" id="8wC-fd-Wz1"/>
                             <constraint firstItem="kQc-ji-xuA" firstAttribute="leading" secondItem="zJH-ao-YKj" secondAttribute="trailing" id="BO8-nR-G0j"/>
@@ -66,8 +65,6 @@
                         </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="leftView" destination="kQc-ji-xuA" id="p0a-Ia-zqj"/>
                         <outlet property="rightView" destination="zJH-ao-YKj" id="v0P-Ju-FOI"/>
@@ -75,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419.5" y="343.5"/>
+            <point key="canvasLocation" x="417" y="-137"/>
         </scene>
         <!--Flip View Controller-->
         <scene sceneID="wmJ-gX-j4K">
@@ -90,19 +87,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-7c-ibJ">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <connections>
                                     <segue destination="uAc-3B-Yd9" kind="embed" id="xj2-iI-9LT"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Kk-9ow">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <connections>
                                     <segue destination="wpy-HA-xtF" kind="embed" id="hM8-1V-EWp"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="liF-Kk-9ow" firstAttribute="leading" secondItem="w0j-da-hrA" secondAttribute="leading" id="0fU-6A-Xws"/>
                             <constraint firstItem="HZ2-7c-ibJ" firstAttribute="leading" secondItem="w0j-da-hrA" secondAttribute="leading" id="NQk-lm-hqb"/>
@@ -121,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iO-8Y-NdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.5" y="937"/>
+            <point key="canvasLocation" x="40" y="831"/>
         </scene>
         <!--Keyboard View Controller-->
         <scene sceneID="g7H-pn-2QT">
@@ -136,10 +131,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-c1-TQk" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ML-9Q-mzI" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="2" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="G07-s6-a71"/>
                                             <constraint firstAttribute="width" secondItem="2ML-9Q-mzI" secondAttribute="height" multiplier="1:1" id="Ifc-M4-9Na"/>
@@ -147,20 +140,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="FLIP">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -174,41 +167,39 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-t5-lhc" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="value" red="0.19913792610168457" green="0.19913792610168457" blue="0.19913792610168457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-rB-Cz2" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="CjY-15-t5e"/>
                                             <constraint firstAttribute="width" secondItem="SSe-rB-Cz2" secondAttribute="height" multiplier="1:1" id="zBJ-gX-czQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="HOLD">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -269,7 +260,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -307,11 +298,9 @@
                                 </variation>
                             </view>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yl-Bj-Pmz" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-UY-uHE">
-                                        <rect key="frame" x="2" y="2" width="275" height="263"/>
-                                        <color key="backgroundColor" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.19913792610168457" green="0.19913792610168457" blue="0.19913792610168457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewLayout key="collectionViewLayout" id="szr-ei-E8F" customClass="KeyboardViewLayout" customModule="HOWL" customModuleProvider="target"/>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="keyboardViewCell" id="4NR-Ly-4rB" customClass="KeyboardViewCell" customModule="HOWL" customModuleProvider="target">
@@ -320,7 +309,6 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </collectionViewCell>
                                         </cells>
@@ -352,7 +340,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -382,7 +370,7 @@
                                 <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="value" red="0.29960379004478455" green="0.29960379004478455" blue="0.29960379004478455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -403,7 +391,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="615.25" y="1521.5"/>
+            <point key="canvasLocation" x="608" y="1826"/>
         </scene>
         <!--Phonemeboard View Controller-->
         <scene sceneID="7u9-vE-Kpy">
@@ -418,10 +406,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-wf-fn7" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-oS-ACy" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="2" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gIf-oS-ACy" secondAttribute="height" multiplier="1:1" id="X35-ze-7vT"/>
                                             <constraint firstAttribute="width" secondItem="gIf-oS-ACy" secondAttribute="height" multiplier="1:1" id="ddo-gE-JJP"/>
@@ -429,20 +415,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="FLIP">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -456,21 +442,19 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOWELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83F-Vg-V8k" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="value" red="0.19913792610168457" green="0.19913792610168457" blue="0.19913792610168457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cym-3r-t5S" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="QEs-IQ-gq5"/>
                                             <constraint firstAttribute="width" secondItem="Cym-3r-t5S" secondAttribute="height" multiplier="1:1" id="WSs-Ae-DN0"/>
@@ -478,20 +462,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="HOLD">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -559,19 +543,11 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="0Jr-q1-Hlk"/>
-                                        <exclude reference="MhM-Pi-pDX"/>
-                                        <exclude reference="Zfd-WX-kii"/>
-                                        <exclude reference="beG-1i-9QB"/>
-                                        <exclude reference="flk-ns-p1j"/>
-                                        <exclude reference="lgw-qC-IdP"/>
-                                        <exclude reference="qyX-0g-Wsu"/>
-                                        <exclude reference="tkc-Nq-in0"/>
                                         <exclude reference="4ju-O9-gcf"/>
                                         <exclude reference="4v1-yD-Hsq"/>
                                         <exclude reference="HxX-tE-zHS"/>
@@ -599,42 +575,43 @@
                                         <exclude reference="psv-2z-HLK"/>
                                         <exclude reference="uOH-mW-SjK"/>
                                         <exclude reference="zUr-Wr-qNR"/>
+                                        <exclude reference="0Jr-q1-Hlk"/>
+                                        <exclude reference="MhM-Pi-pDX"/>
+                                        <exclude reference="Zfd-WX-kii"/>
+                                        <exclude reference="beG-1i-9QB"/>
+                                        <exclude reference="flk-ns-p1j"/>
+                                        <exclude reference="lgw-qC-IdP"/>
+                                        <exclude reference="qyX-0g-Wsu"/>
+                                        <exclude reference="tkc-Nq-in0"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-28-UfI" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="51" width="279" height="267"/>
                                 <subviews>
                                     <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-R2-KFV" customClass="PhonemeboardView" customModule="HOWL" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="275" height="263"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="def-O9-lgZ">
-                                                <rect key="frame" x="65" y="225" width="6" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypf-Kj-Yaf">
-                                                <rect key="frame" x="245" y="92" width="18" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jq-jy-rH4">
-                                                <rect key="frame" x="199" y="225" width="15" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h64-U2-xGg">
-                                                <rect key="frame" x="130" y="12" width="15" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-sL-RjK">
-                                                <rect key="frame" x="12" y="92" width="12" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="Dv1-sL-RjK" firstAttribute="leading" secondItem="nKs-R2-KFV" secondAttribute="leadingMargin" id="0hg-rB-bIX"/>
@@ -674,15 +651,15 @@
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="RAy-GI-zVI"/>
+                                                <exclude reference="Zyn-m8-hCf"/>
+                                                <exclude reference="jkx-HJ-YNu"/>
                                                 <exclude reference="Jtm-rC-lVN"/>
+                                                <exclude reference="QAW-y6-HUh"/>
                                                 <exclude reference="GgL-8T-LL7"/>
                                                 <exclude reference="Ovo-p6-tVX"/>
                                                 <exclude reference="Zdc-Ku-YA1"/>
                                                 <exclude reference="ruf-Nr-FcM"/>
-                                                <exclude reference="QAW-y6-HUh"/>
-                                                <exclude reference="RAy-GI-zVI"/>
-                                                <exclude reference="Zyn-m8-hCf"/>
-                                                <exclude reference="jkx-HJ-YNu"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -706,7 +683,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -733,7 +710,7 @@
                                 <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="value" red="0.29960379004478455" green="0.29960379004478455" blue="0.29960379004478455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -754,7 +731,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-142.75" y="1521.5"/>
+            <point key="canvasLocation" x="-149" y="1826"/>
         </scene>
         <!--Vocoder View Controller-->
         <scene sceneID="DMg-X1-Ba8">
@@ -769,10 +746,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-Tg-ZCd" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8G-z2-kPq" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="2" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="b8G-z2-kPq" secondAttribute="height" multiplier="1:1" id="6pk-gX-6Uj"/>
                                             <constraint firstAttribute="width" secondItem="b8G-z2-kPq" secondAttribute="height" multiplier="1:1" id="Kjy-nP-fqA"/>
@@ -780,20 +755,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="FLIP">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -807,21 +782,19 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4At-Bv-iWs" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="value" red="0.19913792610168457" green="0.19913792610168457" blue="0.19913792610168457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-og-Bf3" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1vE-og-Bf3" secondAttribute="height" multiplier="1:1" id="OFh-CG-Uvv"/>
                                             <constraint firstAttribute="width" secondItem="1vE-og-Bf3" secondAttribute="height" multiplier="1:1" id="VEt-hP-Yze"/>
@@ -829,20 +802,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="RESET">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -910,32 +883,11 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Gsf-Vf-pM9"/>
-                                        <exclude reference="J2B-ho-XHT"/>
-                                        <exclude reference="KgA-rT-AhD"/>
-                                        <exclude reference="UZH-zI-dOG"/>
-                                        <exclude reference="g1f-He-Yza"/>
-                                        <exclude reference="nu5-af-aYo"/>
-                                        <exclude reference="q1e-vn-fhX"/>
-                                        <exclude reference="vAO-mC-EeC"/>
-                                        <exclude reference="49L-q1-gT0"/>
-                                        <exclude reference="Bie-OI-nka"/>
-                                        <exclude reference="CLj-jT-RD7"/>
-                                        <exclude reference="Odb-Wq-XbV"/>
-                                        <exclude reference="Qd5-J2-c2F"/>
-                                        <exclude reference="Qx7-4V-jnB"/>
-                                        <exclude reference="aUh-mH-8Nz"/>
-                                        <exclude reference="jB6-ld-NzE"/>
-                                        <exclude reference="oOY-8Y-0uz"/>
-                                        <exclude reference="oq4-uo-yTf"/>
-                                        <exclude reference="smb-fy-bzb"/>
-                                        <exclude reference="uIm-dv-qRG"/>
-                                        <exclude reference="wDf-9f-sbg"/>
                                         <exclude reference="1ed-dY-R9U"/>
                                         <exclude reference="3V1-kn-iRj"/>
                                         <exclude reference="3do-WM-ggO"/>
@@ -950,23 +902,41 @@
                                         <exclude reference="iaL-9o-CAj"/>
                                         <exclude reference="ob0-mu-Df1"/>
                                         <exclude reference="wvQ-3i-6f5"/>
+                                        <exclude reference="49L-q1-gT0"/>
+                                        <exclude reference="Bie-OI-nka"/>
+                                        <exclude reference="CLj-jT-RD7"/>
+                                        <exclude reference="Odb-Wq-XbV"/>
+                                        <exclude reference="Qd5-J2-c2F"/>
+                                        <exclude reference="Qx7-4V-jnB"/>
+                                        <exclude reference="aUh-mH-8Nz"/>
+                                        <exclude reference="jB6-ld-NzE"/>
+                                        <exclude reference="oOY-8Y-0uz"/>
+                                        <exclude reference="oq4-uo-yTf"/>
+                                        <exclude reference="smb-fy-bzb"/>
+                                        <exclude reference="uIm-dv-qRG"/>
+                                        <exclude reference="wDf-9f-sbg"/>
+                                        <exclude reference="Gsf-Vf-pM9"/>
+                                        <exclude reference="J2B-ho-XHT"/>
+                                        <exclude reference="KgA-rT-AhD"/>
+                                        <exclude reference="UZH-zI-dOG"/>
+                                        <exclude reference="g1f-He-Yza"/>
+                                        <exclude reference="nu5-af-aYo"/>
+                                        <exclude reference="q1e-vn-fhX"/>
+                                        <exclude reference="vAO-mC-EeC"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-JQ-3WD" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="51" width="139" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-kQ-1ch">
-                                        <rect key="frame" x="2" y="88" width="135" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="YOj-NR-KxD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-ss-N7k" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
@@ -991,7 +961,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Za-K4d" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="67" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
@@ -1043,36 +1012,33 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="RfX-95-L14"/>
-                                        <exclude reference="ddR-ev-XFY"/>
-                                        <exclude reference="50o-aM-PnC"/>
-                                        <exclude reference="5fE-D8-wlW"/>
-                                        <exclude reference="RMw-fA-Ihw"/>
                                         <exclude reference="czS-cO-1ee"/>
                                         <exclude reference="jse-sw-ot7"/>
                                         <exclude reference="rr9-g8-Gmg"/>
+                                        <exclude reference="50o-aM-PnC"/>
+                                        <exclude reference="5fE-D8-wlW"/>
+                                        <exclude reference="RMw-fA-Ihw"/>
+                                        <exclude reference="RfX-95-L14"/>
+                                        <exclude reference="ddR-ev-XFY"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xo-cy-vcA" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="143" y="51" width="138" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqB-lm-a03">
-                                        <rect key="frame" x="2" y="88" width="134" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="4Eh-KI-dO5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhf-mw-e9r" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bitcrush"/>
@@ -1097,7 +1063,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDj-7E-p9O" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="66" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1144,7 +1109,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -1156,10 +1121,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Y-vc-Pea" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="159" width="139" height="159"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-hF-13a" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1184,7 +1147,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woz-pj-zhQ" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="67" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1212,16 +1174,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-oF-p7F">
-                                        <rect key="frame" x="2" y="141" width="135" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="mqc-4n-a69"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5S-54-85e" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="89" width="135" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P5S-54-85e" secondAttribute="height" multiplier="8:3" id="hRz-MC-GAS"/>
                                         </constraints>
@@ -1296,7 +1256,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -1306,12 +1266,6 @@
                                         <exclude reference="QZj-Hy-fmN"/>
                                         <exclude reference="jjq-vX-bef"/>
                                         <exclude reference="s3e-uI-gUr"/>
-                                        <exclude reference="7Z3-Cr-X3N"/>
-                                        <exclude reference="DeZ-bW-NeY"/>
-                                        <exclude reference="H3a-jC-eYN"/>
-                                        <exclude reference="NL8-jz-8in"/>
-                                        <exclude reference="Nz4-Jc-Ixj"/>
-                                        <exclude reference="ngS-OE-IE2"/>
                                         <exclude reference="57m-Sn-t6j"/>
                                         <exclude reference="7d1-ca-3lp"/>
                                         <exclude reference="LMy-pa-1gW"/>
@@ -1321,23 +1275,26 @@
                                         <exclude reference="GIi-UD-qtf"/>
                                         <exclude reference="ehg-0d-rbe"/>
                                         <exclude reference="epZ-Y1-RAE"/>
+                                        <exclude reference="7Z3-Cr-X3N"/>
+                                        <exclude reference="DeZ-bW-NeY"/>
+                                        <exclude reference="H3a-jC-eYN"/>
+                                        <exclude reference="NL8-jz-8in"/>
+                                        <exclude reference="Nz4-Jc-Ixj"/>
+                                        <exclude reference="ngS-OE-IE2"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gb-tu-f5p" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="143" y="159" width="138" height="159"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXS-vF-35R">
-                                        <rect key="frame" x="2" y="141" width="134" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="gE7-1B-shc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uy-ot-b3b" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1362,7 +1319,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXE-P5-cU6" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1390,7 +1346,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lE-v4-OiD" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="89" width="134" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2lE-v4-OiD" secondAttribute="height" multiplier="8:3" id="KWx-0Q-uHw"/>
                                         </constraints>
@@ -1461,7 +1416,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -1469,9 +1424,6 @@
                                         <exclude reference="FgD-l3-OSG"/>
                                         <exclude reference="Mg3-dW-rJv"/>
                                         <exclude reference="yQU-Py-ufL"/>
-                                        <exclude reference="9JN-Mo-n4Q"/>
-                                        <exclude reference="JwD-a4-Iqw"/>
-                                        <exclude reference="cAm-hK-uSL"/>
                                         <exclude reference="Is9-Lr-8SF"/>
                                         <exclude reference="JLe-Vn-fKb"/>
                                         <exclude reference="f3C-iK-uwW"/>
@@ -1481,6 +1433,9 @@
                                         <exclude reference="omT-1Z-ThN"/>
                                         <exclude reference="ros-QZ-Bsj"/>
                                         <exclude reference="zFp-fq-uPc"/>
+                                        <exclude reference="9JN-Mo-n4Q"/>
+                                        <exclude reference="JwD-a4-Iqw"/>
+                                        <exclude reference="cAm-hK-uSL"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1524,23 +1479,23 @@
                                 <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="value" red="0.29960379004478455" green="0.29960379004478455" blue="0.29960379004478455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="dr9-Ho-PU6"/>
+                                <exclude reference="Usa-oZ-Oz9"/>
                                 <exclude reference="TRc-SX-3gI"/>
                                 <exclude reference="Tnr-Ld-jKz"/>
                                 <exclude reference="c7i-6L-CHK"/>
                                 <exclude reference="pEf-4f-hTs"/>
                                 <exclude reference="wBw-FE-4s1"/>
-                                <exclude reference="dr9-Ho-PU6"/>
                                 <exclude reference="AHl-c0-K5Q"/>
                                 <exclude reference="PcC-z1-uax"/>
                                 <exclude reference="kyx-LR-WXz"/>
                                 <exclude reference="yo1-2m-cs8"/>
                                 <exclude reference="z6k-9j-4Bg"/>
-                                <exclude reference="Usa-oZ-Oz9"/>
                                 <exclude reference="LNe-xn-3OE"/>
                             </mask>
                         </variation>
@@ -1562,7 +1517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oj-bS-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988.5" y="1521"/>
+            <point key="canvasLocation" x="982" y="1826"/>
         </scene>
         <!--Synthesizer View Controller-->
         <scene sceneID="45u-mc-4Nb">
@@ -1577,10 +1532,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdm-qf-yOt" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="2" width="279" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhD-Tv-WFf" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="2" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yhD-Tv-WFf" secondAttribute="height" multiplier="1:1" id="UpX-Db-FzL"/>
                                             <constraint firstAttribute="width" secondItem="yhD-Tv-WFf" secondAttribute="height" multiplier="1:1" id="i4B-7v-H3Z"/>
@@ -1588,20 +1541,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="FLIP">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -1615,21 +1568,19 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-1l-aHO" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="47" y="2" width="185" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" white="0.19913793099999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="value" red="0.19913792610168457" green="0.19913792610168457" blue="0.19913792610168457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-6t-ZK6" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
-                                        <rect key="frame" x="234" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xdU-6t-ZK6" secondAttribute="height" multiplier="1:1" id="L4s-Ql-y8S"/>
                                             <constraint firstAttribute="width" secondItem="xdU-6t-ZK6" secondAttribute="height" multiplier="1:1" id="LAc-3w-7tI"/>
@@ -1637,20 +1588,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="RESET">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.37647058820000001" green="0.50196078430000002" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorHighlighted">
-                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.51372549020000002" green="0.74901960779999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColorSelected">
-                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.62352941179999999" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -1719,19 +1670,11 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="AGy-su-FMs"/>
-                                        <exclude reference="Cfu-Z8-eVg"/>
-                                        <exclude reference="Egz-3F-dam"/>
-                                        <exclude reference="H2d-Gh-NP9"/>
-                                        <exclude reference="PAH-dX-Kwm"/>
-                                        <exclude reference="VT8-in-Pbf"/>
-                                        <exclude reference="wVb-Jg-4vf"/>
-                                        <exclude reference="ysJ-hk-0hi"/>
                                         <exclude reference="1NQ-Kg-bQa"/>
                                         <exclude reference="5Mx-7l-S2W"/>
                                         <exclude reference="BT3-y4-hJw"/>
@@ -1760,14 +1703,20 @@
                                         <exclude reference="a9z-0A-UwN"/>
                                         <exclude reference="dWL-xc-uO5"/>
                                         <exclude reference="g6v-Bz-8rw"/>
+                                        <exclude reference="AGy-su-FMs"/>
+                                        <exclude reference="Cfu-Z8-eVg"/>
+                                        <exclude reference="Egz-3F-dam"/>
+                                        <exclude reference="H2d-Gh-NP9"/>
+                                        <exclude reference="PAH-dX-Kwm"/>
+                                        <exclude reference="VT8-in-Pbf"/>
+                                        <exclude reference="wVb-Jg-4vf"/>
+                                        <exclude reference="ysJ-hk-0hi"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Nj-01a" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="51" width="139" height="106"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-dp-Xy2" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left"/>
@@ -1792,7 +1741,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-iC-Twg" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="67" height="84"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Right"/>
@@ -1817,12 +1765,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-L5-US1">
-                                        <rect key="frame" x="2" y="88" width="135" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="T1K-mO-ZaT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1852,15 +1799,15 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Dhw-Xw-hdo"/>
-                                        <exclude reference="P2x-5a-R2m"/>
                                         <exclude reference="2id-WI-f7u"/>
                                         <exclude reference="mNh-ce-3sn"/>
+                                        <exclude reference="Dhw-Xw-hdo"/>
+                                        <exclude reference="P2x-5a-R2m"/>
                                         <exclude reference="8XS-U2-Tzf"/>
                                         <exclude reference="PfY-Cp-pyh"/>
                                         <exclude reference="Yaj-sI-9Qm"/>
@@ -1868,19 +1815,16 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-Kc-523" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="143" y="51" width="138" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENVELOPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-Ar-m4X">
-                                        <rect key="frame" x="2" y="88" width="134" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="luz-zl-YCh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbD-ux-Zas" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="41"/>
                                         <edgeInsets key="layoutMargins" top="4" left="0.0" bottom="4" right="0.0"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1908,7 +1852,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcf-Zt-879" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="45" width="66" height="41"/>
                                         <edgeInsets key="layoutMargins" top="4" left="0.0" bottom="4" right="0.0"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1933,7 +1876,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exS-OE-TDF" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="45" width="66" height="41"/>
                                         <edgeInsets key="layoutMargins" top="4" left="0.0" bottom="4" right="0.0"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1961,7 +1903,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGD-vf-7Dl" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="66" height="41"/>
                                         <edgeInsets key="layoutMargins" top="4" left="0.0" bottom="4" right="0.0"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -2052,7 +1993,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -2065,12 +2006,6 @@
                                         <exclude reference="p69-ft-eXs"/>
                                         <exclude reference="svf-Bc-dDc"/>
                                         <exclude reference="wqX-ly-Lxf"/>
-                                        <exclude reference="6nA-Cr-cur"/>
-                                        <exclude reference="OVn-KI-Lh5"/>
-                                        <exclude reference="VTf-mj-Qdu"/>
-                                        <exclude reference="Yag-Fj-9jT"/>
-                                        <exclude reference="iWO-gX-nY5"/>
-                                        <exclude reference="orT-Nd-6x6"/>
                                         <exclude reference="2Xm-o3-KxA"/>
                                         <exclude reference="Da4-Nt-jTq"/>
                                         <exclude reference="ZG0-Va-s2e"/>
@@ -2078,12 +2013,6 @@
                                         <exclude reference="ebc-ui-6t3"/>
                                         <exclude reference="g2m-p5-eNo"/>
                                         <exclude reference="hVv-GP-64b"/>
-                                        <exclude reference="Emi-QB-6a8"/>
-                                        <exclude reference="VJn-5R-lGR"/>
-                                        <exclude reference="Xqv-Ld-dif"/>
-                                        <exclude reference="k0u-Bg-k60"/>
-                                        <exclude reference="kEs-D7-O5e"/>
-                                        <exclude reference="vbE-lc-ZYb"/>
                                         <exclude reference="1NW-46-lFv"/>
                                         <exclude reference="E30-I1-tCh"/>
                                         <exclude reference="N74-ub-SQp"/>
@@ -2093,23 +2022,32 @@
                                         <exclude reference="eC9-Bz-LvI"/>
                                         <exclude reference="vOt-K9-Xls"/>
                                         <exclude reference="znV-Na-g6B"/>
+                                        <exclude reference="Emi-QB-6a8"/>
+                                        <exclude reference="VJn-5R-lGR"/>
+                                        <exclude reference="Xqv-Ld-dif"/>
+                                        <exclude reference="k0u-Bg-k60"/>
+                                        <exclude reference="kEs-D7-O5e"/>
+                                        <exclude reference="vbE-lc-ZYb"/>
+                                        <exclude reference="6nA-Cr-cur"/>
+                                        <exclude reference="OVn-KI-Lh5"/>
+                                        <exclude reference="VTf-mj-Qdu"/>
+                                        <exclude reference="Yag-Fj-9jT"/>
+                                        <exclude reference="iWO-gX-nY5"/>
+                                        <exclude reference="orT-Nd-6x6"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-Jy-AMK" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="2" y="159" width="139" height="159"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Lj-sMa">
-                                        <rect key="frame" x="2" y="141" width="135" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="xza-5X-bb2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAW-db-H4s" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="67" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
@@ -2137,7 +2075,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-IL-b65" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
@@ -2162,7 +2099,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJI-tK-vl7" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="89" width="135" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bJI-tK-vl7" secondAttribute="height" multiplier="8:3" id="lk4-mh-MdU"/>
                                         </constraints>
@@ -2244,17 +2180,17 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="4Df-3r-tlc"/>
-                                        <exclude reference="5cY-4v-tZ5"/>
-                                        <exclude reference="Qag-4f-VTG"/>
-                                        <exclude reference="S06-ht-UPB"/>
-                                        <exclude reference="oPm-uQ-gwi"/>
-                                        <exclude reference="ufj-XT-iYn"/>
+                                        <exclude reference="P4U-fo-8Fa"/>
+                                        <exclude reference="Sww-hL-HJN"/>
+                                        <exclude reference="Ug8-Tw-95c"/>
+                                        <exclude reference="Wwn-4G-6qt"/>
+                                        <exclude reference="iaQ-f8-eoe"/>
+                                        <exclude reference="ucV-gx-lmm"/>
                                         <exclude reference="AxZ-Zd-iNR"/>
                                         <exclude reference="I6C-vc-ejk"/>
                                         <exclude reference="OUs-AQ-mk6"/>
@@ -2270,29 +2206,26 @@
                                         <exclude reference="Xlz-W4-9eB"/>
                                         <exclude reference="uio-0K-TxA"/>
                                         <exclude reference="uk5-n7-KgF"/>
-                                        <exclude reference="P4U-fo-8Fa"/>
-                                        <exclude reference="Sww-hL-HJN"/>
-                                        <exclude reference="Ug8-Tw-95c"/>
-                                        <exclude reference="Wwn-4G-6qt"/>
-                                        <exclude reference="iaQ-f8-eoe"/>
-                                        <exclude reference="ucV-gx-lmm"/>
+                                        <exclude reference="4Df-3r-tlc"/>
+                                        <exclude reference="5cY-4v-tZ5"/>
+                                        <exclude reference="Qag-4f-VTG"/>
+                                        <exclude reference="S06-ht-UPB"/>
+                                        <exclude reference="oPm-uQ-gwi"/>
+                                        <exclude reference="ufj-XT-iYn"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JnH-zQ-qQq" customClass="RoundedView" customModule="ProtonomeRoundedViews">
-                                <rect key="frame" x="143" y="159" width="138" height="159"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREMOLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFg-2S-u4g">
-                                        <rect key="frame" x="2" y="141" width="134" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="095-Xr-rge"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvJ-cP-6yI" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="70" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
@@ -2320,7 +2253,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nZ-au-PHp" customClass="DialControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="2" width="66" height="85"/>
                                         <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
@@ -2345,7 +2277,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-vh-6yj" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
-                                        <rect key="frame" x="2" y="89" width="134" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="B5Y-vh-6yj" secondAttribute="height" multiplier="8:3" id="t8F-xK-Y1V"/>
                                         </constraints>
@@ -2428,7 +2359,7 @@
                                         <real key="value" value="4.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -2439,13 +2370,6 @@
                                         <exclude reference="c4R-FB-1Qg"/>
                                         <exclude reference="fGB-KO-0mP"/>
                                         <exclude reference="sMm-0T-JGP"/>
-                                        <exclude reference="0VH-1W-JHA"/>
-                                        <exclude reference="51u-hB-1cT"/>
-                                        <exclude reference="YAW-r7-vVi"/>
-                                        <exclude reference="ZSS-HG-55Y"/>
-                                        <exclude reference="miX-Ui-dLs"/>
-                                        <exclude reference="ogp-ld-A2H"/>
-                                        <exclude reference="pEX-5R-PXJ"/>
                                         <exclude reference="02v-6Z-Vyp"/>
                                         <exclude reference="Ent-g3-SRK"/>
                                         <exclude reference="GSL-zl-hWA"/>
@@ -2461,6 +2385,13 @@
                                         <exclude reference="Zbt-k2-cZu"/>
                                         <exclude reference="tsW-2u-n2X"/>
                                         <exclude reference="y9W-Eu-rEu"/>
+                                        <exclude reference="0VH-1W-JHA"/>
+                                        <exclude reference="51u-hB-1cT"/>
+                                        <exclude reference="YAW-r7-vVi"/>
+                                        <exclude reference="ZSS-HG-55Y"/>
+                                        <exclude reference="miX-Ui-dLs"/>
+                                        <exclude reference="ogp-ld-A2H"/>
+                                        <exclude reference="pEX-5R-PXJ"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -2508,7 +2439,7 @@
                                 <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                <color key="value" white="0.29960380469999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="value" red="0.29960379004478455" green="0.29960379004478455" blue="0.29960379004478455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
@@ -2551,7 +2482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAT-61-qeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238.5" y="1521"/>
+            <point key="canvasLocation" x="232" y="1826"/>
         </scene>
         <!--Flip View Controller-->
         <scene sceneID="bnJ-xd-vn6">
@@ -2566,19 +2497,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bg-BI-Z7d">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <connections>
                                     <segue destination="5Oq-Ld-xFp" kind="embed" id="G59-vD-cX4"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-tP-97e">
-                                <rect key="frame" x="0.0" y="0.0" width="283" height="320"/>
                                 <connections>
                                     <segue destination="9J8-TP-oCq" kind="embed" id="GMD-aj-Uh2"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6bg-BI-Z7d" firstAttribute="leading" secondItem="LCo-cT-fPi" secondAttribute="leading" id="12v-KR-1vg"/>
                             <constraint firstItem="ADu-uJ-6mZ" firstAttribute="top" secondItem="lLi-tP-97e" secondAttribute="bottom" id="40Y-dc-D04"/>
@@ -2597,7 +2526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kK-sn-ae9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801.5" y="937"/>
+            <point key="canvasLocation" x="793" y="831"/>
         </scene>
     </scenes>
 </document>
