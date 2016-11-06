@@ -1,6 +1,6 @@
 PODS:
   - Audiobus (2.3.1)
-  - AudioKit (2.3)
+  - AudioKit (3.4.3)
   - Bezzy (1.0.0)
   - Degrad (1.0.0)
   - Lerp (2.0.0)
@@ -8,7 +8,7 @@ PODS:
   - Parity (1.0.0)
   - Persistable (1.0.0)
   - ProtonomeAudioKitControls (1.0.0):
-    - AudioKit (~> 2.0)
+    - AudioKit (~> 3.4)
     - Bezzy (~> 1.0)
     - Degrad (~> 1.0)
     - Lerp (~> 2.0)
@@ -18,38 +18,32 @@ PODS:
 
 DEPENDENCIES:
   - Audiobus (~> 2.3)
-  - AudioKit (from `https://github.com/dclelland/AudioKit/`, branch `howl`)
+  - AudioKit (~> 3.4)
   - Bezzy (~> 1.0)
   - MultitouchGestureRecognizer (~> 1.0)
   - Parity (~> 1.0)
   - Persistable (~> 1.0)
-  - ProtonomeAudioKitControls (~> 1.0)
+  - ProtonomeAudioKitControls (from `../../Libraries/ProtonomeAudioKitControls`)
   - ProtonomeRoundedViews (~> 1.0)
   - SnapKit (~> 3.0)
 
 EXTERNAL SOURCES:
-  AudioKit:
-    :branch: howl
-    :git: https://github.com/dclelland/AudioKit/
-
-CHECKOUT OPTIONS:
-  AudioKit:
-    :commit: aca9b73755df0beb488439ddd7ef36fe912bcb9c
-    :git: https://github.com/dclelland/AudioKit/
+  ProtonomeAudioKitControls:
+    :path: "../../Libraries/ProtonomeAudioKitControls"
 
 SPEC CHECKSUMS:
   Audiobus: d75ef3f0d625abf3007a147548423e76ca61043d
-  AudioKit: 393be71739265448039ef268f3582dee82783b0d
+  AudioKit: 88e8befa730f8c8d9a1c67446c823ea6f37cc54b
   Bezzy: ff253ca2a65f7fe2befda215d5b657cad2fc731b
   Degrad: 5119a3ed5aaab6be286c209386035befd04b2aa5
   Lerp: fe0fd19edf08a7dab2283a3f250f2c840b6a97aa
   MultitouchGestureRecognizer: 1ff5a5483168cbcbf474f5cf1672765a3f942b39
   Parity: 1a6e22bb3ec32f8bcd3d78e01cc9919062c3bebc
   Persistable: a01ea48283e7f977ad435a32bd7bfafbb415ba58
-  ProtonomeAudioKitControls: 61787ec5c47cc605c0c07ccdc5422a908a23aa7a
+  ProtonomeAudioKitControls: a1b36617b106a2ce50bf63e313213ddd2d843eea
   ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: 36f45e31456737b3e6d0c7168fb02a436f2b0b7b
+PODFILE CHECKSUM: eca9e8436e7baa7e411fff43a79730a045b0820c
 
 COCOAPODS: 1.1.0.rc.2
