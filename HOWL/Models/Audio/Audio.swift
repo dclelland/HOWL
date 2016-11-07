@@ -2,72 +2,49 @@
 //  Audio.swift
 //  HOWL
 //
-//  Created by Daniel Clelland on 15/11/15.
-//  Copyright © 2015 Daniel Clelland. All rights reserved.
+//  Created by Daniel Clelland on 3/07/16.
+//  Copyright © 2016 Daniel Clelland. All rights reserved.
 //
 
 import AudioKit
 
 class Audio {
     
-    // MARK: Client
+    static let client = Audio()
     
-    static var client: Audio?
+    let synthesizer: Synthesizer
+    let vocoder: Vocoder
+    let master: Master
     
-    // MARK: Actions
+    init() {
+        self.synthesizer = Synthesizer()
+        
+        let oscillator = AKOscillator(waveform: AKTable(.sawtooth, size: 2048))
+        oscillator.amplitude = 0.25
+        oscillator.frequency = 120.0
+        oscillator.start()
+        
+        self.vocoder = Vocoder(withInput: oscillator)
+//        self.master = Master(withInput: self.vocoder)
+        self.master = Master(withInput: oscillator)
+        
+        AudioKit.output = self.master
+    }
     
     static let didStartNotification = NSNotification.Name("AudioDidStartNotification")
     
-    static func start() {
-        guard AKManager.shared().isRunning == false else {
-            return
-        }
+    func start() {
+        AudioKit.start()
         
-        client = Audio()
-        
-        NotificationCenter.default.post(name: didStartNotification, object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: Audio.didStartNotification, object: nil, userInfo: nil)
     }
     
     static let didStopNotification = NSNotification.Name("AudioDidStopNotification")
     
-    static func stop() {
-        guard AKManager.shared().isRunning == true else {
-            return
-        }
+    func stop() {
+        AudioKit.stop()
         
-        client = nil
-        
-        AKManager.shared().stop()
-        AKManager.shared().resetOrchestra()
-        
-        NotificationCenter.default.post(name: didStopNotification, object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: Audio.didStopNotification, object: nil, userInfo: nil)
     }
     
-    // MARK: Initialization
-    
-    var synthesizer: Synthesizer
-    var vocoder: Vocoder
-    var master: Master
-    
-    init() {
-        synthesizer = Synthesizer()
-        vocoder = Vocoder(input: synthesizer.output)
-        master = Master(input: vocoder.output)
-        
-        AKOrchestra.reset()
-        AKOrchestra.add(synthesizer)
-        AKOrchestra.add(vocoder)
-        AKOrchestra.add(master)
-        
-        synthesizer.start()
-        vocoder.start()
-        master.start()
-    }
-    
-    deinit {
-        synthesizer.stop()
-        vocoder.stop()
-        master.stop()
-    }
-
 }

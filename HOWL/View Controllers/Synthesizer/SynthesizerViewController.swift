@@ -29,7 +29,7 @@ class SynthesizerViewController: UIViewController {
             keyboardLeftIntervalControl?.onTouchUp = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
-            keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.value)
+            keyboardLeftIntervalControl?.value = Double(Settings.keyboardLeftInterval.value)
         }
     }
     
@@ -47,51 +47,51 @@ class SynthesizerViewController: UIViewController {
             keyboardRightIntervalControl?.onTouchUp = {
                 self.keyboardViewController?.mode = self.keyboardViewControllerMode
             }
-            keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.value)
+            keyboardRightIntervalControl?.value = Double(Settings.keyboardRightInterval.value)
         }
     }
     
     @IBOutlet weak var envelopeAttackControl: AudioControl? {
         didSet {
-            envelopeAttackControl?.value = Audio.client!.synthesizer.envelopeAttack.value
+            envelopeAttackControl?.value = Audio.client.synthesizer.envelopeAttack.value
             envelopeAttackControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.envelopeAttack.value = value
+                Audio.client.synthesizer.envelopeAttack.value = value
             }
         }
     }
     
     @IBOutlet weak var envelopeDecayControl: AudioControl? {
         didSet {
-            envelopeDecayControl?.value = Audio.client!.synthesizer.envelopeDecay.value
+            envelopeDecayControl?.value = Audio.client.synthesizer.envelopeDecay.value
             envelopeDecayControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.envelopeDecay.value = value
+                Audio.client.synthesizer.envelopeDecay.value = value
             }
         }
     }
     
     @IBOutlet weak var envelopeSustainControl: AudioControl? {
         didSet {
-            envelopeSustainControl?.value = Audio.client!.synthesizer.envelopeSustain.value
+            envelopeSustainControl?.value = Audio.client.synthesizer.envelopeSustain.value
             envelopeSustainControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.envelopeSustain.value = value
+                Audio.client.synthesizer.envelopeSustain.value = value
             }
         }
     }
     
     @IBOutlet weak var envelopeReleaseControl: AudioControl? {
         didSet {
-            envelopeReleaseControl?.value = Audio.client!.synthesizer.envelopeRelease.value
+            envelopeReleaseControl?.value = Audio.client.synthesizer.envelopeRelease.value
             envelopeReleaseControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.envelopeRelease.value = value
+                Audio.client.synthesizer.envelopeRelease.value = value
             }
         }
     }
     
     @IBOutlet weak var vibratoWaveformControl: AudioControl? {
         didSet {
-            vibratoWaveformControl?.value = Audio.client!.synthesizer.vibratoWaveform.value
+            vibratoWaveformControl?.value = Audio.client.synthesizer.vibratoWaveform.value
             vibratoWaveformControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.vibratoWaveform.value = value
+                Audio.client.synthesizer.vibratoWaveform.value = value
                 self.keyboardViewController?.reloadSynthesizer()
             }
         }
@@ -99,27 +99,27 @@ class SynthesizerViewController: UIViewController {
     
     @IBOutlet weak var vibratoDepthControl: AudioControl? {
         didSet {
-            vibratoDepthControl?.value = Audio.client!.synthesizer.vibratoDepth.value
+            vibratoDepthControl?.value = Audio.client.synthesizer.vibratoDepth.value
             vibratoDepthControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.vibratoDepth.value = value
+                Audio.client.synthesizer.vibratoDepth.value = value
             }
         }
     }
     
     @IBOutlet weak var vibratoRateControl: AudioControl? {
         didSet {
-            vibratoRateControl?.value = Audio.client!.synthesizer.vibratoRate.value
+            vibratoRateControl?.value = Audio.client.synthesizer.vibratoRate.value
             vibratoRateControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.vibratoRate.value = value
+                Audio.client.synthesizer.vibratoRate.value = value
             }
         }
     }
     
     @IBOutlet weak var tremoloWaveformControl: AudioControl? {
         didSet {
-            tremoloWaveformControl?.value = Audio.client!.synthesizer.tremoloWaveform.value
+            tremoloWaveformControl?.value = Audio.client.synthesizer.tremoloWaveform.value
             tremoloWaveformControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.tremoloWaveform.value = value
+                Audio.client.synthesizer.tremoloWaveform.value = value
                 self.keyboardViewController?.reloadSynthesizer()
             }
         }
@@ -127,18 +127,18 @@ class SynthesizerViewController: UIViewController {
     
     @IBOutlet weak var tremoloDepthControl: AudioControl? {
         didSet {
-            tremoloDepthControl?.value = Audio.client!.synthesizer.tremoloDepth.value
+            tremoloDepthControl?.value = Audio.client.synthesizer.tremoloDepth.value
             tremoloDepthControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.tremoloDepth.value = value
+                Audio.client.synthesizer.tremoloDepth.value = value
             }
         }
     }
     
     @IBOutlet weak var tremoloRateControl: AudioControl? {
         didSet {
-            tremoloRateControl?.value = Audio.client!.synthesizer.tremoloRate.value
+            tremoloRateControl?.value = Audio.client.synthesizer.tremoloRate.value
             tremoloRateControl?.onChangeValue = { value in
-                Audio.client?.synthesizer.tremoloRate.value = value
+                Audio.client.synthesizer.tremoloRate.value = value
             }
         }
     }
@@ -150,21 +150,21 @@ class SynthesizerViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ button: UIButton) {
-        keyboardLeftIntervalControl?.value = Float(Settings.keyboardLeftInterval.defaultValue)
-        keyboardRightIntervalControl?.value = Float(Settings.keyboardRightInterval.defaultValue)
+        keyboardLeftIntervalControl?.value = Double(Settings.keyboardLeftInterval.defaultValue)
+        keyboardRightIntervalControl?.value = Double(Settings.keyboardRightInterval.defaultValue)
         
-        envelopeAttackControl?.value = Audio.client!.synthesizer.envelopeAttack.defaultValue
-        envelopeDecayControl?.value = Audio.client!.synthesizer.envelopeDecay.defaultValue
-        envelopeSustainControl?.value = Audio.client!.synthesizer.envelopeSustain.defaultValue
-        envelopeReleaseControl?.value = Audio.client!.synthesizer.envelopeRelease.defaultValue
+        envelopeAttackControl?.value = Audio.client.synthesizer.envelopeAttack.defaultValue
+        envelopeDecayControl?.value = Audio.client.synthesizer.envelopeDecay.defaultValue
+        envelopeSustainControl?.value = Audio.client.synthesizer.envelopeSustain.defaultValue
+        envelopeReleaseControl?.value = Audio.client.synthesizer.envelopeRelease.defaultValue
         
-        vibratoWaveformControl?.value = Audio.client!.synthesizer.vibratoWaveform.defaultValue
-        vibratoDepthControl?.value = Audio.client!.synthesizer.vibratoDepth.defaultValue
-        vibratoRateControl?.value = Audio.client!.synthesizer.vibratoRate.defaultValue
+        vibratoWaveformControl?.value = Audio.client.synthesizer.vibratoWaveform.defaultValue
+        vibratoDepthControl?.value = Audio.client.synthesizer.vibratoDepth.defaultValue
+        vibratoRateControl?.value = Audio.client.synthesizer.vibratoRate.defaultValue
         
-        tremoloWaveformControl?.value = Audio.client!.synthesizer.tremoloWaveform.defaultValue
-        tremoloDepthControl?.value = Audio.client!.synthesizer.tremoloDepth.defaultValue
-        tremoloRateControl?.value = Audio.client!.synthesizer.tremoloRate.defaultValue
+        tremoloWaveformControl?.value = Audio.client.synthesizer.tremoloWaveform.defaultValue
+        tremoloDepthControl?.value = Audio.client.synthesizer.tremoloDepth.defaultValue
+        tremoloRateControl?.value = Audio.client.synthesizer.tremoloRate.defaultValue
     }
     
     // MARK: - Private getters

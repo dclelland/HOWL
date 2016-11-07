@@ -99,10 +99,9 @@ class KeyboardViewController: UIViewController {
     // MARK: - Note actions
     
     func playNote(for touch: UITouch, with key: Key) {
-        if let note = Audio.client?.synthesizer.note(with: key.pitch.frequency) {
-            Audio.client?.synthesizer.play(note)
-            notes[touch] = (key: key, note: note)
-        }
+        let note = Audio.client.synthesizer.note(with: key.pitch.frequency)
+        Audio.client.synthesizer.play(note)
+        notes[touch] = (key: key, note: note)
     }
     
     func updateNote(for touch: UITouch, with key: Key) {
@@ -118,7 +117,7 @@ class KeyboardViewController: UIViewController {
     
     func stopNote(for touch: UITouch) {
         if let note = notes[touch]?.note {
-            Audio.client?.synthesizer.stop(note)
+            Audio.client.synthesizer.stop(note)
             notes[touch] = nil
         }
     }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD6C1C1C022900C2254B /* HowlViewController.swift */; };
-		6500FD761C1C02E500C2254B /* AudioKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */; };
 		650D8BFB1CFBB87600EFD767 /* audiobus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 650D8BFA1CFBB87600EFD767 /* audiobus.txt */; };
 		650D8BFE1CFBF67A00EFD767 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650D8BFD1CFBF67A00EFD767 /* AudioToolbox.framework */; };
 		650D8C001CFBF71800EFD767 /* HOWL.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */; };
@@ -32,7 +31,6 @@
 		65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD31CF1D6D300D49967 /* Assets.xcassets */; };
 		65A64DD61CF2DF1900D49967 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */; };
 		65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4EC9C1CF198C3000D5B16 /* Pitch.swift */; };
-		65EC06CE1D02824600CDDF17 /* Audiobus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC06CB1D02824600CDDF17 /* Audiobus.swift */; };
 		65EC06CF1D02824600CDDF17 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC06CD1D02824600CDDF17 /* Settings.swift */; };
 		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
 		65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B871CD60D10001AB56A /* Main (iPad).storyboard */; };
@@ -43,7 +41,6 @@
 /* Begin PBXFileReference section */
 		34FB5134D43AFB52B2A8E8B0 /* Pods-HOWL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOWL.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOWL/Pods-HOWL.release.xcconfig"; sourceTree = "<group>"; };
 		6500FD6C1C1C022900C2254B /* HowlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowlViewController.swift; sourceTree = "<group>"; };
-		6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioKit+Helpers.swift"; sourceTree = "<group>"; };
 		650D8BFA1CFBB87600EFD767 /* audiobus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = audiobus.txt; sourceTree = "<group>"; };
 		650D8BFD1CFBF67A00EFD767 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HOWL.entitlements; sourceTree = "<group>"; };
@@ -96,7 +93,6 @@
 		6500FD701C1C02E500C2254B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6500FD711C1C02E500C2254B /* AudioKit+Helpers.swift */,
 				6596952D1D1E7EDF00CCFB0E /* AudioUnit+Helpers.swift */,
 			);
 			path = Extensions;
@@ -418,9 +414,7 @@
 				65800FBA1C09D1BF000410CB /* SynthesizerNote.swift in Sources */,
 				657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */,
 				65800FB81C09D1BF000410CB /* Master.swift in Sources */,
-				65EC06CE1D02824600CDDF17 /* Audiobus.swift in Sources */,
 				65EC06CF1D02824600CDDF17 /* Settings.swift in Sources */,
-				6500FD761C1C02E500C2254B /* AudioKit+Helpers.swift in Sources */,
 				6596952E1D1E7EDF00CCFB0E /* AudioUnit+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

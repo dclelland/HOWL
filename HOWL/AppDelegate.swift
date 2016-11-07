@@ -13,26 +13,26 @@ import AudioToolbox
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        AKSettings.shared().audioInputEnabled = true
-        AKSettings.shared().playbackWhileMuted = true
-        AKSettings.shared().defaultToSpeaker = false
+        AKSettings.audioInputEnabled = true
+        AKSettings.playbackWhileMuted = true
+        AKSettings.defaultToSpeaker = false
         
-        Audio.start()
-        Audiobus.start()
+        Audio.client.start()
+//        Audiobus.start()
         
         return true
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-        Audio.start()
+//        Audio.start()
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        if (Audiobus.client?.isConnected == false && Settings.sustained == false) {
-            Audio.stop()
-        }
+//        if (Audiobus.client?.isConnected == false && Settings.sustained == false) {
+//            Audio.stop()
+//        }
     }
 
 }

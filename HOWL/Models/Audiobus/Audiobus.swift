@@ -133,7 +133,7 @@ class Audiobus {
             }
         }
         
-        Audio.client?.vocoder.inputEnabled = isConnectedToInput
+        Audio.client.vocoder.inputEnabled = isConnectedToInput
     }
 
 }

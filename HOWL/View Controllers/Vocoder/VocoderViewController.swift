@@ -17,90 +17,90 @@ class VocoderViewController: UIViewController {
     
     @IBOutlet weak var formantsFrequencyControl: AudioControl? {
         didSet {
-            formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.value
+            formantsFrequencyControl?.value = Audio.client.vocoder.formantsFrequency.value
             formantsFrequencyControl?.onChangeValue = { value in
-                Audio.client?.vocoder.formantsFrequency.value = value
+                Audio.client.vocoder.formantsFrequency.value = value
             }
         }
     }
     
     @IBOutlet weak var formantsBandwidthControl: AudioControl? {
         didSet {
-            formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.value
+            formantsBandwidthControl?.value = Audio.client.vocoder.formantsBandwidth.value
             formantsBandwidthControl?.onChangeValue = { value in
-                Audio.client?.vocoder.formantsBandwidth.value = value
+                Audio.client.vocoder.formantsBandwidth.value = value
             }
         }
     }
     
     @IBOutlet weak var effectsBitcrushControl: AudioControl? {
         didSet {
-            effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.value
+            effectsBitcrushControl?.value = Audio.client.master.effectsBitcrush.value
             effectsBitcrushControl?.onChangeValue = { value in
-                Audio.client?.master.effectsBitcrush.value = value
+                Audio.client.master.effectsBitcrush.value = value
             }
         }
     }
     
     @IBOutlet weak var effectsReverbControl: AudioControl? {
         didSet {
-            effectsReverbControl?.value = Audio.client!.master.effectsReverb.value
+            effectsReverbControl?.value = Audio.client.master.effectsReverb.value
             effectsReverbControl?.onChangeValue = { value in
-                Audio.client?.master.effectsReverb.value = value
+                Audio.client.master.effectsReverb.value = value
             }
         }
     }
     
     @IBOutlet weak var lfoXShapeControl: AudioControl? {
         didSet {
-            lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.value
+            lfoXShapeControl?.value = Audio.client.vocoder.lfoXShape.value
             lfoXShapeControl?.onChangeValue = { value in
-                Audio.client?.vocoder.lfoXShape.value = value
+                Audio.client.vocoder.lfoXShape.value = value
             }
         }
     }
     
     @IBOutlet weak var lfoXDepthControl: AudioControl? {
         didSet {
-            lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.value
+            lfoXDepthControl?.value = Audio.client.vocoder.lfoXDepth.value
             lfoXDepthControl?.onChangeValue = { value in
-                Audio.client?.vocoder.lfoXDepth.value = value
+                Audio.client.vocoder.lfoXDepth.value = value
             }
         }
     }
     
     @IBOutlet weak var lfoXRateControl: AudioControl? {
         didSet {
-            lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.value
+            lfoXRateControl?.value = Audio.client.vocoder.lfoXRate.value
             lfoXRateControl?.onChangeValue = { value in
-                Audio.client?.vocoder.lfoXRate.value = value
+                Audio.client.vocoder.lfoXRate.value = value
             }
         }
     }
     
     @IBOutlet weak var lfoYShapeControl: AudioControl? {
         didSet {
-            lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.value
+            lfoYShapeControl?.value = Audio.client.vocoder.lfoYShape.value
             lfoYShapeControl?.onChangeValue = { value in
-                Audio.client?.vocoder.lfoYShape.value = value
+                Audio.client.vocoder.lfoYShape.value = value
             }
         }
     }
     
     @IBOutlet weak var lfoYDepthControl: AudioControl? {
         didSet {
-            lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.value
+            lfoYDepthControl?.value = Audio.client.vocoder.lfoYDepth.value
             lfoYDepthControl?.onChangeValue = { value in
-                Audio.client?.vocoder.lfoYDepth.value = value
+                Audio.client.vocoder.lfoYDepth.value = value
             }
         }
     }
     
     @IBOutlet weak var lfoYRateControl: AudioControl? {
         didSet {
-            lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.value
+            lfoYRateControl?.value = Audio.client.vocoder.lfoYRate.value
             lfoYRateControl?.onChangeValue = { value in
-                Audio.client?.vocoder.lfoYRate.value = value
+                Audio.client.vocoder.lfoYRate.value = value
             }
         }
     }
@@ -112,19 +112,19 @@ class VocoderViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ button: UIButton) {
-        formantsFrequencyControl?.value = Audio.client!.vocoder.formantsFrequency.defaultValue
-        formantsBandwidthControl?.value = Audio.client!.vocoder.formantsBandwidth.defaultValue
+        formantsFrequencyControl?.value = Audio.client.vocoder.formantsFrequency.defaultValue
+        formantsBandwidthControl?.value = Audio.client.vocoder.formantsBandwidth.defaultValue
         
-        effectsBitcrushControl?.value = Audio.client!.master.effectsBitcrush.defaultValue
-        effectsReverbControl?.value = Audio.client!.master.effectsReverb.defaultValue
+        effectsBitcrushControl?.value = Audio.client.master.effectsBitcrush.defaultValue
+        effectsReverbControl?.value = Audio.client.master.effectsReverb.defaultValue
         
-        lfoXShapeControl?.value = Audio.client!.vocoder.lfoXShape.defaultValue
-        lfoXDepthControl?.value = Audio.client!.vocoder.lfoXDepth.defaultValue
-        lfoXRateControl?.value = Audio.client!.vocoder.lfoXRate.defaultValue
+        lfoXShapeControl?.value = Audio.client.vocoder.lfoXShape.defaultValue
+        lfoXDepthControl?.value = Audio.client.vocoder.lfoXDepth.defaultValue
+        lfoXRateControl?.value = Audio.client.vocoder.lfoXRate.defaultValue
         
-        lfoYShapeControl?.value = Audio.client!.vocoder.lfoYShape.defaultValue
-        lfoYDepthControl?.value = Audio.client!.vocoder.lfoYDepth.defaultValue
-        lfoYRateControl?.value = Audio.client!.vocoder.lfoYRate.defaultValue
+        lfoYShapeControl?.value = Audio.client.vocoder.lfoYShape.defaultValue
+        lfoYDepthControl?.value = Audio.client.vocoder.lfoYDepth.defaultValue
+        lfoYRateControl?.value = Audio.client.vocoder.lfoYRate.defaultValue
     }
     
 }

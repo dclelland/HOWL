@@ -2,93 +2,58 @@
 //  Synthesizer.swift
 //  HOWL
 //
-//  Created by Daniel Clelland on 15/11/15.
-//  Copyright © 2015 Daniel Clelland. All rights reserved.
+//  Created by Daniel Clelland on 3/07/16.
+//  Copyright © 2016 Daniel Clelland. All rights reserved.
 //
 
 import AudioKit
+import Persistable
 
-class Synthesizer: AKInstrument {
+class Synthesizer: AKNode {
     
-    var notes = [SynthesizerNote]()
+    // MARK: - Properties
     
-    var vibratoWaveform = InstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerVibratoWaveform")
-    var vibratoDepth = InstrumentProperty(value: 0.0, key: "synthesizerVibratoDepth")
-    var vibratoRate = InstrumentProperty(value: 0.0, key: "synthesizerVibratoRate")
+    var vibratoWaveform = Persistent(value: 0.0, key: "synthesizerVibratoWaveform")
+    var vibratoDepth = Persistent(value: 0.0, key: "synthesizerVibratoDepth")
+    var vibratoRate = Persistent(value: 0.0, key: "synthesizerVibratoRate")
     
-    var tremoloWaveform = InstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerTremoloWaveform")
-    var tremoloDepth = InstrumentProperty(value: 0.0, key: "synthesizerTremoloDepth")
-    var tremoloRate = InstrumentProperty(value: 0.0, key: "synthesizerTremoloRate")
+    var tremoloWaveform = Persistent(value: 0.0, key: "synthesizerTremoloWaveform")
+    var tremoloDepth = Persistent(value: 0.0, key: "synthesizerTremoloDepth")
+    var tremoloRate = Persistent(value: 0.0, key: "synthesizerTremoloRate")
     
-    var envelopeAttack = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeAttack")
-    var envelopeDecay = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeDecay")
-    var envelopeSustain = InstrumentProperty(value: 1.0, key: "synthesizerEnvelopeSustain")
-    var envelopeRelease = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeRelease")
+    var envelopeAttack = Persistent(value: 0.002, key: "synthesizerEnvelopeAttack")
+    var envelopeDecay = Persistent(value: 0.002, key: "synthesizerEnvelopeDecay")
+    var envelopeSustain = Persistent(value: 1.0, key: "synthesizerEnvelopeSustain")
+    var envelopeRelease = Persistent(value: 0.002, key: "synthesizerEnvelopeRelease")
     
-    var output = AKAudio.global()
+    // MARK: - Nodes
+    
+    // MARK: - Initialization
     
     override init() {
+        let oscillator = AKOscillator(waveform: AKTable(.sawtooth, size: 2048))
+        oscillator.amplitude = 1.0
+        oscillator.frequency = 60.0
+        
         super.init()
         
-        addProperty(vibratoWaveform)
-        addProperty(vibratoDepth)
-        addProperty(vibratoRate)
-        
-        addProperty(tremoloWaveform)
-        addProperty(tremoloDepth)
-        addProperty(tremoloRate)
-        
-        addProperty(envelopeAttack)
-        addProperty(envelopeDecay)
-        addProperty(envelopeSustain)
-        addProperty(envelopeRelease)
-        
-        let note = SynthesizerNote()
-        
-        let envelope = AKLinearADSREnvelope(
-            attackDuration: note.envelopeAttack,
-            decayDuration: note.envelopeDecay,
-            sustainLevel: note.envelopeSustain,
-            releaseDuration: note.envelopeRelease,
-            delay: 0.0.ak
-        )
-        
-        let vibrato = AKLowFrequencyOscillator(
-            waveformType: note.vibratoWaveform,
-            frequency: vibratoRate,
-            amplitude: vibratoDepth * (pow(2.0, 1.0 / 12.0) - 1.0).ak
-        )
-        
-        let tremolo = AKLowFrequencyOscillator(
-            waveformType: note.tremoloWaveform,
-            frequency: tremoloRate,
-            amplitude: tremoloDepth * 0.5.ak
-        )
-        
-        let oscillator = AKVCOscillator(
-            waveformType: AKVCOscillator.waveformTypeForSawtooth(),
-            bandwidth: 0.5.ak,
-            pulseWidth: 0.5.ak,
-            frequency: note.frequency * (vibrato + 1.0.ak),
-            amplitude: note.amplitude * envelope * (tremolo - ((tremoloDepth * 0.5.ak) - 1.0.ak))
-        )
-        
-        assignOutput(output, to: oscillator)
+        self.avAudioNode = oscillator.avAudioNode
     }
     
     // MARK: - Note creation
     
     func note(with frequency: Float) -> SynthesizerNote {
-        return SynthesizerNote(
-            frequency: frequency,
-            amplitude: 1.0,
-            vibratoWaveform: vibratoWaveform.value,
-            tremoloWaveform: tremoloWaveform.value,
-            envelopeAttack: envelopeAttack.value,
-            envelopeDecay: envelopeDecay.value,
-            envelopeSustain: envelopeSustain.value,
-            envelopeRelease: envelopeRelease.value
-        )
+        return SynthesizerNote()
+    }
+    
+    // MARK: - Note actions
+    
+    func play(_ note: SynthesizerNote) {
+        
+    }
+    
+    func stop(_ note: SynthesizerNote) {
+        
     }
     
 }

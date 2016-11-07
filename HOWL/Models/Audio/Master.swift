@@ -2,75 +2,50 @@
 //  Master.swift
 //  HOWL
 //
-//  Created by Daniel Clelland on 15/11/15.
-//  Copyright © 2015 Daniel Clelland. All rights reserved.
+//  Created by Daniel Clelland on 3/07/16.
+//  Copyright © 2016 Daniel Clelland. All rights reserved.
 //
 
 import AudioKit
+import Persistable
 
-class Master: AKInstrument {
+class Master: AKNode {
     
-    var effectsBitcrush = InstrumentProperty(value: 0.0, key: "masterEffectsBitcrush")
-    var effectsReverb = InstrumentProperty(value: 0.0, key: "masterEffectsReverb")
+    // MARK: - Properties
     
-    init(input: AKAudio) {
+    var effectsBitcrush = Persistent(value: 0.0, key: "masterEffectsBitcrush") {
+        didSet {
+            bitcrushMix.balance = effectsBitcrush.value
+        }
+    }
+    
+    var effectsReverb = Persistent(value: 0.0, key: "masterEffectsReverb") {
+        didSet {
+            reverbMix.balance = effectsReverb.value
+        }
+    }
+    
+    // MARK: - Nodes
+    
+    private let bitcrush: AKBitCrusher
+    private let bitcrushMix: AKDryWetMixer
+    
+    private let reverb: AKCostelloReverb
+    private let reverbMix: AKDryWetMixer
+    
+    // MARK: - Initialization
+    
+    init(withInput input: AKNode) {
+        self.bitcrush = AKBitCrusher(input, bitDepth: 24.0, sampleRate: 4000.0)
+        self.bitcrushMix = AKDryWetMixer(input, self.bitcrush, balance: self.effectsBitcrush.value)
+        
+        self.reverb = AKCostelloReverb(self.bitcrushMix, feedback: 0.75, cutoffFrequency: 16000.0)
+        self.reverbMix = AKDryWetMixer(self.bitcrushMix, self.reverb, balance: self.effectsReverb.value)
+        
         super.init()
         
-        addProperty(effectsBitcrush)
-        addProperty(effectsReverb)
-        
-        let bitcrush = AKDecimator(
-            input: input,
-            bitDepth: 24.ak,
-            sampleRate: 4000.ak
-        )
-        
-        let bitcrushOutput = AKMix(
-            input1: input,
-            input2: bitcrush,
-            balance: effectsBitcrush
-        )
-        
-        let reverb = AKReverb(
-            input: bitcrushOutput,
-            feedback: 0.75.ak,
-            cutoffFrequency: 16000.ak
-        )
-        
-        let reverbLeftOutput = AKMix(
-            input1: bitcrushOutput,
-            input2: reverb.leftOutput,
-            balance: effectsReverb
-        )
-        
-        let reverbRightOutput = AKMix(
-            input1: bitcrushOutput,
-            input2: reverb.rightOutput,
-            balance: effectsReverb
-        )
-        
-        let leftClipper = AKClipper(
-            input: reverbLeftOutput,
-            limit: 1.0.ak,
-            method: AKClipper.clippingMethodBramDeJong(),
-            clippingStartPoint: 0.9375.ak
-        )
-        
-        let rightClipper = AKClipper(
-            input: reverbRightOutput,
-            limit: 1.0.ak,
-            method: AKClipper.clippingMethodBramDeJong(),
-            clippingStartPoint: 0.9375.ak
-        )
-        
-        let output = AKStereoAudio(
-            leftAudio: leftClipper,
-            rightAudio: rightClipper
-        )
-        
-        setStereoAudioOutput(output!)
-        
-        resetParameter(input)
+        self.avAudioNode = self.reverbMix.avAudioNode
+        input.addConnectionPoint(self)
     }
     
 }
