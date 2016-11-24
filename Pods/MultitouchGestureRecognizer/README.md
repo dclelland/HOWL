@@ -5,7 +5,7 @@ MultitouchGestureRecognizer is a UIGestureRecognizer subclass providing a richer
 #### Installation:
 
 ```ruby
-pod 'MultitouchGestureRecognizer', '~> 1.0'
+pod 'MultitouchGestureRecognizer', '~> 1.1'
 ```
 
 #### Usage:
@@ -50,6 +50,12 @@ gestureRecognizer.sustain = true
 if (gestureRecognizer.multitouchState == .live) {
     print("Gesture recognizer is currently receiving touches:", gestureRecognizer.touches)
 }
+```
+
+✓ Centroid helper
+
+```swift
+print("multitouchGestureRecognizer.centroid") // Prints the average of all touches
 ```
 
 ### Todo:

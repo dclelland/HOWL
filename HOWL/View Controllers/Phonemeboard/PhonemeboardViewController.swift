@@ -45,7 +45,7 @@ class PhonemeboardViewController: UIViewController {
     // MARK: - Life cycle
     
     func reloadVocoder() {
-        guard let location = location(for: multitouchGestureRecognizer.touches) else {
+        guard let location = phonemeboardLocation else {
             Audio.client?.vocoder.enabled = false
             return
         }
@@ -82,23 +82,10 @@ class PhonemeboardViewController: UIViewController {
         multitouchGestureRecognizer.sustain = sustain
     }
     
-    // MARK: - Private Getters
+    // MARK: - Private getters
     
-    private func location(for touches: [UITouch]) -> CGPoint? {
-        guard touches.count > 0 else {
-            return nil
-        }
-        
-        let location = touches.reduce(CGPoint.zero) { (location, touch) -> CGPoint in
-            let touchLocation = touch.location(in: phonemeboardView)
-            
-            return CGPoint(
-                x: location.x + touchLocation.x / CGFloat(touches.count),
-                y: location.y + touchLocation.y / CGFloat(touches.count)
-            )
-        }
-        
-        return location.clamp(rect: phonemeboardView.bounds).ilerp(rect: phonemeboardView.bounds)
+    private var phonemeboardLocation: CGPoint? {
+        return multitouchGestureRecognizer.centroid?.clamp(rect: phonemeboardView.bounds).ilerp(rect: phonemeboardView.bounds)
     }
     
 }

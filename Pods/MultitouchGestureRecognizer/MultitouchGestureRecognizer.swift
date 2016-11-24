@@ -150,3 +150,27 @@ open class MultitouchGestureRecognizer: UIGestureRecognizer {
     }
     
 }
+
+// MARK: - Centroid helpers
+
+extension MultitouchGestureRecognizer {
+    
+    /// The average of all touch locations in the current view.
+    public var centroid: CGPoint? {
+        guard let view = view, touches.count > 0 else {
+            return nil
+        }
+        
+        let location = touches.reduce(.zero) { (location, touch) -> CGPoint in
+            let touchLocation = touch.location(in: view)
+            
+            return CGPoint(
+                x: location.x + touchLocation.x / CGFloat(touches.count),
+                y: location.y + touchLocation.y / CGFloat(touches.count)
+            )
+        }
+        
+        return location
+    }
+    
+}
