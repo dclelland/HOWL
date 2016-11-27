@@ -36,7 +36,7 @@ class KeyboardViewController: UIViewController {
         }
     }()
     
-    var notes = [UITouch: (key: Key, note: SynthesizerNote)]()
+    var notes = Dictionary<UITouch, (key: Key, note: Synthesizer.Note)>()
     
     var mode: Mode = .normal {
         didSet {

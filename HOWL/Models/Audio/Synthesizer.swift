@@ -10,7 +10,57 @@ import AudioKit
 
 class Synthesizer: AKInstrument {
     
-    var notes = [SynthesizerNote]()
+    class Note: AKNote {
+        
+        var frequency = AKNoteProperty()
+        var amplitude = AKNoteProperty()
+        
+        var vibratoWaveform = AKNoteProperty()
+        var tremoloWaveform = AKNoteProperty()
+        
+        var envelopeAttack = AKNoteProperty()
+        var envelopeDecay = AKNoteProperty()
+        var envelopeSustain = AKNoteProperty()
+        var envelopeRelease = AKNoteProperty()
+        
+        override init() {
+            super.init()
+            addProperty(self.frequency)
+            addProperty(self.amplitude)
+            
+            addProperty(self.vibratoWaveform)
+            addProperty(self.tremoloWaveform)
+            
+            addProperty(self.envelopeAttack)
+            addProperty(self.envelopeDecay)
+            addProperty(self.envelopeSustain)
+            addProperty(self.envelopeRelease)
+        }
+        
+        convenience init(frequency: Float,
+                         amplitude: Float,
+                         vibratoWaveform: Float,
+                         tremoloWaveform: Float,
+                         envelopeAttack: Float,
+                         envelopeDecay: Float,
+                         envelopeSustain: Float,
+                         envelopeRelease: Float) {
+            self.init()
+            self.frequency.value = frequency
+            self.amplitude.value = amplitude
+            
+            self.vibratoWaveform.value = vibratoWaveform
+            self.tremoloWaveform.value = tremoloWaveform
+            
+            self.envelopeAttack.value = envelopeAttack
+            self.envelopeDecay.value = envelopeDecay
+            self.envelopeSustain.value = envelopeSustain
+            self.envelopeRelease.value = envelopeRelease
+        }
+        
+    }
+    
+    var notes = [Note]()
     
     var vibratoWaveform = InstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerVibratoWaveform")
     var vibratoDepth = InstrumentProperty(value: 0.0, key: "synthesizerVibratoDepth")
@@ -43,7 +93,7 @@ class Synthesizer: AKInstrument {
         addProperty(envelopeSustain)
         addProperty(envelopeRelease)
         
-        let note = SynthesizerNote()
+        let note = Synthesizer.Note()
         
         let envelope = AKLinearADSREnvelope(
             attackDuration: note.envelopeAttack,
@@ -78,8 +128,8 @@ class Synthesizer: AKInstrument {
     
     // MARK: - Note creation
     
-    func note(with frequency: Float) -> SynthesizerNote {
-        return SynthesizerNote(
+    func note(with frequency: Float) -> Note {
+        return Note(
             frequency: frequency,
             amplitude: 1.0,
             vibratoWaveform: vibratoWaveform.value,

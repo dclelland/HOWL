@@ -17,6 +17,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### 2.2 wishlist
 
+- Implement male/female adult/child controls
 - Note labels
 - MIDI input support
     - kAudioUnitType_RemoteMusicEffect

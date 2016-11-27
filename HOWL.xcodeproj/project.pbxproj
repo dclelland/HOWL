@@ -21,7 +21,6 @@
 		65800FB71C09D1BF000410CB /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F981C09D1BF000410CB /* Audio.swift */; };
 		65800FB81C09D1BF000410CB /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F991C09D1BF000410CB /* Master.swift */; };
 		65800FB91C09D1BF000410CB /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F9A1C09D1BF000410CB /* Synthesizer.swift */; };
-		65800FBA1C09D1BF000410CB /* SynthesizerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800F9B1C09D1BF000410CB /* SynthesizerNote.swift */; };
 		65800FBD1C09D1BF000410CB /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA11C09D1BF000410CB /* Key.swift */; };
 		65800FBE1C09D1BF000410CB /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA21C09D1BF000410CB /* Keyboard.swift */; };
 		65800FBF1C09D1BF000410CB /* KeyboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA31C09D1BF000410CB /* KeyboardViewCell.swift */; };
@@ -57,7 +56,6 @@
 		65800F981C09D1BF000410CB /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		65800F991C09D1BF000410CB /* Master.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
 		65800F9A1C09D1BF000410CB /* Synthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synthesizer.swift; sourceTree = "<group>"; };
-		65800F9B1C09D1BF000410CB /* SynthesizerNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesizerNote.swift; sourceTree = "<group>"; };
 		65800FA11C09D1BF000410CB /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		65800FA21C09D1BF000410CB /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		65800FA31C09D1BF000410CB /* KeyboardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewCell.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			children = (
 				65800F981C09D1BF000410CB /* Audio.swift */,
 				65800F9A1C09D1BF000410CB /* Synthesizer.swift */,
-				65800F9B1C09D1BF000410CB /* SynthesizerNote.swift */,
 				657350F11CEEF44300EC1233 /* Vocoder.swift */,
 				65800F991C09D1BF000410CB /* Master.swift */,
 			);
@@ -415,7 +412,6 @@
 				657F0D0E1C0D94F3004B17EF /* VocoderViewController.swift in Sources */,
 				65800FB71C09D1BF000410CB /* Audio.swift in Sources */,
 				65800FB91C09D1BF000410CB /* Synthesizer.swift in Sources */,
-				65800FBA1C09D1BF000410CB /* SynthesizerNote.swift in Sources */,
 				657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */,
 				65800FB81C09D1BF000410CB /* Master.swift in Sources */,
 				65EC06CE1D02824600CDDF17 /* Audiobus.swift in Sources */,

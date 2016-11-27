@@ -7,13 +7,72 @@
 //
 
 import AudioKit
+import Lerp
 
 class Vocoder: AKInstrument {
     
-    let topLeftFrequencies: [Float] = [844, 1656, 2437, 3704] // /æ/
-    let topRightFrequencies: [Float] = [768, 1333, 2522, 3687] // /α/
-    let bottomLeftFrequencies: [Float] = [324, 2985, 3329, 3807] // /i/
-    let bottomRightFrequencies: [Float] = [378, 997, 2343, 3357] // /u/
+    struct Voice {
+        
+        struct Phoneme {
+            
+            let f1: Float
+            let f2: Float
+            let f3: Float
+            let f4: Float
+            
+            var formants: [Float] {
+                return [f1, f2, f3, f4]
+            }
+            
+            func mixed(with phoneme: Phoneme, ratio: Float) -> Phoneme {
+                return Phoneme(
+                    f1: ratio.lerp(min: f1, max: phoneme.f1),
+                    f2: ratio.lerp(min: f2, max: phoneme.f2),
+                    f3: ratio.lerp(min: f3, max: phoneme.f3),
+                    f4: ratio.lerp(min: f4, max: phoneme.f4)
+                )
+            }
+            
+        }
+        
+        let æ: Phoneme // top left
+        let α: Phoneme // top right
+        let i: Phoneme // bottom left
+        let u: Phoneme // bottom right
+        
+        func mixed(with voice: Voice, ratio: Float) -> Voice {
+            return Voice(
+                æ: æ.mixed(with: voice.æ, ratio: ratio),
+                α: α.mixed(with: voice.α, ratio: ratio),
+                i: i.mixed(with: voice.i, ratio: ratio),
+                u: u.mixed(with: voice.u, ratio: ratio)
+            )
+        }
+        
+        static let male = Voice(
+            æ: Voice.Phoneme(f1: 844, f2: 1656, f3: 2437, f4: 3704),
+            α: Voice.Phoneme(f1: 768, f2: 1333, f3: 2522, f4: 3687),
+            i: Voice.Phoneme(f1: 324, f2: 2985, f3: 3329, f4: 3807),
+            u: Voice.Phoneme(f1: 378, f2: 997, f3: 2343, f4: 3357)
+        )
+        
+        static let female = Voice(
+            æ: Voice.Phoneme(f1: 967, f2: 1999, f3: 2760, f4: 4306),
+            α: Voice.Phoneme(f1: 936, f2: 1551, f3: 2815, f4: 4299),
+            i: Voice.Phoneme(f1: 426, f2: 3589, f3: 3691, f4: 4471),
+            u: Voice.Phoneme(f1: 459, f2: 1105, f3: 2735, f4: 4115)
+        )
+        
+        static let child = Voice(
+            æ: Voice.Phoneme(f1: 818, f2: 1743, f3: 3005, f4: 4232),
+            α: Voice.Phoneme(f1: 597, f2: 1137, f3: 2987, f4: 4167),
+            i: Voice.Phoneme(f1: 431, f2: 3949, f3: 4059, f4: 4720),
+            u: Voice.Phoneme(f1: 494, f2: 1345, f3: 2988, f4: 4276)
+        )
+        
+    }
+    
+    let voice = Voice.male
     
     var amplitude = AKInstrumentProperty(value: 0.0)
     var inputAmplitude = AKInstrumentProperty(value: 0.0)
@@ -82,11 +141,11 @@ class Vocoder: AKInstrument {
         connect(AKAssignment(output: xOut, input: lfoXPost + xIn))
         connect(AKAssignment(output: yOut, input: lfoYPost + yIn))
         
-        let topFrequencies = zip(topLeftFrequencies, topRightFrequencies).map { topLeftFrequency, topRightFrequency in
+        let topFrequencies = zip(voice.æ.formants, voice.α.formants).map { topLeftFrequency, topRightFrequency in
             return xOut * (topRightFrequency - topLeftFrequency).ak + topLeftFrequency.ak
         }
         
-        let bottomFrequencies = zip(bottomLeftFrequencies, bottomRightFrequencies).map { bottomLeftFrequency, bottomRightFrequency in
+        let bottomFrequencies = zip(voice.i.formants, voice.u.formants).map { bottomLeftFrequency, bottomRightFrequency in
             return xOut * (bottomRightFrequency - bottomLeftFrequency).ak + bottomLeftFrequency.ak
         }
         

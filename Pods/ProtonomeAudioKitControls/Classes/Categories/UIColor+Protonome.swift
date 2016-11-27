@@ -49,28 +49,18 @@ public extension UIColor {
     // MARK: - Greyscale colors
     
     /// A default black color.
-    public static var protonomeBlack: UIColor {
-        return UIColor(white: 0.0, alpha: 1.0)
-    }
+    public static let protonomeBlack = UIColor(white: 0.0, alpha: 1.0)
     
     /// A default dark gray color.
-    public static var protonomeDarkGray: UIColor {
-        return UIColor(white: 0.2, alpha: 1.0)
-    }
+    public static let protonomeDarkGray = UIColor(white: 0.2, alpha: 1.0)
     
     /// A default medium gray color.
-    public static var protonomeMediumGray: UIColor {
-        return UIColor(white: 0.25, alpha: 1.0)
-    }
+    public static let protonomeMediumGray = UIColor(white: 0.25, alpha: 1.0)
     
     /// A default light gray color.
-    public static var protonomeLightGray: UIColor {
-        return UIColor(white: 0.3, alpha: 1.0)
-    }
+    public static let protonomeLightGray = UIColor(white: 0.3, alpha: 1.0)
     
     /// A default white color.
-    public static var protonomeWhite: UIColor {
-        return UIColor(white: 1.0, alpha: 1.0)
-    }
+    public static let protonomeWhite = UIColor(white: 1.0, alpha: 1.0)
 
 }
