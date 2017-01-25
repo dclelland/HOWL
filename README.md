@@ -2,6 +2,8 @@
 
 HOWL is a simple formant synthesizer for iOS, written in Swift and built using the [AudioKit](https://github.com/audiokit/AudioKit) framework. It makes synthesized vowel noises.
 
+Just a quick note: HOWL itself is a paid app, but I provide the source code free of charge as a learning resource. Please kindly don't put clones of HOWL in the App Store.
+
 ### Screenshot
 
 ![HOWL screenshot](/Screenshot.png?raw=true "HOWL screenshot")
