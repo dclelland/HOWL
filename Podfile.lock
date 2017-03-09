@@ -18,7 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - Audiobus (~> 2.3)
-  - AudioKit (from `https://github.com/dclelland/AudioKit/`, branch `howl`)
+  - AudioKit (from `https://github.com/dclelland/AudioKit/`, branch `protonome`)
   - Bezzy (~> 1.0)
   - MultitouchGestureRecognizer (~> 1.1)
   - Parity (~> 1.0)
@@ -29,7 +29,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AudioKit:
-    :branch: howl
+    :branch: protonome
     :git: https://github.com/dclelland/AudioKit/
 
 CHECKOUT OPTIONS:
@@ -50,6 +50,6 @@ SPEC CHECKSUMS:
   ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: 892100e2f966ca789fc07b88295be432844ab02d
+PODFILE CHECKSUM: bab0f9134fe745c581f34a0872dd4bb9a7a2e05d
 
 COCOAPODS: 1.1.1

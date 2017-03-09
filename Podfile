@@ -4,7 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod 'Audiobus', '~> 2.3'
-pod 'AudioKit', git: 'https://github.com/dclelland/AudioKit/', branch: 'howl'
+pod 'AudioKit', git: 'https://github.com/dclelland/AudioKit/', branch: 'protonome'
 pod 'Bezzy', '~> 1.0'
 pod 'MultitouchGestureRecognizer', '~> 1.1'
 pod 'Parity', '~> 1.0'
