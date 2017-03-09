@@ -227,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */,
-				65A64DD31CF1D6D300D49967 /* Assets.xcassets */,
 				650D8BFA1CFBB87600EFD767 /* audiobus.txt */,
 				65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */,
 				65F2B7661C1FCF8000E2DA15 /* Info.plist */,
@@ -238,6 +237,7 @@
 		65F2B7681C1FCF8E00E2DA15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65A64DD31CF1D6D300D49967 /* Assets.xcassets */,
 				65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */,
 			);
 			path = Resources;
