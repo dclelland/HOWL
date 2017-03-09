@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -22,21 +25,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-Me-B2D">
+                                <rect key="frame" x="513" y="308.5" width="511" height="459.5"/>
                                 <connections>
                                     <segue destination="Uux-Dl-5Lg" kind="embed" id="wj6-3h-EAJ"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SG5-bT-Rms">
+                                <rect key="frame" x="0.0" y="308.5" width="511" height="459.5"/>
                                 <connections>
                                     <segue destination="a6B-wT-AWU" kind="embed" id="9dF-Wa-hl6"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-ao-YKj">
+                                <rect key="frame" x="513" y="0.0" width="511" height="306.5"/>
                                 <connections>
                                     <segue destination="vYm-n5-kCb" kind="embed" id="DiW-mG-EFx"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-ji-xuA">
+                                <rect key="frame" x="0.0" y="0.0" width="511" height="306.5"/>
                                 <connections>
                                     <segue destination="eQs-SH-hmG" kind="embed" id="3EQ-gm-tdb"/>
                                 </connections>
@@ -84,14 +91,13 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="CxC-nm-8dd"/>
-                                <exclude reference="nNH-HG-geU"/>
                                 <exclude reference="BO8-nR-G0j"/>
                                 <exclude reference="GEa-KL-Ulj"/>
                                 <exclude reference="NIM-N3-iqq"/>
                                 <exclude reference="kR2-wq-SVL"/>
                                 <exclude reference="pcC-HF-I6c"/>
                                 <exclude reference="t07-u2-9fZ"/>
+                                <exclude reference="nNH-HG-geU"/>
                                 <exclude reference="3ky-F4-wPh"/>
                                 <exclude reference="AJZ-8l-ozc"/>
                                 <exclude reference="DrL-yf-5NH"/>
@@ -101,6 +107,7 @@
                                 <exclude reference="p5V-xP-noT"/>
                                 <exclude reference="qW8-Lh-gdP"/>
                                 <exclude reference="yGm-Sf-bAX"/>
+                                <exclude reference="CxC-nm-8dd"/>
                                 <exclude reference="8wC-fd-Wz1"/>
                                 <exclude reference="F4F-uH-Amh"/>
                                 <exclude reference="VEv-4Z-OT2"/>
@@ -133,8 +140,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wI-Ag-1JO" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-P5-yec" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wXh-P5-yec" secondAttribute="height" multiplier="1:1" id="e8z-by-2UY"/>
                                             <constraint firstAttribute="width" secondItem="wXh-P5-yec" secondAttribute="height" multiplier="1:1" id="wam-bL-Eyk"/>
@@ -167,6 +176,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PITCHES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89c-56-Kb1" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -250,8 +260,10 @@
                                 </variation>
                             </view>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exU-Gg-q51" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="507" height="406.5"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xPq-sR-KgS">
+                                        <rect key="frame" x="2" y="2" width="503" height="402.5"/>
                                         <color key="backgroundColor" red="0.19913792610168457" green="0.19913792610168457" blue="0.19913792610168457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewLayout key="collectionViewLayout" id="WPE-ov-YW6" customClass="KeyboardViewLayout" customModule="HOWL" customModuleProvider="target"/>
                                         <cells>
@@ -357,8 +369,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zo-UQ-umx" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOWELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpn-fl-F9s" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -375,6 +389,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-jG-buE" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NRe-jG-buE" secondAttribute="height" multiplier="1:1" id="LfN-dK-Pqn"/>
                                             <constraint firstAttribute="width" secondItem="NRe-jG-buE" secondAttribute="height" multiplier="1:1" id="fk9-7k-Qyp"/>
@@ -455,6 +470,18 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="9Ed-mp-P2T"/>
+                                        <exclude reference="9Yy-iT-SG0"/>
+                                        <exclude reference="E6q-vP-cG2"/>
+                                        <exclude reference="Glr-Ch-QQo"/>
+                                        <exclude reference="J55-9a-FGB"/>
+                                        <exclude reference="Jeh-ND-UmC"/>
+                                        <exclude reference="OxI-Hh-nfG"/>
+                                        <exclude reference="VDI-3c-cgo"/>
+                                        <exclude reference="Yz8-cT-HNt"/>
+                                        <exclude reference="kHE-Kt-Ehg"/>
+                                        <exclude reference="rnI-sA-DpV"/>
+                                        <exclude reference="w0I-nK-mls"/>
                                         <exclude reference="8Su-IB-vha"/>
                                         <exclude reference="ERL-0p-jby"/>
                                         <exclude reference="Kmf-Ng-xdy"/>
@@ -468,42 +495,37 @@
                                         <exclude reference="kxg-Ew-5F4"/>
                                         <exclude reference="qYh-ob-Gy6"/>
                                         <exclude reference="sW9-qA-y3z"/>
-                                        <exclude reference="9Ed-mp-P2T"/>
-                                        <exclude reference="9Yy-iT-SG0"/>
-                                        <exclude reference="E6q-vP-cG2"/>
-                                        <exclude reference="Glr-Ch-QQo"/>
-                                        <exclude reference="J55-9a-FGB"/>
-                                        <exclude reference="Jeh-ND-UmC"/>
-                                        <exclude reference="OxI-Hh-nfG"/>
-                                        <exclude reference="VDI-3c-cgo"/>
-                                        <exclude reference="Yz8-cT-HNt"/>
-                                        <exclude reference="kHE-Kt-Ehg"/>
-                                        <exclude reference="rnI-sA-DpV"/>
-                                        <exclude reference="w0I-nK-mls"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6a-Z9-DiM" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="507" height="406.5"/>
                                 <subviews>
                                     <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdG-gs-Gc9" customClass="PhonemeboardView" customModule="HOWL" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="503" height="402.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-cF-7ht">
+                                                <rect key="frame" x="122.5" y="364.5" width="6" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-9d-lvH">
+                                                <rect key="frame" x="473" y="147.5" width="18" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtH-Fj-igd">
+                                                <rect key="frame" x="370" y="364.5" width="15" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arp-wA-Oe5">
+                                                <rect key="frame" x="244.5" y="12" width="15" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxd-6T-ESR">
+                                                <rect key="frame" x="12" y="147.5" width="11.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -547,15 +569,15 @@
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="IYm-FR-eBe"/>
                                                 <exclude reference="CoS-ik-aa5"/>
                                                 <exclude reference="D0g-Tj-Euw"/>
                                                 <exclude reference="Lt4-py-GfO"/>
                                                 <exclude reference="ZtI-T0-UcZ"/>
+                                                <exclude reference="rlV-PO-xOX"/>
                                                 <exclude reference="72L-Jl-2Jf"/>
                                                 <exclude reference="eV5-BB-gTI"/>
                                                 <exclude reference="i2e-OO-GcK"/>
-                                                <exclude reference="IYm-FR-eBe"/>
-                                                <exclude reference="rlV-PO-xOX"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -641,8 +663,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-LY-XJB" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCODER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-jT-EnP" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -659,6 +683,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-Lx-S66" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ihs-Lx-S66" secondAttribute="height" multiplier="1:1" id="LdX-fx-cO0"/>
                                             <constraint firstAttribute="width" secondItem="ihs-Lx-S66" secondAttribute="height" multiplier="1:1" id="Zcs-6u-wDW"/>
@@ -770,8 +795,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYn-k8-bIf" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="252.5" height="126"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpM-fX-G4z" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="123.5" height="104"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Frequency"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -795,6 +822,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-UR-sD9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127.5" y="2" width="123" height="104"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandwidth"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -818,6 +846,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g21-wL-QPF">
+                                        <rect key="frame" x="2" y="108" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Xxq-V3-gB6"/>
                                         </constraints>
@@ -858,20 +887,22 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="7fj-CE-8XL"/>
+                                        <exclude reference="qKZ-R1-oWG"/>
                                         <exclude reference="GNm-Iz-AEB"/>
                                         <exclude reference="PVk-Nc-aca"/>
                                         <exclude reference="PvW-zE-wWz"/>
                                         <exclude reference="4eD-o2-rsl"/>
                                         <exclude reference="bYO-e2-iHm"/>
                                         <exclude reference="q5H-ok-o4d"/>
-                                        <exclude reference="7fj-CE-8XL"/>
-                                        <exclude reference="qKZ-R1-oWG"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akj-0Z-Y0Y" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="256.5" y="51" width="252.5" height="126"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-zR-TDt">
+                                        <rect key="frame" x="2" y="108" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="nGF-Go-cgc"/>
                                         </constraints>
@@ -880,6 +911,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wle-Ds-2Xx" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127.5" y="2" width="123" height="104"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Reverb"/>
@@ -904,6 +936,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-an-eLH" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="123.5" height="104"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bitcrush"/>
@@ -958,8 +991,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMW-Rc-U2R" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="179" width="252.5" height="125.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ST-oY-08g">
+                                        <rect key="frame" x="2" y="107.5" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="CCi-ld-TUk"/>
                                         </constraints>
@@ -968,6 +1003,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwf-a9-TCN" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="123" height="103.5"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shape"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -991,6 +1027,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-wJ-05G" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127" y="2" width="60.5" height="103.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1015,6 +1052,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-V9-p8W" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="189.5" y="2" width="61" height="103.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1070,8 +1108,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-ZX-Ygj" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="256.5" y="179" width="252.5" height="125.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uky-R0-QNS">
+                                        <rect key="frame" x="2" y="107.5" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Gfo-gx-vVK"/>
                                         </constraints>
@@ -1080,6 +1120,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-zn-1d9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="123.5" height="103.5"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
                                                 <real key="value" value="0.25"/>
@@ -1103,6 +1144,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-d7-FiP" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="190" y="2" width="60.5" height="103.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1130,6 +1172,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-8s-SBM" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127.5" y="2" width="60.5" height="103.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1246,6 +1289,13 @@
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="AV5-L1-yha"/>
+                                <exclude reference="Rjb-PI-Bff"/>
+                                <exclude reference="tS2-7Y-Y1g"/>
+                                <exclude reference="zBv-cP-JFE"/>
+                                <exclude reference="fN3-Cb-xcW"/>
+                                <exclude reference="Lrl-1E-fJC"/>
+                                <exclude reference="N02-do-A7P"/>
                                 <exclude reference="39o-H1-FRg"/>
                                 <exclude reference="80b-LF-rDx"/>
                                 <exclude reference="D5T-OR-SCG"/>
@@ -1254,13 +1304,6 @@
                                 <exclude reference="erl-fF-AL1"/>
                                 <exclude reference="sSE-pS-dcK"/>
                                 <exclude reference="vr7-K1-6V9"/>
-                                <exclude reference="fN3-Cb-xcW"/>
-                                <exclude reference="AV5-L1-yha"/>
-                                <exclude reference="Rjb-PI-Bff"/>
-                                <exclude reference="tS2-7Y-Y1g"/>
-                                <exclude reference="zBv-cP-JFE"/>
-                                <exclude reference="Lrl-1E-fJC"/>
-                                <exclude reference="N02-do-A7P"/>
                             </mask>
                         </variation>
                     </view>
@@ -1295,8 +1338,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-m1-qla" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="2" width="507" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNQ-GJ-Io2" customClass="RoundedButton" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="462" y="2" width="43" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XNQ-GJ-Io2" secondAttribute="height" multiplier="1:1" id="7SD-Ak-EL1"/>
                                             <constraint firstAttribute="width" secondItem="XNQ-GJ-Io2" secondAttribute="height" multiplier="1:1" id="9eh-Rv-H8O"/>
@@ -1331,6 +1376,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYNTHESIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmq-mg-gvC" customClass="RoundedLabel" customModule="ProtonomeRoundedViews">
+                                        <rect key="frame" x="2" y="2" width="458" height="43"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1395,6 +1441,18 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="ZV1-hq-jEE"/>
+                                        <exclude reference="EwS-Dw-aEZ"/>
+                                        <exclude reference="KSN-q1-WmY"/>
+                                        <exclude reference="LR2-rI-cJN"/>
+                                        <exclude reference="Pzy-YH-Xx6"/>
+                                        <exclude reference="Zcg-AO-cfg"/>
+                                        <exclude reference="aRh-6a-WRR"/>
+                                        <exclude reference="e6V-VP-ooT"/>
+                                        <exclude reference="fEb-7c-Xm4"/>
+                                        <exclude reference="gRE-gX-8HF"/>
+                                        <exclude reference="pFH-vG-xmw"/>
+                                        <exclude reference="r6E-kV-t6c"/>
+                                        <exclude reference="rOM-de-d0x"/>
                                         <exclude reference="1Ba-u0-n1b"/>
                                         <exclude reference="5Js-U4-aoh"/>
                                         <exclude reference="7LG-5c-BdM"/>
@@ -1408,24 +1466,14 @@
                                         <exclude reference="jZd-Fl-s8f"/>
                                         <exclude reference="pFv-uN-EQz"/>
                                         <exclude reference="pc8-HG-BlQ"/>
-                                        <exclude reference="EwS-Dw-aEZ"/>
-                                        <exclude reference="KSN-q1-WmY"/>
-                                        <exclude reference="LR2-rI-cJN"/>
-                                        <exclude reference="Pzy-YH-Xx6"/>
-                                        <exclude reference="Zcg-AO-cfg"/>
-                                        <exclude reference="aRh-6a-WRR"/>
-                                        <exclude reference="e6V-VP-ooT"/>
-                                        <exclude reference="fEb-7c-Xm4"/>
-                                        <exclude reference="gRE-gX-8HF"/>
-                                        <exclude reference="pFH-vG-xmw"/>
-                                        <exclude reference="r6E-kV-t6c"/>
-                                        <exclude reference="rOM-de-d0x"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjM-M0-Y10" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="51" width="252.5" height="126"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cB-QC-O8r" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="123.5" height="104"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Left Interval"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1449,6 +1497,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127.5" y="2" width="123" height="104"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Right Interval"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1472,6 +1521,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyP-Ts-70K">
+                                        <rect key="frame" x="2" y="108" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="PJ3-Xp-xuU"/>
                                         </constraints>
@@ -1522,8 +1572,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f67-Hg-1x8" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="256.5" y="51" width="252.5" height="126"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENVELOPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htJ-kj-HcO">
+                                        <rect key="frame" x="2" y="108" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="PPY-4z-l5g"/>
                                         </constraints>
@@ -1532,6 +1584,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZC-4K-1LE" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="64.5" y="2" width="61" height="104"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1559,6 +1612,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yze-Sh-bGC" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127.5" y="2" width="60.5" height="104"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1583,6 +1637,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-Cw-P8X" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="190" y="2" width="60.5" height="104"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1610,6 +1665,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-Jb-Sua" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="60.5" height="104"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1669,8 +1725,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hw-H4-zVS" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="2" y="179" width="252.5" height="125.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-vX-nTp" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127" y="2" width="60.5" height="103.5"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
@@ -1695,6 +1753,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-mM-wVh" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="189.5" y="2" width="61" height="103.5"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1721,6 +1780,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-b8-vzk">
+                                        <rect key="frame" x="2" y="107.5" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="na5-Vx-Ddv"/>
                                         </constraints>
@@ -1729,6 +1789,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrh-rL-tu2" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="123" height="103.5"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Waveform"/>
@@ -1808,8 +1869,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHX-tX-bxX" customClass="RoundedView" customModule="ProtonomeRoundedViews">
+                                <rect key="frame" x="256.5" y="179" width="252.5" height="125.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREMOLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfB-JH-2o7">
+                                        <rect key="frame" x="2" y="107.5" width="248.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="l40-8V-N1I"/>
                                         </constraints>
@@ -1818,6 +1881,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mn-mM-A0Z" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="127.5" y="2" width="60.5" height="103.5"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Depth"/>
@@ -1842,6 +1906,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-wY-Bce" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="190" y="2" width="60.5" height="103.5"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rate"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -1868,6 +1933,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6s-Tc-XJX" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
+                                        <rect key="frame" x="2" y="2" width="123.5" height="103.5"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Waveform"/>
@@ -2006,15 +2072,6 @@
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Gl8-mh-ths"/>
-                                <exclude reference="HkP-hV-2C7"/>
-                                <exclude reference="KMq-Q2-vTI"/>
-                                <exclude reference="LsR-Cb-79R"/>
-                                <exclude reference="Nsp-tq-waG"/>
-                                <exclude reference="W75-bV-H6p"/>
-                                <exclude reference="YeR-xW-3AS"/>
-                                <exclude reference="do1-HY-90C"/>
-                                <exclude reference="hX1-O1-ZRR"/>
                                 <exclude reference="G8Q-Od-EXi"/>
                                 <exclude reference="VPa-MB-0h4"/>
                                 <exclude reference="zB9-Ah-Q4p"/>
@@ -2028,7 +2085,21 @@
                                 <exclude reference="sek-Ee-d64"/>
                                 <exclude reference="vzK-cc-O1w"/>
                                 <exclude reference="y6t-KR-qby"/>
+                                <exclude reference="Gl8-mh-ths"/>
+                                <exclude reference="HkP-hV-2C7"/>
+                                <exclude reference="KMq-Q2-vTI"/>
+                                <exclude reference="LsR-Cb-79R"/>
+                                <exclude reference="Nsp-tq-waG"/>
+                                <exclude reference="W75-bV-H6p"/>
+                                <exclude reference="YeR-xW-3AS"/>
+                                <exclude reference="do1-HY-90C"/>
+                                <exclude reference="hX1-O1-ZRR"/>
                                 <exclude reference="pZL-51-lpq"/>
+                                <exclude reference="4eh-6K-7dj"/>
+                                <exclude reference="9Mn-xn-ZsI"/>
+                                <exclude reference="C1L-Dd-MiG"/>
+                                <exclude reference="Ssd-en-pHo"/>
+                                <exclude reference="pfu-cH-QDm"/>
                                 <exclude reference="0MJ-mi-jRE"/>
                                 <exclude reference="Bm4-QD-gns"/>
                                 <exclude reference="EUm-cU-Wa3"/>
@@ -2045,11 +2116,6 @@
                                 <exclude reference="rbB-mj-Kwf"/>
                                 <exclude reference="vss-M5-REf"/>
                                 <exclude reference="wjh-kM-22r"/>
-                                <exclude reference="4eh-6K-7dj"/>
-                                <exclude reference="9Mn-xn-ZsI"/>
-                                <exclude reference="C1L-Dd-MiG"/>
-                                <exclude reference="Ssd-en-pHo"/>
-                                <exclude reference="pfu-cH-QDm"/>
                             </mask>
                         </variation>
                     </view>

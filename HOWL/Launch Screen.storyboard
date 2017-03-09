@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,11 +21,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qm-yL-Bzd" userLabel="iPhone View">
-                                <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <connections>
                                     <segue destination="QyV-ju-AHG" kind="embed" id="xaq-c5-9O7"/>
                                 </connections>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.5" y="374.5"/>
+            <point key="canvasLocation" x="-144" y="-6"/>
         </scene>
         <!--iPhone-->
         <scene sceneID="8W7-w4-tmg">
@@ -340,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIX-gn-mOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-638" y="1192"/>
+            <point key="canvasLocation" x="-525" y="1191"/>
         </scene>
         <!--iPad-->
         <scene sceneID="00E-sc-eYV">
@@ -374,11 +374,11 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-ul-rzJ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-ul-rzJ">
                                                 <rect key="frame" x="127" y="2" width="124" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="5eK-VK-mIx">
-                                                <rect key="frame" x="2" y="2" width="123" height="104"/>
+                                                <rect key="frame" x="2" y="2" width="124" height="104"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -538,7 +538,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BPV-8r-2Ak">
                                                 <rect key="frame" x="127" y="2" width="60" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="1AT-vR-B3r">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="1AT-vR-B3r">
                                                 <rect key="frame" x="189" y="2" width="61" height="103"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BON-Pm-ZiG">
@@ -738,9 +738,9 @@
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="0NO-ck-nUP">
-                                                <rect key="frame" x="2" y="2" width="123" height="104"/>
+                                                <rect key="frame" x="2" y="2" width="124" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-0N-r3L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-0N-r3L">
                                                 <rect key="frame" x="127" y="2" width="124" height="104"/>
                                             </imageView>
                                         </subviews>
@@ -792,7 +792,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="I6E-vI-nbi">
                                                 <rect key="frame" x="127" y="2" width="60" height="104"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-14-cxA">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-14-cxA">
                                                 <rect key="frame" x="189" y="2" width="61" height="104"/>
                                             </imageView>
                                         </subviews>
@@ -899,7 +899,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="lvm-mE-RvL">
                                                 <rect key="frame" x="127" y="2" width="60" height="103"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-6c-NYn">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-6c-NYn">
                                                 <rect key="frame" x="189" y="2" width="61" height="103"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="QU4-Sc-ydV">
@@ -1229,7 +1229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCh-iP-Er1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869" y="1242"/>
+            <point key="canvasLocation" x="404" y="1506"/>
         </scene>
     </scenes>
     <resources>

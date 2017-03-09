@@ -522,7 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = "HOWL/Supporting Files/HOWL.entitlements";
 				INFOPLIST_FILE = "HOWL/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
 				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
@@ -542,7 +542,7 @@
 				CODE_SIGN_ENTITLEMENTS = "HOWL/Supporting Files/HOWL.entitlements";
 				INFOPLIST_FILE = "HOWL/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
 				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
