@@ -89,7 +89,7 @@ import ProtonomeAudioKitControls
         
         let angle = atan2(location.x - 0.5, location.y - 0.5)
         
-        return (angle + CGFloat(M_PI)) / (2.0 * CGFloat(M_PI))
+        return (angle + .pi) / (2.0 * .pi)
     }
     
     private var trailSaturation: CGFloat {

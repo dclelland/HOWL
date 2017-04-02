@@ -146,7 +146,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Create from a CoreMIDI packet.
 /// @param packet The 3-byte buffer containing the MIDI bytes.
-- (instancetype)initWithMIDIPacket:(const UInt8 [3])packet;
+- (instancetype)initWithMIDIPacket:(const UInt8 [_Nonnull 3])packet;
 
 /// Create from a NSData object.
 /// @param data A NSData object containing the MIDI data (up to 3 bytes)
