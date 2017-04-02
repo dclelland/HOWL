@@ -7,6 +7,7 @@
 //
 
 import AudioKit
+import ProtonomeAudioKitControls
 
 class Synthesizer: AKInstrument {
     
@@ -62,18 +63,18 @@ class Synthesizer: AKInstrument {
     
     var notes = [Note]()
     
-    var vibratoWaveform = InstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerVibratoWaveform")
-    var vibratoDepth = InstrumentProperty(value: 0.0, key: "synthesizerVibratoDepth")
-    var vibratoRate = InstrumentProperty(value: 0.0, key: "synthesizerVibratoRate")
+    var vibratoWaveform = Property(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerVibratoWaveform")
+    var vibratoDepth = Property(value: 0.0, key: "synthesizerVibratoDepth")
+    var vibratoRate = Property(value: 0.0, key: "synthesizerVibratoRate")
     
-    var tremoloWaveform = InstrumentProperty(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerTremoloWaveform")
-    var tremoloDepth = InstrumentProperty(value: 0.0, key: "synthesizerTremoloDepth")
-    var tremoloRate = InstrumentProperty(value: 0.0, key: "synthesizerTremoloRate")
+    var tremoloWaveform = Property(value: AKLowFrequencyOscillator.waveformTypeForSine().value, key: "synthesizerTremoloWaveform")
+    var tremoloDepth = Property(value: 0.0, key: "synthesizerTremoloDepth")
+    var tremoloRate = Property(value: 0.0, key: "synthesizerTremoloRate")
     
-    var envelopeAttack = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeAttack")
-    var envelopeDecay = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeDecay")
-    var envelopeSustain = InstrumentProperty(value: 1.0, key: "synthesizerEnvelopeSustain")
-    var envelopeRelease = InstrumentProperty(value: 0.002, key: "synthesizerEnvelopeRelease")
+    var envelopeAttack = Property(value: 0.002, key: "synthesizerEnvelopeAttack")
+    var envelopeDecay = Property(value: 0.002, key: "synthesizerEnvelopeDecay")
+    var envelopeSustain = Property(value: 1.0, key: "synthesizerEnvelopeSustain")
+    var envelopeRelease = Property(value: 0.002, key: "synthesizerEnvelopeRelease")
     
     var output = AKAudio.global()
     

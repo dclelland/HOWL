@@ -7,11 +7,12 @@
 //
 
 import AudioKit
+import ProtonomeAudioKitControls
 
 class Master: AKInstrument {
     
-    var effectsBitcrush = InstrumentProperty(value: 0.0, key: "masterEffectsBitcrush")
-    var effectsReverb = InstrumentProperty(value: 0.0, key: "masterEffectsReverb")
+    var effectsBitcrush = Property(value: 0.0, key: "masterEffectsBitcrush")
+    var effectsReverb = Property(value: 0.0, key: "masterEffectsReverb")
     
     init(input: AKAudio) {
         super.init()
