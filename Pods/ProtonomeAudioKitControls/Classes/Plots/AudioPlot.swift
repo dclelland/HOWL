@@ -88,7 +88,7 @@ import AudioKit
         var testSamples = [Float](repeating: 0.0, count: 512)
         
         for index in testSamples.indices {
-            testSamples[index] = sin(Float(index / 2) / 512.0 * .pi)
+            testSamples[index] = sin(Float(index / 2) / 256.0 * (2.0 * .pi))
         }
         
         samples = testSamples
