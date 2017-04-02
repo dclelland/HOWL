@@ -7,6 +7,7 @@
 //
 
 import AudioKit
+import AudioUnitExtensions
 
 class Audiobus {
     

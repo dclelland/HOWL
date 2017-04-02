@@ -5,6 +5,7 @@ use_frameworks!
 
 pod 'Audiobus', '~> 2.3'
 pod 'AudioKit', git: 'https://github.com/dclelland/AudioKit/', branch: 'protonome'
+pod 'AudioUnitExtensions', '~> 0.1'
 pod 'Bezzy', '~> 1.0'
 pod 'MultitouchGestureRecognizer', '~> 1.1'
 pod 'Parity', '~> 1.0'

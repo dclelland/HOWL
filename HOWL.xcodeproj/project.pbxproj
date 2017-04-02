@@ -27,7 +27,6 @@
 		65800FC11C09D1BF000410CB /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */; };
 		65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */; };
 		65A0A8CA1E90B3FF00168C4E /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A0A8C91E90B3FF00168C4E /* Property.swift */; };
-		65A0A8D01E90B4DB00168C4E /* AudioUnit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A0A8CF1E90B4DB00168C4E /* AudioUnit+Helpers.swift */; };
 		65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD31CF1D6D300D49967 /* Assets.xcassets */; };
 		65A64DD61CF2DF1900D49967 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */; };
 		65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4EC9C1CF198C3000D5B16 /* Pitch.swift */; };
@@ -62,7 +61,6 @@
 		65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 		65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
 		65A0A8C91E90B3FF00168C4E /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
-		65A0A8CF1E90B4DB00168C4E /* AudioUnit+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioUnit+Helpers.swift"; sourceTree = "<group>"; };
 		65A64DD31CF1D6D300D49967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = HOWL/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		65C4EC9C1CF198C3000D5B16 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				65800F971C09D1BF000410CB /* Audio */,
 				65EC06CA1D02824600CDDF17 /* Audiobus */,
 				65EC06CC1D02824600CDDF17 /* Settings */,
-				65A0A8CE1E90B4DB00168C4E /* Extensions */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,15 +194,6 @@
 			);
 			path = Phonemeboard;
 			sourceTree = "<group>";
-		};
-		65A0A8CE1E90B4DB00168C4E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				65A0A8CF1E90B4DB00168C4E /* AudioUnit+Helpers.swift */,
-			);
-			name = Extensions;
-			path = HOWL/Extensions;
-			sourceTree = SOURCE_ROOT;
 		};
 		65EC06CA1D02824600CDDF17 /* Audiobus */ = {
 			isa = PBXGroup;
@@ -407,7 +395,6 @@
 				65800FBF1C09D1BF000410CB /* KeyboardViewCell.swift in Sources */,
 				65800FBE1C09D1BF000410CB /* Keyboard.swift in Sources */,
 				65800FBD1C09D1BF000410CB /* Key.swift in Sources */,
-				65A0A8D01E90B4DB00168C4E /* AudioUnit+Helpers.swift in Sources */,
 				65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */,
 				657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */,
 				65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */,

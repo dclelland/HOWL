@@ -1,0 +1,6 @@
+framework module AudioUnitExtensions {
+  umbrella header "AudioUnitExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
