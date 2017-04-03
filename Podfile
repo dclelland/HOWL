@@ -10,7 +10,7 @@ pod 'Bezzy', '~> 1.0'
 pod 'MultitouchGestureRecognizer', '~> 1.1'
 pod 'Parity', '~> 1.0'
 pod 'Persistable', '~> 1.0'
-pod 'ProtonomeAudioKitControls', '~> 1.1'
+pod 'ProtonomeAudioKitControls', '~> 1.2'
 pod 'ProtonomeRoundedViews', '~> 1.0'
 pod 'SnapKit', '~> 3.0'
 

@@ -8,7 +8,7 @@ PODS:
   - MultitouchGestureRecognizer (1.1.0)
   - Parity (1.0.0)
   - Persistable (1.0.0)
-  - ProtonomeAudioKitControls (1.1.1):
+  - ProtonomeAudioKitControls (1.2.0):
     - AudioKit (~> 2.0)
     - Bezzy (~> 1.0)
     - Degrad (~> 1.0)
@@ -25,7 +25,7 @@ DEPENDENCIES:
   - MultitouchGestureRecognizer (~> 1.1)
   - Parity (~> 1.0)
   - Persistable (~> 1.0)
-  - ProtonomeAudioKitControls (~> 1.1)
+  - ProtonomeAudioKitControls (~> 1.2)
   - ProtonomeRoundedViews (~> 1.0)
   - SnapKit (~> 3.0)
 
@@ -49,10 +49,10 @@ SPEC CHECKSUMS:
   MultitouchGestureRecognizer: 59a6a0311ce3f1005f2d3b834cd170ed7b49d495
   Parity: 1a6e22bb3ec32f8bcd3d78e01cc9919062c3bebc
   Persistable: a01ea48283e7f977ad435a32bd7bfafbb415ba58
-  ProtonomeAudioKitControls: 7228279dbc0a37ff3717bec5658aa4e2e153501c
+  ProtonomeAudioKitControls: dc1eb94305987d7500e80bb3e1798008d028969b
   ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 5bcbee688469b2b7ffa6065c0e5c565cb90bcb89
+PODFILE CHECKSUM: f598dc3ad7da5ea8d0f2c33688e9e8cb7fd32759
 
 COCOAPODS: 1.1.1

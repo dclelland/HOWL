@@ -10,6 +10,20 @@ import UIKit
 import Lerp
 import SnapKit
 
+/// Delegate protocol wrapping common touch events.
+@objc public protocol AudioControlDelegate {
+    
+    /// The audio control's valud changed.
+    @objc optional func audioControl(_ audioControl: AudioControl, valueChanged value: Float)
+    
+    /// Touches began inside the audio control.
+    @objc optional func audioControlTouchesStarted(_ audioControl: AudioControl)
+    
+    /// Touches ended inside the audio control, either inside or outside.
+    @objc optional func audioControlTouchesEnded(_ audioControl: AudioControl)
+    
+}
+
 /// IBDesignable `UIControl` subclass which can be used as a base class for creating dials, pickers, sliders etc.
 /// Subclasses must override `ratio(forLocation:)` and `path(forRatio:)`
 @IBDesignable open class AudioControl: UIControl {
@@ -34,6 +48,17 @@ import SnapKit
             setNeedsDisplay()
             sendActions(for: [.valueChanged])
         }
+    }
+    
+    // MARK: Delegate
+    
+    /// The control's delegate.
+    ///
+    /// Declared as `AnyObject` to work around an Interface Builder bug.
+    @IBOutlet public weak var delegate: AnyObject?
+    
+    private var audioControlDelegate: AudioControlDelegate? {
+        return delegate as? AudioControlDelegate
     }
     
     // MARK: Scale
@@ -333,25 +358,16 @@ import SnapKit
         addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
     }
     
-    /// A callback block, called when a `.ValueChanged` control event fires, i.e. when `value` is set.
-    public var onChangeValue: ((_ value: Float) -> Void)?
-    
     internal func valueChanged() {
-        onChangeValue?(value)
+        audioControlDelegate?.audioControl?(self, valueChanged: self.value)
     }
-    
-    /// A callback block, called when a `.TouchDown` control event fires, i.e. when the control is selected.
-    public var onTouchDown: ((Void) -> Void)?
     
     internal func touchDown() {
-        onTouchDown?()
+        audioControlDelegate?.audioControlTouchesStarted?(self)
     }
     
-    /// A callback block, called when a `.TouchUpInside` or `.TouchUpOutside` control event fires, i.e. when the control is de-selected.
-    public var onTouchUp: ((Void) -> Void)?
-    
     internal func touchUp() {
-        onTouchUp?()
+        audioControlDelegate?.audioControlTouchesEnded?(self)
     }
     
     // MARK: - Touches

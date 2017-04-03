@@ -648,7 +648,7 @@
         <!--Vocoder View Controller-->
         <scene sceneID="ei3-Qx-PJu">
             <objects>
-                <viewController id="eQs-SH-hmG" customClass="VocoderViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eQs-SH-hmG" userLabel="Vocoder View Controller" customClass="VocoderViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4WY-Bh-VrA"/>
                         <viewControllerLayoutGuide type="bottom" id="ED5-ZV-jWh"/>
@@ -814,6 +814,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="DJi-p6-1NB"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-UR-sD9" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127.5" y="2" width="123" height="98"/>
@@ -838,6 +841,9 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="percentage"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="scaleType" value="linear"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="5gq-1U-LBt"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORMANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g21-wL-QPF">
                                         <rect key="frame" x="8" y="102" width="236.5" height="16"/>
@@ -882,12 +888,12 @@
                                     <mask key="constraints">
                                         <exclude reference="7fj-CE-8XL"/>
                                         <exclude reference="qKZ-R1-oWG"/>
-                                        <exclude reference="4eD-o2-rsl"/>
-                                        <exclude reference="bYO-e2-iHm"/>
-                                        <exclude reference="q5H-ok-o4d"/>
                                         <exclude reference="GNm-Iz-AEB"/>
                                         <exclude reference="PVk-Nc-aca"/>
                                         <exclude reference="PvW-zE-wWz"/>
+                                        <exclude reference="4eD-o2-rsl"/>
+                                        <exclude reference="bYO-e2-iHm"/>
+                                        <exclude reference="q5H-ok-o4d"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -927,6 +933,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="13O-UM-yQz"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-an-eLH" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="123.5" height="98"/>
@@ -952,6 +961,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="7Wv-va-woF"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1017,6 +1029,9 @@
                                                 <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="EnW-py-qGJ"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-wJ-05G" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127" y="2" width="60.5" height="98"/>
@@ -1042,6 +1057,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="QaT-0a-HCm"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-V9-p8W" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="189.5" y="2" width="61" height="98"/>
@@ -1070,6 +1088,9 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="014-gu-p41"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1133,6 +1154,9 @@
                                                 <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="g3W-Hn-v5A"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-d7-FiP" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="190" y="2" width="60.5" height="98"/>
@@ -1161,6 +1185,9 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="V0m-iN-mbc"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-8s-SBM" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127.5" y="2" width="60.5" height="98"/>
@@ -1186,6 +1213,9 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="eQs-SH-hmG" id="Npc-IQ-D33"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1318,7 +1348,7 @@
         <!--Synthesizer View Controller-->
         <scene sceneID="riB-qA-nbp">
             <objects>
-                <viewController id="vYm-n5-kCb" customClass="SynthesizerViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vYm-n5-kCb" userLabel="Synthesizer View Controller" customClass="SynthesizerViewController" customModule="HOWL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gU9-Tm-AUg"/>
                         <viewControllerLayoutGuide type="bottom" id="8lE-4k-ptm"/>
@@ -1484,6 +1514,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="d1W-5c-Xks"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-cW-RTC" customClass="DialControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127.5" y="2" width="123" height="98"/>
@@ -1508,6 +1541,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="formatterType" value="integer"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="bHX-J1-pjg"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyP-Ts-70K">
                                         <rect key="frame" x="8" y="102" width="236.5" height="16"/>
@@ -1598,6 +1634,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="Uw2-Oy-U9T"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yze-Sh-bGC" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="127.5" y="2" width="60.5" height="98"/>
@@ -1623,6 +1662,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="5VF-Ib-aBY"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-Cw-P8X" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="190" y="2" width="60.5" height="98"/>
@@ -1651,6 +1693,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="HB5-2X-g9y"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-Jb-Sua" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="60.5" height="98"/>
@@ -1679,6 +1724,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="OgF-VZ-Vfw"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1738,6 +1786,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="m4V-5M-6ug"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-mM-wVh" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="189.5" y="2" width="61" height="98"/>
@@ -1765,6 +1816,9 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="IE8-jE-0VA"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIBRATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-b8-vzk">
                                         <rect key="frame" x="8" y="102" width="236.5" height="16"/>
@@ -1804,6 +1858,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="Z2N-WS-Yvx"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1890,6 +1947,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="7g1-bf-TgB"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-wY-Bce" customClass="SliderControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="190" y="2" width="60.5" height="98"/>
@@ -1917,6 +1977,9 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="ms6-PO-PFJ"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6s-Tc-XJX" customClass="PickerControl" customModule="ProtonomeAudioKitControls">
                                         <rect key="frame" x="2" y="2" width="123.5" height="98"/>
@@ -1947,6 +2010,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vYm-n5-kCb" id="inf-lu-XYZ"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
