@@ -3,7 +3,7 @@
 //  Audiobus
 //
 //  Created by Michael Tyson on 10/12/2011.
-//  Copyright (c) 2011-2014 Audiobus. All rights reserved.
+//  Copyright (c) 2011-2017 Audiobus. All rights reserved.
 //
 
 #import "ABCommon.h"
@@ -20,7 +20,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Accelerate/Accelerate.h>
 
-#define ABSDKVersionString @"2.3.1"
+#define ABSDKVersionString @"2.3.3"
 
 /*!
 @mainpage
@@ -795,7 +795,7 @@
  prior to your app being launched.
 
  If, outside of Audiobus, your app processes audio from the system audio input, and provides monitoring via the system
- output (it probably does!), we strongly suggest muting your app when it's launched from Audiobus. This will avoid the
+ output (it probably does!), we strongly suggest muting your app briefly when it's launched from Audiobus. This will avoid the
  case where the user experiences feedback in the second or so after your app is initialized, but before your app is 
  connected within Audiobus. Take a look at the AB Filter sample app for a demonstration of how this can be achieved,
  by checking to see if your app was launched via its Audiobus launch URL, and silencing the audio engine for the duration:
@@ -2058,6 +2058,6 @@
  the CPU a bit. Never, ever wait on locks, allocate memory, or call Objective-C functions from Core
  Audio. Use plain old C in time-critical places (or even drop to assembly). Take a look at the
  Accelerate framework if you're not familiar with it, and use its vector operations instead of
- scalar operations within loops - it makes a huge difference.
+ scalar operations within loops - it makes a huge difference, doesn't it?.
 
 */

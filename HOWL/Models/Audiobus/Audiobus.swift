@@ -18,13 +18,11 @@ class Audiobus {
     // MARK: Actions
     
     static func start() {
-        guard client == nil else {
+        guard client == nil, let apiKey = apiKey else {
             return
         }
         
-        if let apiKey = apiKey {
-            client = Audiobus(apiKey: apiKey)
-        }
+        client = Audiobus(apiKey: apiKey)
     }
     
     private static var apiKey: String? {
@@ -47,8 +45,13 @@ class Audiobus {
         return AKManager.shared().engine.audioUnit
     }
 
-    init(apiKey: String) {
-        self.controller = ABAudiobusController(apiKey: apiKey)
+    init?(apiKey: String) {
+        guard let controller = ABAudiobusController(apiKey: apiKey) else {
+            print("Warning: Audiobus failed to initialize, aborting setup.")
+            return nil
+        }
+        
+        self.controller = controller
         
         self.controller.addSenderPort(
             ABSenderPort(

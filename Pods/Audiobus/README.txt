@@ -1,5 +1,5 @@
-Audiobus SDK -- Version 2.3.1 -- Nov 28 2015
-============================================
+Audiobus SDK -- Version 2.3.3 -- February 3rd 2017
+==================================================
 
 Thanks for downloading the Audiobus distribution!
 
@@ -16,6 +16,36 @@ https://audiob.us
 
 Changes
 =======
+
+2.3.3
+---
+ - Changed deployment target back to iOS 7.0
+
+2.3.2
+---
+ - Fixed Connection Panel positioning problems in split screen mode.
+ - Fixed potential crashes with privately used ABLogger
+ - Added UIControlEventTouchCancel to list of supported control events for
+   trigger buttons
+ - Moved NSNetService and NSNetServiceBrowser discovery/monitoring to a secondary
+   thread. This should fix situations where connection trigger state
+   updates were delayed for multiple seconds.
+ - Added a workaround in ABFilterPort for iOS bug that results in a buffer size mismatch,
+   causing crashes in apps using a filter port with a process block (rather than an audio unit),
+   when used on a device with a hardware sample rate different to the app sample rate, such as the
+   iPhone 6S Plus.
+ - Update sample rate of hosted IAA nodes when setting clientFormat property of ABReceiverPort. This
+   avoids some unnecessary sample rate conversion in certain circumstances.
+ - Reworked Audio Unit Management to facilitate background launching and
+   launching via Inter-App Audio URLs for future versions.
+ - Fixed a status bar issue
+ - Added "setNeedsStatusBarAppearanceUpdate" to ABAudiobusController.
+ - Fixed connection issues when launching the app in background.
+ - Added sample code to AB Sender that shows how to show / hide the inter-app
+   audio transport panel due to Audiobus / Inter-App audio connection.
+
+
+
 
 2.3.1
 -----

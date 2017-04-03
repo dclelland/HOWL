@@ -43,7 +43,7 @@ extern NSString * const ABSenderPortConnectionsChangedNotification;
  *
  *  Initializes a new sender port. Use @link ABSenderPortSend @endlink to send audio.
  *
- *  On iOS 7, note that unlike the @link initWithName:title:audioComponentDescription:audioUnit: @endlink
+ *  Note that unlike the @link initWithName:title:audioComponentDescription:audioUnit: @endlink
  *  initializer, audio sent via sender ports initialized with this version will incur a
  *  small latency penalty equal to the current hardware buffer duration (e.g. 5 ms) due to necessary
  *  buffering. Initialize with an audio unit to avoid this.

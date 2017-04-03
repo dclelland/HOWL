@@ -90,6 +90,9 @@ extern NSString * const ABConnectionPanelShownNotification;
  */
 extern NSString * const ABConnectionPanelHiddenNotification;
 
+   
+
+
 #pragma mark State IO Protocol
 /** @name State IO Protocol */
 ///@{
@@ -223,6 +226,12 @@ extern NSString * const ABPeerKey;
 
 
 /*!
+ * Same as addTrigger whith the difference that the trigger is not shown in 
+ * AB Remote.
+ */
+-(void)addLocalOnlyTrigger:(ABTrigger*)trigger;
+
+/*!
  * Add a trigger which is only shown in Audiobus Remote.
  *
  *  Triggers added by this method are only shown within Audiobus Remote. Use this method
@@ -232,6 +241,9 @@ extern NSString * const ABPeerKey;
  * @param trigger       The trigger
  */
 -(void)addRemoteTrigger:(ABTrigger*)trigger;
+
+
+
 
 /*!
  * Add a grid matrix of triggers for Audiobus Remote
@@ -536,6 +548,14 @@ extern NSString * const ABPeerKey;
  *  and restore the state of your app as part of their workspace.
  */
 @property (nonatomic, assign) id<ABAudiobusControllerStateIODelegate> stateIODelegate;
+
+
+/*!
+ * In some cases the status bar is managed by Audiobus. Call this function 
+ * when the status bar needs an update.
+ *
+ */
+- (void) setNeedsStatusBarAppearanceUpdate;
 
 
 

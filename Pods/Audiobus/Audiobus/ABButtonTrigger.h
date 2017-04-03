@@ -89,7 +89,7 @@
  * Add a block to be called in response to events within Audiobus Remote
  *
  *  This method allows your app to react to UIControlEventTouchDown, UIControlEventTouchUpInside
- *  and UIControlEventTouchUpOutside events originating from Audiobus Remote.
+ *  UIControlEventTouchUpOutside, UIControlEventTouchCancel events originating from Audiobus Remote.
  *
  *  This method must only used with triggers that have been added using ABAudiobusController's
  *  @link ABAudiobusController::addRemoteTrigger: addRemoteTrigger: @endlink and

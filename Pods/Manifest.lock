@@ -1,5 +1,5 @@
 PODS:
-  - Audiobus (2.3.1)
+  - Audiobus (2.3.3)
   - AudioKit (2.3)
   - AudioUnitExtensions (0.1.0)
   - Bezzy (1.0.0)
@@ -40,7 +40,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/dclelland/AudioKit/
 
 SPEC CHECKSUMS:
-  Audiobus: d75ef3f0d625abf3007a147548423e76ca61043d
+  Audiobus: 850af0ab9da4dc53dd7222afe9aeba928379e5ad
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
   AudioUnitExtensions: 7f5846619d9ec34617bd313832f448f51883a69b
   Bezzy: ff253ca2a65f7fe2befda215d5b657cad2fc731b

@@ -18,9 +18,10 @@ extern "C" {
  * Port types
  */
 typedef enum {
-    ABPortTypeReceiver,
-    ABPortTypeFilter,
-    ABPortTypeSender
+    ABPortTypeReceiver = 0,
+    ABPortTypeFilter = 1,
+    ABPortTypeSender = 2,
+    ABPortTypeUnknown = 0xFF
 } ABPortType;
 
 @class ABPeer;
@@ -43,10 +44,13 @@ typedef enum {
  */
 @property (nonatomic, weak, readonly) ABPeer *peer;
 
+
+
 /*!
  * The internal port name
  */
 @property (nonatomic, strong, readonly) NSString *name;
+
 
 /*!
  * The title of the port, for display to the user
@@ -57,6 +61,8 @@ typedef enum {
  * The port icon (a 64x64 image)
  */
 @property (nonatomic, strong, readonly) UIImage *icon;
+
+
 
 /*!
  * The type of the port
