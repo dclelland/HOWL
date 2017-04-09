@@ -309,6 +309,22 @@ import SnapKit
         }
     }
     
+    override open var layoutMargins: UIEdgeInsets {
+        get {
+            switch UIDevice.current.userInterfaceIdiom {
+            case .pad:
+                return UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
+            case .phone:
+                return UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0)
+            default:
+                return super.layoutMargins
+            }
+        }
+        set {
+            super.layoutMargins = newValue
+        }
+    }
+    
     override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         

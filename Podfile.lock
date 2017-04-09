@@ -8,7 +8,7 @@ PODS:
   - MultitouchGestureRecognizer (1.1.0)
   - Parity (1.0.0)
   - Persistable (1.0.0)
-  - ProtonomeAudioKitControls (1.3.1):
+  - ProtonomeAudioKitControls (1.3.2):
     - Bezzy (~> 1.0)
     - Degrad (~> 1.0)
     - Lerp (~> 2.0)
@@ -48,7 +48,7 @@ SPEC CHECKSUMS:
   MultitouchGestureRecognizer: 59a6a0311ce3f1005f2d3b834cd170ed7b49d495
   Parity: 1a6e22bb3ec32f8bcd3d78e01cc9919062c3bebc
   Persistable: a01ea48283e7f977ad435a32bd7bfafbb415ba58
-  ProtonomeAudioKitControls: 9fc4aeaa32a08643b0ddd9b6a452beb673dfb059
+  ProtonomeAudioKitControls: 61f45a75b829189a8bedd85a7d2c976dfcdcd45f
   ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 

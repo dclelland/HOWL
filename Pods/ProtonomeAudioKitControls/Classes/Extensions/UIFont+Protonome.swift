@@ -23,7 +23,8 @@ public extension UIFont {
         case .phone:
             return protonomeFont(withSize: 10.0)
         default:
-            fatalError("Device not supported")
+            let size = UIFont.preferredFont(forTextStyle: .body).pointSize
+            return protonomeFont(withSize: size)
         }
     }
     
