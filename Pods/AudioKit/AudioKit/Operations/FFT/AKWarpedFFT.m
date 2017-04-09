@@ -14,8 +14,8 @@
 @implementation AKWarpedFFT
 {
     AKFSignal *fsigin;
-    AKControl *kscal;
-    AKControl *kshift;
+    AKParameter *kscal;
+    AKParameter *kshift;
     AKControl *klowest;
     AKControl *kmeth;
     AKControl *kgain;
@@ -23,8 +23,8 @@
 }
 
 - (instancetype)initWithInput:(AKFSignal *)sourceSignal
-                 scalingRatio:(AKControl *)scalingRatio
-                        shift:(AKControl *)shift
+                 scalingRatio:(AKParameter *)scalingRatio
+                        shift:(AKParameter *)shift
 {
     self = [super initWithString:[self operationName]];
     if (self) {

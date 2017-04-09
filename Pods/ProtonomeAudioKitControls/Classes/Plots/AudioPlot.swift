@@ -7,7 +7,10 @@
 //
 
 import UIKit
+
+#if PROTONOME_AUDIOKIT_ENABLED && !TARGET_INTERFACE_BUILDER
 import AudioKit
+#endif
 
 /// IBDesignable `UIControl` subclass which draws the current CSound buffer as a waveform in `drawRect:`.
 @IBDesignable open class AudioPlot: UIControl {
@@ -64,8 +67,6 @@ import AudioKit
     
     // MARK: - Private vars
     
-    fileprivate var csound: CsoundObj?
-    
     fileprivate var data = Data()
     
     fileprivate var samples = [Float]() {
@@ -74,10 +75,16 @@ import AudioKit
         }
     }
     
+#if PROTONOME_AUDIOKIT_ENABLED && !TARGET_INTERFACE_BUILDER
+    fileprivate var csound: CsoundObj?
+#endif
+    
     // MARK: - Initialization
     
     deinit {
+#if PROTONOME_AUDIOKIT_ENABLED && !TARGET_INTERFACE_BUILDER
         AKManager.removeBinding(self)
+#endif
     }
     
     // MARK: - Overrides
@@ -97,11 +104,13 @@ import AudioKit
     override open func didMoveToSuperview() {
         super.didMoveToSuperview()
         
+#if PROTONOME_AUDIOKIT_ENABLED && !TARGET_INTERFACE_BUILDER
         if (superview == nil) {
             AKManager.removeBinding(self)
         } else {
             AKManager.addBinding(self)
-        }
+            }
+#endif
     }
     
     override open func draw(_ rect: CGRect) {
@@ -182,6 +191,7 @@ import AudioKit
     
 }
 
+#if PROTONOME_AUDIOKIT_ENABLED && !TARGET_INTERFACE_BUILDER
 extension AudioPlot: CsoundBinding {
     
     open func setup(_ csoundObj: CsoundObj) {
@@ -205,3 +215,4 @@ extension AudioPlot: CsoundBinding {
     }
     
 }
+#endif

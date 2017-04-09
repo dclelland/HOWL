@@ -8,8 +8,7 @@ PODS:
   - MultitouchGestureRecognizer (1.1.0)
   - Parity (1.0.0)
   - Persistable (1.0.0)
-  - ProtonomeAudioKitControls (1.2.0):
-    - AudioKit (~> 2.0)
+  - ProtonomeAudioKitControls (1.3.1):
     - Bezzy (~> 1.0)
     - Degrad (~> 1.0)
     - Lerp (~> 2.0)
@@ -25,7 +24,7 @@ DEPENDENCIES:
   - MultitouchGestureRecognizer (~> 1.1)
   - Parity (~> 1.0)
   - Persistable (~> 1.0)
-  - ProtonomeAudioKitControls (~> 1.2)
+  - ProtonomeAudioKitControls (~> 1.3)
   - ProtonomeRoundedViews (~> 1.0)
   - SnapKit (~> 3.0)
 
@@ -36,12 +35,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AudioKit:
-    :commit: 11e57cd7e2f77495e02f24cb8b034520cf282a3e
+    :commit: 3ad10e595ac6763c84dfea56a348dc12197aded9
     :git: https://github.com/dclelland/AudioKit/
 
 SPEC CHECKSUMS:
   Audiobus: 850af0ab9da4dc53dd7222afe9aeba928379e5ad
-  AudioKit: 393be71739265448039ef268f3582dee82783b0d
+  AudioKit: c2715a96ade48aab1674fbc64df8352a471a6234
   AudioUnitExtensions: 7f5846619d9ec34617bd313832f448f51883a69b
   Bezzy: ff253ca2a65f7fe2befda215d5b657cad2fc731b
   Degrad: 5119a3ed5aaab6be286c209386035befd04b2aa5
@@ -49,10 +48,10 @@ SPEC CHECKSUMS:
   MultitouchGestureRecognizer: 59a6a0311ce3f1005f2d3b834cd170ed7b49d495
   Parity: 1a6e22bb3ec32f8bcd3d78e01cc9919062c3bebc
   Persistable: a01ea48283e7f977ad435a32bd7bfafbb415ba58
-  ProtonomeAudioKitControls: dc1eb94305987d7500e80bb3e1798008d028969b
+  ProtonomeAudioKitControls: 9fc4aeaa32a08643b0ddd9b6a452beb673dfb059
   ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: f598dc3ad7da5ea8d0f2c33688e9e8cb7fd32759
+PODFILE CHECKSUM: fcef3bd7c66bc4bc0534d4874f3f148fb691e323
 
 COCOAPODS: 1.1.1

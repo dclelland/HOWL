@@ -10,13 +10,28 @@ pod 'Bezzy', '~> 1.0'
 pod 'MultitouchGestureRecognizer', '~> 1.1'
 pod 'Parity', '~> 1.0'
 pod 'Persistable', '~> 1.0'
-pod 'ProtonomeAudioKitControls', '~> 1.2'
+pod 'ProtonomeAudioKitControls', '~> 1.3'
 pod 'ProtonomeRoundedViews', '~> 1.0'
 pod 'SnapKit', '~> 3.0'
 
 target 'HOWL'
 
-post_install do | installer |
+post_install do |installer|
+    
+    # Set custom build configurations
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            
+            # Fix IBDesignables
+            config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
+            
+            # Enable AudioPlot's AudioKit integration
+            config.build_settings['PROTONOME_AUDIOKIT_ENABLED'] = true
+        end
+    end
+    
+    # Write the acknowledgements
     require 'fileutils'
     FileUtils.cp('Pods/Target Support Files/Pods-HOWL/Pods-HOWL-Acknowledgements.plist', 'HOWL/Resources/Settings.bundle/Acknowledgements.plist')
+    
 end

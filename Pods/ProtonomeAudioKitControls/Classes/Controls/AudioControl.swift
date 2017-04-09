@@ -236,7 +236,7 @@ import SnapKit
     // MARK: Font
     
     /// The control's font, used by the title label. Setting `fontName` or `fontSize` will update this value.
-    internal var font: UIFont = .systemFont(ofSize: 12.0) {
+    internal var font: UIFont = .protonomeFont {
         didSet {
             setNeedsLayout()
         }

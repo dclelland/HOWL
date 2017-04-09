@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Aurelius Prochazka. All rights reserved.
 //
 
-import AudioKit
-
 // MARK: Conversion
 
 /// Protocol for converting numeric values to AKConstants.
@@ -16,6 +14,15 @@ public protocol AKConvertible {
     /// Get an AKConstant.
     var ak: AKConstant { get }
 
+}
+
+extension UInt: AKConvertible {
+    
+    /// Get an AKConstant.
+    public var ak: AKConstant {
+        return AKConstant(integer: Int(self))
+    }
+    
 }
 
 extension Int: AKConvertible {

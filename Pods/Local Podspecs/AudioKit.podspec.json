@@ -22,7 +22,7 @@
     "AudioKit/Sequencing/**/*.{h,m}",
     "AudioKit/Sound Fonts/**/*.{h,m}",
     "AudioKit/Tables/**/*.{h,m}",
-    "AudioKit/Utilities/**/*.{h,m,c}",
+    "AudioKit/Utilities/**/*.{h,m,c,swift}",
     "AudioKit/Platforms/Common/csound/*.{h,hpp}",
     "AudioKit/Platforms/Common/*.{h,m}"
   ],

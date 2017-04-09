@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param scalingRatio Spectral envelope scaling ratio. Values > 1 stretch the envelope and < 1 compress it.
 /// @param shift Spectral envelope shift, values > 0 shift the envelope linearly upwards and values < 1 shift it downwards.
 - (instancetype)initWithInput:(AKFSignal *)sourceSignal
-                 scalingRatio:(AKControl *)scalingRatio
-                        shift:(AKControl *)shift;
+                 scalingRatio:(AKParameter *)scalingRatio
+                        shift:(AKParameter *)shift;
 
 /// Set an optional low frequency
 /// @param lowFrequency Lowest frequency shifted, defaults to zero.

@@ -23,6 +23,7 @@ import ProtonomeAudioKitControls
     
     // MARK: - Overrides
     
+#if PROTONOME_AUDIOKIT_ENABLED && !TARGET_INTERFACE_BUILDER
     override func updateValuesFromCsound() {
         super.updateValuesFromCsound()
         
@@ -46,6 +47,7 @@ import ProtonomeAudioKitControls
             self.colorSaturation = colorSaturation
         }
     }
+#endif
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
