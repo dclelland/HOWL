@@ -1,10 +1,6 @@
 # Parity
 
-Perhaps the smallest, dumbest library I've ever published... but I kept using this across projects.
-
 Parity is an integer parity microlibrary. It tells you whether an integer is even or odd!
-
-Parity implements a `IntegerParity` protocol on `Int` and `UInt`.
 
 ### Examples
 
@@ -33,9 +29,9 @@ if (number % 2 == 0) {
 
 // After:
 switch number.parity {
-    case .Even:
+    case .even:
         print("even")
-    case .Odd:
+    case .odd:
         print("odd")
 }
 

@@ -8,7 +8,7 @@ pod 'AudioKit', git: 'https://github.com/dclelland/AudioKit/', branch: 'protonom
 pod 'AudioUnitExtensions', '~> 0.1'
 pod 'Bezzy', '~> 1.0'
 pod 'MultitouchGestureRecognizer', '~> 1.1'
-pod 'Parity', '~> 1.0'
+pod 'Parity', '~> 2.0'
 pod 'Persistable', '~> 1.0'
 pod 'ProtonomeAudioKitControls', '~> 1.3'
 pod 'ProtonomeRoundedViews', '~> 1.0'
