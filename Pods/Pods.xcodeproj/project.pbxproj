@@ -37,13 +37,13 @@
 		0EEDC1A412C6BD749D4E244A90BDCBF8 /* CppSound.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1B4955711FD966DC716391881BA255FF /* CppSound.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
 		0F26A864AC64B0AB61E8E9D67DF73FE1 /* AKPitchShifterPedal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A83AFD9298FE43E2538327F4C0E12D4 /* AKPitchShifterPedal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2D7683FC6309ADEF24489A238B15EB /* AKLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731C62CAB1E043EF0A797BE7D631FB1 /* AKLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F4AE4345B6A05DE85E679DD6BE3CE31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		0F50890806CEFFB60A361BD145BA0FC6 /* EZAudioPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FFA6603C465F80A8C3C7539DAA746 /* EZAudioPlot.m */; };
 		0FB96086CB5A45472D48A4E2F293D371 /* AKFMOscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = 073E7441F7013F9DE2505A7E0F9BF41C /* AKFMOscillator.m */; };
 		0FC10C8427299EF244F6833B661A1A52 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A005C7C685E5718B3B93C4C621C7464 /* ConstraintDSL.swift */; };
 		10E44BA540CB4A53D8F638581CC9AA38 /* AKHarmonicCosineTableGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5D707DA993966488FDC6FC4A4F3BD8 /* AKHarmonicCosineTableGenerator.m */; };
 		11216A5087665833DC4BB360D5A03926 /* AKTrackedFrequency.h in Headers */ = {isa = PBXBuildFile; fileRef = C878618B5B733E61000E840BC3633212 /* AKTrackedFrequency.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		116E4AF2B4BA194821610382AB0C9F3C /* AKStereoConvolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E8BE00815A1E0A70C6F6D0387A9825 /* AKStereoConvolution.m */; };
+		124EDAAB11775B3901FEBDF60765FFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		125C3082FC88BE69EA8B076A5D88D7EF /* AKSegmentArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F7927FCBDF4947E9D8F110750EE35E /* AKSegmentArray.m */; };
 		1291D55641C3DCDB25F43AB42469723F /* cs_par_structs.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E52F003DF1FD2CBD1965DA3D2935B1 /* cs_par_structs.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		12A9BC50A95B6B626E0A6ED1DA0A99A3 /* AKResynthesizedAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E95604403E32D9FC4F8571420ACA48 /* AKResynthesizedAudio.m */; };
@@ -52,9 +52,7 @@
 		144B59C3AFB85C55284F02840A8DEEA7 /* AKTrackedFrequencyFromFSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B070DBE4C091915B62544C8260DFB9 /* AKTrackedFrequencyFromFSignal.m */; };
 		14B4DAA2FE0A93821BB204838616414D /* AKCrunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34494DF424DE80FCA0E77A3F6FABB9 /* AKCrunch.m */; };
 		14F02EE225A74E3ED9ED9951A1B328D9 /* AKSimpleWaveGuideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B859A72D550C2B7B9D51A6F7A2DC99 /* AKSimpleWaveGuideModel.m */; };
-		14F6F4392367FABCDC4CDF8D4DF400CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		1517419CCD245B2E64BA3D7C73879D4C /* AKMoogVCF.h in Headers */ = {isa = PBXBuildFile; fileRef = 3388C581313F56F9F44CDD91A45E51DB /* AKMoogVCF.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1530F2D659528D71B382CD0416A32EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		16787ADF25998729F7330EB596A365A8 /* AKTrackedFrequency.m in Sources */ = {isa = PBXBuildFile; fileRef = 43460E4527ADF15E6DCF1B08DF86A751 /* AKTrackedFrequency.m */; };
 		171B972301EAE29DD82663CE814EC291 /* AKAudioRollingWaveformPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F7FC80CCE9CC3D04728C8C40866F77 /* AKAudioRollingWaveformPlot.m */; };
 		1762C312693CEE6FEBAA0D1B117818D2 /* AKSinusoidBursts.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6D4C31F4D8B6DDDAA2F90B29FC8FA7 /* AKSinusoidBursts.m */; };
@@ -117,6 +115,7 @@
 		32F968490200BEC89EDFB9AF551BD4E5 /* AKMidiEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8063D24B87BC33D286835D9A8984DCB0 /* AKMidiEvent.m */; };
 		3329649146205567A8EA50A4506B341E /* AKDopplerEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = A5CCAABB421C9B919E3C6013AFBC4873 /* AKDopplerEffect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3351B47E70767CF0A6000DD45F8DDC49 /* AKMoogVCF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8942CBCA3C3A59AAEE94FC5F652B72D7 /* AKMoogVCF.m */; };
+		3372ECCFF1C4063FC58D7E6985DDC4DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		34C74A978C1AB92B4BB7B297248AF145 /* AKAudioOutputPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB886CCF1FDC7927A33569B7E065D1B /* AKAudioOutputPlot.m */; };
 		34C7F553996A4F0E8B907E93B0F752B5 /* AKMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = F3165842908ABE66A561B0DDB2A403FB /* AKMicrophone.m */; };
 		34D741B54E161D0D6DAA98BDACDBF107 /* AKWarpedFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3146B5B6AE3EED1896E5F7B4AFE1A7A5 /* AKWarpedFFT.m */; };
@@ -127,13 +126,13 @@
 		3586A2036B4C46FE3EBA194416834089 /* AKFFTProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7545797608D80C38EF2A003D4081DA12 /* AKFFTProcessor.m */; };
 		360DEE796A43E909021362C1864F8D60 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CE47871EB3F958CA86FA72F45D56ABF /* TPCircularBuffer.c */; };
 		365522B590A6419B7AE10E47057B21DF /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49C069DBB8E5BCF7B9ADE8CFFB8B68 /* ConstraintMultiplierTarget.swift */; };
+		3862D34F7D660217D500BE1084151B2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B61024A59EAA4C3820631A12B4D322B /* AudioToolbox.framework */; };
 		38D2B245F09F5134E1913B50B9D032E5 /* AKSoundFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2665F497B627C4E8BD747FFFD9D5440B /* AKSoundFont.m */; };
 		38DE71DEDC4CCAE62D45B03C3C704F75 /* DialControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0588466D5B6E85C61799C14556254180 /* DialControl.swift */; };
 		39052E3E5C19360532BF3CB272ABB649 /* AKBeatenPlate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDE6334E37321014FF0FA16D77626D4 /* AKBeatenPlate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		397295F8BF8FA21D735E74CD07DFA1C0 /* AKAudioInputRollingWaveformPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = C2588F92B48D24436A73F6DBA058E99E /* AKAudioInputRollingWaveformPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A5B3D71261316A9529EF1554FD92DE8 /* AKFFTTableWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4014AF0295F2ECA5F9BD9E41266F8E10 /* AKFFTTableWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C1530740320B2219CF6FE4E1663AB3E /* AK3DBinauralAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B14A7A5C0517B3BE54506F10295D727 /* AK3DBinauralAudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C199897A2E82F81F461427D79BDB4F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		3C22AE41F5052DCFE372F95E7DEC2FC1 /* AKSinusoidBursts.h in Headers */ = {isa = PBXBuildFile; fileRef = FA931B67012CC1E9BFB0E611E99ED7F1 /* AKSinusoidBursts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C40AE60124125C64B85B2B81932F0E3 /* AKOrchestra.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E3C7036F9A1BD18B60F973971F663EC /* AKOrchestra.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C9647E7C2BAEE83E92247748FC475C8 /* AKNote.h in Headers */ = {isa = PBXBuildFile; fileRef = 16209166526E97F8D42628708AE09877 /* AKNote.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -169,6 +168,7 @@
 		4C9D986E9B033627CBAAA2805AEFD7C1 /* MultitouchGestureRecognizer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30730006A3D2C65B68CB8B00EC76C214 /* MultitouchGestureRecognizer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D064E9D2BEEFB9EDB56D73488E23E99 /* AKOscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C11515378454E75E39E82B7A4C2D4A /* AKOscillator.m */; };
 		4EC52CED250F30CFF3A772D5AFF6FD5B /* text.h in Headers */ = {isa = PBXBuildFile; fileRef = 1375ABD506C12624FB61DFDED8CBF2B5 /* text.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		50FB2A2095879D8AF835E9CBFA121059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		51F92CD565F219FA58DD8CA2510ED2FF /* AKTablePlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 13835137DC3261D6C3519DF057121425 /* AKTablePlot.m */; };
 		5201C3BA19D735F53A2F289AFDF7D3FB /* EZAudioFloatConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7B29F6A837C13CD4B2E447E09107CF /* EZAudioFloatConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52FE9C789AB277D3109D2D02BBA8450B /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACF09713A511348B413610C489FF3D /* ConstraintInsets.swift */; };
@@ -204,9 +204,7 @@
 		5FDFB192C548E705E7EA23EE4DA6D2EE /* AKManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F87E847803E9FA5A97ACB301A64C2124 /* AKManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		602B92061E36AFDD9A1B6E36E8B3E62A /* AKMultitapDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 997768641831209C535F0490B4146CE1 /* AKMultitapDelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60795214B08070F2B3B1818C61311846 /* AKInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = A88D3C3EA0D360B3A1EE60551B4463B2 /* AKInstrument.m */; };
-		60D784BB28F4A22D003749CE49642601 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		6129435F6F5FAF8096ACF435D4AA2BD3 /* AKSekereInstrument.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A55D79A7BD6559C31335AE10B48E0B6 /* AKSekereInstrument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6185FD37610D9AC36B16FF3D0EBC450B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		61AA8C7B9C449A01850067255066D2D1 /* AKThreePoleLowpassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDFA7BF25957DC4DAA00384136E9F1A /* AKThreePoleLowpassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61C4DE5C53982D5A89A446D38407A07E /* AKProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = DFFA0C2B7CB8F34A9EF8970B79C21181 /* AKProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		624711840E8C3A7021B48815635618E6 /* AKVCOscillatorInstrument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2152E0A4D85A2781EE76D1FFDC1D3F66 /* AKVCOscillatorInstrument.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -232,6 +230,7 @@
 		6ADBE00B0F83BDD18DD8355FD83092A6 /* AKStereoAmplifier.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F95840E47D5600B017E1DF498C40C4 /* AKStereoAmplifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B03C8573288353F0968FFE515829FF2 /* EZAudioUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D017813CD61E2885D22E4EA413139BF1 /* EZAudioUtilities.m */; };
 		6B8A7D27FF845807C20D05B57D9EB6A8 /* AKLowFrequencyOscillator.h in Headers */ = {isa = PBXBuildFile; fileRef = E610B5F815AFEF2E7C092D4EB5B2E64A /* AKLowFrequencyOscillator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BD0EF3144E98625C349C58B2D673525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		6C3B30EFF7885D574FAF322DC858BF72 /* AKCompressorExpander.m in Sources */ = {isa = PBXBuildFile; fileRef = 1166EB18EE38BA120FDD8D885BD99109 /* AKCompressorExpander.m */; };
 		6C650C0A7DA809DB84D1C0B4FF4E3889 /* AKStickInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 0887EA89ADA8906191058403F88B3B98 /* AKStickInstrument.m */; };
 		6C739DFB114D8C905231A68C40A84AD3 /* AKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2E58F5F69E1D25CA76A03D021740D /* AKLine.m */; };
@@ -245,7 +244,6 @@
 		71B6458621FBC4CFBD892866FC829CDD /* AKPhaseLockedVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 91CFF26F055ECBF996F94F83FD17C749 /* AKPhaseLockedVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		721DBA6320D6F85F4C18D01D556DA776 /* UIFont+Protonome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9CFC0D578DD4A62F009B9644732849 /* UIFont+Protonome.swift */; };
 		72DF59C1513EDC3851091FC877BE95DD /* AKTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36CCD6F597294C251EA7306944C87B /* AKTools.m */; };
-		73DC6A282EC976DEF28C0262B41DA2AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		7435E4EF15AC936CA1F2828EB9AD0972 /* AKNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C67B4C85EB0063F2B0829A6D3F7009 /* AKNote.m */; };
 		74367580D56658D92175ABC980B68D7F /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF8765BA6CC2F043A3CB45FA12B56AC /* ConstraintDescription.swift */; };
 		7441754E38B57B9C43522E6D9D622793 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 70686B5D4E4BD7398B434903F3A6524E /* version.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -261,6 +259,7 @@
 		79F7E59861E76016A1FFB65454B29338 /* AKLinearADSREnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = DC497C3439EA8CD9479323BD55732EEE /* AKLinearADSREnvelope.m */; };
 		7B9E01326C13FB06571496431D53A48B /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BE6F21AAA69332311A463B61F0845A /* ConstraintMakerEditable.swift */; };
 		7C40093C079BB9A09AD0444E6EFE120E /* AKGranularSynthesisTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = CE92F3EBCB31D2AF0258C46D52E237AC /* AKGranularSynthesisTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CAC6F705FB63E2E3D31379A31E3BDE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		7CB4AEBE7193F4702DFB73983D34A51B /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A3620FBB0FF120F6D41862183B8E3 /* LayoutConstraintItem.swift */; };
 		7CD0E5A9E672D8DEF32795969FADC218 /* AKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = B63304485AD26FAAA6981D31EBCC37B6 /* AKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D33176EF8B77FE357B051CFA1429D39 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BC24E5DFCD8CC4DB6855A3E59D82E /* ConstraintMakerFinalizable.swift */; };
@@ -318,6 +317,7 @@
 		95B180374862BF7404AF2F04A64B7515 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E3BB90A9E0443D4DF120D87C8891C /* ConstraintConstantTarget.swift */; };
 		95B6429F1537EED19A3426828B48A985 /* EZAudioFloatData.h in Headers */ = {isa = PBXBuildFile; fileRef = 13131392F412DDCD07BA8470514BF90C /* EZAudioFloatData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95B67AAA076A4C34352A1787E14D50C6 /* AKInstrument.h in Headers */ = {isa = PBXBuildFile; fileRef = B5FF5FEA29E33D77BA3E87E61DABAADA /* AKInstrument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9604461FD87A2436FC4836F15F21901F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		962ED6AEED8F0BBEAF5B60C8B85F6F65 /* AKBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = 56053DA583C52EBC4C5D3F4C8E71254B /* AKBalance.m */; };
 		98373624ED401DFA8F64E0E58F54646C /* AKAdditiveCosines.h in Headers */ = {isa = PBXBuildFile; fileRef = B2343171A0D58EDD6C3D4CC059409A0F /* AKAdditiveCosines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		996F535CD5BB77DCD3771B32C7CBAF42 /* AKDeclick.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A1FE39EDB19F182A76D59DC19036F4 /* AKDeclick.m */; };
@@ -342,16 +342,15 @@
 		A4E818BB05301AB1EA1B145BA1FA2B55 /* csound_type_system.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D5B8F5676B58AE41D2C1807860EDD4C /* csound_type_system.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A5466C20D0775CEDD9F5A922711975DE /* AKStereoSoundFileLooper.h in Headers */ = {isa = PBXBuildFile; fileRef = 09327631A7BE65D830A3744181ACA1B4 /* AKStereoSoundFileLooper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A551197A389676CB11E924EC260353EC /* EZAudioDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA15A65A5BCD31979933729744FA3C2 /* EZAudioDisplayLink.m */; };
+		A567BCF4110BF0382FD78D8B6D75E6FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		A57D4432C07757A1220F32E1663956EB /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96863FD847AF6199B0A14A6A569457B1 /* ConstraintRelation.swift */; };
 		A5874974C9B036A1CE762227CF385933 /* AKCrossSynthesizedFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = C260A8BDCF9147374C7562EEFDF81080 /* AKCrossSynthesizedFFT.m */; };
 		A61299153945D1BEDC293C6501F57495 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B308EBB312C06C2BB61C026C4247 /* ConstraintPriority.swift */; };
 		A65F10BB4226B2A65CA474A94F3E5B86 /* AKLinearEnvelope.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A22E6BE37165E63D3740CC1A57E2674 /* AKLinearEnvelope.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A690EF3D11AE40F1B46A9CAFECCB7ABF /* AKMidiNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D4D2B1FEE9B32AF2CB068FAA07EA9 /* AKMidiNote.m */; };
 		A6E81E2294157CDB3C0E8C2F0D452F21 /* AKProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = A704DFE145C68A44ACD9AB128DDA4B19 /* AKProduct.m */; };
-		A7C351E387299316131AA1C169869424 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D4FD03829F068F87D8232A0104983F /* AudioToolbox.framework */; };
 		A8231EB2DFB6585F2EF94DC7006C22F6 /* Degrad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4F08037E455808A682807F18994C4 /* Degrad-dummy.m */; };
 		A8522310B2879836F0FC9DF12FA04217 /* AKDopplerEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B0667DF16310E852B931E01E4D033ED5 /* AKDopplerEffect.m */; };
-		AA2CE2951C41F2C414D6A6D8FADEFA56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		AACCB1FC0E341908C9992B2B105C6EE6 /* AKLowPassButterworthFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 62A4795EE86FBDB9758AAD7055A7CE31 /* AKLowPassButterworthFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAD7DE342F641346304863B4588AB845 /* AKOrchestra.m in Sources */ = {isa = PBXBuildFile; fileRef = CF93296D058BD968B00101D5006EBFDD /* AKOrchestra.m */; };
 		ABE336A59F8ED46139DCD786496D4F07 /* AKPhrase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B8EDC21900CCB55A9E6A7C1FAB099ED /* AKPhrase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -393,7 +392,6 @@
 		B9716926F7D8FFCAE10E3B69C5A56119 /* AKSekereInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = DF54FE3BDD59ADAA5CEDB3326475B807 /* AKSekereInstrument.m */; };
 		BA288206754A7A2306AD0A83063F45D3 /* AKMaskedFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA36B6B660F29501464E79CAE03CD /* AKMaskedFFT.m */; };
 		BA43B67D12DEEB02AED55D8B10C63A26 /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBD56245EBB4757E1C8DC821F3C1A0 /* EZAudio.m */; };
-		BAD3D062CC02639D2685B55CB4600498 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		BADF88642107BE70483DC5C983AC44A0 /* AKPropertySlider.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2BF29E4014F10E08EDDE7E3F0644B /* AKPropertySlider.m */; };
 		BC8E42C2C04DCBB24EBE1ECF5D88493C /* AKStringResonator.m in Sources */ = {isa = PBXBuildFile; fileRef = AC874A55247E7458FF6FC02BC346741B /* AKStringResonator.m */; };
 		BC9D9B28FCAEBDA4F55BD7C67131A4E3 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63B6B7776592F46E24F6A1AA8EE47C3 /* ConstraintMakerPriortizable.swift */; };
@@ -408,6 +406,7 @@
 		C122EDB4DBC6DFF478B380F897D5FB04 /* AKAudioOutputPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = DE22E8FD752842A3B606CD653594BB01 /* AKAudioOutputPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1978A258AE3F78705A3ABBD24F59F55 /* AKBeatenPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 579E7A00966AED9C24F526EFB4357B04 /* AKBeatenPlate.m */; };
 		C1CBB942F9AEE8877153134A9501CEA0 /* AKHilbertTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 730FDEFBC1287191E4E90A13FB68D50D /* AKHilbertTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1FEF628A97D87343E5E3BA7F36DCAA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		C220363FB21541F21605D14DB21F7DE3 /* AKPanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6242B231C3A0A8F230A2FB8C5AF3213F /* AKPanner.m */; };
 		C2B946C51DFA9C7E73B186EFC6D5127D /* AKInstrumentProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD1C828924558C66189947EE24423B /* AKInstrumentProperty.m */; };
 		C2CDB18C21F07D55D98225E9D00F3B40 /* AKStick.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CFF121112CA0F858C4853719210D6A9 /* AKStick.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -417,6 +416,7 @@
 		C63761BEC8B34A42AB5E8D0DCF22B8D5 /* AKWarpedFFT.h in Headers */ = {isa = PBXBuildFile; fileRef = 022D5924528C1D27BD0DE2138EB3333C /* AKWarpedFFT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C640E9FC2A1F98AC49B677F46DCA3F54 /* AKStickInstrument.h in Headers */ = {isa = PBXBuildFile; fileRef = 56E2717A21C4029418A1D3EF110D9F77 /* AKStickInstrument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C66D9BD791A7905014FB25C006722D0B /* Bezzy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C71542BCF57971508033D4F96A6FB6F /* Bezzy.framework */; };
+		C6BB77B258604FB782A1828C006D8BA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		C7356DB49EB9BBD58F01D981501554D6 /* UInt32+FourCharacterCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16881B925D43845A3C3E6BBF833F214 /* UInt32+FourCharacterCodes.swift */; };
 		C794FD566DEE1F6BB1576B13DAED7569 /* AKTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C2541AB777CF58F279CA731AD89718 /* AKTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C79DE67FF358ECACD7D748FB2AEB5B2C /* AKSingleInputMathOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 48706E8B002714C26B8528281760BC71 /* AKSingleInputMathOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -428,7 +428,6 @@
 		CBCCBCFB518F9AAA491998367AF443B0 /* AKNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = E9142C73DBB529D9F759595086E4A267 /* AKNoise.m */; };
 		CBCD1E6D222DC2F45914EA83FF24AD95 /* AKMP3FileInput.m in Sources */ = {isa = PBXBuildFile; fileRef = D65290BA7140EAA44F5C43DC8E40C0D6 /* AKMP3FileInput.m */; };
 		CD905EBC0468085A70E329A7E24D409C /* AKInterpolatedRandomNumberPulse.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A5E418210ED92078E9DF93F74E18C9 /* AKInterpolatedRandomNumberPulse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE0118A1784B79EF22A900E43D46399E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		CE3AB81B4D4E7D516F1D7F1908611FC4 /* AKNoteProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 08BF74AA2C41C4ACBE693AC79C8EF6F1 /* AKNoteProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEA9339DFDBB8ACE1C5CAE1AE5BCACFE /* AKFMOscillatorInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5939B00FBF29C6731DED926A7BEDF521 /* AKFMOscillatorInstrument.m */; };
 		CEB4B1970DFC4D0A14AE12DB21259551 /* AKOscillator.h in Headers */ = {isa = PBXBuildFile; fileRef = 967B5A68BAD89B857866AB0EEF77C615 /* AKOscillator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -440,12 +439,14 @@
 		D1696CF469B5EF2363B6071C34E3F912 /* AKInverse.m in Sources */ = {isa = PBXBuildFile; fileRef = C632C2EE73EBEBBF7528009BF7FADEB0 /* AKInverse.m */; };
 		D1A113C128BC9BCE229D04680DCED82D /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AD1EAA99FB7F224F62B322C0C830 /* ConstraintLayoutGuide+Extensions.swift */; };
 		D1CE5650F1D36FED0426B84298A513AF /* AKPitchShifterPedal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6101164D0155164ACCF4C0451F780280 /* AKPitchShifterPedal.m */; };
+		D1F74B3588ACAC38AE80E7C011608772 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		D206085DB2AC73C3162F66411DB57764 /* AKStereoAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 685E80EAE4994712C9076947127AEADA /* AKStereoAudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D23B1A55D560FDFAF68207E5A8D33386 /* AKTrackedAmplitudeFromFSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = BAA5798549909CF5B25DB62387528EF0 /* AKTrackedAmplitudeFromFSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2F5DD963CBFFC18DE453817478E093A /* pstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 73DA7FED95AA6171EAC0D73A4381D39D /* pstream.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D3D3CF0B91AEA14B98768E845A97622E /* AKTableValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 605B5DBC7B2D0780BE332B7B91C3BF15 /* AKTableValue.m */; };
 		D41C215880FACD75DFCF83667F09A571 /* AKFlanger.m in Sources */ = {isa = PBXBuildFile; fileRef = BE47AD90E8B924EFE814E786AA7F7671 /* AKFlanger.m */; };
 		D5F301BCBD954D36C8FC1D78BDB5A68B /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD658670D319A8B05D191BE3587818 /* Constraint.swift */; };
+		D61A319182873B6A1E5390ADFA44D2FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		D6302D68497B6DB99165393F7F3FE13C /* AKMonoSoundFileLooper.h in Headers */ = {isa = PBXBuildFile; fileRef = AD915ACECEE60F9241F9EF24E3696410 /* AKMonoSoundFileLooper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D766069321EAC5E0BCF72F6F36AA1132 /* AKAudioAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AD27F409D44CBF5C4C788FBD68D788 /* AKAudioAnalyzer.m */; };
 		D9032CDB9791CCA5B9B791DAA8ACB9B5 /* AudioUnit+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFCC82E0D25AAE71F7DCA3C16B152D /* AudioUnit+Properties.swift */; };
@@ -464,7 +465,6 @@
 		DB3F6E6EEB56169DB72B67FE66A8D022 /* AKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB46F595A6B24927163FEA0C70F8847 /* AKManager.m */; };
 		DB639817921FD15B7ED3CB9948E61EFD /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C850272061A81B7C43656A667FEBD3 /* LayoutConstraint.swift */; };
 		DC02EE8D95F83B72847169BF69B41A83 /* AKMidiInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = D515B95798DCDC05E15734159A360492 /* AKMidiInstrument.m */; };
-		DCE98DE8D4AB276CF206B6CF90775795 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		DD1F1200C9951B375A6F8FF5CB6501C0 /* AKSoundFileTable.h in Headers */ = {isa = PBXBuildFile; fileRef = BB29158F7504CEFC75D5E0FB57395F3D /* AKSoundFileTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDA7B47BC93537BCC437B3730F1D7078 /* AKSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B76816E510622EE7989E8C021C8B07A /* AKSum.m */; };
 		DE1D6D368E268DBECE112CAE5C350111 /* AKInverse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F108D5CB43C98258FD90EA185BB8CBD /* AKInverse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -486,11 +486,11 @@
 		E54C1B28ED5B658E51ED70F6D6DBB117 /* Degrad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8590158D44EB83D2EBFD73248E132D35 /* Degrad.framework */; };
 		E63A95A8A0FEA46CB8094E99ED3ACCE5 /* UIColor+Protonome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153327FB523D2B2685AD133D04CC392E /* UIColor+Protonome.swift */; };
 		E6E94B6BDDDCB6D2B598B964C856BE98 /* AKInstrumentPropertyPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = 5739A0F1117F77579B82A849C8A4E0E3 /* AKInstrumentPropertyPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E791F076356C582B6EC6A52689E93350 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */; };
 		E7AF212846216FBA5104FDA4B9FAD8DC /* CsoundObj.h in Headers */ = {isa = PBXBuildFile; fileRef = 751048C4E914079B90988649281791DA /* CsoundObj.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7CF19D9C21E6185667DEA0BA4D633D7 /* AKFFTProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1E1BA889AA56762194A2286EFE8051 /* AKFFTProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7D8B8356A00EEDDE4EAC1AF0B91114E /* AKSpectralVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 77CB68298DC1D3115CE21A3C443522CF /* AKSpectralVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7FEAD475347438CC87E9DBD1C7769CC /* AKVariableFrequencyResponseBandPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9080F6CA6D82B5EB040BE881999175 /* AKVariableFrequencyResponseBandPassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E843A1BB566AA4B5A288565E5C83020C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */; };
 		E84835E27AECF560BAF2AAC61B891AAB /* AKAudioOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2041C3EF7996BDA2B70B634A4DCDAD /* AKAudioOutput.m */; };
 		E8BACD544577EBFEEB022184090749CB /* ProtonomeAudioKitControls-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C319C3C0AA9FC80292A8F0CEEF8B0127 /* ProtonomeAudioKitControls-dummy.m */; };
 		E8DCDC5A594B99B902725815C662DEAF /* AKLowFrequencyOscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C1D7EB57104AE0D74C1B8347C74EA /* AKLowFrequencyOscillator.m */; };
@@ -670,7 +670,6 @@
 		0514D4D9F311153D82C79EE67A64998B /* AKRandomNumbers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKRandomNumbers.h; path = "AudioKit/Operations/Signal Generators/Random Generators/AKRandomNumbers.h"; sourceTree = "<group>"; };
 		0588466D5B6E85C61799C14556254180 /* DialControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DialControl.swift; path = Classes/Controls/DialControl.swift; sourceTree = "<group>"; };
 		0603B8A11A6C3F5E946621C5D79213A6 /* MultitouchGestureRecognizer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MultitouchGestureRecognizer.xcconfig; sourceTree = "<group>"; };
-		06D4FD03829F068F87D8232A0104983F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		073E7441F7013F9DE2505A7E0F9BF41C /* AKFMOscillator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKFMOscillator.m; path = "AudioKit/Operations/Signal Generators/Oscillators/AKFMOscillator.m"; sourceTree = "<group>"; };
 		080BA814F8BD04F4A95DBB880433D7CC /* AKAudioFFTPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAudioFFTPlot.h; path = AudioKit/Utilities/Plots/AKAudioFFTPlot.h; sourceTree = "<group>"; };
 		0824AD4639BD84AB038DE954D4A2F493 /* AKDelay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKDelay.m; path = "AudioKit/Operations/Signal Modifiers/Delays/AKDelay.m"; sourceTree = "<group>"; };
@@ -682,6 +681,7 @@
 		0ABE5EFEC702BB4E1E16A69782DE65AD /* AKMidiEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMidiEvent.h; path = "AudioKit/Core Classes/MIDI/AKMidiEvent.h"; sourceTree = "<group>"; };
 		0AE9D56E608975D1CAF0F0D1D6322F9D /* AKMonoFileInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMonoFileInput.h; path = "AudioKit/Operations/Signal Input and Output/AKMonoFileInput.h"; sourceTree = "<group>"; };
 		0AEFCC82E0D25AAE71F7DCA3C16B152D /* AudioUnit+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AudioUnit+Properties.swift"; path = "AudioUnitExtensions/AudioUnit+Properties.swift"; sourceTree = "<group>"; };
+		0B61024A59EAA4C3820631A12B4D322B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		0BDFA7BF25957DC4DAA00384136E9F1A /* AKThreePoleLowpassFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKThreePoleLowpassFilter.h; path = "AudioKit/Operations/Signal Modifiers/Filters/AKThreePoleLowpassFilter.h"; sourceTree = "<group>"; };
 		0BEBD56245EBB4757E1C8DC821F3C1A0 /* EZAudio.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudio.m; path = AudioKit/Utilities/Plots/EZAudio/EZAudio.m; sourceTree = "<group>"; };
 		0C96F5B7B24BE8E907B94F4AEEE21025 /* EZAudioFloatData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFloatData.m; path = AudioKit/Utilities/Plots/EZAudio/EZAudioFloatData.m; sourceTree = "<group>"; };
@@ -785,6 +785,7 @@
 		38755E0D002F09E668D7A5B9D857EA1A /* AKGranularSynthesizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKGranularSynthesizer.h; path = "AudioKit/Operations/Signal Generators/Granular Synthesis/AKGranularSynthesizer.h"; sourceTree = "<group>"; };
 		392ACD966FC4F2435C6DB6F5E1F1E802 /* csoundCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = csoundCore.h; path = AudioKit/Platforms/Common/csound/csoundCore.h; sourceTree = "<group>"; };
 		3A0E991ED7538A8248854647972D59D4 /* AKTrackedFrequencyFromFSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTrackedFrequencyFromFSignal.h; path = AudioKit/Operations/Analysis/AKTrackedFrequencyFromFSignal.h; sourceTree = "<group>"; };
+		3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3A4FFA6603C465F80A8C3C7539DAA746 /* EZAudioPlot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlot.m; path = AudioKit/Utilities/Plots/EZAudio/EZAudioPlot.m; sourceTree = "<group>"; };
 		3A5096E6644671D2CFCEAF02113227B2 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		3A696AE3C6ED4C86FDEF594C929A9904 /* AKVibraphoneInstrument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKVibraphoneInstrument.h; path = AudioKit/Utilities/Instruments/Emulations/AKVibraphoneInstrument.h; sourceTree = "<group>"; };
@@ -837,7 +838,6 @@
 		4D02191B6C28AAABB85A479F6A610F6B /* AKMixedFFT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMixedFFT.h; path = AudioKit/Operations/FFT/AKMixedFFT.h; sourceTree = "<group>"; };
 		4D1C4CF2D809126D7A1EA40EBE64A4D3 /* Pods-HOWL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HOWL-dummy.m"; sourceTree = "<group>"; };
 		4D65E8CA9BF55B7E96CE55C23064997C /* AKConstant.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKConstant.m; path = AudioKit/Parameters/AKConstant.m; sourceTree = "<group>"; };
-		4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4E9F8CF84D50F3D1D8FB70691F9DB263 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		4EB098EBCE7F6E68399F4BBAD3F94F9D /* Bezzy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bezzy.swift; sourceTree = "<group>"; };
 		4EF5A895DAE31E5B8D561E4471E80CCC /* AKMandolinInstrument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMandolinInstrument.h; path = AudioKit/Utilities/Instruments/Emulations/AKMandolinInstrument.h; sourceTree = "<group>"; };
@@ -1273,7 +1273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAD3D062CC02639D2685B55CB4600498 /* Foundation.framework in Frameworks */,
+				D1F74B3588ACAC38AE80E7C011608772 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1281,7 +1281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6185FD37610D9AC36B16FF3D0EBC450B /* Foundation.framework in Frameworks */,
+				124EDAAB11775B3901FEBDF60765FFCF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1289,7 +1289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C199897A2E82F81F461427D79BDB4F2 /* Foundation.framework in Frameworks */,
+				C1FEF628A97D87343E5E3BA7F36DCAA4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,7 +1297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F6F4392367FABCDC4CDF8D4DF400CA /* Foundation.framework in Frameworks */,
+				D61A319182873B6A1E5390ADFA44D2FF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1305,7 +1305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1530F2D659528D71B382CD0416A32EC3 /* Foundation.framework in Frameworks */,
+				9604461FD87A2436FC4836F15F21901F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1313,7 +1313,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73DC6A282EC976DEF28C0262B41DA2AE /* Foundation.framework in Frameworks */,
+				7CAC6F705FB63E2E3D31379A31E3BDE6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1321,7 +1321,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F4AE4345B6A05DE85E679DD6BE3CE31 /* Foundation.framework in Frameworks */,
+				E843A1BB566AA4B5A288565E5C83020C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1329,7 +1329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE98DE8D4AB276CF206B6CF90775795 /* Foundation.framework in Frameworks */,
+				6BD0EF3144E98625C349C58B2D673525 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1337,8 +1337,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C351E387299316131AA1C169869424 /* AudioToolbox.framework in Frameworks */,
-				AA2CE2951C41F2C414D6A6D8FADEFA56 /* Foundation.framework in Frameworks */,
+				3862D34F7D660217D500BE1084151B2B /* AudioToolbox.framework in Frameworks */,
+				3372ECCFF1C4063FC58D7E6985DDC4DB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1346,7 +1346,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D784BB28F4A22D003749CE49642601 /* Foundation.framework in Frameworks */,
+				50FB2A2095879D8AF835E9CBFA121059 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1356,7 +1356,7 @@
 			files = (
 				C66D9BD791A7905014FB25C006722D0B /* Bezzy.framework in Frameworks */,
 				E54C1B28ED5B658E51ED70F6D6DBB117 /* Degrad.framework in Frameworks */,
-				E791F076356C582B6EC6A52689E93350 /* Foundation.framework in Frameworks */,
+				A567BCF4110BF0382FD78D8B6D75E6FF /* Foundation.framework in Frameworks */,
 				5802FF93F67723BDBA8A65AA299D06FD /* Lerp.framework in Frameworks */,
 				48CC65AB4526E6881FE40F5243067A45 /* SnapKit.framework in Frameworks */,
 			);
@@ -1366,7 +1366,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0118A1784B79EF22A900E43D46399E /* Foundation.framework in Frameworks */,
+				C6BB77B258604FB782A1828C006D8BA3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1420,7 +1420,7 @@
 				8590158D44EB83D2EBFD73248E132D35 /* Degrad.framework */,
 				92B46B400645CDBABD7F921B8561D5E8 /* Lerp.framework */,
 				DECB2FB9AD047C78F5338A4D3BA1F4FB /* SnapKit.framework */,
-				81D38701F155F0ABCA04448D1F84AE25 /* iOS */,
+				CD576FF65F83C5855413C6C2FAB8C34B /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2086,15 +2086,6 @@
 			path = "../Target Support Files/Degrad";
 			sourceTree = "<group>";
 		};
-		81D38701F155F0ABCA04448D1F84AE25 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				06D4FD03829F068F87D8232A0104983F /* AudioToolbox.framework */,
-				4D8DE27D191449AF47152A6FFA72E929 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		8BDA0541A5F597D476E4FD217BDE9C0D /* Lerp */ = {
 			isa = PBXGroup;
 			children = (
@@ -2159,6 +2150,15 @@
 			);
 			name = ProtonomeRoundedViews;
 			path = ProtonomeRoundedViews;
+			sourceTree = "<group>";
+		};
+		CD576FF65F83C5855413C6C2FAB8C34B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0B61024A59EAA4C3820631A12B4D322B /* AudioToolbox.framework */,
+				3A25FA91BD98F54454365D76FBA8DB9E /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		D58083A17E42B230C4D2633A3B40FE09 /* Audiobus */ = {
@@ -2823,7 +2823,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -3309,919 +3309,925 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+		0D297E58854288413233DA5109A25A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACFAE8ABF9C9A0B1D79E09A633D78DC1 /* Pods-HOWL.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HOWL/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HOWL/Pods-HOWL.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HOWL;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		119ADC6942A28B1D937524CA936A962B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EC606AF1DE0EAC6B6C6EFDE7C2B3512 /* Persistable.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Persistable/Persistable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Persistable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Persistable/Persistable.modulemap";
+				PRODUCT_NAME = Persistable;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1DD5286226077A3A7F0073424645148C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E16526D9B53B59903AC6E64A8C3E811 /* AudioKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AudioKit/AudioKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AudioKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AudioKit/AudioKit.modulemap";
+				PRODUCT_NAME = AudioKit;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		245CDC4BE154B1F24BF97C511D5E3C0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD0FF87C3164BDB9CEF9BEDD9BA0684 /* ProtonomeAudioKitControls.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProtonomeAudioKitControls/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls.modulemap";
+				PRODUCT_NAME = ProtonomeAudioKitControls;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		27AD435C31DFF9C4174676813BC30C80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EC606AF1DE0EAC6B6C6EFDE7C2B3512 /* Persistable.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Persistable/Persistable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Persistable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Persistable/Persistable.modulemap";
+				PRODUCT_NAME = Persistable;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		40755589C80637DFDE08FDE66A9DADEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0603B8A11A6C3F5E946621C5D79213A6 /* MultitouchGestureRecognizer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MultitouchGestureRecognizer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer.modulemap";
+				PRODUCT_NAME = MultitouchGestureRecognizer;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		41C68E58F5BC0DB4647D10914DCC5E58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4C6D9ACDF599EB1BBA62E8C34B45337 /* Bezzy.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Bezzy/Bezzy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Bezzy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Bezzy/Bezzy.modulemap";
+				PRODUCT_NAME = Bezzy;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4641E273DDA1952BC67258DE4F885E80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD0FF87C3164BDB9CEF9BEDD9BA0684 /* ProtonomeAudioKitControls.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProtonomeAudioKitControls/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls.modulemap";
+				PRODUCT_NAME = ProtonomeAudioKitControls;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E7D7F65600FCF6D965F62F970403B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF93CE57C845036A21DD2C9E76AE1FB6 /* AudioUnitExtensions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AudioUnitExtensions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions.modulemap";
+				PRODUCT_NAME = AudioUnitExtensions;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6E14E61E2AAF3E5EBB05F4DBB506AE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B43781874D971EBD85281144CE1B14 /* Degrad.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Degrad/Degrad-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Degrad/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Degrad/Degrad.modulemap";
+				PRODUCT_NAME = Degrad;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8AFF211C0C43A366DA46E130B942251B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13A527266611E1CD87E26F0BE856325F /* Parity.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Parity/Parity-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Parity/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Parity/Parity.modulemap";
+				PRODUCT_NAME = Parity;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9950CA5F875CBC6DA726BE9193006E65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B44F7113B0592185A8C7E84192EC79D /* ProtonomeRoundedViews.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProtonomeRoundedViews/ProtonomeRoundedViews-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProtonomeRoundedViews/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ProtonomeRoundedViews/ProtonomeRoundedViews.modulemap";
+				PRODUCT_NAME = ProtonomeRoundedViews;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A084FEF4E706E037E1DF5B9B9D0EAE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E16526D9B53B59903AC6E64A8C3E811 /* AudioKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AudioKit/AudioKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AudioKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AudioKit/AudioKit.modulemap";
+				PRODUCT_NAME = AudioKit;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA103D8AFE169ED1DF3C05FA4BD5D633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7BEE3A450110FD202752A68F06FF92B /* SnapKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
+				PRODUCT_NAME = SnapKit;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA7C0B9722F3DEC58F2F7D7B256EB140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7BEE3A450110FD202752A68F06FF92B /* SnapKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
+				PRODUCT_NAME = SnapKit;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BD8A71668226C8CA8FC6C9F230A15B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13A527266611E1CD87E26F0BE856325F /* Parity.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Parity/Parity-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Parity/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Parity/Parity.modulemap";
+				PRODUCT_NAME = Parity;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C17896FCDACB45A03B59D9EA412E33DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBAF5881B32DA0E8268A597E00D1D352 /* Lerp.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Lerp/Lerp-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Lerp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Lerp/Lerp.modulemap";
+				PRODUCT_NAME = Lerp;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA0C71C65776F75CCFC9B6480AA15628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B43781874D971EBD85281144CE1B14 /* Degrad.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Degrad/Degrad-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Degrad/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Degrad/Degrad.modulemap";
+				PRODUCT_NAME = Degrad;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB0DF6C6868F75B5275375CD7D193502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBAF5881B32DA0E8268A597E00D1D352 /* Lerp.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Lerp/Lerp-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Lerp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Lerp/Lerp.modulemap";
+				PRODUCT_NAME = Lerp;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDAB9430E391A522E335F5DE0E10A1BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF93CE57C845036A21DD2C9E76AE1FB6 /* AudioUnitExtensions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AudioUnitExtensions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions.modulemap";
+				PRODUCT_NAME = AudioUnitExtensions;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D817FF0F8CB0D13CDC0E601DA2A814B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0603B8A11A6C3F5E946621C5D79213A6 /* MultitouchGestureRecognizer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MultitouchGestureRecognizer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer.modulemap";
+				PRODUCT_NAME = MultitouchGestureRecognizer;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E0960E117C724BECE76597EE5202D92C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBAF4F5973C9F282860BDF1E60CAC5CB /* Pods-HOWL.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HOWL/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HOWL/Pods-HOWL.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HOWL;
+				PROTONOME_AUDIOKIT_ENABLED = true;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		06E54391A5E47B091D5273E297A42664 /* Debug */ = {
+		E750477DC4ED9B336257815A2743275C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACFAE8ABF9C9A0B1D79E09A633D78DC1 /* Pods-HOWL.debug.xcconfig */;
+			baseConfigurationReference = B4C6D9ACDF599EB1BBA62E8C34B45337 /* Bezzy.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-HOWL/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Bezzy/Bezzy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Bezzy/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HOWL/Pods-HOWL.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_HOWL;
+				MODULEMAP_FILE = "Target Support Files/Bezzy/Bezzy.modulemap";
+				PRODUCT_NAME = Bezzy;
 				PROTONOME_AUDIOKIT_ENABLED = true;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0C1367516D161E5BCFA7E703DA3AA52A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13A527266611E1CD87E26F0BE856325F /* Parity.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Parity/Parity-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Parity/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Parity/Parity.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Parity;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1E2EC456CD44F103DD9C209BB53E81C0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9B43781874D971EBD85281144CE1B14 /* Degrad.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Degrad/Degrad-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Degrad/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Degrad/Degrad.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Degrad;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2374BBA56C775D378C710F1306CB4880 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCD0FF87C3164BDB9CEF9BEDD9BA0684 /* ProtonomeAudioKitControls.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProtonomeAudioKitControls/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ProtonomeAudioKitControls;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		24FF2BB07318E8C520D4F8C3CE742149 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B44F7113B0592185A8C7E84192EC79D /* ProtonomeRoundedViews.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ProtonomeRoundedViews/ProtonomeRoundedViews-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProtonomeRoundedViews/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ProtonomeRoundedViews/ProtonomeRoundedViews.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ProtonomeRoundedViews;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2AA188DB7414424932727262D004153F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E16526D9B53B59903AC6E64A8C3E811 /* AudioKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AudioKit/AudioKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AudioKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AudioKit/AudioKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AudioKit;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2EB69BDE28C0B106DE515DE8863A7851 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0603B8A11A6C3F5E946621C5D79213A6 /* MultitouchGestureRecognizer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MultitouchGestureRecognizer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MultitouchGestureRecognizer;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3E988E579FE8121460E30E08BCB1ADA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EC606AF1DE0EAC6B6C6EFDE7C2B3512 /* Persistable.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Persistable/Persistable-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Persistable/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Persistable/Persistable.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Persistable;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4B69F00EFE580FFA86809363AEB9DAA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF93CE57C845036A21DD2C9E76AE1FB6 /* AudioUnitExtensions.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AudioUnitExtensions/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AudioUnitExtensions;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		633BB79844E666EDBD7D2E204D056DAB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF93CE57C845036A21DD2C9E76AE1FB6 /* AudioUnitExtensions.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AudioUnitExtensions/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AudioUnitExtensions/AudioUnitExtensions.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AudioUnitExtensions;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8234FA29F60FF55665058A2015BD6B4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7BEE3A450110FD202752A68F06FF92B /* SnapKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SnapKit;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		828E65B134D6778AEA692E1CFEC3FF5E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4C6D9ACDF599EB1BBA62E8C34B45337 /* Bezzy.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Bezzy/Bezzy-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Bezzy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Bezzy/Bezzy.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Bezzy;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		83A1829430FC58DD72D2053F982DCB2F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBAF5881B32DA0E8268A597E00D1D352 /* Lerp.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Lerp/Lerp-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Lerp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Lerp/Lerp.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Lerp;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8A38D5D7E6CAD3539A9A7F50C5DF8C65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EC606AF1DE0EAC6B6C6EFDE7C2B3512 /* Persistable.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Persistable/Persistable-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Persistable/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Persistable/Persistable.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Persistable;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8A71D0E0641A56EF5A09A6C6780B3D3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBAF5881B32DA0E8268A597E00D1D352 /* Lerp.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Lerp/Lerp-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Lerp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Lerp/Lerp.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Lerp;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A401D3372D53479258AF2A4FFF4717AC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCD0FF87C3164BDB9CEF9BEDD9BA0684 /* ProtonomeAudioKitControls.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProtonomeAudioKitControls/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ProtonomeAudioKitControls/ProtonomeAudioKitControls.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ProtonomeAudioKitControls;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A463D9A47BC355E8CD941B0AAE2C3289 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBAF4F5973C9F282860BDF1E60CAC5CB /* Pods-HOWL.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-HOWL/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HOWL/Pods-HOWL.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_HOWL;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A8873C38535D0C9BBB0F25C4FC614379 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9B43781874D971EBD85281144CE1B14 /* Degrad.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Degrad/Degrad-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Degrad/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Degrad/Degrad.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Degrad;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C6986D4D964DEDB9D4C1D6AFBEA0E877 /* Debug */ = {
+		EE0A0679459A6B2757B6309CDEE66308 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B44F7113B0592185A8C7E84192EC79D /* ProtonomeRoundedViews.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/ProtonomeRoundedViews/ProtonomeRoundedViews-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ProtonomeRoundedViews/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ProtonomeRoundedViews/ProtonomeRoundedViews.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ProtonomeRoundedViews;
 				PROTONOME_AUDIOKIT_ENABLED = true;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D1B8A4C69887E75020300E4EE888304C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0603B8A11A6C3F5E946621C5D79213A6 /* MultitouchGestureRecognizer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MultitouchGestureRecognizer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MultitouchGestureRecognizer/MultitouchGestureRecognizer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MultitouchGestureRecognizer;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D64F443BF5F3B2398AC27C563D7603F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13A527266611E1CD87E26F0BE856325F /* Parity.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Parity/Parity-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Parity/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Parity/Parity.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Parity;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D8AA4581F2DF0925402A73C88A3BB3C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4C6D9ACDF599EB1BBA62E8C34B45337 /* Bezzy.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Bezzy/Bezzy-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Bezzy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Bezzy/Bezzy.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Bezzy;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D96F7A36F51F2F255E3B81C1F499E45E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E16526D9B53B59903AC6E64A8C3E811 /* AudioKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AudioKit/AudioKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AudioKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AudioKit/AudioKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AudioKit;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FE5C7CBF08DA3DF6E0E19CA636822840 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7BEE3A450110FD202752A68F06FF92B /* SnapKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SnapKit;
-				PROTONOME_AUDIOKIT_ENABLED = true;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -4233,8 +4239,8 @@
 		180BAEC7B19DB97207C6AD7300A214FB /* Build configuration list for PBXNativeTarget "Parity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D64F443BF5F3B2398AC27C563D7603F9 /* Debug */,
-				0C1367516D161E5BCFA7E703DA3AA52A /* Release */,
+				BD8A71668226C8CA8FC6C9F230A15B09 /* Debug */,
+				8AFF211C0C43A366DA46E130B942251B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4242,8 +4248,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
-				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
+				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4251,8 +4257,8 @@
 		494D1B8565907B531CE3FD6299DBA894 /* Build configuration list for PBXNativeTarget "Lerp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A71D0E0641A56EF5A09A6C6780B3D3B /* Debug */,
-				83A1829430FC58DD72D2053F982DCB2F /* Release */,
+				CB0DF6C6868F75B5275375CD7D193502 /* Debug */,
+				C17896FCDACB45A03B59D9EA412E33DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4260,8 +4266,8 @@
 		5A360B55865A996BBAD31028B9F1EBF4 /* Build configuration list for PBXNativeTarget "ProtonomeAudioKitControls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A401D3372D53479258AF2A4FFF4717AC /* Debug */,
-				2374BBA56C775D378C710F1306CB4880 /* Release */,
+				4641E273DDA1952BC67258DE4F885E80 /* Debug */,
+				245CDC4BE154B1F24BF97C511D5E3C0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4269,8 +4275,8 @@
 		607F5B1F59D05134BB85650A36A76333 /* Build configuration list for PBXNativeTarget "Bezzy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8AA4581F2DF0925402A73C88A3BB3C5 /* Debug */,
-				828E65B134D6778AEA692E1CFEC3FF5E /* Release */,
+				41C68E58F5BC0DB4647D10914DCC5E58 /* Debug */,
+				E750477DC4ED9B336257815A2743275C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4278,8 +4284,8 @@
 		6975BF9AEA58F92EC7615697851F4358 /* Build configuration list for PBXNativeTarget "Pods-HOWL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06E54391A5E47B091D5273E297A42664 /* Debug */,
-				A463D9A47BC355E8CD941B0AAE2C3289 /* Release */,
+				0D297E58854288413233DA5109A25A0E /* Debug */,
+				E0960E117C724BECE76597EE5202D92C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4287,8 +4293,8 @@
 		6C124A252A8C83779295D5EC65E587E0 /* Build configuration list for PBXNativeTarget "Persistable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E988E579FE8121460E30E08BCB1ADA5 /* Debug */,
-				8A38D5D7E6CAD3539A9A7F50C5DF8C65 /* Release */,
+				119ADC6942A28B1D937524CA936A962B /* Debug */,
+				27AD435C31DFF9C4174676813BC30C80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4296,8 +4302,8 @@
 		72A507BDC3641F107A04616CF0781C0A /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8234FA29F60FF55665058A2015BD6B4B /* Debug */,
-				FE5C7CBF08DA3DF6E0E19CA636822840 /* Release */,
+				AA103D8AFE169ED1DF3C05FA4BD5D633 /* Debug */,
+				AA7C0B9722F3DEC58F2F7D7B256EB140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4305,8 +4311,8 @@
 		A9C13E24F2BD43F8A9AC70A3344FECB3 /* Build configuration list for PBXNativeTarget "AudioUnitExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				633BB79844E666EDBD7D2E204D056DAB /* Debug */,
-				4B69F00EFE580FFA86809363AEB9DAA2 /* Release */,
+				CDAB9430E391A522E335F5DE0E10A1BB /* Debug */,
+				5E7D7F65600FCF6D965F62F970403B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4314,8 +4320,8 @@
 		E2D0FE44C2ED02F37855BCC6DE4DE2D1 /* Build configuration list for PBXNativeTarget "Degrad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8873C38535D0C9BBB0F25C4FC614379 /* Debug */,
-				1E2EC456CD44F103DD9C209BB53E81C0 /* Release */,
+				CA0C71C65776F75CCFC9B6480AA15628 /* Debug */,
+				6E14E61E2AAF3E5EBB05F4DBB506AE8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4323,8 +4329,8 @@
 		E428344019DCDF0E392E8B295E17042F /* Build configuration list for PBXNativeTarget "AudioKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2AA188DB7414424932727262D004153F /* Debug */,
-				D96F7A36F51F2F255E3B81C1F499E45E /* Release */,
+				A084FEF4E706E037E1DF5B9B9D0EAE30 /* Debug */,
+				1DD5286226077A3A7F0073424645148C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4332,8 +4338,8 @@
 		F6DBBC49DD46C73C77FD04E7DAF1F906 /* Build configuration list for PBXNativeTarget "MultitouchGestureRecognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D1B8A4C69887E75020300E4EE888304C /* Debug */,
-				2EB69BDE28C0B106DE515DE8863A7851 /* Release */,
+				40755589C80637DFDE08FDE66A9DADEF /* Debug */,
+				D817FF0F8CB0D13CDC0E601DA2A814B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4341,8 +4347,8 @@
 		FFC62DF87CEB069950A9B1AF6110D21B /* Build configuration list for PBXNativeTarget "ProtonomeRoundedViews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6986D4D964DEDB9D4C1D6AFBEA0E877 /* Debug */,
-				24FF2BB07318E8C520D4F8C3CE742149 /* Release */,
+				9950CA5F875CBC6DA726BE9193006E65 /* Debug */,
+				EE0A0679459A6B2757B6309CDEE66308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
