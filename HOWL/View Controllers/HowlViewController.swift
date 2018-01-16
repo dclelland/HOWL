@@ -20,7 +20,17 @@ class HowlViewController: UIViewController {
     
     // MARK: - Overrides
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setNeedsUpdateOfHomeIndicatorAutoHidden()
+    }
+    
     override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override func prefersHomeIndicatorAutoHidden() -> Bool {
         return true
     }
     
