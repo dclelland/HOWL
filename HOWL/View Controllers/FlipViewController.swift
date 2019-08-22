@@ -64,11 +64,11 @@ class FlipViewController: UIViewController {
     // MARK: - View controllers
     
     var frontViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == frontView?.subviews.first }.first
+        return children.filter { $0.view == frontView?.subviews.first }.first
     }
     
     var backViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == backView?.subviews.first }.first
+        return children.filter { $0.view == backView?.subviews.first }.first
     }
 
 }

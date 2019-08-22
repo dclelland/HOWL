@@ -66,7 +66,7 @@ import ProtonomeAudioKitControls
     
     private var trailPath: UIBezierPath {
         let path = UIBezierPath { path in
-            trailLocations.flatMap { $0 }.enumerated().forEach { index, location in
+            trailLocations.compactMap { $0 }.enumerated().forEach { index, location in
                 let ratio = CGFloat(index).ilerp(min: 0.0, max: CGFloat(trailLength)).lerp(min: 1.0, max: 0.0)
                 let radius = pow(ratio, 2.0) * 24.0
                 path.add(.oval, center: location, radius: radius)

@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = Audiobus;
+			productName = Audiobus;
 		};
 /* End PBXAggregateTarget section */
 
@@ -693,7 +694,7 @@
 		07F849D397C2B2BCB74BC86EE0E63989 /* AKInverse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKInverse.h; path = AudioKit/Operations/Math/AKInverse.h; sourceTree = "<group>"; };
 		084A7027366A77D06E7BD879541B74DA /* AKDecimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKDecimator.m; path = "AudioKit/Operations/Signal Modifiers/Filters/AKDecimator.m"; sourceTree = "<group>"; };
 		08891A2AB0BC238AEB6C3CA30DC9D261 /* AKVibes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKVibes.m; path = "AudioKit/Operations/Signal Generators/Physical Models/AKVibes.m"; sourceTree = "<group>"; };
-		091FB5CBD341402C3969C1330A0AC88F /* Parity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Parity.framework; path = Parity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		091FB5CBD341402C3969C1330A0AC88F /* Parity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Parity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F321CCEB171747C199A609914A79DA /* Pods-HOWL-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HOWL-Info.plist"; sourceTree = "<group>"; };
 		0ACC67309B66A42AD33ED459B13A6043 /* AKHarmonicCosineTableGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKHarmonicCosineTableGenerator.h; path = AudioKit/Tables/Generators/AKHarmonicCosineTableGenerator.h; sourceTree = "<group>"; };
 		0B46B088FA54033D3A9EE8395F0C0A6E /* AKVCOscillator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKVCOscillator.h; path = "AudioKit/Operations/Signal Generators/Oscillators/AKVCOscillator.h"; sourceTree = "<group>"; };
@@ -764,7 +765,7 @@
 		28EEC322FD33FBC45CF707883016862A /* Parity.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Parity.modulemap; sourceTree = "<group>"; };
 		29805007B6CDA5BEFE35F5FA0A4A69AC /* AKStereoAudioFilePlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKStereoAudioFilePlayer.h; path = "AudioKit/Utilities/Instruments/File Players/AKStereoAudioFilePlayer.h"; sourceTree = "<group>"; };
 		298AAF97FF609A8084E8230A61231C8B /* AKStereoAudio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKStereoAudio.h; path = AudioKit/Parameters/AKStereoAudio.h; sourceTree = "<group>"; };
-		2A840080D44B65C5D68F22BFA5866966 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2A840080D44B65C5D68F22BFA5866966 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2AE8C781927DD326BFA44BB887912AF7 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 		2B2423544A69B8024C9ABD2EC3D7C269 /* AKRingModulator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKRingModulator.h; path = "AudioKit/Operations/Signal Modifiers/Effects/AKRingModulator.h"; sourceTree = "<group>"; };
 		2B7B29F4E64E3656C91B0975BC7F05F2 /* AKParameterChangeLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKParameterChangeLog.h; path = "AudioKit/Operations/Signal Input and Output/AKParameterChangeLog.h"; sourceTree = "<group>"; };
@@ -788,7 +789,7 @@
 		31564516731127733C45097FDF575863 /* AKVariableDelay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKVariableDelay.m; path = "AudioKit/Operations/Signal Modifiers/Delays/AKVariableDelay.m"; sourceTree = "<group>"; };
 		327AC08CB9D3816C1C085CEB4237BA95 /* AKFFTTableWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFFTTableWriter.h; path = AudioKit/Operations/FFT/AKFFTTableWriter.h; sourceTree = "<group>"; };
 		331A5542362698E7C8C6523C756AF8D4 /* AKFFTTableReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKFFTTableReader.m; path = AudioKit/Operations/FFT/AKFFTTableReader.m; sourceTree = "<group>"; };
-		337722BF60924E7712D9F5C1F52BEB6B /* csPerfThread.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = csPerfThread.hpp; path = AudioKit/Platforms/Common/csound/csPerfThread.hpp; sourceTree = "<group>"; };
+		337722BF60924E7712D9F5C1F52BEB6B /* csPerfThread.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = csPerfThread.hpp; path = AudioKit/Platforms/Common/csound/csPerfThread.hpp; sourceTree = "<group>"; };
 		33C90818FA258B9BB822C8CE763F20E4 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
 		33DCFB77213467781A7353494BD77FA4 /* AKNoise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKNoise.m; path = "AudioKit/Operations/Signal Generators/Random Generators/AKNoise.m"; sourceTree = "<group>"; };
 		33EEF44A58781A56BA3C7DC257A563C3 /* AKLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKLog.h; path = "AudioKit/Operations/Signal Input and Output/AKLog.h"; sourceTree = "<group>"; };
@@ -824,7 +825,7 @@
 		40BDEDD2A32119E71D8B8A36774412DF /* AKParameter+Operation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AKParameter+Operation.m"; path = "AudioKit/Operations/AKParameter+Operation.m"; sourceTree = "<group>"; };
 		4110B65A72F997D1D5A0757E78BCFD25 /* AKStereoSoundFileLooper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKStereoSoundFileLooper.m; path = "AudioKit/Operations/Signal Generators/Loopers/AKStereoSoundFileLooper.m"; sourceTree = "<group>"; };
 		41CD87078082170AC011EF9C40BFE792 /* AKSpectralVocoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKSpectralVocoder.m; path = AudioKit/Operations/FFT/AKSpectralVocoder.m; sourceTree = "<group>"; };
-		41D7AA324AF9D3A39D784D351246A9BB /* OpcodeBase.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = OpcodeBase.hpp; path = AudioKit/Platforms/Common/csound/OpcodeBase.hpp; sourceTree = "<group>"; };
+		41D7AA324AF9D3A39D784D351246A9BB /* OpcodeBase.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = OpcodeBase.hpp; path = AudioKit/Platforms/Common/csound/OpcodeBase.hpp; sourceTree = "<group>"; };
 		422535171138493869E17E41E31B6EA1 /* AudioUnitExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudioUnitExtensions-umbrella.h"; sourceTree = "<group>"; };
 		429DF3A2C08AEE6A55D20F6E994A151D /* AKBeatenPlate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKBeatenPlate.h; path = "AudioKit/Operations/Signal Generators/Physical Models/Waveguide/AKBeatenPlate.h"; sourceTree = "<group>"; };
 		43FA122AD8FF4FF0C0FDCC4ACBC2C47C /* AKDopplerEffect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKDopplerEffect.h; path = "AudioKit/Operations/Signal Modifiers/Effects/AKDopplerEffect.h"; sourceTree = "<group>"; };
@@ -851,10 +852,10 @@
 		4BD0C7A1F6361F6762CCD3FD44F76B21 /* AKHighPassFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKHighPassFilter.h; path = "AudioKit/Operations/Signal Modifiers/Filters/AKHighPassFilter.h"; sourceTree = "<group>"; };
 		4C13AC2C72DD2BDD71D07F473292E428 /* AKDistortion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKDistortion.h; path = "AudioKit/Operations/Signal Modifiers/Effects/AKDistortion.h"; sourceTree = "<group>"; };
 		4C6233CA626EE211F1CC3B64252EAFBB /* AudioUnit+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AudioUnit+Properties.swift"; path = "AudioUnitExtensions/AudioUnit+Properties.swift"; sourceTree = "<group>"; };
-		4C9838093C50A67689D5F68847003F19 /* AudioUnitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AudioUnitExtensions.framework; path = AudioUnitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9838093C50A67689D5F68847003F19 /* AudioUnitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioUnitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA1EB6CBF83078207465F0F7C37C8F0 /* csound.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = csound.h; path = AudioKit/Platforms/Common/csound/csound.h; sourceTree = "<group>"; };
 		4D0EEE989697C7692DF0114AA2890616 /* AKMinimum.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKMinimum.m; path = AudioKit/Operations/Math/AKMinimum.m; sourceTree = "<group>"; };
-		4D2B6A76A2DD3ED5615688A2C869E48F /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = TPCircularBuffer.c; path = AudioKit/Utilities/Plots/EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
+		4D2B6A76A2DD3ED5615688A2C869E48F /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = AudioKit/Utilities/Plots/EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
 		4D2CB16348ADC410EC7679BA8DC58A31 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		4F4D2CB6032C3658AE3A16B3DDB89F74 /* AKProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKProduct.h; path = AudioKit/Operations/Math/AKProduct.h; sourceTree = "<group>"; };
 		4F5365E4F0BC84761C5044C315D76122 /* AKTableLooper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTableLooper.h; path = "AudioKit/Operations/Signal Generators/Loopers/AKTableLooper.h"; sourceTree = "<group>"; };
@@ -930,7 +931,7 @@
 		6B8F059BDA7B36368DE16B2B8F537EA8 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
 		6BC6DC2CBC9B3C25886E18819E8858DD /* MultitouchGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MultitouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		6BE5AE4B3F0E067497E2979E7B2233D7 /* EZAudio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudio.h; path = AudioKit/Utilities/Plots/EZAudio/EZAudio.h; sourceTree = "<group>"; };
-		6C0A50C62D92CC040A533928C4681912 /* Persistable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Persistable.framework; path = Persistable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0A50C62D92CC040A533928C4681912 /* Persistable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persistable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C841D812F787FF6DBFDFB9FD45D33C2 /* AKOrchestra.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKOrchestra.m; path = "AudioKit/Core Classes/AKOrchestra.m"; sourceTree = "<group>"; };
 		6CEE309848E8658E0A0B44516F9AAD20 /* AKMicrophone.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMicrophone.h; path = AudioKit/Utilities/Instruments/Microphone/AKMicrophone.h; sourceTree = "<group>"; };
 		6D216CE71A248AD03B2E3F9C35D6D0E6 /* AKLinearADSREnvelope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKLinearADSREnvelope.h; path = "AudioKit/Operations/Signal Generators/Envelopes/AKLinearADSREnvelope.h"; sourceTree = "<group>"; };
@@ -942,12 +943,12 @@
 		7097F907B775C9ABDA3BDE9BC1F304F0 /* AKPanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKPanner.h; path = "AudioKit/Operations/Signal Modifiers/Volume and Spatialization/AKPanner.h"; sourceTree = "<group>"; };
 		709F0CB20D4453DD727ECA3D98EC7BE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		70BB346414592804864BE89FC7ECE463 /* float-version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "float-version.h"; path = "AudioKit/Platforms/Common/csound/float-version.h"; sourceTree = "<group>"; };
-		70FA9DDE732A5A52AE8A57AD19E82325 /* AudioKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AudioKit.framework; path = AudioKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FA9DDE732A5A52AE8A57AD19E82325 /* AudioKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		713CBDFDB33B270E19EC798C9B855815 /* AKParallelCombLowPassFilterReverb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKParallelCombLowPassFilterReverb.h; path = "AudioKit/Operations/Signal Modifiers/Reverbs/AKParallelCombLowPassFilterReverb.h"; sourceTree = "<group>"; };
 		717C5B870C0B7D5D9C23B6512AA6A0A6 /* AKRingModulator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKRingModulator.m; path = "AudioKit/Operations/Signal Modifiers/Effects/AKRingModulator.m"; sourceTree = "<group>"; };
 		73A5A65B1096D0CAD3F84C29D69C78AB /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		74839CCAD2D2A42D17308BFEBFD85BE5 /* UIColor+Protonome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Protonome.swift"; path = "Classes/Extensions/UIColor+Protonome.swift"; sourceTree = "<group>"; };
-		748B382B90E57A58E0DA8366A831D621 /* CppSound.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = CppSound.hpp; path = AudioKit/Platforms/Common/csound/CppSound.hpp; sourceTree = "<group>"; };
+		748B382B90E57A58E0DA8366A831D621 /* CppSound.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = CppSound.hpp; path = AudioKit/Platforms/Common/csound/CppSound.hpp; sourceTree = "<group>"; };
 		74CC16BEB792DC9D29B39BF5E9661651 /* AKVCOscillator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKVCOscillator.m; path = "AudioKit/Operations/Signal Generators/Oscillators/AKVCOscillator.m"; sourceTree = "<group>"; };
 		74E3977E3A066B3BA4AC643D829DA40B /* AKBambooSticksInstrument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKBambooSticksInstrument.m; path = AudioKit/Utilities/Instruments/Emulations/AKBambooSticksInstrument.m; sourceTree = "<group>"; };
 		75AB199E538E0A02C60C44F17AC2A845 /* AKAudioInputPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAudioInputPlot.h; path = AudioKit/Utilities/Plots/AKAudioInputPlot.h; sourceTree = "<group>"; };
@@ -961,7 +962,7 @@
 		77CC979979AF370640C37E1EEB010103 /* csound_standard_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = csound_standard_types.h; path = AudioKit/Platforms/Common/csound/csound_standard_types.h; sourceTree = "<group>"; };
 		782B59C4001B04AF44F873A0E18660E6 /* AudioKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudioKit-prefix.pch"; sourceTree = "<group>"; };
 		782CC8070EE2A682253DDEA2292D6202 /* AKAudioAnalyzer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAudioAnalyzer.h; path = AudioKit/Utilities/Instruments/Analyzers/AKAudioAnalyzer.h; sourceTree = "<group>"; };
-		78877983EDBA3D59F6F917C668639BA9 /* Pods_HOWL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HOWL.framework; path = "Pods-HOWL.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78877983EDBA3D59F6F917C668639BA9 /* Pods_HOWL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HOWL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F56257A6E248B0731828D021B5DD29 /* AKFileInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFileInput.h; path = "AudioKit/Operations/Signal Input and Output/AKFileInput.h"; sourceTree = "<group>"; };
 		7923A40EFD2B4050B9B2F4E988547A99 /* AKAntiresonantFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAntiresonantFilter.h; path = "AudioKit/Operations/Signal Modifiers/Filters/AKAntiresonantFilter.h"; sourceTree = "<group>"; };
 		7937E5C9858DA1CB02FF8324C12704B6 /* AKSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSequence.h; path = AudioKit/Sequencing/AKSequence.h; sourceTree = "<group>"; };
@@ -1003,7 +1004,7 @@
 		8B4CB0B2CBBD089AE9A161CB358D2F69 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		8B5C8B14F4DFB9F415DCB4B315AE09B9 /* AKMoogVCF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKMoogVCF.m; path = "AudioKit/Operations/Signal Modifiers/Filters/AKMoogVCF.m"; sourceTree = "<group>"; };
 		8C27DE6476B1AE455BD46F571D96A20C /* ABLocalPort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABLocalPort.h; path = Audiobus/ABLocalPort.h; sourceTree = "<group>"; };
-		8C2FCAEFCC6F64C6E84CFC42F21EA4DA /* AudioUnitExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AudioUnitExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8C2FCAEFCC6F64C6E84CFC42F21EA4DA /* AudioUnitExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AudioUnitExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C4188EB0DA459B29B9939A665B58968 /* Bezzy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bezzy-prefix.pch"; sourceTree = "<group>"; };
 		8C7210097A56CF37E788BA0D8DE64109 /* filebuilding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filebuilding.h; path = AudioKit/Platforms/Common/csound/filebuilding.h; sourceTree = "<group>"; };
 		8CD1E1C02FB3A95FAB8FE959A333FE6D /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
@@ -1020,13 +1021,13 @@
 		907B28674185FC7E8ABECFA9094A6EC3 /* TPCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = AudioKit/Utilities/Plots/EZAudio/TPCircularBuffer.h; sourceTree = "<group>"; };
 		90BDF13C89E2AE5F2EADC8238F6521C3 /* AKStereoAmplifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKStereoAmplifier.m; path = AudioKit/Utilities/Instruments/Amplifiers/AKStereoAmplifier.m; sourceTree = "<group>"; };
 		90E3F82982C740480C72FD40C94A5835 /* AudioUnitExtensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AudioUnitExtensions.xcconfig; sourceTree = "<group>"; };
-		914B4B4390745B6F0E1C5023656F4884 /* Bezzy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bezzy.framework; path = Bezzy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		914B4B4390745B6F0E1C5023656F4884 /* Bezzy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bezzy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		917185C2D8B81DE8AC027E506D8EE911 /* ABTrigger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABTrigger.h; path = Audiobus/ABTrigger.h; sourceTree = "<group>"; };
 		91A39A1367C4C22D37FF0FE45C37BBBF /* Bezzy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bezzy-umbrella.h"; sourceTree = "<group>"; };
 		91E73F594676141E1C6A4D1718A0CD77 /* AKSingleInputMathOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSingleInputMathOperation.h; path = AudioKit/Operations/Math/AKSingleInputMathOperation.h; sourceTree = "<group>"; };
 		92048A9D051BF7EB761B3E5303794329 /* AKCrunch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKCrunch.h; path = "AudioKit/Operations/Signal Generators/Physical Models/PhISEM/AKCrunch.h"; sourceTree = "<group>"; };
 		921E1580F80FC476F39A15D849E11346 /* AudioUnit+Listeners.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AudioUnit+Listeners.swift"; path = "AudioUnitExtensions/AudioUnit+Listeners.swift"; sourceTree = "<group>"; };
-		9249EAD503C460AE468C0392BF160DC8 /* csound.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = csound.hpp; path = AudioKit/Platforms/Common/csound/csound.hpp; sourceTree = "<group>"; };
+		9249EAD503C460AE468C0392BF160DC8 /* csound.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = csound.hpp; path = AudioKit/Platforms/Common/csound/csound.hpp; sourceTree = "<group>"; };
 		92EAA5AA2C4B26EEA2A0ADF7A6283F84 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		93A414BE3299491913859404358C952E /* AKDelay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKDelay.m; path = "AudioKit/Operations/Signal Modifiers/Delays/AKDelay.m"; sourceTree = "<group>"; };
 		945B9004AE9BCA531D4FCEED8635121F /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
@@ -1043,7 +1044,7 @@
 		970991EF1DBE4C4220544EECA31F059A /* AKScaledFFT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKScaledFFT.h; path = AudioKit/Operations/FFT/AKScaledFFT.h; sourceTree = "<group>"; };
 		972575890D2FEF96D460D3FB4E6002E0 /* AKSingleInputMathOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKSingleInputMathOperation.m; path = AudioKit/Operations/Math/AKSingleInputMathOperation.m; sourceTree = "<group>"; };
 		9747563CBF6571E85571C7D2668D3515 /* ProtonomeAudioKitControls.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProtonomeAudioKitControls.modulemap; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FC0A2ED66FFC389B51DF02D3A1D3DE /* AudioKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AudioKit.modulemap; sourceTree = "<group>"; };
 		98AE96B852F9922F5AA2609077803B5B /* AKCombFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKCombFilter.m; path = "AudioKit/Operations/Signal Modifiers/Filters/AKCombFilter.m"; sourceTree = "<group>"; };
 		9A5EA81C0EC86E8D90A5B8DF2364A058 /* UIFont+Protonome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Protonome.swift"; path = "Classes/Extensions/UIFont+Protonome.swift"; sourceTree = "<group>"; };
@@ -1054,7 +1055,7 @@
 		9BE38694E935A92FABCC64757FF2594D /* AKAudioInputRollingWaveformPlot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKAudioInputRollingWaveformPlot.m; path = AudioKit/Utilities/Plots/AKAudioInputRollingWaveformPlot.m; sourceTree = "<group>"; };
 		9BEDBC59DBA8FEBB36496FA2731CB386 /* Persistable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Persistable-umbrella.h"; sourceTree = "<group>"; };
 		9C50347D094463AA5567E33DEF3D1757 /* AKSandPaper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKSandPaper.m; path = "AudioKit/Operations/Signal Generators/Physical Models/PhISEM/AKSandPaper.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DAE32BF5AFE42B336CF235E35231292 /* AKFFTProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFFTProcessor.h; path = AudioKit/Operations/FFT/AKFFTProcessor.h; sourceTree = "<group>"; };
 		9DC3CA17B6D538CD27A01F4E66B99229 /* AKAudioPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAudioPlot.h; path = AudioKit/Utilities/Plots/AKAudioPlot.h; sourceTree = "<group>"; };
 		9DF2414BCAD121D150A51DC12B7C01FF /* AKMidiNote.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMidiNote.h; path = "AudioKit/Core Classes/MIDI/AKMidiNote.h"; sourceTree = "<group>"; };
@@ -1068,7 +1069,7 @@
 		A0A71AF3629213094837955B404494F9 /* AKAssignment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAssignment.h; path = AudioKit/Operations/Math/AKAssignment.h; sourceTree = "<group>"; };
 		A0FAAEE9D9094EE2859EA2C1B63D8A3E /* AKSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSettings.h; path = "AudioKit/Core Classes/AKSettings.h"; sourceTree = "<group>"; };
 		A18F0FDAADD80F012158400F4BDB8B98 /* AKStereoAudio.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKStereoAudio.m; path = AudioKit/Parameters/AKStereoAudio.m; sourceTree = "<group>"; };
-		A229401BC182E61212C759164333792E /* ProtonomeAudioKitControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProtonomeAudioKitControls.framework; path = ProtonomeAudioKitControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A229401BC182E61212C759164333792E /* ProtonomeAudioKitControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtonomeAudioKitControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36AF245F1F8945AF205CD6AE54F83FA /* Pods-HOWL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HOWL.modulemap"; sourceTree = "<group>"; };
 		A3CA7EA69609469A56AF8FF4B501055A /* ProtonomeRoundedViews.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProtonomeRoundedViews.xcconfig; sourceTree = "<group>"; };
 		A416812284CCF0CE0A1B9608B406B803 /* Persistable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Persistable.modulemap; sourceTree = "<group>"; };
@@ -1077,12 +1078,12 @@
 		A548C2AD26E2DCC0E77A7375AE25E0FF /* AKSekere.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSekere.h; path = "AudioKit/Operations/Signal Generators/Physical Models/PhISEM/AKSekere.h"; sourceTree = "<group>"; };
 		A58A970F451E22534D0E4262311C961B /* AKPropertySlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKPropertySlider.h; path = "AudioKit/Utilities/User Interface Elements/AKPropertySlider.h"; sourceTree = "<group>"; };
 		A5E99A1C62F4D20F8E5384F6C9321FCD /* AKParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKParameter.h; path = AudioKit/Parameters/AKParameter.h; sourceTree = "<group>"; };
-		A5FE9C23C5FA8A8FB0AB78CF9AEFB3C6 /* Degrad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Degrad.framework; path = Degrad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FE9C23C5FA8A8FB0AB78CF9AEFB3C6 /* Degrad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Degrad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6446C6D4CA67E60D33F80FA737869D4 /* AKMarimba.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKMarimba.m; path = "AudioKit/Operations/Signal Generators/Physical Models/AKMarimba.m"; sourceTree = "<group>"; };
 		A6CCF0939EA73B220C6C8FE1E85E41CE /* ABAudiobusController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABAudiobusController.h; path = Audiobus/ABAudiobusController.h; sourceTree = "<group>"; };
 		A6CE8ECA84255CB8C2EFCA993EEB161E /* AudioPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioPlot.swift; path = Classes/Plots/AudioPlot.swift; sourceTree = "<group>"; };
 		A6EB30FCDD7FB62DA7B40666723D11EE /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		A72F775F377F15BFCE7DA714916EEFAB /* ProtonomeRoundedViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProtonomeRoundedViews.framework; path = ProtonomeRoundedViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72F775F377F15BFCE7DA714916EEFAB /* ProtonomeRoundedViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtonomeRoundedViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77812A3DBB056E470FEADE7927E4581 /* AKMandolin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKMandolin.h; path = "AudioKit/Operations/Signal Generators/Physical Models/AKMandolin.h"; sourceTree = "<group>"; };
 		A7DC5E0C35A433A0ED7A39F0FBA923AD /* AKFMOscillatorInstrument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFMOscillatorInstrument.h; path = AudioKit/Utilities/Instruments/Synthesizers/AKFMOscillatorInstrument.h; sourceTree = "<group>"; };
 		A80310ADC88E032FF7EB9AE3BBA0FF4D /* ABButtonTrigger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABButtonTrigger.h; path = Audiobus/ABButtonTrigger.h; sourceTree = "<group>"; };
@@ -1099,7 +1100,7 @@
 		B014D23246D7C077AA0BC144816F6C2C /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		B04AF2154207BA02EF0E9169D132F644 /* AKSoundFontInstrumentPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKSoundFontInstrumentPlayer.m; path = "AudioKit/Sound Fonts/AKSoundFontInstrumentPlayer.m"; sourceTree = "<group>"; };
 		B0B23B700177FEB01DD4E484916B435D /* EZAudioUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioUtilities.h; path = AudioKit/Utilities/Plots/EZAudio/EZAudioUtilities.h; sourceTree = "<group>"; };
-		B109B3D0ED4EA3F901E8FBBFCC018ECA /* MultitouchGestureRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MultitouchGestureRecognizer.framework; path = MultitouchGestureRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B109B3D0ED4EA3F901E8FBBFCC018ECA /* MultitouchGestureRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultitouchGestureRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B53F282F0FE951673D43BEEAE36397 /* AKFilteredFFT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKFilteredFFT.m; path = AudioKit/Operations/FFT/AKFilteredFFT.m; sourceTree = "<group>"; };
 		B1E15F9919C0DB7AFDD4BF86D69FB294 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		B27E96E3141E3D48C77F1B76EFEA88E5 /* AKSegmentArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKSegmentArray.m; path = "AudioKit/Operations/Signal Generators/Segment Arrays/AKSegmentArray.m"; sourceTree = "<group>"; };
@@ -1130,7 +1131,7 @@
 		BBFB8435D6F563E0BAFB514746F78DD1 /* AKWarpedFFT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKWarpedFFT.h; path = AudioKit/Operations/FFT/AKWarpedFFT.h; sourceTree = "<group>"; };
 		BC0F3694CA02730A5A21F6E475B29C35 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		BCE597DE5206F03FECEA82DC0D15FBCB /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		BDF0659DBBD04069852F8213A2C84E66 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		BDF0659DBBD04069852F8213A2C84E66 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BDF6103BB2CC3B6E8849E5908DCFA17C /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		BE0936D3968FEB3976A1FF2EC30AAB46 /* AKTrackedAmplitudeFromFSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTrackedAmplitudeFromFSignal.h; path = AudioKit/Operations/Analysis/AKTrackedAmplitudeFromFSignal.h; sourceTree = "<group>"; };
 		BEA782B843B1C7B4F93BD78FCEAE883A /* AKFlatFrequencyResponseReverb.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKFlatFrequencyResponseReverb.m; path = "AudioKit/Operations/Signal Modifiers/Reverbs/AKFlatFrequencyResponseReverb.m"; sourceTree = "<group>"; };
@@ -1224,7 +1225,7 @@
 		E3669B2596EFF90FF66CF4F94D313313 /* AKClipper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKClipper.h; path = "AudioKit/Operations/Signal Modifiers/Filters/AKClipper.h"; sourceTree = "<group>"; };
 		E408A9BE21D7BDBB85E7F9E5F80E2B2C /* AKCompressorExpander.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKCompressorExpander.m; path = "AudioKit/Operations/Signal Modifiers/Effects/AKCompressorExpander.m"; sourceTree = "<group>"; };
 		E44B78DCC483A278C05E5FC108533E0B /* MultitouchGestureRecognizer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MultitouchGestureRecognizer.modulemap; sourceTree = "<group>"; };
-		E53D26BE84F012EECE42ECC318C76ED1 /* Lerp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Lerp.framework; path = Lerp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53D26BE84F012EECE42ECC318C76ED1 /* Lerp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lerp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56B91E484BC1CEA09CD69BECF6195A4 /* AKStruckMetalBarInstrument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKStruckMetalBarInstrument.m; path = AudioKit/Utilities/Instruments/Emulations/AKStruckMetalBarInstrument.m; sourceTree = "<group>"; };
 		E5B7F5A3E7ABAAF520723F0DA3E48AF3 /* AKDeclick.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKDeclick.m; path = "AudioKit/Operations/Signal Modifiers/Filters/AKDeclick.m"; sourceTree = "<group>"; };
 		E5C754ABCC6FA5675592D65AA14F0959 /* AKMultitapDelay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKMultitapDelay.m; path = "AudioKit/Operations/Signal Modifiers/Delays/AKMultitapDelay.m"; sourceTree = "<group>"; };
@@ -1274,7 +1275,7 @@
 		F9A052BD5B99C183BAF72E169E02DAF5 /* AKMarimbaInstrument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKMarimbaInstrument.m; path = AudioKit/Utilities/Instruments/Emulations/AKMarimbaInstrument.m; sourceTree = "<group>"; };
 		F9A2E22D41E663499CBCF380D12B1443 /* AKTrackedFrequencyFromFSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTrackedFrequencyFromFSignal.h; path = AudioKit/Operations/Analysis/AKTrackedFrequencyFromFSignal.h; sourceTree = "<group>"; };
 		F9DB8D7810C10AAE5646CCF433EAB9C4 /* AKSoundFontPresetPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKSoundFontPresetPlayer.m; path = "AudioKit/Sound Fonts/AKSoundFontPresetPlayer.m"; sourceTree = "<group>"; };
-		FA28C3E0ADB657161946862A4CA65D01 /* CsoundFile.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = CsoundFile.hpp; path = AudioKit/Platforms/Common/csound/CsoundFile.hpp; sourceTree = "<group>"; };
+		FA28C3E0ADB657161946862A4CA65D01 /* CsoundFile.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = CsoundFile.hpp; path = AudioKit/Platforms/Common/csound/CsoundFile.hpp; sourceTree = "<group>"; };
 		FA73EFDADB530D5F9C624D84F661008B /* AKSoundFontPresetPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSoundFontPresetPlayer.h; path = "AudioKit/Sound Fonts/AKSoundFontPresetPlayer.h"; sourceTree = "<group>"; };
 		FA8936FB11D5778ADA17AD119162E070 /* AKADSREnvelope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKADSREnvelope.h; path = "AudioKit/Operations/Signal Generators/Envelopes/AKADSREnvelope.h"; sourceTree = "<group>"; };
 		FA8CBE44B022205A8B0FD9AC98E2DEE5 /* AKClipper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKClipper.m; path = "AudioKit/Operations/Signal Modifiers/Filters/AKClipper.m"; sourceTree = "<group>"; };
@@ -1430,7 +1431,6 @@
 				B806C33A5D852A0351F764AD6E93B27B /* Frameworks */,
 				B3EC4828AEFA376508EF8920FDC2FA32 /* Support Files */,
 			);
-			name = Audiobus;
 			path = Audiobus;
 			sourceTree = "<group>";
 		};
@@ -1440,7 +1440,6 @@
 				DEF0240067A53DBA4A7982234057048B /* Degrad.swift */,
 				095C8B2678F9AB6116A5A5381C993ABF /* Support Files */,
 			);
-			name = Degrad;
 			path = Degrad;
 			sourceTree = "<group>";
 		};
@@ -1450,7 +1449,6 @@
 				6BC6DC2CBC9B3C25886E18819E8858DD /* MultitouchGestureRecognizer.swift */,
 				59FE63BFBCFB98A3C0BEB4DEA72DDAB1 /* Support Files */,
 			);
-			name = MultitouchGestureRecognizer;
 			path = MultitouchGestureRecognizer;
 			sourceTree = "<group>";
 		};
@@ -1534,7 +1532,6 @@
 				2BAE0739F42CED4BB4532D80551269EA /* RoundedView.swift */,
 				B0505E0AED723EA481826011932025F9 /* Support Files */,
 			);
-			name = ProtonomeRoundedViews;
 			path = ProtonomeRoundedViews;
 			sourceTree = "<group>";
 		};
@@ -2052,7 +2049,6 @@
 				926BD4F4FA921D8CCA7868F7D96FEB29 /* Frameworks */,
 				2CB62E660C4B0489495A03FCB405094E /* Support Files */,
 			);
-			name = AudioKit;
 			path = AudioKit;
 			sourceTree = "<group>";
 		};
@@ -2119,7 +2115,6 @@
 				8CD1E1C02FB3A95FAB8FE959A333FE6D /* UILayoutSupport+Extensions.swift */,
 				53D17BF333D6DDF9067003FC14BC56DB /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -2138,7 +2133,6 @@
 				07106A67E4454DDE763A4343458001CC /* Persistable.swift */,
 				76A78FA081279E7D8B047C253BA41EC7 /* Support Files */,
 			);
-			name = Persistable;
 			path = Persistable;
 			sourceTree = "<group>";
 		};
@@ -2162,7 +2156,6 @@
 				F77855DEF22607EB2E03BBC01CC1E2EB /* Bezzy.swift */,
 				E489327D86C5B1291A7D49C7A29D8537 /* Support Files */,
 			);
-			name = Bezzy;
 			path = Bezzy;
 			sourceTree = "<group>";
 		};
@@ -2195,7 +2188,6 @@
 				472884D5F186F6A1AE4E1B2BC5B890C7 /* Lerp.swift */,
 				E25C7CFCDAE66AB79602E67CC4ADE6B0 /* Support Files */,
 			);
-			name = Lerp;
 			path = Lerp;
 			sourceTree = "<group>";
 		};
@@ -2242,7 +2234,6 @@
 				9644440993557327FCB8063C3B2A2DEB /* Parity.swift */,
 				51F4CDF47DD9423C04A4B0A7D71F9C37 /* Support Files */,
 			);
-			name = Parity;
 			path = Parity;
 			sourceTree = "<group>";
 		};
@@ -2287,7 +2278,6 @@
 				9A5EA81C0EC86E8D90A5B8DF2364A058 /* UIFont+Protonome.swift */,
 				953E552FF6438A3E50433D1C42FC182E /* Support Files */,
 			);
-			name = ProtonomeAudioKitControls;
 			path = ProtonomeAudioKitControls;
 			sourceTree = "<group>";
 		};
@@ -2891,6 +2881,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					CF5EDB66CAC2972B9BC27EFA2073CB2B = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3478,7 +3473,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3496,7 +3491,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3511,7 +3507,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3544,7 +3540,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3578,7 +3574,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3611,7 +3607,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3646,7 +3642,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3681,7 +3677,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3715,7 +3711,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3794,8 +3790,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -3809,7 +3804,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3843,7 +3838,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3876,7 +3871,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3911,7 +3906,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3945,7 +3940,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3978,7 +3973,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4076,7 +4071,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4109,7 +4104,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4140,7 +4135,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PROTONOME_AUDIOKIT_ENABLED = true;
@@ -4158,7 +4153,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4189,7 +4184,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PROTONOME_AUDIOKIT_ENABLED = true;
@@ -4206,7 +4201,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4240,7 +4235,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4274,7 +4269,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4292,7 +4287,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4308,7 +4304,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4341,7 +4337,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4374,7 +4370,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4408,7 +4404,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$PODS_CONFIGURATION_BUILD_DIR";
+				CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
