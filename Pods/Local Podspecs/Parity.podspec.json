@@ -1,6 +1,6 @@
 {
   "name": "Parity",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "summary": "An integer parity microlibrary.",
   "homepage": "https://github.com/dclelland/Parity",
   "license": {
@@ -11,7 +11,7 @@
   },
   "source": {
     "git": "https://github.com/dclelland/Parity.git",
-    "tag": "2.0.0"
+    "tag": "2.1.0"
   },
   "platforms": {
     "ios": "8.0"
