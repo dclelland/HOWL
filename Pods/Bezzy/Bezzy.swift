@@ -129,7 +129,7 @@ public extension BezierPath {
 
 // MARK: - Movement
 
-public extension BezierPath {
+extension BezierPath {
     
     /// Add a movement to a location defined by `point`.
     public func add(_ movement: Movement, to point: Point) {
@@ -191,7 +191,7 @@ public extension BezierPath {
 
 // MARK: - Shape
 
-public extension BezierPath {
+extension BezierPath {
     
     /// Add a shape at a location defined by `rect`.
     public func add(_ shape: Shape, at rect: Rect) {
@@ -240,7 +240,7 @@ public extension BezierPath {
 
 // MARK: - Paths
 
-public extension BezierPath {
+extension BezierPath {
     
     /// Add a list of points as a path.
     public func add(_ path: Path, points: [Point]) {
@@ -264,7 +264,7 @@ public extension BezierPath {
 
 // MARK: - Translate
 
-public extension BezierPath {
+extension BezierPath {
     
     /// Translate the path rightwards by `tx` and downwards by `ty`.
     public func translate(tx: CGFloat, ty: CGFloat) {
@@ -298,7 +298,7 @@ public extension BezierPath {
 
 // MARK: - Scale
 
-public extension BezierPath {
+extension BezierPath {
     
     /// Scales the path horizontally by `sx` and vertically by `sy`.
     public func scale(sx: CGFloat, sy: CGFloat) {
@@ -323,7 +323,7 @@ public extension BezierPath {
 
 // MARK: - Rotate
 
-public extension BezierPath {
+extension BezierPath {
     
     /// Rotate the path in the specified directional `motion` for `angle` (radians).
     public func rotate(_ angle: CGFloat, _ motion: Motion = .clockwise) {
