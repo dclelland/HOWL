@@ -247,7 +247,6 @@
 				37DF261D6FA54D93E4605AEE /* Pods-HOWL.debug.xcconfig */,
 				BD7CE3C395D3AF2A6D6CEF01 /* Pods-HOWL.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -535,7 +534,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37DF261D6FA54D93E4605AEE /* Pods-HOWL.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "HOWL/Supporting Files/HOWL.entitlements";
@@ -555,7 +553,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD7CE3C395D3AF2A6D6CEF01 /* Pods-HOWL.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "HOWL/Supporting Files/HOWL.entitlements";
