@@ -19,7 +19,8 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### Fixes
 
-- Swift migration
+- Swift 5 migration
+- Resolve warnings
 - Check safe area on iPhone and iPad
 - Check splash screen safe area on iPhone and iPad
 - Fix oscilloscope visualiser
