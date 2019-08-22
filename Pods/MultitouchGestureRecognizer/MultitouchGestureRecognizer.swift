@@ -26,12 +26,46 @@ import UIKit.UIGestureRecognizerSubclass
     
 }
 
-/// `UIPanGestureRecognizer` subclass which tracks the state of individual touches.
+/// `UIGestureRecognizer` subclass which tracks the state of individual touches.
 open class MultitouchGestureRecognizer: UIGestureRecognizer {
+    
+    /// Denotes the way the list of touches is managed.
+    public enum Mode {
+        
+        /// The first touch in is the first touch out.
+        case stack
+        
+        /// The first touch in is the last touch out.
+        case queue
+    }
+    
+    /// The touch management mode.
+    public var mode: Mode = .stack
+    
+    /// The maximum number of touches allowed in the stack/queue. Defaults to `0`, signifying unlimited touches.
+    /// If `count` is decreased past the current number of touches, any excess touches will be ended immediately.
+    public var count: Int = 0 {
+        didSet {
+            if count != 0 {
+                while count < touches.count {
+                    switch mode {
+                    case .stack:
+                        if let lastTouch = touches.last {
+                            end(lastTouch)
+                        }
+                    case .queue:
+                        if let firstTouch = touches.first {
+                            end(firstTouch)
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     /// If `sustain` is set to `true`, when touches end they will be retained in `touches` until such time as all touches have ended and a new touch begins.
     /// If `sustain` is switched from `true` to `false`, any currently sustained touches will be ended immediately.
-    @IBInspectable public var sustain: Bool = true {
+    public var sustain: Bool = true {
         didSet {
             if (oldValue == true && sustain == false) {
                 end()
@@ -40,10 +74,10 @@ open class MultitouchGestureRecognizer: UIGestureRecognizer {
     }
     
     /// The currently tracked collection of touches. May contain touches after they have ended, if `sustain` is set to `true`.
-    public lazy var touches = [UITouch]()
+    public lazy private(set) var touches = [UITouch]()
     
     /// The current gesture recognizer state, as it pertains to the `sustain` setting.
-    public enum State {
+    public enum MultitouchState {
         
         /// All touches are ended, and none are being sustained.
         case ready
@@ -56,7 +90,7 @@ open class MultitouchGestureRecognizer: UIGestureRecognizer {
     }
     
     /// The current multitouch gesture recognizer state.
-    public var multitouchState: State {
+    public var multitouchState: MultitouchState {
         if touches.count == 0 {
             return .ready
         } else if touches.filter({ $0.phase != .ended }).count > 0 {
@@ -76,6 +110,7 @@ open class MultitouchGestureRecognizer: UIGestureRecognizer {
     
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)
+        
         if (sustain) {
             end()
         }
@@ -84,20 +119,23 @@ open class MultitouchGestureRecognizer: UIGestureRecognizer {
     
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesMoved(touches, with: event)
+        
         update(touches)
     }
     
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesCancelled(touches, with: event)
+        
         update(touches)
     }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesEnded(touches, with: event)
+        
         update(touches)
     }
     
-    // MARK: - Multiple touches
+    // MARK: - Touch updating
     
     private func update(_ touches: Set<UITouch>) {
         for touch in touches {
@@ -127,24 +165,34 @@ open class MultitouchGestureRecognizer: UIGestureRecognizer {
     // MARK: - Single touches
     
     private func start(_ touch: UITouch) {
+        guard count == 0 || count > touches.count else {
+            if let firstTouch = touches.first, mode == .queue {
+                end(firstTouch)
+                start(touch)
+            }
+            return
+        }
+    
         touches.append(touch)
         multitouchDelegate?.multitouchGestureRecognizer?(self, touchDidBegin: touch)
     }
     
     private func move(_ touch: UITouch) {
-        multitouchDelegate?.multitouchGestureRecognizer?(self, touchDidMove: touch)
+        if touches.contains(touch) {
+            multitouchDelegate?.multitouchGestureRecognizer?(self, touchDidMove: touch)
+        }
     }
     
     private func cancel(_ touch: UITouch) {
-        if let index = touches.index(of: touch) {
-            touches.remove(at: index)
+        if touches.contains(touch) {
+            touches.remove(touch)
             multitouchDelegate?.multitouchGestureRecognizer?(self, touchDidCancel: touch)
         }
     }
     
     private func end(_ touch: UITouch) {
-        if let index = touches.index(of: touch) {
-            touches.remove(at: index)
+        if touches.contains(touch) {
+            touches.remove(touch)
             multitouchDelegate?.multitouchGestureRecognizer?(self, touchDidEnd: touch)
         }
     }
@@ -171,6 +219,34 @@ extension MultitouchGestureRecognizer {
         }
         
         return location
+    }
+    
+    /// The average of all previous touch locations in the current view.
+    public var previousCentroid: CGPoint? {
+        guard let view = view, touches.count > 0 else {
+            return nil
+        }
+        
+        let location = touches.reduce(.zero) { (location, touch) -> CGPoint in
+            let touchLocation = touch.previousLocation(in: view)
+            
+            return CGPoint(
+                x: location.x + touchLocation.x / CGFloat(touches.count),
+                y: location.y + touchLocation.y / CGFloat(touches.count)
+            )
+        }
+        
+        return location
+    }
+    
+}
+
+// MARK: - Private extensions
+
+extension Array where Element: Equatable {
+    
+    mutating func remove(_ element: Element) {
+        self = filter { $0 != element }
     }
     
 }

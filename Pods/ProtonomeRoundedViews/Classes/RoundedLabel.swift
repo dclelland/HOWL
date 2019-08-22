@@ -67,8 +67,8 @@ import UIKit
     // MARK: - Overrides
     
     override open func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
-        let rect = super.textRect(forBounds: textInsets.inset(bounds), limitedToNumberOfLines: numberOfLines)
-        return textInsets.inverse.inset(rect)
+        let rect = super.textRect(forBounds: bounds.inset(by: textInsets), limitedToNumberOfLines: numberOfLines)
+        return rect.inset(by: textInsets.inverse)
     }
     
     override open func drawText(in rect: CGRect) {
@@ -77,7 +77,7 @@ import UIKit
             backgroundPath.fill()
         }
         
-        super.drawText(in: textInsets.inset(rect))
+        super.drawText(in: rect.inset(by: textInsets))
     }
     
     // MARK: - Private getters
@@ -98,10 +98,6 @@ private extension UIEdgeInsets {
     
     var inverse: UIEdgeInsets {
         return UIEdgeInsets(top: -top, left: -left, bottom: -bottom, right: -right)
-    }
-    
-    func inset(_ rect: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(rect, self)
     }
     
 }

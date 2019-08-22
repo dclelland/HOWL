@@ -5,7 +5,7 @@ PODS:
   - Bezzy (1.0.0)
   - Degrad (1.0.0)
   - Lerp (2.0.0)
-  - MultitouchGestureRecognizer (1.1.0)
+  - MultitouchGestureRecognizer (2.1.0)
   - Parity (2.0.0)
   - Persistable (1.0.0)
   - ProtonomeAudioKitControls (1.3.2):
@@ -13,7 +13,7 @@ PODS:
     - Degrad (~> 1.0)
     - Lerp (~> 2.0)
     - SnapKit (~> 3.0)
-  - ProtonomeRoundedViews (1.0.0)
+  - ProtonomeRoundedViews (1.1.0)
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
@@ -21,12 +21,26 @@ DEPENDENCIES:
   - AudioKit (from `https://github.com/dclelland/AudioKit/`, branch `protonome`)
   - AudioUnitExtensions (~> 0.1)
   - Bezzy (~> 1.0)
-  - MultitouchGestureRecognizer (~> 1.1)
+  - MultitouchGestureRecognizer (~> 2.1)
   - Parity (~> 2.0)
   - Persistable (~> 1.0)
   - ProtonomeAudioKitControls (~> 1.3)
-  - ProtonomeRoundedViews (~> 1.0)
+  - ProtonomeRoundedViews (~> 1.1)
   - SnapKit (~> 3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Audiobus
+    - AudioUnitExtensions
+    - Bezzy
+    - Degrad
+    - Lerp
+    - MultitouchGestureRecognizer
+    - Parity
+    - Persistable
+    - ProtonomeAudioKitControls
+    - ProtonomeRoundedViews
+    - SnapKit
 
 EXTERNAL SOURCES:
   AudioKit:
@@ -45,13 +59,13 @@ SPEC CHECKSUMS:
   Bezzy: ff253ca2a65f7fe2befda215d5b657cad2fc731b
   Degrad: 5119a3ed5aaab6be286c209386035befd04b2aa5
   Lerp: fe0fd19edf08a7dab2283a3f250f2c840b6a97aa
-  MultitouchGestureRecognizer: 59a6a0311ce3f1005f2d3b834cd170ed7b49d495
+  MultitouchGestureRecognizer: 0e1ef444e09968a71b0a9e99a695e29c5e3a6070
   Parity: 4b3809714e04ebd95d95c46bd30d960ab8d14b23
   Persistable: a01ea48283e7f977ad435a32bd7bfafbb415ba58
   ProtonomeAudioKitControls: 61f45a75b829189a8bedd85a7d2c976dfcdcd45f
-  ProtonomeRoundedViews: f82b8b2425e466c2469ff509939301d5e688238c
+  ProtonomeRoundedViews: 989800270da9cd91278821b28027b0c4d236c1dc
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 758ed22c9c3061e5b13c5f5a5fa0478c4ae6d38e
+PODFILE CHECKSUM: 27d256966293eee430f0738dd301063a22f8b844
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.7.5
