@@ -116,12 +116,16 @@ class Synthesizer: AKInstrument {
             amplitude: tremoloDepth * 0.5.ak
         )
         
+        let frequencyScale = vibrato + 1.0.ak
+        
+        let amplitudeScale = envelope * (tremolo - ((tremoloDepth * 0.5.ak) - 1.0.ak))
+        
         let oscillator = AKVCOscillator(
             waveformType: AKVCOscillator.waveformTypeForSawtooth(),
             bandwidth: 0.5.ak,
             pulseWidth: 0.5.ak,
-            frequency: note.frequency * (vibrato + 1.0.ak),
-            amplitude: note.amplitude * envelope * (tremolo - ((tremoloDepth * 0.5.ak) - 1.0.ak))
+            frequency: note.frequency * frequencyScale,
+            amplitude: note.amplitude * amplitudeScale
         )
         
         assignOutput(output, to: oscillator)
