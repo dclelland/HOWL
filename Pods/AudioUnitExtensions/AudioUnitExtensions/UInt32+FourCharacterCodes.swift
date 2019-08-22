@@ -13,9 +13,9 @@ extension UInt32 {
     
     /// Create a `UInt32` with a four character code. Will crash if the string is not four characters long.
     public init(fourCharacterCode: String) {
-        assert(fourCharacterCode.characters.count == 4, "String should be four characters long")
+        assert(fourCharacterCode.count == 4, "String should be four characters long")
         
-        let reversed = String(fourCharacterCode.characters.reversed())
+        let reversed = String(fourCharacterCode.reversed())
         let bytes = (reversed as NSString).utf8String
         let pointer = UnsafeRawPointer(bytes)!.assumingMemoryBound(to: UInt32.self)
         

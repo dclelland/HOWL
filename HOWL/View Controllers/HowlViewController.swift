@@ -30,34 +30,34 @@ class HowlViewController: UIViewController {
         return true
     }
     
-    override func prefersHomeIndicatorAutoHidden() -> Bool {
+    override var prefersHomeIndicatorAutoHidden: Bool {
         return true
     }
     
     // MARK: - View controllers
     
     var leftViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == leftView?.subviews.first }.first
+        return children.filter { $0.view == leftView?.subviews.first }.first
     }
     
     var rightViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == rightView?.subviews.first }.first
+        return children.filter { $0.view == rightView?.subviews.first }.first
     }
     
     var topLeftViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == topLeftView?.subviews.first }.first
+        return children.filter { $0.view == topLeftView?.subviews.first }.first
     }
     
     var topRightViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == topRightView?.subviews.first }.first
+        return children.filter { $0.view == topRightView?.subviews.first }.first
     }
     
     var bottomLeftViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == bottomLeftView?.subviews.first }.first
+        return children.filter { $0.view == bottomLeftView?.subviews.first }.first
     }
     
     var bottomRightViewController: UIViewController? {
-        return childViewControllers.filter { $0.view == bottomRightView?.subviews.first }.first
+        return children.filter { $0.view == bottomRightView?.subviews.first }.first
     }
 
 }

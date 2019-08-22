@@ -21,4 +21,6 @@ let audioUnitPropertyListener = AudioUnitPropertyListener { (audioUnit, property
 }
         
 audioUnit.add(listener: audioUnitPropertyListener, to: kAudioUnitProperty_IsInterAppConnected)
+
+audioUnit.remove(listener: audioUnitPropertyListener, from: kAudioUnitProperty_IsInterAppConnected)
 ```

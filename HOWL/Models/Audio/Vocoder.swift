@@ -142,17 +142,17 @@ class Vocoder: AKInstrument {
         connect(AKAssignment(output: xOut, input: lfoXPost + xIn))
         connect(AKAssignment(output: yOut, input: lfoYPost + yIn))
         
-        let topFrequencies = zip(voice.æ.formants, voice.α.formants).map { topLeftFrequency, topRightFrequency in
+        let topFrequencies = zip(voice.æ.formants, voice.α.formants).map { topLeftFrequency, topRightFrequency -> AKParameter in
             return xOut * (topRightFrequency - topLeftFrequency).ak + topLeftFrequency.ak
         }
         
-        let bottomFrequencies = zip(voice.i.formants, voice.u.formants).map { bottomLeftFrequency, bottomRightFrequency in
+        let bottomFrequencies = zip(voice.i.formants, voice.u.formants).map { bottomLeftFrequency, bottomRightFrequency -> AKParameter in
             return xOut * (bottomRightFrequency - bottomLeftFrequency).ak + bottomLeftFrequency.ak
         }
         
         let frequencyScale = AKMaximum(firstInput: formantsFrequency, secondInput: 0.01.ak)
         
-        let frequencies = zip(topFrequencies, bottomFrequencies).map { topFrequency, bottomFrequency in
+        let frequencies = zip(topFrequencies, bottomFrequencies).map { topFrequency, bottomFrequency -> AKParameter in
             return (yOut * (bottomFrequency - topFrequency) + topFrequency) * frequencyScale
         }
         
@@ -166,7 +166,7 @@ class Vocoder: AKInstrument {
         
         let mutedInput = (input + mutedAudioInput) * AKPortamento(input: amplitude, halfTime: 0.001.ak)
         
-        let filter = zip(frequencies, bandwidths).reduce(mutedInput) { input, parameters in
+        let filter = zip(frequencies, bandwidths).reduce(mutedInput) { input, parameters -> AKResonantFilter in
             let (frequency, bandwidth) = parameters
             return AKResonantFilter(
                 input: input,

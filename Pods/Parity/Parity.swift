@@ -20,7 +20,7 @@ public enum Parity {
 
 // MARK: - Helpers
 
-extension Integer {
+extension BinaryInteger {
     
     /// The number's parity.
     public var parity: Parity {

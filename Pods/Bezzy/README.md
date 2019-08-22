@@ -29,6 +29,19 @@ let path = UIBezierPath { path in
 }
 ```
 
+✓ Paths
+
+```swift
+let path = UIBezierPath { path in
+    path.add(.closed, points: [
+        CGPoint(x: 0.0, y: 0.0),
+        CGPoint(x: 0.0, y: 1.0),
+        CGPoint(x: 1.0, y: 1.0),
+        CGPoint(x: 1.0, y: 0.0)
+    ])
+}
+```
+
 ✓ Transformations
 
 ```swift
@@ -62,6 +75,9 @@ func add(_ shape: Shape, origin: CGPoint, size: CGSize)
 func add(_ shape: Shape, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat)
 func add(_ shape: Shape, center: CGPoint, radius: CGFloat)
 func add(_ shape: Shape, center: CGPoint, size: CGSize)
+
+// Paths
+func add(_ path: Path, points: [CGPoint])
 
 // Transforms
 func translate(tx: CGFloat, ty: CGFloat)

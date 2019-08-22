@@ -44,7 +44,7 @@ class Property: AKInstrumentProperty, Persistable {
 extension AKInstrument {
     
     var persistentProperties: [Property] {
-        return properties.flatMap { $0 as? Property }
+        return properties.compactMap { $0 as? Property }
     }
     
     func reset() {

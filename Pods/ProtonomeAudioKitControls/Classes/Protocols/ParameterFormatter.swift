@@ -41,7 +41,7 @@ extension ParameterFormatterConstructor {
 public struct NumberParameterFormatter: ParameterFormatterConstructor {
     
     public func formatter(for value: Float) -> NumberFormatter {
-        switch fabs(value) {
+        switch abs(value) {
         case 0.0..<0.01:
             return NumberFormatter(digits: 1)
         case 0.01..<1.0:
@@ -75,7 +75,7 @@ public struct PercentageParameterFormatter: ParameterFormatterConstructor {
 public struct DurationParameterFormatter: ParameterFormatterConstructor {
     
     public func formatter(for value: Float) -> NumberFormatter {
-        switch fabs(value) {
+        switch abs(value) {
         case 0.0:
             return NumberFormatter(digits: 1, suffix: "s")
         case 0.0..<0.00001:
@@ -97,7 +97,7 @@ public struct DurationParameterFormatter: ParameterFormatterConstructor {
 public struct AmplitudeParameterFormatter: ParameterFormatterConstructor {
     
     public func formatter(for value: Float) -> NumberFormatter {
-        switch fabs(value) {
+        switch abs(value) {
         case 0.0..<10.0:
             return NumberFormatter(digits: 1, suffix: "dB")
         default:
@@ -111,7 +111,7 @@ public struct AmplitudeParameterFormatter: ParameterFormatterConstructor {
 public struct FrequencyParameterFormatter: ParameterFormatterConstructor {
     
     public func formatter(for value: Float) -> NumberFormatter {
-        switch (fabs(value)) {
+        switch (abs(value)) {
         case 0.0..<1.0:
             return NumberFormatter(digits: 1, suffix: "Hz")
         case 1.0..<100.0:

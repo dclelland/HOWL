@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Font scheme
 
 /// Font helpers used throughout the `ProtonomeAudioKitControls` module.
-public extension UIFont {
+extension UIFont {
     
     // MARK: - Fonts
     
