@@ -12,7 +12,7 @@ import Lerp
 // MARK: - Color scheme
 
 /// Color helpers used throughout the `ProtonomeAudioKitControls` module.
-public extension UIColor {
+extension UIColor {
     
     // MARK: - Colors
     

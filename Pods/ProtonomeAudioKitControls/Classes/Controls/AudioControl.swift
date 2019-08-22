@@ -143,7 +143,7 @@ import SnapKit
     }
     
     private var scaleValues: [Float] {
-        return scaleSteps.characters.split(separator: ",").map { Float(String($0))! }
+        return scaleSteps.split(separator: ",").map { Float(String($0))! }
     }
     
     // MARK: Formatter
@@ -230,7 +230,7 @@ import SnapKit
     }
     
     private var formatterValues: [String] {
-        return formatterSteps.characters.split(separator: ",").map { String($0) }
+        return formatterSteps.split(separator: ",").map { String($0) }
     }
     
     // MARK: Font
@@ -342,7 +342,7 @@ import SnapKit
         super.updateConstraints()
         
         addSubview(titleLabel)
-        titleLabel.setContentHuggingPriority(UILayoutPriorityRequired, for: .vertical)
+        titleLabel.setContentHuggingPriority(.required, for: .vertical)
         titleLabel.snp.updateConstraints { make in
             make.left.equalTo(snp.leftMargin)
             make.right.equalTo(snp.rightMargin)
@@ -374,15 +374,15 @@ import SnapKit
         addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
     }
     
-    internal func valueChanged() {
+    @objc internal func valueChanged() {
         audioControlDelegate?.audioControl?(self, valueChanged: self.value)
     }
     
-    internal func touchDown() {
+    @objc internal func touchDown() {
         audioControlDelegate?.audioControlTouchesStarted?(self)
     }
     
-    internal func touchUp() {
+    @objc internal func touchUp() {
         audioControlDelegate?.audioControlTouchesEnded?(self)
     }
     

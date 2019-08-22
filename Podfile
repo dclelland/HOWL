@@ -10,9 +10,9 @@ pod 'Bezzy', '~> 1.3'
 pod 'MultitouchGestureRecognizer', '~> 2.1'
 pod 'Parity', '~> 2.1'
 pod 'Persistable', '~> 1.2'
-pod 'ProtonomeAudioKitControls', '~> 1.3'
+pod 'ProtonomeAudioKitControls', '~> 1.4'
 pod 'ProtonomeRoundedViews', '~> 1.1'
-pod 'SnapKit', '~> 3.0'
+pod 'SnapKit', '~> 4.2'
 
 target 'HOWL'
 
