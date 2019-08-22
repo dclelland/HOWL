@@ -15,7 +15,17 @@ HOWL is a simple formant synthesizer for iOS, written in Swift and built using t
 
 Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 9.2).
 
-### 2.2 wishlist
+## Todo
+
+### Fixes
+
+- Swift migration
+- Check safe area on iPhone and iPad
+- Check splash screen safe area on iPhone and iPad
+- Fix oscilloscope visualiser
+- Fix and update Audiobus
+
+### Wishlist
 
 - Implement male/female adult/child controls
 - Note labels
