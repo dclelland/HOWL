@@ -33,7 +33,7 @@ import ProtonomeAudioKitControls
         let colorHue = self.trailHue
         let colorSaturation = self.trailSaturation
         
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             self.trailLocations = Array(([trailLocation] + trailLocations).prefix(self.trailLength))
             self.colorHue = colorHue
             self.colorSaturation = colorSaturation
