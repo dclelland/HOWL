@@ -285,7 +285,7 @@
 					656472CE1BF6BD2A00BDEB1B = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = SP382Y6YUY;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1030;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -544,7 +544,7 @@
 				PRODUCT_NAME = HOWL;
 				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -562,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
 				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
