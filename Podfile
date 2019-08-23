@@ -1,18 +1,18 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '11.0'
 
 use_frameworks!
 
 pod 'Audiobus', '~> 2.3'
 pod 'AudioKit', git: 'https://github.com/dclelland/AudioKit/', branch: 'protonome'
-pod 'AudioUnitExtensions', '~> 0.2'
-pod 'Bezzy', '~> 1.3'
-pod 'MultitouchGestureRecognizer', '~> 2.1'
-pod 'Parity', '~> 2.1'
-pod 'Persistable', '~> 1.2'
-pod 'ProtonomeAudioKitControls', '~> 1.4'
-pod 'ProtonomeRoundedViews', '~> 1.1'
-pod 'SnapKit', '~> 4.2'
+pod 'AudioUnitExtensions', '~> 0.3'
+pod 'Bezzy', '~> 1.4'
+pod 'MultitouchGestureRecognizer', '~> 2.2'
+pod 'Parity', '~> 2.2'
+pod 'Persistable', '~> 1.3'
+pod 'ProtonomeAudioKitControls', '~> 1.5'
+pod 'ProtonomeRoundedViews', '~> 1.2'
+pod 'SnapKit', '~> 5.0'
 
 target 'HOWL'
 

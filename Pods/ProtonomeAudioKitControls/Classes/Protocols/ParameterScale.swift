@@ -144,7 +144,7 @@ struct SteppedParameterScale: ParameterScale {
     // MARK: Value to index to ratio
     
     private func index(forValue value: Float) -> Int {
-        return values.index(of: value) ?? 0
+        return values.firstIndex(of: value) ?? 0
     }
     
     private func ratio(forIndex index: Int) -> Float {
