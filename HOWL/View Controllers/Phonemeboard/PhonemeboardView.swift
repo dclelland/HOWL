@@ -28,10 +28,6 @@ import ProtonomeAudioKitControls
         super.updateValuesFromCsound()
         
         let trailLocations: [CGPoint?] = {
-            guard self.isSelected == true else {
-                return []
-            }
-            
             let trailLocation = self.trailLocation
             let trailLocations = self.trailLocations
         
@@ -69,7 +65,7 @@ import ProtonomeAudioKitControls
             trailLocations.compactMap { $0 }.enumerated().forEach { index, location in
                 let ratio = CGFloat(index).ilerp(min: 0.0, max: CGFloat(trailLength)).lerp(min: 1.0, max: 0.0)
                 let radius = pow(ratio, 2.0) * 24.0
-                path.add(.oval, center: location, radius: radius)
+                path.add(.oval, center: location.lerp(rect: bounds), radius: radius)
             }
         }
         
@@ -81,7 +77,7 @@ import ProtonomeAudioKitControls
     }
     
     private var trailLocation: CGPoint? {
-        return Audio.client?.vocoder.location.lerp(rect: bounds)
+        return Audio.client?.vocoder.location
     }
     
     private var trailHue: CGFloat {
