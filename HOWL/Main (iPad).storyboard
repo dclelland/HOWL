@@ -318,7 +318,6 @@
                             <constraint firstItem="0wI-Ag-1JO" firstAttribute="leading" secondItem="4Fc-Ww-zNa" secondAttribute="leading" constant="2" id="qzx-Fu-U66"/>
                             <constraint firstItem="exU-Gg-q51" firstAttribute="leading" secondItem="4Fc-Ww-zNa" secondAttribute="leading" constant="2" id="z0c-J7-ILK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4CH-c6-HKU"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>
@@ -603,7 +602,6 @@
                             <constraint firstItem="F6a-Z9-DiM" firstAttribute="leading" secondItem="0nk-Pg-snT" secondAttribute="leading" constant="2" id="ha9-zb-PST"/>
                             <constraint firstItem="F6a-Z9-DiM" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="bottom" constant="2" id="hpW-Mc-LU3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="AGd-KT-FcO"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>
@@ -1236,7 +1234,6 @@
                             <constraint firstItem="akj-0Z-Y0Y" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="bottom" constant="2" id="zSD-Uo-ytg"/>
                             <constraint firstItem="akj-0Z-Y0Y" firstAttribute="leading" secondItem="qYn-k8-bIf" secondAttribute="trailing" constant="2" id="zpM-6H-xJh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="y62-0U-mI0"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>
@@ -1995,7 +1992,6 @@
                             <constraint firstItem="KdT-m1-qla" firstAttribute="top" secondItem="I0b-Uf-tRC" secondAttribute="top" constant="2" id="zB9-Ah-Q4p"/>
                             <constraint firstItem="VjM-M0-Y10" firstAttribute="leading" secondItem="I0b-Uf-tRC" secondAttribute="leading" constant="2" id="zbx-BT-c74"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hk8-CX-esU"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>

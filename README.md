@@ -19,8 +19,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### Fixes
 
-- Check safe area on iPad Pro
-- Fix splash screen safe area on iPhone and iPad (delete if impossible)
+- Fix iPhone splash screen
 - Fix oscilloscope visualiser
 - Fix and update Audiobus
 

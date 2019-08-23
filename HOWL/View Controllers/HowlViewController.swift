@@ -26,12 +26,19 @@ class HowlViewController: UIViewController {
         setNeedsUpdateOfHomeIndicatorAutoHidden()
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override var prefersHomeIndicatorAutoHidden: Bool {
-        return true
+        switch traitCollection.horizontalSizeClass {
+        case .compact:
+            return true
+        case .regular:
+            return false
+        default:
+            return false
+        }
     }
     
     // MARK: - View controllers
