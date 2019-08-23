@@ -19,6 +19,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### Fixes
 
+- Bad access crash in PhonemeView
 - Fix iPhone splash screen
 
 ### Wishlist
