@@ -24,9 +24,6 @@ post_install do |installer|
             
             # Fix IBDesignables
             config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
-            
-            # Enable AudioPlot's AudioKit integration
-            config.build_settings['PROTONOME_AUDIOKIT_ENABLED'] = true
         end
     end
     

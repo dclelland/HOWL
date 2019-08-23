@@ -23,7 +23,7 @@ import ProtonomeAudioKitControls
     
     // MARK: - Overrides
     
-#if PROTONOME_AUDIOKIT_ENABLED && !TARGET_INTERFACE_BUILDER
+#if !TARGET_INTERFACE_BUILDER
     override func updateValuesFromCsound() {
         super.updateValuesFromCsound()
         

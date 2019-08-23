@@ -19,8 +19,8 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### Fixes
 
+- Fix oscilloscope main thread warnings
 - Fix iPhone splash screen
-- Fix oscilloscope visualiser
 - Fix and update Audiobus
 
 ### Wishlist
