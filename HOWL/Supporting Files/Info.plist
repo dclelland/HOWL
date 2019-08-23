@@ -14,7 +14,7 @@
 			<key>type</key>
 			<string>aurg</string>
 			<key>version</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 		<dict>
 			<key>manufacturer</key>
@@ -26,7 +26,7 @@
 			<key>type</key>
 			<string>aurx</string>
 			<key>version</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
