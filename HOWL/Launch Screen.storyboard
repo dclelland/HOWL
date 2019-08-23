@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,14 +49,14 @@
                                 <exclude reference="NZS-QS-HsI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HU6-J5-kls"/>
-                                <exclude reference="kUm-Fj-jge"/>
                                 <exclude reference="5i5-BU-LCY"/>
-                                <exclude reference="Ins-QS-cwA"/>
                                 <exclude reference="TPc-bZ-ign"/>
+                                <exclude reference="kUm-Fj-jge"/>
+                                <exclude reference="HU6-J5-kls"/>
+                                <exclude reference="Ins-QS-cwA"/>
+                                <exclude reference="mcD-PF-LNA"/>
                                 <exclude reference="etJ-yX-JwI"/>
                                 <exclude reference="h3A-Yc-lCR"/>
-                                <exclude reference="mcD-PF-LNA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -66,14 +64,14 @@
                                 <include reference="9Qm-yL-Bzd"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HU6-J5-kls"/>
-                                <include reference="kUm-Fj-jge"/>
                                 <include reference="5i5-BU-LCY"/>
-                                <include reference="Ins-QS-cwA"/>
                                 <include reference="TPc-bZ-ign"/>
+                                <include reference="kUm-Fj-jge"/>
+                                <exclude reference="HU6-J5-kls"/>
+                                <include reference="Ins-QS-cwA"/>
+                                <exclude reference="mcD-PF-LNA"/>
                                 <exclude reference="etJ-yX-JwI"/>
                                 <exclude reference="h3A-Yc-lCR"/>
-                                <exclude reference="mcD-PF-LNA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -81,14 +79,14 @@
                                 <include reference="NZS-QS-HsI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HU6-J5-kls"/>
-                                <exclude reference="kUm-Fj-jge"/>
                                 <exclude reference="5i5-BU-LCY"/>
-                                <exclude reference="Ins-QS-cwA"/>
                                 <exclude reference="TPc-bZ-ign"/>
+                                <exclude reference="kUm-Fj-jge"/>
+                                <include reference="HU6-J5-kls"/>
+                                <exclude reference="Ins-QS-cwA"/>
+                                <include reference="mcD-PF-LNA"/>
                                 <include reference="etJ-yX-JwI"/>
                                 <include reference="h3A-Yc-lCR"/>
-                                <include reference="mcD-PF-LNA"/>
                             </mask>
                         </variation>
                     </view>
@@ -338,10 +336,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMl-yb-B0J">
-                                <rect key="frame" x="0.0" y="0.0" width="511" height="306"/>
+                                <rect key="frame" x="0.0" y="0.0" width="511" height="306.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-Kh-NQB">
-                                        <rect key="frame" x="0.0" y="0.0" width="511" height="306"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="511" height="306.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcc-VY-ehZ">
                                         <rect key="frame" x="2" y="51" width="252.5" height="125.5"/>
@@ -446,10 +444,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UY9-np-D1J">
-                                        <rect key="frame" x="2" y="178.5" width="252.5" height="125.5"/>
+                                        <rect key="frame" x="2" y="178.5" width="252.5" height="126"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="bop-Rg-uaR">
-                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="126"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="xIF-Ly-hbB"/>
                                                 </constraints>
@@ -460,13 +458,13 @@
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-2P-HsS">
-                                                <rect key="frame" x="127" y="2" width="60.5" height="103.5"/>
+                                                <rect key="frame" x="127.5" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-Uq-ZYd">
-                                                <rect key="frame" x="189.5" y="2" width="61" height="103.5"/>
+                                                <rect key="frame" x="190" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="DUx-VV-HhC">
-                                                <rect key="frame" x="2" y="2" width="123" height="103.5"/>
+                                                <rect key="frame" x="2" y="2" width="123.5" height="104"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -502,10 +500,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPn-CG-jZL">
-                                        <rect key="frame" x="256.5" y="178.5" width="252.5" height="125.5"/>
+                                        <rect key="frame" x="256.5" y="178.5" width="252.5" height="126"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="Gdg-Fj-bZi">
-                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="126"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="pGH-LO-BnV"/>
                                                 </constraints>
@@ -516,13 +514,13 @@
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BPV-8r-2Ak">
-                                                <rect key="frame" x="127.5" y="2" width="60.5" height="103.5"/>
+                                                <rect key="frame" x="127.5" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="1AT-vR-B3r">
-                                                <rect key="frame" x="190" y="2" width="60.5" height="103.5"/>
+                                                <rect key="frame" x="190" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="BON-Pm-ZiG">
-                                                <rect key="frame" x="2" y="2" width="123.5" height="103.5"/>
+                                                <rect key="frame" x="2" y="2" width="123.5" height="104"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -642,10 +640,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-fY-h7l">
-                                <rect key="frame" x="513" y="0.0" width="511" height="306"/>
+                                <rect key="frame" x="513" y="0.0" width="511" height="306.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-eY-VI5">
-                                        <rect key="frame" x="0.0" y="0.0" width="511" height="306"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="511" height="306.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcy-Cx-5yS">
                                         <rect key="frame" x="2" y="2" width="507" height="47"/>
@@ -804,10 +802,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvd-jq-Fnt">
-                                        <rect key="frame" x="2" y="178.5" width="252.5" height="125.5"/>
+                                        <rect key="frame" x="2" y="178.5" width="252.5" height="126"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="Qyn-zy-aVh">
-                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="126"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="Sxk-Lc-hQ9"/>
                                                 </constraints>
@@ -818,13 +816,13 @@
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="XmF-S5-wv7">
-                                                <rect key="frame" x="127" y="2" width="60.5" height="103.5"/>
+                                                <rect key="frame" x="127.5" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="S7v-0O-0MK">
-                                                <rect key="frame" x="189.5" y="2" width="61" height="103.5"/>
+                                                <rect key="frame" x="190" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="dXa-Ca-pOH">
-                                                <rect key="frame" x="2" y="2" width="123" height="103.5"/>
+                                                <rect key="frame" x="2" y="2" width="123.5" height="104"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -856,10 +854,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-pY-dLY">
-                                        <rect key="frame" x="256.5" y="178.5" width="252.5" height="125.5"/>
+                                        <rect key="frame" x="256.5" y="178.5" width="252.5" height="126"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="nBu-UI-ro4">
-                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="252.5" height="126"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="nzC-wL-Jn9"/>
                                                 </constraints>
@@ -870,13 +868,13 @@
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="lvm-mE-RvL">
-                                                <rect key="frame" x="127.5" y="2" width="60.5" height="103.5"/>
+                                                <rect key="frame" x="127.5" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-6c-NYn">
-                                                <rect key="frame" x="190" y="2" width="60.5" height="103.5"/>
+                                                <rect key="frame" x="190" y="2" width="60.5" height="104"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="QU4-Sc-ydV">
-                                                <rect key="frame" x="2" y="2" width="123.5" height="103.5"/>
+                                                <rect key="frame" x="2" y="2" width="123.5" height="104"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -952,10 +950,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7y-Dc-gH3">
-                                <rect key="frame" x="0.0" y="308" width="511" height="460"/>
+                                <rect key="frame" x="0.0" y="308.5" width="511" height="459.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Ke-jl-el0">
-                                        <rect key="frame" x="0.0" y="0.0" width="511" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="511" height="459.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asJ-sM-pfJ">
                                         <rect key="frame" x="2" y="2" width="507" height="47"/>
@@ -1014,10 +1012,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HW7-FK-i6a">
-                                        <rect key="frame" x="2" y="51" width="507" height="407"/>
+                                        <rect key="frame" x="2" y="51" width="507" height="406.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="7qi-qu-Gfs">
-                                                <rect key="frame" x="0.0" y="0.0" width="507" height="407"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="406.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="UiF-RK-TAg"/>
                                                 </constraints>
@@ -1028,7 +1026,7 @@
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="adN-gz-q4O">
-                                                <rect key="frame" x="2" y="2" width="503" height="403"/>
+                                                <rect key="frame" x="2" y="2" width="503" height="402.5"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1060,10 +1058,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-fE-cNb">
-                                <rect key="frame" x="513" y="308" width="511" height="460"/>
+                                <rect key="frame" x="513" y="308.5" width="511" height="459.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 6.0pt Light Gray" translatesAutoresizingMaskIntoConstraints="NO" id="mBd-cf-Nfp">
-                                        <rect key="frame" x="0.0" y="0.0" width="511" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="511" height="459.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mX-Oh-xhL">
                                         <rect key="frame" x="2" y="2" width="507" height="47"/>
@@ -1122,10 +1120,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fy-CG-5HA">
-                                        <rect key="frame" x="2" y="51" width="507" height="407"/>
+                                        <rect key="frame" x="2" y="51" width="507" height="406.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 4.5pt Black" translatesAutoresizingMaskIntoConstraints="NO" id="P6T-eN-wZY">
-                                                <rect key="frame" x="0.0" y="0.0" width="507" height="407"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="406.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="Snq-Bm-Zhk"/>
                                                 </constraints>
@@ -1136,7 +1134,7 @@
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rect 3.0pt Dark Gray" translatesAutoresizingMaskIntoConstraints="NO" id="JBm-jx-LgM">
-                                                <rect key="frame" x="2" y="2" width="503" height="403"/>
+                                                <rect key="frame" x="2" y="2" width="503" height="402.5"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
