@@ -33,4 +33,4 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ---
 
-Just a quick note: HOWL itself is a paid app, but I provide the source code free of charge as a learning resource. I ask that you kindly don't put clones of HOWL in the App Store.
+Just a quick note: HOWL itself is a free app, and I provide the source code free of charge as a learning resource. I ask that you kindly don't put clones of HOWL in the App Store.
