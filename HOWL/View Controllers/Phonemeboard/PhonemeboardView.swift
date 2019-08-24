@@ -15,6 +15,10 @@ import ProtonomeAudioKitControls
     
     private let trailLength = 24
     
+    private var trailLocation: CGPoint? {
+        return Audio.client?.vocoder.location
+    }
+    
     private var trailLocations = [CGPoint?]() {
         didSet {
             setNeedsDisplay()
@@ -74,12 +78,8 @@ import ProtonomeAudioKitControls
         return .protonomeLight(hue: colorHue, saturation: colorSaturation)
     }
     
-    private var trailLocation: CGPoint? {
-        return Audio.client?.vocoder.location
-    }
-    
     private var trailHue: CGFloat {
-        guard let location = Audio.client?.vocoder.location else {
+        guard let location = trailLocation else {
             return 0.0
         }
         
@@ -89,7 +89,7 @@ import ProtonomeAudioKitControls
     }
     
     private var trailSaturation: CGFloat {
-        guard let location = Audio.client?.vocoder.location else {
+        guard let location = trailLocation else {
             return 0.0
         }
         
