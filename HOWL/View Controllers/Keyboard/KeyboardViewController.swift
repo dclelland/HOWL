@@ -176,6 +176,8 @@ extension KeyboardViewController: UICollectionViewDataSource {
             return cell
         }
         
+        cell.textLabel.text = self.collectionView(collectionView, textForCellAt: indexPath, with: key)
+        
         layer.path = self.collectionView(collectionView, pathForCellAt: indexPath, with: key).cgPath
         layer.fillColor = self.collectionView(collectionView, colorForCellAt: indexPath, with: key).cgColor
         
@@ -183,6 +185,18 @@ extension KeyboardViewController: UICollectionViewDataSource {
     }
     
     // MARK: - Private getters
+    
+    private func collectionView(_ collectionView: UICollectionView, textForCellAt indexPath: IndexPath, with key: Key) -> String? {
+        let keyNotes = notes.values.filter { $0.key == key }
+        
+        if keyNotes.count > 0 {
+            return key.pitch.description
+        } else if mode == .showBackground {
+            return key.pitch.description
+        } else {
+            return nil
+        }
+    }
     
     private func collectionView(_ collectionView: UICollectionView, pathForCellAt indexPath: IndexPath, with key: Key) -> UIBezierPath {
         return UIBezierPath.make(key.path) { path in
@@ -201,9 +215,7 @@ extension KeyboardViewController: UICollectionViewDataSource {
         
         if keyNotes.count > 0 {
             return .protonomeLight(hue: hue, saturation: saturation, brightness: brightness)
-        }
-        
-        if mode == .showBackground {
+        } else if mode == .showBackground {
             return .protonomeDark(hue: hue, saturation: saturation, brightness: brightness)
         } else {
             return .protonomeDarkGray

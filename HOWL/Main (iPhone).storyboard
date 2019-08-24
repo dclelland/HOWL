@@ -309,7 +309,24 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYK-Wh-x2x">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                 </view>
+                                                <constraints>
+                                                    <constraint firstItem="dYK-Wh-x2x" firstAttribute="top" secondItem="4NR-Ly-4rB" secondAttribute="top" id="3Fa-Ei-cyx"/>
+                                                    <constraint firstItem="dYK-Wh-x2x" firstAttribute="leading" secondItem="4NR-Ly-4rB" secondAttribute="leading" id="3TD-rw-qNo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dYK-Wh-x2x" secondAttribute="trailing" id="Ujb-Qx-Wri"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dYK-Wh-x2x" secondAttribute="bottom" id="vgo-h4-v6T"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="textLabel" destination="dYK-Wh-x2x" id="Uum-iP-qhc"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <userDefinedRuntimeAttributes>

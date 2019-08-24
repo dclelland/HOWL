@@ -24,12 +24,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 ### Wishlist
 
 - Implement male/female adult/child controls
-- Note labels
 - MIDI input support
-    - kAudioUnitType_RemoteMusicEffect
-- 3D touch
-- Rebuild the phonemeboard/keyboard using Metal/SpriteKit/OpenGL/EZAudio
-- Try out slightly bigger fonts for the iPad Pro
 
 ---
 

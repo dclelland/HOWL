@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SnapKit
 
 class KeyboardViewCell: UICollectionViewCell {
+    
+    @IBOutlet var textLabel: UILabel!
     
     override class var layerClass: AnyClass {
         return CAShapeLayer.self
