@@ -57,9 +57,6 @@ import ProtonomeAudioKitControls
         if (self.isSelected) {
             context.setFillColor(trailPathColor.cgColor)
             trailPath.fill()
-//            context.setStrokeColor(trailPathColor.cgColor)
-//            context.setLineWidth(2.0)
-//            trailPath.stroke()
         }
     }
     
@@ -71,11 +68,6 @@ import ProtonomeAudioKitControls
                 let ratio = CGFloat(index).ilerp(min: 0.0, max: CGFloat(trailLength)).lerp(min: 1.0, max: 0.0)
                 let radius = pow(ratio, 2.0) * 24.0
                 path.add(.oval, center: location.lerp(rect: bounds), radius: radius)
-//                if index == 0 {
-//                    path.move(to: location.lerp(rect: bounds))
-//                } else {
-//                    path.addLine(to: location.lerp(rect: bounds))
-//                }
             }
         }
         
