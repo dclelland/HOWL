@@ -19,7 +19,7 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### Fixes
 
-- Fix iPhone splash screen
+- Fix iPhone X splash screen safe area insets
 
 ### Wishlist
 
