@@ -50,7 +50,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AudioKit:
-    :commit: 3ad10e595ac6763c84dfea56a348dc12197aded9
+    :commit: dc8bcfc48494a8f631bd9f73e74df7e9ca313f7c
     :git: https://github.com/dclelland/AudioKit/
 
 SPEC CHECKSUMS:

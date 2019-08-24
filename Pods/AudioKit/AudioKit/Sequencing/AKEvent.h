@@ -22,7 +22,7 @@
 
 /// Create an event from the code block given
 /// @param aBlock Code to run when the event is started
-- (instancetype)initWithBlock:(void (^)())aBlock;
+- (instancetype)initWithBlock:(void (^)(void))aBlock;
 
 // -----------------------------------------------------------------------------
 #  pragma mark - Event actions
