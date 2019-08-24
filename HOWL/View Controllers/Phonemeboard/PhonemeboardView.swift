@@ -31,14 +31,14 @@ import ProtonomeAudioKitControls
     override func updateValuesFromCsound() {
         super.updateValuesFromCsound()
         
-        DispatchQueue.global().async {
+        DispatchQueue.main.async {
             let trailLocation = self.trailLocation
             let trailLocations = self.trailLocations
             
             let colorHue = self.trailHue
             let colorSaturation = self.trailSaturation
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.async(flags: .barrier) {
                 self.trailLocations = Array(([trailLocation] + trailLocations).prefix(self.trailLength))
                 self.colorHue = colorHue
                 self.colorSaturation = colorSaturation
@@ -57,6 +57,9 @@ import ProtonomeAudioKitControls
         if (self.isSelected) {
             context.setFillColor(trailPathColor.cgColor)
             trailPath.fill()
+//            context.setStrokeColor(trailPathColor.cgColor)
+//            context.setLineWidth(2.0)
+//            trailPath.stroke()
         }
     }
     
@@ -68,6 +71,11 @@ import ProtonomeAudioKitControls
                 let ratio = CGFloat(index).ilerp(min: 0.0, max: CGFloat(trailLength)).lerp(min: 1.0, max: 0.0)
                 let radius = pow(ratio, 2.0) * 24.0
                 path.add(.oval, center: location.lerp(rect: bounds), radius: radius)
+//                if index == 0 {
+//                    path.move(to: location.lerp(rect: bounds))
+//                } else {
+//                    path.addLine(to: location.lerp(rect: bounds))
+//                }
             }
         }
         

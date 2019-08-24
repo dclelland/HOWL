@@ -26,6 +26,7 @@
 		65800FC01C09D1BF000410CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA41C09D1BF000410CB /* KeyboardViewController.swift */; };
 		65800FC11C09D1BF000410CB /* KeyboardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */; };
 		65800FC51C09D1BF000410CB /* PhonemeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */; };
+		65857A4C231177A50007D160 /* AudioKit.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65857A4B231177A50007D160 /* AudioKit.plist */; };
 		65A0A8CA1E90B3FF00168C4E /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A0A8C91E90B3FF00168C4E /* Property.swift */; };
 		65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD31CF1D6D300D49967 /* Assets.xcassets */; };
 		65A64DD61CF2DF1900D49967 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */; };
@@ -59,6 +60,7 @@
 		65800FA41C09D1BF000410CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		65800FA51C09D1BF000410CB /* KeyboardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewLayout.swift; sourceTree = "<group>"; };
 		65800FAA1C09D1BF000410CB /* PhonemeboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonemeboardViewController.swift; sourceTree = "<group>"; };
+		65857A4B231177A50007D160 /* AudioKit.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AudioKit.plist; sourceTree = "<group>"; };
 		65A0A8C91E90B3FF00168C4E /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		65A64DD31CF1D6D300D49967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = HOWL/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				650D8BFA1CFBB87600EFD767 /* audiobus.txt */,
 				65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */,
 				65F2B7661C1FCF8000E2DA15 /* Info.plist */,
+				65857A4B231177A50007D160 /* AudioKit.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			files = (
 				65F33B8A1CD60D10001AB56A /* Main (iPhone).storyboard in Resources */,
 				65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */,
+				65857A4C231177A50007D160 /* AudioKit.plist in Resources */,
 				650D8BFB1CFBB87600EFD767 /* audiobus.txt in Resources */,
 				650D8C001CFBF71800EFD767 /* HOWL.entitlements in Resources */,
 				65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */,
