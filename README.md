@@ -23,8 +23,9 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ### Wishlist
 
-- Implement male/female adult/child controls
 - MIDI input support
+- Implement male/female adult/child controls
+- Switch microphone off unless needed
 
 ---
 
