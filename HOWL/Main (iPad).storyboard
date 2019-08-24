@@ -263,7 +263,24 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyY-Mj-CKg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                 </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="HyY-Mj-CKg" secondAttribute="trailing" id="M06-tU-BSR"/>
+                                                    <constraint firstItem="HyY-Mj-CKg" firstAttribute="top" secondItem="Ouu-I7-W5Z" secondAttribute="top" id="s5h-iy-Loa"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HyY-Mj-CKg" secondAttribute="bottom" id="taA-Wr-FJG"/>
+                                                    <constraint firstItem="HyY-Mj-CKg" firstAttribute="leading" secondItem="Ouu-I7-W5Z" secondAttribute="leading" id="wDM-om-tQ7"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="textLabel" destination="HyY-Mj-CKg" id="PCF-Y8-cmy"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <userDefinedRuntimeAttributes>
@@ -318,6 +335,7 @@
                             <constraint firstItem="0wI-Ag-1JO" firstAttribute="leading" secondItem="4Fc-Ww-zNa" secondAttribute="leading" constant="2" id="qzx-Fu-U66"/>
                             <constraint firstItem="exU-Gg-q51" firstAttribute="leading" secondItem="4Fc-Ww-zNa" secondAttribute="leading" constant="2" id="z0c-J7-ILK"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ivv-TM-VWE"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>
@@ -602,6 +620,7 @@
                             <constraint firstItem="F6a-Z9-DiM" firstAttribute="leading" secondItem="0nk-Pg-snT" secondAttribute="leading" constant="2" id="ha9-zb-PST"/>
                             <constraint firstItem="F6a-Z9-DiM" firstAttribute="top" secondItem="8zo-UQ-umx" secondAttribute="bottom" constant="2" id="hpW-Mc-LU3"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="mfw-dD-fcf"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>
@@ -1234,6 +1253,7 @@
                             <constraint firstItem="akj-0Z-Y0Y" firstAttribute="top" secondItem="mJA-LY-XJB" secondAttribute="bottom" constant="2" id="zSD-Uo-ytg"/>
                             <constraint firstItem="akj-0Z-Y0Y" firstAttribute="leading" secondItem="qYn-k8-bIf" secondAttribute="trailing" constant="2" id="zpM-6H-xJh"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="trh-vH-YdJ"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>
@@ -1992,6 +2012,7 @@
                             <constraint firstItem="KdT-m1-qla" firstAttribute="top" secondItem="I0b-Uf-tRC" secondAttribute="top" constant="2" id="zB9-Ah-Q4p"/>
                             <constraint firstItem="VjM-M0-Y10" firstAttribute="leading" secondItem="I0b-Uf-tRC" secondAttribute="leading" constant="2" id="zbx-BT-c74"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y9z-mx-dbW"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="6"/>
