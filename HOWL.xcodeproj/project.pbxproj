@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6500FD6D1C1C022900C2254B /* HowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500FD6C1C1C022900C2254B /* HowlViewController.swift */; };
-		650D8BFB1CFBB87600EFD767 /* audiobus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 650D8BFA1CFBB87600EFD767 /* audiobus.txt */; };
 		650D8BFE1CFBF67A00EFD767 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650D8BFD1CFBF67A00EFD767 /* AudioToolbox.framework */; };
-		650D8C001CFBF71800EFD767 /* HOWL.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */; };
 		6565053C1CEFE567002DC3E2 /* PhonemeboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565053B1CEFE567002DC3E2 /* PhonemeboardView.swift */; };
 		657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657350F11CEEF44300EC1233 /* Vocoder.swift */; };
 		657F0D0D1C0D94F3004B17EF /* SynthesizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F0D0A1C0D94F3004B17EF /* SynthesizerViewController.swift */; };
@@ -40,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		6500FD6C1C1C022900C2254B /* HowlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowlViewController.swift; sourceTree = "<group>"; };
-		650D8BFA1CFBB87600EFD767 /* audiobus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = audiobus.txt; sourceTree = "<group>"; };
 		650D8BFD1CFBF67A00EFD767 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HOWL.entitlements; sourceTree = "<group>"; };
 		656472CF1BF6BD2A00BDEB1B /* HOWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */,
-				650D8BFA1CFBB87600EFD767 /* audiobus.txt */,
 				65F2B7661C1FCF8000E2DA15 /* Info.plist */,
 				65857A4B231177A50007D160 /* AudioKit.plist */,
 			);
@@ -314,8 +310,6 @@
 				65F33B8A1CD60D10001AB56A /* Main (iPhone).storyboard in Resources */,
 				65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */,
 				65857A4C231177A50007D160 /* AudioKit.plist in Resources */,
-				650D8BFB1CFBB87600EFD767 /* audiobus.txt in Resources */,
-				650D8C001CFBF71800EFD767 /* HOWL.entitlements in Resources */,
 				65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */,
 				65A64DD61CF2DF1900D49967 /* Launch Screen.storyboard in Resources */,
 				65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */,
