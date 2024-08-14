@@ -2,33 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AudioComponents</key>
-	<array>
-		<dict>
-			<key>manufacturer</key>
-			<string>ptnm</string>
-			<key>name</key>
-			<string>HOWL (Sender)</string>
-			<key>subtype</key>
-			<string>howg</string>
-			<key>type</key>
-			<string>aurg</string>
-			<key>version</key>
-			<integer>15</integer>
-		</dict>
-		<dict>
-			<key>manufacturer</key>
-			<string>ptnm</string>
-			<key>name</key>
-			<string>HOWL (Filter)</string>
-			<key>subtype</key>
-			<string>howx</string>
-			<key>type</key>
-			<string>aurx</string>
-			<key>version</key>
-			<integer>15</integer>
-		</dict>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -64,8 +37,6 @@
 	<string>20</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>HOWL requires the microphone in order to support audio passthrough.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
