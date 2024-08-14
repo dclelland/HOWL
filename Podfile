@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '11.0'
+platform :ios, '16.0'
 
 use_frameworks!
 
@@ -18,16 +18,14 @@ target 'HOWL'
 
 post_install do |installer|
     
-    # Set custom build configurations
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            
-            # Fix IBDesignables
-            config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
+            end
         end
     end
     
-    # Write the acknowledgements
     require 'fileutils'
     FileUtils.cp('Pods/Target Support Files/Pods-HOWL/Pods-HOWL-Acknowledgements.plist', 'HOWL/Resources/Settings.bundle/Acknowledgements.plist')
     

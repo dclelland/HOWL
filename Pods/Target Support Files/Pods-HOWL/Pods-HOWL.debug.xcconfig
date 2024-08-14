@@ -1,12 +1,15 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AudioKit" "${PODS_CONFIGURATION_BUILD_DIR}/AudioUnitExtensions" "${PODS_CONFIGURATION_BUILD_DIR}/Bezzy" "${PODS_CONFIGURATION_BUILD_DIR}/Degrad" "${PODS_CONFIGURATION_BUILD_DIR}/Lerp" "${PODS_CONFIGURATION_BUILD_DIR}/MultitouchGestureRecognizer" "${PODS_CONFIGURATION_BUILD_DIR}/Parity" "${PODS_CONFIGURATION_BUILD_DIR}/Persistable" "${PODS_CONFIGURATION_BUILD_DIR}/ProtonomeAudioKitControls" "${PODS_CONFIGURATION_BUILD_DIR}/ProtonomeRoundedViews" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AudioKit/AudioKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/AudioUnitExtensions/AudioUnitExtensions.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Bezzy/Bezzy.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Degrad/Degrad.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Lerp/Lerp.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MultitouchGestureRecognizer/MultitouchGestureRecognizer.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Parity/Parity.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Persistable/Persistable.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ProtonomeAudioKitControls/ProtonomeAudioKitControls.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ProtonomeRoundedViews/ProtonomeRoundedViews.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Audiobus"
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AudioKit/AudioKit/Platforms/iOS/libs" "${PODS_ROOT}/Audiobus"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AudioKit/AudioKit/Platforms/iOS/libs" "${PODS_ROOT}/Audiobus" "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
 OTHER_LDFLAGS = $(inherited) -ObjC -l"Audiobus" -l"csound" -l"sndfile" -framework "AVFoundation" -framework "Accelerate" -framework "AudioKit" -framework "AudioToolbox" -framework "AudioUnitExtensions" -framework "Bezzy" -framework "CoreGraphics" -framework "Degrad" -framework "Lerp" -framework "MultitouchGestureRecognizer" -framework "Parity" -framework "Persistable" -framework "ProtonomeAudioKitControls" -framework "ProtonomeRoundedViews" -framework "QuartzCore" -framework "Security" -framework "SnapKit"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
