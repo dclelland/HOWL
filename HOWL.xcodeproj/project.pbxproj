@@ -528,6 +528,7 @@
 				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "HOWL/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HOWL;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
