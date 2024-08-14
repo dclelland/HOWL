@@ -8,7 +8,6 @@ HOWL is a simple formant synthesizer for iOS, written in Swift and built using t
 
 ### Links
 
-- [Project page](http://protonome.com/apps/howl/)
 - [App store](https://itunes.apple.com/us/app/howl-a-formant-synthesizer/id1067562312)
 
 ### Building
@@ -17,12 +16,9 @@ Just open `HOWL.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ## Todo
 
-### Fixes
-
-- Fix iPhone X splash screen safe area insets
-
 ### Wishlist
 
+- Reinstate Inter-App Audio
 - MIDI input support
 - Implement male/female adult/child controls
 
