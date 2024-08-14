@@ -3,9 +3,7 @@ platform :ios, '16.0'
 
 use_frameworks!
 
-pod 'Audiobus', '~> 2.3'
 pod 'AudioKit', git: 'https://github.com/dclelland/AudioKit/', branch: 'protonome'
-pod 'AudioUnitExtensions', '~> 0.3'
 pod 'Bezzy', '~> 1.4'
 pod 'MultitouchGestureRecognizer', '~> 2.2'
 pod 'Parity', '~> 2.2'

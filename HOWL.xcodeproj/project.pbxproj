@@ -31,7 +31,6 @@
 		65A64DD41CF1D6D300D49967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD31CF1D6D300D49967 /* Assets.xcassets */; };
 		65A64DD61CF2DF1900D49967 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */; };
 		65C4EC9D1CF198C3000D5B16 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4EC9C1CF198C3000D5B16 /* Pitch.swift */; };
-		65EC06CE1D02824600CDDF17 /* Audiobus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC06CB1D02824600CDDF17 /* Audiobus.swift */; };
 		65EC06CF1D02824600CDDF17 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC06CD1D02824600CDDF17 /* Settings.swift */; };
 		65F2B76C1C1FCF8E00E2DA15 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */; };
 		65F33B891CD60D10001AB56A /* Main (iPad).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F33B871CD60D10001AB56A /* Main (iPad).storyboard */; };
@@ -66,9 +65,7 @@
 		65A64DD51CF2DF1900D49967 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		65C4EC9C1CF198C3000D5B16 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		65D7E3701C0027CF009D6994 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		65EC06CB1D02824600CDDF17 /* Audiobus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audiobus.swift; sourceTree = "<group>"; };
 		65EC06CD1D02824600CDDF17 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HOWL-Bridging-Header.h"; sourceTree = "<group>"; };
 		65F2B7661C1FCF8000E2DA15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F2B76A1C1FCF8E00E2DA15 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		65F33B871CD60D10001AB56A /* Main (iPad).storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main (iPad).storyboard"; sourceTree = "<group>"; };
@@ -145,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				65800F971C09D1BF000410CB /* Audio */,
-				65EC06CA1D02824600CDDF17 /* Audiobus */,
 				65EC06CC1D02824600CDDF17 /* Settings */,
 			);
 			path = Models;
@@ -197,14 +193,6 @@
 			path = Phonemeboard;
 			sourceTree = "<group>";
 		};
-		65EC06CA1D02824600CDDF17 /* Audiobus */ = {
-			isa = PBXGroup;
-			children = (
-				65EC06CB1D02824600CDDF17 /* Audiobus.swift */,
-			);
-			path = Audiobus;
-			sourceTree = "<group>";
-		};
 		65EC06CC1D02824600CDDF17 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +207,6 @@
 			children = (
 				650D8BFF1CFBF71700EFD767 /* HOWL.entitlements */,
 				650D8BFA1CFBB87600EFD767 /* audiobus.txt */,
-				65F2B7651C1FCF8000E2DA15 /* HOWL-Bridging-Header.h */,
 				65F2B7661C1FCF8000E2DA15 /* Info.plist */,
 				65857A4B231177A50007D160 /* AudioKit.plist */,
 			);
@@ -368,7 +355,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HOWL/Pods-HOWL-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AudioKit/AudioKit.framework",
-				"${BUILT_PRODUCTS_DIR}/AudioUnitExtensions/AudioUnitExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/Bezzy/Bezzy.framework",
 				"${BUILT_PRODUCTS_DIR}/Degrad/Degrad.framework",
 				"${BUILT_PRODUCTS_DIR}/Lerp/Lerp.framework",
@@ -382,7 +368,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioUnitExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bezzy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Degrad.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lerp.framework",
@@ -423,7 +408,6 @@
 				65800FB91C09D1BF000410CB /* Synthesizer.swift in Sources */,
 				657350F21CEEF44300EC1233 /* Vocoder.swift in Sources */,
 				65800FB81C09D1BF000410CB /* Master.swift in Sources */,
-				65EC06CE1D02824600CDDF17 /* Audiobus.swift in Sources */,
 				65EC06CF1D02824600CDDF17 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,7 +542,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
-				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -583,7 +566,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.HOWL;
 				PRODUCT_NAME = HOWL;
-				SWIFT_OBJC_BRIDGING_HEADER = "HOWL/Supporting Files/HOWL-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

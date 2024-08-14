@@ -177,7 +177,6 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AudioKit/AudioKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/AudioUnitExtensions/AudioUnitExtensions.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Bezzy/Bezzy.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Degrad/Degrad.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Lerp/Lerp.framework"
@@ -190,7 +189,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AudioKit/AudioKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/AudioUnitExtensions/AudioUnitExtensions.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Bezzy/Bezzy.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Degrad/Degrad.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Lerp/Lerp.framework"

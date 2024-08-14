@@ -1,7 +1,5 @@
 PODS:
-  - Audiobus (2.3.3)
   - AudioKit (2.3)
-  - AudioUnitExtensions (0.3.0)
   - Bezzy (1.4.0)
   - Degrad (1.2.0)
   - Lerp (2.2.0)
@@ -18,9 +16,7 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - Audiobus (~> 2.3)
   - AudioKit (from `https://github.com/dclelland/AudioKit/`, branch `protonome`)
-  - AudioUnitExtensions (~> 0.3)
   - Bezzy (~> 1.4)
   - MultitouchGestureRecognizer (~> 2.2)
   - Parity (~> 2.2)
@@ -31,8 +27,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Audiobus
-    - AudioUnitExtensions
     - Bezzy
     - Degrad
     - Lerp
@@ -54,9 +48,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/dclelland/AudioKit/
 
 SPEC CHECKSUMS:
-  Audiobus: 850af0ab9da4dc53dd7222afe9aeba928379e5ad
   AudioKit: c2715a96ade48aab1674fbc64df8352a471a6234
-  AudioUnitExtensions: 79d1302c469f82bfd54fd83fdfe63f0b8f62c9cc
   Bezzy: 0db4e85b3781dd74c29d81a00904d574d7f9c1d8
   Degrad: a71d1d002c3551732edc95c79ea556138a6ff9e3
   Lerp: 59c03c7429b4439f3e3ad4f13674134efa286c60
@@ -67,6 +59,6 @@ SPEC CHECKSUMS:
   ProtonomeRoundedViews: 452e5bd6e8cae300fcaa28a3679a8bfe6abb6290
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 60c4f456d63402bc2376c4ce228844888871b567
+PODFILE CHECKSUM: 707f015c5c65fa47df41f65da70d998074d0eff9
 
 COCOAPODS: 1.15.2
